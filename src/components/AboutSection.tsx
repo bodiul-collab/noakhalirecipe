@@ -24,10 +24,18 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
           
           {/* Left Column: About Text (Stacked above image on mobile, on the left on desktop) */}
           <div className="order-1 lg:col-span-7 space-y-5 text-left">
-            {/* Editorial Eyebrow Tag */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FAF9F6] border border-[#E6E1D8] text-xs font-bold text-[#E97520] tracking-wider uppercase font-subheading">
-              <ShieldCheck className="w-4 h-4 text-[#2D7A52]" />
-              ABOUT NOĀKHĀLI KITCHEN &bull; HALAL TEST KITCHEN
+            {/* Editorial Eyebrow Tag & Brand Seal */}
+            <div className="flex flex-wrap items-center gap-3">
+              <img
+                src={IMAGES.logoFull}
+                alt="Noakhali Kitchen Official Seal"
+                className="w-10 h-10 rounded-full object-contain bg-white border border-[#E6E1D8] shadow-xs"
+                referrerPolicy="no-referrer"
+              />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FAF9F6] border border-[#E6E1D8] text-xs font-bold text-[#E97520] tracking-wider uppercase font-subheading">
+                <ShieldCheck className="w-4 h-4 text-[#2D7A52]" />
+                ABOUT NOĀKHĀLI KITCHEN &bull; HALAL TEST KITCHEN
+              </div>
             </div>
 
             {/* Main Title */}

@@ -10,32 +10,31 @@ import {
   Plus,
   Trash2,
   Sparkles,
+  ArrowLeftRight,
 } from "lucide-react";
 import { ECODES } from "../data/ecodes";
 import { RECIPES } from "../data/recipes";
 import { Recipe } from "../types";
+import { KitchenConversionTool } from "../components/KitchenConversionTool";
 
 interface ToolsViewProps {
   onSelectRecipe: (recipe: Recipe) => void;
   onOpenAssistant: () => void;
+  initialTab?: "ecodes" | "scaler" | "converter" | "oven" | "planner";
 }
 
 export const ToolsView: React.FC<ToolsViewProps> = ({
   onSelectRecipe,
   onOpenAssistant,
+  initialTab = "ecodes",
 }) => {
   const [activeTab, setActiveTab] = useState<
     "ecodes" | "scaler" | "converter" | "oven" | "planner"
-  >("ecodes");
+  >(initialTab);
 
   // E-Code checker state
   const [ecodeQuery, setEcodeQuery] = useState("");
   const [ecodeFilter, setEcodeFilter] = useState("all");
-
-  // Unit Converter state
-  const [convValue, setConvValue] = useState<number>(1);
-  const [fromUnit, setFromUnit] = useState<string>("cup");
-  const [toUnit, setToUnit] = useState<string>("ml");
 
   // Scaler state
   const [scalerInput, setScalerInput] = useState(
@@ -74,27 +73,6 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
 
     return matchesSearch && matchesStatus;
   });
-
-  // Unit converter logic
-  const unitConversionFactors: { [key: string]: number } = {
-    tsp: 4.92892,
-    tbsp: 14.7868,
-    fl_oz: 29.5735,
-    cup: 236.588,
-    ml: 1,
-    liter: 1000,
-    gram: 1,
-    oz: 28.3495,
-    lb: 453.592,
-  };
-
-  const calculateConversion = () => {
-    const fromFactor = unitConversionFactors[fromUnit] || 1;
-    const toFactor = unitConversionFactors[toUnit] || 1;
-    const inMlOrG = convValue * fromFactor;
-    const result = inMlOrG / toFactor;
-    return result.toFixed(2);
-  };
 
   // Recipe Scaler logic
   const scaleRecipeText = () => {
@@ -147,7 +125,7 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
           {[
             { id: "ecodes", label: "Halal E-Code Checker", icon: ShieldCheck },
             { id: "scaler", label: "Recipe Scaler", icon: Scale },
-            { id: "converter", label: "Unit Converter", icon: Wrench },
+            { id: "converter", label: "Kitchen Converter", icon: ArrowLeftRight },
             { id: "oven", label: "Oven Temp Guide", icon: Thermometer },
             { id: "planner", label: "Meal Planner", icon: Calendar },
           ].map((tab) => {
@@ -331,87 +309,8 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
           </div>
         )}
 
-        {/* TOOL 3: UNIT CONVERTER */}
-        {activeTab === "converter" && (
-          <div className="bg-white rounded-xl border border-[#E6E1D8] p-6 sm:p-8 space-y-6 shadow-xs">
-            <div>
-              <h2 className="text-xl font-bold text-[#242423] font-serif-editorial">
-                Kitchen Unit Converter
-              </h2>
-              <p className="text-xs text-[#77736D]">
-                Quickly convert between cups, grams, fluid ounces, tablespoons, and milliliters.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 items-end bg-[#FAF9F6] p-5 rounded-lg border border-[#E6E1D8]">
-              <div>
-                <label className="block text-xs font-bold text-[#30302F] mb-1">
-                  Amount
-                </label>
-                <input
-                  type="number"
-                  min="0"
-                  step="0.25"
-                  value={convValue}
-                  onChange={(e) => setConvValue(parseFloat(e.target.value) || 0)}
-                  className="w-full px-3 py-2 bg-white border border-[#E6E1D8] rounded text-sm focus:outline-none"
-                />
-              </div>
-
-              <div>
-                <label className="block text-xs font-bold text-[#30302F] mb-1">
-                  From Unit
-                </label>
-                <select
-                  value={fromUnit}
-                  onChange={(e) => setFromUnit(e.target.value)}
-                  className="w-full px-3 py-2 bg-white border border-[#E6E1D8] rounded text-xs focus:outline-none"
-                >
-                  <option value="cup">Cups (US Standard)</option>
-                  <option value="tbsp">Tablespoons (tbsp)</option>
-                  <option value="tsp">Teaspoons (tsp)</option>
-                  <option value="fl_oz">Fluid Ounces (fl oz)</option>
-                  <option value="ml">Milliliters (ml)</option>
-                  <option value="liter">Liters (L)</option>
-                  <option value="gram">Grams (g)</option>
-                  <option value="oz">Ounces (oz)</option>
-                  <option value="lb">Pounds (lb)</option>
-                </select>
-              </div>
-
-              <div>
-                <label className="block text-xs font-bold text-[#30302F] mb-1">
-                  To Unit
-                </label>
-                <select
-                  value={toUnit}
-                  onChange={(e) => setToUnit(e.target.value)}
-                  className="w-full px-3 py-2 bg-white border border-[#E6E1D8] rounded text-xs focus:outline-none"
-                >
-                  <option value="ml">Milliliters (ml)</option>
-                  <option value="cup">Cups (US Standard)</option>
-                  <option value="tbsp">Tablespoons (tbsp)</option>
-                  <option value="tsp">Teaspoons (tsp)</option>
-                  <option value="fl_oz">Fluid Ounces (fl oz)</option>
-                  <option value="liter">Liters (L)</option>
-                  <option value="gram">Grams (g)</option>
-                  <option value="oz">Ounces (oz)</option>
-                  <option value="lb">Pounds (lb)</option>
-                </select>
-              </div>
-            </div>
-
-            {/* Calculated Result Card */}
-            <div className="p-6 bg-[#FFF9F0] rounded-lg border border-[#F8CD78] text-center space-y-1">
-              <span className="text-xs uppercase font-bold text-[#D75D17] tracking-wider">
-                Converted Equivalent
-              </span>
-              <div className="text-3xl sm:text-4xl font-bold text-[#242423] font-serif-editorial">
-                {convValue} {fromUnit} = {calculateConversion()} {toUnit}
-              </div>
-            </div>
-          </div>
-        )}
+        {/* TOOL 3: KITCHEN CONVERSION TOOL */}
+        {activeTab === "converter" && <KitchenConversionTool />}
 
         {/* TOOL 4: OVEN TEMPERATURE GUIDE */}
         {activeTab === "oven" && (

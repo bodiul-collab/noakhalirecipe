@@ -39,14 +39,7 @@ export interface Recipe {
     tip?: string;
   }>;
   chefNotes: string[];
-  nutrition: {
-    calories: number;
-    proteinGrams: number;
-    carbsGrams: number;
-    fatGrams: number;
-    fiberGrams: number;
-    sodiumMg: number;
-  };
+  nutrition: RecipeNutrition;
   storageInstructions: string;
   freezingInstructions: string;
   servingSuggestions: string[];
@@ -61,6 +54,27 @@ export interface Recipe {
   };
   updatedDate: string;
   tags: string[];
+}
+
+export interface KeyNutritionalInfo {
+  calories: number;
+  proteinGrams: number;
+  fatGrams: number;
+  carbsGrams: number;
+  fiberGrams?: number;
+  sodiumMg?: number;
+}
+
+export interface RecipeNutrition {
+  calories: number; // Calories (kcal) per serving
+  proteinGrams: number; // Protein (g) per serving
+  carbsGrams: number; // Carbohydrates (g) per serving
+  fatGrams: number; // Total Fat (g) per serving
+  fiberGrams: number; // Fiber (g) per serving
+  sodiumMg: number; // Sodium (mg) per serving
+  servingSizeDescription?: string; // e.g. "1 bowl (approx. 380g)"
+  perServing?: KeyNutritionalInfo; // Explicit per-serving key macro breakdown
+  totalRecipe?: KeyNutritionalInfo; // Total whole recipe values
 }
 
 export interface CategoryHub {

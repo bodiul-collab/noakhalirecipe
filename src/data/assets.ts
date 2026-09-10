@@ -59,8 +59,8 @@ import mezbaniBeefCurryImg from "../assets/images/mezbani_beef_curry.jpg";
 import chickenMandiImg from "../assets/images/chicken_mandi.jpg";
 import koftaTagineEggsImg from "../assets/images/kofta_tagine_eggs.jpg";
 import birriaTacosBeefImg from "../assets/images/birria_tacos_beef.jpg";
-import noakhaliLogoFullImg from "../assets/images/noakhali_kitchen_logo_1788969175071.jpg";
-import noakhaliLogoIconImg from "../assets/images/noakhali_logo_icon_1788969197910.jpg";
+import noakhaliLogoFullImg from "../assets/images/noakhali_kitchen_logo_1789072776240.jpg";
+import noakhaliLogoIconImg from "../assets/images/noakhali_kitchen_logo_1789072776240.jpg";
 
 export const IMAGES = {
   heroBiryani: heroBiryaniImg,

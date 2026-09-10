@@ -365,8 +365,16 @@ export default function App() {
 
     // Kitchen Converters & Tools
     if (path.startsWith("/tools") || path === "/converter" || path === "/scaler") {
+      const initialTab =
+        path === "/converter" || path === "/tools/converter"
+          ? "converter"
+          : path === "/scaler" || path === "/tools/scaler"
+          ? "scaler"
+          : undefined;
+
       return (
         <ToolsView
+          initialTab={initialTab}
           onSelectRecipe={handleSelectRecipe}
           onOpenAssistant={() => setAssistantOpen(true)}
         />

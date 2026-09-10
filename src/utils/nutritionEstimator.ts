@@ -236,3 +236,151 @@ export function calculateNutritionForPortion(
     ingredientBreakdown,
   };
 }
+
+export interface PerServingNutritionSummary {
+  // Key per-serving figures
+  calories: number;
+  proteinGrams: number;
+  fatGrams: number;
+  carbsGrams: number;
+  fiberGrams: number;
+  sodiumMg: number;
+  servingSizeDescription: string;
+  baseServings: number;
+  currentServings: number;
+
+  // Caloric share (% of total kcal)
+  macroCalories: {
+    protein: number;
+    fat: number;
+    carbs: number;
+    total: number;
+  };
+  macroPercentages: {
+    proteinPercent: number;
+    fatPercent: number;
+    carbsPercent: number;
+  };
+
+  // FDA 2,000 kcal Daily Values
+  dailyValuePercentages: {
+    calories: number;
+    protein: number;
+    fat: number;
+    carbs: number;
+    fiber: number;
+    sodium: number;
+  };
+
+  // Total whole recipe / batch figures for the active servings count
+  totalBatch: {
+    calories: number;
+    proteinGrams: number;
+    fatGrams: number;
+    carbsGrams: number;
+    fiberGrams: number;
+    sodiumMg: number;
+  };
+}
+
+/**
+ * Calculates per-serving key nutritional information (calories, protein, fats, carbs)
+ * along with macro percentages, daily values, and total batch figures for scaled servings.
+ */
+export function calculatePerServingNutrition(
+  recipe: Recipe,
+  targetServings?: number
+): PerServingNutritionSummary {
+  const baseServings = recipe.servings > 0 ? recipe.servings : 1;
+  const currentServings = targetServings && targetServings > 0 ? targetServings : baseServings;
+
+  // Resolve per-serving values (prefer explicit perServing if present, else nutrition object values)
+  const calories =
+    recipe.nutrition?.perServing?.calories ??
+    recipe.nutrition?.calories ??
+    recipe.calories ??
+    0;
+  const proteinGrams =
+    recipe.nutrition?.perServing?.proteinGrams ??
+    recipe.nutrition?.proteinGrams ??
+    0;
+  const fatGrams =
+    recipe.nutrition?.perServing?.fatGrams ??
+    recipe.nutrition?.fatGrams ??
+    0;
+  const carbsGrams =
+    recipe.nutrition?.perServing?.carbsGrams ??
+    recipe.nutrition?.carbsGrams ??
+    0;
+  const fiberGrams =
+    recipe.nutrition?.perServing?.fiberGrams ??
+    recipe.nutrition?.fiberGrams ??
+    0;
+  const sodiumMg =
+    recipe.nutrition?.perServing?.sodiumMg ??
+    recipe.nutrition?.sodiumMg ??
+    0;
+
+  const servingSizeDescription =
+    recipe.nutrition?.servingSizeDescription ||
+    `1 standard serving (Recipe yields ${baseServings} ${baseServings === 1 ? "portion" : "portions"})`;
+
+  // Macro calorie contributions (Protein: 4 kcal/g, Carbs: 4 kcal/g, Fat: 9 kcal/g)
+  const proteinCals = Math.round(proteinGrams * 4);
+  const carbsCals = Math.round(carbsGrams * 4);
+  const fatCals = Math.round(fatGrams * 9);
+  const totalMacroCals = proteinCals + carbsCals + fatCals;
+
+  const proteinPercent =
+    totalMacroCals > 0 ? Math.round((proteinCals / totalMacroCals) * 100) : 0;
+  const carbsPercent =
+    totalMacroCals > 0 ? Math.round((carbsCals / totalMacroCals) * 100) : 0;
+  const fatPercent =
+    totalMacroCals > 0 ? Math.max(0, 100 - proteinPercent - carbsPercent) : 0;
+
+  // FDA 2,000 kcal Daily Values
+  const dailyValuePercentages = {
+    calories: Math.round((calories / 2000) * 100),
+    protein: Math.round((proteinGrams / 50) * 100),
+    fat: Math.round((fatGrams / 78) * 100),
+    carbs: Math.round((carbsGrams / 275) * 100),
+    fiber: Math.round((fiberGrams / 28) * 100),
+    sodium: Math.round((sodiumMg / 2300) * 100),
+  };
+
+  // Total batch numbers for current targetServings
+  const totalBatch = {
+    calories: Math.round(calories * currentServings),
+    proteinGrams: Math.round(proteinGrams * currentServings * 10) / 10,
+    fatGrams: Math.round(fatGrams * currentServings * 10) / 10,
+    carbsGrams: Math.round(carbsGrams * currentServings * 10) / 10,
+    fiberGrams: Math.round(fiberGrams * currentServings * 10) / 10,
+    sodiumMg: Math.round(sodiumMg * currentServings),
+  };
+
+  return {
+    calories,
+    proteinGrams,
+    fatGrams,
+    carbsGrams,
+    fiberGrams,
+    sodiumMg,
+    servingSizeDescription,
+    baseServings,
+    currentServings,
+    macroCalories: {
+      protein: proteinCals,
+      fat: fatCals,
+      carbs: carbsCals,
+      total: totalMacroCals,
+    },
+    macroPercentages: {
+      proteinPercent,
+      fatPercent,
+      carbsPercent,
+    },
+    dailyValuePercentages,
+    totalBatch,
+  };
+}
+

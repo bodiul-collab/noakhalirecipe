@@ -49,11 +49,25 @@ export const Hero: React.FC<HeroProps> = ({
           {/* Right Column: High-Impact Editorial Storytelling */}
           <div className="lg:col-span-7 order-1 lg:order-2 space-y-5 sm:space-y-6 text-center lg:text-left">
             {/* Brand Logo & Editorial Eyebrow */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3">
-              <div className="inline-flex items-center px-4 py-2 rounded-2xl bg-white/95 backdrop-blur-xs shadow-xs border border-[#30302F]/15 hover:shadow-md transition-shadow">
-                <NoakhaliLogo size="md" />
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5">
+              <div className="inline-flex items-center gap-3 px-3.5 py-2 rounded-2xl bg-white/95 backdrop-blur-xs shadow-sm border border-[#30302F]/15 hover:shadow-md transition-all">
+                <img
+                  src={IMAGES.logoFull}
+                  alt="Noakhali Kitchen Authentic Recipes, Timeless Flavors Logo"
+                  className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl object-contain bg-white border border-[#E6E1D8]/80 shadow-xs"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="text-left pr-1">
+                  <span className="block font-black text-sm sm:text-base text-[#242423] font-heading tracking-wide uppercase leading-tight">
+                    Noakhali Kitchen
+                  </span>
+                  <span className="block text-[10px] sm:text-[11px] text-[#E97520] font-bold tracking-wider uppercase">
+                    Authentic Recipes &bull; Timeless Flavors
+                  </span>
+                </div>
               </div>
-              <div className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-white/75 border border-[#30302F]/15 text-[#30302F] text-xs font-bold tracking-widest uppercase font-subheading">
+
+              <div className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-white/80 border border-[#30302F]/15 text-[#30302F] text-xs font-bold tracking-widest uppercase font-subheading shadow-xs">
                 <span className="w-2 h-2 rounded-full bg-[#2D7A52] animate-pulse"></span>
                 HALAL &bull; HOMEMADE &bull; AUTHENTIC
               </div>

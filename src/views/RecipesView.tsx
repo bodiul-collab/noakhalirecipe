@@ -22,16 +22,28 @@ import {
   Layers,
   RotateCw,
   X,
+  Scale,
 } from "lucide-react";
 import { RecipeCard } from "../components/RecipeCard";
 import { HalalCheck } from "../components/HalalCheck";
 import { AdSlot } from "../components/AdSlot";
 import { NutritionalBreakdown } from "../components/NutritionalBreakdown";
+import { KeyNutritionalPerServing } from "../components/KeyNutritionalPerServing";
 import { PrintRecipeModal } from "../components/PrintRecipeModal";
 import { AddToCollectionModal } from "../components/AddToCollectionModal";
+import { CookingStepTimer } from "../components/CookingStepTimer";
 import { RECIPES } from "../data/recipes";
 import { Recipe, RecipeCollection } from "../types";
 import { openPrintWindow, downloadPrintableHtml } from "../utils/printableRecipeGenerator";
+import { calculatePerServingNutrition } from "../utils/nutritionEstimator";
+import { RecipeRatingCard } from "../components/RecipeRatingCard";
+import {
+  loadUserRatings,
+  saveUserRating,
+  deleteUserRating,
+  calculateBlendedRating,
+  UserRecipeRating,
+} from "../utils/ratingsStorage";
 
 interface RecipesViewProps {
   initialSlug?: string;
@@ -99,6 +111,41 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
     if (!activeSlug) return null;
     return RECIPES.find((r) => r.slug === activeSlug) || null;
   }, [activeSlug]);
+
+  // Custom User Ratings state persisted in localStorage
+  const [userRatings, setUserRatings] = useState<Record<string, UserRecipeRating>>(() => {
+    return loadUserRatings();
+  });
+
+  const handleSaveRating = (rating: number, reviewText?: string) => {
+    if (!currentRecipe) return;
+    const updated = saveUserRating(currentRecipe.id, rating, reviewText);
+    setUserRatings((prev) => ({
+      ...prev,
+      [currentRecipe.id]: updated,
+    }));
+  };
+
+  const handleDeleteRating = () => {
+    if (!currentRecipe) return;
+    deleteUserRating(currentRecipe.id);
+    setUserRatings((prev) => {
+      const next = { ...prev };
+      delete next[currentRecipe.id];
+      return next;
+    });
+  };
+
+  const currentUserRating = currentRecipe ? userRatings[currentRecipe.id] || null : null;
+
+  const blendedRating = useMemo(() => {
+    if (!currentRecipe) return { rating: 5, reviewCount: 0 };
+    return calculateBlendedRating(
+      currentRecipe.rating,
+      currentRecipe.reviewCount,
+      currentUserRating?.rating || null
+    );
+  }, [currentRecipe, currentUserRating]);
 
   // Filtered recipes
   const filteredRecipes = useMemo(() => {
@@ -171,6 +218,7 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
       col.recipeIds.includes(currentRecipe.id)
     );
     const scaledServings = Math.round(currentRecipe.servings * servingMultiplier);
+    const perServingNutrition = calculatePerServingNutrition(currentRecipe, scaledServings);
 
     // Schema JSON-LD structured data for Google Rich Snippets
     const jsonLdData = {
@@ -193,10 +241,10 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
       recipeCuisine: currentRecipe.cuisine,
       nutrition: {
         "@type": "NutritionInformation",
-        calories: `${currentRecipe.nutrition.calories} calories`,
-        proteinContent: `${currentRecipe.nutrition.proteinGrams} g`,
-        carbohydrateContent: `${currentRecipe.nutrition.carbsGrams} g`,
-        fatContent: `${currentRecipe.nutrition.fatGrams} g`,
+        calories: `${perServingNutrition.calories} calories`,
+        proteinContent: `${perServingNutrition.proteinGrams} g`,
+        carbohydrateContent: `${perServingNutrition.carbsGrams} g`,
+        fatContent: `${perServingNutrition.fatGrams} g`,
       },
       recipeIngredient: currentRecipe.ingredients.map(
         (i) => `${i.amount} ${i.unit || ""} ${i.name} ${i.notes ? `(${i.notes})` : ""}`.trim()
@@ -208,8 +256,8 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
       })),
       aggregateRating: {
         "@type": "AggregateRating",
-        ratingValue: currentRecipe.rating.toString(),
-        reviewCount: currentRecipe.reviewCount.toString(),
+        ratingValue: blendedRating.rating.toString(),
+        reviewCount: blendedRating.reviewCount.toString(),
       },
     };
 
@@ -317,15 +365,59 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
 
               {/* Meta and Reviews Bar */}
               <div className="pt-2 flex flex-wrap items-center justify-between gap-4 text-xs text-[#77736D]">
-                <div className="flex items-center gap-2">
-                  <div className="flex items-center text-[#E7A52B]">
+                <div className="flex flex-wrap items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      document.getElementById("recipe-rating-section")?.scrollIntoView({ behavior: "smooth" });
+                    }}
+                    className="flex items-center text-[#E7A52B] hover:opacity-80 transition-opacity cursor-pointer group"
+                    title="Jump to Community Rating & Reviews"
+                  >
                     <Star className="w-4 h-4 fill-[#E7A52B]" />
-                    <span className="ml-1 font-bold text-[#30302F]">
-                      {currentRecipe.rating}
+                    <span className="ml-1 font-bold text-[#30302F] group-hover:text-[#E97520]">
+                      {blendedRating.rating}
                     </span>
-                  </div>
+                  </button>
                   <span>&bull;</span>
-                  <span>{currentRecipe.reviewCount} reviews</span>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      document.getElementById("recipe-rating-section")?.scrollIntoView({ behavior: "smooth" });
+                    }}
+                    className="hover:underline hover:text-[#E97520] transition-colors cursor-pointer"
+                  >
+                    {blendedRating.reviewCount} reviews
+                  </button>
+                  {currentUserRating ? (
+                    <>
+                      <span>&bull;</span>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          document.getElementById("recipe-rating-section")?.scrollIntoView({ behavior: "smooth" });
+                        }}
+                        className="inline-flex items-center gap-1 font-bold text-[#E97520] bg-[#FFF9F0] border border-[#F8CD78] px-2 py-0.5 rounded cursor-pointer hover:bg-[#F8CD78]/30 transition-colors"
+                        title="Click to view or edit your saved rating"
+                      >
+                        <Star className="w-3 h-3 fill-[#E7A52B] text-[#E7A52B]" />
+                        <span>You rated: {currentUserRating.rating}/5</span>
+                      </button>
+                    </>
+                  ) : (
+                    <>
+                      <span>&bull;</span>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          document.getElementById("recipe-rating-section")?.scrollIntoView({ behavior: "smooth" });
+                        }}
+                        className="text-[#E97520] hover:underline font-bold cursor-pointer"
+                      >
+                        Rate recipe
+                      </button>
+                    </>
+                  )}
                   <span>&bull;</span>
                   <span>Updated {currentRecipe.updatedDate}</span>
                 </div>
@@ -449,7 +541,7 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
             </div>
 
             {/* Quick Info Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 p-4 bg-[#FAF9F6] rounded-lg border border-[#E6E1D8] text-center text-xs">
+            <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-2.5 p-3.5 sm:p-4 bg-[#FAF9F6] rounded-lg border border-[#E6E1D8] text-center text-xs">
               <div>
                 <span className="text-[#8A857E] block text-[10px] font-bold uppercase tracking-wider">PREP TIME</span>
                 <span className="font-bold text-[#30302F] text-sm">{currentRecipe.prepTimeMinutes} mins</span>
@@ -466,15 +558,25 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
                 <span className="text-[#8A857E] block text-[10px] font-bold uppercase tracking-wider">SERVINGS</span>
                 <span className="font-bold text-[#30302F] text-sm">{scaledServings}</span>
               </div>
-              <div>
-                <span className="text-[#8A857E] block text-[10px] font-bold uppercase tracking-wider">CALORIES</span>
-                <span className="font-bold text-[#30302F] text-sm">{currentRecipe.calories} kcal</span>
+              <div className="bg-[#FFF9F0] border border-[#F8CD78]/60 rounded py-1 px-1">
+                <span className="text-[#D75D17] block text-[10px] font-bold uppercase tracking-wider">CALORIES / SVG</span>
+                <span className="font-bold text-[#242423] text-sm">{perServingNutrition.calories} kcal</span>
               </div>
-              <div>
-                <span className="text-[#8A857E] block text-[10px] font-bold uppercase tracking-wider">DIFFICULTY</span>
-                <span className="font-bold text-[#E97520] text-sm">{currentRecipe.difficulty}</span>
+              <div className="bg-emerald-50/70 border border-emerald-200/70 rounded py-1 px-1">
+                <span className="text-emerald-800 block text-[10px] font-bold uppercase tracking-wider">PROTEIN / SVG</span>
+                <span className="font-bold text-emerald-950 text-sm">{perServingNutrition.proteinGrams}g</span>
+              </div>
+              <div className="bg-orange-50/70 border border-orange-200/70 rounded py-1 px-1">
+                <span className="text-orange-800 block text-[10px] font-bold uppercase tracking-wider">FAT / SVG</span>
+                <span className="font-bold text-orange-950 text-sm">{perServingNutrition.fatGrams}g</span>
               </div>
             </div>
+
+            {/* Key Nutritional Information Per Serving Card */}
+            <KeyNutritionalPerServing
+              recipe={currentRecipe}
+              scaledServings={scaledServings}
+            />
 
             {/* Story / Intro */}
             <div className="space-y-3 pt-2">
@@ -506,7 +608,7 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
                 </div>
 
                 {/* Interactive Serving Scaler Controls */}
-                <div className="flex items-center gap-2 bg-[#FAF9F6] border border-[#E6E1D8] px-3 py-1.5 rounded-lg text-xs self-start sm:self-auto print:border-none print:bg-transparent print:p-0">
+                <div className="flex flex-wrap items-center gap-2 bg-[#FAF9F6] border border-[#E6E1D8] px-3 py-1.5 rounded-lg text-xs self-start sm:self-auto print:border-none print:bg-transparent print:p-0">
                   <span className="text-[#77736D] font-medium">Servings:</span>
                   <button
                     onClick={() => setServingMultiplier((prev) => Math.max(0.5, prev - 0.5))}
@@ -529,7 +631,25 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
                       Reset
                     </button>
                   )}
+                  <span className="text-[11px] text-[#77736D] hidden md:inline ml-1.5 border-l border-[#E6E1D8] pl-2">
+                    {perServingNutrition.calories} kcal &bull; {perServingNutrition.proteinGrams}g protein &bull; {perServingNutrition.fatGrams}g fat / serving
+                  </span>
                 </div>
+              </div>
+
+              {/* Kitchen Converter Quick Link */}
+              <div className="flex items-center justify-between text-xs bg-[#FAF9F6] border border-[#E6E1D8] px-3 py-2 rounded-lg print:hidden">
+                <span className="text-[#77736D]">
+                  Need metric/imperial conversions for flour, ghee, or spices?
+                </span>
+                <button
+                  type="button"
+                  onClick={() => onNavigate("/converter")}
+                  className="text-[#E97520] hover:text-[#D75D17] font-bold flex items-center gap-1.5 cursor-pointer ml-2 shrink-0 transition-colors"
+                >
+                  <Scale className="w-3.5 h-3.5" />
+                  <span>Interactive Kitchen Converter</span>
+                </button>
               </div>
 
               {/* Ingredient List */}
@@ -601,7 +721,7 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
                   Step-by-Step Instructions
                 </h2>
                 <p className="text-xs text-[#77736D]">
-                  Mark steps complete as your cooking progresses.
+                  Mark steps complete as your cooking progresses, and use interactive timers on any step.
                 </p>
               </div>
 
@@ -611,6 +731,7 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
                   return (
                     <div
                       key={inst.step}
+                      id={`recipe-step-${inst.step}`}
                       className={`p-4 rounded-lg border transition-colors ${
                         isDone
                           ? "bg-[#FAF9F6] border-[#2D7A52]/30 text-[#8A857E]"
@@ -652,6 +773,19 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
                           <strong>Chef's Tip:</strong> {inst.tip}
                         </div>
                       )}
+
+                      {/* Interactive Step Countdown Timer */}
+                      <CookingStepTimer
+                        stepNumber={inst.step}
+                        stepTitle={inst.title}
+                        stepInstruction={inst.instruction}
+                        isStepDone={isDone}
+                        onMarkComplete={() => {
+                          const next = new Set(completedSteps);
+                          next.add(inst.step);
+                          setCompletedSteps(next);
+                        }}
+                      />
                     </div>
                   );
                 })}
@@ -674,7 +808,9 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
             )}
 
             {/* Nutrition Information & Macro Breakdown */}
-            <NutritionalBreakdown recipe={currentRecipe} />
+            <div id="recipe-nutrition-breakdown">
+              <NutritionalBreakdown recipe={currentRecipe} />
+            </div>
 
             {/* Storage & Freezing Instructions */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
