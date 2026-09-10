@@ -1,0 +1,180 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: 'Syncopate', sans-serif;
+  --font-display: 'Syncopate', sans-serif;
+  --font-subheading: 'Montserrat', sans-serif;
+  --font-tag: 'Montserrat', sans-serif;
+  --font-description: 'Playfair Display', Georgia, serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-ui: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --color-charcoal: #30302F;
+  --color-charcoal-deep: #242423;
+  --color-gold-bg: #F8CD78;
+  --color-gold-accent: #E7A52B;
+  --color-orange-primary: #E97520;
+  --color-orange-burnt: #D75D17;
+  --color-cream: #FFF9F0;
+  --color-warm-white: #FAF9F6;
+  --color-halal-green: #2D7A52;
+  --color-border-warm: #E6E1D8;
+}
+
+@layer base {
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: #3F3C38;
+    background-color: #FAF9F6;
+  }
+
+  /* The Heading Font: Syncopate (modern, wide, and geometric sans-serif display font) */
+  h1, h2, h3, h4, .font-heading, .heading-font, .font-brand-display {
+    font-family: var(--font-heading);
+    letter-spacing: 0.04em;
+  }
+
+  /* The Subheading & Tag Font: Clean, uppercase, geometric sans-serif font */
+  .font-subheading, .subheading-font, .font-tag, .tag-font {
+    font-family: var(--font-subheading);
+    letter-spacing: 0.08em;
+  }
+
+  /* The Body & Description Font: Traditional, high-contrast serif font */
+  .font-description, .description-font, .recipe-description, .font-serif, .font-serif-editorial {
+    font-family: var(--font-description);
+  }
+
+  /* The Body Text & UI Font: Highly legible, modern neo-grotesque sans-serif font */
+  .font-ui, .ui-font, .font-sans, button, input, select, textarea, label {
+    font-family: var(--font-ui);
+  }
+}
+
+/* ==========================================================================
+   3D Perspective Tilt Effect on Hover for Recipe Cards
+   ========================================================================== */
+.recipe-card-container,
+.recipe-grid {
+  perspective: 1200px;
+}
+
+.recipe-card {
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.35s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.25s ease;
+  will-change: transform, box-shadow;
+  backface-visibility: hidden;
+}
+
+/* 3D Perspective Tilt & Lift on Hover */
+.recipe-card:hover {
+  transform: perspective(1000px) rotateX(4.5deg) rotateY(-3.5deg) translateY(-8px) scale3d(1.015, 1.015, 1.015);
+  box-shadow: 0 25px 50px -12px rgba(36, 36, 35, 0.22), 0 12px 24px -8px rgba(36, 36, 35, 0.12);
+}
+
+/* Tactile Response on Click/Press */
+.recipe-card:active {
+  transform: perspective(1000px) rotateX(2deg) rotateY(-1deg) translateY(-2px) scale3d(0.99, 0.99, 0.99);
+  transition-duration: 0.1s;
+}
+
+/* Accessible Reduced-Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .recipe-card,
+  .recipe-card:hover,
+  .recipe-card:active {
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* Print-Friendly Stylesheet */
+@media print {
+  @page {
+    margin: 12mm 10mm;
+    size: auto;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Strip navigation, footers, sidebars, search bars, ads and floating widgets */
+  header,
+  footer,
+  nav,
+  .print\:hidden,
+  .no-print,
+  #search-utility-row,
+  [data-print-hide],
+  .ad-slot,
+  button:not(.print-keep),
+  input,
+  select,
+  aside {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #242423 !important;
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+
+  /* Clean up modal container if active */
+  #print-recipe-modal {
+    position: static !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    inset: auto !important;
+  }
+
+  #printable-recipe-sheet {
+    max-width: 100% !important;
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  /* If modal is active during print, only print the modal sheet and hide the background article */
+  body:has(#print-recipe-modal) article {
+    display: none !important;
+  }
+
+  /* When printing recipe details page directly */
+  article {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
+  /* Avoid awkward page breaks in the middle of recipe steps or nutritional tables */
+  .break-inside-avoid,
+  tr,
+  li,
+  table,
+  section {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  a {
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+}
