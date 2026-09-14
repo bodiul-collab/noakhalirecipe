@@ -60,6 +60,57 @@ export default function App() {
   const [savedDrawerOpen, setSavedDrawerOpen] = useState<boolean>(false);
   const [directoryRefreshTrigger, setDirectoryRefreshTrigger] = useState<number>(0);
 
+  // Theme (default dark) and Mood Density (default tight)
+  const [theme, setTheme] = useState<"dark" | "light">(() => {
+    try {
+      const stored = localStorage.getItem("nk_theme");
+      if (stored === "light" || stored === "dark") return stored;
+    } catch {}
+    return "dark";
+  });
+
+  const [density, setDensity] = useState<"tight" | "relaxed">(() => {
+    try {
+      const stored = localStorage.getItem("nk_density");
+      if (stored === "tight" || stored === "relaxed") return stored;
+    } catch {}
+    return "tight";
+  });
+
+  // Sync dark class on documentElement
+  useEffect(() => {
+    const root = document.documentElement;
+    if (theme === "dark") {
+      root.classList.add("dark");
+    } else {
+      root.classList.remove("dark");
+    }
+    try {
+      localStorage.setItem("nk_theme", theme);
+    } catch {}
+  }, [theme]);
+
+  // Sync tight-mode class on documentElement
+  useEffect(() => {
+    const root = document.documentElement;
+    if (density === "tight") {
+      root.classList.add("tight-mode");
+    } else {
+      root.classList.remove("tight-mode");
+    }
+    try {
+      localStorage.setItem("nk_density", density);
+    } catch {}
+  }, [density]);
+
+  const handleToggleTheme = useCallback(() => {
+    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+  }, []);
+
+  const handleToggleDensity = useCallback(() => {
+    setDensity((prev) => (prev === "tight" ? "relaxed" : "tight"));
+  }, []);
+
   // Custom Collections state with persistence
   const [collections, setCollections] = useState<RecipeCollection[]>(() => {
     return loadCollections();
@@ -422,7 +473,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen w-full overflow-x-hidden flex flex-col bg-[#FAF9F6] text-[#30302F] selection:bg-[#F8CD78] selection:text-[#30302F] pb-16 lg:pb-0">
+    <div className="min-h-screen w-full overflow-x-hidden flex flex-col bg-[#FAF9F6] dark:bg-[#141413] text-[#30302F] dark:text-[#EDE8DF] selection:bg-[#F8CD78] selection:text-[#30302F] pb-16 lg:pb-0 transition-colors duration-200">
       {/* 1 & 2. Top Header with utility bar and primary navigation */}
       <Header
         currentRoute={currentRoute}
@@ -434,6 +485,10 @@ export default function App() {
           if (inputEl) inputEl.focus();
         }}
         onOpenAssistant={() => setAssistantOpen(true)}
+        theme={theme}
+        onToggleTheme={handleToggleTheme}
+        density={density}
+        onToggleDensity={handleToggleDensity}
       />
 
       {/* 3. Search Utility Row directly underneath header */}

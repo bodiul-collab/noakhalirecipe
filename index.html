@@ -1,8 +1,26 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark tight-mode">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function () {
+        try {
+          var savedTheme = localStorage.getItem('nk_theme');
+          if (savedTheme === 'light') {
+            document.documentElement.classList.remove('dark');
+          } else {
+            document.documentElement.classList.add('dark');
+          }
+          var savedDensity = localStorage.getItem('nk_density');
+          if (savedDensity === 'relaxed') {
+            document.documentElement.classList.remove('tight-mode');
+          } else {
+            document.documentElement.classList.add('tight-mode');
+          }
+        } catch (_) {}
+      })();
+    </script>
     <script>
       (function () {
         try {

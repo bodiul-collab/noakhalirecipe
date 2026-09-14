@@ -178,3 +178,321 @@
     color: inherit !important;
   }
 }
+
+/* ==========================================================================
+   Dark Mode Styles & Surfaces
+   ========================================================================== */
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark body {
+  background-color: #141413 !important;
+  color: #EDE8DF !important;
+}
+
+.dark {
+  --color-warm-white: #1A1A19;
+  --color-charcoal: #F5F3EF;
+  --color-border-warm: #33322E;
+}
+
+/* Base dark container & card overrides */
+.dark .bg-white,
+.dark .bg-\[\#ffffff\],
+.dark .bg-\[\#FAF9F6\],
+.dark .bg-\[\#FAF8F5\],
+.dark .bg-\[\#FFFDF9\] {
+  background-color: #1E1E1C !important;
+}
+
+.dark .bg-\[\#F3F2EE\],
+.dark .bg-\[\#F0EDE6\],
+.dark .bg-\[\#F8F7F4\],
+.dark .bg-\[\#F5F4F0\] {
+  background-color: #272725 !important;
+}
+
+.dark .bg-\[\#FFF9F0\] {
+  background-color: #26231D !important;
+}
+
+.dark .bg-gray-50,
+.dark .bg-stone-50 {
+  background-color: #1A1A19 !important;
+}
+
+.dark .bg-gray-100,
+.dark .bg-stone-100 {
+  background-color: #242422 !important;
+}
+
+/* Header in dark mode */
+.dark header {
+  background-color: #181817 !important;
+  border-color: #2D2D2A !important;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.45) !important;
+}
+
+.dark header .bg-white {
+  background-color: #1E1E1C !important;
+}
+
+/* Search Utility Row in dark mode */
+.dark #search-utility-row {
+  background-color: #181817 !important;
+  border-color: #2E2E2A !important;
+}
+
+.dark #search-utility-row form {
+  background-color: #242422 !important;
+  border-color: #383632 !important;
+}
+
+.dark #search-utility-row input {
+  color: #F5F3EF !important;
+}
+
+.dark #search-utility-row input::placeholder {
+  color: #8C867C !important;
+}
+
+/* Text adjustments for dark mode readability & WCAG AA contrast */
+.dark .text-\[\#242423\],
+.dark .text-\[\#30302F\],
+.dark .text-\[\#3F3C38\],
+.dark .text-gray-900,
+.dark .text-stone-900,
+.dark .text-gray-800,
+.dark .text-stone-800 {
+  color: #F5F3EF !important;
+}
+
+.dark .text-\[\#55504A\],
+.dark .text-\[\#77736D\],
+.dark .text-gray-700,
+.dark .text-stone-700,
+.dark .text-gray-600,
+.dark .text-stone-600 {
+  color: #C7C2B8 !important;
+}
+
+.dark .text-\[\#8A857E\],
+.dark .text-\[\#A8A49E\],
+.dark .text-\[\#B5B0A6\],
+.dark .text-gray-500,
+.dark .text-gray-400 {
+  color: #9E988E !important;
+}
+
+/* Border adjustments */
+.dark .border-\[\#E6E1D8\],
+.dark .border-\[\#F3F2EE\],
+.dark .border-\[\#D4CEBF\],
+.dark .border-gray-200,
+.dark .border-gray-100,
+.dark .border-stone-200,
+.dark .border-stone-100 {
+  border-color: #33322E !important;
+}
+
+/* Form inputs & dropdowns */
+.dark input[type="text"],
+.dark input[type="search"],
+.dark input[type="number"],
+.dark input[type="email"],
+.dark select,
+.dark textarea {
+  background-color: #1A1A19 !important;
+  color: #F5F3EF !important;
+  border-color: #383633 !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #8A857E !important;
+}
+
+.dark input:focus,
+.dark textarea:focus,
+.dark select:focus {
+  border-color: #FF8A3D !important;
+  background-color: #222220 !important;
+}
+
+/* Recipe cards & directory place cards */
+.dark .recipe-card,
+.dark [id^="place-card-"] {
+  background-color: #1E1E1C !important;
+  border-color: #33322E !important;
+}
+
+.dark .recipe-card:hover {
+  border-color: #555149 !important;
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.65) !important;
+}
+
+.dark [id^="place-card-"]:hover {
+  border-color: #E97520 !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Halal green and saffron notices in dark mode */
+.dark .bg-\[\#2D7A52\]\/10,
+.dark .bg-emerald-50,
+.dark .bg-green-50,
+.dark .bg-\[\#F0FDF4\] {
+  background-color: rgba(45, 122, 82, 0.22) !important;
+  border-color: rgba(45, 122, 82, 0.4) !important;
+  color: #4ADE80 !important;
+}
+
+.dark .text-\[\#2D7A52\],
+.dark .text-emerald-700,
+.dark .text-green-700,
+.dark .text-\[\#166534\] {
+  color: #4ADE80 !important;
+}
+
+.dark .bg-\[\#FFF7ED\],
+.dark .bg-amber-50,
+.dark .bg-orange-50 {
+  background-color: rgba(233, 117, 32, 0.18) !important;
+  border-color: rgba(233, 117, 32, 0.35) !important;
+}
+
+.dark .text-\[\#9A3412\],
+.dark .text-\[\#D75D17\] {
+  color: #FDBA74 !important;
+}
+
+/* Modals & Drawers */
+.dark [role="dialog"],
+.dark .drawer-content,
+.dark .fixed.bg-white,
+.dark .absolute.bg-white {
+  background-color: #1E1E1C !important;
+  border-color: #383633 !important;
+}
+
+/* Hero Section in Dark Mode */
+.dark section.bg-\[\#F8CD78\] {
+  background: linear-gradient(135deg, #261D12 0%, #1A150D 100%) !important;
+  border-color: #42301B !important;
+}
+
+.dark section.bg-\[\#F8CD78\] h1,
+.dark section.bg-\[\#F8CD78\] h2 {
+  color: #FFF8EE !important;
+}
+
+.dark section.bg-\[\#F8CD78\] p {
+  color: #D6CEBE !important;
+}
+
+/* Leaflet Tiles in Dark Mode */
+.dark .leaflet-tile-pane {
+  filter: brightness(0.72) invert(1) contrast(2.2) hue-rotate(205deg) saturate(0.3) !important;
+}
+
+.dark .leaflet-container {
+  background-color: #181817 !important;
+}
+
+.dark .leaflet-popup-content-wrapper,
+.dark .leaflet-popup-tip {
+  background: #20201E !important;
+  color: #F5F3EF !important;
+  border: 1px solid #383633 !important;
+}
+
+/* Mobile Bottom Navigation in Dark Mode */
+.dark #mobile-bottom-menu-bar {
+  background-color: rgba(24, 24, 23, 0.95) !important;
+  border-color: #2E2E2A !important;
+}
+
+/* ==========================================================================
+   Tight Mood / Compact Density Mode (.tight-mode)
+   ========================================================================== */
+
+/* Compact Section Vertical Padding */
+.tight-mode section {
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+}
+
+.tight-mode .py-14,
+.tight-mode .py-16,
+.tight-mode .py-18,
+.tight-mode .py-20 {
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+}
+
+.tight-mode .sm\:py-14,
+.tight-mode .sm\:py-16,
+.tight-mode .sm\:py-18,
+.tight-mode .sm\:py-20 {
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+}
+
+.tight-mode .mb-10,
+.tight-mode .mb-12,
+.tight-mode .mb-8 {
+  margin-bottom: 1.25rem !important;
+}
+
+/* Compact Grid Gaps */
+.tight-mode .gap-6 {
+  gap: 0.875rem !important;
+}
+
+.tight-mode .gap-8 {
+  gap: 1.125rem !important;
+}
+
+.tight-mode .gap-10,
+.tight-mode .gap-12 {
+  gap: 1.25rem !important;
+}
+
+/* Compact Card Paddings */
+.tight-mode .recipe-card .p-5,
+.tight-mode .recipe-card .sm\:p-6,
+.tight-mode .p-5,
+.tight-mode .p-6,
+.tight-mode .sm\:p-6,
+.tight-mode [id^="place-card-"] > div {
+  padding: 0.875rem !important;
+}
+
+.tight-mode .space-y-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.875rem * calc(1 - var(--tw-space-y-reverse))) !important;
+  margin-bottom: calc(0.875rem * var(--tw-space-y-reverse)) !important;
+}
+
+.tight-mode .space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.625rem * calc(1 - var(--tw-space-y-reverse))) !important;
+  margin-bottom: calc(0.625rem * var(--tw-space-y-reverse)) !important;
+}
+
+.tight-mode .space-y-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse))) !important;
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse)) !important;
+}
+
+/* Compact Hero Density */
+.tight-mode section.bg-\[\#F8CD78\] {
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+}
+
+/* Compact Directory Card Height */
+.tight-mode [id^="place-card-"] .h-36 {
+  height: 6.75rem !important;
+}

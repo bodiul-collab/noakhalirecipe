@@ -18,6 +18,10 @@ import {
   ShieldCheck,
   ArrowRight,
   Mail,
+  Moon,
+  Sun,
+  Minimize2,
+  Maximize2,
 } from "lucide-react";
 
 interface HeaderProps {
@@ -27,6 +31,10 @@ interface HeaderProps {
   onOpenSaved: () => void;
   onOpenSearch: () => void;
   onOpenAssistant: () => void;
+  theme?: "dark" | "light";
+  onToggleTheme?: () => void;
+  density?: "tight" | "relaxed";
+  onToggleDensity?: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -36,6 +44,10 @@ export const Header: React.FC<HeaderProps> = ({
   onOpenSaved,
   onOpenSearch,
   onOpenAssistant,
+  theme = "dark",
+  onToggleTheme,
+  density = "tight",
+  onToggleDensity,
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [categoryDropdownOpen, setCategoryDropdownOpen] = useState(false);
@@ -109,7 +121,7 @@ export const Header: React.FC<HeaderProps> = ({
           className="group flex items-center text-left focus:outline-none shrink-0 transition-transform hover:opacity-95 cursor-pointer py-1"
           aria-label="Noākhāli Kitchen Home"
         >
-          <NoakhaliLogo size="md" />
+          <NoakhaliLogo size="md" theme={theme} />
         </button>
 
         {/* Decongested Desktop Navigation (Clean, Spacious, Uncrowded) */}
@@ -243,7 +255,45 @@ export const Header: React.FC<HeaderProps> = ({
         </nav>
 
         {/* Right Side Utility Actions */}
-        <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+        <div className="flex items-center gap-1.5 sm:gap-2.5 shrink-0">
+          {/* Density (Tight / Relaxed Mood) Toggle */}
+          {onToggleDensity && (
+            <button
+              onClick={onToggleDensity}
+              className="flex items-center gap-1 px-2 sm:px-2.5 py-1.5 text-xs font-semibold text-[#55504A] hover:text-[#E97520] bg-[#FAF9F6] hover:bg-[#F3F2EE] border border-[#E6E1D8] rounded-lg transition-colors cursor-pointer"
+              aria-label={`Density mood: ${density === "tight" ? "Tight" : "Relaxed"}`}
+              title={`Layout Density: ${density === "tight" ? "Tight Mood (Compact)" : "Relaxed Mood (Spacious)"}. Click to toggle.`}
+            >
+              {density === "tight" ? (
+                <>
+                  <Minimize2 className="w-3.5 h-3.5 text-[#E97520]" />
+                  <span className="text-[11px] font-bold hidden sm:inline text-[#E97520]">Tight</span>
+                </>
+              ) : (
+                <>
+                  <Maximize2 className="w-3.5 h-3.5 text-[#8A857E]" />
+                  <span className="text-[11px] font-medium hidden sm:inline text-[#8A857E]">Relaxed</span>
+                </>
+              )}
+            </button>
+          )}
+
+          {/* Theme (Dark / Light) Toggle */}
+          {onToggleTheme && (
+            <button
+              onClick={onToggleTheme}
+              className="p-2 text-[#3F3C38] hover:text-[#E97520] hover:bg-[#FAF9F6] rounded-lg transition-colors cursor-pointer"
+              aria-label={theme === "dark" ? "Switch to Light Theme" : "Switch to Dark Theme"}
+              title={theme === "dark" ? "Switch to Light Theme" : "Switch to Dark Theme"}
+            >
+              {theme === "dark" ? (
+                <Sun className="w-4.5 h-4.5 text-[#F8CD78]" />
+              ) : (
+                <Moon className="w-4.5 h-4.5 text-[#30302F]" />
+              )}
+            </button>
+          )}
+
           {/* AI Chef Assistant Trigger */}
           <button
             onClick={onOpenAssistant}
@@ -469,6 +519,54 @@ export const Header: React.FC<HeaderProps> = ({
                   {sub.label}
                 </button>
               ))}
+            </div>
+          </div>
+
+          {/* Appearance & Layout Controls for Mobile */}
+          <div className="pt-3 border-t border-[#F3F2EE] space-y-2">
+            <div className="text-[11px] font-bold text-[#8A857E] uppercase tracking-wider px-1">
+              Preferences
+            </div>
+            <div className="grid grid-cols-2 gap-2">
+              {onToggleTheme && (
+                <button
+                  type="button"
+                  onClick={onToggleTheme}
+                  className="flex items-center justify-center gap-2 px-3 py-2 text-xs font-semibold bg-[#FAF9F6] border border-[#E6E1D8] rounded-lg transition-colors cursor-pointer text-[#30302F]"
+                >
+                  {theme === "dark" ? (
+                    <>
+                      <Sun className="w-4 h-4 text-[#F8CD78]" />
+                      <span>Light Theme</span>
+                    </>
+                  ) : (
+                    <>
+                      <Moon className="w-4 h-4 text-[#30302F]" />
+                      <span>Dark Theme</span>
+                    </>
+                  )}
+                </button>
+              )}
+
+              {onToggleDensity && (
+                <button
+                  type="button"
+                  onClick={onToggleDensity}
+                  className="flex items-center justify-center gap-2 px-3 py-2 text-xs font-semibold bg-[#FAF9F6] border border-[#E6E1D8] rounded-lg transition-colors cursor-pointer text-[#30302F]"
+                >
+                  {density === "tight" ? (
+                    <>
+                      <Minimize2 className="w-4 h-4 text-[#E97520]" />
+                      <span className="text-[#E97520]">Tight Mood</span>
+                    </>
+                  ) : (
+                    <>
+                      <Maximize2 className="w-4 h-4 text-[#8A857E]" />
+                      <span>Relaxed Mood</span>
+                    </>
+                  )}
+                </button>
+              )}
             </div>
           </div>
 
