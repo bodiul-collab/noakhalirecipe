@@ -58,6 +58,7 @@ export default function App() {
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [assistantOpen, setAssistantOpen] = useState<boolean>(false);
   const [savedDrawerOpen, setSavedDrawerOpen] = useState<boolean>(false);
+  const [directoryRefreshTrigger, setDirectoryRefreshTrigger] = useState<number>(0);
 
   // Custom Collections state with persistence
   const [collections, setCollections] = useState<RecipeCollection[]>(() => {
@@ -105,6 +106,10 @@ export default function App() {
     }
 
     setCurrentRoute(route);
+
+    if (route.startsWith("/directory")) {
+      setDirectoryRefreshTrigger((prev) => prev + 1);
+    }
 
     const detailSlug = extractRecipeSlug(route);
     if (detailSlug) {
@@ -346,6 +351,7 @@ export default function App() {
           initialCategory={dirCat}
           onOpenAssistant={() => setAssistantOpen(true)}
           onNavigate={navigate}
+          refreshTrigger={directoryRefreshTrigger}
         />
       );
     }

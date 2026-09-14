@@ -9,6 +9,7 @@ interface RecipeCardProps {
   onClick: (recipe: Recipe) => void;
   collections?: RecipeCollection[];
   onOpenCollections?: (recipe: Recipe) => void;
+  userRating?: number;
 }
 
 export const RecipeCard: React.FC<RecipeCardProps> = ({
@@ -18,6 +19,7 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({
   onClick,
   collections = [],
   onOpenCollections,
+  userRating,
 }) => {
   const matchingCollections = collections.filter((c) =>
     c.recipeIds.includes(recipe.id)
@@ -87,13 +89,24 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({
       {/* Content Body */}
       <div className="p-4 sm:p-5 flex flex-col flex-1 font-ui">
         {/* Rating and Reviews */}
-        <div className="flex items-center gap-1.5 text-xs text-[#77736D] mb-1.5 font-ui">
-          <div className="flex items-center text-[#E7A52B]">
-            <Star className="w-3.5 h-3.5 fill-[#E7A52B]" />
-            <span className="ml-1 font-bold text-[#30302F]">{recipe.rating}</span>
+        <div className="flex items-center justify-between text-xs text-[#77736D] mb-1.5 font-ui">
+          <div className="flex items-center gap-1.5">
+            <div className="flex items-center text-[#E7A52B]">
+              <Star className="w-3.5 h-3.5 fill-[#E7A52B]" />
+              <span className="ml-1 font-bold text-[#30302F]">{recipe.rating}</span>
+            </div>
+            <span>&bull;</span>
+            <span>({recipe.reviewCount} reviews)</span>
           </div>
-          <span>&bull;</span>
-          <span>({recipe.reviewCount} reviews)</span>
+          {typeof userRating === "number" && (
+            <span
+              className="inline-flex items-center gap-0.5 text-[10px] font-bold text-[#D75D17] bg-[#FFF9F0] border border-[#F8CD78]/60 px-1.5 py-0.5 rounded shadow-2xs"
+              title={`You rated this recipe ${userRating} out of 5 stars`}
+            >
+              <Star className="w-2.5 h-2.5 fill-[#E7A52B] text-[#E7A52B]" />
+              <span>You: {userRating}★</span>
+            </span>
+          )}
         </div>
 
         {/* Title */}

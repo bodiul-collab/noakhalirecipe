@@ -161,3 +161,67 @@ export interface RecipeCollection {
   color?: string;
   icon?: string;
 }
+
+// Global Halal & Islamic Places Directory Types
+export type SearchCategory = "restaurants" | "groceries" | "mosques";
+
+export interface SearchLocation {
+  formattedAddress: string;
+  lat: number;
+  lng: number;
+  city?: string;
+  state?: string;
+  country?: string;
+  postalCode?: string;
+  placeId?: string;
+}
+
+export interface PlaceResult {
+  id: string;
+  name: string;
+  category: SearchCategory;
+  categoryLabel: string;
+  formattedAddress: string;
+  location: {
+    latitude: number;
+    longitude: number;
+  };
+  rating?: number;
+  userRatingCount?: number;
+  priceLevel?: string;
+  isOpenNow?: boolean;
+  weekdayDescriptions?: string[];
+  nationalPhoneNumber?: string;
+  internationalPhoneNumber?: string;
+  websiteUri?: string;
+  googleMapsUri: string;
+  photoUrl?: string;
+  types?: string[];
+  distanceKm?: number;
+  distanceMiles?: number;
+  halalNotice: string;
+  source: "google" | "google_api" | "noakhali_verified" | "user_submitted" | "fallback" | "osm_live";
+}
+
+export interface PlacesSearchResult {
+  places: PlaceResult[];
+  nextPageToken?: string;
+  status: "OK" | "ZERO_RESULTS" | "ERROR";
+  errorMessage?: string;
+  source: "google_api" | "fallback";
+}
+
+export interface SearchFilters {
+  radiusMeters: number;
+  distanceUnit: "mi" | "km";
+  openNowOnly: boolean;
+  minRating: number;
+  sortBy: "nearest" | "highest_rated";
+  subQuery?: string;
+}
+
+export interface LocationResolution {
+  status: "OK" | "ZERO_RESULTS" | "AMBIGUOUS" | "ERROR";
+  results: SearchLocation[];
+  errorMessage?: string;
+}

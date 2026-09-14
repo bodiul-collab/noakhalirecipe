@@ -864,6 +864,16 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
               </div>
             )}
 
+            {/* Community Rating & Star Review System (Persisted in LocalStorage) */}
+            <div className="print:hidden">
+              <RecipeRatingCard
+                recipe={currentRecipe}
+                userRating={currentUserRating}
+                onSaveRating={handleSaveRating}
+                onDeleteRating={handleDeleteRating}
+              />
+            </div>
+
             {/* Author Attribution */}
             <div className="p-4 bg-[#FFF9F0] rounded-lg border border-[#F8CD78]/40 flex items-center justify-between text-xs">
               <div>
@@ -1149,6 +1159,7 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
                 }}
                 collections={collections}
                 onOpenCollections={(r) => setRecipeForCollection(r)}
+                userRating={userRatings[recipe.id]?.rating}
               />
             ))}
           </div>

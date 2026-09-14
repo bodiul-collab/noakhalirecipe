@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import { exec } from "child_process";
 import { GoogleGenAI } from "@google/genai";
 import { createServer as createViteServer } from "vite";
+import { resolveLocation, searchHalalPlaces, clearPlacesCache } from "./src/services/placesService";
 
 dotenv.config();
 
@@ -11,6 +12,109 @@ const app = express();
 const PORT = 3000;
 
 app.use(express.json());
+
+// Health check
+app.get("/api/health", (_req, res) => {
+  res.json({ status: "ok", timestamp: new Date().toISOString() });
+});
+
+// Places & Maps configuration check
+app.get("/api/places/config", (_req, res) => {
+  const mapsApiKey = process.env.GOOGLE_MAPS_API_KEY || process.env.VITE_GOOGLE_MAPS_API_KEY;
+  res.json({
+    configured: !!mapsApiKey,
+    clientApiKey: mapsApiKey || null,
+  });
+});
+
+// Location Resolution Endpoint (Geocoding with international postal codes & fallbacks)
+app.post("/api/places/resolve-location", async (req, res) => {
+  try {
+    const { query } = req.body;
+    if (!query || typeof query !== "string") {
+      res.status(400).json({
+        status: "ERROR",
+        results: [],
+        errorMessage: "A valid location or postal code query is required.",
+      });
+      return;
+    }
+
+    const mapsApiKey = process.env.GOOGLE_MAPS_API_KEY || process.env.VITE_GOOGLE_MAPS_API_KEY;
+    const result = await resolveLocation(query, mapsApiKey);
+    res.json(result);
+  } catch (error: any) {
+    console.error("Location resolution error:", error);
+    res.status(500).json({
+      status: "ERROR",
+      results: [],
+      errorMessage: "Unable to resolve location at this time. Please try another city or postal code.",
+    });
+  }
+});
+
+// Live Halal Places Search Endpoint (Places API New with caching, field masking & fallbacks)
+app.post("/api/places/search", async (req, res) => {
+  try {
+    const {
+      category,
+      lat,
+      lng,
+      radiusMeters,
+      subQuery,
+      openNow,
+      minRating,
+      locationName,
+      refresh,
+      forceRefresh,
+      pageToken,
+    } = req.body;
+
+    if (
+      !category ||
+      typeof lat !== "number" ||
+      typeof lng !== "number" ||
+      !["restaurants", "groceries", "mosques"].includes(category)
+    ) {
+      res.status(400).json({
+        status: "ERROR",
+        places: [],
+        errorMessage: "Invalid search parameters. Category, latitude, and longitude are required.",
+      });
+      return;
+    }
+
+    const mapsApiKey = process.env.GOOGLE_MAPS_API_KEY || process.env.VITE_GOOGLE_MAPS_API_KEY;
+    const searchResult = await searchHalalPlaces({
+      category,
+      lat,
+      lng,
+      radiusMeters: typeof radiusMeters === "number" ? radiusMeters : 16093,
+      subQuery: typeof subQuery === "string" ? subQuery : undefined,
+      openNow: !!openNow,
+      minRating: typeof minRating === "number" ? minRating : 0,
+      locationName: typeof locationName === "string" ? locationName : undefined,
+      apiKey: mapsApiKey,
+      forceRefresh: Boolean(refresh || forceRefresh),
+      pageToken: typeof pageToken === "string" ? pageToken : undefined,
+    });
+
+    res.json(searchResult);
+  } catch (error: any) {
+    console.error("Places search error:", error);
+    res.status(500).json({
+      status: "ERROR",
+      places: [],
+      errorMessage: "Could not complete places search. Please try again shortly.",
+    });
+  }
+});
+
+// Purge places memory cache for fresh re-fetching
+app.post("/api/places/clear-cache", (_req, res) => {
+  clearPlacesCache();
+  res.json({ status: "OK", message: "Places and geocoding cache cleared successfully." });
+});
 
 // Initialize Gemini Client
 function getGeminiClient(): GoogleGenAI | null {
@@ -25,11 +129,6 @@ function getGeminiClient(): GoogleGenAI | null {
     },
   });
 }
-
-// Health check
-app.get("/api/health", (_req, res) => {
-  res.json({ status: "ok", timestamp: new Date().toISOString() });
-});
 
 // Grounded AI Assistant Endpoint for Noakhali Kitchen
 app.post("/api/assistant", async (req, res) => {
