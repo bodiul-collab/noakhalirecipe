@@ -10,7 +10,7 @@ export const CATEGORIES: CategoryHub[] = [
     fullDescription:
       "Explore comforting Halal poultry recipes from across Bengal, South Asia, and the Mediterranean. Every recipe utilizes hand-slaughtered or certified Halal chicken cuts, cooked with authentic aromatics, rich natural stocks, and balanced spices.",
     image: IMAGES.heroBiryani,
-    featuredRecipeSlugs: ["authentic-arabian-chicken-mandi", "authentic-saudi-chicken-kabsa", "classic-deli-halal-chicken-salad", "tom-zaab-chicken-soup-tom-zaab-gai", "thai-chicken-red-curry-gaeng-phed-gai", "halal-chicken-biryani", "chicken-satay-satay-gai", "shahi-chicken-roast", "chicken-massaman-curry"],
+    featuredRecipeSlugs: ["authentic-lahori-chicken-chargha", "authentic-restaurant-style-butter-chicken-murgh-makhani", "creamy-fettuccine-chicken-alfredo", "authentic-arabian-chicken-mandi", "chicken-machboos-majboos-kabsa", "classic-deli-halal-chicken-salad", "tom-zaab-chicken-soup-tom-zaab-gai", "thai-chicken-red-curry-gaeng-phed-gai", "halal-chicken-biryani", "chicken-satay-satay-gai", "shahi-chicken-roast", "chicken-massaman-curry"],
     faqs: [
       {
         question: "How do I verify chicken is Halal when shopping?",
@@ -57,7 +57,7 @@ export const CATEGORIES: CategoryHub[] = [
     fullDescription:
       "Fresh river fish and coastal seafood hold an esteemed place in regional Halal heritage dining. Our collection features revered silver Hilsa (Ilish) in golden mustard gravy, tender tiger prawns in coconut cream, and crisp pan-fried seasonal catch seasoned with five-spice panch phoron.",
     image: IMAGES.shorsheIlish,
-    featuredRecipeSlugs: ["green-goddess-wild-salmon-asparagus-bowl", "noakhali-shorshe-ilish", "chingri-malai-curry", "tom-yum-soup-goong-gai"],
+    featuredRecipeSlugs: ["loitta-shutki-bhuna-dried-fermented-fish", "crispy-golden-salmon-patties-dish", "tuna-fish-kebab-fritters", "green-goddess-wild-salmon-asparagus-bowl", "noakhali-shorshe-ilish", "chingri-malai-curry", "tom-yum-soup-goong-gai"],
     faqs: [
       {
         question: "Are all types of fish and seafood Halal?",
@@ -111,7 +111,7 @@ export const CATEGORIES: CategoryHub[] = [
     fullDescription:
       "Pure, nourishing plant-based dishes made with wholesome legumes, cold-pressed mustard oil, whole spices, and garden-fresh vegetables. Completely free from animal byproducts and naturally pork-free.",
     image: IMAGES.vegBhunaKhichuri,
-    featuredRecipeSlugs: ["crispy-garlic-herb-roasted-potatoes", "pillowy-restaurant-style-garlic-butter-naan", "rainbow-roasted-beet-whipped-goat-cheese-salad", "panera-style-halal-broccoli-cheddar-soup", "crispy-zaatar-chickpea-halloumi-glow-salad", "vegetable-bhuna-khichuri"],
+    featuredRecipeSlugs: ["mediterranean-chickpea-salad", "authentic-lebanese-baba-ganoush", "masoor-dal-red-lentil-dal", "crispy-garlic-herb-roasted-potatoes", "pillowy-restaurant-style-garlic-butter-naan", "rainbow-roasted-beet-whipped-goat-cheese-salad", "panera-style-halal-broccoli-cheddar-soup", "crispy-zaatar-chickpea-halloumi-glow-salad", "vegetable-bhuna-khichuri"],
     faqs: [
       {
         question: "Do vegetarian dishes ever contain non-halal ingredients?",
@@ -131,7 +131,7 @@ export const CATEGORIES: CategoryHub[] = [
     fullDescription:
       "The staple combination that anchors Bengali and South Asian hospitality. Learn the fine art of blooming whole spices in pure ghee, parboiling basmati rice, and creating layered gravies that bring families together.",
     image: IMAGES.chickenRoast,
-    featuredRecipeSlugs: ["authentic-arabian-chicken-mandi", "authentic-saudi-chicken-kabsa", "pillowy-restaurant-style-garlic-butter-naan", "halal-chicken-biryani", "vegetable-bhuna-khichuri"],
+    featuredRecipeSlugs: ["authentic-arabian-chicken-mandi", "chicken-machboos-majboos-kabsa", "pillowy-restaurant-style-garlic-butter-naan", "halal-chicken-biryani", "vegetable-bhuna-khichuri"],
     faqs: [
       {
         question: "What rice variety gives the most authentic aroma?",
@@ -151,7 +151,7 @@ export const CATEGORIES: CategoryHub[] = [
     fullDescription:
       "Snack time in Muslim households is a lively affair of spiced pastry triangles, hot fried fritters, and sweet chutneys served alongside cardamom milk tea (chai).",
     image: IMAGES.streetFood,
-    featuredRecipeSlugs: ["birria-tacos-beef-quesabirria-consome", "kibbeh-lebanese-fried-bulgur-stuffed-shells", "traditional-teler-pitha-gur-pitha", "crispy-halal-samosas"],
+    featuredRecipeSlugs: ["authentic-lebanese-baba-ganoush", "tuna-fish-kebab-fritters", "birria-tacos-beef-quesabirria-consome", "kibbeh-lebanese-fried-bulgur-stuffed-shells", "traditional-teler-pitha-gur-pitha", "crispy-halal-samosas"],
     faqs: [
       {
         question: "Can samosas be prepared in advance?",

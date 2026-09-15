@@ -501,236 +501,6 @@ export async function searchHalalPlaces(params: {
 
   // If Google Maps API key is configured, execute Places API (New) Search
   if (apiKey) {
-    // 1. If pageToken is provided, execute Places API (New) Text Search for subsequent pages
-    if (pageToken) {
-      try {
-        const textSearchUrl = "https://places.googleapis.com/v1/places:searchText";
-        const requestBody: any = {
-          textQuery,
-          pageToken,
-          pageSize: 20,
-        };
-
-        const response = await fetch(textSearchUrl, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "X-Goog-Api-Key": apiKey,
-            "X-Goog-Maps-Solution-ID": "gmp_mcp_codeassist_v1_aistudio",
-            "X-Goog-FieldMask":
-              "places.id,places.displayName,places.formattedAddress,places.location,places.rating,places.userRatingCount,places.currentOpeningHours,places.nationalPhoneNumber,places.internationalPhoneNumber,places.websiteUri,places.googleMapsUri,places.types,places.photos,places.priceLevel,nextPageToken",
-          },
-          body: JSON.stringify(requestBody),
-        });
-
-        if (response.ok) {
-          const data = (await response.json()) as any;
-          const rawPlaces: any[] = data.places || [];
-          const resNextPageToken: string | undefined = data.nextPageToken || undefined;
-
-          const categoryLabel =
-            category === "restaurants"
-              ? "Halal Restaurant"
-              : category === "groceries"
-              ? "Halal Grocery & Meat"
-              : "Mosque & Islamic Center";
-
-          const mapped: PlaceResult[] = rawPlaces.map((p) => {
-            const dist = calculateDistance(lat, lng, p.location?.latitude || 0, p.location?.longitude || 0);
-            let photoUrl: string | undefined = undefined;
-            if (p.photos && p.photos.length > 0 && p.photos[0].name) {
-              photoUrl = `https://places.googleapis.com/v1/${p.photos[0].name}/media?key=${apiKey}&maxHeightPx=400&maxWidthPx=600&solution_id=gmp_mcp_codeassist_v1_aistudio`;
-            }
-
-            return {
-              id: p.id || `place-${Math.random().toString(36).slice(2, 9)}`,
-              name: p.displayName?.text || "Halal Establishment",
-              category,
-              categoryLabel,
-              formattedAddress: p.formattedAddress || "Address available on map",
-              location: {
-                latitude: p.location?.latitude || lat,
-                longitude: p.location?.longitude || lng,
-              },
-              rating: typeof p.rating === "number" ? p.rating : undefined,
-              userRatingCount: typeof p.userRatingCount === "number" ? p.userRatingCount : undefined,
-              priceLevel: p.priceLevel,
-              isOpenNow: p.currentOpeningHours?.openNow,
-              weekdayDescriptions: p.currentOpeningHours?.weekdayDescriptions,
-              nationalPhoneNumber: p.nationalPhoneNumber,
-              internationalPhoneNumber: p.internationalPhoneNumber,
-              websiteUri: p.websiteUri,
-              googleMapsUri:
-                p.googleMapsUri ||
-                `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.displayName?.text || textQuery)}`,
-              photoUrl,
-              types: p.types,
-              distanceKm: dist.km,
-              distanceMiles: dist.miles,
-              halalNotice:
-                category === "mosques"
-                  ? "Verified Islamic place of worship"
-                  : "Found through halal search. Verify individual certification & sourcing directly with establishment.",
-              source: "google_api",
-            };
-          });
-
-          const slicedPlaces = mapped.slice(0, 20);
-          return {
-            places: slicedPlaces,
-            nextPageToken: resNextPageToken,
-            status: slicedPlaces.length > 0 ? "OK" : "ZERO_RESULTS",
-            source: "google_api",
-          };
-        }
-      } catch (err: any) {
-        console.error("Failed to query Places API text search with pageToken:", err?.message);
-      }
-
-      return {
-        places: [],
-        status: "OK",
-        source: "google_api",
-      };
-    }
-
-    // 2. Primary Live Search: Places API (New) searchNearby by coordinates + radius + category types
-    // This provides 20 real live Google Places without hitting daily text-query restrictions.
-    try {
-      let includedTypes: string[] = [];
-      if (category === "restaurants") {
-        includedTypes = [
-          "halal_restaurant",
-          "middle_eastern_restaurant",
-          "indian_restaurant",
-          "pakistani_restaurant",
-        ];
-      } else if (category === "groceries") {
-        includedTypes = ["supermarket", "grocery_store"];
-      } else if (category === "mosques") {
-        includedTypes = ["mosque"];
-      }
-
-      const nearbyUrl = "https://places.googleapis.com/v1/places:searchNearby";
-      const nearbyBody: any = {
-        includedTypes,
-        maxResultCount: 20,
-        rankPreference: "POPULARITY",
-        locationRestriction: {
-          circle: {
-            center: {
-              latitude: lat,
-              longitude: lng,
-            },
-            radius: Math.min(radiusMeters, 50000), // Max radius 50,000m
-          },
-        },
-      };
-
-      const nearbyResponse = await fetch(nearbyUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "X-Goog-Api-Key": apiKey,
-          "X-Goog-Maps-Solution-ID": "gmp_mcp_codeassist_v1_aistudio",
-          "X-Goog-FieldMask":
-            "places.id,places.displayName,places.formattedAddress,places.location,places.rating,places.userRatingCount,places.currentOpeningHours,places.nationalPhoneNumber,places.internationalPhoneNumber,places.websiteUri,places.googleMapsUri,places.types,places.photos,places.priceLevel",
-        },
-        body: JSON.stringify(nearbyBody),
-      });
-
-      if (nearbyResponse.ok) {
-        const data = (await nearbyResponse.json()) as any;
-        const rawPlaces: any[] = data.places || [];
-
-        const categoryLabel =
-          category === "restaurants"
-            ? "Halal Restaurant"
-            : category === "groceries"
-            ? "Halal Grocery & Meat"
-            : "Mosque & Islamic Center";
-
-        const mapped: PlaceResult[] = rawPlaces.map((p) => {
-          const dist = calculateDistance(lat, lng, p.location?.latitude || 0, p.location?.longitude || 0);
-
-          let photoUrl: string | undefined = undefined;
-          if (p.photos && p.photos.length > 0 && p.photos[0].name) {
-            photoUrl = `https://places.googleapis.com/v1/${p.photos[0].name}/media?key=${apiKey}&maxHeightPx=400&maxWidthPx=600&solution_id=gmp_mcp_codeassist_v1_aistudio`;
-          }
-
-          return {
-            id: p.id || `place-${Math.random().toString(36).slice(2, 9)}`,
-            name: p.displayName?.text || "Halal Establishment",
-            category,
-            categoryLabel,
-            formattedAddress: p.formattedAddress || "Address available on map",
-            location: {
-              latitude: p.location?.latitude || lat,
-              longitude: p.location?.longitude || lng,
-            },
-            rating: typeof p.rating === "number" ? p.rating : undefined,
-            userRatingCount: typeof p.userRatingCount === "number" ? p.userRatingCount : undefined,
-            priceLevel: p.priceLevel,
-            isOpenNow: p.currentOpeningHours?.openNow,
-            weekdayDescriptions: p.currentOpeningHours?.weekdayDescriptions,
-            nationalPhoneNumber: p.nationalPhoneNumber,
-            internationalPhoneNumber: p.internationalPhoneNumber,
-            websiteUri: p.websiteUri,
-            googleMapsUri:
-              p.googleMapsUri ||
-              `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.displayName?.text || textQuery)}`,
-            photoUrl,
-            types: p.types,
-            distanceKm: dist.km,
-            distanceMiles: dist.miles,
-            halalNotice:
-              category === "mosques"
-                ? "Verified Islamic place of worship"
-                : "Found through halal search. Verify individual certification & sourcing directly with establishment.",
-            source: "google_api",
-          };
-        });
-
-        // Apply client filters if requested
-        let filtered = mapped;
-        if (openNow) {
-          filtered = filtered.filter((p) => p.isOpenNow !== false);
-        }
-        if (minRating > 0) {
-          filtered = filtered.filter((p) => (p.rating || 0) >= minRating);
-        }
-        if (subQuery) {
-          const lowerSub = subQuery.toLowerCase();
-          const subFiltered = filtered.filter(
-            (p) =>
-              p.name.toLowerCase().includes(lowerSub) ||
-              (p.types && p.types.some((t) => t.toLowerCase().includes(lowerSub)))
-          );
-          if (subFiltered.length > 0) {
-            filtered = subFiltered;
-          }
-        }
-
-        const slicedPlaces = filtered.slice(0, 20);
-
-        if (slicedPlaces.length > 0) {
-          const result: PlacesSearchResult = {
-            places: slicedPlaces,
-            status: "OK",
-            source: "google_api",
-          };
-          setInCache(cacheKey, result);
-          return result;
-        }
-      } else {
-        const errorText = await nearbyResponse.text();
-        console.warn("Places API searchNearby returned non-200:", nearbyResponse.status, errorText);
-      }
-    } catch (err: any) {
-      console.warn("Places API searchNearby failed:", err?.message);
-    }
-
-    // 3. Secondary Fallback: Try searchText if searchNearby returned 0 places or failed
     try {
       const textUrl = "https://places.googleapis.com/v1/places:searchText";
       const requestBody: any = {
@@ -738,13 +508,21 @@ export async function searchHalalPlaces(params: {
         locationBias: {
           circle: {
             center: { latitude: lat, longitude: lng },
-            radius: Math.min(radiusMeters, 50000),
+            radius: Math.min(radiusMeters, 50000), // Max radius 50,000m
           },
         },
         pageSize: 20,
       };
-      if (openNow) requestBody.openNow = true;
-      if (minRating > 0) requestBody.minRating = minRating;
+
+      if (openNow) {
+        requestBody.openNow = true;
+      }
+      if (minRating > 0) {
+        requestBody.minRating = minRating;
+      }
+      if (pageToken) {
+        requestBody.pageToken = pageToken;
+      }
 
       const response = await fetch(textUrl, {
         method: "POST",
@@ -761,25 +539,41 @@ export async function searchHalalPlaces(params: {
       if (response.ok) {
         const data = (await response.json()) as any;
         const rawPlaces: any[] = data.places || [];
-        const nextPageToken: string | undefined = data.nextPageToken || undefined;
+        const resNextPageToken: string | undefined = data.nextPageToken || undefined;
 
-        const categoryLabel =
-          category === "restaurants"
-            ? "Halal Restaurant"
-            : category === "groceries"
-            ? "Halal Grocery & Meat"
-            : "Mosque & Islamic Center";
-
-        const mapped: PlaceResult[] = rawPlaces.map((p) => {
+        let mapped: PlaceResult[] = rawPlaces.map((p) => {
           const dist = calculateDistance(lat, lng, p.location?.latitude || 0, p.location?.longitude || 0);
           let photoUrl: string | undefined = undefined;
           if (p.photos && p.photos.length > 0 && p.photos[0].name) {
             photoUrl = `https://places.googleapis.com/v1/${p.photos[0].name}/media?key=${apiKey}&maxHeightPx=400&maxWidthPx=600&solution_id=gmp_mcp_codeassist_v1_aistudio`;
           }
 
+          const placeName = p.displayName?.text || "Halal Establishment";
+          const lowerName = placeName.toLowerCase();
+
+          // Safe category labeling:
+          // Do NOT claim "halal certified" or blindly label everything as "Halal Grocery & Meat".
+          // Use "Halal Grocery" or "Halal-focused Grocery" based on the search context.
+          let categoryLabel: string;
+          if (category === "restaurants") {
+            categoryLabel = "Halal Restaurant";
+          } else if (category === "groceries") {
+            const hasExplicitHalal = /halal|zabiha|zabihah|islamic|muslim/i.test(lowerName);
+            categoryLabel = hasExplicitHalal ? "Halal Grocery" : "Halal-focused Grocery";
+          } else {
+            categoryLabel = "Mosque & Islamic Center";
+          }
+
+          const halalNotice =
+            category === "mosques"
+              ? "Verified Islamic place of worship"
+              : category === "groceries"
+              ? "Found through halal grocery search. Verify individual certification & sourcing directly with establishment."
+              : "Found through halal search. Verify individual certification & sourcing directly with establishment.";
+
           return {
             id: p.id || `place-${Math.random().toString(36).slice(2, 9)}`,
-            name: p.displayName?.text || "Halal Establishment",
+            name: placeName,
             category,
             categoryLabel,
             formattedAddress: p.formattedAddress || "Address available on map",
@@ -797,34 +591,96 @@ export async function searchHalalPlaces(params: {
             websiteUri: p.websiteUri,
             googleMapsUri:
               p.googleMapsUri ||
-              `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.displayName?.text || textQuery)}`,
+              `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(placeName)}`,
             photoUrl,
             types: p.types,
             distanceKm: dist.km,
             distanceMiles: dist.miles,
-            halalNotice:
-              category === "mosques"
-                ? "Verified Islamic place of worship"
-                : "Found through halal search. Verify individual certification & sourcing directly with establishment.",
+            halalNotice,
             source: "google_api",
           };
         });
 
+        // Safeguard for groceries:
+        // Filter out generic non-halal supermarket chains that lack any halal specialization
+        if (category === "groceries") {
+          const isGenericSupermarketChain = (name: string) => {
+            const genericChains = [
+              "walmart",
+              "h-e-b",
+              "heb",
+              "aldi",
+              "kroger",
+              "trader joe's",
+              "trader joes",
+              "target",
+              "costco",
+              "sam's club",
+              "sams club",
+              "whole foods",
+              "safeway",
+              "publix",
+              "sprouts",
+              "albertsons",
+            ];
+            const lower = name.toLowerCase();
+            return genericChains.some(
+              (chain) =>
+                lower === chain ||
+                lower.startsWith(chain + " ") ||
+                lower.includes(chain + " supercenter")
+            );
+          };
+
+          mapped = mapped.filter((p) => {
+            if (isGenericSupermarketChain(p.name)) {
+              return /halal|zabiha|zabihah/i.test(p.name);
+            }
+            return true;
+          });
+        }
+
+        // Apply client subQuery filter if provided
+        if (subQuery) {
+          const lowerSub = subQuery.toLowerCase();
+          const subFiltered = mapped.filter(
+            (p) =>
+              p.name.toLowerCase().includes(lowerSub) ||
+              (p.types && p.types.some((t) => t.toLowerCase().includes(lowerSub))) ||
+              p.formattedAddress.toLowerCase().includes(lowerSub)
+          );
+          if (subFiltered.length > 0) {
+            mapped = subFiltered;
+          }
+        }
+
         const slicedPlaces = mapped.slice(0, 20);
-        if (slicedPlaces.length > 0) {
+        if (slicedPlaces.length > 0 || pageToken) {
           const result: PlacesSearchResult = {
             places: slicedPlaces,
-            nextPageToken,
-            status: "OK",
+            nextPageToken: resNextPageToken,
+            status: slicedPlaces.length > 0 ? "OK" : "ZERO_RESULTS",
             source: "google_api",
           };
           setInCache(cacheKey, result);
           return result;
         }
+      } else {
+        const errorText = await response.text();
+        console.warn("Places API searchText returned non-200:", response.status, errorText);
       }
     } catch (err: any) {
-      console.warn("Places API searchText fallback failed:", err?.message);
+      console.warn("Places API searchText failed:", err?.message);
     }
+  }
+
+  // If this was a subsequent page (pageToken present) and failed, return empty result without fallback
+  if (pageToken) {
+    return {
+      places: [],
+      status: "OK",
+      source: "google_api",
+    };
   }
 
   // 4. Resilient Live Worldwide Fallback: Provides up to 20 location-accurate establishments
@@ -864,7 +720,7 @@ async function resolveLiveAndContextualPlaces(
     category === "restaurants"
       ? "Halal Restaurant"
       : category === "groceries"
-      ? "Halal Grocery & Meat"
+      ? "Halal Grocery"
       : "Mosque & Islamic Center";
 
   // 1. Fetch live establishments from OpenStreetMap Nominatim around the location bounding box

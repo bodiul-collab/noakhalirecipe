@@ -3,6 +3,1443 @@ import { IMAGES } from "./assets";
 
 export const RECIPES: Recipe[] = [
   {
+    id: "rec-lahori-chicken-chargha-roast",
+    slug: "authentic-lahori-chicken-chargha",
+    title: "Chicken Chargha (لاہوری چکن چرغہ)",
+    category: "Halal Chicken",
+    categorySlug: "halal-chicken",
+    cuisine: "Lahori Punjabi & Pakistani Street Food Heritage",
+    description:
+      "A legendary Lahori street food classic of tender bone-in chicken deeply scored and marinated in tangy yogurt, lemon juice, Kashmiri chili, chaat masala, crushed cumin, and ginger-garlic paste, steam-tenderized then flash-roasted to golden mahogany perfection with a blistered, savory crust.",
+    introStory:
+      "Originating in the vibrant food streets of Lahore, Pakistan—particularly around the historic bustling quarters of Anarkali and Gawalmandi—Chicken Chargha (چکن چرغہ) is celebrated across the subcontinent as the pinnacle of spicy, succulent poultry craftsmanship. The word 'Chargha' translates literally to a whole bird or fowl in Pashto and Punjabi dialects. What elevates authentic Chargha into legend is its ingenious traditional two-stage cooking technique: the chicken is scored with deep criss-cross diagonal cuts right down to the bone, immersed in an intensely spiced, tangy marinade of strained yogurt, fresh lemon juice, crushed cumin, carom seeds (ajwain), and fiery red chilies, then gently steam-cooked until tender and juicy before being flash-fried or roasted at blazing heat. This locks all natural juices inside while caramelizing the surface into a dramatic, crackling mahogany crust. Garnished generously with charred lemon halves, a dusting of tangy chaat masala, and fresh sprigs of herbs, every succulent bite delivers an unforgettable explosion of flavor.",
+    heroImage: IMAGES.chickenChargha,
+    prepTimeMinutes: 25,
+    cookTimeMinutes: 35,
+    totalTimeMinutes: 60,
+    servings: 4,
+    difficulty: "Medium",
+    calories: 420,
+    rating: 5.0,
+    reviewCount: 196,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified. Prepared exclusively with zabiha hand-slaughtered chicken, pure spices, fresh citrus, and natural yogurt. Completely free from animal gelatins, chemical dyes, or alcohol-based vinegars.",
+    potentialCautionNotes:
+      "Carries a spicy, pungent kick with distinct tanginess from amchur (dry mango) and black salt in chaat masala. Ensure deep knife cuts into the meat so the marinade reaches the bone and prevents undercooking.",
+    ingredients: [
+      { amount: "3 lbs / 1.4 kg", unit: "whole or 4 large", name: "Halal Chicken Whole or Leg Quarters", notes: "skin-on or skinless, washed, patted bone-dry, deeply scored with 1/2-inch diagonal slits" },
+      { amount: "1/2", unit: "cup", name: "Thick Greek Yogurt or Hung Curd", notes: "strained so excess moisture does not dilute the marinade" },
+      { amount: "3", unit: "tbsp", name: "Freshly Squeezed Lemon Juice", notes: "plus 2 whole lemons halved for pan-charring" },
+      { amount: "2", unit: "tbsp", name: "Ginger-Garlic Paste", notes: "freshly crushed for vibrant aromatics" },
+      { amount: "1.5", unit: "tbsp", name: "Kashmiri Red Chili Powder", notes: "creates the iconic ruby mahogany hue without scorching heat" },
+      { amount: "1", unit: "tsp", name: "Spicy Red Chili Flakes or Cayenne", notes: "for authentic Lahori street heat" },
+      { amount: "1.5", unit: "tsp", name: "Roasted Cumin Powder (Bhuna Jeera)", notes: "freshly roasted and crushed" },
+      { amount: "1.5", unit: "tsp", name: "Ground Coriander", notes: "dry-roasted" },
+      { amount: "1", unit: "tsp", name: "Garam Masala Powder", notes: "fragrant Punjabi blend with mace and black cardamom" },
+      { amount: "1/2", unit: "tsp", name: "Carom Seeds (Ajwain)", notes: "rubbed between palms to release pungent thyme-like aroma" },
+      { amount: "1/2", unit: "tsp", name: "Turmeric Powder", notes: "for warm color and earthy undertone" },
+      { amount: "1", unit: "tsp", name: "Black Salt (Kala Namak) & 1 tsp Sea Salt", notes: "to taste" },
+      { amount: "1", unit: "large", name: "Egg", notes: "lightly beaten to bind spices firmly to the chicken surface" },
+      { amount: "2", unit: "tbsp", name: "Roasted Gram Flour (Besan) or Cornstarch", notes: "creates a light crisp outer lacquer" },
+      { amount: "3", unit: "tbsp", name: "Ghee or Mustard Oil", notes: "for basting and searing to blistered perfection" },
+      { amount: "1.5", unit: "tsp", name: "Special Lahori Chaat Masala", notes: "for dusting hot out of the pan" },
+      { amount: "to garnish", unit: "handful", name: "Fresh Mint, Basil, Coriander, & Sliced Red Chilies", notes: "fresh garden herbs for vibrant contrast" },
+    ],
+    substitutions: [
+      {
+        original: "Whole chicken cut into quarters",
+        substitute: "Bone-in skin-on chicken drumsticks and bone-in thighs",
+        notes: "Equally delicious and cooks slightly faster with even easier portioning.",
+      },
+      {
+        original: "Traditional steam-then-fry method",
+        substitute: "Air fryer at 380°F (193°C) for 22–25 minutes or Oven Roast at 425°F (220°C)",
+        notes: "Gives crispy caramelized skin with significantly less oil while retaining juicy tender interior.",
+      },
+      {
+        original: "Kashmiri chili powder",
+        substitute: "Sweet smoked paprika blended with a pinch of cayenne",
+        notes: "Delivers the stunning sunset-red color with smoky undertones.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Clean, Dry, and Deep-Score the Chicken",
+        instruction:
+          "Pat the chicken quarters thoroughly dry with paper towels. Using a sharp chef's knife, make deep parallel diagonal cuts (about 1/2 inch deep) along the thickest parts of the breast, thighs, and drumsticks right down to the bone. This allows the marinade to saturate deep into the meat fibers.",
+        tip: "Drying the chicken skin and flesh thoroughly before scoring is crucial; surface moisture prevents the spices and yogurt from clinging firmly.",
+      },
+      {
+        step: 2,
+        title: "First Marinade: Lemon, Salt, and Garlic",
+        instruction:
+          "Rub the scored chicken with 2 tablespoons of fresh lemon juice, 1 tablespoon of ginger-garlic paste, and 1 teaspoon of sea salt, pressing into all the cuts. Let rest for 15 minutes to initiate tenderization.",
+      },
+      {
+        step: 3,
+        title: "Blend the Spiced Chargha Masala",
+        instruction:
+          "In a mixing bowl, combine thick strained yogurt, remaining ginger-garlic paste, Kashmiri chili powder, red chili flakes, roasted cumin, ground coriander, garam masala, crushed ajwain seeds, turmeric, black salt, beaten egg, roasted gram flour (besan), and 1 tbsp mustard oil. Whisk until a thick, clingy paste forms.",
+      },
+      {
+        step: 4,
+        title: "Coat and Marinate",
+        instruction:
+          "Slather the spiced yogurt marinade generously over the chicken, making sure to work the mixture into every incision and under the skin. Cover tightly and refrigerate for at least 3 hours, or ideally overnight for melt-in-the-mouth tenderness.",
+      },
+      {
+        step: 5,
+        title: "Steam-Tenderize (The Authentic Secret)",
+        instruction:
+          "Place a steamer basket in a wide pot with 2 inches of water (or use an electric steamer). Place the marinated chicken pieces on a heatproof plate or parchment inside the steamer. Cover tightly and steam on medium heat for 18–20 minutes until the chicken is cooked through and tender to the bone, retaining all meat juices.",
+      },
+      {
+        step: 6,
+        title: "Flash-Roast or Sear for Mahogany Char",
+        instruction:
+          "Heat 3 tablespoons of ghee or oil in a heavy cast-iron skillet or grill pan over high heat. Place the steamed chicken pieces along with lemon halves into the hot pan. Baste with sizzling pan juices and sear undisturbed for 4–5 minutes per side until the skin turns blistered, dark golden-brown, and crispy with appetizing charred edges.",
+      },
+      {
+        step: 7,
+        title: "Dust with Chaat Masala and Serve",
+        instruction:
+          "Transfer the piping-hot chicken quarters onto a matte black serving platter. Immediately dust with pungent Lahori chaat masala while the surface is sizzling hot. Arrange the caramelized charred lemon halves, fresh lemon wedges, and fresh herbs (mint, basil, and flat-leaf coriander) around the chicken. Serve steaming hot.",
+      },
+    ],
+    chefNotes: [
+      "The steaming step is what makes Chargha legendary: it ensures the chicken is 100% cooked to the bone and juicy, meaning you only need a quick high-heat flash in the pan to achieve that crisp, blistered mahogany skin without burning spices.",
+      "Never skip the final sprinkle of chaat masala immediately after cooking; the rising steam activates the amchur and black salt, giving that authentic Lahore food-street aroma.",
+    ],
+    nutrition: {
+      calories: 420,
+      proteinGrams: 42,
+      carbsGrams: 8,
+      fatGrams: 24,
+      fiberGrams: 2,
+      sodiumMg: 710,
+    },
+    storageInstructions:
+      "Store leftover Chargha in an airtight container in the refrigerator for up to 3 days. Reheat in an air fryer or oven at 375°F (190°C) for 6–8 minutes to reactivate the crisp skin.",
+    freezingInstructions:
+      "Steamed or cooked pieces can be wrapped in foil and frozen for up to 2 months. Reheat directly in a hot oven or air fryer until sizzling and crispy.",
+    servingSuggestions: [
+      "Serve hot with warm tandoori naan, garlic parathas, or roomali roti alongside a bowl of fresh mint-coriander yogurt raita.",
+      "Pair with thinly sliced pickled onion rings tossed with lemon juice, fresh cilantro, and julienned ginger.",
+      "Accompany with seasoned French fries or spicy potato wedges for an authentic Pakistani street-food feast.",
+    ],
+    faqs: [
+      {
+        question: "What is the difference between Chicken Chargha and Tandoori Chicken?",
+        answer:
+          "While both feature yogurt-spiced chicken, Tandoori Chicken is traditionally baked purely inside a clay tandoor oven. Chargha uses the distinctive two-phase Lahori method of first steam-cooking the scored chicken until juicy, followed by high-heat deep-frying or flash-searing in ghee with a dusting of chaat masala.",
+      },
+      {
+        question: "Can I make Chicken Chargha entirely in an air fryer?",
+        answer:
+          "Yes! After marinating, place the chicken in the air fryer basket at 360°F (182°C) for 15 minutes to cook through, then raise to 400°F (204°C) for the final 6–8 minutes, basting with melted ghee until charred and crispy.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Aziz",
+      role: "Continental & Mediterranean Executive Chef",
+    },
+    updatedDate: "September 14, 2026",
+    tags: [
+      "Chicken Chargha",
+      "Lahori Chargha",
+      "چکن چرغہ",
+      "Halal Chicken",
+      "Pakistani Cuisine",
+      "Street Food",
+      "Crispy Roast Chicken",
+      "Tandoori Spiced",
+      "High Protein",
+    ],
+  },
+  {
+    id: "rec-authentic-butter-chicken-murgh-makhani",
+    slug: "authentic-restaurant-style-butter-chicken-murgh-makhani",
+    title: "Authentic Restaurant-Style Butter Chicken (Murgh Makhani)",
+    category: "Halal Chicken",
+    categorySlug: "halal-chicken",
+    cuisine: "Delhi & Mughlai Royal Heritage",
+    description:
+      "Tender chunks of spiced yogurt-marinated Halal chicken charred to perfection, then simmered in a velvety, buttery tomato gravy infused with Kashmiri chili, fragrant fenugreek leaves (kasuri methi), pure butter, and a swirl of fresh cream.",
+    introStory:
+      "Born in the historic culinary quarters of Old Delhi at the iconic Moti Mahal in the 1950s, authentic Butter Chicken (Murgh Makhani / مکھنی مرغ) is celebrated across the globe as the definitive masterpiece of Mughlai comfort food. True restaurant-grade makhani relies on two masterful elements: succulent pieces of Halal chicken marinated in thick strained yogurt, ginger-garlic paste, and vibrant Kashmiri chili that are charred to smoky perfection, and an impeccably smooth, silk-strained tomato and cashew gravy. Enriched with golden unsalted butter, hand-crushed dried fenugreek leaves (kasuri methi), whole green cardamom, and a swirl of rich dairy cream, this curry delivers an intoxicating balance of sweet, smoky, tangy, and rich flavors. Served steaming in a brass-handled karahi alongside warm, blistered garlic butter naan and pickled red onion rings, it brings five-star luxury straight to your family table.",
+    heroImage: IMAGES.butterChicken,
+    prepTimeMinutes: 20,
+    cookTimeMinutes: 30,
+    totalTimeMinutes: 50,
+    servings: 5,
+    difficulty: "Medium",
+    calories: 480,
+    rating: 5.0,
+    reviewCount: 318,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified. Prepared exclusively with zabiha hand-slaughtered chicken, pure cultured dairy butter, whole spices, and cream completely free of gelatins, chemical thickeners, or non-halal flavor enhancers.",
+    potentialCautionNotes:
+      "Contains dairy (butter, yogurt, heavy cream) and tree nuts (raw cashews used to naturally thicken the silk gravy). For a nut-free version, substitute cashews with soaked sunflower seeds, watermelon seeds (char magaz), or extra cream.",
+    ingredients: [
+      { amount: "1.8", unit: "lbs / 800g", name: "Halal Boneless Chicken Thighs (or Breasts)", notes: "cut into 1.5-inch juicy cubes" },
+      { amount: "1/2", unit: "cup", name: "Plain Greek Yogurt or Hung Curd", notes: "thick and strained for chicken marinade" },
+      { amount: "2", unit: "tbsp", name: "Ginger-Garlic Paste", notes: "divided: 1 tbsp for marinade, 1 tbsp for makhani gravy" },
+      { amount: "2", unit: "tbsp", name: "Kashmiri Red Chili Powder", notes: "divided: gives iconic vibrant crimson hue without fiery heat" },
+      { amount: "1.5", unit: "tsp", name: "Garam Masala", notes: "divided: freshly ground South Asian blend" },
+      { amount: "1", unit: "tbsp", name: "Fresh Lemon Juice", notes: "tenderizes the chicken" },
+      { amount: "1", unit: "tsp", name: "Ground Cumin & Ground Coriander", notes: "for warm earthy spice" },
+      { amount: "6", unit: "large (approx. 700g)", name: "Ripe Red Roma Tomatoes", notes: "roughly chopped" },
+      { amount: "1/4", unit: "cup (40g)", name: "Raw Unsalted Cashew Nuts", notes: "creates the silky restaurant-style body" },
+      { amount: "4", unit: "tbsp (60g)", name: "Pure Unsalted Butter", notes: "divided: 2 tbsp for cooking, 2 tbsp cold cubes finished into gravy" },
+      { amount: "1", unit: "tbsp", name: "Mustard Oil or Ghee", notes: "for searing chicken" },
+      { amount: "4", unit: "whole", name: "Green Cardamom Pods & 1-inch Cinnamon Stick", notes: "lightly bruised" },
+      { amount: "1/2", unit: "cup (120ml)", name: "Heavy Whipping Cream", notes: "plus 1 tbsp for elegant garnish swirl" },
+      { amount: "1.5", unit: "tbsp", name: "Kasuri Methi (Dried Fenugreek Leaves)", notes: "lightly toasted and crushed between palms (vital signature aroma)" },
+      { amount: "1", unit: "tbsp", name: "Honey or Raw Sugar", notes: "to balance the tangy natural acidity of tomatoes" },
+      { amount: "1", unit: "tsp", name: "Fine Sea Salt", notes: "or to taste" },
+      { amount: "2", unit: "tbsp", name: "Fresh Cilantro Leaves", notes: "finely chopped for garnish" },
+      { amount: "to serve", unit: "as needed", name: "Warm Garlic Naan & Sliced Red Onion Rings", notes: "for the classic dining experience" },
+    ],
+    substitutions: [
+      {
+        original: "Boneless chicken thighs",
+        substitute: "Boneless skinless chicken breast, paneer cubes, or extra-firm tofu",
+        notes: "Thighs remain exceptionally juicy, but breast or paneer absorb the makhani gravy magnificently.",
+      },
+      {
+        original: "Cashew nuts",
+        substitute: "Soaked peeled almonds or melon seeds (char magaz)",
+        notes: "Keeps the sauce silky, thick, and velvety without altering flavor profile.",
+      },
+      {
+        original: "Stovetop skillet charring",
+        substitute: "Oven broiler or outdoor barbecue grill at 475°F (245°C) for 10–12 minutes",
+        notes: "Replicates the authentic tandoor clay-oven char and smoky notes.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Marinate the Chicken",
+        instruction:
+          "In a glass bowl, combine the chicken cubes with thick yogurt, 1 tbsp ginger-garlic paste, 1 tbsp Kashmiri chili powder, 1 tsp garam masala, 1 tbsp lemon juice, 1 tsp salt, and 1 tbsp mustard oil. Massage thoroughly so every piece is coated. Cover and refrigerate for at least 30 minutes (or up to overnight for maximum tenderness).",
+      },
+      {
+        step: 2,
+        title: "Simmer the Tomato-Cashew Sauce Base",
+        instruction:
+          "In a large saucepan, add the chopped tomatoes, cashews, bruised green cardamoms, cinnamon stick, 1 tbsp ginger-garlic paste, 1 tbsp Kashmiri chili powder, 1/2 tsp salt, and 1/2 cup of water. Bring to a boil, cover, and simmer over medium-low heat for 18–20 minutes until the tomatoes are completely soft and mushy and the cashews are tender.",
+      },
+      {
+        step: 3,
+        title: "Blend and Strain for Silky Velvet Texture",
+        instruction:
+          "Remove the cinnamon stick. Transfer the cooked tomato-cashew mixture to a high-speed blender and puree until completely smooth. Pour the puree through a fine-mesh sieve back into a clean bowl, pressing with the back of a ladle to discard any tomato seeds or skins. This step is the secret to true restaurant 'makhani' silkiness.",
+      },
+      {
+        step: 4,
+        title: "Sear the Chicken for Smoky Char",
+        instruction:
+          "Heat 1 tbsp of ghee or oil in a heavy cast-iron skillet or grill pan over high heat. Arrange marinated chicken pieces in a single layer without crowding. Cook for 3–4 minutes per side until charred brown with black blistered edges, about 80% cooked through. Set aside on a plate.",
+        tip: "Do not overcrowd the skillet or the chicken will steam instead of getting charred tandoori edges.",
+      },
+      {
+        step: 5,
+        title: "Simmer the Makhani Gravy with Butter",
+        instruction:
+          "In a deep pot or karahi, melt 2 tablespoons of butter over medium heat. Pour in the strained tomato-cashew velvet gravy. Stir in ground cumin, coriander, and honey. Bring to a gentle simmer for 5 minutes. Add the charred chicken pieces along with any resting juices into the simmering gravy. Simmer on low heat for 6–8 minutes until the chicken is tender and cooked through.",
+      },
+      {
+        step: 6,
+        title: "Finish with Kasuri Methi, Cream, and Cold Butter",
+        instruction:
+          "Rub the kasuri methi (dried fenugreek leaves) between your palms into fine flakes and stir into the curry along with remaining 1/2 tsp garam masala. Pour in the heavy cream and drop in the remaining 2 tablespoons of cold butter. Stir gently on low heat until the butter melts and emulsifies into a glossy, luxuriant sauce. Adjust salt and honey to taste.",
+      },
+      {
+        step: 7,
+        title: "Plate and Garnish",
+        instruction:
+          "Ladle the piping-hot butter chicken into a traditional brass or copper karahi bowl. Drizzle a delicate spiral of fresh cream over top, and scatter fresh coriander leaves. Serve immediately with warm blistered garlic naan breads, pickled red onions, and lemon wedges.",
+      },
+    ],
+    chefNotes: [
+      "Straining the blended tomato-cashew gravy through a fine-mesh sieve is the single non-negotiable step that separates authentic restaurant Murgh Makhani from standard home chicken curry.",
+      "Crushing toasted kasuri methi (fenugreek leaves) at the very end releases its essential oils and provides the unmistakable aromatic restaurant bouquet.",
+    ],
+    nutrition: {
+      calories: 480,
+      proteinGrams: 36,
+      carbsGrams: 14,
+      fatGrams: 31,
+      fiberGrams: 3,
+      sodiumMg: 680,
+    },
+    storageInstructions:
+      "Store cooled butter chicken in an airtight glass container in the refrigerator for up to 4 days. The sauce deepens in flavor overnight. Reheat gently over low heat, stirring in a splash of warm water or milk to restore its velvety sheen.",
+    freezingInstructions:
+      "Freezes exceptionally well for up to 2 months in a freezer-safe container. Thaw overnight in the refrigerator and reheat gently in a saucepan, adding a tablespoon of fresh butter to refresh the gloss.",
+    servingSuggestions: [
+      "Serve piping hot with freshly baked pillowy garlic butter naan to scoop up the luscious velvety gravy.",
+      "Pair with aromatic saffron basmati jeera rice, crisp cucumber raita, and thinly sliced red onion rings tossed in lemon and chaat masala.",
+      "Accompany with tandoori grilled appetizers like seekh kebabs or vegetable samosas for a complete restaurant dining banquet.",
+    ],
+    faqs: [
+      {
+        question: "What is the difference between Butter Chicken and Chicken Tikka Masala?",
+        answer:
+          "Butter Chicken (Murgh Makhani) originated in Delhi and features a mildly spiced, sweeter, silkier gravy made with strained tomatoes, cashews, butter, and cream. Chicken Tikka Masala (popularized in the UK) typically features a chunkier onion-tomato masala base with stronger spice profiles and less butter.",
+      },
+      {
+        question: "Why is Kashmiri chili powder recommended?",
+        answer:
+          "Kashmiri chili powder provides the signature ruby-red color and rich aromatic chili flavor without adding aggressive pungency or excessive heat, keeping the dish mellow and family-friendly.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Aziz",
+      role: "Continental & Mediterranean Executive Chef",
+    },
+    updatedDate: "September 14, 2026",
+    tags: [
+      "Butter Chicken",
+      "Murgh Makhani",
+      "बटर चिकन",
+      "Halal Chicken",
+      "Restaurant Style",
+      "Mughlai Cuisine",
+      "Indian Curry",
+      "Garlic Naan Pairing",
+      "Creamy Curry",
+    ],
+  },
+  {
+    id: "rec-mediterranean-chickpea-salad",
+    slug: "mediterranean-chickpea-salad",
+    title: "Mediterranean Chickpea Salad",
+    category: "Halal Vegetarian",
+    categorySlug: "halal-vegetarian",
+    cuisine: "Mediterranean & Greek Mezze",
+    description:
+      "A crisp, colorful, and protein-packed salad loaded with tender chickpeas, diced Persian cucumbers, vine-ripened tomatoes, crumbled creamy feta, fragrant fresh mint, and flat-leaf parsley tossed in a zesty lemon-oregano vinaigrette.",
+    introStory:
+      "Bright, refreshing, and deeply nourishing, Mediterranean Chickpea Salad is a celebration of sun-drenched coastal produce and wholesome plant-powered eating. Plump, tender chickpeas (garbanzo beans) provide a satisfying, protein-dense base that drinks in a vibrant dressing of cold-pressed extra virgin olive oil, freshly squeezed lemon juice, minced garlic, and aromatic dried wild oregano. Tossed with cool, crunchy Persian cucumbers, sweet vine-ripened tomatoes, fresh garden mint, and Italian flat-leaf parsley, every forkful bursts with texture and herbaceous zest. Finished with generous crumbles of Halal-certified sheep's milk feta cheese, this colorful salad serves equally well as a light revitalizing lunch, a barbecue side dish, or the crowning star of an expansive Mediterranean mezze feast.",
+    heroImage: IMAGES.mediterraneanChickpeaSalad,
+    prepTimeMinutes: 15,
+    cookTimeMinutes: 0,
+    totalTimeMinutes: 15,
+    servings: 6,
+    difficulty: "Easy",
+    calories: 230,
+    rating: 5.0,
+    reviewCount: 154,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: false,
+    halalNotes:
+      "100% Halal and vegetarian. Prepared with pure legumes, fresh market vegetables, and Halal-certified sheep or goat milk feta cheese produced with microbial (vegetarian) rennet. Free from animal enzymes, alcohol-based vinegars, or preservatives.",
+    potentialCautionNotes:
+      "Contains dairy (feta cheese). Can be rendered 100% vegan and dairy-free by substituting with plant-based almond or coconut feta, or simply swapping with extra briny Kalamata olives.",
+    ingredients: [
+      { amount: "2 cans (15 oz / 425g each)", unit: "or 3 cups cooked", name: "Chickpeas (Garbanzo Beans)", notes: "rinsed thoroughly and patted dry with paper towels" },
+      { amount: "2", unit: "cups", name: "Persian or English Cucumbers", notes: "diced into 1/2-inch crisp cubes" },
+      { amount: "2", unit: "cups", name: "Ripe Roma or Vine Tomatoes", notes: "seeded and diced into uniform bite-sized pieces" },
+      { amount: "1/2", unit: "cup", name: "Red Onion", notes: "finely diced (soaked in cold water 5 mins to mellow sharpness)" },
+      { amount: "1", unit: "cup (150g)", name: "Halal Feta Cheese", notes: "crumbled into creamy chunks" },
+      { amount: "1/2", unit: "cup", name: "Fresh Flat-Leaf Italian Parsley", notes: "finely chopped" },
+      { amount: "1/3", unit: "cup", name: "Fresh Spearmint Leaves", notes: "finely chopped for cooling brightness" },
+      { amount: "1/3", unit: "cup", name: "Pitted Kalamata Olives", notes: "halved (optional for savory Mediterranean depth)" },
+      { amount: "1/4", unit: "cup", name: "Extra Virgin Olive Oil", notes: "first cold-pressed for peppery, fruited richness" },
+      { amount: "3", unit: "tbsp", name: "Fresh Lemon Juice", notes: "freshly squeezed (from 1 large juicy lemon)" },
+      { amount: "1", unit: "clove", name: "Fresh Garlic", notes: "finely grated or pressed" },
+      { amount: "1", unit: "tsp", name: "Dried Wild Mediterranean Oregano", notes: "crushed between palms to release oils" },
+      { amount: "1/2", unit: "tsp", name: "Dijon Mustard", notes: "for a creamy, stable emulsion" },
+      { amount: "1/2", unit: "tsp", name: "Fine Sea Salt", notes: "or to taste (feta adds natural salinity)" },
+      { amount: "1/4", unit: "tsp", name: "Freshly Cracked Black Pepper", notes: "to taste" },
+    ],
+    substitutions: [
+      {
+        original: "Canned chickpeas",
+        substitute: "Home-cooked dried chickpeas simmered with a bay leaf until tender",
+        notes: "Provides even firmer toothsome bite and sweeter natural nutty flavor.",
+      },
+      {
+        original: "Feta cheese",
+        substitute: "Vegan block feta, grilled halloumi cubes, or avocado chunks",
+        notes: "Keeps the dish completely plant-based, dairy-free, and vegan.",
+      },
+      {
+        original: "Lemon juice",
+        substitute: "Red wine vinegar (halal-certified synthetic/acetic) or apple cider vinegar",
+        notes: "Gives a more pungent, classic Greek taverna vinaigrette punch.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Rinse and Dry the Chickpeas",
+        instruction:
+          "Pour the canned chickpeas into a colander. Rinse thoroughly under cold running water for 30 seconds to remove excess canning brine. Spread the chickpeas onto a clean kitchen towel and pat them completely dry. Dry chickpeas absorb the dressing much better without diluting flavors.",
+      },
+      {
+        step: 2,
+        title: "Whisk the Lemon-Herb Vinaigrette",
+        instruction:
+          "In a small mixing bowl or mason jar, combine the extra virgin olive oil, freshly squeezed lemon juice, grated garlic, dried wild oregano, Dijon mustard, fine sea salt, and cracked black pepper. Whisk vigorously until the dressing becomes golden and smoothly emulsified.",
+      },
+      {
+        step: 3,
+        title: "Chop the Fresh Produce",
+        instruction:
+          "Dice the Persian cucumbers and seeded Roma tomatoes into uniform 1/2-inch cubes. Finely dice the red onion (soak in a bowl of ice water for 5 minutes if you prefer a milder allium bite, then drain). Chop the fresh Italian parsley and mint leaves.",
+      },
+      {
+        step: 4,
+        title: "Toss and Marinate the Base",
+        instruction:
+          "In a large salad bowl, combine the dried chickpeas, cucumbers, tomatoes, red onion, chopped parsley, and chopped mint. Pour the lemon-herb vinaigrette over the salad. Toss thoroughly with salad spoons until every ingredient is glossed with dressing. Let stand at room temperature for 10 minutes so the chickpeas drink in the lemon and herbs.",
+      },
+      {
+        step: 5,
+        title: "Fold in the Feta Cheese",
+        instruction:
+          "Gently fold in 3/4 of the crumbled feta cheese (and Kalamata olives, if using), reserving the remaining feta for garnish. Tossing gently at the end prevents the cheese from breaking down and clouding the vibrant vegetables.",
+      },
+      {
+        step: 6,
+        title: "Garnish and Serve",
+        instruction:
+          "Scatter the remaining crumbled feta cheese and a few fresh mint leaves over top. Drizzle with a final swirl of extra virgin olive oil and a light pinch of coarse sea salt. Serve chilled or at cool room temperature with warm pita triangles.",
+      },
+    ],
+    chefNotes: [
+      "Patting the chickpeas completely dry before dressing is the secret restaurant trick—any surface water will repel the olive oil dressing and make the salad watery.",
+      "Dress the salad at least 15 minutes before serving. Chickpeas have thick skins and taste dramatically richer once they have had time to absorb the lemon, garlic, and oregano vinaigrette.",
+    ],
+    nutrition: {
+      calories: 230,
+      proteinGrams: 9,
+      carbsGrams: 22,
+      fatGrams: 12,
+      fiberGrams: 6,
+      sodiumMg: 420,
+    },
+    storageInstructions:
+      "This salad holds up remarkably well without wilting. Store in an airtight container in the refrigerator for up to 4 days. Give it a gentle toss and an extra squeeze of fresh lemon juice before serving.",
+    freezingInstructions:
+      "Not suitable for freezing. Fresh cucumbers and tomatoes lose their crisp cellular structure and release water upon thawing.",
+    servingSuggestions: [
+      "Serve as a vibrant centerpiece on a Mediterranean mezze spread with homemade Baba Ganoush, hummus, warm pita bread, and grilled chicken souvlaki or shawarma.",
+      "Spoon into warm pita bread pockets with shredded lettuce for a quick, wholesome lunch wrap.",
+      "Pair with grilled salmon, spiced lamb kebabs, or pan-seared sea bass.",
+    ],
+    faqs: [
+      {
+        question: "Can I prepare Mediterranean Chickpea Salad ahead of time?",
+        answer:
+          "Yes! Unlike leafy lettuce salads that wilt quickly, hearty chickpeas and cucumbers stay crisp and delicious. You can make it up to 24 hours in advance; simply fold in the fresh herbs and feta just before serving for peak vibrancy.",
+      },
+      {
+        question: "Is commercial Feta cheese Halal?",
+        answer:
+          "Traditional European feta can occasionally use animal rennet from non-halal animal slaughter. Look for feta packaging explicitly certified Halal or stating 'microbial rennet' or 'vegetarian enzymes', which ensures it is 100% permissible.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Aziz",
+      role: "Continental & Mediterranean Executive Chef",
+    },
+    updatedDate: "September 14, 2026",
+    tags: [
+      "Mediterranean Chickpea Salad",
+      "Chickpea Salad",
+      "Halal Vegetarian",
+      "Greek Salad",
+      "Garbanzo Beans",
+      "High Protein Salad",
+      "Meal Prep",
+      "Mezze",
+      "Gluten Free",
+    ],
+  },
+  {
+    id: "rec-loitta-shutki-bhuna-bengali",
+    slug: "loitta-shutki-bhuna-dried-fermented-fish",
+    title: "Loitta Shutki Bhuna / Dried & Fermented Fish (লোট্টা শুঁটকি ভুনা)",
+    category: "Halal Fish & Seafood",
+    categorySlug: "halal-seafood",
+    cuisine: "Chittagong & Coastal Noakhali Heritage",
+    description:
+      "A legendary coastal Bengali delicacy of tender shredded sun-dried Bombay duck fish slow-simmered in cold-pressed mustard oil with a mountain of sweet caramelized onions, crushed garlic cloves, fiery red chilies, turmeric, roasted cumin, and fresh green chili peppers.",
+    introStory:
+      "In the coastal towns of Chittagong, Cox's Bazar, and Greater Noakhali, Loitta Shutki Bhuna (লোট্টা শুঁটকি ভুনা) is an unparalleled culinary icon. Sun-dried under the coastal sea breeze, Loitta (Bombay duck fish) develops a concentrated, intensely savory umami that transforms into pure magic when slow-cooked into a bhuna. The dried fish is first parboiled in hot water with turmeric to cleanse and tenderize, then deboned and shredded by hand. It is cooked down in pungent cold-pressed mustard oil with generous amounts of thinly sliced onions and crushed whole garlic cloves until the alliums caramelize and melt into the fish fibers. Scented with fresh turmeric, roasted ground cumin, and slit fiery green chilies until glistening oil separates at the rim of the traditional clay plate, this dish awakens the senses like nothing else. Served with piping hot steamed rice or freshly made savory Chitoi Pitha, it is pure coastal comfort.",
+    heroImage: IMAGES.loittaShutki,
+    prepTimeMinutes: 20,
+    cookTimeMinutes: 25,
+    totalTimeMinutes: 45,
+    servings: 4,
+    difficulty: "Medium",
+    calories: 215,
+    rating: 5.0,
+    reviewCount: 230,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified. Sun-dried ocean fish naturally dried under solar heat without non-halal chemical preservatives or alcohol additions. Pure cold-pressed mustard oil and wholesome alliums.",
+    potentialCautionNotes:
+      "Carries an intensely fragrant, traditional umami aroma during cooking. Contains high natural chili heat and pungent mustard oil. Soak and wash thoroughly in warm water to reduce excess curing salt.",
+    ingredients: [
+      { amount: "200g / 7 oz", unit: "dry weight", name: "Sun-Dried Loitta Fish (Dried Bombay Duck / লোট্টা শুঁটকি)", notes: "cleaned, cut into 1.5-inch pieces" },
+      { amount: "2.5", unit: "cups", name: "Red Onions", notes: "thinly sliced into half-moons (shutki bhuna demands generous onions)" },
+      { amount: "1.5", unit: "heads / 15 cloves", name: "Fresh Garlic", notes: "crushed coarsely or sliced into thick chips" },
+      { amount: "1/4", unit: "cup", name: "Pure Cold-Pressed Mustard Oil (Kachi Ghani)", notes: "essential for authentic coastal pungency" },
+      { amount: "1", unit: "tbsp", name: "Ginger Paste", notes: "freshly crushed" },
+      { amount: "1", unit: "tbsp", name: "Spicy Red Chili Powder (Morich Gura)", notes: "or adjusted to heat preference" },
+      { amount: "1", unit: "tsp", name: "Ground Turmeric (Holud Gura)", notes: "divided: 1/2 tsp for soaking/cleansing, 1/2 tsp for bhuna" },
+      { amount: "1", unit: "tsp", name: "Roasted Cumin Powder (Bhaja Jira Gura)", notes: "adds earthy roasted aroma" },
+      { amount: "1", unit: "tsp", name: "Ground Coriander (Dhone Gura)", notes: "for balanced curry base" },
+      { amount: "6 to 8", unit: "whole", name: "Fresh Green Chilies", notes: "slit lengthwise to release aroma and heat" },
+      { amount: "1", unit: "tsp", name: "Fine Sea Salt", notes: "taste first as dried fish has natural sea salinity" },
+      { amount: "1/4", unit: "cup", name: "Warm Water", notes: "for deglazing and simmering down the paste" },
+      { amount: "2", unit: "tbsp", name: "Fresh Cilantro", notes: "optional rough-chopped garnish" },
+    ],
+    substitutions: [
+      {
+        original: "Dried Loitta (Bombay Duck)",
+        substitute: "Dried Chhuri (ribbon fish), Chingri shutki (dried baby shrimp), or fresh Loitta fillets",
+        notes: "Chhuri shutki cooks similarly and provides wonderful firm texture with identical spice balance.",
+      },
+      {
+        original: "Mustard oil",
+        substitute: "Sesame oil blended with neutral sunflower or vegetable oil",
+        notes: "Mustard oil gives the hallmark coastal kick, but neutral oil with extra garlic will still yield delicious bhuna.",
+      },
+      {
+        original: "Extra spicy red chili powder",
+        substitute: "Mild Kashmiri chili powder",
+        notes: "Provides the gorgeous sunset-red color with significantly reduced fiery heat.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Clean and Parboil the Dried Fish",
+        instruction:
+          "Cut the dried Loitta into 1.5-inch pieces with kitchen shears. Soak in warm water for 15 minutes to loosen any sea sediment. Bring a small pot of water to a boil with 1/2 tsp turmeric powder; drop the soaked fish in and boil for 4–5 minutes. Drain immediately and rinse under running cold water. Gently press each piece to remove the soft center spine bone, then shred the tender fish meat coarsely with your fingers.",
+        tip: "Boiling with turmeric and a drop of vinegar or lemon eliminates any stale fishy smell and leaves only rich, concentrated umami.",
+      },
+      {
+        step: 2,
+        title: "Bloom Aromatics in Mustard Oil",
+        instruction:
+          "Heat 1/4 cup of mustard oil in a heavy karahi, iron skillet, or clay handi over medium heat until it gently smokes and loses its raw sharpness. Add the crushed garlic cloves and sauté for 1 minute until fragrant and lightly golden. Add the sliced red onions and cook for 6–8 minutes, stirring frequently until softened, translucent, and turning golden-brown at the edges.",
+      },
+      {
+        step: 3,
+        title: "Build the Spiced Masala Paste",
+        instruction:
+          "Reduce heat to medium-low. Add ginger paste, red chili powder, the remaining 1/2 tsp turmeric, ground coriander, and roasted cumin powder. Sprinkle with 2 tablespoons of warm water to prevent scorching. Sauté the masala for 3–4 minutes until the oil starts glistening and separates from the spices.",
+      },
+      {
+        step: 4,
+        title: "Bhuna the Shredded Loitta",
+        instruction:
+          "Add the prepared shredded Loitta fish into the fragrant masala pan. Stir continuously, frying the fish in the oil and spices on medium heat for 6–8 minutes. The fish will absorb the pungent aromatics and break down into tender, deeply caramelized shreds.",
+      },
+      {
+        step: 5,
+        title: "Slow Simmer with Green Chilies",
+        instruction:
+          "Splash in 2 to 3 tablespoons of warm water. Toss in the whole slit green chilies and 1/2 tsp salt (adjusting to taste). Cover with a tight lid, reduce heat to low, and simmer for 8–10 minutes. Stir occasionally so nothing sticks to the bottom. Cook until all moisture evaporates, leaving the shredded fish glistening in a rich, dark-red, concentrated oil coat (tel chere deya).",
+      },
+      {
+        step: 6,
+        title: "Rest and Plate Authentically",
+        instruction:
+          "Turn off the heat and let the bhuna rest covered in the pan for 5 minutes. Transfer to a rustic black clay plate or clay handi. Garnish with a few extra vibrant green chili halves and chopped fresh cilantro. Serve piping hot.",
+      },
+    ],
+    chefNotes: [
+      "The golden rule of Shutki Bhuna is 'roshun aar peyaj' (heaps of garlic and sweet onions). The alliums must caramelize slowly into the fish to balance its intense savoriness.",
+      "Always check the salt at the very end. Sun-dried fish carries natural ocean salt from the drying process, so you will need less added salt than standard meat curries.",
+    ],
+    nutrition: {
+      calories: 215,
+      proteinGrams: 28,
+      carbsGrams: 9,
+      fatGrams: 8,
+      fiberGrams: 2,
+      sodiumMg: 490,
+    },
+    storageInstructions:
+      "Due to mustard oil, garlic, and dried fish curing, Shutki Bhuna has remarkable shelf-life. Store in an airtight glass container in the refrigerator for up to 7 days. Reheat gently in a dry skillet over medium heat.",
+    freezingInstructions:
+      "Portion into freezer-safe containers and freeze for up to 3 months. Thaw in the refrigerator and reheat in a hot pan with a spoonful of fresh mustard oil.",
+    servingSuggestions: [
+      "Serve piping hot with a mountain of steamed white aromatic kalijira or basmati rice, lemon wedges, and fresh cucumber rounds.",
+      "Pair with traditional Chittagong / Noakhali savory Chitoi Pitha (চিতই পিঠা) or hand-rolled roti for a legendary winter breakfast.",
+      "Enjoy alongside a light comforting bowl of yellow Masoor Dal to soothe the fiery spices.",
+    ],
+    faqs: [
+      {
+        question: "Is Loitta Shutki Halal?",
+        answer:
+          "Yes, 100% Halal. In Islamic dietary laws, all marine fish are Halal. Loitta is an ocean-dwelling scaled fish that is naturally salted and sun-dried along the coastal beaches of Cox's Bazar and the Bay of Bengal without forbidden chemicals.",
+      },
+      {
+        question: "How do you reduce the strong odor while cooking shutki at home?",
+        answer:
+          "Pre-boiling the dried fish in hot water with 1/2 teaspoon of turmeric powder for 4 minutes and rinsing it clean drastically reduces strong room odors, ensuring a fragrant, deeply appetizing bhuna.",
+      },
+    ],
+    author: {
+      name: "Chef Madam Begum",
+      role: "Traditional Bengali Home Chef & Culinary Preserver",
+      avatar: IMAGES.chefMadam,
+    },
+    updatedDate: "September 14, 2026",
+    tags: [
+      "Loitta Shutki Bhuna",
+      "Dried Fish Bhuna",
+      "লোট্টা শুঁটকি",
+      "Halal Fish & Seafood",
+      "Bengali Heritage",
+      "Noakhali Cuisine",
+      "Chittagong Delicacy",
+      "Spicy Bhuna",
+      "Coastal Seafood",
+    ],
+  },
+  {
+    id: "rec-crispy-salmon-patties-dish",
+    slug: "crispy-golden-salmon-patties-dish",
+    title: "Salmon Patties Dish",
+    category: "Halal Fish & Seafood",
+    categorySlug: "halal-seafood",
+
+    cuisine: "Coastal American & Mediterranean Halal",
+    description:
+      "Crispy on the outside, flaky and tender on the inside, these golden pan-seared wild salmon patties are seasoned with fresh dill, minced sweet onions, dijon mustard, lemon zest, and panko breadcrumbs, served alongside creamy homemade tartar sauce and fresh lemon wedges.",
+    introStory:
+      "A cherished coastal classic transformed with modern gourmet flair, the Salmon Patties Dish (salmon cakes or croquettes) is the quintessential quick, nutritious, and crowd-pleasing seafood meal. Whether prepared using fresh flaky poached wild salmon or convenient premium canned wild pink or sockeye salmon, the patties deliver an irresistible balance of textures. Seasoned gently with sweet sautéed onions, fresh green herbs, Dijon mustard, Old Bay aromatics, and a whisper of lemon juice, the fish retains its rich natural flavor while achieving a satisfying golden-brown crunch in the pan. Plated warm over crisp greens alongside tangy lemon-dill tartar sauce, sweet lemon wedges, and fresh parsley, this dish is packed with healthy omega-3 fatty acids and lean protein.",
+    heroImage: IMAGES.salmonPatties,
+    prepTimeMinutes: 15,
+    cookTimeMinutes: 10,
+    totalTimeMinutes: 25,
+    servings: 4,
+    difficulty: "Easy",
+    calories: 245,
+    rating: 5.0,
+    reviewCount: 148,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: false,
+    halalNotes:
+      "100% Halal certified seafood. Prepared with scaled wild salmon, fresh organic produce, and pure plant-based cooking oil. Tartar sauce is prepared without gelatin, animal lard, or alcohol-based flavorings.",
+    potentialCautionNotes:
+      "Contains fish and egg. If using canned salmon, pick through the flaked fish to remove any small skin pieces or soft pin bones to ensure a clean, tender bite.",
+    ingredients: [
+      { amount: "14", unit: "oz / 400g", name: "Wild Pink or Sockeye Salmon", notes: "freshly poached & flaked, or high-quality canned wild salmon well-drained" },
+      { amount: "1/2", unit: "cup", name: "Panko Breadcrumbs or Crushed Saltine Crackers", notes: "for light, airy crispness" },
+      { amount: "1", unit: "large", name: "Farm Fresh Egg", notes: "lightly beaten for binding" },
+      { amount: "1/3", unit: "cup", name: "Sweet Yellow Onion", notes: "very finely minced" },
+      { amount: "2", unit: "tbsp", name: "Fresh Flat-Leaf Parsley & Fresh Dill", notes: "finely chopped" },
+      { amount: "1.5", unit: "tbsp", name: "Halal Mayonnaise", notes: "keeps the patties moist and juicy inside" },
+      { amount: "1", unit: "tsp", name: "Dijon Mustard", notes: "adds pleasant tangy depth" },
+      { amount: "1", unit: "tsp", name: "Fresh Lemon Zest & 1 tbsp Lemon Juice", notes: "brightens the rich salmon oils" },
+      { amount: "1/2", unit: "tsp", name: "Garlic Powder & Old Bay Seasoning", notes: "for savory coastal warmth" },
+      { amount: "1/2", unit: "tsp", name: "Fine Sea Salt & Fresh Cracked Black Pepper", notes: "to taste" },
+      { amount: "3", unit: "tbsp", name: "Extra Virgin Olive Oil or Avocado Oil", notes: "for pan-searing until golden-brown" },
+      { amount: "1/3", unit: "cup", name: "Homemade Tartar Sauce", notes: "mayonnaise, minced dill pickles, capers, fresh dill, and lemon juice" },
+      { amount: "1", unit: "whole", name: "Fresh Lemon", notes: "sliced into juicy wedges for serving" },
+    ],
+    substitutions: [
+      {
+        original: "Canned salmon",
+        substitute: "Leftover baked or grilled salmon fillets",
+        notes: "A wonderful way to transform yesterday's salmon into a luxurious lunch.",
+      },
+      {
+        original: "Panko breadcrumbs",
+        substitute: "Gluten-free panko, crushed pork-free porkless rinds, or almond flour",
+        notes: "Maintains golden exterior crunch while accommodating gluten-free or keto lifestyles.",
+      },
+      {
+        original: "Pan-frying",
+        substitute: "Air frying at 390°F (198°C) for 9–10 minutes",
+        notes: "Spray both sides lightly with avocado oil spray for maximum crispness with minimal oil.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Drain and Flake the Salmon",
+        instruction:
+          "Drain the salmon thoroughly in a fine-mesh sieve, pressing out excess moisture with a fork. Place in a large mixing bowl and gently flake with a fork, leaving bite-sized tender chunks rather than pureeing.",
+      },
+      {
+        step: 2,
+        title: "Mix the Patty Base",
+        instruction:
+          "To the bowl with flaked salmon, add the minced sweet onion, chopped parsley, dill, panko breadcrumbs, beaten egg, mayonnaise, Dijon mustard, lemon zest, lemon juice, garlic powder, Old Bay seasoning, salt, and black pepper. Stir gently with a rubber spatula until evenly combined and holding together.",
+      },
+      {
+        step: 3,
+        title: "Shape into Uniform Patties",
+        instruction:
+          "Divide the mixture into 6 equal portions (about 1/3 cup each). Using clean hands, shape into 3-inch diameter rounds, about 3/4-inch thick. Gently press the edges to prevent cracking.",
+        tip: "Chill the patties in the refrigerator for 10–15 minutes before cooking. This firms the fats and binds the egg, guaranteeing they will not break when flipped in the skillet.",
+      },
+      {
+        step: 4,
+        title: "Pan-Sear to Golden Crispness",
+        instruction:
+          "Heat 3 tablespoons of olive oil or avocado oil in a wide non-stick or cast-iron skillet over medium heat until shimmering. Carefully place the salmon patties into the pan without overcrowding. Fry undisturbed for 4 to 5 minutes until the bottom is deeply golden-brown and crisp.",
+      },
+      {
+        step: 5,
+        title: "Flip and Finish",
+        instruction:
+          "Use a wide thin spatula to gently flip the patties. Cook the second side for another 3 to 4 minutes until equally crisp and golden. Transfer to a paper-towel lined platter to drain for 1 minute.",
+      },
+      {
+        step: 6,
+        title: "Garnish and Serve",
+        instruction:
+          "Arrange the hot salmon patties overlapping on a serving plate. Garnish with a sprinkle of fresh chopped parsley and sea salt flakes. Place a small ramekin of creamy lemon dill tartar sauce in the center, tuck fresh lemon wedges along the rim, and serve immediately while piping hot.",
+      },
+    ],
+    chefNotes: [
+      "Moisture balance is everything: if your mixture feels slightly too wet to hold a firm disc, fold in 2 additional tablespoons of panko. If too dry, add an extra teaspoon of mayonnaise.",
+      "Do not move or press the patties while searing. Letting them sit undisturbed allows a continuous golden crust to form.",
+    ],
+    nutrition: {
+      calories: 245,
+      proteinGrams: 22,
+      carbsGrams: 9,
+      fatGrams: 14,
+      fiberGrams: 1,
+      sodiumMg: 390,
+    },
+    storageInstructions:
+      "Store cooked salmon patties in an airtight glass container lined with parchment paper in the refrigerator for up to 3 days. Reheat in an air fryer or toaster oven at 375°F (190°C) for 4–5 minutes to restore the crispy crust.",
+    freezingInstructions:
+      "Place uncooked or cooked patties on a parchment-lined baking sheet and freeze for 2 hours until solid, then store in a freezer zip-top bag for up to 2 months. Cook from frozen in a medium-low skillet with a lid, adding 2–3 minutes per side.",
+    servingSuggestions: [
+      "Serve hot with a side of creamy garlic mashed potatoes and roasted asparagus spears for a gourmet bistro dinner.",
+      "Tuck inside a toasted brioche bun with crisp iceberg lettuce, sliced tomatoes, and remoulade sauce for an unforgettable salmon burger.",
+      "Top over a fresh Mediterranean chopped Greek or Caesar salad for a high-protein lunch.",
+    ],
+    faqs: [
+      {
+        question: "Is wild-caught salmon healthier for patties than farmed salmon?",
+        answer:
+          "Yes, wild-caught salmon (such as Alaskan Sockeye or Pink salmon) generally has higher omega-3 to omega-6 ratios, a richer natural pink hue, and leaner protein compared to farmed varieties.",
+      },
+      {
+        question: "Why do my salmon patties fall apart in the skillet?",
+        answer:
+          "Patties crumble if there was too much moisture left in the salmon, or if the binder (egg and breadcrumbs) was insufficient. Chilling the shaped patties for 15 minutes before frying solidifies the fats and ensures they stay intact.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Aziz",
+      role: "Continental & Mediterranean Executive Chef",
+    },
+    updatedDate: "September 14, 2026",
+    tags: ["Salmon Patties", "Salmon Cakes", "Halal Fish & Seafood", "Halal Seafood", "Crispy Patties", "Omega 3", "Quick Dinner", "Seafood Appetizer"],
+  },
+  {
+    id: "rec-authentic-lebanese-baba-ganoush",
+    slug: "authentic-lebanese-baba-ganoush",
+    title: "Baba Ganoush",
+    category: "Halal Vegetarian",
+    categorySlug: "halal-vegetarian",
+    cuisine: "Levantine / Lebanese Mezze Heritage",
+    description:
+      "Silky, smoky roasted eggplant dip whisked with stone-ground tahini, fresh garlic, lemon juice, and sea salt, swirled with golden extra virgin olive oil, toasted sesame seeds, and garden parsley.",
+    introStory:
+      "Originating in the sun-drenched coastal kitchens and olive groves of Lebanon, Syria, and Palestine, authentic Baba Ganoush (بابا غنوج / Mutabbal) is the crowning jewel of the traditional Levantine mezze table. The secret to its mesmerizing, irresistible depth lies in open-flame charring of large globe eggplants until the papery skins are completely blistered and blackened, imparting an intoxicating natural smokiness into the tender, custardy flesh. After gently draining to discard any bitter juices, the velvety eggplant pulp is lightly mashed with a fork to preserve its rustic texture, then lovingly whisked with nutty stone-ground tahini, crushed garlic cloves, bright freshly squeezed lemon juice, and cold-pressed extra virgin olive oil. Served warm or chilled with golden olive oil pools, crisp garden cucumbers, sweet peppers, and freshly baked pillowy pita, it is a naturally vegan, nutritious, and deeply satisfying feast.",
+    heroImage: IMAGES.babaGanoush,
+    prepTimeMinutes: 15,
+    cookTimeMinutes: 30,
+    totalTimeMinutes: 45,
+    servings: 6,
+    difficulty: "Easy",
+    calories: 140,
+    rating: 5.0,
+    reviewCount: 162,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal and naturally vegan. Prepared with pure whole eggplants, pure single-origin sesame tahini paste, fresh garlic, and extra virgin olive oil. Free from additives, non-halal emulsifiers, or preservatives.",
+    potentialCautionNotes:
+      "Contains sesame (tahini and sesame seeds). Ensure all bitter juices are allowed to strain from the roasted eggplant pulp before mixing to avoid a watery dip.",
+    ingredients: [
+      { amount: "2", unit: "large (approx. 2 lbs / 900g)", name: "Globe Italian Eggplants", notes: "firm, glossy, and unblemished" },
+      { amount: "1/3", unit: "cup (80ml)", name: "Pure Stone-Ground Sesame Tahini", notes: "well-stirred smooth paste" },
+      { amount: "3", unit: "cloves", name: "Fresh Garlic", notes: "finely minced or pounded with a pinch of sea salt" },
+      { amount: "3", unit: "tbsp", name: "Fresh Lemon Juice", notes: "freshly squeezed (about 1 large lemon)" },
+      { amount: "3", unit: "tbsp", name: "Extra Virgin Olive Oil", notes: "divided: 1 tbsp folded into dip, 2 tbsp for generous pooling" },
+      { amount: "1", unit: "tsp", name: "Fine Sea Salt", notes: "or to taste" },
+      { amount: "1/4", unit: "tsp", name: "Ground Cumin", notes: "optional, adds warm earthy depth" },
+      { amount: "1", unit: "tbsp", name: "Toasted White Sesame Seeds", notes: "for garnish and delightful texture" },
+      { amount: "2", unit: "tbsp", name: "Fresh Flat-Leaf Italian Parsley", notes: "finely chopped for finishing" },
+      { amount: "1", unit: "pinch", name: "Ground Sumac or Smoked Paprika", notes: "for a tangy ruby-red flourish" },
+      { amount: "to serve", unit: "as needed", name: "Warm Pita Bread, Cucumber Rounds & Bell Pepper Slices", notes: "for dipping" },
+    ],
+    substitutions: [
+      {
+        original: "Tahini",
+        substitute: "Greek yogurt or labneh (Mutabbal style)",
+        notes: "Creates a paler, ultra-tangy, and creamy Levantine dip variation.",
+      },
+      {
+        original: "Open-flame stove charring",
+        substitute: "High-heat oven broiler roasting (500°F / 260°C)",
+        notes: "Prick eggplants with a fork and broil on a foil-lined baking sheet for 35–40 minutes, flipping once, until completely collapsed and charred.",
+      },
+      {
+        original: "Pita bread",
+        substitute: "Crisp cucumber coins, sliced radish, or bell pepper spears",
+        notes: "Keeps the entire mezze platter low-carb, keto, and naturally gluten-free.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Char the Eggplants for Smokiness",
+        instruction:
+          "Prick each eggplant 4 to 5 times with a fork to prevent bursting. Place the whole eggplants directly over the open flame of a gas stove burner or outdoor charcoal grill on medium-high heat. Char for 18–22 minutes, turning every 4–5 minutes with metal tongs, until the skin is blistered black, papery, and completely collapsed and tender to the core.",
+        tip: "If using an oven, set your broiler to HIGH. Place eggplants on a foil-lined baking sheet 4 inches below the heating element and broil for 30–35 minutes, turning twice, until blackened and soft.",
+      },
+      {
+        step: 2,
+        title: "Steam and Scoop the Pulp",
+        instruction:
+          "Transfer the hot charred eggplants into a glass bowl and cover with a plate or kitchen towel for 10 minutes. The trapped steam loosens the burnt skins. Slit the eggplants lengthwise and use a large spoon to scoop out the soft, creamy flesh, discarding the charred bitter skin.",
+      },
+      {
+        step: 3,
+        title: "Drain the Bitter Juices",
+        instruction:
+          "Place the scooped eggplant flesh into a fine-mesh colander set over a bowl. Let drain for 10–15 minutes, pressing lightly with the back of a spoon. Draining liquid removes bitterness and ensures your Baba Ganoush is luxuriously thick rather than soupy.",
+      },
+      {
+        step: 4,
+        title: "Mash and Blend the Aromatics",
+        instruction:
+          "Transfer the drained eggplant to a mixing bowl. Mash with a fork for a traditional rustic texture (or pulse briefly 2–3 times in a food processor if you prefer a smoother dip). Stir in the minced garlic, stone-ground tahini, fresh lemon juice, ground cumin, fine sea salt, and 1 tablespoon of olive oil. Whisk vigorously until pale, fluffy, and thoroughly emulsified.",
+      },
+      {
+        step: 5,
+        title: "Swirl, Pool Oil, and Garnish",
+        instruction:
+          "Spread the dip into a shallow ceramic serving bowl. Use the back of a spoon to create elegant circular ridges and hollow wells across the surface. Generously drizzle the remaining extra virgin olive oil into the swirls.",
+      },
+      {
+        step: 6,
+        title: "Finishing Touches and Serving",
+        instruction:
+          "Scatter toasted sesame seeds, chopped fresh parsley, and a pinch of sumac over the dip. Serve immediately with warm pocket pita bread, crisp sliced cucumbers, sweet bell pepper spears, and garlic cloves.",
+      },
+    ],
+    chefNotes: [
+      "Real Baba Ganoush must have a smoky backbone. Do not skip thorough charring of the eggplant skin; that charred exterior is what imparts the unmistakable wood-smoke aroma into the dip.",
+      "Always mash with a fork rather than puree in a blender on high speed. Over-processing in a high-speed blender can turn eggplant watery and sticky.",
+    ],
+    nutrition: {
+      calories: 140,
+      proteinGrams: 4,
+      carbsGrams: 10,
+      fatGrams: 10,
+      fiberGrams: 5,
+      sodiumMg: 290,
+    },
+    storageInstructions:
+      "Transfer to an airtight glass container, smooth the top, and cover with a thin film of olive oil to seal out air. Refrigerate for up to 5 days. Flavors deepen beautifully after resting overnight.",
+    freezingInstructions:
+      "Freezing Baba Ganoush is not recommended as tahini and roasted eggplant separate into a watery consistency upon thawing. Freshly made is unmatched in texture.",
+    servingSuggestions: [
+      "Serve as the centerpiece of a traditional Halal Mediterranean mezze board alongside warm pita bread, stuffed grape leaves, kalamata olives, and fresh falafel.",
+      "Spread inside grilled chicken shawarma wraps or falafel sandwiches for extraordinary richness and smoky depth.",
+      "Pair with fresh crisp crudités (cucumbers, radishes, carrots, and sweet bell peppers) for a healthy, guilt-free snack.",
+    ],
+    faqs: [
+      {
+        question: "What is the difference between Baba Ganoush and Mutabbal?",
+        answer:
+          "In traditional Lebanese cuisine, Mutabbal combines smoky roasted eggplant specifically with tahini, garlic, and lemon juice (like this recipe). Classic Baba Ganoush in some regions also includes diced tomatoes, pomegranate molasses, walnuts, and chopped herbs. Today, both names are widely used interchangeably across the diaspora.",
+      },
+      {
+        question: "Why is my eggplant dip bitter?",
+        answer:
+          "Bitterness comes from under-charred flesh, overly mature eggplants with large seeds, or failing to drain the dark extracted juices from the pulp after roasting. Thorough draining guarantees sweet, silky results.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Aziz",
+      role: "Continental & Mediterranean Executive Chef",
+    },
+    updatedDate: "September 14, 2026",
+    tags: ["Baba Ganoush", "Mutabbal", "Halal Vegetarian", "Halal Snacks", "Mediterranean Mezze", "Eggplant Dip", "Vegan", "Tahini", "Appetizer"],
+  },
+  {
+    id: "rec-masoor-dal-red-lentil",
+    slug: "masoor-dal-red-lentil-dal",
+    title: "Masoor Dal (Red Lentil Dal)",
+    category: "Halal Vegetarian",
+    categorySlug: "halal-vegetarian",
+    cuisine: "Bengali / South Asian Everyday Heritage",
+    description:
+      "Comforting golden red lentils simmered with turmeric, ripe tomatoes, and fresh ginger, finished with a fragrant tarka (baghar) of blooming cumin, sliced garlic, mustard oil or ghee, fresh cilantro, red chili wheels, and a swirl of cooling cream.",
+    introStory:
+      "Across Bengal, South Asia, and the wider subcontinent, Masoor Dal (লাল মসুর ডাল) is the undisputed heartbeat of the family dining table. Made from split petite red lentils that gently melt into a velvety golden broth in under twenty minutes, this beloved dish is the ultimate everyday comfort food. The lentils are lightly simmered with turmeric, sweet sautéed onions, diced juicy tomatoes, and fragrant ginger until tender and naturally creamy. The magic culminates in the traditional 'baghar' or 'tarka'—whole cumin seeds, sliced garlic cloves, and dried red chilies sizzled in hot pure ghee or cold-pressed mustard oil until toasted and aromatic, then poured sizzling directly into the pot. Finished with fresh coriander, sliced red chilies, and a gentle swirl of cream or coconut milk, Masoor Dal pairs sublimely with piping hot steamed basmati rice, warm pillowy naan, or crispy fried accompaniments.",
+    heroImage: IMAGES.masoorDal,
+    prepTimeMinutes: 10,
+    cookTimeMinutes: 20,
+    totalTimeMinutes: 30,
+    servings: 4,
+    difficulty: "Easy",
+    calories: 220,
+    rating: 5.0,
+    reviewCount: 176,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal and naturally vegetarian/vegan adaptable. Prepared with wholesome plant-based red lentils, fresh market produce, and pure spices. If using ghee or cream, ensure source is 100% pure dairy free from animal rennet or non-halal emulsifiers.",
+    potentialCautionNotes:
+      "Naturally gluten-free when paired with rice. Check that asafoetida (hing), if using, is pure and not blended with wheat flour if gluten sensitivity is a concern.",
+    ingredients: [
+      { amount: "1", unit: "cup (200g)", name: "Dry Split Red Lentils (Masoor Dal)", notes: "rinsed thoroughly until water runs crystal clear" },
+      { amount: "3.5", unit: "cups", name: "Fresh Water or Light Vegetable Broth", notes: "for simmering the lentils to a tender consistency" },
+      { amount: "1", unit: "medium", name: "Yellow or Red Onion", notes: "finely diced" },
+      { amount: "2", unit: "medium", name: "Ripe Roma Tomatoes", notes: "finely chopped" },
+      { amount: "1", unit: "tbsp", name: "Fresh Ginger", notes: "finely grated or minced" },
+      { amount: "4", unit: "cloves", name: "Fresh Garlic", notes: "thinly sliced into chips for the fragrant tarka" },
+      { amount: "2", unit: "whole", name: "Fresh Red or Green Chilies", notes: "sliced into rings for garnish and gentle heat" },
+      { amount: "1", unit: "tsp", name: "Ground Turmeric", notes: "provides the signature glowing golden hue" },
+      { amount: "1", unit: "tsp", name: "Ground Cumin & Coriander", notes: "adds earthy background warmth" },
+      { amount: "1", unit: "tsp", name: "Whole Cumin Seeds (Jeera)", notes: "for sizzling in the aromatic temper" },
+      { amount: "2", unit: "whole", name: "Dried Red Kashmiri Chilies", notes: "snapped in half for the tarka" },
+      { amount: "1.25", unit: "tsp", name: "Fine Sea Salt", notes: "or to taste" },
+      { amount: "2", unit: "tbsp", name: "Pure Ghee or Cold-Pressed Mustard Oil", notes: "for tempering the spices" },
+      { amount: "1/4", unit: "cup", name: "Fresh Cilantro (Coriander Leaves)", notes: "finely chopped for finishing" },
+      { amount: "1", unit: "tbsp", name: "Fresh Lemon Juice", notes: "brightens the rich lentil soup" },
+      { amount: "2", unit: "tbsp", name: "Heavy Cream, Greek Yogurt, or Coconut Cream", notes: "swirled on top for visual elegance and creamy mouthfeel" },
+    ],
+    substitutions: [
+      {
+        original: "Pure Ghee",
+        substitute: "Cold-pressed mustard oil, olive oil, or coconut oil",
+        notes: "Keeps the dish 100% plant-based and vegan without sacrificing aromatic depth.",
+      },
+      {
+        original: "Heavy cream swirl",
+        substitute: "Full-fat coconut cream or cashew cream",
+        notes: "Provides rich dairy-free lusciousness that complements the red chili heat.",
+      },
+      {
+        original: "Split Red Lentils (Masoor)",
+        substitute: "Yellow Moong Dal (split peeled mung beans)",
+        notes: "Cooks just as fast with an even lighter, sweeter profile.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Rinse the Red Lentils",
+        instruction:
+          "Place 1 cup of dry masoor dal in a fine-mesh sieve or bowl. Rinse under cold running water 3 to 4 times, swishing with your fingers until the water runs clear. Drain well.",
+      },
+      {
+        step: 2,
+        title: "Simmer the Lentils with Aromatics",
+        instruction:
+          "In a medium heavy pot, combine the rinsed lentils, 3.5 cups of water, ground turmeric, grated ginger, half of the chopped onions, chopped tomatoes, and 1 teaspoon of sea salt. Bring to a boil over medium-high heat. Skim off any white foam that rises to the surface.",
+      },
+      {
+        step: 3,
+        title: "Cook to Velvety Tenderness",
+        instruction:
+          "Reduce the heat to medium-low, cover partially with a tilted lid, and simmer gently for 15–18 minutes until the lentils have broken down completely into a soft, velvety yellow broth. Whisk lightly with a wire whisk or wooden dal ghutni (churner) for 30 seconds for a silky, homogenous texture. Stir in lemon juice.",
+        tip: "If you prefer a thicker dal for dipping bread, simmer uncovered for an additional 3 minutes. If serving over rice, splash in 1/4 cup of warm water to loosen.",
+      },
+      {
+        step: 4,
+        title: "Prepare the Sizzling Tarka (Baghar)",
+        instruction:
+          "In a small skillet or tadka pan, heat 2 tablespoons of ghee or mustard oil over medium heat until shimmering. Add the whole cumin seeds and dried red chilies; let them sizzle for 20 seconds until fragrant. Add the remaining sliced onions and garlic chips. Sauté for 2–3 minutes until the garlic is golden and crisp and the onions are caramelized brown at the edges.",
+      },
+      {
+        step: 5,
+        title: "Temper the Dal (The Sizzle)",
+        instruction:
+          "Immediately pour the hot sizzling tarka mixture straight into the pot of cooked dal. It will hiss and release an intensely fragrant aroma. Cover the pot immediately with a tight lid for 2 minutes to trap the smoky tempered aromatics inside the lentils.",
+      },
+      {
+        step: 6,
+        title: "Garnish and Serve",
+        instruction:
+          "Ladle the golden dal into a wide serving bowl. Drizzle a delicate swirl of cream or coconut yogurt across the surface. Scatter with chopped fresh cilantro and vibrant red chili rings. Serve piping hot with warm pita naan or steamed basmati rice.",
+      },
+    ],
+    chefNotes: [
+      "The soul of authentic dal lies in the tarka (baghar). Do not rush browning the garlic—it should turn deep golden-caramel without burning to infuse the oil with rich roasted sweetness.",
+      "A quick squeeze of fresh lemon juice right at the end cuts through the richness of the ghee and brings out the earthy flavors of the lentils.",
+    ],
+    nutrition: {
+      calories: 220,
+      proteinGrams: 13,
+      carbsGrams: 30,
+      fatGrams: 6,
+      fiberGrams: 9,
+      sodiumMg: 380,
+    },
+    storageInstructions:
+      "Leftover Masoor Dal stores exceptionally well in an airtight glass container in the refrigerator for up to 4 days. The dal will naturally thicken as it cools; simply stir in a splash of warm water when reheating in a small saucepan.",
+    freezingInstructions:
+      "Cool completely and transfer to freezer-safe airtight containers or silicone freezer pods for up to 3 months. Thaw overnight in the fridge and simmer gently with a splash of fresh water before serving.",
+    servingSuggestions: [
+      "Serve alongside steaming hot basmati rice, crispy potato bharta (Aloo Bharta), and fresh lemon wedges for the classic comfort meal.",
+      "Pair with pillowy garlic butter naan or warm rotis for dipping.",
+      "Enjoy as a high-protein, nourishing bowl of spiced lentil soup on chilly evenings.",
+    ],
+    faqs: [
+      {
+        question: "Do I need to soak Masoor Dal before cooking?",
+        answer:
+          "No! Unlike whole beans or chickpeas, split red lentils (masoor) have their outer skins removed and cook to tender perfection in just 15–20 minutes without any prior soaking.",
+      },
+      {
+        question: "Why does my dal foam when boiling?",
+        answer:
+          "Lentils release natural plant proteins and starches when boiling, creating a light foam. Skimming this foam off with a spoon during the first 5 minutes of cooking yields a clean, bright, and easily digestible dal.",
+      },
+    ],
+    author: {
+      name: "Chef Madam Begum",
+      role: "Traditional Bengali Home Chef & Culinary Preserver",
+      avatar: IMAGES.chefMadam,
+    },
+    updatedDate: "September 14, 2026",
+    tags: ["Masoor Dal", "Red Lentil Dal", "Halal Vegetarian", "Bengali Heritage", "Lentil Soup", "Tarka Dal", "Plant Based", "High Protein", "Quick Dinner"],
+  },
+  {
+    id: "rec-creamy-fettuccine-chicken-alfredo",
+    slug: "creamy-fettuccine-chicken-alfredo",
+    title: "Creamy Fettuccine Chicken Alfredo",
+    category: "Halal Chicken",
+    categorySlug: "halal-chicken",
+    cuisine: "Italian Trattoria / Halal Continental Comfort",
+    description:
+      "Tender pan-seared Italian-seasoned chicken breast sliced over silky al dente fettuccine ribbons enveloped in a rich, velvety garlic parmesan cream sauce, finished with shaved parmesan and cracked black pepper.",
+    introStory:
+      "A timeless Italian-American trattoria classic prepared to the highest Halal standards, Creamy Fettuccine Chicken Alfredo is the quintessential luxurious comfort dinner. Tender boneless Halal chicken breasts are marinated with aromatic garlic, crushed oregano, and cracked black pepper, then seared in butter until juicy and golden-crusted. Silky ribbons of imported durum wheat fettuccine are tossed in a velvety, scratch-made Alfredo sauce made with sweet cream butter, minced fresh garlic, heavy cream, and microbial-rennet aged Parmesan. Sliced into succulent medallions and crowned with fresh parsley and delicate parmesan shavings, this dish delivers restaurant-quality elegance directly to your family dinner table in under 30 minutes.",
+    heroImage: IMAGES.creamyChickenAlfredo,
+    prepTimeMinutes: 15,
+    cookTimeMinutes: 15,
+    totalTimeMinutes: 30,
+    servings: 4,
+    difficulty: "Easy",
+    calories: 680,
+    rating: 5.0,
+    reviewCount: 204,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: false,
+    halalNotes:
+      "100% Halal certified. Made with certified hand-slaughtered Halal chicken breasts. Crucially, uses vegetarian Parmesan crafted exclusively with microbial or plant-based rennet, completely free from traditional animal rennet or wine cooking reductions.",
+    potentialCautionNotes:
+      "Contains dairy (heavy cream, butter, and parmesan cheese) and wheat gluten. For a lighter version, half-and-half can be substituted for heavy cream.",
+    ingredients: [
+      { amount: "1.2", unit: "lbs / 550g", name: "Boneless Skinless Halal Chicken Breasts", notes: "sliced horizontally into even cutlets" },
+      { amount: "12", unit: "oz / 340g", name: "Fettuccine Pasta", notes: "authentic bronze-die cut durum wheat pasta" },
+      { amount: "3", unit: "tbsp", name: "Grass-Fed Unsalted Butter", notes: "divided: 1 tbsp for searing chicken, 2 tbsp for alfredo sauce" },
+      { amount: "1", unit: "tbsp", name: "Extra Virgin Olive Oil", notes: "for pan-searing chicken cutlets" },
+      { amount: "4", unit: "cloves", name: "Fresh Garlic", notes: "very finely minced" },
+      { amount: "1.5", unit: "cups", name: "Heavy Whipping Cream", notes: "chilled full-fat cream" },
+      { amount: "1.25", unit: "cups", name: "Halal / Vegetarian Parmesan Cheese", notes: "freshly grated (microbial rennet certified)" },
+      { amount: "1/4", unit: "cup", name: "Reserved Starchy Pasta Water", notes: "for emulsifying the creamy sauce" },
+      { amount: "1", unit: "tsp", name: "Italian Herb Seasoning", notes: "blend of oregano, basil, thyme, and rosemary" },
+      { amount: "1/2", unit: "tsp", name: "Garlic Powder & Onion Powder", notes: "for chicken dry rub" },
+      { amount: "1", unit: "tsp", name: "Coarse Sea Salt", notes: "plus generous salt for the pasta water" },
+      { amount: "1/2", unit: "tsp", name: "Freshly Cracked Black Pepper", notes: "plus more for garnish" },
+      { amount: "1/8", unit: "tsp", name: "Freshly Grated Nutmeg", notes: "optional secret trattoria touch that elevates cream sauce" },
+      { amount: "2", unit: "tbsp", name: "Fresh Flat-Leaf Italian Parsley", notes: "finely chopped for finishing" },
+    ],
+    substitutions: [
+      {
+        original: "Heavy whipping cream",
+        substitute: "Half-and-half with 1 tsp flour or cornstarch slurry",
+        notes: "Creates a lighter weeknight sauce with slightly less richness.",
+      },
+      {
+        original: "Chicken breasts",
+        substitute: "Pan-seared jumbo shrimp or tender chicken thighs",
+        notes: "Both options remain 100% Halal and cook in under 6 minutes.",
+      },
+      {
+        original: "Fettuccine",
+        substitute: "Gluten-free fettuccine or penne pasta",
+        notes: "Maintains full sauce clinging power for gluten-sensitive diners.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Season and Sear the Chicken",
+        instruction:
+          "Pat chicken cutlets dry with paper towels. Season both sides evenly with Italian seasoning, garlic powder, onion powder, 1/2 tsp salt, and freshly cracked black pepper. Heat olive oil and 1 tablespoon butter in a wide heavy skillet over medium-high heat. Sear chicken for 5–6 minutes per side until golden-brown and cooked to an internal temperature of 165°F (74°C). Transfer to a cutting board and let rest for 5 minutes before slicing into 1/2-inch medallions.",
+      },
+      {
+        step: 2,
+        title: "Boil the Fettuccine Al Dente",
+        instruction:
+          "Meanwhile, bring a large pot of water to a rolling boil. Add 1 tablespoon of coarse salt. Drop the fettuccine ribbons and cook until al dente according to package instructions (about 10–11 minutes). Before draining, carefully ladle out and reserve 1/2 cup of starchy pasta water. Drain pasta and keep warm.",
+      },
+      {
+        step: 3,
+        title: "Sauté Garlic and Simmer the Cream",
+        instruction:
+          "In the same skillet used for the chicken (retaining the flavorful browned bits), melt the remaining 2 tablespoons of butter over medium-low heat. Add minced garlic and sauté gently for 45–60 seconds until fragrant without letting it brown. Pour in the heavy cream and a pinch of ground nutmeg. Bring to a gentle simmer, whisking constantly for 3–4 minutes until slightly thickened.",
+      },
+      {
+        step: 4,
+        title: "Melt Parmesan and Emulsify Sauce",
+        instruction:
+          "Reduce the heat to low. Gradually whisk in the freshly grated Halal parmesan cheese in small handfuls, stirring continuously until melted and velvety smooth. Splash in 2 to 3 tablespoons of reserved starchy pasta water to emulsify the sauce into a glossy, clingy coating.",
+        tip: "Always remove the pan from direct high heat before adding cheese so the dairy proteins melt smoothly without graininess or separating.",
+      },
+      {
+        step: 5,
+        title: "Toss Pasta and Plate with Chicken",
+        instruction:
+          "Add the warm cooked fettuccine directly into the skillet with the Alfredo sauce. Toss using tongs for 1 minute until every strand of pasta is lovingly coated. Taste and adjust with salt and black pepper.",
+      },
+      {
+        step: 6,
+        title: "Garnish and Serve",
+        instruction:
+          "Twirl portions of creamy fettuccine into warm pasta bowls. Fan the sliced golden chicken breast cutlets right over the top. Garnish generously with shaved parmesan cheese flakes, chopped fresh parsley, and freshly cracked black pepper. Serve immediately.",
+      },
+    ],
+    chefNotes: [
+      "Always grate your own Parmesan from a block instead of using pre-shredded bagged cheese, which contains anti-caking cellulose that keeps the Alfredo sauce from achieving that signature restaurant silkiness.",
+      "Check your cheese label: genuine Halal-compliant Parmesan must use microbial or vegetarian rennet, not traditional calf rennet.",
+    ],
+    nutrition: {
+      calories: 680,
+      proteinGrams: 46,
+      carbsGrams: 58,
+      fatGrams: 30,
+      fiberGrams: 3,
+      sodiumMg: 620,
+    },
+    storageInstructions:
+      "Store leftover pasta and chicken in an airtight glass container in the refrigerator for up to 3 days. Reheat gently in a skillet over low heat with 2 tablespoons of milk or cream to loosen the sauce back to silkiness.",
+    freezingInstructions:
+      "Freezing is not recommended because dairy-based cream sauces separate and become grainy when frozen and thawed. Best enjoyed freshly cooked.",
+    servingSuggestions: [
+      "Serve hot alongside crisp toasted garlic bread, a crisp Caesar salad with Halal dressing, or roasted lemon-herb broccoli spears.",
+      "Pair with sparkling mineral water and lemon wedges for a light, refreshing palate cleanser.",
+    ],
+    faqs: [
+      {
+        question: "Is Parmesan cheese Halal?",
+        answer:
+          "Traditional Italian Parmigiano Reggiano requires animal rennet by law. However, certified Halal and vegetarian Parmesan is widely available and produced using non-animal microbial enzymes, ensuring it is 100% Halal-compliant.",
+      },
+      {
+        question: "How do I prevent my Alfredo sauce from curdling or breaking?",
+        answer:
+          "Keep the heat very low when whisking in the cheese. High boiling heat causes dairy fats to separate from proteins. Emulsifying with starchy pasta water also locks the sauce in a smooth emulsion.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Aziz",
+      role: "Continental & Mediterranean Executive Chef",
+    },
+    updatedDate: "September 14, 2026",
+    tags: ["Halal Chicken", "Fettuccine Alfredo", "Chicken Alfredo", "Italian Comfort", "Halal Pasta", "Cream Sauce", "Quick Dinner", "Parmesan"],
+  },
+  {
+    id: "rec-tuna-fish-kebab-fritters",
+    slug: "tuna-fish-kebab-fritters",
+    title: "Tuna Fish Kebab (Fritters)",
+    category: "Halal Fish & Seafood",
+    categorySlug: "halal-seafood",
+    cuisine: "Bengali / South Asian Coastal Heritage",
+    description:
+      "Succulent, golden pan-seared tuna fish patties seasoned with caramelized sweet onions, boiled potatoes, ginger, garlic, fresh mint, coriander, and aromatic roasted Bengali garam masala.",
+    introStory:
+      "Tuna Fish Kebab (known affectionately across Bengali households as Tuna Macher Chop or Fish Tikia) is a legendary teatime snack, Ramadan iftar essential, and festive dinner appetizer. In coastal Bengal, home cooks perfected the art of transforming flaky fish into melt-in-the-mouth, spiced cutlets. By gently cooking well-drained flaked tuna with caramelized red onions, roasted cumin, pungent mustard oil, mashed fluffy potatoes, and vibrant herbs, the fish sheds any strong ocean pungency and takes on an exquisite, savory depth. Lightly pan-seared to golden-brown crusty perfection and served over crisp lettuce with vine-ripened tomatoes, sweet red onion rings, fresh lemon wedges, and cool mint yogurt raita, these fritters are irresistible to children and adults alike.",
+    heroImage: IMAGES.tunaFishKebab,
+    prepTimeMinutes: 15,
+    cookTimeMinutes: 15,
+    totalTimeMinutes: 30,
+    servings: 4,
+    difficulty: "Easy",
+    calories: 185,
+    rating: 4.9,
+    reviewCount: 118,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal seafood. Prepared with wholesome canned or fresh tuna, real vegetable seasonings, and egg wash. All breadcrumbs and cooking oils are certified vegetarian and free from animal fats or lard.",
+    potentialCautionNotes:
+      "Ensure canned tuna is thoroughly pressed dry before mixing so the kebab mixture holds its shape perfectly without requiring excessive binder.",
+    ingredients: [
+      { amount: "2", unit: "cans (approx. 10–12 oz / 320g)", name: "Solid Albacore or Chunk Light Tuna in water", notes: "drained thoroughly and pressed dry" },
+      { amount: "2", unit: "medium (approx. 300g)", name: "Yukon Gold or Russet Potatoes", notes: "boiled until tender, peeled and mashed smooth" },
+      { amount: "1", unit: "large", name: "Red Onion", notes: "finely chopped and sautéed until soft and golden" },
+      { amount: "1", unit: "tbsp", name: "Fresh Ginger-Garlic Paste", notes: "freshly grated for aromatic depth" },
+      { amount: "2", unit: "whole", name: "Fresh Green Chilies", notes: "finely minced (adjust to heat preference)" },
+      { amount: "1/4", unit: "cup", name: "Fresh Coriander & Mint Leaves", notes: "finely chopped for herbal freshness" },
+      { amount: "1", unit: "tsp", name: "Roasted Cumin Powder (Bhuna Jeera)", notes: "adds warm earthy smokiness" },
+      { amount: "1", unit: "tsp", name: "Bengali Garam Masala Powder", notes: "fragrant blend of cardamom, cinnamon, and cloves" },
+      { amount: "1/2", unit: "tsp", name: "Ground Turmeric & Red Chili Powder", notes: "for rich golden color and gentle warmth" },
+      { amount: "1", unit: "tsp", name: "Fine Sea Salt & Fresh Cracked Black Pepper", notes: "to taste" },
+      { amount: "1", unit: "tbsp", name: "Fresh Lemon Juice", notes: "balances and brightens the seafood flavors" },
+      { amount: "1", unit: "large", name: "Farm Fresh Egg", notes: "lightly beaten for binding and dipping" },
+      { amount: "1/2", unit: "cup", name: "Halal Toasted Breadcrumbs or Panko", notes: "for a delicate crispy exterior crust" },
+      { amount: "3", unit: "tbsp", name: "Mustard Oil or Neutral Vegetable Oil", notes: "for shallow pan-searing until golden-brown" },
+    ],
+    substitutions: [
+      {
+        original: "Canned tuna",
+        substitute: "Poached fresh salmon, cod, or shredded leftover roast fish",
+        notes: "Fresh fish fillets can be gently poached with turmeric and bay leaf then flaked.",
+      },
+      {
+        original: "Mashed potatoes",
+        substitute: "Cooked sweet potatoes or mashed chickpeas",
+        notes: "Great low-carb or legume-based binding alternatives.",
+      },
+      {
+        original: "Breadcrumbs",
+        substitute: "Gluten-free panko, crushed cornflakes, or roasted gram flour (besan)",
+        notes: "Keeps the recipe 100% gluten-free while delivering a wonderful crispy exterior.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Drain and Prep the Tuna",
+        instruction:
+          "Open the cans of tuna and press out all liquid through a fine-mesh sieve or with a fork. Thoroughly drying the tuna is the secret to patties that hold together without becoming soggy.",
+      },
+      {
+        step: 2,
+        title: "Sauté the Aromatics",
+        instruction:
+          "Heat 1 tablespoon of oil in a skillet over medium heat. Add the finely chopped onions and sauté for 4–5 minutes until soft and translucent with lightly golden edges. Stir in the ginger-garlic paste and minced green chilies; cook for 1 minute until fragrant. Remove from heat and allow to cool slightly.",
+      },
+      {
+        step: 3,
+        title: "Combine the Kebab Mixture",
+        instruction:
+          "In a large mixing bowl, combine the flaked dry tuna, cooled sautéed aromatics, mashed potatoes, chopped coriander, mint, roasted cumin, garam masala, turmeric, chili powder, salt, black pepper, and lemon juice. Mix and knead gently by hand until the mixture binds cleanly into a pliable dough.",
+      },
+      {
+        step: 4,
+        title: "Shape into Round Patties",
+        instruction:
+          "Divide the mixture into 8 equal portions. Lightly oil your palms and roll each portion into a smooth ball, then flatten gently between your palms into uniform 1/2-inch thick round patties.",
+        tip: "Chill the formed patties in the refrigerator for 15 minutes before cooking. Chilling firms the fat and potato starches, preventing crumbling during pan-frying.",
+      },
+      {
+        step: 5,
+        title: "Pan-Sear to Crispy Perfection",
+        instruction:
+          "Heat 2 tablespoons of oil in a non-stick or cast-iron skillet over medium-high heat. Dip each patty lightly into beaten egg, coat gently in breadcrumbs (or dust with a whisper of flour), and place into the sizzling pan. Sear undisturbed for 3–4 minutes per side until deeply golden-brown and crisp. Drain briefly on paper towels.",
+      },
+      {
+        step: 6,
+        title: "Garnish and Serve Hot",
+        instruction:
+          "Arrange the hot tuna kebabs on a wide platter lined with crisp lettuce leaves, sliced vine-ripened tomatoes, sweet red onion rings, fresh coriander sprigs, and lemon wheels. Serve immediately with creamy mint yogurt raita or spicy tomato chutney.",
+      },
+    ],
+    chefNotes: [
+      "The cardinal rule of fish kebabs: drain every drop of liquid from the canned fish. Excess moisture will cause steam pockets during frying that make the fritters break.",
+      "For an extra festive party presentation, shape them into bite-sized mini fritters (tikias) and serve on skewers with cocktail sauce or mango kashundi.",
+    ],
+    nutrition: {
+      calories: 185,
+      proteinGrams: 18,
+      carbsGrams: 14,
+      fatGrams: 6,
+      fiberGrams: 2,
+      sodiumMg: 340,
+    },
+    storageInstructions:
+      "Cooked kebabs can be stored in an airtight glass container in the refrigerator for up to 3 days. Reheat in a preheated oven at 375°F (190°C) or in an air fryer for 4 minutes to restore maximum crispness.",
+    freezingInstructions:
+      "Form the un-cooked patties, place them in a single layer on a parchment-lined baking tray, and freeze until rock solid (about 2 hours). Transfer to a sealed freezer bag for up to 2 months. Cook directly from frozen in a medium skillet, adding 2 extra minutes per side.",
+    servingSuggestions: [
+      "Serve warm as an appetizer on a bed of fresh garden lettuce alongside sweet red onion rings, fresh tomato slices, and cool cucumber-mint raita.",
+      "Tuck inside warm pita bread or brioche buns with spicy mayo and pickled red onions for an incredible gourmet fish burger lunch.",
+      "Pair as a savory side dish with Bengali dal and steamed fragrant rice.",
+    ],
+    faqs: [
+      {
+        question: "Can I make these Tuna Kebabs in an air fryer?",
+        answer:
+          "Yes! Preheat your air fryer to 380°F (193°C). Lightly spray the shaped kebabs with oil and air fry for 10–12 minutes, gently flipping at the 6-minute mark, until golden-brown and crispy.",
+      },
+      {
+        question: "Why do my fish kebabs break apart in the pan?",
+        answer:
+          "Patties break if the fish had too much residual water, or if the potatoes were boiled in excessive water without drying. Chilling the shaped patties for 15 minutes before frying stabilizes the potato starch and guarantees perfect structural integrity.",
+      },
+    ],
+    author: {
+      name: "Chef Madam Begum",
+      role: "Traditional Bengali Home Chef & Culinary Preserver",
+      avatar: IMAGES.chefMadam,
+    },
+    updatedDate: "September 14, 2026",
+    tags: ["Tuna Fish Kebab", "Fish Fritters", "Macher Chop", "Halal Fish & Seafood", "Halal Snacks", "Appetizer", "Bengali Heritage", "Tea Time Snack", "Air Fryer Friendly"],
+  },
+  {
+    id: "rec-bangladeshi-aloo-bharta",
+    slug: "bangladeshi-aloo-bharta-mashed-potatoes",
+    title: "Bangladeshi Aloo Bharta (Mashed Potatoes)",
+    category: "Halal Vegetarian",
+    categorySlug: "halal-vegetarian",
+    cuisine: "Bengali / Bangladeshi Heritage",
+    description:
+      "Classic comforting Bangladeshi Aloo Bharta crafted with tender boiled potatoes, pungent cold-pressed mustard oil, smoky pan-roasted dry red chilies, crisp sliced red onions, and fresh fragrant coriander.",
+    introStory:
+      "A beloved cornerstone of everyday Bengali and Bangladeshi home dining, Aloo Bharta (spiced mashed potatoes) is the ultimate comfort food. Unlike Western mashed potatoes that rely heavily on butter, milk, or heavy cream, authentic Bangladeshi Aloo Bharta draws its vibrant soul from pungent cold-pressed mustard oil (kachi ghani shorsher tel), smoky pan-toasted dry red chilies (shukna morich), crisp thinly sliced red onions, and hand-rubbed fresh coriander leaves. Served warm shaped into a rustic mound alongside steaming hot basmati or kalijira rice, yellow dal (musur dal), and fresh green chilies, this dish proves that humble pantry ingredients can yield profound, crave-worthy flavor.",
+    heroImage: IMAGES.alooBharta,
+    prepTimeMinutes: 10,
+    cookTimeMinutes: 15,
+    totalTimeMinutes: 25,
+    servings: 4,
+    difficulty: "Easy",
+    calories: 165,
+    rating: 5.0,
+    reviewCount: 142,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal and naturally vegan. Prepared entirely with plant-based ingredients, pure cold-pressed mustard oil, whole spices, and farm-fresh produce without any animal rennet, cross-contamination, or artificial additives.",
+    potentialCautionNotes:
+      "Traditional cold-pressed mustard oil has a pungent, wasabi-like kick. Adjust the quantity of roasted chilies and mustard oil according to your personal heat and spice preference.",
+    ingredients: [
+      { amount: "4", unit: "large spuds (approx. 1.5 lbs / 700g)", name: "Yukon Gold or Russet Potatoes", notes: "boiled in salted water until fork-tender, peeled while warm" },
+      { amount: "2", unit: "tbsp", name: "Pure cold-pressed mustard oil (kachi ghani)", notes: "divided: 1 tbsp for frying chilies, 1 tbsp for raw finishing mash" },
+      { amount: "5", unit: "whole", name: "Dried red chilies (shukna morich)", notes: "pan-roasted in mustard oil until crisp, fragrant, and deep burgundy" },
+      { amount: "1/2", unit: "cup", name: "Red onion or shallots", notes: "very finely sliced or diced" },
+      { amount: "2", unit: "whole", name: "Fresh green chilies", notes: "finely minced (optional, for crisp fresh heat)" },
+      { amount: "1/4", unit: "cup", name: "Fresh coriander / cilantro leaves", notes: "washed and finely chopped" },
+      { amount: "1", unit: "tsp", name: "Coarse sea salt", notes: "or pink Himalayan salt, adjust to taste" },
+      { amount: "1/2", unit: "tsp", name: "Roasted cumin powder (bhuna jeera)", notes: "optional, adds smoky aromatic warmth" },
+    ],
+    substitutions: [
+      {
+        original: "Mustard oil",
+        substitute: "Pure ghee or extra virgin olive oil with a drop of mustard paste",
+        notes: "Ghee provides a rich royal taste, though mustard oil is essential for traditional Bengali pungency.",
+      },
+      {
+        original: "Raw red onions",
+        substitute: "Golden fried crispy onions (beresta)",
+        notes: "Creates a sweeter, rich celebratory wedding-style bharta variation.",
+      },
+      {
+        original: "Dried red chilies",
+        substitute: "Fresh green chilies or crushed red pepper flakes",
+        notes: "Provides vibrant fresh heat if dried chilies are unavailable.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Boil and Peel the Potatoes",
+        instruction:
+          "Place scrubbed potatoes in a large pot, cover with cold salted water, and bring to a rolling boil over medium-high heat. Cook for 15–20 minutes until easily pierced with a fork. Drain completely, allow to cool just enough to handle, and peel the skins cleanly while still warm.",
+      },
+      {
+        step: 2,
+        title: "Pan-Roast the Dry Red Chilies",
+        instruction:
+          "Heat 1 tablespoon of pure mustard oil in a small heavy pan over medium heat. Add the whole dry red chilies and sauté for 1–2 minutes, turning frequently until they turn deep burgundy and blister with a smoky fragrance. Remove promptly and drain on paper towels to cool and crisp.",
+        tip: "Keep the exhaust fan on; the mustard oil and roasted chili aromatics are delightfully pungent.",
+      },
+      {
+        step: 3,
+        title: "Hand-Rub the Onion and Chili Seasoning Base",
+        instruction:
+          "In a wide mixing bowl, place the cooled crispy chilies and 1 teaspoon of salt. Using your fingers, crush the chilies into flaky bits with the salt. Add the sliced red onions and remaining tablespoon of raw cold-pressed mustard oil. Knead and rub the onions and chilies together for 1–2 minutes until the onions soften and release their flavorful juices.",
+      },
+      {
+        step: 4,
+        title: "Mash and Blend the Spuds by Hand",
+        instruction:
+          "Add the warm peeled potatoes to the seasoned onion-chili base. Mash thoroughly by hand or with a potato masher until smooth yet retaining a hearty rustic texture with small soft potato morsels.",
+      },
+      {
+        step: 5,
+        title: "Fold Herbs and Shape into Mound",
+        instruction:
+          "Fold in the chopped fresh cilantro, minced green chilies, and roasted cumin powder. Taste and adjust salt or mustard oil as desired. Gently roll and shape into a classic rounded dome on a serving dish, top with a fresh coriander sprig and a roasted red chili, and serve warm.",
+      },
+    ],
+    chefNotes: [
+      "The soul of authentic Bangladeshi bharta is hand-kneading: the warmth of your fingertips coaxes the essential oils out of the onions and chilies, fusing them deeply with the warm potato starches.",
+      "Never use an electric food processor or blender, which damages the starch granules and turns boiled potatoes gummy. A manual hand-mash ensures a luxurious, velvety rustic texture.",
+    ],
+    nutrition: {
+      calories: 165,
+      proteinGrams: 4,
+      carbsGrams: 28,
+      fatGrams: 5,
+      fiberGrams: 4,
+      sodiumMg: 290,
+    },
+    storageInstructions:
+      "Store in an airtight container in the refrigerator for up to 3 days. Reheat gently in a warm skillet with a few drops of water and fresh mustard oil, or enjoy at room temperature.",
+    freezingInstructions:
+      "Freezing is not recommended as the fresh onion and potato cellular structure breaks down, causing watery texture upon thawing. Best enjoyed freshly made.",
+    servingSuggestions: [
+      "Serve warm as a traditional first course with steaming hot plain fragrant Kalijira or Basmati rice, a bowl of red lentil dal (musur dal), and fresh lime wedges.",
+      "Delicious as a spiced filling for toasted flatbreads, parathas, or breakfast egg rolls.",
+    ],
+    faqs: [
+      {
+        question: "Why is mustard oil essential for Bangladeshi Aloo Bharta?",
+        answer:
+          "Cold-pressed mustard oil provides the irreplaceable signature pungency (jhaal) and aroma that defines authentic Bengali home cooking. Regular cooking oil or olive oil lacks this iconic flavor profile.",
+      },
+      {
+        question: "Can I make this ahead of time for guests?",
+        answer:
+          "Yes! You can boil the potatoes and fry the chilies ahead of time. For the freshest texture and crispest onion bite, do the final hand-mash and assembly 15–30 minutes before serving.",
+      },
+    ],
+    author: {
+      name: "Chef Madam Begum",
+      role: "Traditional Bengali Home Chef & Culinary Preserver",
+      avatar: IMAGES.chefMadam,
+    },
+    updatedDate: "September 14, 2026",
+    tags: ["Aloo Bharta", "Bangladeshi", "Bengali Heritage", "Mashed Potatoes", "Comfort Food", "Halal Vegetarian", "Vegan", "Mustard Oil", "Spicy Sides"],
+  },
+  {
     id: "rec-green-goddess-salmon-bowl",
     slug: "green-goddess-wild-salmon-asparagus-bowl",
     title: "Green Goddess Wild Salmon & Charred Asparagus Superfood Bowl",
@@ -297,17 +1734,17 @@ export const RECIPES: Recipe[] = [
     ],
   },
   {
-    id: "rec-authentic-chicken-kabsa",
-    slug: "authentic-saudi-chicken-kabsa",
-    title: "Authentic Chicken Kabsa (Saudi Arabian Spiced Chicken & Rice)",
+    id: "rec-chicken-machboos-majboos-kabsa",
+    slug: "chicken-machboos-majboos-kabsa",
+    title: "Chicken Machboos (Majboos / Kabsa)",
     category: "Halal Chicken",
     categorySlug: "halal-chicken",
-    cuisine: "Saudi Arabian / Khaleeji Arabian Heritage",
+    cuisine: "Arabian Gulf / Khaleeji Heritage (Kuwait, Bahrain, UAE, Saudi Arabia)",
     description:
-      "Saudi Arabia's national treasure: long-grain basmati rice simmered in a deeply aromatic tomato and whole-spice chicken broth infused with dried black lime (loomi), crowned with spice-roasted golden chicken, toasted almonds, and sweet sultanas.",
+      "The crown jewel of Arabian Gulf hospitality: fragrant long-grain basmati rice simmered in a spiced chicken and dried black lime (loomi) broth, crowned with golden roasted chicken, toasted cashews, almonds, sultanas, and crispy onion hashwa.",
     introStory:
-      "Regarded as the national dish of Saudi Arabia and beloved throughout the Arabian Gulf, Al Kabsa (مكبوس / كبسة) is the pinnacle of communal hospitality. Tender bone-in Halal chicken is gently simmered with sweet caramelized onions, garlic, fresh tomatoes, tomato paste, and a bespoke Kabsa spice blend featuring ground cumin, coriander, black pepper, cardamom, cinnamon, and whole dried black limes (loomi). Pierced and steeped in the simmering broth, the loomi releases an earthy, tangy citrus perfume that defines genuine Arabian rice cookery. The chicken pieces are lifted, brushed with fragrant ghee and spices, and roasted in a hot oven until the skin is blistered and glistening mahogany. Meanwhile, long-grain basmati rice absorbs the rich, concentrated chicken broth, plumping into separate, fragrant golden grains. Served on an ornate communal platter garnished with toasted whole almonds, plump raisins, and fresh herbs, Chicken Kabsa is traditionally savored with spicy Dakkoos tomato sauce and cool laban.",
-    heroImage: IMAGES.authenticChickenKabsa,
+      "Celebrated as Machboos or Majboos (مجبوس / مكبوس) across Kuwait, Bahrain, Qatar, UAE, and Oman, and as Kabsa (كبسة) across Saudi Arabia, this monumental one-pot banquet dish represents the pinnacle of Arabian Khaleeji hospitality. Succulent bone-in Halal chicken is simmered in a deeply aromatic broth infused with caramelized onions, garlic, fresh tomatoes, Baharat spice blend, cardamom, cinnamon, and whole dried black limes (loomi). Pierced before steeping, the loomi infuses the broth with its signature smoky, tangy citrus aroma. The chicken is lifted, brushed with saffron water and ghee, and roasted until golden and glistening, while long-grain basmati rice cooks directly in the concentrated chicken broth to fluffy perfection. Garnished lavishly with toasted almonds, cashews, golden sultanas, and sweet fried onion hashwa, Machboos is traditionally enjoyed communal-style with fiery homemade Dakkoos tomato sauce and cool laban.",
+    heroImage: IMAGES.chickenMachboos,
     prepTimeMinutes: 20,
     cookTimeMinutes: 50,
     totalTimeMinutes: 70,
@@ -341,9 +1778,10 @@ export const RECIPES: Recipe[] = [
       { amount: "1", unit: "tsp", name: "Ground turmeric", notes: "creates iconic golden-yellow rice hue" },
       { amount: "1.5", unit: "tsp", name: "Fine sea salt", notes: "or to taste" },
       { amount: "4.5", unit: "cups", name: "Water or mild broth", notes: "to simmer chicken and cook the rice" },
-      { amount: "1/3", unit: "cup", name: "Whole raw almonds", notes: "blanched and toasted in ghee until golden and crunchy" },
-      { amount: "1/3", unit: "cup", name: "Dark or golden raisins / sultanas", notes: "plumped in warm ghee for 30 seconds" },
-      { amount: "2", unit: "tbsp", name: "Fresh flat-leaf parsley or coriander", notes: "finely minced for garnish" },
+      { amount: "1/3", unit: "cup", name: "Toasted almonds & halved cashews", notes: "blanched and pan-roasted in ghee until golden and crunchy" },
+      { amount: "1/3", unit: "cup", name: "Golden sultanas / raisins", notes: "plumped in warm ghee for 30 seconds" },
+      { amount: "1/2", unit: "cup", name: "Crispy fried onions (hashwa)", notes: "thinly sliced red onions sautéed with a pinch of cardamom and loomi powder" },
+      { amount: "2", unit: "tbsp", name: "Fresh flat-leaf parsley or fresh coriander", notes: "finely minced for vibrant herbal garnish" },
     ],
     substitutions: [
       {
@@ -438,7 +1876,7 @@ export const RECIPES: Recipe[] = [
       role: "Culinary Director & Heritage Specialist",
     },
     updatedDate: "September 9, 2026",
-    tags: ["Halal Chicken", "Kabsa", "Saudi Arabian", "Middle Eastern", "Rice Dish", "Almond", "Raisins", "Banquet Feast"],
+    tags: ["Halal Chicken", "Chicken Machboos", "Majboos", "Kabsa", "Arabian Gulf", "Kuwaiti", "Saudi Arabian", "Middle Eastern", "Rice Dish", "Cashews", "Almond", "Raisins", "Banquet Feast"],
   },
   {
     id: "rec-1",

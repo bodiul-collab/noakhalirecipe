@@ -109,7 +109,13 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
 
   const currentRecipe = useMemo(() => {
     if (!activeSlug) return null;
-    return RECIPES.find((r) => r.slug === activeSlug) || null;
+    return (
+      RECIPES.find(
+        (r) =>
+          r.slug === activeSlug ||
+          (r.slug === "chicken-machboos-majboos-kabsa" && activeSlug === "authentic-saudi-chicken-kabsa")
+      ) || null
+    );
   }, [activeSlug]);
 
   // Custom User Ratings state persisted in localStorage

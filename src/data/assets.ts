@@ -59,6 +59,17 @@ import mezbaniBeefCurryImg from "../assets/images/mezbani_beef_curry.jpg";
 import chickenMandiImg from "../assets/images/chicken_mandi.jpg";
 import koftaTagineEggsImg from "../assets/images/kofta_tagine_eggs.jpg";
 import birriaTacosBeefImg from "../assets/images/birria_tacos_beef.jpg";
+import alooBhartaImg from "../assets/images/aloo_bharta_1789410866056.jpg";
+import chickenMachboosImg from "../assets/images/chicken_machboos_1789411225223.jpg";
+import tunaFishKebabImg from "../assets/images/tuna_fish_kebab_1789411539343.jpg";
+import creamyChickenAlfredoImg from "../assets/images/creamy_chicken_alfredo_1789411712504.jpg";
+import masoorDalBowlImg from "../assets/images/masoor_dal_bowl_1789411835927.jpg";
+import babaGanoushImg from "../assets/images/baba_ganoush_dip_1789411939719.jpg";
+import crispySalmonPattiesImg from "../assets/images/crispy_salmon_patties_1789412073673.jpg";
+import loittaShutkiBhunaImg from "../assets/images/loitta_shutki_bhuna_1789412319797.jpg";
+import mediterraneanChickpeaSaladImg from "../assets/images/mediterranean_chickpea_salad_1789412636845.jpg";
+import butterChickenImg from "../assets/images/butter_chicken_makhani_1789412858239.jpg";
+import chickenCharghaImg from "../assets/images/lahori_chicken_chargha_1789413014894.jpg";
 import noakhaliLogoFullImg from "../assets/images/noakhali_kitchen_logo_1789072776240.jpg";
 import noakhaliLogoIconImg from "../assets/images/noakhali_kitchen_logo_1789072776240.jpg";
 
@@ -124,6 +135,17 @@ export const IMAGES = {
   chickenMandi: chickenMandiImg,
   koftaTagineEggs: koftaTagineEggsImg,
   birriaTacosBeef: birriaTacosBeefImg,
+  alooBharta: alooBhartaImg,
+  chickenMachboos: chickenMachboosImg,
+  tunaFishKebab: tunaFishKebabImg,
+  creamyChickenAlfredo: creamyChickenAlfredoImg,
+  masoorDal: masoorDalBowlImg,
+  babaGanoush: babaGanoushImg,
+  salmonPatties: crispySalmonPattiesImg,
+  loittaShutki: loittaShutkiBhunaImg,
+  mediterraneanChickpeaSalad: mediterraneanChickpeaSaladImg,
+  butterChicken: butterChickenImg,
+  chickenChargha: chickenCharghaImg,
   logoFull: noakhaliLogoFullImg,
   logoIcon: noakhaliLogoIconImg,
 };
