@@ -157,44 +157,8 @@ export const DirectoryView: React.FC<DirectoryViewProps> = ({
 
   // Track active search request ID and query key to prevent stale responses or race conditions
   const searchRequestIdRef = useRef<number>(0);
+  const locationResolveRequestIdRef = useRef<number>(0);
   const activeSearchKeyRef = useRef<string>("");
-
-  // Background category counts loader
-  const refreshAllCategoryCounts = useCallback(
-    async (loc: SearchLocation, filterState: SearchFilters, reqId?: number) => {
-      const activeId = reqId ?? searchRequestIdRef.current;
-      const categories: SearchCategory[] = ["restaurants", "groceries", "mosques"];
-      for (const cat of categories) {
-        try {
-          const res = await fetch("/api/places/search", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              category: cat,
-              lat: loc.lat,
-              lng: loc.lng,
-              radiusMeters: filterState.radiusMeters,
-              openNow: filterState.openNowOnly,
-              minRating: filterState.minRating,
-              locationName: loc.city || loc.formattedAddress,
-            }),
-          });
-          if (activeId !== searchRequestIdRef.current) return;
-          if (res.ok) {
-            const data = await res.json();
-            if (activeId !== searchRequestIdRef.current) return;
-            if (data && Array.isArray(data.places)) {
-              setCategoryCounts((prev) => ({
-                ...prev,
-                [cat]: data.places.length,
-              }));
-            }
-          }
-        } catch {}
-      }
-    },
-    []
-  );
 
   // Fetch places from server-side endpoint with optional force refresh bypass
   const executePlacesSearch = useCallback(
@@ -351,7 +315,7 @@ export const DirectoryView: React.FC<DirectoryViewProps> = ({
     }
   };
 
-  // Comprehensive manual refresh callback (clears server cache, verifies live status, and updates category counts)
+  // Comprehensive manual refresh callback (clears server cache, verifies live status)
   const handleRefreshPlaces = useCallback(async () => {
     setIsRefreshing(true);
     setPlacesError(null);
@@ -371,16 +335,13 @@ export const DirectoryView: React.FC<DirectoryViewProps> = ({
       minDelay,
     ]);
 
-    // 3. Update category counts across all categories
-    refreshAllCategoryCounts(resolvedLocation, filters);
-
     setRefreshSuccessMessage(
       `Live Directory Refreshed: Verified Halal locations near ${resolvedLocation.city || resolvedLocation.formattedAddress}.`
     );
     setTimeout(() => {
       setRefreshSuccessMessage(null);
     }, 4000);
-  }, [resolvedLocation, selectedCategory, filters, appliedSubQuery, executePlacesSearch, refreshAllCategoryCounts]);
+  }, [resolvedLocation, selectedCategory, filters, appliedSubQuery, executePlacesSearch]);
 
   // Synchronized search effect when category, filters, or subquery change
   useEffect(() => {
@@ -399,7 +360,6 @@ export const DirectoryView: React.FC<DirectoryViewProps> = ({
     setPlacesError(null);
 
     executePlacesSearch(resolvedLocation, selectedCategory, filters, appliedSubQuery, false, currentReqId);
-    refreshAllCategoryCounts(resolvedLocation, filters, currentReqId);
   }, [
     resolvedLocation,
     selectedCategory,
@@ -408,7 +368,6 @@ export const DirectoryView: React.FC<DirectoryViewProps> = ({
     filters.minRating,
     appliedSubQuery,
     executePlacesSearch,
-    refreshAllCategoryCounts,
   ]);
 
   // Re-trigger fresh search if parent requests directory refresh
@@ -428,6 +387,7 @@ export const DirectoryView: React.FC<DirectoryViewProps> = ({
     const query = (overrideQuery || locationInput).trim();
     if (!query) return;
 
+    const activeLocId = ++locationResolveRequestIdRef.current;
     setIsLoadingLocation(true);
     setLocationError(null);
     setAmbiguousLocations([]);
@@ -439,7 +399,10 @@ export const DirectoryView: React.FC<DirectoryViewProps> = ({
         body: JSON.stringify({ query }),
       });
 
+      if (activeLocId !== locationResolveRequestIdRef.current) return;
+
       const data = await response.json();
+      if (activeLocId !== locationResolveRequestIdRef.current) return;
 
       if (data.status === "OK" && data.results.length > 0) {
         const topResult = data.results[0];
@@ -453,10 +416,14 @@ export const DirectoryView: React.FC<DirectoryViewProps> = ({
         );
       }
     } catch (err: any) {
-      console.error("Geocoding request failed:", err);
-      setLocationError("Could not resolve location at this time. Please try again.");
+      if (activeLocId === locationResolveRequestIdRef.current) {
+        console.error("Geocoding request failed:", err);
+        setLocationError("Could not resolve location at this time. Please try again.");
+      }
     } finally {
-      setIsLoadingLocation(false);
+      if (activeLocId === locationResolveRequestIdRef.current) {
+        setIsLoadingLocation(false);
+      }
     }
   };
 
@@ -467,11 +434,13 @@ export const DirectoryView: React.FC<DirectoryViewProps> = ({
       return;
     }
 
+    const activeLocId = ++locationResolveRequestIdRef.current;
     setIsLoadingLocation(true);
     setLocationError(null);
 
     navigator.geolocation.getCurrentPosition(
       async (position) => {
+        if (activeLocId !== locationResolveRequestIdRef.current) return;
         const { latitude, longitude } = position.coords;
         const coordQuery = `${latitude}, ${longitude}`;
 
@@ -482,7 +451,11 @@ export const DirectoryView: React.FC<DirectoryViewProps> = ({
             body: JSON.stringify({ query: coordQuery }),
           });
 
+          if (activeLocId !== locationResolveRequestIdRef.current) return;
+
           const data = await response.json();
+          if (activeLocId !== locationResolveRequestIdRef.current) return;
+
           if (data.status === "OK" && data.results.length > 0) {
             const resolved = data.results[0];
             applySelectedLocation(resolved, true);
@@ -497,15 +470,19 @@ export const DirectoryView: React.FC<DirectoryViewProps> = ({
         } catch (err) {
           console.warn("Could not reverse geocode coordinates, using raw values:", err);
         } finally {
-          setIsLoadingLocation(false);
+          if (activeLocId === locationResolveRequestIdRef.current) {
+            setIsLoadingLocation(false);
+          }
         }
       },
       (error) => {
-        setIsLoadingLocation(false);
-        // Requirement 5: exact user-friendly explanation
-        setLocationError(
-          "Location access is unavailable. You can search by city, postal code, ZIP code, or address instead."
-        );
+        if (activeLocId === locationResolveRequestIdRef.current) {
+          setIsLoadingLocation(false);
+          // Requirement 5: exact user-friendly explanation
+          setLocationError(
+            "Location access is unavailable. You can search by city, postal code, ZIP code, or address instead."
+          );
+        }
       },
       { timeout: 10000, enableHighAccuracy: false }
     );

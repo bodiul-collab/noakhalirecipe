@@ -36,8 +36,211 @@ export function clearPlacesCache(): void {
   memoryCache.clear();
 }
 
+// Structured predefined popular locations with full geographic context
+export interface PopularLocationItem {
+  label: string;
+  query: string;
+  location: SearchLocation;
+}
+
+export const POPULAR_LOCATIONS: PopularLocationItem[] = [
+  {
+    label: "Houston (77057)",
+    query: "Houston, TX 77057",
+    location: {
+      formattedAddress: "Houston, TX 77057, USA",
+      lat: 29.7454,
+      lng: -95.4913,
+      city: "Houston",
+      state: "Texas",
+      country: "United States",
+      postalCode: "77057",
+    },
+  },
+  {
+    label: "Katy (77449)",
+    query: "Katy, TX 77449",
+    location: {
+      formattedAddress: "Katy, TX 77449, USA",
+      lat: 29.8398,
+      lng: -95.7335,
+      city: "Katy",
+      state: "Texas",
+      country: "United States",
+      postalCode: "77449",
+    },
+  },
+  {
+    label: "Toronto (M5V 3A8)",
+    query: "Toronto, M5V 3A8",
+    location: {
+      formattedAddress: "Toronto, ON M5V 3A8, Canada",
+      lat: 43.6441,
+      lng: -79.3948,
+      city: "Toronto",
+      state: "Ontario",
+      country: "Canada",
+      postalCode: "M5V 3A8",
+    },
+  },
+  {
+    label: "London (SW1A 1AA)",
+    query: "London, SW1A 1AA",
+    location: {
+      formattedAddress: "Westminster, London SW1A 1AA, United Kingdom",
+      lat: 51.5014,
+      lng: -0.1419,
+      city: "London",
+      state: "England",
+      country: "United Kingdom",
+      postalCode: "SW1A 1AA",
+    },
+  },
+  {
+    label: "Dhaka (1205)",
+    query: "Dhaka 1205",
+    location: {
+      formattedAddress: "Dhanmondi, Dhaka 1205, Bangladesh",
+      lat: 23.7461,
+      lng: 90.3742,
+      city: "Dhaka",
+      state: "Dhaka Division",
+      country: "Bangladesh",
+      postalCode: "1205",
+    },
+  },
+  {
+    label: "New Delhi (110001)",
+    query: "New Delhi 110001",
+    location: {
+      formattedAddress: "Connaught Place, New Delhi 110001, India",
+      lat: 28.6328,
+      lng: 77.2197,
+      city: "New Delhi",
+      state: "Delhi",
+      country: "India",
+      postalCode: "110001",
+    },
+  },
+  {
+    label: "Dubai (UAE)",
+    query: "Dubai, UAE",
+    location: {
+      formattedAddress: "Dubai, United Arab Emirates",
+      lat: 25.2048,
+      lng: 55.2708,
+      city: "Dubai",
+      state: "Dubai",
+      country: "United Arab Emirates",
+    },
+  },
+  {
+    label: "Sydney (2000)",
+    query: "Sydney 2000",
+    location: {
+      formattedAddress: "Sydney NSW 2000, Australia",
+      lat: -33.8688,
+      lng: 151.2093,
+      city: "Sydney",
+      state: "New South Wales",
+      country: "Australia",
+      postalCode: "2000",
+    },
+  },
+];
+
 // Built-in international geocode fallbacks for common hubs
 const FALLBACK_GEOLOCATIONS: Record<string, SearchLocation> = {
+  "sydney 2000": {
+    formattedAddress: "Sydney NSW 2000, Australia",
+    lat: -33.8688,
+    lng: 151.2093,
+    city: "Sydney",
+    state: "New South Wales",
+    country: "Australia",
+    postalCode: "2000",
+  },
+  "sydney nsw 2000": {
+    formattedAddress: "Sydney NSW 2000, Australia",
+    lat: -33.8688,
+    lng: 151.2093,
+    city: "Sydney",
+    state: "New South Wales",
+    country: "Australia",
+    postalCode: "2000",
+  },
+  "houston 77057": {
+    formattedAddress: "Houston, TX 77057, USA",
+    lat: 29.7454,
+    lng: -95.4913,
+    city: "Houston",
+    state: "Texas",
+    country: "United States",
+    postalCode: "77057",
+  },
+  "houston 77002": {
+    formattedAddress: "Houston, TX 77002, USA",
+    lat: 29.7589,
+    lng: -95.3677,
+    city: "Houston",
+    state: "Texas",
+    country: "United States",
+    postalCode: "77002",
+  },
+  "77002": {
+    formattedAddress: "Houston, TX 77002, USA",
+    lat: 29.7589,
+    lng: -95.3677,
+    city: "Houston",
+    state: "Texas",
+    country: "United States",
+    postalCode: "77002",
+  },
+  "katy 77449": {
+    formattedAddress: "Katy, TX 77449, USA",
+    lat: 29.8398,
+    lng: -95.7335,
+    city: "Katy",
+    state: "Texas",
+    country: "United States",
+    postalCode: "77449",
+  },
+  "toronto m5v 3a8": {
+    formattedAddress: "Toronto, ON M5V 3A8, Canada",
+    lat: 43.6441,
+    lng: -79.3948,
+    city: "Toronto",
+    state: "Ontario",
+    country: "Canada",
+    postalCode: "M5V 3A8",
+  },
+  "london sw1a 1aa": {
+    formattedAddress: "Westminster, London SW1A 1AA, UK",
+    lat: 51.5014,
+    lng: -0.1419,
+    city: "London",
+    state: "England",
+    country: "United Kingdom",
+    postalCode: "SW1A 1AA",
+  },
+  "dhaka 1205": {
+    formattedAddress: "Dhanmondi, Dhaka 1205, Bangladesh",
+    lat: 23.7461,
+    lng: 90.3742,
+    city: "Dhaka",
+    state: "Dhaka Division",
+    country: "Bangladesh",
+    postalCode: "1205",
+  },
+  "new delhi 110001": {
+    formattedAddress: "Connaught Place, New Delhi 110001, India",
+    lat: 28.6328,
+    lng: 77.2197,
+    city: "New Delhi",
+    state: "Delhi",
+    country: "India",
+    postalCode: "110001",
+  },
   "77057": {
     formattedAddress: "Houston, TX 77057, USA",
     lat: 29.7454,
@@ -265,6 +468,36 @@ export async function resolveLocation(
     }
   }
 
+  // Check structured predefined locations and known city/postal dictionaries first
+  const normalizedKey = trimmed.toLowerCase().replace(/[^a-z0-9\s]/g, "").replace(/\s+/g, " ");
+  for (const item of POPULAR_LOCATIONS) {
+    const normLabel = item.label.toLowerCase().replace(/[^a-z0-9\s]/g, "").replace(/\s+/g, " ");
+    const normQuery = item.query.toLowerCase().replace(/[^a-z0-9\s]/g, "").replace(/\s+/g, " ");
+    if (
+      normalizedKey === normLabel ||
+      normalizedKey === normQuery ||
+      (item.location.city && item.location.postalCode && normalizedKey === `${item.location.city.toLowerCase()} ${item.location.postalCode.toLowerCase()}`) ||
+      (normalizedKey === item.location.postalCode?.toLowerCase())
+    ) {
+      setInCache(cacheKey, [item.location]);
+      return {
+        status: "OK",
+        results: [item.location],
+        source: "fallback",
+      };
+    }
+  }
+
+  if (FALLBACK_GEOLOCATIONS[normalizedKey]) {
+    const loc = FALLBACK_GEOLOCATIONS[normalizedKey];
+    setInCache(cacheKey, [loc]);
+    return {
+      status: "OK",
+      results: [loc],
+      source: "fallback",
+    };
+  }
+
   // 1. Primary: Google Geocoding API
   if (apiKey) {
     try {
@@ -390,26 +623,49 @@ export async function resolveLocation(
     if (osmRes.ok) {
       const osmData = (await osmRes.json()) as any[];
       if (Array.isArray(osmData) && osmData.length > 0) {
-        const mapped: SearchLocation[] = osmData.map((item) => {
+        // Country context safeguard:
+        // Do NOT allow a foreign business/establishment (e.g. Italian venue) to override a clearly identified city/postal-code
+        const validOsm = osmData.filter((item) => {
           const addr = item.address || {};
-          return {
-            formattedAddress: item.display_name,
-            lat: parseFloat(item.lat),
-            lng: parseFloat(item.lon),
-            placeId: item.place_id ? `osm-${item.place_id}` : undefined,
-            city: addr.city || addr.town || addr.village || addr.suburb || addr.municipality || item.name,
-            state: addr.state || addr.province || addr.region,
-            country: addr.country,
-            postalCode: addr.postcode,
-          };
+          const country = (addr.country || "").toLowerCase();
+          const qLower = trimmed.toLowerCase();
+          if (qLower.includes("sydney") && country !== "australia") {
+            return false;
+          }
+          if (qLower.includes("toronto") && country !== "canada") {
+            return false;
+          }
+          if (qLower.includes("dhaka") && country !== "bangladesh") {
+            return false;
+          }
+          if (qLower.includes("london") && !country.includes("united kingdom") && country !== "uk" && country !== "canada") {
+            return false;
+          }
+          return true;
         });
 
-        setInCache(cacheKey, mapped);
-        return {
-          status: mapped.length > 1 ? "AMBIGUOUS" : "OK",
-          results: mapped,
-          source: "fallback",
-        };
+        if (validOsm.length > 0) {
+          const mapped: SearchLocation[] = validOsm.map((item) => {
+            const addr = item.address || {};
+            return {
+              formattedAddress: item.display_name,
+              lat: parseFloat(item.lat),
+              lng: parseFloat(item.lon),
+              placeId: item.place_id ? `osm-${item.place_id}` : undefined,
+              city: addr.city || addr.town || addr.village || addr.suburb || addr.municipality || item.name,
+              state: addr.state || addr.province || addr.region,
+              country: addr.country,
+              postalCode: addr.postcode,
+            };
+          });
+
+          setInCache(cacheKey, mapped);
+          return {
+            status: mapped.length > 1 ? "AMBIGUOUS" : "OK",
+            results: mapped,
+            source: "fallback",
+          };
+        }
       }
     }
   } catch (err: any) {
@@ -417,11 +673,11 @@ export async function resolveLocation(
   }
 
   // 4. Secondary Backup Dictionary (Known popular locations only as a fallback, NEVER overriding valid global searches)
-  const normalizedKey = trimmed.toLowerCase().replace(/[^a-z0-9\s]/g, "");
+  const fallbackNormKey = trimmed.toLowerCase().replace(/[^a-z0-9\s]/g, "");
   for (const [key, location] of Object.entries(FALLBACK_GEOLOCATIONS)) {
     if (
-      normalizedKey === key ||
-      normalizedKey.includes(key) ||
+      fallbackNormKey === key ||
+      fallbackNormKey.includes(key) ||
       trimmed.toLowerCase() === (location.city?.toLowerCase() || "")
     ) {
       setInCache(cacheKey, [location]);
@@ -442,8 +698,620 @@ export async function resolveLocation(
   };
 }
 
+// ============================================================================
+// STRICT CATEGORY CLASSIFICATION & HALAL RELEVANCE LAYER
+// ============================================================================
+
+export interface RawPlaceInput {
+  name: string;
+  types?: string[];
+  primaryType?: string;
+  formattedAddress?: string;
+  editorialSummary?: string;
+  osmClass?: string;
+  osmType?: string;
+  osmTags?: Record<string, string>;
+}
+
+export interface PlaceClassification {
+  eligible: boolean;
+  category: SearchCategory | null;
+  categoryLabel: string;
+  halalConfidence: "high" | "medium" | "low" | "none";
+  halalNotice: string;
+  halalEvidence: string;
+  rejectionReason?: string;
+}
+
+// Known non-halal casual dining & bar chains
+const NON_HALAL_CHAINS = [
+  "chili's",
+  "applebee's",
+  "outback steakhouse",
+  "texas roadhouse",
+  "olive garden",
+  "red lobster",
+  "buffalo wild wings",
+  "tgi fridays",
+  "hooters",
+  "twin peaks",
+  "bj's restaurant",
+  "cracker barrel",
+  "golden corral",
+  "bob evans",
+  "waffle house",
+];
+
+// Generic supermarket & retail chains that are NOT automatically Halal Groceries
+const GENERIC_SUPERMARKET_CHAINS = [
+  "walmart",
+  "kroger",
+  "target",
+  "safeway",
+  "whole foods",
+  "heb",
+  "h-e-b",
+  "h.e.b",
+  "central market",
+  "aldi",
+  "costco",
+  "sam's club",
+  "sams club",
+  "publix",
+  "sprouts",
+  "albertsons",
+  "trader joe's",
+  "trader joes",
+  "food lion",
+  "giant",
+  "giant eagle",
+  "meijer",
+  "shoprite",
+  "winco",
+  "winn-dixie",
+  "food 4 less",
+  "ralphs",
+  "vons",
+  "smart & final",
+  "wegmans",
+  "stop & shop",
+  "harris teeter",
+  "smith's",
+  "fred meyer",
+  "piggly wiggly",
+  "lidl",
+  "dollar tree",
+  "family dollar",
+  "dollar general",
+];
+
+// Strictly non-Islamic religious terms for mosque filtering
+const NON_ISLAMIC_RELIGIOUS_TERMS = [
+  "church",
+  "cathedral",
+  "synagogue",
+  "temple",
+  "gurdwara",
+  "chapel",
+  "parish",
+  "baptist",
+  "methodist",
+  "presbyterian",
+  "lutheran",
+  "catholic",
+  "episcopal",
+  "adventist",
+  "pentecostal",
+  "buddhist",
+  "hindu",
+  "scientology",
+  "kingdom hall",
+  "mormon",
+  "latter-day",
+  "seventh-day",
+  "jehovah",
+];
+
 /**
- * Perform Places API (New) Text Search with location bias, radius, category, pagination and filters.
+ * Single centralized classification pipeline.
+ * Classifies raw place records against the requested category, strictly verifying
+ * both business type eligibility and credible halal relevance.
+ */
+export function classifyPlace(
+  raw: RawPlaceInput,
+  requestedCategory: SearchCategory
+): PlaceClassification {
+  const name = (raw.name || "").trim();
+  const nameLower = name.toLowerCase();
+  const summaryLower = (raw.editorialSummary || "").toLowerCase();
+  const combinedText = `${nameLower} ${summaryLower}`;
+
+  const rawTypes = (raw.types || []).map((t) => t.toLowerCase().trim());
+  if (raw.primaryType) rawTypes.push(raw.primaryType.toLowerCase().trim());
+  if (raw.osmClass) rawTypes.push(raw.osmClass.toLowerCase().trim());
+  if (raw.osmType) rawTypes.push(raw.osmType.toLowerCase().trim());
+  const types = Array.from(new Set(rawTypes));
+
+  // Determine explicit halal identity in place data (NOT from the search query)
+  const hasExplicitHalal =
+    /\b(halal|zabiha|zabihah|bismillah|dhabihah)\b/i.test(combinedText) ||
+    raw.osmTags?.cuisine === "halal" ||
+    raw.osmTags?.["diet:halal"] === "yes" ||
+    raw.osmTags?.halal === "yes";
+
+  // ==========================================
+  // CATEGORY A & B: RESTAURANT CLASSIFICATION
+  // ==========================================
+  if (requestedCategory === "restaurants") {
+    // 1. Conflict Check: Alcohol venues, pork specialties, non-halal chains
+    const alcoholTypes = [
+      "bar",
+      "pub",
+      "night_club",
+      "liquor_store",
+      "wine_bar",
+      "brewery",
+      "distillery",
+      "beer_garden",
+    ];
+    if (types.some((t) => alcoholTypes.includes(t)) && !hasExplicitHalal) {
+      return {
+        eligible: false,
+        category: null,
+        categoryLabel: "Bar / Nightlife",
+        halalConfidence: "none",
+        halalNotice: "",
+        halalEvidence: "none",
+        rejectionReason: "Alcohol/nightlife venue (bar/pub/brewery/club), not a halal dining establishment",
+      };
+    }
+
+    if (
+      NON_HALAL_CHAINS.some(
+        (chain) =>
+          nameLower === chain || nameLower.startsWith(chain + " ") || nameLower.includes(chain)
+      )
+    ) {
+      return {
+        eligible: false,
+        category: null,
+        categoryLabel: "Non-Halal Chain",
+        halalConfidence: "none",
+        halalNotice: "",
+        halalEvidence: "none",
+        rejectionReason: "Known non-halal casual dining/fast-food chain",
+      };
+    }
+
+    const alcoholKeywords = [
+      "bar & grill",
+      "pub & grill",
+      "brewery",
+      "brewpub",
+      "tavern",
+      "taproom",
+      "saloon",
+      "winery",
+      "distillery",
+      "wine bar",
+      "sports bar",
+    ];
+    if (alcoholKeywords.some((w) => nameLower.includes(w)) && !hasExplicitHalal) {
+      return {
+        eligible: false,
+        category: null,
+        categoryLabel: "Bar / Pub",
+        halalConfidence: "none",
+        halalNotice: "",
+        halalEvidence: "none",
+        rejectionReason: "Bar/pub/alcohol-focused name keywords detected",
+      };
+    }
+
+    const porkKeywords = [
+      "pork",
+      "pork ribs",
+      "pork belly",
+      "bacon",
+      "pork chop",
+      "ham ",
+      "charcuterie",
+      "carnitas",
+      "chicharron",
+    ];
+    if (porkKeywords.some((w) => nameLower.includes(w)) && !hasExplicitHalal) {
+      return {
+        eligible: false,
+        category: null,
+        categoryLabel: "Non-Halal Meat",
+        halalConfidence: "none",
+        halalNotice: "",
+        halalEvidence: "none",
+        rejectionReason: "Pork/non-halal meat specialty detected in name",
+      };
+    }
+
+    if (
+      (nameLower.includes("smokehouse") || nameLower.includes("bbq") || nameLower.includes("barbecue")) &&
+      !hasExplicitHalal
+    ) {
+      return {
+        eligible: false,
+        category: null,
+        categoryLabel: "Smokehouse / BBQ",
+        halalConfidence: "none",
+        halalNotice: "",
+        halalEvidence: "none",
+        rejectionReason:
+          "Smokehouse / BBQ establishment without verified halal identification (pork cross-contamination risk)",
+      };
+    }
+
+    // 2. Strict Grocery / Retail / Supermarket / Butcher rejection
+    // NEVER convert a grocery store, butcher, supermarket, or market into a restaurant
+    const groceryTypes = [
+      "grocery_store",
+      "supermarket",
+      "convenience_store",
+      "liquor_store",
+      "butcher_shop",
+      "warehouse",
+      "shopping_mall",
+      "department_store",
+      "clothing_store",
+      "gas_station",
+      "pharmacy",
+    ];
+    if (types.some((t) => groceryTypes.includes(t))) {
+      return {
+        eligible: false,
+        category: "groceries",
+        categoryLabel: "Grocery / Retail",
+        halalConfidence: hasExplicitHalal ? "high" : "none",
+        halalNotice: "",
+        halalEvidence: hasExplicitHalal ? "halal in name" : "none",
+        rejectionReason: "Grocery/supermarket/butcher/retail place type, not a dining restaurant",
+      };
+    }
+
+    const groceryNameRegex =
+      /\b(grocery|groceries|supermarket|meat market|butcher|halal market|bazaar|food mart|mini mart|convenience store|convenience|wholesaler|cash & carry|produce market|spices|halal foods|halal meat|zabiha meat|depot|provisions)\b/i;
+    if (groceryNameRegex.test(nameLower)) {
+      return {
+        eligible: false,
+        category: "groceries",
+        categoryLabel: "Grocery / Market",
+        halalConfidence: hasExplicitHalal ? "high" : "none",
+        halalNotice: "",
+        halalEvidence: hasExplicitHalal ? "halal in name" : "none",
+        rejectionReason: "Name indicates grocery/retail/market/butcher business, not a dining restaurant",
+      };
+    }
+
+    // 3. Genuine Food/Dining type verification
+    const diningTypes = [
+      "restaurant",
+      "meal_takeaway",
+      "meal_delivery",
+      "cafe",
+      "fast_food_restaurant",
+      "diner",
+      "food_court",
+      "food",
+    ];
+    const isDining =
+      types.some((t) => diningTypes.includes(t)) ||
+      raw.osmType === "restaurant" ||
+      raw.osmType === "fast_food" ||
+      raw.osmType === "cafe" ||
+      raw.osmType === "food_court";
+
+    if (!isDining) {
+      return {
+        eligible: false,
+        category: null,
+        categoryLabel: "Non-Dining",
+        halalConfidence: "none",
+        halalNotice: "",
+        halalEvidence: "none",
+        rejectionReason: "Establishment types do not indicate a food or dining establishment",
+      };
+    }
+
+    // 4. Halal Relevance & Labeling
+    if (hasExplicitHalal) {
+      return {
+        eligible: true,
+        category: "restaurants",
+        categoryLabel: "Halal Restaurant",
+        halalConfidence: "high",
+        halalEvidence: "explicit_halal_name_or_metadata",
+        halalNotice:
+          "Halal restaurant with explicit halal identification. Verify individual certification & meat sourcing directly with establishment.",
+      };
+    }
+
+    // Check credible halal-friendly cuisines
+    const credibleCuisineRegex =
+      /\b(shawarma|kabab|kebab|biryani|mandi|karahi|falafel|doner|pide|tandoori|nihari|haleem|tikka|afghan|yemeni|somali|moroccan|lebanese|uyghur|persian|iranian|turkish|pakistani|bengali|bangladeshi|middle eastern|mediterranean|malaysian|indonesian|uzbek)\b/i;
+    const isCredibleCuisine =
+      credibleCuisineRegex.test(combinedText) ||
+      types.some((t) =>
+        [
+          "middle_eastern_restaurant",
+          "pakistani_restaurant",
+          "turkish_restaurant",
+          "lebanese_restaurant",
+          "afghan_restaurant",
+          "indonesian_restaurant",
+          "malaysian_restaurant",
+        ].includes(t)
+      );
+
+    if (isCredibleCuisine) {
+      return {
+        eligible: true,
+        category: "restaurants",
+        categoryLabel: "Halal-friendly / Verify",
+        halalConfidence: "medium",
+        halalEvidence: "credible_halal_cuisine",
+        halalNotice:
+          "Halal-friendly dining options reported. Verify halal certification, meat sourcing, and preparation practices directly with establishment.",
+      };
+    }
+
+    // If completely generic restaurant with no halal signal:
+    return {
+      eligible: false,
+      category: null,
+      categoryLabel: "Standard Restaurant",
+      halalConfidence: "none",
+      halalNotice: "",
+      halalEvidence: "none",
+      rejectionReason: "Generic dining establishment without credible halal signals or Islamic culinary context",
+    };
+  }
+
+  // ==========================================
+  // CATEGORY C & D: GROCERY CLASSIFICATION
+  // ==========================================
+  if (requestedCategory === "groceries") {
+    // 1. Strict Rejection of Non-Grocery Types:
+    // Reject restaurants, cafes, bars, hotels, mosques, gas stations, pharmacies, retail
+    const nonGroceryTypes = [
+      "bar",
+      "pub",
+      "night_club",
+      "hotel",
+      "lodging",
+      "gas_station",
+      "pharmacy",
+      "clothing_store",
+      "hardware_store",
+      "car_dealer",
+      "cemetery",
+      "place_of_worship",
+    ];
+    if (types.some((t) => nonGroceryTypes.includes(t))) {
+      return {
+        eligible: false,
+        category: null,
+        categoryLabel: "Non-Grocery Retail",
+        halalConfidence: "none",
+        halalNotice: "",
+        halalEvidence: "none",
+        rejectionReason: "Non-grocery/service establishment type (bar/hotel/gas station/pharmacy)",
+      };
+    }
+
+    // Check if it's primarily a restaurant/cafe rather than grocery
+    const restaurantTypes = ["restaurant", "cafe", "fast_food_restaurant"];
+    const hasRestaurantType = types.some((t) => restaurantTypes.includes(t));
+    const restaurantNameWords =
+      /\b(restaurant|cafe|café|kitchen|bistro|grill|diner|lounge|shack|steakhouse|pizzeria|taqueria|eatery|smokehouse|cantina|dhaba)\b/i;
+    const groceryNameWords =
+      /\b(grocery|groceries|supermarket|meat market|butcher|halal market|bazaar|food mart|mini mart|halal foods|halal meat|zabiha meat|spices & foods)\b/i;
+
+    if (hasRestaurantType && restaurantNameWords.test(nameLower) && !groceryNameWords.test(nameLower)) {
+      return {
+        eligible: false,
+        category: "restaurants",
+        categoryLabel: "Restaurant",
+        halalConfidence: hasExplicitHalal ? "high" : "none",
+        halalNotice: "",
+        halalEvidence: hasExplicitHalal ? "halal in name" : "none",
+        rejectionReason: "Establishment is a restaurant/dining venue, not a grocery or food market",
+      };
+    }
+
+    // Must have grocery/food-retail identity
+    const groceryRetailTypes = [
+      "grocery_store",
+      "supermarket",
+      "butcher_shop",
+      "food_store",
+      "market",
+      "store",
+    ];
+    const isGroceryType =
+      types.some((t) => groceryRetailTypes.includes(t)) ||
+      raw.osmType === "supermarket" ||
+      raw.osmType === "butcher" ||
+      raw.osmType === "convenience" ||
+      raw.osmType === "greengrocer";
+
+    if (!isGroceryType && !groceryNameWords.test(nameLower)) {
+      return {
+        eligible: false,
+        category: null,
+        categoryLabel: "Non-Grocery",
+        halalConfidence: "none",
+        halalNotice: "",
+        halalEvidence: "none",
+        rejectionReason: "Establishment is not a grocery, supermarket, butcher, or food market",
+      };
+    }
+
+    // 2. Strict Supermarket Chain Check (Section D):
+    // Do NOT label Walmart, Kroger, Target, Safeway, Whole Foods, HEB, Aldi, Costco, etc. as "Halal Grocery"
+    const isGenericSupermarket = GENERIC_SUPERMARKET_CHAINS.some(
+      (chain) =>
+        nameLower === chain ||
+        nameLower.startsWith(chain + " ") ||
+        nameLower.includes(chain + " supercenter") ||
+        nameLower.includes(chain + " neighborhood") ||
+        nameLower.includes(chain + " market") ||
+        nameLower.includes(chain + " wholesale")
+    );
+
+    if (isGenericSupermarket) {
+      if (!hasExplicitHalal) {
+        return {
+          eligible: false,
+          category: null,
+          categoryLabel: "Generic Supermarket",
+          halalConfidence: "none",
+          halalNotice: "",
+          halalEvidence: "none",
+          rejectionReason: "Generic supermarket chain without verified halal-focused operation",
+        };
+      }
+    }
+
+    // 3. Halal Grocery Relevance Check:
+    // Specialty businesses whose identity clearly indicates Halal Grocery / Market / Butcher
+    const specialtyHalalKeywords =
+      /\b(al-barakah|al-madina|al-noor|al-haramain|al-quds|zamzam|makkah|medina|noor|sufi|khyber|crescent|jerusalem|bosphorus|istanbul|middle eastern market|south asian market|desi market|pakistan market|halal butcher|zabiha butcher|halal meat|halal foods|halal grocers)\b/i;
+    const isSpecialtyHalal = specialtyHalalKeywords.test(nameLower);
+
+    if (!hasExplicitHalal && !isSpecialtyHalal) {
+      return {
+        eligible: false,
+        category: null,
+        categoryLabel: "Standard Grocery",
+        halalConfidence: "none",
+        halalNotice: "",
+        halalEvidence: "none",
+        rejectionReason: "Generic food store/market without credible halal grocery signals",
+      };
+    }
+
+    return {
+      eligible: true,
+      category: "groceries",
+      categoryLabel: "Halal Grocery",
+      halalConfidence: hasExplicitHalal ? "high" : "medium",
+      halalEvidence: hasExplicitHalal
+        ? "explicit_halal_name_or_metadata"
+        : "specialty_halal_grocery_identity",
+      halalNotice:
+        "Halal grocery & food market. Verify individual certification and meat sourcing directly with establishment.",
+    };
+  }
+
+  // ==========================================
+  // CATEGORY G: MOSQUE CLASSIFICATION
+  // ==========================================
+  if (requestedCategory === "mosques") {
+    // 1. Non-Islamic religious rejection
+    if (NON_ISLAMIC_RELIGIOUS_TERMS.some((term) => nameLower.includes(term))) {
+      return {
+        eligible: false,
+        category: null,
+        categoryLabel: "Non-Islamic Worship",
+        halalConfidence: "none",
+        halalNotice: "",
+        halalEvidence: "none",
+        rejectionReason: "Non-Islamic place of worship",
+      };
+    }
+
+    // 2. Commercial business rejection
+    const commercialTypes = ["restaurant", "grocery_store", "supermarket", "store", "bar", "hotel"];
+    const mosqueWords =
+      /\b(mosque|masjid|islamic center|islamic centre|islamic society|muslim association|jamaat|musalla|markaz)\b/i;
+    if (types.some((t) => commercialTypes.includes(t)) && !mosqueWords.test(nameLower)) {
+      return {
+        eligible: false,
+        category: null,
+        categoryLabel: "Commercial Business",
+        halalConfidence: "none",
+        halalNotice: "",
+        halalEvidence: "none",
+        rejectionReason: "Commercial business, not a mosque or Islamic center",
+      };
+    }
+
+    // 3. Islamic Place of Worship / Community Center Check
+    const islamicIdentification =
+      mosqueWords.test(combinedText) ||
+      /\b(baitul|baytul|darul|dar-ul|al-noor|al-huda|al-falah|al-iman|al-farooq|al-madina|al-muntada|al-taqwa|al-hikmah|al-furqan|hidayah|darussalam|baitus|baitur)\b/i.test(
+        combinedText
+      ) ||
+      raw.osmTags?.religion === "muslim";
+
+    if (!islamicIdentification) {
+      return {
+        eligible: false,
+        category: null,
+        categoryLabel: "Unverified Venue",
+        halalConfidence: "none",
+        halalNotice: "",
+        halalEvidence: "none",
+        rejectionReason: "Not an Islamic place of worship or Islamic community center",
+      };
+    }
+
+    return {
+      eligible: true,
+      category: "mosques",
+      categoryLabel: "Mosque / Islamic Center",
+      halalConfidence: "high",
+      halalEvidence: "verified_islamic_worship_center",
+      halalNotice:
+        "Mosque / Islamic Center. Please confirm prayer times and Jummah services directly with the mosque.",
+    };
+  }
+
+  return {
+    eligible: false,
+    category: null,
+    categoryLabel: "Unknown",
+    halalConfidence: "none",
+    halalNotice: "",
+    halalEvidence: "none",
+    rejectionReason: "Unrecognized category requested",
+  };
+}
+
+// Forensic debug logger for development / testing mode
+function logClassificationDecision(
+  name: string,
+  requestedCategory: SearchCategory,
+  types: string[] | undefined,
+  classification: PlaceClassification
+): void {
+  const isDebug =
+    typeof process !== "undefined" &&
+    (process.env?.NODE_ENV !== "production" || process.env?.DEBUG_PLACES === "true");
+
+  if (isDebug) {
+    if (!classification.eligible) {
+      console.log(
+        `[Classifier REJECT] "${name}" | requestedCategory: ${requestedCategory} | types: ${JSON.stringify(
+          types || []
+        )} | halalEvidence: ${classification.halalEvidence} | reason: ${classification.rejectionReason}`
+      );
+    } else {
+      console.log(
+        `[Classifier ACCEPT] "${name}" -> ${classification.categoryLabel} (${classification.halalConfidence}) | evidence: ${classification.halalEvidence}`
+      );
+    }
+  }
+}
+
+/**
+ * Perform Places API (New) Text Search with location restriction, category, pagination and strict classification.
  */
 export async function searchHalalPlaces(params: {
   category: SearchCategory;
@@ -485,18 +1353,23 @@ export async function searchHalalPlaces(params: {
     }
   }
 
-  // Construct text search query strictly focused on the Halal / Islamic context
+  // Construct focused text search query and strict type restriction
   let textQuery = "";
-  if (category === "restaurants") {
-    textQuery = subQuery ? `halal ${subQuery}` : "halal restaurants";
-  } else if (category === "groceries") {
-    textQuery = subQuery ? `halal ${subQuery}` : "halal grocery supermarket meat market";
-  } else if (category === "mosques") {
-    textQuery = subQuery ? subQuery : "mosque masjid Islamic center";
-  }
+  let includedType: string | undefined = undefined;
 
-  if (locationName) {
-    textQuery += ` near ${locationName}`;
+  if (category === "restaurants") {
+    // Focused restaurant query (Section A)
+    textQuery = subQuery ? `${subQuery.trim()} halal restaurant` : "halal restaurant";
+    includedType = "restaurant";
+  } else if (category === "groceries") {
+    // Focused grocery query (Section C)
+    textQuery = subQuery ? `${subQuery.trim()} halal grocery` : "halal grocery";
+    // Avoid broad multi-word generic supermarket queries
+    includedType = undefined;
+  } else if (category === "mosques") {
+    // Focused mosque query (Section G)
+    textQuery = subQuery ? `${subQuery.trim()} mosque masjid islamic center` : "mosque masjid islamic center";
+    includedType = "place_of_worship";
   }
 
   // If Google Maps API key is configured, execute Places API (New) Search
@@ -505,15 +1378,18 @@ export async function searchHalalPlaces(params: {
       const textUrl = "https://places.googleapis.com/v1/places:searchText";
       const requestBody: any = {
         textQuery,
-        locationBias: {
+        locationRestriction: {
           circle: {
             center: { latitude: lat, longitude: lng },
-            radius: Math.min(radiusMeters, 50000), // Max radius 50,000m
+            radius: Math.min(Math.max(radiusMeters, 1000), 50000),
           },
         },
         pageSize: 20,
       };
 
+      if (includedType) {
+        requestBody.includedType = includedType;
+      }
       if (openNow) {
         requestBody.openNow = true;
       }
@@ -531,7 +1407,7 @@ export async function searchHalalPlaces(params: {
           "X-Goog-Api-Key": apiKey,
           "X-Goog-Maps-Solution-ID": "gmp_mcp_codeassist_v1_aistudio",
           "X-Goog-FieldMask":
-            "places.id,places.displayName,places.formattedAddress,places.location,places.rating,places.userRatingCount,places.currentOpeningHours,places.nationalPhoneNumber,places.internationalPhoneNumber,places.websiteUri,places.googleMapsUri,places.types,places.photos,places.priceLevel,nextPageToken",
+            "places.id,places.displayName,places.formattedAddress,places.location,places.rating,places.userRatingCount,places.currentOpeningHours,places.nationalPhoneNumber,places.internationalPhoneNumber,places.websiteUri,places.googleMapsUri,places.types,places.primaryType,places.editorialSummary,places.photos,places.priceLevel,nextPageToken",
         },
         body: JSON.stringify(requestBody),
       });
@@ -541,41 +1417,44 @@ export async function searchHalalPlaces(params: {
         const rawPlaces: any[] = data.places || [];
         const resNextPageToken: string | undefined = data.nextPageToken || undefined;
 
-        let mapped: PlaceResult[] = rawPlaces.map((p) => {
-          const dist = calculateDistance(lat, lng, p.location?.latitude || 0, p.location?.longitude || 0);
+        // Apply strict application-level classifier to EVERY returned place (Initial & Pagination)
+        const classifiedPlaces: PlaceResult[] = [];
+
+        for (const p of rawPlaces) {
+          const placeName = p.displayName?.text || "Establishment";
+          const classification = classifyPlace(
+            {
+              name: placeName,
+              types: p.types,
+              primaryType: p.primaryType,
+              formattedAddress: p.formattedAddress,
+              editorialSummary: p.editorialSummary?.text,
+            },
+            category
+          );
+
+          logClassificationDecision(placeName, category, p.types, classification);
+
+          if (!classification.eligible) {
+            continue;
+          }
+
+          const dist = calculateDistance(
+            lat,
+            lng,
+            p.location?.latitude || 0,
+            p.location?.longitude || 0
+          );
           let photoUrl: string | undefined = undefined;
           if (p.photos && p.photos.length > 0 && p.photos[0].name) {
             photoUrl = `https://places.googleapis.com/v1/${p.photos[0].name}/media?key=${apiKey}&maxHeightPx=400&maxWidthPx=600&solution_id=gmp_mcp_codeassist_v1_aistudio`;
           }
 
-          const placeName = p.displayName?.text || "Halal Establishment";
-          const lowerName = placeName.toLowerCase();
-
-          // Safe category labeling:
-          // Do NOT claim "halal certified" or blindly label everything as "Halal Grocery & Meat".
-          // Use "Halal Grocery" or "Halal-focused Grocery" based on the search context.
-          let categoryLabel: string;
-          if (category === "restaurants") {
-            categoryLabel = "Halal Restaurant";
-          } else if (category === "groceries") {
-            const hasExplicitHalal = /halal|zabiha|zabihah|islamic|muslim/i.test(lowerName);
-            categoryLabel = hasExplicitHalal ? "Halal Grocery" : "Halal-focused Grocery";
-          } else {
-            categoryLabel = "Mosque & Islamic Center";
-          }
-
-          const halalNotice =
-            category === "mosques"
-              ? "Verified Islamic place of worship"
-              : category === "groceries"
-              ? "Found through halal grocery search. Verify individual certification & sourcing directly with establishment."
-              : "Found through halal search. Verify individual certification & sourcing directly with establishment.";
-
-          return {
+          classifiedPlaces.push({
             id: p.id || `place-${Math.random().toString(36).slice(2, 9)}`,
             name: placeName,
             category,
-            categoryLabel,
+            categoryLabel: classification.categoryLabel,
             formattedAddress: p.formattedAddress || "Address available on map",
             location: {
               latitude: p.location?.latitude || lat,
@@ -596,65 +1475,25 @@ export async function searchHalalPlaces(params: {
             types: p.types,
             distanceKm: dist.km,
             distanceMiles: dist.miles,
-            halalNotice,
+            halalNotice: classification.halalNotice,
             source: "google_api",
-          };
-        });
-
-        // Safeguard for groceries:
-        // Filter out generic non-halal supermarket chains that lack any halal specialization
-        if (category === "groceries") {
-          const isGenericSupermarketChain = (name: string) => {
-            const genericChains = [
-              "walmart",
-              "h-e-b",
-              "heb",
-              "aldi",
-              "kroger",
-              "trader joe's",
-              "trader joes",
-              "target",
-              "costco",
-              "sam's club",
-              "sams club",
-              "whole foods",
-              "safeway",
-              "publix",
-              "sprouts",
-              "albertsons",
-            ];
-            const lower = name.toLowerCase();
-            return genericChains.some(
-              (chain) =>
-                lower === chain ||
-                lower.startsWith(chain + " ") ||
-                lower.includes(chain + " supercenter")
-            );
-          };
-
-          mapped = mapped.filter((p) => {
-            if (isGenericSupermarketChain(p.name)) {
-              return /halal|zabiha|zabihah/i.test(p.name);
-            }
-            return true;
           });
         }
 
         // Apply client subQuery filter if provided
+        let finalPlaces = classifiedPlaces;
         if (subQuery) {
           const lowerSub = subQuery.toLowerCase();
-          const subFiltered = mapped.filter(
+          finalPlaces = finalPlaces.filter(
             (p) =>
               p.name.toLowerCase().includes(lowerSub) ||
               (p.types && p.types.some((t) => t.toLowerCase().includes(lowerSub))) ||
               p.formattedAddress.toLowerCase().includes(lowerSub)
           );
-          if (subFiltered.length > 0) {
-            mapped = subFiltered;
-          }
         }
 
-        const slicedPlaces = mapped.slice(0, 20);
+        // Return up to 20 verified items. No supplementation or category padding (Section L)
+        const slicedPlaces = finalPlaces.slice(0, 20);
         if (slicedPlaces.length > 0 || pageToken) {
           const result: PlacesSearchResult = {
             places: slicedPlaces,
@@ -683,8 +1522,9 @@ export async function searchHalalPlaces(params: {
     };
   }
 
-  // 4. Resilient Live Worldwide Fallback: Provides up to 20 location-accurate establishments
-  // with complete formatted street addresses whenever Google Places quota is restricted or offline.
+  // Resilient Live Worldwide Fallback: Real OpenStreetMap data ONLY
+  // Strictly zero synthetic businesses or procedural addresses.
+  // Every OSM place is classified through the EXACT same classifyPlace pipeline.
   const fallbackList = (
     await resolveLiveAndContextualPlaces(category, lat, lng, radiusMeters, locationName)
   ).slice(0, 20);
@@ -692,7 +1532,8 @@ export async function searchHalalPlaces(params: {
   const fallbackResult: PlacesSearchResult = {
     places: fallbackList,
     status: fallbackList.length > 0 ? "OK" : "ZERO_RESULTS",
-    source: fallbackList.some((p) => p.source === "osm_live") ? "google_api" : "fallback",
+    source: fallbackList.length > 0 ? "osm_live" : "fallback",
+    nextPageToken: undefined,
   };
   setInCache(cacheKey, fallbackResult, 30 * 60 * 1000);
   return fallbackResult;
@@ -703,11 +1544,11 @@ export async function searchHalalPlaces(params: {
  * when Google Places API quota is restricted or offline.
  *
  * Guarantees:
- * 1. REAL city-specific establishments whenever available globally.
- * 2. COMPLETE formatted street addresses (e.g. "6806 Bintliff Drive, Houston, TX 77074" or "563 Yonge Street, Toronto, ON M4Y 1Z2").
- * 3. NEVER outputs incomplete "Suite 100" fragments alone.
- * 4. Returns up to 20 initial results per search.
- * 5. Changes dynamically when moving between Houston, Toronto, London, Dhaka, etc.
+ * 1. REAL city-specific establishments ONLY from OpenStreetMap.
+ * 2. Filtered through the EXACT same classification pipeline (no generic supermarkets or fake places).
+ * 3. COMPLETE formatted street addresses.
+ * 4. NEVER outputs incomplete fragments.
+ * 5. Returns qualifying results (quality > quantity, no padding).
  */
 async function resolveLiveAndContextualPlaces(
   category: SearchCategory,
@@ -716,30 +1557,24 @@ async function resolveLiveAndContextualPlaces(
   radiusMeters: number,
   locationName?: string
 ): Promise<PlaceResult[]> {
-  const categoryLabel =
-    category === "restaurants"
-      ? "Halal Restaurant"
-      : category === "groceries"
-      ? "Halal Grocery"
-      : "Mosque & Islamic Center";
-
   // 1. Fetch live establishments from OpenStreetMap Nominatim around the location bounding box
   let liveItems: any[] = [];
   const delta = Math.max(0.06, Math.min(0.35, radiusMeters / 111000));
   const viewbox = `${(lng - delta).toFixed(4)},${(lat + delta).toFixed(4)},${(lng + delta).toFixed(4)},${(lat - delta).toFixed(4)}`;
 
+  // Focused OSM search queries per category (Section H)
   const queries =
     category === "restaurants"
-      ? ["halal", "halal restaurant"]
+      ? ["halal restaurant", "halal dining"]
       : category === "groceries"
-      ? ["halal grocery", "halal meat", "supermarket"]
+      ? ["halal grocery", "halal butcher", "halal market", "halal meat"]
       : ["mosque", "masjid", "islamic center"];
 
   for (const q of queries) {
     try {
       const searchUrl = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(
         q
-      )}&format=json&addressdetails=1&limit=20&viewbox=${viewbox}&bounded=1`;
+      )}&format=json&addressdetails=1&extratags=1&limit=25&viewbox=${viewbox}&bounded=1`;
       const res = await fetch(searchUrl, {
         headers: { "User-Agent": "NoakhaliKitchenGlobalDirectory/2.0" },
       });
@@ -756,251 +1591,63 @@ async function resolveLiveAndContextualPlaces(
     } catch (e) {
       console.warn("Live OSM search query error:", e);
     }
-    if (liveItems.length >= 20) break;
+    if (liveItems.length >= 25) break;
   }
-
-  // 2. Fetch reverse geocode to get true street name, city, state, and postal code for complete formatting
-  let addressDetails: any = null;
-  try {
-    const revUrl = `https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lng}&format=json&addressdetails=1`;
-    const revRes = await fetch(revUrl, {
-      headers: { "User-Agent": "NoakhaliKitchenGlobalDirectory/2.0" },
-    });
-    if (revRes.ok) {
-      const revData = (await revRes.json()) as any;
-      addressDetails = revData?.address || null;
-    }
-  } catch (e) {
-    console.warn("Reverse geocoding error:", e);
-  }
-
-  const primaryRoad =
-    addressDetails?.road ||
-    addressDetails?.pedestrian ||
-    addressDetails?.street ||
-    "Main Street";
-  const primaryCity =
-    addressDetails?.city ||
-    addressDetails?.town ||
-    addressDetails?.municipality ||
-    addressDetails?.village ||
-    locationName?.split(",")[0] ||
-    "City Center";
-  const primaryState =
-    addressDetails?.state || addressDetails?.province || addressDetails?.state_district || "";
-  const primaryPostcode = addressDetails?.postcode || "";
-  const primaryCountry = addressDetails?.country || "";
 
   const results: PlaceResult[] = [];
 
-  // 3. Map live items into PlaceResult objects with full formatted addresses
-  const foodPhotos = [
-    "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80",
-    "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80",
-    "https://images.unsplash.com/photo-1541518763669-27fef04b14ea?auto=format&fit=crop&w=600&q=80",
-    "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80",
-    "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80",
-    "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=600&q=80",
-    "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80",
-    "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80",
-    "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=600&q=80",
-    "https://images.unsplash.com/photo-1541014741259-de529411b96a?auto=format&fit=crop&w=600&q=80",
-  ];
-
-  const groceryPhotos = [
-    "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=600&q=80",
-    "https://images.unsplash.com/photo-1578916171728-46686eac8d58?auto=format&fit=crop&w=600&q=80",
-    "https://images.unsplash.com/photo-1583258292688-d0213dc5a3a8?auto=format&fit=crop&w=600&q=80",
-    "https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=600&q=80",
-    "https://images.unsplash.com/photo-1534723452862-4c874018d66d?auto=format&fit=crop&w=600&q=80",
-  ];
-
-  const mosquePhotos = [
-    "https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?auto=format&fit=crop&w=600&q=80",
-    "https://images.unsplash.com/photo-1542816417-0983c9c9ad53?auto=format&fit=crop&w=600&q=80",
-    "https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=600&q=80",
-  ];
-
-  const photoPool =
-    category === "restaurants"
-      ? foodPhotos
-      : category === "groceries"
-      ? groceryPhotos
-      : mosquePhotos;
-
+  // 2. Classify and map live items through the EXACT same category classification pipeline
   for (let idx = 0; idx < liveItems.length && results.length < 20; idx++) {
     const item = liveItems[idx];
+    const name = item.name || item.display_name.split(",")[0] || "Local Establishment";
+
+    const classification = classifyPlace(
+      {
+        name,
+        types: [item.type, item.class],
+        osmClass: item.class,
+        osmType: item.type,
+        formattedAddress: item.display_name,
+        osmTags: item.extratags,
+      },
+      category
+    );
+
+    logClassificationDecision(name, category, [item.type, item.class], classification);
+
+    if (!classification.eligible) {
+      continue;
+    }
+
     const itemLat = parseFloat(item.lat);
     const itemLng = parseFloat(item.lon);
     const dist = calculateDistance(lat, lng, itemLat, itemLng);
 
     // Format complete full address from display_name
     let cleanAddress = item.display_name;
-    // If the display name begins with the venue name, format cleanly
     if (item.name && cleanAddress.startsWith(item.name + ", ")) {
       cleanAddress = cleanAddress.substring(item.name.length + 2);
     }
-
-    const name = item.name || item.display_name.split(",")[0] || "Local Establishment";
 
     results.push({
       id: `osm-${item.place_id || idx}`,
       name,
       category,
-      categoryLabel,
+      categoryLabel: classification.categoryLabel,
       formattedAddress: cleanAddress,
       location: { latitude: itemLat, longitude: itemLng },
-      rating: +(4.4 + ((idx * 7) % 6) * 0.1).toFixed(1),
-      userRatingCount: 150 + ((idx * 47) % 600),
-      isOpenNow: idx % 7 !== 0,
-      nationalPhoneNumber: `+1 (800) 555-${(1000 + idx * 37).toString().slice(0, 4)}`,
+      rating: undefined,
+      userRatingCount: undefined,
+      isOpenNow: undefined,
+      nationalPhoneNumber: undefined,
       websiteUri: `https://maps.google.com/?q=${encodeURIComponent(name + " " + cleanAddress)}`,
       googleMapsUri: `https://maps.google.com/?q=${encodeURIComponent(name + " " + cleanAddress)}`,
-      photoUrl: photoPool[idx % photoPool.length],
+      photoUrl: undefined,
       distanceKm: dist.km,
       distanceMiles: dist.miles,
-      halalNotice:
-        category === "mosques"
-          ? "Verified Islamic place of worship. Jummah prayers offered."
-          : "Found through halal search. Verify individual certification & sourcing directly with establishment.",
+      halalNotice: classification.halalNotice,
       source: "osm_live",
     });
-  }
-
-  // 4. If fewer than 20 live results exist, supplement up to 20 with dynamically tailored local establishments
-  // using the exact local streets, city, state, and postal code from reverse geocoding
-  if (results.length < 20) {
-    const remainingCount = 20 - results.length;
-
-    const restaurantNames = [
-      `${primaryCity} Halal Smokehouse & Grill`,
-      `Royal Feast Halal Cuisine of ${primaryCity}`,
-      `Bismillah Shahi Biryani & Kabab House`,
-      `Al-Madina Mediterranean Grill`,
-      `Zabiha Flame & Shawarma Lounge`,
-      `Al-Quds Mandi & Yemeni Kitchen`,
-      `Lazeez Halal Bistro`,
-      `Karahi Point Authentic Cuisine`,
-      `Sultan's Halal Kitchen & Rotisserie`,
-      `Shawarma King & Falafel Oasis`,
-      `Istanbul Kebab & Pide of ${primaryCity}`,
-      `Khyber Pass Halal Dining`,
-      `Cedar Lebanese Kitchen & Halal Grill`,
-      `Damascus Delights & Halal Cafe`,
-      `Cairo Express Halal Kitchen`,
-      `Oasis Mediterranean Grill`,
-      `Al-Barakah Halal Buffet`,
-      `Caspian Kabab & Saffron Rice`,
-      `Saffron Gourmet Halal Dining`,
-      `Taj Mahal Halal Sweets & Grill`,
-    ];
-
-    const groceryNames = [
-      `${primaryCity} Halal Supermarket & Fresh Zabiha Meat`,
-      `Al-Barakah International Grocers`,
-      `Zamzam Halal Market & Butcher`,
-      `Al-Haramain International Foods`,
-      `Crescent Fresh Zabiha Meat & Poultry`,
-      `Makkah Halal Bazaar & Spices`,
-      `Barakah Farmers Halal Market`,
-      `Sufi Halal Meat & Deli`,
-      `Al-Noor Middle Eastern & South Asian Grocers`,
-      `Baitul Halal Super Center`,
-      `Noor Zabiha Halal Butcher Shop`,
-      `Jerusalem Halal Market & Bakery`,
-      `Madina Fresh Produce & Halal Meat`,
-      `Al-Rayyan Halal Supermarket`,
-      `Zabiha Central Meat & Groceries`,
-      `Khyber Halal Grocers & Spices`,
-      `An-Nisa Halal Foods & Organics`,
-      `Bismillah Supermarket & Halal Butcher`,
-    ];
-
-    const mosqueNames = [
-      `Islamic Center & Community Masjid of ${primaryCity}`,
-      `Masjid Al-Noor & Education Academy`,
-      `Baitul Mukarram Islamic Society`,
-      `Darussalam Community Mosque`,
-      `Masjid Al-Falah & Islamic Center`,
-      `Islamic Heritage Center of ${primaryCity}`,
-      `Medina Community Masjid`,
-      `Masjid Bilal Islamic Association`,
-      `Al-Iman Islamic Center`,
-      `Masjid Omar & Cultural Center`,
-      `An-Noor Foundation Mosque`,
-      `Masjid Taqwa Community Center`,
-      `Baitul Aman Jame Masjid`,
-      `Masjid Al-Quds & Community School`,
-      `Hidayah Islamic Center of ${primaryCity}`,
-      `Masjid Ibrahim Islamic Society`,
-      `Al-Huda Mosque & Academy`,
-      `Masjid As-Salam Islamic Association`,
-      `Baitul Jannah Islamic Center`,
-      `Masjid Rahmah Community Center`,
-    ];
-
-    const nameList =
-      category === "restaurants"
-        ? restaurantNames
-        : category === "groceries"
-        ? groceryNames
-        : mosqueNames;
-
-    const nearbyStreets = [
-      primaryRoad,
-      `North ${primaryRoad}`,
-      `South ${primaryRoad}`,
-      `East ${primaryRoad}`,
-      `West ${primaryRoad}`,
-      "Market Street",
-      "Commercial Boulevard",
-      "Parkway Avenue",
-      "Center Street",
-    ];
-
-    for (let i = 0; i < remainingCount; i++) {
-      const idx = results.length;
-      const angle = (idx * 137.5 * Math.PI) / 180;
-      const distanceOffset = 0.005 + idx * 0.0025;
-      const placeLat = lat + Math.sin(angle) * distanceOffset;
-      const placeLng = lng + Math.cos(angle) * distanceOffset * 1.2;
-      const dist = calculateDistance(lat, lng, placeLat, placeLng);
-
-      const chosenStreet = nearbyStreets[i % nearbyStreets.length];
-      const streetNumber = 120 + idx * 18;
-
-      // Construct a complete formatted street address: e.g. "120 Main Street, Houston, TX 77002, United States"
-      const completeAddress = `${streetNumber} ${chosenStreet}, ${primaryCity}${
-        primaryState ? ", " + primaryState : ""
-      }${primaryPostcode ? " " + primaryPostcode : ""}${
-        primaryCountry ? ", " + primaryCountry : ""
-      }`;
-
-      const name = nameList[i % nameList.length];
-
-      results.push({
-        id: `local-${category}-${lat.toFixed(3)}-${lng.toFixed(3)}-${idx + 1}`,
-        name,
-        category,
-        categoryLabel,
-        formattedAddress: completeAddress,
-        location: { latitude: placeLat, longitude: placeLng },
-        rating: +(4.5 + ((idx * 3) % 5) * 0.1).toFixed(1),
-        userRatingCount: 120 + ((idx * 33) % 450),
-        isOpenNow: idx % 6 !== 0,
-        nationalPhoneNumber: `+1 (800) 555-${(2000 + idx * 19).toString().slice(0, 4)}`,
-        websiteUri: `https://maps.google.com/?q=${encodeURIComponent(name + " " + completeAddress)}`,
-        googleMapsUri: `https://maps.google.com/?q=${encodeURIComponent(name + " " + completeAddress)}`,
-        photoUrl: photoPool[idx % photoPool.length],
-        distanceKm: dist.km,
-        distanceMiles: dist.miles,
-        halalNotice:
-          category === "mosques"
-            ? "Verified Islamic place of worship. Jummah prayers offered."
-            : "Found through halal search. Verify individual certification & sourcing directly with establishment.",
-        source: "noakhali_verified",
-      });
-    }
   }
 
   return results;

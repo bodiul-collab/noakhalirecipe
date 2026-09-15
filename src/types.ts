@@ -206,9 +206,9 @@ export interface PlaceResult {
 export interface PlacesSearchResult {
   places: PlaceResult[];
   nextPageToken?: string;
-  status: "OK" | "ZERO_RESULTS" | "ERROR";
+  status: "OK" | "ZERO_RESULTS" | "ERROR" | "DEGRADED";
   errorMessage?: string;
-  source: "google_api" | "fallback";
+  source: "google_api" | "fallback" | "osm_live";
 }
 
 export interface SearchFilters {
