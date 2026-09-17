@@ -54,6 +54,112 @@ export interface Recipe {
   };
   updatedDate: string;
   tags: string[];
+  youtubeUrl?: string;
+  youtubeVideoId?: string;
+  videoTitle?: string;
+  videoDuration?: string;
+  relatedGuideSlugs?: string[];
+}
+
+export interface CookingVideo {
+  id: string;
+  slug: string;
+  title: string;
+  description: string;
+  recipeSlug: string;
+  recipeTitle: string;
+  categorySlug: string;
+  categoryTitle: string;
+  thumbnail: string;
+  duration?: string; // e.g. "13:40"
+  youtubeVideoId?: string;
+  youtubeUrl?: string;
+  publishedDate: string;
+  relatedRecipeSlugs?: string[];
+  relatedGuideSlugs?: string[];
+  featured?: boolean;
+}
+
+export interface CookingGuide {
+  id: string;
+  slug: string;
+  title: string;
+  category:
+    | "Cooking Techniques"
+    | "Spice Guides"
+    | "Ingredient Guides"
+    | "Ingredient Substitutions"
+    | "Beginner Cooking"
+    | "Kitchen Tips";
+  excerpt: string;
+  content: string;
+  heroImage: string;
+  author: {
+    name: string;
+    role: string;
+  };
+  publishedDate: string;
+  updatedDate: string;
+  readTimeMinutes: number;
+  tags?: string[];
+  relatedRecipeSlugs: string[];
+  faqs?: Array<{
+    question: string;
+    answer: string;
+  }>;
+}
+
+export interface FoodCultureArticle {
+  id: string;
+  slug: string;
+  title: string;
+  category:
+    | "Bangladeshi Food Culture"
+    | "Regional Foods"
+    | "Halal Food Traditions"
+    | "Ramadan & Eid Food Culture"
+    | "South Asian Food Stories";
+  excerpt: string;
+  content: string;
+  heroImage: string;
+  author: {
+    name: string;
+    role: string;
+  };
+  publishedDate: string;
+  updatedDate: string;
+  readTimeMinutes: number;
+  relatedRecipeSlugs: string[];
+  faqs?: Array<{
+    question: string;
+    answer: string;
+  }>;
+}
+
+export interface KitchenToolItem {
+  id: string;
+  title: string;
+  category: "Useful Kitchen Equipment" | "Recipe-Specific Tools" | "Kitchen Essentials";
+  description: string;
+  recommendedUse: string;
+  practicalTips: string[];
+  relatedRecipeSlugs: string[];
+  badge?: string;
+}
+
+export interface HalalPantrySection {
+  id: string;
+  slug: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  verificationGuidance: string;
+  keyStaples: Array<{
+    name: string;
+    bengaliOrRegionalName?: string;
+    purpose: string;
+    halalVerificationNotes: string;
+  }>;
 }
 
 export interface KeyNutritionalInfo {
@@ -90,35 +196,6 @@ export interface CategoryHub {
     answer: string;
   }>;
   halalPointers: string[];
-}
-
-export type HalalClassification =
-  | "100% Halal Certified"
-  | "Halal Options Available"
-  | "Muslim-Owned"
-  | "Verification Recommended";
-
-export interface DirectoryListing {
-  id: string;
-  name: string;
-  category: "restaurants" | "butchers" | "groceries" | "mosques" | "islamic-centers";
-  categoryLabel: string;
-  address: string;
-  city: string;
-  state: string;
-  postalCode: string;
-  phone?: string;
-  website?: string;
-  googleMapsUrl: string;
-  halalClassification: HalalClassification;
-  halalDetails: string;
-  openingHours?: string;
-  isOpenNow?: boolean;
-  features: string[];
-  jummahInfo?: string;
-  womensPrayerArea?: string;
-  lastVerifiedDate: string;
-  notes?: string;
 }
 
 export interface BlogPost {
@@ -160,68 +237,4 @@ export interface RecipeCollection {
   createdAt: number;
   color?: string;
   icon?: string;
-}
-
-// Global Halal & Islamic Places Directory Types
-export type SearchCategory = "restaurants" | "groceries" | "mosques";
-
-export interface SearchLocation {
-  formattedAddress: string;
-  lat: number;
-  lng: number;
-  city?: string;
-  state?: string;
-  country?: string;
-  postalCode?: string;
-  placeId?: string;
-}
-
-export interface PlaceResult {
-  id: string;
-  name: string;
-  category: SearchCategory;
-  categoryLabel: string;
-  formattedAddress: string;
-  location: {
-    latitude: number;
-    longitude: number;
-  };
-  rating?: number;
-  userRatingCount?: number;
-  priceLevel?: string;
-  isOpenNow?: boolean;
-  weekdayDescriptions?: string[];
-  nationalPhoneNumber?: string;
-  internationalPhoneNumber?: string;
-  websiteUri?: string;
-  googleMapsUri: string;
-  photoUrl?: string;
-  types?: string[];
-  distanceKm?: number;
-  distanceMiles?: number;
-  halalNotice: string;
-  source: "google" | "google_api" | "noakhali_verified" | "user_submitted" | "fallback" | "osm_live";
-}
-
-export interface PlacesSearchResult {
-  places: PlaceResult[];
-  nextPageToken?: string;
-  status: "OK" | "ZERO_RESULTS" | "ERROR" | "DEGRADED";
-  errorMessage?: string;
-  source: "google_api" | "fallback" | "osm_live";
-}
-
-export interface SearchFilters {
-  radiusMeters: number;
-  distanceUnit: "mi" | "km";
-  openNowOnly: boolean;
-  minRating: number;
-  sortBy: "nearest" | "highest_rated";
-  subQuery?: string;
-}
-
-export interface LocationResolution {
-  status: "OK" | "ZERO_RESULTS" | "AMBIGUOUS" | "ERROR";
-  results: SearchLocation[];
-  errorMessage?: string;
 }

@@ -5,13 +5,15 @@ import {
   ChefHat,
   ArrowRight,
   ShieldCheck,
-  MapPin,
   Sparkles,
   BookOpen,
   Wrench,
   ChevronRight,
+  Play,
   Compass,
-  Search,
+  ShoppingBag,
+  Video,
+  X,
 } from "lucide-react";
 import { Hero } from "../components/Hero";
 import { RecipeCard } from "../components/RecipeCard";
@@ -20,12 +22,18 @@ import { HalalCheck } from "../components/HalalCheck";
 import { AboutSection } from "../components/AboutSection";
 import { AdSlot } from "../components/AdSlot";
 import { NoakhaliLogo } from "../components/NoakhaliLogo";
+import { VideoCard } from "../components/VideoCard";
+import { YouTubeCTA } from "../components/YouTubeCTA";
+import { YouTubePlayer } from "../components/YouTubePlayer";
 import { RECIPES } from "../data/recipes";
 import { CATEGORIES } from "../data/categories";
-import { DIRECTORY_LISTINGS } from "../data/directory";
 import { BLOG_POSTS } from "../data/blog";
+import { COOKING_VIDEOS } from "../data/videos";
+import { COOKING_GUIDES } from "../data/guides";
+import { FOOD_CULTURE_ARTICLES } from "../data/foodCulture";
+import { HALAL_PANTRY_SECTIONS } from "../data/pantry";
 import { IMAGES } from "../data/assets";
-import { Recipe, RecipeCollection } from "../types";
+import { Recipe, RecipeCollection, CookingVideo } from "../types";
 
 interface HomeViewProps {
   onNavigate: (route: string) => void;
@@ -46,36 +54,25 @@ export const HomeView: React.FC<HomeViewProps> = ({
   collections = [],
   onOpenCollections,
 }) => {
-  const [selectedDirectoryCat, setSelectedDirectoryCat] = useState<string>("all");
-  const [directoryCitySearch, setDirectoryCitySearch] = useState("");
   const [emailSubscribed, setEmailSubscribed] = useState(false);
+  const [activeVideoModal, setActiveVideoModal] = useState<CookingVideo | null>(null);
 
   const signatureHeritageRecipe =
     RECIPES.find((r) => r.slug === "noakhali-shorshe-ilish") || RECIPES[0];
   const trendingRecipes = RECIPES.slice(0, 4);
   const featuredEditorialRecipe =
-    RECIPES.find((r) => r.slug === "shahi-chicken-roast") || RECIPES[1];
+    RECIPES.find((r) => r.slug === "bengali-chicken-roast" || r.slug === "shahi-chicken-roast") || RECIPES[1];
   const regionalRecipes = [
     signatureHeritageRecipe,
     ...RECIPES.filter((r) => r.id !== signatureHeritageRecipe.id && r.isRegionalHeritage).slice(0, 3),
   ];
-
-  const filteredDirectory = DIRECTORY_LISTINGS.filter((item) => {
-    const matchesCat =
-      selectedDirectoryCat === "all" || item.category === selectedDirectoryCat;
-    const matchesCity =
-      !directoryCitySearch.trim() ||
-      item.city.toLowerCase().includes(directoryCitySearch.toLowerCase()) ||
-      item.name.toLowerCase().includes(directoryCitySearch.toLowerCase());
-    return matchesCat && matchesCity;
-  }).slice(0, 4);
 
   return (
     <div className="w-full">
       {/* 4. Editorial Hero */}
       <Hero
         onExploreRecipes={() => onNavigate("/recipes")}
-        onFindHalalNearYou={() => onNavigate("/directory")}
+        onExploreGuides={() => onNavigate("/blog")}
         onOpenFeaturedRecipe={() => onSelectRecipe(signatureHeritageRecipe)}
       />
 
@@ -285,149 +282,213 @@ export const HomeView: React.FC<HomeViewProps> = ({
         </div>
       </section>
 
-      {/* 8. Halal Discovery Homepage Section: Find Halal Food & Community Near You */}
+      {/* 8A. Long-Form Video Masterclasses & YouTube Channel */}
+      <section className="py-14 sm:py-18 bg-[#1E1E1D] text-[#F3F2EE] border-b border-[#30302F]">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E97520]/20 text-[#E97520] text-xs font-bold uppercase tracking-wider mb-2">
+                <Video className="w-3.5 h-3.5" />
+                LONG-FORM COOKING VIDEOS &bull; YOUTUBE MASTERCLASSES
+              </div>
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white font-heading tracking-wide uppercase">
+                Watch Authentic Cooking in Real-Time
+              </h2>
+              <p className="text-xs sm:text-sm text-[#B5B0A6] mt-1 max-w-2xl font-description">
+                Unrushed, educational videos explaining the science of mustard oil, the sensory cues of deep bhuna, and foolproof layering techniques.
+              </p>
+            </div>
+            <button
+              onClick={() => onNavigate("/recipes")}
+              className="text-xs font-bold uppercase tracking-wider text-[#F8CD78] hover:text-white flex items-center gap-1.5 self-start md:self-auto cursor-pointer"
+            >
+              Browse All Videos &rarr;
+            </button>
+          </div>
+
+          {/* Featured Video Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+            {COOKING_VIDEOS.slice(0, 3).map((video) => (
+              <VideoCard
+                key={video.id}
+                video={video}
+                onWatch={(v) => setActiveVideoModal(v)}
+                onOpenRecipe={(recipeSlug) => {
+                  const r = RECIPES.find((item) => item.slug === recipeSlug);
+                  if (r) onSelectRecipe(r);
+                }}
+              />
+            ))}
+          </div>
+
+          {/* YouTube Channel CTA */}
+          <YouTubeCTA />
+        </div>
+      </section>
+
+      {/* 8B. In-Depth Cooking Guides & Culinary Mastery */}
       <section className="py-14 sm:py-18 bg-white border-b border-[#E6E1D8]">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
-            {/* Left Column: Interactive Search & Filters */}
-            <div className="lg:col-span-5 space-y-5">
-              <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#2D7A52]">
-                <MapPin className="w-4 h-4 text-[#2D7A52]" />
-                HALAL DIRECTORY &bull; VERIFIED PLACES
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+            <div>
+              <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#2D7A52] mb-1">
+                <ShieldCheck className="w-4 h-4 text-[#2D7A52]" />
+                CULINARY MASTERY &bull; STEP-BY-STEP GUIDES
               </div>
-
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#242423] font-serif-editorial">
-                Find Halal Food &amp; Community Near You
+                Comprehensive Cooking Guides
               </h2>
-
-              <p className="text-xs sm:text-sm text-[#77736D] leading-relaxed">
-                Discover verified Halal restaurants, zabiha butchers, specialty groceries,
-                and local mosques with Jummah prayer schedules.
+              <p className="text-xs sm:text-sm text-[#77736D] mt-1 max-w-2xl">
+                Master essential Halal techniques, authentic spice balance, meat preparation, and traditional Bengali cookware.
               </p>
+            </div>
+            <button
+              onClick={() => onNavigate("/guides")}
+              className="px-5 py-2.5 bg-[#30302F] hover:bg-[#242423] text-white text-xs font-bold uppercase tracking-wider rounded transition-colors shadow flex items-center gap-2 cursor-pointer self-start md:self-auto"
+            >
+              <BookOpen className="w-3.5 h-3.5 text-[#E7A52B]" />
+              Browse All Guides ({COOKING_GUIDES.length})
+            </button>
+          </div>
 
-              {/* Category Filter Chips */}
-              <div className="flex flex-wrap gap-1.5">
-                {[
-                  { id: "all", label: "All Places" },
-                  { id: "restaurants", label: "Restaurants" },
-                  { id: "butchers", label: "Butchers" },
-                  { id: "groceries", label: "Groceries" },
-                  { id: "mosques", label: "Mosques & Jummah" },
-                ].map((chip) => (
-                  <button
-                    key={chip.id}
-                    onClick={() => setSelectedDirectoryCat(chip.id)}
-                    className={`px-3 py-1.5 rounded text-xs font-semibold tracking-wide transition-colors cursor-pointer ${
-                      selectedDirectoryCat === chip.id
-                        ? "bg-[#30302F] text-white"
-                        : "bg-[#FAF9F6] text-[#3F3C38] border border-[#E6E1D8] hover:border-[#30302F]"
-                    }`}
-                  >
-                    {chip.label}
-                  </button>
-                ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {COOKING_GUIDES.slice(0, 3).map((guide) => (
+              <div
+                key={guide.id}
+                onClick={() => onNavigate(`/guides/${guide.slug}`)}
+                className="bg-[#FAF9F6] border border-[#E6E1D8] rounded-xl overflow-hidden hover:border-[#E97520] hover:shadow-md transition-all cursor-pointer group flex flex-col justify-between"
+              >
+                <div className="aspect-[16/10] overflow-hidden bg-gray-100 relative">
+                  <img
+                    src={guide.heroImage}
+                    alt={guide.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute top-2.5 left-2.5 bg-white/95 backdrop-blur-xs px-2.5 py-0.5 rounded-full text-[10px] font-bold text-[#E97520] shadow-xs">
+                    {guide.category}
+                  </div>
+                </div>
+
+                <div className="p-5 flex-1 flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center gap-2 text-[11px] text-[#8A857E] mb-2">
+                      <Clock className="w-3.5 h-3.5" />
+                      <span>{guide.readTimeMinutes} min read</span>
+                      <span>&bull;</span>
+                      <span>By {guide.author.name}</span>
+                    </div>
+
+                    <h3 className="text-base font-bold text-[#30302F] font-serif-editorial mb-2 group-hover:text-[#E97520] transition-colors leading-snug">
+                      {guide.title}
+                    </h3>
+
+                    <p className="text-xs text-[#77736D] line-clamp-2 leading-relaxed">
+                      {guide.excerpt}
+                    </p>
+                  </div>
+
+                  <div className="mt-4 pt-3 border-t border-[#E6E1D8] flex items-center justify-between text-xs font-bold text-[#E97520]">
+                    <span>Read Guide</span>
+                    <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 8C. Food Culture & Halal Pantry Split Section */}
+      <section className="py-14 sm:py-18 bg-[#FFF9F0] border-b border-[#E6E1D8]">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            {/* Left: Food Culture Spotlight */}
+            <div className="bg-white p-6 sm:p-8 rounded-2xl border border-[#E6E1D8] shadow-xs flex flex-col justify-between">
+              <div>
+                <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#E97520] mb-3">
+                  <Compass className="w-4 h-4 text-[#E97520]" />
+                  REGIONAL HERITAGE &bull; FOOD CULTURE
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold text-[#242423] font-serif-editorial mb-3">
+                  Stories of Coast, Spices &amp; Shared Feasts
+                </h3>
+                <p className="text-xs sm:text-sm text-[#77736D] leading-relaxed mb-6">
+                  Explore how coastal waterways, mustard micro-climates, and Islamic communal hospitality shaped the culinary memory of Bengal and South Asia.
+                </p>
+
+                <div className="space-y-4">
+                  {FOOD_CULTURE_ARTICLES.slice(0, 2).map((art) => (
+                    <div
+                      key={art.id}
+                      onClick={() => onNavigate(`/culture/${art.slug}`)}
+                      className="p-4 rounded-xl bg-[#FAF9F6] border border-[#E6E1D8] hover:border-[#E97520] transition-colors cursor-pointer group"
+                    >
+                      <div className="text-[10px] font-bold text-[#E97520] uppercase tracking-wider mb-1">
+                        {art.category} &bull; {art.readTimeMinutes} min read
+                      </div>
+                      <h4 className="text-sm font-bold text-[#30302F] group-hover:text-[#E97520] transition-colors mb-1">
+                        {art.title}
+                      </h4>
+                      <p className="text-xs text-[#77736D] line-clamp-2">
+                        {art.excerpt}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
 
-              {/* City Filter Input */}
-              <div className="relative">
-                <input
-                  type="text"
-                  value={directoryCitySearch}
-                  onChange={(e) => setDirectoryCitySearch(e.target.value)}
-                  placeholder="Filter by city (e.g. Jackson Heights, Boston)..."
-                  className="w-full px-3.5 py-2 text-xs bg-[#FAF9F6] border border-[#E6E1D8] rounded focus:outline-none focus:border-[#30302F]"
-                />
-                <Search className="w-3.5 h-3.5 text-[#8A857E] absolute right-3 top-3" />
-              </div>
-
-              <div className="pt-2 flex flex-col sm:flex-row gap-3">
+              <div className="pt-6 mt-6 border-t border-[#F3F2EE]">
                 <button
-                  onClick={() => onNavigate("/directory")}
-                  className="px-6 py-3 bg-[#30302F] hover:bg-[#242423] text-white text-xs font-bold uppercase tracking-wider rounded transition-colors shadow flex items-center justify-center gap-2 cursor-pointer"
+                  onClick={() => onNavigate("/culture")}
+                  className="w-full py-3 bg-[#30302F] hover:bg-[#242423] text-white text-xs font-bold uppercase tracking-wider rounded-lg transition-colors flex items-center justify-center gap-2 cursor-pointer"
                 >
-                  <Compass className="w-4 h-4 text-[#E7A52B]" />
-                  EXPLORE FULL DIRECTORY
-                </button>
-
-                <button
-                  onClick={onOpenAssistant}
-                  className="px-4 py-3 bg-[#FFF9F0] hover:bg-[#F8CD78]/30 border border-[#F8CD78] text-[#D75D17] text-xs font-bold uppercase tracking-wider rounded transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
-                >
-                  <Sparkles className="w-4 h-4 text-[#E97520]" />
-                  Find Near Me (AI Maps)
+                  <Compass className="w-4 h-4 text-[#F8CD78]" />
+                  Explore All Food Culture Articles
                 </button>
               </div>
             </div>
 
-            {/* Right Column: Listing Cards Preview */}
-            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {filteredDirectory.length === 0 ? (
-                <div className="col-span-2 p-8 text-center bg-[#FAF9F6] rounded-lg border border-[#E6E1D8]">
-                  <p className="text-xs text-[#77736D]">
-                    No verified directory locations matching "{directoryCitySearch}".
-                  </p>
-                  <button
-                    onClick={() => {
-                      setDirectoryCitySearch("");
-                      setSelectedDirectoryCat("all");
-                    }}
-                    className="mt-2 text-xs text-[#E97520] font-bold hover:underline"
-                  >
-                    Reset Filters
-                  </button>
+            {/* Right: Halal Pantry Standards Spotlight */}
+            <div className="bg-white p-6 sm:p-8 rounded-2xl border border-[#E6E1D8] shadow-xs flex flex-col justify-between">
+              <div>
+                <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#2D7A52] mb-3">
+                  <ShoppingBag className="w-4 h-4 text-[#2D7A52]" />
+                  PURITY &bull; HALAL PANTRY &amp; NUTRITION
                 </div>
-              ) : (
-                filteredDirectory.map((item) => (
-                  <div
-                    key={item.id}
-                    className="bg-[#FAF9F6] border border-[#E6E1D8] rounded-lg p-4 flex flex-col justify-between hover:border-[#30302F] transition-colors"
-                  >
-                    <div>
-                      <div className="flex items-center justify-between gap-2 mb-2">
-                        <span className="text-[10px] font-bold uppercase tracking-wider text-[#77736D]">
-                          {item.categoryLabel}
-                        </span>
-                        <span className="text-[10px] font-bold text-[#2D7A52] bg-[#2D7A52]/10 px-2 py-0.5 rounded">
-                          {item.halalClassification}
-                        </span>
+                <h3 className="text-xl sm:text-2xl font-bold text-[#242423] font-serif-editorial mb-3">
+                  Building a Trusted, Wholesome Halal Pantry
+                </h3>
+                <p className="text-xs sm:text-sm text-[#77736D] leading-relaxed mb-6">
+                  Clear specifications on cooking oils, unadulterated spices, natural fermentation, and checking additives for unquestioned peace of mind.
+                </p>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {HALAL_PANTRY_SECTIONS.map((sec) => (
+                    <div
+                      key={sec.id}
+                      onClick={() => onNavigate(`/pantry/${sec.slug || sec.id}`)}
+                      className="p-3.5 rounded-xl bg-[#FAF9F6] border border-[#E6E1D8] hover:border-[#2D7A52] transition-colors cursor-pointer group"
+                    >
+                      <div className="text-[10px] font-bold text-[#2D7A52] uppercase tracking-wider mb-1">
+                        {sec.title}
                       </div>
-
-                      <h4 className="text-sm font-bold text-[#30302F] font-serif-editorial mb-1">
-                        {item.name}
-                      </h4>
-
-                      <p className="text-xs text-[#77736D] flex items-center gap-1 mb-2">
-                        <MapPin className="w-3 h-3 text-[#E97520] shrink-0" />
-                        <span>{item.address}, {item.city}, {item.state}</span>
+                      <p className="text-xs text-[#77736D] line-clamp-2 leading-relaxed">
+                        {sec.description}
                       </p>
-
-                      <p className="text-[11px] text-[#8A857E] line-clamp-2">
-                        {item.halalDetails}
-                      </p>
-
-                      {item.jummahInfo && (
-                        <div className="mt-2 text-[11px] text-[#2D7A52] bg-white p-2 rounded border border-[#E6E1D8]">
-                          <strong>Jummah:</strong> {item.jummahInfo}
-                        </div>
-                      )}
                     </div>
+                  ))}
+                </div>
+              </div>
 
-                    <div className="mt-4 pt-3 border-t border-[#E6E1D8] flex items-center justify-between">
-                      <a
-                        href={item.googleMapsUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-xs font-bold text-[#E97520] hover:text-[#D75D17] flex items-center gap-1"
-                      >
-                        Directions (Maps) &rarr;
-                      </a>
-                      <span className="text-[10px] text-[#8A857E]">
-                        Verified: {item.lastVerifiedDate}
-                      </span>
-                    </div>
-                  </div>
-                ))
-              )}
+              <div className="pt-6 mt-6 border-t border-[#F3F2EE]">
+                <button
+                  onClick={() => onNavigate("/pantry")}
+                  className="w-full py-3 bg-[#2D7A52] hover:bg-[#236041] text-white text-xs font-bold uppercase tracking-wider rounded-lg transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-xs"
+                >
+                  <ShieldCheck className="w-4 h-4" />
+                  View Complete Halal Pantry Guide
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -492,31 +553,31 @@ export const HomeView: React.FC<HomeViewProps> = ({
               {
                 title: "Recipe Serving Scaler",
                 desc: "Instantly multiply or reduce ingredient measurements for dinner parties or solo dining.",
-                tool: "scaler",
+                route: "/tools/scaler",
                 badge: "Interactive",
+              },
+              {
+                title: "Kitchen Equipment Guide",
+                desc: "Essential Bengali cookware, cast-iron karahi care, stone grinders, and knife choices.",
+                route: "/tools/equipment",
+                badge: "Practical",
               },
               {
                 title: "Halal E-Code Checker",
                 desc: "Search additives, gelatin origins, and enzymes with clear Halal status guidance.",
-                tool: "ecodes",
+                route: "/tools/ecodes",
                 badge: "Verified",
               },
               {
                 title: "Kitchen Unit Converter",
                 desc: "Convert fluid ounces, cups, grams, milliliters, and spoons accurately.",
-                tool: "converter",
+                route: "/tools/converter",
                 badge: "Accurate",
-              },
-              {
-                title: "Oven Temperature Guide",
-                desc: "Switch between Fahrenheit, Celsius, Gas Marks, and fan-assisted settings.",
-                tool: "oven",
-                badge: "Quick",
               },
             ].map((tool, idx) => (
               <div
                 key={idx}
-                onClick={() => onNavigate(`/tools`)}
+                onClick={() => onNavigate(tool.route)}
                 className="group p-5 rounded-lg border border-[#E6E1D8] bg-[#FAF9F6] hover:border-[#E97520] hover:shadow-sm transition-all cursor-pointer flex flex-col justify-between"
               >
                 <div>
@@ -654,6 +715,58 @@ export const HomeView: React.FC<HomeViewProps> = ({
           </span>
         </div>
       </section>
+
+      {/* Video Player Modal Overlay */}
+      {activeVideoModal && (
+        <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-xs flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl max-w-3xl w-full overflow-hidden shadow-2xl border border-[#E6E1D8]">
+            <div className="p-4 border-b border-[#E6E1D8] flex items-center justify-between bg-[#FAF9F6]">
+              <div>
+                <span className="text-[11px] font-bold text-[#E97520] uppercase tracking-wider">
+                  {activeVideoModal.category} &bull; {activeVideoModal.duration}
+                </span>
+                <h3 className="text-base font-bold text-[#30302F]">
+                  {activeVideoModal.title}
+                </h3>
+              </div>
+              <button
+                onClick={() => setActiveVideoModal(null)}
+                className="p-1.5 rounded-lg hover:bg-gray-200 text-gray-600 transition-colors cursor-pointer"
+                aria-label="Close video modal"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+            <div className="p-4 space-y-3">
+              <YouTubePlayer
+                videoId={activeVideoModal.youtubeVideoId}
+                title={activeVideoModal.title}
+                aspectRatio="16:9"
+                autoPlay={true}
+              />
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2">
+                <p className="text-xs text-gray-600 flex-1 leading-relaxed">
+                  {activeVideoModal.description}
+                </p>
+                {activeVideoModal.relatedRecipeSlug && (
+                  <button
+                    onClick={() => {
+                      const r = RECIPES.find((rec) => rec.slug === activeVideoModal.relatedRecipeSlug);
+                      if (r) {
+                        setActiveVideoModal(null);
+                        onSelectRecipe(r);
+                      }
+                    }}
+                    className="px-4 py-2 bg-[#E97520] hover:bg-[#D75D17] text-white text-xs font-bold rounded-lg transition-colors cursor-pointer shrink-0"
+                  >
+                    View Full Recipe &rarr;
+                  </button>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

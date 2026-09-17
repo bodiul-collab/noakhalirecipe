@@ -4,7 +4,6 @@ import dotenv from "dotenv";
 import { exec } from "child_process";
 import { GoogleGenAI } from "@google/genai";
 import { createServer as createViteServer } from "vite";
-import { resolveLocation, searchHalalPlaces, clearPlacesCache } from "./src/services/placesService";
 
 dotenv.config();
 
@@ -30,102 +29,9 @@ app.get("/api/health", (_req, res) => {
   res.json({ status: "ok", timestamp: new Date().toISOString() });
 });
 
-// Places & Maps configuration check
-app.get("/api/places/config", (_req, res) => {
-  const mapsApiKey = process.env.GOOGLE_MAPS_API_KEY || process.env.VITE_GOOGLE_MAPS_API_KEY;
-  res.json({
-    configured: !!mapsApiKey,
-    clientApiKey: mapsApiKey || null,
-  });
-});
-
-// Location Resolution Endpoint (Geocoding with international postal codes & fallbacks)
-app.post("/api/places/resolve-location", async (req, res) => {
-  try {
-    const { query } = req.body;
-    if (!query || typeof query !== "string") {
-      res.status(400).json({
-        status: "ERROR",
-        results: [],
-        errorMessage: "A valid location or postal code query is required.",
-      });
-      return;
-    }
-
-    const mapsApiKey = process.env.GOOGLE_MAPS_API_KEY || process.env.VITE_GOOGLE_MAPS_API_KEY;
-    const result = await resolveLocation(query, mapsApiKey);
-    res.json(result);
-  } catch (error: any) {
-    console.error("Location resolution error:", error);
-    res.status(500).json({
-      status: "ERROR",
-      results: [],
-      errorMessage: "Unable to resolve location at this time. Please try another city or postal code.",
-    });
-  }
-});
-
-// Live Halal Places Search Endpoint (Places API New with caching, field masking & fallbacks)
-app.post("/api/places/search", async (req, res) => {
-  try {
-    const {
-      category,
-      lat,
-      lng,
-      radiusMeters,
-      subQuery,
-      openNow,
-      minRating,
-      locationName,
-      refresh,
-      forceRefresh,
-      pageToken,
-    } = req.body;
-
-    if (
-      !category ||
-      typeof lat !== "number" ||
-      typeof lng !== "number" ||
-      !["restaurants", "groceries", "mosques"].includes(category)
-    ) {
-      res.status(400).json({
-        status: "ERROR",
-        places: [],
-        errorMessage: "Invalid search parameters. Category, latitude, and longitude are required.",
-      });
-      return;
-    }
-
-    const mapsApiKey = process.env.GOOGLE_MAPS_API_KEY || process.env.VITE_GOOGLE_MAPS_API_KEY;
-    const searchResult = await searchHalalPlaces({
-      category,
-      lat,
-      lng,
-      radiusMeters: typeof radiusMeters === "number" ? radiusMeters : 16093,
-      subQuery: typeof subQuery === "string" ? subQuery : undefined,
-      openNow: !!openNow,
-      minRating: typeof minRating === "number" ? minRating : 0,
-      locationName: typeof locationName === "string" ? locationName : undefined,
-      apiKey: mapsApiKey,
-      forceRefresh: Boolean(refresh || forceRefresh),
-      pageToken: typeof pageToken === "string" ? pageToken : undefined,
-    });
-
-    res.json(searchResult);
-  } catch (error: any) {
-    console.error("Places search error:", error);
-    res.status(500).json({
-      status: "ERROR",
-      places: [],
-      errorMessage: "Could not complete places search. Please try again shortly.",
-    });
-  }
-});
-
-// Purge places memory cache for fresh re-fetching
-app.post("/api/places/clear-cache", (_req, res) => {
-  clearPlacesCache();
-  res.json({ status: "OK", message: "Places and geocoding cache cleared successfully." });
+// Legacy /directory permanent redirect (SEO migration)
+app.get(["/directory", "/directory/*"], (_req, res) => {
+  res.redirect(301, "/recipes");
 });
 
 // Initialize Gemini Client
@@ -168,40 +74,17 @@ Your mission:
 - Provide trusted, comforting, authentic Halal recipes, cooking guidance, regional food culture (Bengali, South Asian, Middle Eastern, and global Halal cuisine).
 - Strictly adhere to Halal food principles: NEVER suggest pork, bacon, ham, lard, alcohol, or non-halal items.
 - Halal Ingredient Verification: When an ingredient has animal derivatives (gelatin, enzymes, emulsifiers, vanilla extract with alcohol, rennet), clearly explain the verification considerations (checking packaging for certified symbols, contacting manufacturers). Never make unsupported Halal certification claims.
-- Local Directory & Mosques: When the user inquires about Halal restaurants, butchers, groceries, mosques, or Islamic centers, provide authentic, respectful details. Always prioritize proximity if location is provided. For mosques, mention Jummah and women's prayer spaces only if verified; otherwise say "Information not confirmed."
+- Culinary & Lifestyle Guidance: When the user asks about Halal food preparation, cooking techniques, recipes, spice substitutions, meal planning, or pantry stocking, provide actionable, authentic, and step-by-step guidance.
 - Tone: Welcoming, warm, culturally respectful, practical, community-oriented, objective, and culinary-forward.`;
 
-    let modelName = "gemini-3.8-flash";
-    let toolsConfig: any[] = [];
-    let toolConfigOptions: any = undefined;
-
-    if (mode === "maps" || query.toLowerCase().includes("near me") || query.toLowerCase().includes("mosque") || query.toLowerCase().includes("restaurant") || query.toLowerCase().includes("butcher") || query.toLowerCase().includes("halal grocery")) {
-      toolsConfig = [{ googleMaps: {} }];
-      if (location && typeof location.latitude === "number" && typeof location.longitude === "number") {
-        toolConfigOptions = {
-          retrievalConfig: {
-            latLng: {
-              latitude: location.latitude,
-              longitude: location.longitude,
-            },
-          },
-        };
-      }
-    } else {
-      // Default to Google Search Grounding for current information and ingredient checks
-      toolsConfig = [{ googleSearch: {} }];
-    }
+    let modelName = "gemini-2.5-flash";
+    // Default to Google Search Grounding for current information and ingredient checks
+    const toolsConfig = [{ googleSearch: {} }];
 
     const configPayload: any = {
       systemInstruction,
+      tools: toolsConfig,
     };
-
-    if (toolsConfig.length > 0) {
-      configPayload.tools = toolsConfig;
-    }
-    if (toolConfigOptions) {
-      configPayload.toolConfig = toolConfigOptions;
-    }
 
     const response = await ai.models.generateContent({
       model: modelName,
@@ -287,12 +170,10 @@ app.get("/sitemap.xml", (_req, res) => {
   <url><loc>https://noakhalikitchen.com/category/halal-seafood</loc><priority>0.8</priority></url>
   <url><loc>https://noakhalikitchen.com/category/halal-vegetarian</loc><priority>0.8</priority></url>
   <url><loc>https://noakhalikitchen.com/category/halal-rice-curry</loc><priority>0.8</priority></url>
-  <url><loc>https://noakhalikitchen.com/directory</loc><priority>0.9</priority></url>
-  <url><loc>https://noakhalikitchen.com/directory/restaurants</loc><priority>0.8</priority></url>
-  <url><loc>https://noakhalikitchen.com/directory/butchers</loc><priority>0.8</priority></url>
-  <url><loc>https://noakhalikitchen.com/directory/groceries</loc><priority>0.8</priority></url>
-  <url><loc>https://noakhalikitchen.com/directory/mosques</loc><priority>0.8</priority></url>
-  <url><loc>https://noakhalikitchen.com/blog</loc><priority>0.8</priority></url>
+  <url><loc>https://noakhalikitchen.com/blog</loc><priority>0.9</priority></url>
+  <url><loc>https://noakhalikitchen.com/blog/halal-pantry-essentials-guide</loc><priority>0.8</priority></url>
+  <url><loc>https://noakhalikitchen.com/blog/understanding-halal-e-numbers-food-additives</loc><priority>0.8</priority></url>
+  <url><loc>https://noakhalikitchen.com/blog/art-of-bengali-panch-phoron-spice-blend</loc><priority>0.8</priority></url>
   <url><loc>https://noakhalikitchen.com/tools</loc><priority>0.8</priority></url>
   <url><loc>https://noakhalikitchen.com/about</loc><priority>0.7</priority></url>
   <url><loc>https://noakhalikitchen.com/contact</loc><priority>0.7</priority></url>

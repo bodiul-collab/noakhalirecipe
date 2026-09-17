@@ -1,18 +1,18 @@
 import React from "react";
-import { ArrowRight, ShieldCheck, MapPin, Sparkles } from "lucide-react";
+import { ArrowRight, ShieldCheck, BookOpen, Sparkles } from "lucide-react";
 import { IMAGES } from "../data/assets";
 import { HomepageRecipeCard } from "./HomepageRecipeCard";
 import { NoakhaliLogo } from "./NoakhaliLogo";
 
 interface HeroProps {
   onExploreRecipes: () => void;
-  onFindHalalNearYou: () => void;
+  onExploreGuides?: () => void;
   onOpenFeaturedRecipe?: () => void;
 }
 
 export const Hero: React.FC<HeroProps> = ({
   onExploreRecipes,
-  onFindHalalNearYou,
+  onExploreGuides,
   onOpenFeaturedRecipe,
 }) => {
   return (
@@ -95,13 +95,15 @@ export const Hero: React.FC<HeroProps> = ({
                 <ArrowRight className="w-4 h-4" />
               </button>
 
-              <button
-                onClick={onFindHalalNearYou}
-                className="w-full sm:w-auto px-7 py-3.5 bg-[#30302F] hover:bg-[#242423] text-white font-bold text-xs sm:text-sm tracking-wider uppercase rounded shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer font-ui"
-              >
-                <MapPin className="w-4 h-4 text-[#E7A52B]" />
-                FIND HALAL NEAR YOU
-              </button>
+              {onExploreGuides && (
+                <button
+                  onClick={onExploreGuides}
+                  className="w-full sm:w-auto px-7 py-3.5 bg-[#30302F] hover:bg-[#242423] text-white font-bold text-xs sm:text-sm tracking-wider uppercase rounded shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer font-ui"
+                >
+                  <BookOpen className="w-4 h-4 text-[#E7A52B]" />
+                  FOOD GUIDES &amp; BLOG
+                </button>
+              )}
             </div>
 
             {/* Trust Line */}

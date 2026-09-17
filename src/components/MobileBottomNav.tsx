@@ -1,5 +1,5 @@
 import React from "react";
-import { Home, BookOpen, Layers, MapPin, Bookmark } from "lucide-react";
+import { Home, BookOpen, Layers, Wrench, Bookmark } from "lucide-react";
 
 interface MobileBottomNavProps {
   currentRoute: string;
@@ -17,7 +17,7 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({
   const isHome = currentRoute === "/";
   const isRecipes = currentRoute === "/recipes" || currentRoute.startsWith("/recipe/");
   const isCategories = currentRoute === "/category" || currentRoute.startsWith("/category/");
-  const isDirectory = currentRoute === "/directory" || currentRoute.startsWith("/directory/");
+  const isTools = currentRoute === "/tools" || currentRoute === "/converter" || currentRoute === "/scaler";
 
   return (
     <nav
@@ -62,16 +62,16 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({
           <span className="truncate">Categories</span>
         </button>
 
-        {/* Halal Directory */}
+        {/* Kitchen Tools */}
         <button
-          onClick={() => onNavigate("/directory")}
+          onClick={() => onNavigate("/tools")}
           className={`flex flex-col items-center justify-center gap-0.5 text-[10px] font-medium tracking-wide transition-colors cursor-pointer ${
-            isDirectory ? "text-[#E97520] font-bold" : "text-[#77736D] hover:text-[#30302F]"
+            isTools ? "text-[#E97520] font-bold" : "text-[#77736D] hover:text-[#30302F]"
           }`}
-          aria-label="Halal Directory"
+          aria-label="Kitchen Tools"
         >
-          <MapPin className={`w-4.5 h-4.5 ${isDirectory ? "text-[#E97520]" : "text-[#77736D]"}`} />
-          <span className="truncate">Halal Places</span>
+          <Wrench className={`w-4.5 h-4.5 ${isTools ? "text-[#E97520]" : "text-[#77736D]"}`} />
+          <span className="truncate">Tools</span>
         </button>
 
         {/* Saved Recipes */}

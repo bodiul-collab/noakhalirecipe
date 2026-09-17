@@ -24,7 +24,7 @@ export const ContactView: React.FC = () => {
             Contact Noakhali Kitchen
           </h1>
           <p className="text-sm text-[#77736D] max-w-lg mx-auto">
-            Have a question about a recipe, want to report a directory correction, or discuss a culinary collaboration? We'd love to hear from you.
+            Have a question about a recipe, want to suggest a culinary guide, or discuss a cooking collaboration? We'd love to hear from you.
           </p>
         </div>
 
@@ -75,8 +75,7 @@ export const ContactView: React.FC = () => {
                   className="w-full px-3.5 py-2.5 bg-[#FAF9F6] border border-[#E6E1D8] rounded focus:outline-none"
                 >
                   <option value="recipe-question">Recipe Question or Feedback</option>
-                  <option value="directory-correction">Halal Directory Correction / Update</option>
-                  <option value="business-submission">Business or Mosque Submission</option>
+                  <option value="guide-suggestion">Food Guide or Article Suggestion</option>
                   <option value="halal-inquiry">Ingredient Verification Inquiry</option>
                   <option value="partnerships">Brand Partnerships &amp; Sponsorships</option>
                 </select>

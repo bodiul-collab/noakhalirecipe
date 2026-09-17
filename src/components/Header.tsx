@@ -3,7 +3,6 @@ import { NoakhaliLogo } from "./NoakhaliLogo";
 import {
   Search,
   Bookmark,
-  MapPin,
   Menu,
   X,
   ChevronDown,
@@ -22,6 +21,8 @@ import {
   Sun,
   Minimize2,
   Maximize2,
+  Compass,
+  ShoppingBag,
 } from "lucide-react";
 
 interface HeaderProps {
@@ -57,11 +58,11 @@ export const Header: React.FC<HeaderProps> = ({
     { label: "Home", route: "/" },
     { label: "Recipes", route: "/recipes" },
     { label: "Categories", route: "/category", hasDropdown: true },
-    { label: "Halal Places", route: "/directory" },
-    { label: "Guides & Blog", route: "/blog" },
+    { label: "Guides", route: "/guides" },
+    { label: "Food Culture", route: "/culture" },
+    { label: "Halal Pantry", route: "/pantry" },
     { label: "Tools", route: "/tools" },
     { label: "About", route: "/about" },
-    { label: "Contact", route: "/contact" },
   ];
 
   const featuredCategories = [
@@ -415,31 +416,46 @@ export const Header: React.FC<HeaderProps> = ({
               <button
                 onClick={() => {
                   setMobileMenuOpen(false);
-                  onNavigate("/directory");
+                  onNavigate("/guides");
                 }}
                 className={`w-full text-left px-3 py-2.5 rounded-lg flex items-center gap-3 text-sm font-medium transition-colors ${
-                  currentRoute.startsWith("/directory")
-                    ? "bg-[#FFF9F0] text-[#E97520] font-bold"
-                    : "text-[#30302F] hover:bg-[#FAF9F6]"
-                }`}
-              >
-                <MapPin className="w-4 h-4 text-[#8A857E]" />
-                <span>Halal Places &amp; Directory</span>
-              </button>
-
-              <button
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  onNavigate("/blog");
-                }}
-                className={`w-full text-left px-3 py-2.5 rounded-lg flex items-center gap-3 text-sm font-medium transition-colors ${
-                  currentRoute.startsWith("/blog")
+                  currentRoute.startsWith("/guides")
                     ? "bg-[#FFF9F0] text-[#E97520] font-bold"
                     : "text-[#30302F] hover:bg-[#FAF9F6]"
                 }`}
               >
                 <FileText className="w-4 h-4 text-[#8A857E]" />
-                <span>Culinary Guides &amp; Blog</span>
+                <span>Cooking Guides Hub</span>
+              </button>
+
+              <button
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  onNavigate("/culture");
+                }}
+                className={`w-full text-left px-3 py-2.5 rounded-lg flex items-center gap-3 text-sm font-medium transition-colors ${
+                  currentRoute.startsWith("/culture")
+                    ? "bg-[#FFF9F0] text-[#E97520] font-bold"
+                    : "text-[#30302F] hover:bg-[#FAF9F6]"
+                }`}
+              >
+                <Compass className="w-4 h-4 text-[#8A857E]" />
+                <span>Food Culture &amp; Heritage</span>
+              </button>
+
+              <button
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  onNavigate("/pantry");
+                }}
+                className={`w-full text-left px-3 py-2.5 rounded-lg flex items-center gap-3 text-sm font-medium transition-colors ${
+                  currentRoute.startsWith("/pantry")
+                    ? "bg-[#FFF9F0] text-[#E97520] font-bold"
+                    : "text-[#30302F] hover:bg-[#FAF9F6]"
+                }`}
+              >
+                <ShoppingBag className="w-4 h-4 text-[#8A857E]" />
+                <span>Halal Pantry &amp; Nutrition</span>
               </button>
 
               <button
@@ -454,7 +470,7 @@ export const Header: React.FC<HeaderProps> = ({
                 }`}
               >
                 <Wrench className="w-4 h-4 text-[#8A857E]" />
-                <span>Kitchen Converters &amp; Tools</span>
+                <span>Kitchen Utilities &amp; Equipment</span>
               </button>
 
               <button

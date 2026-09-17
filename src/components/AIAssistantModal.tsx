@@ -3,13 +3,10 @@ import {
   Sparkles,
   X,
   Send,
-  MapPin,
   Search,
   ExternalLink,
-  ShieldCheck,
-  Compass,
   Loader2,
-  AlertCircle,
+  BookOpen,
 } from "lucide-react";
 
 interface AIAssistantModalProps {
@@ -30,43 +27,19 @@ interface Message {
 export const AIAssistantModal: React.FC<AIAssistantModalProps> = ({
   isOpen,
   onClose,
-  onNavigateToRecipe,
 }) => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: "welcome-msg",
       role: "assistant",
-      text: "Salam and welcome to Noakhali Kitchen! I'm your dedicated Halal culinary & community assistant. Ask me about authentic recipes, Halal ingredient checks (gelatin, enzymes, E-codes), cooking techniques, or finding nearby Halal restaurants and mosques with live Google Search and Maps grounding.",
+      text: "Salam and welcome to Noakhali Kitchen! I'm your dedicated Halal culinary & kitchen assistant. Ask me about authentic recipes, Halal ingredient verification (gelatin, enzymes, E-codes), cooking techniques, or spice substitutions with live Google Search grounding.",
       timestamp: "Just now",
     },
   ]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
-  const [location, setLocation] = useState<{ latitude: number; longitude: number } | null>(null);
-  const [locationStatus, setLocationStatus] = useState<string>("");
 
   if (!isOpen) return null;
-
-  const handleGetLocation = () => {
-    if (!navigator.geolocation) {
-      setLocationStatus("Geolocation not supported by browser");
-      return;
-    }
-    setLocationStatus("Locating...");
-    navigator.geolocation.getCurrentPosition(
-      (pos) => {
-        setLocation({
-          latitude: pos.coords.latitude,
-          longitude: pos.coords.longitude,
-        });
-        setLocationStatus("Location shared (used for Maps grounding)");
-      },
-      (err) => {
-        console.warn("Location error:", err);
-        setLocationStatus("Location access denied or unavailable");
-      }
-    );
-  };
 
   const handleSend = async (queryText?: string) => {
     const textToSend = queryText || input;
@@ -84,20 +57,12 @@ export const AIAssistantModal: React.FC<AIAssistantModalProps> = ({
     setLoading(true);
 
     try {
-      const isLocationQuery =
-        textToSend.toLowerCase().includes("near me") ||
-        textToSend.toLowerCase().includes("mosque") ||
-        textToSend.toLowerCase().includes("restaurant") ||
-        textToSend.toLowerCase().includes("butcher") ||
-        textToSend.toLowerCase().includes("grocery");
-
       const response = await fetch("/api/assistant", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           query: textToSend,
-          mode: isLocationQuery ? "maps" : "search",
-          location,
+          mode: "search",
         }),
       });
 
@@ -106,7 +71,7 @@ export const AIAssistantModal: React.FC<AIAssistantModalProps> = ({
       const assistantMessage: Message = {
         id: `assistant-${Date.now()}`,
         role: "assistant",
-        text: data.text || "I found information for your request.",
+        text: data.text || "I found culinary information for your request.",
         sources: data.groundingSources || [],
         searchQueries: data.searchQueries || [],
         timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
@@ -120,7 +85,7 @@ export const AIAssistantModal: React.FC<AIAssistantModalProps> = ({
         {
           id: `assistant-err-${Date.now()}`,
           role: "assistant",
-          text: "I experienced a temporary connection issue. You can still explore our verified recipe index, Halal directory, and kitchen tools directly on the site!",
+          text: "I experienced a temporary connection issue. You can still explore our verified recipe index, culinary guides, and kitchen tools directly on the site!",
           timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
         },
       ]);
@@ -131,10 +96,10 @@ export const AIAssistantModal: React.FC<AIAssistantModalProps> = ({
 
   const quickPrompts = [
     "Is vanilla extract Halal or does it contain alcohol?",
-    "Find nearby Halal restaurants with hand-slaughtered zabiha meat",
+    "What is a good Halal substitute for mirin or cooking wine?",
     "What can I substitute for non-halal gelatin in baking?",
     "How do I make tender beef bhuna without burning spices?",
-    "Find nearest mosque for Jummah prayer with women's area",
+    "What is the authentic ratio for Bengali Panch Phoron spice blend?",
   ];
 
   return (
@@ -150,11 +115,11 @@ export const AIAssistantModal: React.FC<AIAssistantModalProps> = ({
               <div className="flex items-center gap-2">
                 <h3 className="text-sm font-bold tracking-wide">Noakhali Kitchen Assistant</h3>
                 <span className="text-[10px] bg-[#2D7A52] text-white font-semibold uppercase px-1.5 py-0.5 rounded">
-                  Grounded AI
+                  Culinary AI
                 </span>
               </div>
               <p className="text-[11px] text-[#E6E1D8]">
-                Google Search &amp; Maps Grounded &bull; Halal Verified
+                Google Search Grounded &bull; Halal Cooking &amp; Ingredients
               </p>
             </div>
           </div>
@@ -168,24 +133,15 @@ export const AIAssistantModal: React.FC<AIAssistantModalProps> = ({
           </button>
         </div>
 
-        {/* Location Grounding Utility Bar */}
+        {/* Informational Sub-Bar */}
         <div className="px-4 py-2 bg-[#FFF9F0] border-b border-[#F8CD78]/40 flex items-center justify-between text-xs">
           <div className="flex items-center gap-1.5 text-[#3F3C38]">
-            <Compass className="w-3.5 h-3.5 text-[#E97520]" />
-            <span>Maps Grounding:</span>
+            <BookOpen className="w-3.5 h-3.5 text-[#E97520]" />
+            <span className="font-medium">Culinary Knowledge Base:</span>
             <span className="text-[#77736D]">
-              {location ? "Active (Location Set)" : "Location optional for nearby places"}
+              Authentic Bengali, South Asian &amp; Global Halal Cooking
             </span>
           </div>
-          {!location && (
-            <button
-              onClick={handleGetLocation}
-              className="text-[11px] text-[#D75D17] font-semibold hover:underline flex items-center gap-1 cursor-pointer"
-            >
-              <MapPin className="w-3 h-3" />
-              {locationStatus || "Share Location"}
-            </button>
-          )}
         </div>
 
         {/* Chat Messages Container */}
@@ -198,19 +154,19 @@ export const AIAssistantModal: React.FC<AIAssistantModalProps> = ({
               }`}
             >
               <div
-                className={`max-w-[85%] rounded-lg p-3.5 sm:p-4 text-xs sm:text-sm leading-relaxed ${
+                className={`max-w-[85%] rounded-xl p-3.5 sm:p-4 text-xs sm:text-sm leading-relaxed ${
                   msg.role === "user"
-                    ? "bg-[#30302F] text-white"
-                    : "bg-white text-[#3F3C38] border border-[#E6E1D8] shadow-xs"
+                    ? "bg-[#30302F] text-white rounded-br-none"
+                    : "bg-white border border-[#E6E1D8] text-[#30302F] rounded-bl-none shadow-2xs"
                 }`}
               >
                 <div className="whitespace-pre-wrap">{msg.text}</div>
 
-                {/* Grounding Sources (Google Search or Maps links) */}
+                {/* Grounding Sources */}
                 {msg.sources && msg.sources.length > 0 && (
-                  <div className="mt-3 pt-3 border-t border-[#F3F2EE] space-y-1.5">
-                    <span className="text-[11px] font-bold text-[#77736D] uppercase tracking-wider block">
-                      Grounded Sources &amp; Places:
+                  <div className="mt-3 pt-2.5 border-t border-[#E6E1D8]/60">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#8A857E] block mb-1.5">
+                      Grounding References:
                     </span>
                     <div className="flex flex-wrap gap-1.5">
                       {msg.sources.map((src, idx) => (
@@ -221,11 +177,7 @@ export const AIAssistantModal: React.FC<AIAssistantModalProps> = ({
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-1 text-[11px] bg-[#FAF9F6] border border-[#E6E1D8] text-[#30302F] hover:text-[#E97520] hover:border-[#E97520] px-2 py-1 rounded transition-colors"
                         >
-                          {src.type === "maps" ? (
-                            <MapPin className="w-3 h-3 text-[#2D7A52]" />
-                          ) : (
-                            <Search className="w-3 h-3 text-[#E7A52B]" />
-                          )}
+                          <Search className="w-3 h-3 text-[#E7A52B]" />
                           <span className="truncate max-w-[200px]">{src.title}</span>
                           <ExternalLink className="w-2.5 h-2.5 opacity-60" />
                         </a>
@@ -257,7 +209,7 @@ export const AIAssistantModal: React.FC<AIAssistantModalProps> = ({
         {messages.length < 3 && (
           <div className="px-4 py-2.5 bg-white border-t border-[#F3F2EE] overflow-x-auto">
             <span className="text-[10px] font-bold uppercase tracking-wider text-[#8A857E] block mb-1.5">
-              Popular Halal Questions:
+              Popular Culinary Questions:
             </span>
             <div className="flex gap-2 pb-1">
               {quickPrompts.map((prompt, i) => (
@@ -285,7 +237,7 @@ export const AIAssistantModal: React.FC<AIAssistantModalProps> = ({
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            placeholder="Ask about Halal recipes, ingredients, nearby places..."
+            placeholder="Ask about Halal recipes, ingredients, cooking techniques, spice blends..."
             disabled={loading}
             className="flex-1 px-4 py-2.5 text-xs sm:text-sm bg-[#FAF9F6] border border-[#E6E1D8] rounded focus:outline-none focus:border-[#30302F] text-[#30302F]"
           />

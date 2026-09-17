@@ -37,6 +37,8 @@ import { Recipe, RecipeCollection } from "../types";
 import { openPrintWindow, downloadPrintableHtml } from "../utils/printableRecipeGenerator";
 import { calculatePerServingNutrition } from "../utils/nutritionEstimator";
 import { RecipeRatingCard } from "../components/RecipeRatingCard";
+import { YouTubePlayer } from "../components/YouTubePlayer";
+import { COOKING_GUIDES } from "../data/guides";
 import {
   loadUserRatings,
   saveUserRating,
@@ -69,6 +71,7 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
   const [activeSlug, setActiveSlug] = useState<string | null>(initialSlug || null);
   const [searchTerm, setSearchTerm] = useState(initialSearchQuery);
   const [selectedProtein, setSelectedProtein] = useState<string>("All");
+  const [selectedCuisine, setSelectedCuisine] = useState<string>("All");
   const [selectedDifficulty, setSelectedDifficulty] = useState<string>("All");
   const [selectedCollection, setSelectedCollection] = useState<string>("All");
   const [sortBy, setSortBy] = useState<"rating" | "time" | "reviews">("rating");
@@ -113,6 +116,16 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
       RECIPES.find(
         (r) =>
           r.slug === activeSlug ||
+          (r.slug === "chicken-biryani" && activeSlug === "halal-chicken-biryani") ||
+          (r.slug === "halal-chicken-biryani" && activeSlug === "chicken-biryani") ||
+          (r.slug === "chicken-karahi" && (activeSlug === "murgh-karahi" || activeSlug === "authentic-chicken-karahi")) ||
+          (r.slug === "seekh-kebab" && (activeSlug === "sheek-kebab" || activeSlug === "seekh-kabab" || activeSlug === "beef-seekh-kebab")) ||
+          (r.slug === "authentic-chicken-shawarma" && (activeSlug === "chicken-shawarma" || activeSlug === "homemade-chicken-shawarma" || activeSlug === "shawarma")) ||
+          (r.slug === "crispy-falafel" && (activeSlug === "falafel" || activeSlug === "authentic-falafel" || activeSlug === "middle-eastern-falafel")) ||
+          (r.slug === "hummus" && (activeSlug === "authentic-hummus" || activeSlug === "hommus" || activeSlug === "houmous")) ||
+          (r.slug === "black-chana" && (activeSlug === "kalo-chola" || activeSlug === "chola-bhuna" || activeSlug === "kala-chana" || activeSlug === "bengali-chola-bhuna")) ||
+          (r.slug === "haleem" && (activeSlug === "bengali-haleem" || activeSlug === "shahi-haleem")) ||
+          (r.slug === "bengali-chicken-roast" && activeSlug === "shahi-chicken-roast") ||
           (r.slug === "chicken-machboos-majboos-kabsa" && activeSlug === "authentic-saudi-chicken-kabsa")
       ) || null
     );
@@ -174,9 +187,44 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
           r.categorySlug === "halal-kids-meal") ||
         (selectedProtein === "Desserts" && r.categorySlug === "halal-desserts") ||
         (selectedProtein === "Street Food" && r.categorySlug === "halal-street-food") ||
-        (selectedProtein === "Vegetarian" && r.categorySlug === "halal-vegetarian") ||
+        (selectedProtein === "Vegetarian" && (r.categorySlug === "halal-vegetarian" || r.tags.includes("Vegetarian") || r.tags.includes("Vegan"))) ||
+        ((selectedProtein === "Ramadan & Eid" || selectedProtein === "Ramadan") &&
+          (r.categorySlug === "ramadan-eid" || r.tags.includes("Ramadan") || r.tags.includes("Eid") || r.tags.includes("Iftar"))) ||
         (selectedProtein === "Drinks" && (r.categorySlug === "halal-drinks" || r.category.toLowerCase().includes("drink"))) ||
         (selectedProtein === "Meal Prep" && (r.categorySlug === "halal-meal-prep" || r.tags.includes("Meal Prep") || r.tags.includes("Halal Meal Prep")));
+
+      const matchesCuisine =
+        selectedCuisine === "All" ||
+        (selectedCuisine === "Bangladeshi" &&
+          (r.cuisine.toLowerCase().includes("bengali") ||
+            r.cuisine.toLowerCase().includes("bangladesh") ||
+            r.tags.some((t) => t.toLowerCase().includes("bengali")))) ||
+        (selectedCuisine === "Indian" &&
+          (r.cuisine.toLowerCase().includes("indian") ||
+            r.cuisine.toLowerCase().includes("mughlai"))) ||
+        (selectedCuisine === "Pakistani" &&
+          (r.cuisine.toLowerCase().includes("pakistani") ||
+            r.cuisine.toLowerCase().includes("lahori"))) ||
+        (selectedCuisine === "Middle Eastern" &&
+          (r.cuisine.toLowerCase().includes("middle eastern") ||
+            r.cuisine.toLowerCase().includes("arab") ||
+            r.cuisine.toLowerCase().includes("saudi") ||
+            r.cuisine.toLowerCase().includes("mediterranean"))) ||
+        (selectedCuisine === "Everyday Halal" &&
+          (r.tags.includes("Everyday") ||
+            r.tags.includes("Weeknight") ||
+            r.tags.includes("Quick") ||
+            r.difficulty === "Easy")) ||
+        (selectedCuisine === "Ramadan & Eid" &&
+          (r.categorySlug === "ramadan-eid" ||
+            r.tags.includes("Ramadan") ||
+            r.tags.includes("Eid") ||
+            r.tags.includes("Iftar") ||
+            r.tags.includes("Festive") ||
+            r.tags.includes("Banquet"))) ||
+        (selectedCuisine === "Desserts & Sweets" && r.categorySlug === "halal-desserts") ||
+        (selectedCuisine === "Drinks" &&
+          (r.categorySlug === "halal-drinks" || r.category.toLowerCase().includes("drink")));
 
       const matchesDifficulty =
         selectedDifficulty === "All" || r.difficulty === selectedDifficulty;
@@ -187,14 +235,28 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
           collections.find((c) => c.id === selectedCollection)?.recipeIds.includes(r.id)
         );
 
-      return matchesSearch && matchesProtein && matchesDifficulty && matchesCollection;
+      return (
+        matchesSearch &&
+        matchesProtein &&
+        matchesCuisine &&
+        matchesDifficulty &&
+        matchesCollection
+      );
     }).sort((a, b) => {
       if (sortBy === "rating") return b.rating - a.rating;
       if (sortBy === "time") return a.totalTimeMinutes - b.totalTimeMinutes;
       if (sortBy === "reviews") return b.reviewCount - a.reviewCount;
       return 0;
     });
-  }, [searchTerm, selectedProtein, selectedDifficulty, selectedCollection, sortBy, collections]);
+  }, [
+    searchTerm,
+    selectedProtein,
+    selectedCuisine,
+    selectedDifficulty,
+    selectedCollection,
+    sortBy,
+    collections,
+  ]);
 
   // Handle ingredient scale
   const parseAndScaleAmount = (amountStr: string, multiplier: number) => {
@@ -265,7 +327,29 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
         ratingValue: blendedRating.rating.toString(),
         reviewCount: blendedRating.reviewCount.toString(),
       },
+      ...(currentRecipe.youtubeVideoId
+        ? {
+            video: {
+              "@type": "VideoObject",
+              name: currentRecipe.videoTitle || currentRecipe.title,
+              description: currentRecipe.description,
+              thumbnailUrl: [currentRecipe.heroImage],
+              uploadDate: currentRecipe.updatedDate,
+              contentUrl:
+                currentRecipe.youtubeUrl ||
+                `https://www.youtube.com/watch?v=${currentRecipe.youtubeVideoId}`,
+              embedUrl: `https://www.youtube-nocookie.com/embed/${currentRecipe.youtubeVideoId}`,
+            },
+          }
+        : {}),
     };
+
+    const relatedGuides = COOKING_GUIDES.filter(
+      (g) =>
+        g.relatedRecipeSlugs.includes(currentRecipe.slug) ||
+        Boolean(currentRecipe.relatedGuideSlugs?.includes(g.slug)) ||
+        Boolean(g.tags && currentRecipe.tags && currentRecipe.tags.some((t) => g.tags!.includes(t)))
+    ).slice(0, 3);
 
     return (
       <div className="w-full bg-[#FAF9F6] py-8 sm:py-12">
@@ -584,6 +668,103 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
               scaledServings={scaledServings}
             />
 
+            {/* WATCH THE FULL RECIPE (Optional YouTube Video Player) */}
+            {(currentRecipe.youtubeVideoId || currentRecipe.youtubeUrl) && (
+              <div className="space-y-3 pt-2 print:hidden">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#E97520] animate-pulse" />
+                    <h2 className="text-sm sm:text-base font-bold uppercase tracking-wider text-[#242423] font-heading">
+                      WATCH THE FULL RECIPE
+                    </h2>
+                  </div>
+                  <span className="text-[11px] text-[#77736D] font-medium hidden sm:inline">
+                    Companion Cooking Video &bull; Noakhali Kitchen YouTube
+                  </span>
+                </div>
+                <YouTubePlayer
+                  videoId={currentRecipe.youtubeVideoId}
+                  videoUrl={currentRecipe.youtubeUrl}
+                  title={currentRecipe.videoTitle || currentRecipe.title}
+                  thumbnailUrl={currentRecipe.heroImage}
+                  duration={currentRecipe.videoDuration}
+                  subtitle={`Step-by-step masterclass: ${currentRecipe.title}`}
+                />
+              </div>
+            )}
+
+            {/* PRINT / SAVE / SCALE RECIPE Structured Action Bar */}
+            <div className="p-4 bg-white rounded-xl border border-[#E6E1D8] shadow-2xs space-y-3 print:hidden">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div>
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-[#E97520] block">
+                    QUICK CHEF CONTROLS
+                  </span>
+                  <h3 className="text-sm font-bold text-[#242423] uppercase tracking-wider font-heading">
+                    PRINT &bull; SAVE &bull; SCALE RECIPE
+                  </h3>
+                </div>
+
+                {/* Quick Scaler Buttons */}
+                <div className="flex items-center gap-1.5 bg-[#FAF9F6] border border-[#E6E1D8] p-1 rounded-lg text-xs">
+                  <span className="text-[11px] font-semibold text-[#77736D] px-2">Scale:</span>
+                  {[0.5, 1, 2, 3].map((mult) => (
+                    <button
+                      key={mult}
+                      onClick={() => setServingMultiplier(mult)}
+                      className={`px-2.5 py-1 rounded text-xs font-bold transition-colors cursor-pointer ${
+                        servingMultiplier === mult
+                          ? "bg-[#30302F] text-white"
+                          : "text-[#3F3C38] hover:bg-white"
+                      }`}
+                    >
+                      {mult}x
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-[#F3F2EE]">
+                <button
+                  onClick={() => setIsPrintModalOpen(true)}
+                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#30302F] hover:bg-black text-white text-xs font-bold transition-all cursor-pointer shadow-2xs"
+                >
+                  <Printer className="w-3.5 h-3.5 text-[#E7A52B]" />
+                  Print Recipe Card
+                </button>
+
+                <button
+                  onClick={() => onToggleSaveRecipe(currentRecipe)}
+                  className={`inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-bold transition-all cursor-pointer border ${
+                    isSaved
+                      ? "bg-[#2D7A52] text-white border-[#2D7A52]"
+                      : "bg-[#FAF9F6] border-[#E6E1D8] text-[#30302F] hover:bg-[#F3F2EE]"
+                  }`}
+                >
+                  <Bookmark className={`w-3.5 h-3.5 ${isSaved ? "fill-white" : "text-[#E97520]"}`} />
+                  {isSaved ? "Recipe Saved in Favorites" : "Save Recipe"}
+                </button>
+
+                <button
+                  onClick={() => {
+                    document.getElementById("recipe-ingredients")?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#FAF9F6] border border-[#E6E1D8] text-[#30302F] hover:bg-[#F3F2EE] text-xs font-bold transition-all cursor-pointer"
+                >
+                  <Scale className="w-3.5 h-3.5 text-[#77736D]" />
+                  Jump to Ingredients Checklist
+                </button>
+
+                <button
+                  onClick={() => onNavigate("/tools")}
+                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#FFF9F0] border border-[#F8CD78]/70 text-[#D75D17] hover:bg-[#F8CD78]/30 text-xs font-bold transition-all cursor-pointer ml-auto"
+                >
+                  <Sparkles className="w-3.5 h-3.5 text-[#E97520]" />
+                  Kitchen Tools &amp; Converter
+                </button>
+              </div>
+            </div>
+
             {/* Story / Intro */}
             <div className="space-y-3 pt-2">
               <h2 className="text-lg sm:text-xl font-bold text-[#242423] font-heading tracking-wide uppercase">
@@ -894,6 +1075,49 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
               </span>
             </div>
 
+            {/* Connected Cooking Guides (Internal Linking) */}
+            {relatedGuides.length > 0 && (
+              <div className="p-6 bg-white rounded-xl border border-[#E6E1D8] space-y-4 shadow-xs print:hidden">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-[#E97520] block">
+                      CULINARY TECHNIQUES
+                    </span>
+                    <h3 className="text-base font-bold text-[#242423] font-serif-editorial">
+                      Guides &amp; Techniques for This Recipe
+                    </h3>
+                  </div>
+                  <button
+                    onClick={() => onNavigate("/guides")}
+                    className="text-xs font-bold text-[#E97520] hover:underline cursor-pointer"
+                  >
+                    All Cooking Guides &rarr;
+                  </button>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  {relatedGuides.map((guide) => (
+                    <button
+                      key={guide.id}
+                      onClick={() => onNavigate(`/guides/${guide.slug}`)}
+                      className="text-left p-3.5 rounded-lg border border-[#E6E1D8] hover:border-[#E97520] bg-[#FAF9F6] transition-colors cursor-pointer group flex flex-col justify-between space-y-2.5"
+                    >
+                      <div className="space-y-1.5">
+                        <span className="text-[10px] font-bold uppercase tracking-wider text-[#E97520]">
+                          {guide.category}
+                        </span>
+                        <h4 className="text-xs font-bold text-[#30302F] group-hover:text-[#E97520] transition-colors line-clamp-2 leading-snug">
+                          {guide.title}
+                        </h4>
+                      </div>
+                      <span className="text-[11px] text-[#77736D] font-medium">
+                        {guide.readTimeMinutes} min read &bull; View Guide &rarr;
+                      </span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {/* Print-Only Footer */}
             <div className="hidden print:block pt-4 mt-6 border-t border-[#E6E1D8] text-[10px] text-[#77736D] text-center">
               <p>Printed from Noakhali Kitchen (https://noakhalikitchen.com) &bull; Authentic Halal Culinary Standard</p>
@@ -1029,12 +1253,42 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
             </div>
           </div>
 
+          {/* Cuisine & Culinary Tradition Filter Chips */}
+          <div className="flex flex-wrap items-center gap-1.5 pt-2 border-t border-[#F3F2EE] text-xs">
+            <span className="text-[#77736D] font-semibold text-[11px] uppercase tracking-wider mr-1">
+              Cuisine &amp; Tradition:
+            </span>
+            {[
+              "All",
+              "Bangladeshi",
+              "Indian",
+              "Pakistani",
+              "Middle Eastern",
+              "Everyday Halal",
+              "Ramadan & Eid",
+              "Desserts & Sweets",
+              "Drinks",
+            ].map((cuisine) => (
+              <button
+                key={cuisine}
+                onClick={() => setSelectedCuisine(cuisine)}
+                className={`px-3 py-1 rounded text-xs font-semibold transition-colors cursor-pointer ${
+                  selectedCuisine === cuisine
+                    ? "bg-[#E97520] text-white"
+                    : "bg-[#FAF9F6] text-[#3F3C38] border border-[#E6E1D8] hover:border-[#E97520]"
+                }`}
+              >
+                {cuisine}
+              </button>
+            ))}
+          </div>
+
           {/* Protein Category Filter Chips */}
           <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-[#F3F2EE] text-xs">
             <span className="text-[#77736D] font-semibold text-[11px] uppercase tracking-wider mr-1">
               Category:
             </span>
-            {["All", "Chicken", "Beef", "Meal Prep", "Fish & Seafood", "Kids Meal", "Desserts", "Drinks", "Street Food", "Vegetarian"].map((protein) => (
+            {["All", "Chicken", "Beef", "Meal Prep", "Fish & Seafood", "Kids Meal", "Desserts", "Drinks", "Street Food", "Vegetarian", "Ramadan & Eid"].map((protein) => (
               <button
                 key={protein}
                 onClick={() => setSelectedProtein(protein)}

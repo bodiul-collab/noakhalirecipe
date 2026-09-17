@@ -11,26 +11,33 @@ import {
   Trash2,
   Sparkles,
   ArrowLeftRight,
+  CookingPot,
+  ArrowRight,
+  BookOpen,
 } from "lucide-react";
 import { ECODES } from "../data/ecodes";
 import { RECIPES } from "../data/recipes";
+import { KITCHEN_EQUIPMENT } from "../data/kitchenEquipment";
 import { Recipe } from "../types";
 import { KitchenConversionTool } from "../components/KitchenConversionTool";
 
 interface ToolsViewProps {
   onSelectRecipe: (recipe: Recipe) => void;
   onOpenAssistant: () => void;
-  initialTab?: "ecodes" | "scaler" | "converter" | "oven" | "planner";
+  initialTab?: "equipment" | "scaler" | "converter" | "oven" | "ecodes" | "planner";
 }
 
 export const ToolsView: React.FC<ToolsViewProps> = ({
   onSelectRecipe,
   onOpenAssistant,
-  initialTab = "ecodes",
+  initialTab = "equipment",
 }) => {
   const [activeTab, setActiveTab] = useState<
-    "ecodes" | "scaler" | "converter" | "oven" | "planner"
+    "equipment" | "scaler" | "converter" | "oven" | "ecodes" | "planner"
   >(initialTab);
+
+  // Equipment category filter
+  const [equipmentCategory, setEquipmentCategory] = useState<string>("All");
 
   // E-Code checker state
   const [ecodeQuery, setEcodeQuery] = useState("");
@@ -123,10 +130,11 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
         {/* Tab Navigation */}
         <div className="flex flex-wrap items-center justify-center gap-2 p-1.5 bg-white rounded-lg border border-[#E6E1D8] shadow-xs">
           {[
-            { id: "ecodes", label: "Halal E-Code Checker", icon: ShieldCheck },
+            { id: "equipment", label: "Equipment Guide", icon: CookingPot },
             { id: "scaler", label: "Recipe Scaler", icon: Scale },
             { id: "converter", label: "Kitchen Converter", icon: ArrowLeftRight },
             { id: "oven", label: "Oven Temp Guide", icon: Thermometer },
+            { id: "ecodes", label: "Halal E-Code Checker", icon: ShieldCheck },
             { id: "planner", label: "Meal Planner", icon: Calendar },
           ].map((tab) => {
             const Icon = tab.icon;
@@ -148,13 +156,121 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
           })}
         </div>
 
+        {/* TOOL 0: KITCHEN EQUIPMENT GUIDE */}
+        {activeTab === "equipment" && (
+          <div className="bg-white rounded-xl border border-[#E6E1D8] p-6 sm:p-8 space-y-6 shadow-xs">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#F3F2EE] pb-4">
+              <div>
+                <h2 className="text-xl sm:text-2xl font-bold text-[#242423] font-serif-editorial">
+                  Kitchen Equipment &amp; Culinary Tools
+                </h2>
+                <p className="text-xs text-[#77736D] mt-1">
+                  Practical guide to traditional heavy-bottom pots, granite grinding stones, cast iron, and precision kitchen essentials.
+                </p>
+              </div>
+
+              {/* Equipment Category Filters */}
+              <div className="flex items-center gap-1.5 overflow-x-auto">
+                {["All", "Useful Kitchen Equipment", "Recipe-Specific Tools", "Kitchen Essentials"].map(
+                  (cat) => (
+                    <button
+                      key={cat}
+                      onClick={() => setEquipmentCategory(cat)}
+                      className={`px-3 py-1 rounded-full text-xs font-bold transition-colors whitespace-nowrap cursor-pointer ${
+                        equipmentCategory === cat
+                          ? "bg-[#E97520] text-white"
+                          : "bg-[#FAF9F6] text-[#77736D] hover:bg-[#F3F2EE]"
+                      }`}
+                    >
+                      {cat}
+                    </button>
+                  )
+                )}
+              </div>
+            </div>
+
+            {/* Equipment Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {KITCHEN_EQUIPMENT.filter(
+                (item) => equipmentCategory === "All" || item.category === equipmentCategory
+              ).map((tool) => {
+                const relatedRecipes = RECIPES.filter((r) =>
+                  tool.relatedRecipeSlugs.includes(r.slug)
+                );
+
+                return (
+                  <div
+                    key={tool.id}
+                    className="p-5 rounded-xl border border-[#E6E1D8] bg-[#FAF9F6]/60 hover:border-[#E97520]/50 transition-colors flex flex-col justify-between space-y-4"
+                  >
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between gap-2">
+                        <span className="text-[10px] font-bold uppercase tracking-wider text-[#E97520] bg-white px-2 py-0.5 rounded border border-[#E6E1D8]">
+                          {tool.category}
+                        </span>
+                        {tool.badge && (
+                          <span className="text-[10px] font-bold text-[#2D7A52] bg-[#EBF5F0] px-2 py-0.5 rounded">
+                            {tool.badge}
+                          </span>
+                        )}
+                      </div>
+
+                      <h3 className="text-base font-bold text-[#242423] font-serif-editorial">
+                        {tool.title}
+                      </h3>
+
+                      <p className="text-xs text-[#77736D] leading-relaxed">
+                        {tool.description}
+                      </p>
+
+                      <div className="pt-2 text-xs text-[#3F3C38] leading-relaxed">
+                        <strong className="text-[#30302F]">Recommended Use: </strong>
+                        {tool.recommendedUse}
+                      </div>
+
+                      {tool.practicalTips.length > 0 && (
+                        <ul className="text-xs text-[#77736D] space-y-1 list-disc list-inside pl-1 pt-1">
+                          {tool.practicalTips.map((tip, i) => (
+                            <li key={i}>{tip}</li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+
+                    {/* Related Recipes internal links */}
+                    {relatedRecipes.length > 0 && (
+                      <div className="pt-3 border-t border-[#E6E1D8]/60 space-y-1.5">
+                        <span className="text-[11px] font-bold uppercase tracking-wider text-[#8A857E] block">
+                          Recipes using this equipment:
+                        </span>
+                        <div className="flex flex-wrap gap-2">
+                          {relatedRecipes.map((r) => (
+                            <button
+                              key={r.id}
+                              onClick={() => onSelectRecipe(r)}
+                              className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-white hover:bg-[#FFF9F0] border border-[#E6E1D8] hover:border-[#F8CD78] text-[11px] text-[#30302F] hover:text-[#E97520] font-medium transition-colors cursor-pointer"
+                            >
+                              <BookOpen className="w-3 h-3 text-[#E97520]" />
+                              <span className="truncate max-w-[180px]">{r.title}</span>
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
         {/* TOOL 1: HALAL E-CODE CHECKER */}
         {activeTab === "ecodes" && (
           <div className="bg-white rounded-xl border border-[#E6E1D8] p-6 sm:p-8 space-y-6 shadow-xs">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <div>
                 <h2 className="text-xl font-bold text-[#242423] font-serif-editorial">
-                  Halal E-Code &amp; Additive Directory
+                  Halal E-Code &amp; Additive Guide
                 </h2>
                 <p className="text-xs text-[#77736D]">
                   Search food additives, animal rennets, emulsifiers, and gelatin origins with clear Halal guidance.

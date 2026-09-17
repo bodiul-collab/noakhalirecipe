@@ -70,14 +70,33 @@ import loittaShutkiBhunaImg from "../assets/images/loitta_shutki_bhuna_178941231
 import mediterraneanChickpeaSaladImg from "../assets/images/mediterranean_chickpea_salad_1789412636845.jpg";
 import butterChickenImg from "../assets/images/butter_chicken_makhani_1789412858239.jpg";
 import chickenCharghaImg from "../assets/images/lahori_chicken_chargha_1789413014894.jpg";
+import bengaliChickenCurryImg from "../assets/images/bengali_chicken_curry_1789651973706.jpg";
+import bengaliBeefBhunaImg from "../assets/images/bengali_beef_bhuna_1789652159575.jpg";
+import bengaliFishCurryImg from "../assets/images/bengali_fish_curry_1789652320876.jpg";
+import bengaliBeefTehariImg from "../assets/images/bengali_beef_tehari_1789652465355.jpg";
+import bengaliChickenRoastImg from "../assets/images/bengali_chicken_roast_1789652710507.jpg";
+import bengaliKhichuriBhunaImg from "../assets/images/bengali_khichuri_bhuna_1789652947771.jpg";
+import bengaliPulaoImg from "../assets/images/bengali_pulao_1789653662372.jpg";
+import chickenBiryaniImg from "../assets/images/chicken_biryani_1789653817558.jpg";
+import authenticNihariImg from "../assets/images/authentic_nihari_1789654066943.jpg";
+import bengaliHaleemDishImg from "../assets/images/bengali_haleem_dish_1789654667470.jpg";
+import chickenKarahiImg from "../assets/images/chicken_karahi_1789654975754.jpg";
+import seekhKebabImg from "../assets/images/seekh_kebab_1789655211083.jpg";
+import authenticChickenShawarmaImg from "../assets/images/authentic_chicken_shawarma_1789655390429.jpg";
+import crispyFalafelImg from "../assets/images/crispy_falafel_1789655593503.jpg";
+import creamyHummusImg from "../assets/images/creamy_authentic_hummus_1789656070932.jpg";
+import bengaliBlackChanaImg from "../assets/images/bengali_black_chana_1789656257884.jpg";
+import crispyEggRollsImg from "../assets/images/crispy_egg_rolls_1789656443680.jpg";
 import noakhaliLogoFullImg from "../assets/images/noakhali_kitchen_logo_1789072776240.jpg";
 import noakhaliLogoIconImg from "../assets/images/noakhali_kitchen_logo_1789072776240.jpg";
 
 export const IMAGES = {
-  heroBiryani: heroBiryaniImg,
-  beefBhuna: beefBhunaImg,
+  heroBiryani: chickenBiryaniImg,
+  chickenBiryani: chickenBiryaniImg,
+  beefBhuna: bengaliBeefBhunaImg,
+  bengaliBeefBhuna: bengaliBeefBhunaImg,
   chingriMalai: chingriMalaiImg,
-  chickenRoast: chickenRoastImg,
+  chickenRoast: bengaliChickenRoastImg,
   streetFood: halalStreetFoodImg,
   cookbook: noakhaliCookbookImg,
   chefNoakhali: chefNoakhaliImg,
@@ -146,6 +165,27 @@ export const IMAGES = {
   mediterraneanChickpeaSalad: mediterraneanChickpeaSaladImg,
   butterChicken: butterChickenImg,
   chickenChargha: chickenCharghaImg,
+  bengaliChickenCurry: bengaliChickenCurryImg,
+  bengaliFishCurry: bengaliFishCurryImg,
+  bengaliBeefTehari: bengaliBeefTehariImg,
+  bengaliChickenRoast: bengaliChickenRoastImg,
+  bengaliKhichuriBhuna: bengaliKhichuriBhunaImg,
+  bengaliPulao: bengaliPulaoImg,
+  authenticNihari: authenticNihariImg,
+  haleem: bengaliHaleemDishImg,
+  bengaliHaleem: bengaliHaleemDishImg,
+  chickenKarahi: chickenKarahiImg,
+  seekhKebab: seekhKebabImg,
+  authenticChickenShawarma: authenticChickenShawarmaImg,
+  chickenShawarma: authenticChickenShawarmaImg,
+  crispyFalafel: crispyFalafelImg,
+  falafel: crispyFalafelImg,
+  hummus: creamyHummusImg,
+  authenticHummus: creamyHummusImg,
+  blackChana: bengaliBlackChanaImg,
+  kaloChola: bengaliBlackChanaImg,
+  eggRoll: crispyEggRollsImg,
+  dimerRoll: crispyEggRollsImg,
   logoFull: noakhaliLogoFullImg,
   logoIcon: noakhaliLogoIconImg,
 };

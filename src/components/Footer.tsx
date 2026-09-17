@@ -31,7 +31,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
             <p className="text-xs text-[#E6E1D8] leading-relaxed">
               Authentic Halal recipes, trusted food guidance, regional culinary heritage,
-              and a better way to discover Halal food and community.
+              and modern cooking guides for the Halal kitchen.
             </p>
 
             <div className="flex items-center gap-2 text-[11px] text-[#E7A52B] pt-1">
@@ -64,18 +64,59 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               </li>
               <li>
                 <button
-                  onClick={() => onNavigate("/blog")}
+                  onClick={() => onNavigate("/guides")}
                   className="hover:text-[#E7A52B] transition-colors"
                 >
-                  Editorial Food Guides
+                  Cooking Guides Hub
                 </button>
               </li>
               <li>
                 <button
-                  onClick={() => onNavigate("/category/halal-meal-prep")}
+                  onClick={() => onNavigate("/culture")}
                   className="hover:text-[#E7A52B] transition-colors"
                 >
-                  Halal Meal Prep
+                  Food Culture &amp; Heritage
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate("/pantry")}
+                  className="hover:text-[#E7A52B] transition-colors"
+                >
+                  Halal Pantry &amp; Nutrition
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 3: Food Guides & Kitchen */}
+          <div className="space-y-3">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-white border-b border-[#242423] pb-2">
+              Culinary Guides &amp; Tools
+            </h4>
+            <ul className="space-y-2 text-xs text-[#E6E1D8]">
+              <li>
+                <button
+                  onClick={() => onNavigate("/guides")}
+                  className="hover:text-[#E7A52B] transition-colors"
+                >
+                  Mastery Cooking Guides
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate("/tools/equipment")}
+                  className="hover:text-[#E7A52B] transition-colors"
+                >
+                  Kitchen Equipment Guide
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate("/pantry")}
+                  className="hover:text-[#E7A52B] transition-colors"
+                >
+                  Halal Pantry Standards
                 </button>
               </li>
               <li>
@@ -83,56 +124,15 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   onClick={() => onNavigate("/tools")}
                   className="hover:text-[#E7A52B] transition-colors"
                 >
-                  Kitchen Utilities &amp; Scaler
-                </button>
-              </li>
-            </ul>
-          </div>
-
-          {/* Column 3: Halal Directory */}
-          <div className="space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-white border-b border-[#242423] pb-2">
-              Halal Directory
-            </h4>
-            <ul className="space-y-2 text-xs text-[#E6E1D8]">
-              <li>
-                <button
-                  onClick={() => onNavigate("/directory/restaurants")}
-                  className="hover:text-[#E7A52B] transition-colors"
-                >
-                  Halal Restaurants
+                  Recipe Scaler &amp; Unit Converter
                 </button>
               </li>
               <li>
                 <button
-                  onClick={() => onNavigate("/directory/butchers")}
+                  onClick={() => onNavigate("/blog")}
                   className="hover:text-[#E7A52B] transition-colors"
                 >
-                  Halal Butchers &amp; Meat Markets
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => onNavigate("/directory/groceries")}
-                  className="hover:text-[#E7A52B] transition-colors"
-                >
-                  Halal Groceries
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => onNavigate("/directory/mosques")}
-                  className="hover:text-[#E7A52B] transition-colors"
-                >
-                  Local Mosques &amp; Jummah
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => onNavigate("/directory/islamic-centers")}
-                  className="hover:text-[#E7A52B] transition-colors"
-                >
-                  Islamic Cultural Centers
+                  Editorial Food Journal
                 </button>
               </li>
             </ul>
@@ -157,7 +157,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   onClick={() => onNavigate("/contact")}
                   className="hover:text-[#E7A52B] transition-colors"
                 >
-                  Contact &amp; Directory Corrections
+                  Contact &amp; Feedback
                 </button>
               </li>
               <li>

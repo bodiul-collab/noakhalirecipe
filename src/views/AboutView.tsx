@@ -89,10 +89,10 @@ export const AboutView: React.FC<{ onNavigate: (route: string) => void }> = ({
                 <Users className="w-5 h-5" />
               </div>
               <h3 className="text-base font-bold text-[#30302F]">
-                4. Community &amp; Local Discovery
+                4. Food Culture &amp; Lifestyle
               </h3>
               <p className="text-xs text-[#77736D] leading-relaxed">
-                Good Halal food extends beyond our own kitchens. Our Halal Directory and AI assistant help families discover neighborhood butchers, authentic restaurants, and community mosques wherever they travel.
+                Good Halal food extends beyond simple instructions. Our comprehensive culinary guides, spice tutorials, and AI assistant help families build confidence and master Halal cooking in every kitchen.
               </p>
             </div>
           </div>

@@ -1,9 +1,7 @@
 {
   "name": "Noakhali Kitchen",
-  "description": "Authentic Halal recipes, regional food guides, Halal restaurant and mosque directory, practical kitchen tools, and ingredient verification.",
-  "requestFramePermissions": [
-    "geolocation"
-  ],
+  "description": "Authentic Halal recipes, regional culinary heritage, food guides, cooking techniques, practical kitchen tools, and ingredient verification.",
+  "requestFramePermissions": [],
   "majorCapabilities": [
     "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
   ]

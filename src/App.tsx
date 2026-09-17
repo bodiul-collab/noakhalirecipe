@@ -11,8 +11,10 @@ import { AddToCollectionModal } from "./components/AddToCollectionModal";
 import { HomeView } from "./views/HomeView";
 import { RecipesView } from "./views/RecipesView";
 import { CategoryView } from "./views/CategoryView";
-import { DirectoryView } from "./views/DirectoryView";
 import { BlogView } from "./views/BlogView";
+import { CookingGuidesView } from "./views/CookingGuidesView";
+import { FoodCultureView } from "./views/FoodCultureView";
+import { HalalPantryView } from "./views/HalalPantryView";
 import { ToolsView } from "./views/ToolsView";
 import { AboutView } from "./views/AboutView";
 import { ContactView } from "./views/ContactView";
@@ -42,6 +44,12 @@ export default function App() {
   const [currentRoute, setCurrentRoute] = useState<string>(() => {
     if (typeof window !== "undefined" && window.location.pathname) {
       const p = window.location.pathname.split("?")[0].split("#")[0].replace(/\/+$/, "");
+      if (p.startsWith("/directory")) {
+        try {
+          window.history.replaceState({}, "", "/recipes");
+        } catch {}
+        return "/recipes";
+      }
       return p || "/";
     }
     return "/";
@@ -58,7 +66,6 @@ export default function App() {
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [assistantOpen, setAssistantOpen] = useState<boolean>(false);
   const [savedDrawerOpen, setSavedDrawerOpen] = useState<boolean>(false);
-  const [directoryRefreshTrigger, setDirectoryRefreshTrigger] = useState<number>(0);
 
   // Theme (default dark) and Mood Density (default tight)
   const [theme, setTheme] = useState<"dark" | "light">(() => {
@@ -156,11 +163,12 @@ export default function App() {
       route = route.slice(0, -1);
     }
 
-    setCurrentRoute(route);
-
+    // Redirect /directory to /recipes
     if (route.startsWith("/directory")) {
-      setDirectoryRefreshTrigger((prev) => prev + 1);
+      route = "/recipes";
     }
+
+    setCurrentRoute(route);
 
     const detailSlug = extractRecipeSlug(route);
     if (detailSlug) {
@@ -393,16 +401,67 @@ export default function App() {
       );
     }
 
-    // Halal Places & Directory
+    // Halal Places & Directory -> Seamlessly Redirect to Recipes
     if (path.startsWith("/directory")) {
-      const dirCat = path.replace(/^\/directory\/?/, "").split("/")[0] || undefined;
       return (
-        <DirectoryView
-          key={`directory-${dirCat || "all"}`}
-          initialCategory={dirCat}
-          onOpenAssistant={() => setAssistantOpen(true)}
+        <RecipesView
           onNavigate={navigate}
-          refreshTrigger={directoryRefreshTrigger}
+          onSelectRecipe={handleSelectRecipe}
+          savedRecipeIds={savedRecipeIds}
+          onToggleSaveRecipe={handleToggleSaveRecipe}
+          collections={collections}
+          onOpenCollections={(r) => setRecipeForCollectionModal(r)}
+        />
+      );
+    }
+
+    // Cooking Guides Hub & Articles
+    if (path === "/guides" || path.startsWith("/guides/") || path.startsWith("/guide/")) {
+      const guideSlug = path.replace(/^\/guides?\/?/, "").split("/")[0] || undefined;
+      return (
+        <CookingGuidesView
+          key={`guide-${guideSlug || "index"}`}
+          initialSlug={guideSlug}
+          onNavigate={navigate}
+          onSelectRecipe={handleSelectRecipe}
+        />
+      );
+    }
+
+    // Food Culture & Regional Heritage Articles
+    if (
+      path === "/culture" ||
+      path.startsWith("/culture/") ||
+      path === "/food-culture" ||
+      path.startsWith("/food-culture/")
+    ) {
+      const cultureSlug =
+        path.replace(/^\/(?:food-)?culture\/?/, "").split("/")[0] || undefined;
+      return (
+        <FoodCultureView
+          key={`culture-${cultureSlug || "index"}`}
+          initialSlug={cultureSlug}
+          onNavigate={navigate}
+          onSelectRecipe={handleSelectRecipe}
+        />
+      );
+    }
+
+    // Halal Pantry & Nutrition Standards
+    if (
+      path === "/pantry" ||
+      path.startsWith("/pantry/") ||
+      path === "/halal-pantry" ||
+      path.startsWith("/halal-pantry/")
+    ) {
+      const pantrySlug =
+        path.replace(/^\/(?:halal-)?pantry\/?/, "").split("/")[0] || undefined;
+      return (
+        <HalalPantryView
+          key={`pantry-${pantrySlug || "index"}`}
+          initialSlug={pantrySlug}
+          onNavigate={navigate}
+          onSelectRecipe={handleSelectRecipe}
         />
       );
     }
@@ -420,13 +479,23 @@ export default function App() {
       );
     }
 
-    // Kitchen Converters & Tools
-    if (path.startsWith("/tools") || path === "/converter" || path === "/scaler") {
+    // Kitchen Converters, Equipment & Tools
+    if (
+      path.startsWith("/tools") ||
+      path === "/converter" ||
+      path === "/scaler" ||
+      path === "/equipment" ||
+      path === "/ecodes"
+    ) {
       const initialTab =
-        path === "/converter" || path === "/tools/converter"
+        path === "/equipment" || path === "/tools/equipment"
+          ? "equipment"
+          : path === "/converter" || path === "/tools/converter"
           ? "converter"
           : path === "/scaler" || path === "/tools/scaler"
           ? "scaler"
+          : path === "/ecodes" || path === "/tools/ecodes"
+          ? "ecodes"
           : undefined;
 
       return (

@@ -1,5 +1,5 @@
 export interface Env {
-  GOOGLE_MAPS_API_KEY?: string;
+  GEMINI_API_KEY?: string;
   [key: string]: any;
 }
 
@@ -21,16 +21,11 @@ export async function onRequest(context: EventContext): Promise<Response> {
     return new Response(null, { status: 204, headers: corsHeaders });
   }
 
-  const hasMapsKey = Boolean(context.env.GOOGLE_MAPS_API_KEY);
-
   return new Response(
     JSON.stringify({
       status: "ok",
       timestamp: new Date().toISOString(),
       platform: "cloudflare_pages_functions",
-      services: {
-        placesApiConfigured: hasMapsKey,
-      },
     }),
     {
       status: 200,

@@ -3,6 +3,539 @@ import { IMAGES } from "./assets";
 
 export const RECIPES: Recipe[] = [
   {
+    id: "rec-bengali-beef-tehari-dhaka",
+    slug: "bengali-beef-tehari",
+    title: "Bengali Beef Tehari (পুরান ঢাকার বিফ তেহারি)",
+    category: "Halal Beef",
+    categorySlug: "halal-beef",
+    cuisine: "Old Dhaka & Bengali Heritage",
+    description:
+      "Legendary Old Dhaka style Beef Tehari (পুরান ঢাকার বিফ তেহারি)—aromatic small-grain Chinigura rice cooked in pungent mustard oil with tender bite-sized halal beef morsels, golden potatoes, whole green chilies, and Shahi mace-nutmeg aromatics.",
+    introStory:
+      "Walking through the narrow, bustling alleys of Puran Dhaka (Old Dhaka)—from Chawkbazar to Nazira Bazar—the unmistakable, sharp perfume of mustard oil and aromatic Chinigura rice simmering in massive copper handis is the legendary herald of Beef Tehari (পুরান ঢাকার বিফ তেহারি). Unlike traditional layered biryani cooked with ghee, authentic Bengali Tehari is uniquely cooked in pungent cold-pressed mustard oil with bite-sized morsels of tender, bone-in or marbled Halal beef and tiny golden fried potatoes. The fragrant small-grain aromatic rice absorbs all the rendered beef jus, mustard oil pungency, crushed black pepper, toasted mace, and whole green chilies. Served piping hot with a crunchy cucumber, carrot, and onion salad, a juicy wedge of Gondhoraj lime, and crisp green chilies, it is the ultimate comfort food and living street culinary heritage of Bangladesh.",
+    heroImage: IMAGES.bengaliBeefTehari,
+    prepTimeMinutes: 25,
+    cookTimeMinutes: 50,
+    totalTimeMinutes: 75,
+    servings: 6,
+    difficulty: "Medium",
+    calories: 560,
+    rating: 4.99,
+    reviewCount: 184,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified. Prepared exclusively with zabiha hand-slaughtered beef cuts, pure single-origin cold-pressed mustard oil, and authentic whole spices. Verified completely free from artificial bouillons, synthetic tenderizers, or non-halal animal fats.",
+    potentialCautionNotes:
+      "Mustard oil is the soul of authentic Old Dhaka Tehari; heating it to a gentle smoking point before cooking mellows its sharpness into rich nutty warmth. Whole green chilies provide fragrance without blistering heat—keep stems intact unless higher spice is preferred.",
+    ingredients: [
+      { amount: "2 lbs / 900g", unit: "cubes", name: "Halal beef chuck or stew meat", notes: "cut into small bite-sized 1-inch pieces with a little marbling" },
+      { amount: "3", unit: "cups", name: "Aromatic small-grain Chinigura or Kalijeera rice", notes: "washed, soaked for 20 minutes, and thoroughly drained" },
+      { amount: "3", unit: "medium", name: "Potatoes", notes: "peeled and quartered into bite-sized chunks" },
+      { amount: "1/2", unit: "cup", name: "Cold-pressed mustard oil", notes: "essential for authentic Puran Dhaka flavor and aroma" },
+      { amount: "2", unit: "tbsp", name: "Pure cow ghee", notes: "for dum finishing" },
+      { amount: "2.5", unit: "cups", name: "Red onions", notes: "thinly sliced" },
+      { amount: "2", unit: "tbsp", name: "Fresh ginger paste", notes: "freshly grated" },
+      { amount: "2", unit: "tbsp", name: "Fresh garlic paste", notes: "crushed fine" },
+      { amount: "1/2", unit: "cup", name: "Plain whole milk yogurt", notes: "whisked smoothly" },
+      { amount: "4", unit: "pods", name: "Green cardamom", notes: "lightly bruised" },
+      { amount: "2", unit: "pods", name: "Black cardamom" },
+      { amount: "2", unit: "sticks", name: "Cinnamon bark (2 inches each)" },
+      { amount: "5", unit: "whole", name: "Cloves" },
+      { amount: "2", unit: "whole", name: "Bay leaves (Tejpata)" },
+      { amount: "1", unit: "tsp", name: "Black peppercorns (Gol Morich)", notes: "freshly coarse crushed" },
+      { amount: "1/2", unit: "tsp", name: "Ground mace (Javitri) & Nutmeg (Jaiphal) powder", notes: "the secret Shahi Tehari aroma" },
+      { amount: "1", unit: "tbsp", name: "Roasted cumin powder (Bhuna Jeera)" },
+      { amount: "1", unit: "tbsp", name: "Coriander powder" },
+      { amount: "1", unit: "tsp", name: "Kashmiri red chili powder", notes: "for warm color" },
+      { amount: "10-12", unit: "whole", name: "Fresh green chilies", notes: "washed, stems intact" },
+      { amount: "1", unit: "tbsp", name: "Fine sea salt", notes: "divided for beef and rice, to taste" },
+      { amount: "5", unit: "cups", name: "Boiling water", notes: "or light homemade Halal beef bone broth" },
+      { amount: "1", unit: "tbsp", name: "Kewra water (screwpine essence)", notes: "for classic Mughlai-Dhaka fragrance" },
+      { amount: "1/4", unit: "cup", name: "Golden fried onions (Beresta)", notes: "for garnish" },
+    ],
+    substitutions: [
+      {
+        original: "Chinigura / Kalijeera rice",
+        substitute: "Aged long-grain Sella Basmati rice",
+        notes: "Chinigura or Kalijeera (often called 'baby basmati') is the traditional choice in Bengal for its intense sweet floral aroma. If using Basmati, reduce water to 1:1.75 ratio.",
+      },
+      {
+        original: "Mustard oil",
+        substitute: "Pure cow ghee or sunflower oil with 1 tsp mustard paste",
+        notes: "Cold-pressed mustard oil is the non-negotiable hallmark of authentic Puran Dhaka Tehari.",
+      },
+      {
+        original: "Beef",
+        substitute: "Halal mutton or bone-in goat meat",
+        notes: "Mutton Tehari is also beloved; increase simmering time by 15 minutes until meat is fork-tender.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Marinate the Beef",
+        instruction:
+          "In a mixing bowl, combine the bite-sized beef cubes with whisked yogurt, half of the ginger paste, half of the garlic paste, 1/2 tsp crushed black pepper, 1/2 tsp roasted cumin, and 1 tsp salt. Mix thoroughly and set aside to marinate for 25–30 minutes.",
+      },
+      {
+        step: 2,
+        title: "Fry the Potatoes to Golden Crisp",
+        instruction:
+          "Heat 2 tablespoons of the mustard oil in a heavy-bottomed Dutch oven or handi until it gently smokes, then reduce flame to medium. Add the quartered potato chunks with a pinch of salt. Fry for 4–5 minutes until golden on all sides. Remove with a slotted spoon and set aside.",
+      },
+      {
+        step: 3,
+        title: "Temper Spices & Caramelize Onions",
+        instruction:
+          "Pour the remaining mustard oil into the pot. Add the bay leaves, green and black cardamoms, cinnamon bark, and cloves. Allow them to crackle and release aromatics for 30 seconds. Add the sliced red onions and sauté over medium heat for 10–12 minutes until deeply caramelized and golden brown.",
+      },
+      {
+        step: 4,
+        title: "Braise the Beef until Succulent",
+        instruction:
+          "Add the remaining ginger-garlic paste, coriander powder, Kashmiri chili powder, mace, and nutmeg. Sauté for 2 minutes with 2 tablespoons of warm water to bloom the spices. Add the marinated beef and sear on medium-high heat for 8–10 minutes ('koshano') until the meat changes color and releases its natural juices. Lower the heat, cover tightly, and simmer for 35–40 minutes in its own rich juices until the beef is succulent and tender, with fragrant oil separating along the edges.",
+      },
+      {
+        step: 5,
+        title: "Toast the Fragrant Chinigura Rice",
+        instruction:
+          "Using a slotted spoon, lift the cooked tender beef and set it aside in a bowl, leaving the fragrant spiced beef oil and rendered juices in the pot. Add the soaked and drained Chinigura rice directly into the hot seasoned oil. Roast gently over medium heat for 3–4 minutes, stirring carefully so grains do not break, until the rice is glossy and begins to crackle like paper.",
+      },
+      {
+        step: 6,
+        title: "Add Boiling Water & Cook Rice",
+        instruction:
+          "Pour in 5 cups of boiling hot water and the remaining salt (approx. 1.5 tsp). Stir once, increase heat to high, and bring to a rapid rolling boil. Cook vigorously uncovered for 5–6 minutes until the water is absorbed to the level of the rice and small steam pockets appear.",
+      },
+      {
+        step: 7,
+        title: "Fold in Beef, Potatoes & Green Chilies",
+        instruction:
+          "Gently fold the cooked tender beef, fried potatoes, and all 10–12 whole green chilies into the bubbling rice. Drizzle the 2 tablespoons of pure cow ghee and sprinkle the kewra water across the surface.",
+      },
+      {
+        step: 8,
+        title: "Slow Steam on 'Dum'",
+        instruction:
+          "Cover the pot tightly with heavy aluminum foil and place a heavy lid on top to trap all steam. Reduce heat to the absolute lowest setting (or place a flat iron tawa under the pot) and cook on 'dum' for 18–20 minutes without lifting the lid.",
+      },
+      {
+        step: 9,
+        title: "Rest, Fluff & Garnish",
+        instruction:
+          "Turn off the heat and allow the handi to rest undisturbed for 10 minutes. Uncover and gently fluff the rice with a wide spatula, lifting from the bottom to evenly distribute the beef, potatoes, and whole chilies without mashing the rice grains. Scatter crispy golden beresta on top and serve steaming hot.",
+      },
+    ],
+    chefNotes: [
+      "The distinguishing mark of authentic Old Dhaka Tehari is the cut of meat: small bite-sized 1-inch cubes ensure every forkful of fragrant rice is studded with tender meat.",
+      "Thoroughly draining the soaked Chinigura rice before toasting it in the spiced beef oil prevents starch gummy texture and keeps every individual grain fluffy and separate.",
+      "The combination of pure mustard oil, whole green chilies, and a hint of mace-nutmeg creates the inimitable Old Dhaka street stall fragrance.",
+    ],
+    nutrition: {
+      calories: 560,
+      proteinGrams: 32,
+      carbsGrams: 62,
+      fatGrams: 22,
+      fiberGrams: 4,
+      sodiumMg: 680,
+    },
+    storageInstructions:
+      "Refrigerate in an airtight container for up to 3 days. Beef Tehari reheats exceptionally well—steam in a microwave with a damp paper towel or warm on the stovetop in a covered pan with 2 tablespoons of water.",
+    freezingInstructions:
+      "Freezes well for up to 1 month in portioned freezer-safe containers. Thaw overnight in the refrigerator and steam thoroughly before serving.",
+    servingSuggestions: [
+      "Serve piping hot on a pastel dinner plate accompanied by a crunchy salad of julienned cucumber, shredded carrot, ripe tomato, and red onions tossed with lemon juice.",
+      "Garnish with a fresh whole green chili and a juicy wedge of lime or Gondhoraj lebu.",
+      "Pair with traditional chilled Old Dhaka Borhani (spiced savory yogurt drink) or Shahi Jorda for a festive weekend banquet.",
+    ],
+    faqs: [
+      {
+        question: "What is the key difference between Biryani and Tehari?",
+        answer:
+          "Biryani is traditionally layered and cooked with ghee, larger bone-in meat cuts, and saffron milk. Tehari is an aromatic one-pot heritage dish cooked in mustard oil with small bite-sized beef morsels and small-grain Chinigura/Kalijeera rice.",
+      },
+      {
+        question: "Why is Chinigura or Kalijeera rice used instead of Basmati?",
+        answer:
+          "In Bangladesh, Chinigura and Kalijeera (known as 'baby basmati') are revered for their intoxicating floral aroma and delicate texture, which soak up the mustard oil and beef juices far better than long-grain rice.",
+      },
+      {
+        question: "Can I prepare this in an Instant Pot?",
+        answer:
+          "Yes! Sauté the beef on Sauté mode, add rice, 4.5 cups hot water, fried potatoes, and green chilies. Seal and pressure cook on High for 5 minutes, followed by 10 minutes natural release.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Regional Culinary Director & Heritage Specialist",
+    },
+    updatedDate: "September 17, 2026",
+    tags: [
+      "Bengali Beef Tehari",
+      "পুরান ঢাকার বিফ তেহারি",
+      "Beef Tehari",
+      "Dhaka Tehari",
+      "Chinigura Rice",
+      "Halal Beef",
+      "Halal Rice & Curry",
+      "One-Pot Meal",
+      "Bengali Cuisine",
+      "Bangladeshi Street Food",
+      "Mustard Oil",
+      "Old Dhaka Heritage",
+    ],
+  },
+  {
+    id: "rec-bengali-fish-curry-macher-jhol",
+    slug: "bengali-fish-curry-macher-jhol",
+    title: "Bengali fish curry (বাঙালি মাছের ঝোল)",
+    category: "Halal Fish & Seafood",
+    categorySlug: "halal-seafood",
+    cuisine: "Traditional Bengali / Bangladeshi Home Cooking",
+    description:
+      "Classic Bengali homestyle fish curry (বাঙালি মাছের ঝোল)—crisp pan-fried fresh fish steaks, tender cauliflower florets, and potato wedges gently simmered in a light, fragrant cumin and ginger broth.",
+    introStory:
+      "In Bengali culture, the phrase 'Maache-Bhaate Bangali' (Fish and rice make a Bengali) is not just a proverb—it is a way of life. Among all preparations, none is more iconic or comforting than 'Macher Jhol' (বাঙালি মাছের ঝোল). Served on traditional brass dinner plates alongside steaming white rice, this soul-soothing curry features fresh freshwater fish steaks (such as Rui, Katla, or Salmon) lightly rubbed with turmeric and sea salt, flash-fried to golden crispness in pure mustard oil, and simmered with tender potato wedges and seasonal cauliflower florets. Unlike thick, rich gravies, a classic Macher Jhol is a light, aromatic broth infused with blooming cumin seeds (jeera), whole green chilies, grated ginger, and turmeric. It is soothing, easy to digest, and celebrated for generations across every Bengali home.",
+    heroImage: IMAGES.bengaliFishCurry,
+    prepTimeMinutes: 15,
+    cookTimeMinutes: 25,
+    totalTimeMinutes: 40,
+    servings: 4,
+    difficulty: "Easy",
+    calories: 320,
+    rating: 4.97,
+    reviewCount: 138,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified. Made exclusively with fresh scaled fish (Rui/Katla/Salmon), pure single-origin spices, fresh produce, and cold-pressed mustard oil. Verified completely free of animal fats, cross-contaminants, or artificial flavoring cubes.",
+    potentialCautionNotes:
+      "Bengali freshwater carp steaks (Rui/Katla) contain fine Y-shaped pin bones; eat mindfully by flaking the fish with fingers. Alternatively, boneless salmon or cod fillets can be used.",
+    ingredients: [
+      { amount: "4-5", unit: "large pieces", name: "Fresh Rohu (Rui), Katla, or Salmon steaks", notes: "washed, scaled, and patted dry (approx. 600g / 1.3 lbs)" },
+      { amount: "1.5", unit: "cups", name: "Cauliflower florets", notes: "cut into medium bite-sized pieces" },
+      { amount: "2", unit: "medium", name: "Potatoes", notes: "peeled and sliced into lengthwise wedges" },
+      { amount: "4", unit: "tbsp", name: "Cold-pressed mustard oil", notes: "divided for frying and gravy" },
+      { amount: "1", unit: "tsp", name: "Whole cumin seeds (Jeera)", notes: "for tempering" },
+      { amount: "1", unit: "whole", name: "Bay leaf (Tejpata)" },
+      { amount: "1", unit: "tbsp", name: "Fresh ginger paste", notes: "freshly grated or crushed" },
+      { amount: "1.5", unit: "tsp", name: "Turmeric powder", notes: "divided for fish seasoning and broth" },
+      { amount: "1", unit: "tsp", name: "Kashmiri red chili powder", notes: "for beautiful red-gold color" },
+      { amount: "1.5", unit: "tsp", name: "Ground cumin powder (Jeera Gura)" },
+      { amount: "1", unit: "tsp", name: "Ground coriander powder" },
+      { amount: "5-6", unit: "whole", name: "Fresh green chilies", notes: "slit lengthwise" },
+      { amount: "2.5", unit: "cups", name: "Warm water", notes: "for the comforting light broth" },
+      { amount: "1.5", unit: "tsp", name: "Fine sea salt", notes: "to taste" },
+      { amount: "2", unit: "tbsp", name: "Fresh cilantro / coriander leaves", notes: "finely chopped for garnish" },
+      { amount: "1/2", unit: "tsp", name: "Roasted cumin powder (Bhuna Jeera)", notes: "for finishing aroma" },
+    ],
+    substitutions: [
+      {
+        original: "Rohu / Katla (Rui)",
+        substitute: "Wild Salmon steaks, Rainbow Trout, Seabass, or Cod fillets",
+        notes: "Firm, scaled fish steaks hold their shape beautifully in the light broth.",
+      },
+      {
+        original: "Mustard oil",
+        substitute: "Sunflower or avocado oil with a pinch of crushed mustard seeds",
+        notes: "Mustard oil provides the classic sharp, golden, nutty undertone characteristic of Bengali cooking.",
+      },
+      {
+        original: "Cauliflower",
+        substitute: "Pointed gourd (Potol), raw green papaya (Pepe), or yardlong beans (Borboti)",
+        notes: "Seasonal vegetables absorb the flavorful fish juices and spiced broth.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Marinate the Fish Steaks",
+        instruction:
+          "Pat the cleaned fish steaks dry with paper towels. Rub evenly with 1/2 tsp turmeric powder and 1/2 tsp salt. Allow to rest at room temperature for 10 minutes.",
+      },
+      {
+        step: 2,
+        title: "Pan-Fry Fish to Golden Crisp",
+        instruction:
+          "Heat 3 tablespoons of mustard oil in a wide heavy skillet or kadai until it begins to smoke gently, then reduce the flame to medium. Slide the fish steaks in carefully and fry for 2–3 minutes per side until the edges turn golden and crisp. Transfer onto a warm plate (do not overfry, keeping the fish flaky and moist inside).",
+      },
+      {
+        step: 3,
+        title: "Sauté Cauliflower & Potatoes",
+        instruction:
+          "In the same hot oil, add the cauliflower florets and potato wedges with a pinch of turmeric and salt. Sauté over medium heat for 4–5 minutes until lightly browned on the edges. Remove with a slotted spoon and set aside with the fish.",
+      },
+      {
+        step: 4,
+        title: "Temper Aromatic Spices",
+        instruction:
+          "Add the remaining tablespoon of mustard oil to the pan if needed. Add whole cumin seeds and the bay leaf. Let them sizzle for 20 seconds until fragrant.",
+      },
+      {
+        step: 5,
+        title: "Bloom the Ginger & Ground Spices",
+        instruction:
+          "In a small cup, mix the ginger paste, cumin powder, coriander powder, Kashmiri chili powder, 1/2 tsp turmeric powder, and 3 tablespoons of warm water to create a smooth spice paste. Pour into the hot oil and sauté over low heat for 2 minutes until the raw aroma mellows and oil separates.",
+      },
+      {
+        step: 6,
+        title: "Simmer Vegetables in the Jhol",
+        instruction:
+          "Pour in 2.5 cups of warm water and stir in the salt. Bring the gravy to a rolling boil, then add the sautéed potato wedges and cauliflower florets. Cover and cook over medium heat for 7–8 minutes until the vegetables are nearly fork-tender.",
+      },
+      {
+        step: 7,
+        title: "Add Fish & Slit Green Chilies",
+        instruction:
+          "Gently slide the pan-fried fish steaks into the simmering broth. Scatter the slit green chilies over top. Simmer uncovered over medium heat for 5–6 minutes so the fish soaks in the cumin and ginger broth.",
+      },
+      {
+        step: 8,
+        title: "Garnish & Rest",
+        instruction:
+          "Turn off the heat. Sprinkle the freshly chopped cilantro and roasted cumin powder over the curry. Cover with a lid and let rest undisturbed for 5 minutes before serving so the flavors settle harmoniously.",
+      },
+    ],
+    chefNotes: [
+      "Traditional Bengali Macher Jhol is defined by its lightness—it relies on ginger, whole cumin, and pure mustard oil rather than thick onions or heavy cream.",
+      "Lightly frying the cauliflower florets and potato wedges beforehand keeps them intact during simmering without breaking into the broth.",
+      "The green chilies added at the end impart a fresh floral aroma and subtle warmth without overpowering the delicate fish.",
+    ],
+    nutrition: {
+      calories: 320,
+      proteinGrams: 34,
+      carbsGrams: 14,
+      fatGrams: 14,
+      fiberGrams: 3,
+      sodiumMg: 520,
+    },
+    storageInstructions:
+      "Refrigerate in an airtight glass container for up to 2 days. The fish continues to absorb the cumin-ginger gravy, becoming even more flavorful. Reheat gently on the stovetop with 2 tablespoons of water.",
+    freezingInstructions:
+      "Due to the fresh fish and tender vegetables (potatoes and cauliflower become watery upon thawing), freezing is not recommended. Best enjoyed fresh or the next day.",
+    servingSuggestions: [
+      "Serve piping hot over steaming long-grain Basmati or Kalijeera rice on traditional kansa plates.",
+      "Accompany with a juicy wedge of fragrant Gondhoraj or Meyer lemon and an extra green chili on the side.",
+      "Pair with a starter of bitter melon fry (Korola Bhaji) or spiced red amaranth greens (Lal Shak) for the quintessential Bengali lunch experience.",
+    ],
+    faqs: [
+      {
+        question: "Can I use boneless fish fillets instead of bone-in steaks?",
+        answer:
+          "Yes! Boneless wild salmon, cod, sea bass, or tilapia fillets work wonderfully. Reduce the pan-frying time to 1.5–2 minutes per side so the delicate flesh remains tender.",
+      },
+      {
+        question: "What does 'Jhol' mean in Bengali cooking?",
+        answer:
+          "'Jhol' refers to a light, spiced, soupy gravy in Bengali cuisine that is comforting, wholesome, and specially crafted to soak into steaming white rice.",
+      },
+      {
+        question: "Why are the fish and vegetables fried first before simmering?",
+        answer:
+          "Flash-frying the fish and vegetables in hot mustard oil seals the surface, prevents the fish from breaking in the boiling broth, and imparts that signature golden roasted aroma.",
+      },
+    ],
+    author: {
+      name: "Chef Sharmin Sultana",
+      role: "Noakhali & Bengali Heritage Cuisine Master",
+    },
+    updatedDate: "September 17, 2026",
+    tags: [
+      "Bengali Fish Curry",
+      "বাঙালি মাছের ঝোল",
+      "Macher Jhol",
+      "Rui Macher Jhol",
+      "Aloo Fulkopi Diye Macher Jhol",
+      "Halal Fish & Seafood",
+      "Halal Rice & Curry",
+      "Comfort Food",
+      "Bengali Cuisine",
+      "Mustard Oil",
+      "Traditional",
+      "Gluten-Free",
+    ],
+  },
+  {
+    id: "rec-bengali-chicken-curry-jhol",
+    slug: "bengali-chicken-curry-murgir-jhol",
+    title: "Bengali chicken curry (বাঙালি মুরগির মাংসের ঝোল)",
+    category: "Halal Chicken",
+    categorySlug: "halal-chicken",
+    cuisine: "Traditional Bengali / Bangladeshi Home Cooking",
+    description:
+      "Classic Bengali homestyle chicken curry (Murgir Mangsher Jhol)—succulent bone-in chicken slow-braised with golden fried potatoes in an aromatic spiced onion-ginger gravy with mustard oil, cardamom, and roasted cumin.",
+    introStory:
+      "In every Bengali household, weekend afternoons are synonymous with the intoxicating aroma of 'Murgir Mangsher Jhol' (বাঙালি মুরগির মাংসের ঝোল) wafting from the kitchen. This beloved dish is not a thick restaurant curry, but a soul-warming, thin-to-medium spiced broth ('jhol') that clings perfectly to steaming hot white rice. Traditionally cooked in fragrant cold-pressed mustard oil with chunky halves of golden-fried potatoes ('aloo'), caramelized sliced onions, freshly crushed ginger-garlic paste, and whole aromatic garam masalas (cardamom, cinnamon, cloves, and bay leaf), this dish strikes the timeless balance between comforting lightness and deep savory spice. The tender chicken renders its juices into the bubbling broth while the potatoes absorb all the rich seasonings, making them just as sought-after at the table as the meat itself.",
+    heroImage: IMAGES.bengaliChickenCurry,
+    prepTimeMinutes: 20,
+    cookTimeMinutes: 40,
+    totalTimeMinutes: 60,
+    servings: 5,
+    difficulty: "Easy",
+    calories: 380,
+    rating: 4.98,
+    reviewCount: 152,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified. Prepared using zabiha hand-slaughtered bone-in chicken, pure single-origin spices, and cold-pressed mustard oil. Completely free from commercial stock cubes containing non-halal gelatin or questionable additives.",
+    potentialCautionNotes:
+      "For an authentic jhol consistency, resist the urge to over-reduce the gravy; it is meant to be a fluid, comforting broth rather than a thick dry bhuna. If sensitive to heat, reduce green chilies to 2–3.",
+    ingredients: [
+      { amount: "2.5 lbs / 1.2 kg", unit: "whole pieces", name: "Halal bone-in chicken (drumsticks & thighs)", notes: "cut into medium curry pieces, washed and drained" },
+      { amount: "3", unit: "medium", name: "Potatoes (Russet or Yukon Gold)", notes: "peeled and halved into large chunks" },
+      { amount: "1/3", unit: "cup", name: "Cold-pressed mustard oil", notes: "for authentic aroma and golden color" },
+      { amount: "2", unit: "large", name: "Red onions", notes: "thinly sliced" },
+      { amount: "2", unit: "tbsp", name: "Onion paste", notes: "adds body and sweetness to the jhol" },
+      { amount: "1.5", unit: "tbsp", name: "Ginger paste", notes: "freshly grated or ground" },
+      { amount: "1.5", unit: "tbsp", name: "Garlic paste", notes: "freshly crushed" },
+      { amount: "2", unit: "whole", name: "Bay leaves (Tejpata)" },
+      { amount: "4", unit: "pods", name: "Green cardamom", notes: "lightly crushed" },
+      { amount: "1", unit: "stick", name: "Cinnamon bark (2 inches)" },
+      { amount: "4", unit: "whole", name: "Cloves" },
+      { amount: "1.5", unit: "tsp", name: "Turmeric powder", notes: "divided for potato frying and curry" },
+      { amount: "1.5", unit: "tsp", name: "Kashmiri red chili powder", notes: "for rich red-gold color" },
+      { amount: "1/2", unit: "tsp", name: "Spicy red chili powder", notes: "adjust to heat preference" },
+      { amount: "1", unit: "tbsp", name: "Roasted cumin powder (Bhuna Jeera)" },
+      { amount: "1", unit: "tbsp", name: "Coriander powder" },
+      { amount: "5", unit: "whole", name: "Fresh green chilies", notes: "slit lengthwise" },
+      { amount: "1/2", unit: "tsp", name: "Bengali Shahi Garam Masala powder" },
+      { amount: "1.5", unit: "tsp", name: "Fine sea salt", notes: "to taste" },
+      { amount: "3", unit: "cups", name: "Boiling water", notes: "essential for tender meat and velvety broth" },
+      { amount: "2", unit: "tbsp", name: "Fresh cilantro / coriander leaves", notes: "finely chopped for garnish" },
+      { amount: "1", unit: "tsp", name: "Pure cow ghee", notes: "optional finishing drizzle" },
+    ],
+    substitutions: [
+      {
+        original: "Mustard oil",
+        substitute: "Sunflower oil or avocado oil with 1/2 tsp crushed mustard seeds",
+        notes: "Mustard oil provides the classic signature pungency and golden hue of traditional Bengali curries.",
+      },
+      {
+        original: "Bone-in chicken",
+        substitute: "Boneless chicken thighs cut into 2-inch chunks",
+        notes: "Reduce simmer time by 8–10 minutes so boneless meat remains succulent.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Marinate the Chicken",
+        instruction:
+          "In a bowl, toss the drained chicken pieces with 1/2 tsp turmeric powder, 1/2 tsp salt, and 1 tsp mustard oil. Allow to marinate at room temperature for 15 minutes while preparing aromatics.",
+      },
+      {
+        step: 2,
+        title: "Fry the Potatoes to Golden Crisp",
+        instruction:
+          "Heat the mustard oil in a heavy-bottomed kadai or Dutch oven over medium-high heat until it reaches a gentle smoke point, then reduce heat slightly. Add the halved potatoes with a pinch of turmeric and salt. Fry for 4–5 minutes until nicely golden-crusted on all sides. Remove with a slotted spoon and set aside.",
+      },
+      {
+        step: 3,
+        title: "Temper Whole Spices",
+        instruction:
+          "In the remaining fragrant hot oil, add bay leaves, crushed green cardamoms, cinnamon stick, and cloves. Let them sizzle and release their sweet essential oils for 30 seconds.",
+      },
+      {
+        step: 4,
+        title: "Caramelize Sliced Onions",
+        instruction:
+          "Add the thinly sliced onions into the kadai. Sauté over medium heat for 8–10 minutes, stirring regularly, until translucent and caramelized to a rich golden brown.",
+      },
+      {
+        step: 5,
+        title: "Cook the Masala Base ('Koshano')",
+        instruction:
+          "Stir in the ginger paste, garlic paste, and onion paste along with 2 tbsp of warm water to prevent scorching. Sauté for 3–4 minutes until the raw pungent smell disappears. Add the coriander powder, roasted cumin powder, Kashmiri chili powder, spicy chili powder, remaining turmeric, and salt. Cook on medium heat for 3–4 minutes until the oil separates beautifully from the spice paste.",
+      },
+      {
+        step: 6,
+        title: "Bhuna the Chicken",
+        instruction:
+          "Add the marinated chicken pieces to the kadai. Sauté vigorously on medium-high heat ('koshano') for 8–10 minutes, turning constantly to sear the meat and ensure the fragrant red-gold masala clings generously to every chicken piece.",
+      },
+      {
+        step: 7,
+        title: "Add Potatoes & Pour Boiling Water",
+        instruction:
+          "Add the fried golden potatoes into the kadai. Pour in 3 cups of boiling hot water (using boiling water prevents the chicken fibers from seizing and keeps the gravy emulsified). Drop in the slit green chilies.",
+      },
+      {
+        step: 8,
+        title: "Simmer into Comforting Jhol",
+        instruction:
+          "Bring to a rolling boil, then reduce heat to medium-low. Cover tightly with a heavy lid and simmer for 20–22 minutes, until the chicken is tender to the bone and the potatoes are melt-in-your-mouth soft.",
+      },
+      {
+        step: 9,
+        title: "Garnish & Rest",
+        instruction:
+          "Uncover and sprinkle Bengali garam masala powder, a drizzle of pure ghee, and finely chopped fresh cilantro. Turn off the heat, cover the pot, and let it rest undisturbed for 10 minutes before serving. This allows the golden spiced oil ('tori') to float to the surface.",
+      },
+    ],
+    chefNotes: [
+      "Frying the potato chunks in turmeric and mustard oil creates a protective crust that prevents them from dissolving in the simmering jhol, while infusing the starches with flavor.",
+      "Always add boiling water when making the jhol. Adding cold water drops the pot's temperature abruptly, making chicken meat tight and rubbery.",
+      "The slit green chilies added during simmering impart fresh fruity fragrance and gentle heat rather than harsh pungency.",
+    ],
+    nutrition: {
+      calories: 380,
+      proteinGrams: 36,
+      carbsGrams: 16,
+      fatGrams: 18,
+      fiberGrams: 3,
+      sodiumMg: 590,
+    },
+    storageInstructions:
+      "Refrigerate in an airtight glass container for up to 3 days. Like all good curries, this jhol tastes even more incredible the next day as the potatoes absorb the spiced sauce. Reheat gently on the stove with a splash of water.",
+    freezingInstructions:
+      "You can freeze the chicken curry without potatoes for up to 2 months. Potatoes become mealy when frozen, so it is best to add freshly boiled or fried potatoes when reheating.",
+    servingSuggestions: [
+      "Serve piping hot with steamed Chinigura, Kalijeera, or Basmati rice, freshly sliced red onions, and a thick wedge of fragrant Gondhoraj or Meyer lemon.",
+      "Pair with hot puffy Bengali luchis or ghee parathas for a traditional Sunday morning feast.",
+      "Accompany with crispy fried eggplant slices (Begun Bhaja) or crunchy aloo bhaja for complementary textures.",
+    ],
+    faqs: [
+      {
+        question: "What does 'Jhol' mean in Bengali cooking?",
+        answer:
+          "'Jhol' translates to a light, spiced, soupy gravy in Bengali cuisine. Unlike heavy restaurant curries or thick dry bhunas, a jhol is comforting, easy to digest, and custom-made to soak into hot white rice.",
+      },
+      {
+        question: "Can this recipe be made in a pressure cooker or Instant Pot?",
+        answer:
+          "Yes! Complete steps 1 to 6 in the Instant Pot on Sauté mode. Add the fried potatoes, 2.5 cups of water, and green chilies. Pressure cook on HIGH for 8 minutes, followed by 5 minutes of natural release then manual release.",
+      },
+      {
+        question: "Can I use skin-on chicken?",
+        answer:
+          "Traditionally, Bengali chicken curry uses skinless bone-in chicken. However, skin-on chicken can be used; just skim any excess rendered fat before serving.",
+      },
+    ],
+    author: {
+      name: "Chef Sharmin Sultana",
+      role: "Noakhali & Bengali Heritage Cuisine Master",
+    },
+    updatedDate: "September 17, 2026",
+    tags: [
+      "Bengali Chicken Curry",
+      "বাঙালি মুরগির মাংসের ঝোল",
+      "Murgir Jhol",
+      "Halal Chicken",
+      "Halal Rice & Curry",
+      "Comfort Food",
+      "Bengali Cuisine",
+      "Potato Curry",
+      "Mustard Oil",
+      "Bangladeshi Heritage",
+      "Weekend Special",
+    ],
+  },
+  {
     id: "rec-lahori-chicken-chargha-roast",
     slug: "authentic-lahori-chicken-chargha",
     title: "Chicken Chargha (لاہوری چکن چرغہ)",
@@ -1880,16 +2413,16 @@ export const RECIPES: Recipe[] = [
   },
   {
     id: "rec-1",
-    slug: "halal-chicken-biryani",
-    title: "Signature Halal Chicken Dum Biryani",
+    slug: "chicken-biryani",
+    title: "Chicken Biryani (চিকেন বিরিয়ানি)",
     category: "Halal Chicken",
     categorySlug: "halal-chicken",
-    cuisine: "South Asian / Bengali",
+    cuisine: "South Asian / Bengali Heritage",
     description:
-      "A fragrant, layered masterpiece made with aged basmati rice, tender spiced Halal chicken, golden saffron milk, whole saffron potatoes, and sweet crispy fried beresta onions.",
+      "A royal masterpiece of layered Chicken Biryani (চিকেন বিরিয়ানি)—succulent bone-in chicken drumsticks marinated in spiced yogurt, layered with saffron-infused aged basmati rice, crispy fried onions (beresta), fresh mint, and whole star anise, slow-cooked on dum in a traditional handi.",
     introStory:
-      "Dum biryani represents the heart of celebratory cooking across Muslim households in Bengal and South Asia. This recipe preserves the traditional slow-cooking 'dum' technique where marinated halal chicken and partially boiled aromatic basmati steam together under a sealed lid. Every grain is infused with whole mace, green cardamom, star anise, and fragrant kewra water.",
-    heroImage: IMAGES.heroBiryani,
+      "Chicken Biryani (চিকেন বিরিয়ানি) is the undisputed crown jewel of celebratory dining across South Asian and Bengali heritage households. Preserving the legendary slow-cooking 'dum' method, tender bone-in chicken drumsticks are marinated in a spiced whole-milk yogurt infused with freshly grated ginger, garlic, Kashmiri chili, and aromatic Shahi garam masala. Partially parboiled aged 1121 long-grain basmati rice is layered atop the seared spiced chicken, showered with saffron-bloomed warm milk, pure cow ghee, golden caramelized fried onions (beresta), fresh mint leaves, and whole fragrant spices including star anise, green cardamom, and cinnamon bark. Sealed tightly and slow-steamed over gentle heat, the steam carries the royal perfumes through every single feather-light grain of rice. Served straight from the copper handi with chilled cucumber-mint raita and sliced red onion rings, this is banquet luxury at its finest.",
+    heroImage: IMAGES.chickenBiryani,
     prepTimeMinutes: 30,
     cookTimeMinutes: 45,
     totalTimeMinutes: 75,
@@ -1915,6 +2448,7 @@ export const RECIPES: Recipe[] = [
       { amount: "2", unit: "tbsp", name: "Garlic paste", notes: "freshly minced" },
       { amount: "1/3", unit: "cup", name: "Pure cow ghee", notes: "Halal certified" },
       { amount: "1/4", unit: "tsp", name: "Saffron threads", notes: "bloomed in 1/4 cup warm whole milk" },
+      { amount: "2", unit: "whole", name: "Star anise (chakra phool)", notes: "for signature aromatic perfume" },
       { amount: "1", unit: "tsp", name: "Shahi jeera (caraway seeds)" },
       { amount: "6", unit: "whole", name: "Green cardamom pods", notes: "lightly bruised" },
       { amount: "2", unit: "sticks", name: "Cinnamon bark (2 inches each)" },
@@ -2014,8 +2548,8 @@ export const RECIPES: Recipe[] = [
       name: "Chef Tariq Rahman",
       role: "Regional Culinary Director & Halal Recipe Developer",
     },
-    updatedDate: "September 2, 2026",
-    tags: ["Biryani", "Halal Chicken", "Dinner", "Bengali", "Dum Cooking", "Weekend Feast"],
+    updatedDate: "September 17, 2026",
+    tags: ["Chicken Biryani", "চিকেন বিরিয়ানি", "Biryani", "Halal Chicken", "Dum Cooking", "Bengali Cuisine", "Basmati Rice", "Mughlai Feast", "Wedding Banquet"],
   },
   {
     id: "rec-classic-baked-beef-lasagna",
@@ -2173,53 +2707,54 @@ export const RECIPES: Recipe[] = [
   {
     id: "rec-2",
     slug: "bengali-beef-bhuna",
-    title: "Slow-Braised Bengali Beef Bhuna",
+    title: "Bengali Beef Bhuna (বাঙালি স্টাইল গরুর মাংসের ভুনা)",
     category: "Halal Beef",
     categorySlug: "halal-beef",
-    cuisine: "Bengali",
+    cuisine: "Traditional Bengali / Bangladeshi Heritage",
     description:
       "Melt-in-your-mouth Halal beef simmered in a dark, intensely caramelized onion and roasted spice gravy with fresh green chilies and mustard oil.",
     introStory:
-      "Beef Bhuna is the cornerstone of celebratory Bengali dining. Originating from the word 'bhuna' (to fry spices slowly until oil separates and flavors deeply concentrate), this recipe takes time and patience. The beef renders its natural juices and melds into velvety caramelized onions, toasted cumin, and aromatic whole spices.",
-    heroImage: IMAGES.beefBhuna,
+      "Beef Bhuna (বাঙালি স্টাইল গরুর মাংসের ভুনা) is the crowning jewel of celebratory Bengali dining and weekend family gatherings. Originating from the culinary term 'bhuna'—the patient art of sautéing spices and meat until moisture evaporates, flavors concentrate, and fragrant oil separates cleanly along the pot—this recipe demands time and care. The beef renders its rich natural juices into deeply browned caramelized onions, freshly pounded ginger-garlic paste, toasted cumin, and warm whole garam masalas, resulting in a dark, glossy, and intensely savory masterpiece.",
+    heroImage: IMAGES.bengaliBeefBhuna,
     prepTimeMinutes: 20,
     cookTimeMinutes: 75,
     totalTimeMinutes: 95,
     servings: 5,
     difficulty: "Medium",
     calories: 540,
-    rating: 4.95,
-    reviewCount: 118,
+    rating: 4.98,
+    reviewCount: 168,
     isTrending: true,
-    isFeatured: false,
+    isFeatured: true,
     isRegionalHeritage: true,
     halalNotes:
-      "Prepared exclusively with hand-slaughtered or certified Halal beef chuck, shin, or brisket. Strictly no wine reductions or non-halal stocks.",
+      "Prepared exclusively with hand-slaughtered or certified Halal beef chuck, shin, or brisket. Strictly no wine reductions, pork by-products, or non-halal commercial stocks.",
     potentialCautionNotes:
       "Store-bought beef broths or bouillon cubes frequently contain gelatin or animal extracts of non-halal origin. Use water or homemade halal beef bone broth.",
     ingredients: [
-      { amount: "2.2", unit: "lbs", name: "Halal beef chuck or stew meat", notes: "cut into 1.5-inch cubes" },
-      { amount: "4", unit: "large", name: "Red onions", notes: "finely sliced" },
-      { amount: "1/3", unit: "cup", name: "Cold-pressed mustard oil", notes: "or Halal sunflower oil" },
-      { amount: "2", unit: "tbsp", name: "Garlic paste" },
-      { amount: "2", unit: "tbsp", name: "Ginger paste" },
+      { amount: "2.5", unit: "lbs", name: "Halal beef chuck or stew meat", notes: "cut into 1.5-inch cubes, with a touch of marbled fat" },
+      { amount: "4", unit: "large", name: "Red onions", notes: "finely sliced for deep caramelization" },
+      { amount: "1/3", unit: "cup", name: "Cold-pressed mustard oil", notes: "for authentic pungent Bengali aroma" },
+      { amount: "2", unit: "tbsp", name: "Garlic paste", notes: "freshly crushed" },
+      { amount: "2", unit: "tbsp", name: "Ginger paste", notes: "freshly ground" },
       { amount: "2", unit: "whole", name: "Bay leaves (Tejpata)" },
       { amount: "4", unit: "whole", name: "Black cardamoms" },
       { amount: "5", unit: "whole", name: "Green cardamoms" },
-      { amount: "2", unit: "sticks", name: "Cinnamon (2 inches each)" },
-      { amount: "1.5", unit: "tbsp", name: "Ground cumin", notes: "freshly dry-roasted and ground" },
+      { amount: "2", unit: "sticks", name: "Cinnamon bark (2 inches each)" },
+      { amount: "1.5", unit: "tbsp", name: "Ground cumin", notes: "freshly dry-roasted and ground (Bhuna Jeera)" },
       { amount: "1.5", unit: "tbsp", name: "Ground coriander" },
-      { amount: "1", unit: "tbsp", name: "Kashmiri red chili powder" },
-      { amount: "1/2", unit: "tbsp", name: "Hot red chili powder" },
+      { amount: "1", unit: "tbsp", name: "Kashmiri red chili powder", notes: "for deep rich color" },
+      { amount: "1/2", unit: "tbsp", name: "Hot red chili powder", notes: "adjust to heat tolerance" },
       { amount: "1", unit: "tsp", name: "Turmeric powder" },
       { amount: "6", unit: "whole", name: "Fresh green chilies", notes: "slit lengthwise" },
-      { amount: "1", unit: "tsp", name: "Bengali roasted garam masala" },
-      { amount: "1", unit: "cup", name: "Warm water or Halal beef broth" },
+      { amount: "1", unit: "tsp", name: "Bengali roasted Shahi garam masala" },
+      { amount: "1", unit: "cup", name: "Warm water or homemade Halal beef broth" },
+      { amount: "2", unit: "tbsp", name: "Fresh cilantro / coriander leaves", notes: "finely chopped for garnish" },
     ],
     substitutions: [
       {
         original: "Mustard oil",
-        substitute: "Ghee or neutral avocado oil",
+        substitute: "Pure cow ghee or neutral avocado oil",
         notes: "Mustard oil yields the distinct pungent aroma characteristic of authentic Bengali kitchens.",
       },
       {
@@ -2261,14 +2796,14 @@ export const RECIPES: Recipe[] = [
       },
       {
         step: 6,
-        title: "Finish with Green Chilies & Garam Masala",
+        title: "Finish with Green Chilies, Garam Masala & Fresh Coriander",
         instruction:
-          "Scatter slit green chilies and roasted garam masala over the meat. Cover and rest off the heat for 10 minutes before serving.",
+          "Scatter slit green chilies, roasted garam masala, and fresh coriander over the meat. Cover and rest off the heat for 10 minutes before serving.",
       },
     ],
     chefNotes: [
-      "The secret to a dark Bengali bhuna is browning the onions deeply before adding the meat.",
-      "Cooking with bone-in cuts adds gelatinous body to the gravy naturally.",
+      "The secret to an authentic dark Bengali bhuna is browning the sliced onions deeply to a rich hazelnut mahogany before adding the meat.",
+      "Cooking with a mix of chuck and bone-in shanks adds luscious natural body and richness to the clinging masala sauce.",
     ],
     nutrition: {
       calories: 540,
@@ -2279,13 +2814,13 @@ export const RECIPES: Recipe[] = [
       sodiumMg: 590,
     },
     storageInstructions:
-      "Beef Bhuna tastes even richer the next day as the spices mature. Keeps refrigerated for up to 4 days.",
+      "Beef Bhuna tastes even richer the next day as the spices mature and infuse the meat fibers. Keeps refrigerated in an airtight glass container for up to 4 days.",
     freezingInstructions:
-      "Freezes beautifully for up to 3 months. Thaw in the fridge and simmer gently with 2 tablespoons of water.",
+      "Freezes beautifully for up to 3 months. Thaw in the fridge overnight and simmer gently on the stovetop with 2 tablespoons of water.",
     servingSuggestions: [
-      "Serve with steaming hot Kalijeera or Basmati rice.",
-      "Pair with handmade whole wheat rotis or parathas.",
-      "Accompany with crisp red onion rings soaked in lemon juice.",
+      "Serve piping hot with steamed Chinigura, Kalijeera, or aged Basmati rice.",
+      "Pair with handmade whole wheat rotis, flaky parathas, or puffed puris (luchis).",
+      "Accompany with crisp red onion rings tossed in mustard oil, fresh green chilies, and a squeeze of lemon.",
     ],
     faqs: [
       {
@@ -2293,13 +2828,28 @@ export const RECIPES: Recipe[] = [
         answer:
           "Yes! Complete steps 1 through 4 on Sauté mode. Then seal and pressure cook on High for 25 minutes with natural release for 15 minutes. Finish on Sauté mode for 5 minutes to reduce gravy to desired thickness.",
       },
+      {
+        question: "How do I achieve that dark brown bhuna color without burning?",
+        answer:
+          "Patiently caramelize the onions on medium-low heat. Adding tiny splashes of warm water whenever they start sticking deglazes the pan fond, deepening the mahogany color safely.",
+      },
     ],
     author: {
       name: "Chef Tariq Rahman",
-      role: "Regional Culinary Director",
+      role: "Regional Culinary Director & Heritage Specialist",
     },
-    updatedDate: "August 28, 2026",
-    tags: ["Beef", "Halal Beef", "Bengali", "Slow Cooked", "Curry", "Heritage"],
+    updatedDate: "September 17, 2026",
+    tags: [
+      "Bengali Beef Bhuna",
+      "বাঙালি স্টাইল গরুর মাংসের ভুনা",
+      "Gorur Mangsho Bhuna",
+      "Beef Bhuna",
+      "Halal Beef",
+      "Bengali",
+      "Slow Cooked",
+      "Curry",
+      "Heritage",
+    ],
   },
   {
     id: "rec-3",
@@ -2409,87 +2959,113 @@ export const RECIPES: Recipe[] = [
   },
   {
     id: "rec-4",
-    slug: "shahi-chicken-roast",
-    title: "Bengali Biye Bari Shahi Chicken Roast",
+    slug: "bengali-chicken-roast",
+    title: "Bengali Chicken Roast (বাংলাদেশি চিকেন রোস্ট)",
     category: "Halal Chicken",
     categorySlug: "halal-chicken",
-    cuisine: "Bengali",
+    cuisine: "Bengali / Bangladeshi Heritage",
     description:
-      "Golden caramelized Halal bone-in chicken quarters braised in a luxurious, mildly sweet yogurt, cashew nut, and aromatic ghee gravy.",
+      "Iconic Bangladeshi wedding feast Chicken Roast (বাংলাদেশি চিকেন রোস্ট)—succulent bone-in chicken leg quarters seared in ghee and slow-braised in a velvety yogurt, onion, cashew, and aromatic Shahi spice reduction topped with golden beresta.",
     introStory:
-      "No traditional Bengali Muslim wedding ('biye bari') or Eid banquet is complete without Shahi Chicken Roast. Unlike western dry-roast chickens, this feast dish is first lightly browned in ghee, then braised in an opulent reduction of whipped yogurt, cashew cream, golden raisins, and warming whole spices.",
-    heroImage: IMAGES.chickenRoast,
+      "No celebratory Bangladeshi banquet, wedding feast ('biye bari'), or festive Eid table is complete without authentic Bengali Chicken Roast (বাংলাদেশি চিকেন রোস্ট). Far from an ordinary Western oven roast, this cherished culinary treasure features whole bone-in chicken leg quarters lightly seasoned and seared in pure fragrant cow ghee, then slow-braised in an opulent, velvety gravy composed of whipped yogurt, sweet onion paste, cashew cream, golden raisins, crushed fried onions (beresta), and delicate Shahi warm spices like mace and green cardamom. The result is a glossy, mildly sweet, aromatic gravy clinging to fall-apart tender chicken, punctuated by whole green chilies and a whisper of screwpine (kewra) water. It is traditionally paired with fragrant Kalijeera Morog Polao or saffron basmati rice.",
+    heroImage: IMAGES.bengaliChickenRoast,
     prepTimeMinutes: 25,
     cookTimeMinutes: 40,
     totalTimeMinutes: 65,
     servings: 4,
     difficulty: "Medium",
     calories: 580,
-    rating: 4.88,
-    reviewCount: 84,
+    rating: 4.96,
+    reviewCount: 142,
     isTrending: true,
-    isFeatured: false,
+    isFeatured: true,
     isRegionalHeritage: true,
     halalNotes:
-      "Use certified Halal bone-in chicken leg quarters or whole thighs. Cashew paste should be freshly blended with water or milk.",
+      "100% Halal certified. Made exclusively with zabiha hand-slaughtered bone-in chicken leg quarters or whole thighs, pure unadulterated cow ghee, and natural single-origin spices. Completely free of artificial flavoring cubes or non-halal animal fats.",
+    potentialCautionNotes:
+      "Keep green chilies whole rather than chopped or slit; this imparts their floral aroma and sweetness to the gravy without raw spicy heat. Cashews can be swapped for blanched almonds or poppy seed paste (posto) if nut sensitivities require.",
     ingredients: [
-      { amount: "4", unit: "pieces", name: "Halal chicken leg quarters", notes: "skinned, shallow slashes made" },
-      { amount: "1/2", unit: "cup", name: "Pure cow ghee" },
-      { amount: "1", unit: "cup", name: "Fried onions (beresta)", notes: "crushed coarsely" },
-      { amount: "1/2", unit: "cup", name: "Plain Halal whole milk yogurt" },
-      { amount: "3", unit: "tbsp", name: "Cashew nut paste", notes: "soaked raw cashews pureed" },
-      { amount: "1.5", unit: "tbsp", name: "Ginger paste" },
-      { amount: "1.5", unit: "tbsp", name: "Garlic paste" },
-      { amount: "1", unit: "tbsp", name: "Onion paste" },
-      { amount: "1", unit: "tsp", name: "White pepper powder" },
-      { amount: "1/2", unit: "tsp", name: "Mace and nutmeg powder" },
-      { amount: "1", unit: "tbsp", name: "Golden raisins (kishmish)" },
-      { amount: "6", unit: "whole", name: "Green chilies", notes: "stems removed, kept whole" },
-      { amount: "1", unit: "tsp", name: "Kewra water" },
-      { amount: "1", unit: "tsp", name: "Sugar", notes: "essential for authentic banquet flavor" },
+      { amount: "4", unit: "pieces", name: "Halal chicken leg quarters (or whole thighs & drumsticks)", notes: "skinned, with shallow diagonal incisions for flavor penetration" },
+      { amount: "1/2", unit: "cup", name: "Pure cow ghee", notes: "divided for searing and gravy" },
+      { amount: "1.5", unit: "cups", name: "Crispy fried onions (Beresta)", notes: "divided for gravy reduction and crunchy garnish" },
+      { amount: "1/2", unit: "cup", name: "Plain Halal whole milk yogurt", notes: "smoothly whisked" },
+      { amount: "3", unit: "tbsp", name: "Cashew nut paste", notes: "soaked raw cashews blended into smooth velvet cream" },
+      { amount: "1.5", unit: "tbsp", name: "Fresh ginger paste" },
+      { amount: "1.5", unit: "tbsp", name: "Fresh garlic paste" },
+      { amount: "3", unit: "tbsp", name: "Sweet onion paste", notes: "finely pureed raw onion" },
+      { amount: "1", unit: "tsp", name: "White pepper powder", notes: "preserves the classic golden ivory hue" },
+      { amount: "1/2", unit: "tsp", name: "Ground mace (Javitri) & Nutmeg (Jaiphal) powder", notes: "the signature biye bari aroma" },
+      { amount: "4", unit: "pods", name: "Green cardamom", notes: "lightly bruised" },
+      { amount: "2", unit: "sticks", name: "Cinnamon bark (2 inches each)" },
+      { amount: "4", unit: "whole", name: "Cloves" },
+      { amount: "2", unit: "whole", name: "Bay leaves (Tejpata)" },
+      { amount: "1", unit: "tbsp", name: "Golden raisins (Kishmish)" },
+      { amount: "8", unit: "whole", name: "Fresh green chilies", notes: "washed, stems intact" },
+      { amount: "1", unit: "tsp", name: "Kewra water (screwpine essence)", notes: "for royal Mughal floral perfume" },
+      { amount: "1.5", unit: "tsp", name: "Fine sea salt", notes: "to taste" },
+      { amount: "1.5", unit: "tsp", name: "Cane sugar", notes: "balances the yogurt acidity for traditional biye bari taste" },
+      { amount: "1/2", unit: "cup", name: "Warm milk or water", notes: "for simmering gravy" },
     ],
     substitutions: [
       {
         original: "Cashew paste",
-        substitute: "Blanched almond paste or poppy seed paste (posto)",
-        notes: "Provides the same luscious velvet texture.",
+        substitute: "Blanched almond paste, poppy seed paste (posto), or heavy cream",
+        notes: "Provides the same luscious velvet texture and richness.",
+      },
+      {
+        original: "Ghee",
+        substitute: "Half ghee and half high-smoke sunflower or mustard oil",
+        notes: "Pure cow ghee provides the inimitable royal aroma, but blending with oil maintains high smoke tolerance.",
       },
     ],
     instructions: [
       {
         step: 1,
-        title: "Marinate Chicken",
+        title: "Marinate Chicken Quarters",
         instruction:
-          "Mix chicken with yogurt, half of the ginger and garlic pastes, white pepper, and 1 tsp salt. Let sit for 30 minutes.",
+          "Pat the chicken leg quarters dry. Rub evenly with whisked yogurt, half of the ginger paste, half of the garlic paste, 1/2 tsp white pepper, and 1 tsp salt. Allow to marinate for 30 minutes at room temperature (or up to 4 hours refrigerated).",
       },
       {
         step: 2,
-        title: "Shallow Fry in Ghee",
+        title: "Gently Sear in Ghee",
         instruction:
-          "Heat ghee in a wide pan over medium heat. Shake off excess marinade and shallow-fry chicken pieces for 3–4 minutes per side until lightly golden. Set aside.",
+          "Heat pure cow ghee in a wide heavy-bottomed skillet or kadai over medium flame. Lightly wipe excess marinade off the chicken pieces (reserve the marinade in the bowl). Shallow-fry chicken for 3–4 minutes per side until lightly golden around the edges. Do not over-brown or crisp; transfer to a warm dish.",
       },
       {
         step: 3,
-        title: "Build the Shahi Gravy",
+        title: "Sauté Aromatics & Whole Spices",
         instruction:
-          "In the same aromatic ghee, add onion paste, remaining ginger and garlic, cashew paste, mace-nutmeg powder, and remaining marinade. Cook on low heat for 5 minutes until glossy.",
+          "In the same aromatic ghee, add the bay leaves, green cardamoms, cinnamon bark, and cloves. Let sizzle for 30 seconds until fragrant. Add pureed onion paste and sauté over medium-low heat for 4–5 minutes until the raw smell dissipates and the paste turns pale gold.",
       },
       {
         step: 4,
-        title: "Braise to Tender Perfection",
+        title: "Build the Velvet Shahi Gravy",
         instruction:
-          "Return chicken to pan. Add 1/2 cup warm water, golden raisins, crushed fried onions, and sugar. Cover and simmer gently for 20 minutes, turning chicken once, until meat pulls tenderly from the bone.",
+          "Add the remaining ginger and garlic pastes, smooth cashew cream, mace-nutmeg powder, remaining white pepper, and the reserved yogurt marinade. Sauté over low heat for 4–5 minutes, stirring continuously, until the ghee begins to separate at the edges.",
       },
       {
         step: 5,
+        title: "Slow-Braise to Tender Perfection",
+        instruction:
+          "Gently slide the seared chicken quarters back into the bubbling gravy. Add warm milk (or warm water), golden raisins, half of the crushed fried onions (beresta), and sugar. Spoon the rich sauce over the chicken, cover tightly, and simmer over low heat for 20–25 minutes, flipping the chicken once midway, until the meat is succulently tender and juices run clear.",
+      },
+      {
+        step: 6,
         title: "Perfume with Green Chilies & Kewra",
         instruction:
-          "Tuck whole green chilies around the chicken and sprinkle kewra water. Simmer covered for 3 minutes, then turn off heat and let rest.",
+          "Tuck the whole green chilies around the chicken quarters and drizzle kewra water over top. Cover and simmer on low for another 3–4 minutes to perfume the gravy with chili aroma without breaking heat. Turn off the heat and let rest undisturbed for 5 minutes.",
+      },
+      {
+        step: 7,
+        title: "Plate & Garnish with Beresta",
+        instruction:
+          "Carefully transfer the chicken quarters onto a festive serving platter. Ladle the thick, glossy gravy over the top, scatter the remaining crispy golden beresta, and serve hot.",
       },
     ],
     chefNotes: [
-      "Keep green chilies whole rather than slit; this infuses their fragrant pepper aroma without overpowering heat.",
-      "The gravy should be thick and clinging to the meat, not watery.",
+      "Keep green chilies whole rather than slit; they infuse the chicken with an intoxicating pepper perfume and sweetness without rendering the dish fiery.",
+      "Authentic Bangladeshi Biye Bari Roast has a thick, clinging, glossy gravy rather than a thin soup—the cashew paste and yogurt reduction should coat the chicken generously.",
+      "A pinch of sugar is non-negotiable: it mellows the tanginess of the yogurt and complements the caramelized fried onions.",
     ],
     nutrition: {
       calories: 580,
@@ -2499,25 +3075,50 @@ export const RECIPES: Recipe[] = [
       fiberGrams: 2,
       sodiumMg: 560,
     },
-    storageInstructions: "Keeps refrigerated for up to 3 days in an airtight container.",
-    freezingInstructions: "Can be frozen for up to 1 month.",
+    storageInstructions:
+      "Store refrigerated in an airtight glass container for up to 3 days. The rich ghee and cashew gravy thickens; reheat gently on the stovetop with 2 tablespoons of warm milk or water.",
+    freezingInstructions:
+      "Can be frozen for up to 1 month in an airtight container. Thaw in the refrigerator overnight before gently reheating over low heat.",
     servingSuggestions: [
-      "Traditional companion to saffron polao or peas polao.",
-      "Serve alongside boiled eggs and cucumber salad.",
+      "The quintessential companion to Morog Polao, Chinigura Basmati Polao, or saffron peas pilaf.",
+      "Serve alongside hard-boiled eggs, fresh cucumber-tomato salad, and tangy lime wedges.",
+      "Pair with a glass of chilled, mint-infused Bengali Borhani for the ultimate celebratory feast.",
     ],
     faqs: [
       {
-        question: "Why is the gravy light-colored?",
+        question: "Why is traditional Bengali Chicken Roast light/golden in color?",
         answer:
-          "Biye Bari Shahi Roast traditionally uses white pepper, yogurt, and nut paste without red chili powder, giving it its classic ivory-golden banquet appearance.",
+          "Unlike standard chicken curries that use red chili and turmeric powders, authentic Biye Bari Shahi Roast relies exclusively on white pepper, yogurt, and golden fried onions to yield its royal golden ivory hue.",
+      },
+      {
+        question: "Can I use chicken breast instead of leg quarters?",
+        answer:
+          "While bone-in leg quarters or whole thighs remain succulent during braising, chicken breasts can be used; reduce the simmering time to 12–15 minutes to avoid drying out.",
+      },
+      {
+        question: "What gives the signature wedding hall ('biye bari') fragrance?",
+        answer:
+          "The signature aroma comes from the union of pure cow ghee, kewra (screwpine) water, crushed golden beresta, and freshly ground mace (javitri) and nutmeg.",
       },
     ],
     author: {
-      name: "Chef Tariq Rahman",
-      role: "Regional Culinary Director",
+      name: "Chef Sharmin Sultana",
+      role: "Bengali Heritage & Banquet Specialist",
     },
-    updatedDate: "September 1, 2026",
-    tags: ["Chicken", "Halal Chicken", "Feast", "Bengali", "Eid Recipes"],
+    updatedDate: "September 17, 2026",
+    tags: [
+      "Bengali Chicken Roast",
+      "বাংলাদেশি চিকেন রোস্ট",
+      "Biye Bari Chicken Roast",
+      "Shahi Chicken Roast",
+      "Chicken Roast",
+      "Halal Chicken",
+      "Halal Rice & Curry",
+      "Wedding Banquet",
+      "Bengali Cuisine",
+      "Eid Recipes",
+      "Polao Accompaniment",
+    ],
   },
   {
     id: "rec-crispy-garlic-herb-roasted-potatoes",
@@ -3544,147 +4145,6 @@ export const RECIPES: Recipe[] = [
       "Oven Baked",
       "Lunchbox",
       "Quick",
-    ],
-  },
-  {
-    id: "rec-beef-bhuna-khichuri",
-    slug: "beef-bhuna-khichuri",
-    title: "Beef Bhuna Khichuri",
-    category: "Halal Beef",
-    categorySlug: "halal-beef",
-    cuisine: "Bengali",
-    description:
-      "Fragrant chinigura rice and lentils slow-cooked with tender aromatic chunks of spiced beef.",
-    introStory:
-      "A revered celebration dish across Bangladesh, Beef Bhuna Khichuri marries rich, deeply caramelized slow-braised beef with roasted yellow moong lentils and petite aromatic Chinigura rice. Cooked in pure ghee with green cardamoms, cinnamon, and whole slit green chilies, this dish fills the entire home with warmth.",
-    heroImage: IMAGES.beefBhuna,
-    prepTimeMinutes: 25,
-    cookTimeMinutes: 55,
-    totalTimeMinutes: 80,
-    servings: 6,
-    difficulty: "Medium",
-    calories: 620,
-    rating: 4.98,
-    reviewCount: 142,
-    isTrending: true,
-    isFeatured: true,
-    isRegionalHeritage: true,
-    halalNotes:
-      "Prepared with 100% hand-slaughtered Halal beef chuck or brisket. Ghee verified pure dairy with no non-halal animal additives.",
-    potentialCautionNotes:
-      "Ensure whole spices are counted before simmering to maintain balance, and simmer gently to keep rice grains separate.",
-    ingredients: [
-      { amount: "2", unit: "lbs", name: "Halal beef chuck", notes: "cut into 1.5-inch tender cubes" },
-      { amount: "2", unit: "cups", name: "Chinigura or Kalijeera aromatic rice", notes: "washed and soaked for 20 mins" },
-      { amount: "1", unit: "cup", name: "Yellow split moong dal", notes: "dry-roasted until golden fragrant" },
-      { amount: "1/2", unit: "cup", name: "Red masoor dal", notes: "washed and drained" },
-      { amount: "1/3", unit: "cup", name: "Pure cow ghee", notes: "divided" },
-      { amount: "1/4", unit: "cup", name: "Mustard oil" },
-      { amount: "2", unit: "cups", name: "Sliced red onions", notes: "for deep golden beresta" },
-      { amount: "2", unit: "tbsp", name: "Ginger paste" },
-      { amount: "2", unit: "tbsp", name: "Garlic paste" },
-      { amount: "1", unit: "tbsp", name: "Roasted cumin powder" },
-      { amount: "1", unit: "tbsp", name: "Coriander powder" },
-      { amount: "1", unit: "tsp", name: "Kashmiri red chili powder" },
-      { amount: "1", unit: "tsp", name: "Turmeric powder" },
-      { amount: "2", unit: "sticks", name: "Cinnamon bark" },
-      { amount: "5", unit: "pods", name: "Green cardamom" },
-      { amount: "4", unit: "cloves", name: "Whole cloves" },
-      { amount: "2", unit: "leaves", name: "Tejpata (Indian bay leaves)" },
-      { amount: "6", unit: "whole", name: "Green chilies", notes: "slit lengthwise" },
-      { amount: "1.5", unit: "tsp", name: "Garam masala powder" },
-      { amount: "6", unit: "cups", name: "Boiling water" },
-    ],
-    substitutions: [
-      {
-        original: "Chinigura rice",
-        substitute: "Aged long-grain Basmati or Jasmine rice",
-        notes: "Reduce cooking water slightly by 1/2 cup for basmati.",
-      },
-      {
-        original: "Beef chuck",
-        substitute: "Halal bone-in mutton or lamb",
-        notes: "Increase braising time by 15 minutes for bone-in cuts.",
-      },
-    ],
-    instructions: [
-      {
-        step: 1,
-        title: "Roast the Lentils & Prep Rice",
-        instruction:
-          "In a dry heavy pan, roast yellow split moong dal over medium heat until fragrant and pale golden. Rinse with water, combine with washed masoor dal and Chinigura rice, and let drain thoroughly.",
-      },
-      {
-        step: 2,
-        title: "Braise the Beef Bhuna",
-        instruction:
-          "Heat mustard oil and 2 tbsp ghee in a heavy Dutch oven. Add whole spices (cinnamon, cardamom, cloves, bay leaves) until fragrant. Fry sliced onions until golden brown. Stir in ginger paste, garlic paste, turmeric, chili powder, cumin, coriander, and salt.",
-      },
-      {
-        step: 3,
-        title: "Slow Cook to Tender perfection",
-        instruction:
-          "Add beef cubes to the masala. Bhuna (stir-fry vigorously) for 12–15 minutes until oil separates and beef is coated in deep brown glaze. Add 1 cup hot water, cover tightly, and simmer on low heat for 40 minutes until beef is tender.",
-      },
-      {
-        step: 4,
-        title: "Bhuna the Rice & Simmer Khichuri",
-        instruction:
-          "Add drained rice and roasted lentils directly to the simmering tender beef. Fry together for 4–5 minutes until rice grains turn translucent. Pour in 6 cups of boiling water, add slit green chilies, cover tightly, and cook on low heat for 15 minutes until liquid is fully absorbed.",
-      },
-      {
-        step: 5,
-        title: "Dum & Finishing Ghee",
-        instruction:
-          "Drizzle remaining warm ghee and sprinkle garam masala and golden crispy fried onions over top. Keep pot tightly covered off heat for 10 minutes before gently fluffing with a fork.",
-      },
-    ],
-    chefNotes: [
-      "Roasting the moong dal first prevents the khichuri from turning mushy and imparts an intoxicating nutty flavor.",
-      "Always use boiling water when adding liquid to hot fried rice grains so the temperature doesn't drop abruptly.",
-    ],
-    nutrition: {
-      calories: 620,
-      proteinGrams: 42,
-      carbsGrams: 58,
-      fatGrams: 24,
-      fiberGrams: 6,
-      sodiumMg: 680,
-    },
-    storageInstructions:
-      "Refrigerate in an airtight container for up to 3 days. Reheat with 2 tablespoons of water or microwave covered with a damp paper towel.",
-    freezingInstructions:
-      "Freeze portions in freezer-safe glass containers for up to 2 months. Thaw overnight in refrigerator before reheating.",
-    servingSuggestions: [
-      "Serve hot with crispy fried eggplant (Begun Bhaja) and fresh lemon wedges.",
-      "Pair with spicy mango pickle (Aamer Achar) and a bowl of fresh cucumber-tomato salad.",
-      "Top with crispy fried eggs (dim bhaja) for the classic comfort breakfast.",
-    ],
-    faqs: [
-      {
-        question: "Can I use a pressure cooker or Instant Pot?",
-        answer:
-          "Yes! Pressure cook the beef for 18 minutes (high pressure), then release pressure, add the rice and lentils with 4.5 cups water, and cook on low pressure for 6 minutes.",
-      },
-      {
-        question: "What makes Chinigura rice special?",
-        answer:
-          "Chinigura is an heirloom small-grain aromatic rice from Northern Bangladesh known for its delicate floral fragrance and sweet finish.",
-      },
-    ],
-    author: {
-      name: "Chef Tariq Rahman",
-      role: "Culinary Director & Heritage Specialist",
-    },
-    updatedDate: "September 7, 2026",
-    tags: [
-      "Halal Beef",
-      "Khichuri",
-      "Rainy Day Comfort",
-      "Festive",
-      "Bengali",
-      "Chinigura Rice",
-      "Dum Cooking",
     ],
   },
   {
@@ -8908,6 +9368,1952 @@ export const RECIPES: Recipe[] = [
       "Tacos de Res",
     ],
   },
+  {
+    id: "rec-bengali-khichuri-bhuna",
+    slug: "bengali-khichuri-bhuna",
+    title: "Bengali Khichuri Bhuna (বাংলা খিচুড়ি ভুনা)",
+    category: "Halal Rice & Curry",
+    categorySlug: "halal-rice-curry",
+    cuisine: "Bengali / Bangladeshi Heritage",
+    description:
+      "Aromatic Bengali Khichuri Bhuna (বাংলা খিচুড়ি ভুনা)—golden dry-roasted moong dal and fragrant Chinigura rice sautéed in pure cow ghee and mustard oil with ginger, turmeric, and whole warm spices, slow-steamed to fluffy perfection and garnished with crispy beresta and fresh cilantro.",
+    introStory:
+      "In Bangladeshi households, nothing evokes deep nostalgia and culinary joy like Bengali Khichuri Bhuna (বাংলা খিচুড়ি ভুনা). The moment monsoon clouds gather over the Bengal delta, kitchens fill with the heavenly aroma of golden yellow moong dal being dry-roasted in cast iron until deeply nutty and fragrant. Unlike runny comfort 'letka' khichuri, Bhuna Khichuri is prepared in the celebratory polao tradition: petite aromatic Chinigura (or Kalijeera) rice is washed, dried, and lovingly sautéed ('bhuna') in a blend of cow ghee and cold-pressed mustard oil alongside sliced onions, freshly crushed ginger, bay leaves, cinnamon, and whole green cardamoms. Simmered until every fragrant grain separates cleanly with a vibrant turmeric glow, it is crowned with crispy golden fried onions (beresta), tender green chilies, and fresh chopped cilantro. It forms the centerpiece of feast tables alongside Begun Bhaja (golden spiced fried eggplant), rich Bengali Beef Bhuna, and zesty lemon-cucumber salad.",
+    heroImage: IMAGES.bengaliKhichuriBhuna,
+    prepTimeMinutes: 20,
+    cookTimeMinutes: 30,
+    totalTimeMinutes: 50,
+    servings: 6,
+    difficulty: "Easy",
+    calories: 420,
+    rating: 4.97,
+    reviewCount: 168,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified and naturally vegetarian. Uses certified pure dairy cow ghee, cold-pressed mustard oil, and single-origin whole spices without animal fats, meat stocks, or artificial flavoring additives.",
+    potentialCautionNotes:
+      "Dry-roast the moong dal over gentle medium-low heat with constant stirring until it turns pale reddish-golden and fragrant; do not burn the dal or it will taste bitter. Ensure the water-to-grain ratio is precisely 2:1 for fluffy, separate grains.",
+    ingredients: [
+      { amount: "2", unit: "cups", name: "Chinigura or Kalijeera aromatic rice", notes: "washed, drained thoroughly in a colander for 20 minutes" },
+      { amount: "1.5", unit: "cups", name: "Yellow split moong dal (shona moong)", notes: "dry-roasted until fragrant, then washed" },
+      { amount: "3", unit: "tbsp", name: "Pure cow ghee" },
+      { amount: "2", unit: "tbsp", name: "Cold-pressed mustard oil" },
+      { amount: "1.5", unit: "cups", name: "Crispy fried onions (Beresta)", notes: "divided for cooking and garnish" },
+      { amount: "1", unit: "medium", name: "Red onion", notes: "thinly sliced" },
+      { amount: "2", unit: "tbsp", name: "Fresh ginger paste", notes: "crushed fresh for signature aroma" },
+      { amount: "1", unit: "tbsp", name: "Fresh garlic paste" },
+      { amount: "1", unit: "tsp", name: "Whole cumin seeds (shahi jeera or cumin)" },
+      { amount: "2", unit: "whole", name: "Bay leaves (Tejpata)" },
+      { amount: "4", unit: "pods", name: "Green cardamom", notes: "lightly cracked" },
+      { amount: "2", unit: "sticks", name: "Cinnamon bark (2 inches each)" },
+      { amount: "5", unit: "whole", name: "Cloves" },
+      { amount: "1", unit: "tsp", name: "Turmeric powder", notes: "for rich sun-golden hue" },
+      { amount: "1", unit: "tsp", name: "Roasted cumin powder (bhaja jeera gura)" },
+      { amount: "1/2", unit: "tsp", name: "Mild red chili powder or Kashmiri chili" },
+      { amount: "1", unit: "tsp", name: "Garam masala powder" },
+      { amount: "8", unit: "whole", name: "Fresh green chilies", notes: "stems intact, lightly slit at tip" },
+      { amount: "1.5", unit: "tsp", name: "Fine sea salt", notes: "or to taste" },
+      { amount: "1", unit: "tsp", name: "Cane sugar", notes: "balances the savory spices" },
+      { amount: "7", unit: "cups", name: "Boiling water", notes: "exactly twice the combined volume of rice and lentils" },
+      { amount: "1/4", unit: "cup", name: "Fresh cilantro (coriander leaves)", notes: "finely chopped for garnish" },
+    ],
+    substitutions: [
+      {
+        original: "Chinigura or Kalijeera rice",
+        substitute: "Aged long-grain Basmati rice or Jasmine rice",
+        notes: "While baby aromatic Chinigura gives the traditional Bangladeshi fragrance and mouthfeel, premium Basmati yields beautiful long grains.",
+      },
+      {
+        original: "Moong dal",
+        substitute: "Red lentils (masoor dal) or split Bengal gram (chana dal)",
+        notes: "Moong dal is the authentic gold standard for bhuna khichuri, but a mix of moong and masoor dal creates comforting everyday depth.",
+      },
+      {
+        original: "Mustard oil",
+        substitute: "Additional cow ghee or sunflower oil",
+        notes: "Mustard oil provides the earthy Bengali pungency, but 100% ghee yields a richer Shahi flavor.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Dry-Roast the Moong Dal",
+        instruction:
+          "In a dry skillet or heavy pot over medium-low heat, roast the yellow split moong dal continuously for 5–7 minutes until it turns a light golden-pink color and releases an irresistible nutty aroma. Immediately transfer to a bowl, rinse under cool water, and drain.",
+      },
+      {
+        step: 2,
+        title: "Wash & Air-Dry the Aromatic Rice",
+        instruction:
+          "Rinse the Chinigura rice gently in cold water until the water runs clear. Drain completely in a fine-mesh strainer and spread on a clean kitchen towel for 15–20 minutes to air-dry so the grains fry crisply without breaking.",
+      },
+      {
+        step: 3,
+        title: "Bloom Whole Spices & Sauté Aromatics",
+        instruction:
+          "Heat pure cow ghee and mustard oil together in a large heavy-bottomed pot or handi over medium heat. Add the bay leaves, cinnamon sticks, green cardamoms, cloves, and whole cumin seeds. Let them sizzle and bloom for 30 seconds until intensely fragrant. Add the sliced onions and sauté for 4–5 minutes until translucent and lightly golden.",
+      },
+      {
+        step: 4,
+        title: "Bhuna (Sauté) the Dal, Rice & Spices",
+        instruction:
+          "Add the ginger paste, garlic paste, turmeric powder, roasted cumin powder, and mild chili powder along with 2 tablespoons of water. Sauté for 2 minutes until oil separates. Add the drained roasted moong dal and air-dried rice. Fry ('bhuna') the grains in the spiced ghee over medium heat for 5–6 minutes with gentle stirring until the rice turns translucent, crackles softly, and smells aromatic.",
+      },
+      {
+        step: 5,
+        title: "Add Boiling Water & Simmer",
+        instruction:
+          "Pour in 7 cups of vigorously boiling water, salt, sugar, and half of the fried onions (beresta). Bring to a rapid rolling boil over high heat for 3–4 minutes until the water level recedes to just the surface level of the rice and crater-like bubbles appear.",
+      },
+      {
+        step: 6,
+        title: "Dum Cooking (Slow Steam)",
+        instruction:
+          "Tuck whole green chilies into the surface of the rice, drizzle an extra tablespoon of ghee on top, and tightly cover the pot with a heavy lid (or seal with foil). Reduce the heat to the absolute lowest setting (or place a flat iron tawa underneath) and let the khichuri steam on 'dum' for 15–18 minutes without opening.",
+      },
+      {
+        step: 7,
+        title: "Rest, Fluff & Garnish",
+        instruction:
+          "Turn off heat and let the pot rest undisturbed for 10 minutes. Uncover and gently fluff the grains with a flat silicone spatula or fork. Transfer to a wide ceramic serving platter, scatter the remaining crispy beresta and freshly chopped cilantro over top, and serve piping hot.",
+      },
+    ],
+    chefNotes: [
+      "The secret to fluffy, non-sticky Bhuna Khichuri is roasting the dal beforehand, allowing the washed rice to air-dry, and using boiling water at exactly double the volume of dry grains.",
+      "Never stir vigorously while steaming on dum; use a light fork or flat wooden paddle to fluff from the bottom upward after resting.",
+      "Whole green chilies tucked in before sealing infuse their aromatic floral oil without making the dish fiery.",
+    ],
+    nutrition: {
+      calories: 420,
+      proteinGrams: 14,
+      carbsGrams: 68,
+      fatGrams: 12,
+      fiberGrams: 6,
+      sodiumMg: 490,
+    },
+    storageInstructions:
+      "Store leftovers in an airtight glass container in the refrigerator for up to 4 days. Reheat with a light sprinkle of water in the microwave or steam covered in a skillet with a teaspoon of ghee.",
+    freezingInstructions:
+      "Can be frozen in airtight freezer bags for up to 1 month. Defrost in refrigerator overnight and steam thoroughly before serving.",
+    servingSuggestions: [
+      "Serve alongside Begun Bhaja (crisp pan-fried spiced eggplant slices) and crispy potato fries (aloo bhaja).",
+      "Pair with rich Bengali Beef Bhuna (বাঙালি স্টাইল গরুর মাংসের ভুনা) or spiced Dim Bhuna (egg curry).",
+      "Serve with sweet-and-sour green mango pickle (aamer achaar), fresh sliced onions, and fresh lime wedges.",
+    ],
+    faqs: [
+      {
+        question: "What is the difference between Bhuna Khichuri and regular Khichuri?",
+        answer:
+          "Regular or 'letka' khichuri is cooked with extra water into a comforting, porridge-like consistency. Bhuna Khichuri is cooked polao-style where the roasted dal and rice are sautéed in ghee and steamed until every fragrant grain remains separate and fluffy.",
+      },
+      {
+        question: "Why do we dry-roast the moong dal first?",
+        answer:
+          "Dry-roasting removes raw beany notes, deepens the nutty aroma, and prevents the split lentils from turning into mush during the simmering and steaming process.",
+      },
+      {
+        question: "Can I add vegetables to this khichuri?",
+        answer:
+          "Yes! You can gently sauté cauliflower florets, diced potatoes, and green peas along with the aromatics before adding water for a hearty vegetable variation.",
+      },
+    ],
+    author: {
+      name: "Chef Sharmin Sultana",
+      role: "Bengali Heritage & Banquet Specialist",
+    },
+    updatedDate: "September 17, 2026",
+    tags: [
+      "Bengali Khichuri Bhuna",
+      "বাংলা খিচুড়ি ভুনা",
+      "Bhuna Khichuri",
+      "Khichuri",
+      "Halal Rice & Curry",
+      "Halal Vegetarian",
+      "Bengali Cuisine",
+      "Comfort Food",
+      "Monsoon Feast",
+      "Chinigura Rice",
+      "Moong Dal",
+      "Begun Bhaja Companion",
+    ],
+  },
+  {
+    id: "rec-bengali-pulao",
+    slug: "bengali-pulao",
+    title: "Bengali Pulao (বাঙালি পোলাও / Basanti Pulao)",
+    category: "Halal Rice & Curry",
+    categorySlug: "halal-rice-curry",
+    cuisine: "Bengali / Bangladeshi Heritage",
+    description:
+      "Aromatic Bengali Pulao (বাঙালি পোলাও / Basanti Pulao)—fragrant Chinigura or Kalijeera rice infused with saffron, pure cow ghee, whole star anise, cardamom, toasted cashews, and plump golden raisins, gently steamed to sweet-savory perfection.",
+    introStory:
+      "No celebratory Bengali feast—from wedding banquets (*biye bari*) and Eid celebrations to festive Sunday family dawats—is complete without the shimmering golden grandeur of Bengali Pulao (বাঙালি পোলাও / Basanti Pulao). Also affectionately celebrated as *Mishti Polao*, this Shahi heritage rice dish is distinguished by its subtle, royal sweetness, gentle floral perfume, and glistening grains that separate with feather-light elegance. Petite aromatic rice—traditionally Chinigura or Kalijeera—is gently washed, air-dried on clean muslin, and pre-marinated with melted cow ghee, freshly extracted ginger juice, a whisper of turmeric or saffron-steeped warm milk, and freshly ground Bengali garam masala. Gently bloomed in a handi of sizzling ghee with star anise (*chakra phool*), green cardamoms, cloves, and cinnamon bark, the grains are simmered with roasted whole cashews and golden sultanas until tender, then rested on 'dum'. Served piping hot alongside rich Bengali Chicken Roast (বাংলাদেশি চিকেন রোস্ট) or spicy Bengali Beef Bhuna, it creates Bengal's most legendary culinary pairing.",
+    heroImage: IMAGES.bengaliPulao,
+    prepTimeMinutes: 25,
+    cookTimeMinutes: 25,
+    totalTimeMinutes: 50,
+    servings: 6,
+    difficulty: "Easy",
+    calories: 390,
+    rating: 4.98,
+    reviewCount: 194,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified and naturally vegetarian. Made using pure, unadulterated dairy cow ghee, natural saffron threads, whole fragrant spices, and premium nuts and dried fruit without artificial essences, alcohol-based flavorings, or non-halal colorants.",
+    potentialCautionNotes:
+      "Air-dry the washed rice thoroughly on a cloth before cooking; dry grains fry cleanly in ghee without clumping or breaking. Maintain an exact 1:2 ratio of rice to boiling liquid to ensure non-sticky, distinct grains.",
+    ingredients: [
+      { amount: "2", unit: "cups", name: "Aromatic Chinigura or Kalijeera rice", notes: "rinsed gently and air-dried on a clean cloth for 25 minutes" },
+      { amount: "4", unit: "tbsp", name: "Pure cow ghee", notes: "divided for roasting nuts and cooking rice" },
+      { amount: "1/4", unit: "cup", name: "Raw whole cashew nuts (kaju)", notes: "halved or whole" },
+      { amount: "1/4", unit: "cup", name: "Golden raisins (kishmish)", notes: "rinsed and patted dry" },
+      { amount: "1", unit: "whole", name: "Star anise (chakra phool)", notes: "for regal floral aroma" },
+      { amount: "2", unit: "whole", name: "Bay leaves (tejpata)" },
+      { amount: "5", unit: "pods", name: "Green cardamom", notes: "lightly crushed at tip" },
+      { amount: "2", unit: "sticks", name: "Cinnamon bark (2 inches each)" },
+      { amount: "6", unit: "whole", name: "Cloves (laung)" },
+      { amount: "1", unit: "pinch", name: "Premium saffron threads", notes: "steeped in 3 tbsp warm whole milk" },
+      { amount: "1/3", unit: "tsp", name: "Turmeric powder", notes: "for traditional auspicious Basanti yellow hue" },
+      { amount: "1.5", unit: "tbsp", name: "Fresh ginger paste or grated ginger juice" },
+      { amount: "1/2", unit: "tsp", name: "Freshly ground nutmeg and mace (jaiphal-javitri powder)" },
+      { amount: "1/2", unit: "tsp", name: "Bengali shahi garam masala powder" },
+      { amount: "2", unit: "tbsp", name: "Cane sugar", notes: "adjust between 1.5 to 2.5 tbsp according to sweetness preference" },
+      { amount: "1.25", unit: "tsp", name: "Fine sea salt", notes: "or to taste" },
+      { amount: "3.75", unit: "cups", name: "Boiling water", notes: "hot boiling liquid creates instant steam" },
+      { amount: "6", unit: "whole", name: "Fresh green chilies", notes: "stems intact, lightly slit" },
+      { amount: "1", unit: "tsp", name: "Kewra water (screwpine water)", notes: "optional, for Mughlai banquet perfume" },
+      { amount: "2", unit: "tbsp", name: "Crispy fried onions (beresta)", notes: "for final banquet garnish" },
+      { amount: "1", unit: "sprig", name: "Fresh mint leaves", notes: "for decorative garnish" },
+    ],
+    substitutions: [
+      {
+        original: "Chinigura or Kalijeera rice",
+        substitute: "Aged long-grain Basmati rice or Gobindobhog rice",
+        notes: "Long-grain Basmati works beautifully for presentation, while Chinigura provides the authentic buttery Bengali fragrance.",
+      },
+      {
+        original: "Cow Ghee",
+        substitute: "Plant-based clarified butter or coconut oil with a drop of vegan butter flavor",
+        notes: "Pure cow ghee provides the inimitable hallmark aroma of true Bengali Shahi celebrations.",
+      },
+      {
+        original: "Saffron",
+        substitute: "A pinch of quality natural turmeric powder dissolved in milk",
+        notes: "Turmeric yields the classic vibrant sunshine-yellow Basanti tint.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Wash & Air-Dry the Rice",
+        instruction:
+          "Gently wash the Chinigura rice in cold water 2–3 times until the rinse water runs clear, taking care not to rub or break the tender grains. Drain thoroughly through a fine-mesh sieve, then spread out on a wide kitchen towel for 20–25 minutes until the grains are dry to the touch.",
+      },
+      {
+        step: 2,
+        title: "Marinate the Rice (The Secret Bengali Step)",
+        instruction:
+          "Transfer the dry rice into a wide bowl. Add 2 tablespoons of melted pure cow ghee, ginger paste, turmeric powder, saffron-infused milk, nutmeg-mace powder, and half of the garam masala. Gently toss with your fingers or a silicone spatula until every single grain of rice is evenly coated and glistening golden. Let it rest for 15 minutes.",
+      },
+      {
+        step: 3,
+        title: "Toast the Cashews & Raisins",
+        instruction:
+          "In a wide, heavy-bottomed pot or handi, melt 2 tablespoons of ghee over medium heat. Add the cashew nuts and fry for 1–2 minutes until pale golden. Add the raisins; they will puff up into plump pearls within 30 seconds. Quickly remove the nuts and raisins with a slotted spoon and set aside in a small bowl.",
+      },
+      {
+        step: 4,
+        title: "Bloom Whole Spices & Sauté Coated Rice",
+        instruction:
+          "In the same fragrant ghee remaining in the pot, add the whole star anise, bay leaves, green cardamoms, cinnamon sticks, and cloves. Allow them to crackle and release their royal aroma for 30–45 seconds. Add the marinated golden rice. Sauté ('bhuna') gently over medium-low heat for 4–5 minutes until the rice crackles softly, turns slightly translucent, and releases a deep buttery aroma.",
+      },
+      {
+        step: 5,
+        title: "Add Boiling Water & Simmer",
+        instruction:
+          "Pour in the boiling water, salt, sugar, and half of the fried cashews and raisins. Stir gently once to combine. Bring to a rapid rolling boil over high heat for 3 minutes without covering, until the water recedes to the exact level of the rice and crater-like bubbles appear on the surface.",
+      },
+      {
+        step: 6,
+        title: "Seal and Steam on Dum",
+        instruction:
+          "Gently press the whole green chilies into the surface of the rice. Drizzle a teaspoon of kewra water and a teaspoon of fresh ghee over the top. Tightly cover the pot with a heavy lid (or seal with aluminum foil before putting the lid on). Reduce the flame to the lowest possible setting (or place a flat tawa under the handi) and let it steam on 'dum' for 12–15 minutes.",
+      },
+      {
+        step: 7,
+        title: "Rest, Fluff & Banquet Presentation",
+        instruction:
+          "Turn off the heat and let the covered pot rest undisturbed for 10 minutes. Remove the lid and gently fluff the fragrant, separate rice grains with a wide flat spatula or fork from the edges toward the center. Transfer into a traditional golden brass or ceramic serving dish, scatter the remaining toasted cashews, plump raisins, crispy beresta, and a sprig of fresh mint over top, and serve piping hot.",
+      },
+    ],
+    chefNotes: [
+      "The pre-marination of raw rice with ghee, ginger, and spices is the hallmark technique that separates genuine Bengali Polao from standard pilafs. It seals each grain so it stays intact and non-sticky during cooking.",
+      "Always use boiling water—pouring cold water into hot sautéed rice causes the starch to burst and leads to mushy rice.",
+      "The green chilies are kept whole with stems intact; they release their fresh floral aroma through steam without injecting biting chili heat.",
+    ],
+    nutrition: {
+      calories: 390,
+      proteinGrams: 7,
+      carbsGrams: 64,
+      fatGrams: 12,
+      fiberGrams: 3,
+      sodiumMg: 420,
+    },
+    storageInstructions:
+      "Store cooled leftovers in an airtight glass container in the refrigerator for up to 3 days. Reheat by sprinkling a tablespoon of water and microwaving covered, or steam in a covered skillet over gentle heat with a dab of fresh ghee.",
+    freezingInstructions:
+      "Not recommended to freeze, as the delicate aromatic grains are at their peak texture and fragrance when enjoyed freshly prepared.",
+    servingSuggestions: [
+      "The Ultimate Wedding Feast: Pair with Bengali Chicken Roast (বাংলাদেশি চিকেন রোস্ট) and sweet mint Borhani.",
+      "Rich Meat Dinners: Serve alongside Bengali Beef Bhuna (গরুর মাংসের ভুনা) or slow-cooked Mutton Rezala.",
+      "Royal Vegetarian Feast: Complement with Shahi Chanar Dalna (cottage cheese koftas) or Navratan Korma.",
+      "Table Condiments: Serve with fresh cucumber, onion and tomato salad, lemon wedges, and sweet mango chutney.",
+    ],
+    faqs: [
+      {
+        question: "Why is Bengali Pulao slightly sweet?",
+        answer:
+          "In Bengali culinary tradition, festive Basanti / Mishti Pulao is intentionally crafted with a delicate sweet-savory balance. The subtle sweetness balances the robust, fiery, and deeply savory richness of companion gravies like Chicken Roast and Beef Bhuna.",
+      },
+      {
+        question: "Can I adjust the sugar level?",
+        answer:
+          "Yes! For a traditional banquet flavor, use 2 tablespoons of sugar. If you prefer a less sweet rice, 1 tablespoon provides just enough balance without tasting distinctly sweet.",
+      },
+      {
+        question: "Which rice variety is most authentic for Bengali Pulao?",
+        answer:
+          "Bangladeshi Chinigura and West Bengal Gobindobhog (baby aromatic rice) are the most authentic choices. Aged long-grain Basmati rice also produces stunning presentation with elongated grains.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Culinary Director & Heritage Specialist",
+    },
+    updatedDate: "September 17, 2026",
+    tags: [
+      "Bengali Pulao",
+      "বাঙালি পোলাও",
+      "Basanti Pulao",
+      "Mishti Polao",
+      "Ghee Rice",
+      "Halal Rice & Curry",
+      "Halal Vegetarian",
+      "Bengali Cuisine",
+      "Wedding Feast",
+      "Biye Bari",
+      "Chinigura Rice",
+      "Cashews and Raisins",
+      "Chicken Roast Companion",
+    ],
+  },
+  {
+    id: "rec-authentic-nihari",
+    slug: "authentic-nihari",
+    title: "Authentic Nihari (মুঘলাই শাহী নলি নিহারী)",
+    category: "Halal Beef",
+    categorySlug: "halal-beef",
+    cuisine: "Mughlai / Pakistani & Bengali Heritage",
+    description:
+      "Royal Authentic Nihari (মুঘলাই শাহী নলি নিহারী)—slow-simmered beef shanks and succulent bone marrow (nalli) braised in pure ghee and an intricate fennel-long pepper Nihari masala, thickened with toasted atta slurry into a velvety stew, and crowned with glistening rogan, ginger matchsticks, and fresh lemon.",
+    introStory:
+      "Originating in the royal kitchens of Old Delhi and Lucknow during the twilight of the Mughal Empire, Nihari takes its name from the Arabic word 'Nahar' (نهار, meaning 'day' or 'morning'). Historically simmered overnight in colossal sealed copper deghs and eaten after Fajr dawn prayers for restorative vitality through cold winter mornings, it remains one of the most celebrated royal dishes across Pakistan, North India, and Old Dhaka. This authentic recipe pairs fall-apart bone-in beef shank (known as 'bong' meat, prized for its melting gelatinous tendons) with colossal marrow bones ('nalli'). Sautéed in pure cow ghee with sliced onions and ginger-garlic paste, the beef is slow-braised for hours in an intricate whole spice potpourri—distinguished by fragrant fennel seeds (saunf), dry ginger (sonth), black cardamom, long pepper (pipli), nutmeg, mace (javitri), and Kashmiri chili. Thickened to luxurious velvet with a lightly roasted whole wheat atta slurry, the stew develops its hallmark glossy spiced red oil ('tari' or 'rogan'). Ladled hot into a traditional copper handi with bone marrow slipping from the pipes, topped with crispy ginger matchsticks, fiery green chilies, and a squeeze of fresh lemon, it is meant to be torn into with hot, pillowy tandoori garlic naan.",
+    heroImage: IMAGES.authenticNihari,
+    prepTimeMinutes: 25,
+    cookTimeMinutes: 240,
+    totalTimeMinutes: 265,
+    servings: 6,
+    difficulty: "Medium",
+    calories: 590,
+    rating: 4.99,
+    reviewCount: 218,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified. Made exclusively with hand-slaughtered Halal beef shank cuts and clean beef marrow bones (nalli), pure dairy cow ghee, cold-pressed oils, and pure single-origin whole spices without non-halal stocks, gelatins, or artificial enhancers.",
+    potentialCautionNotes:
+      "Do not rush the braise; the beef shank connective tissue requires at least 3.5 to 4 hours of low, gentle simmering (or 50 minutes under high pressure) to transform into melting tenderness. Be sure to skim off the top floating spiced red oil (rogan) before stirring in the atta slurry, otherwise the flour will absorb the vibrant color.",
+    ingredients: [
+      { amount: "2.5", unit: "lbs", name: "Bone-in beef shank (bong meat)", notes: "cut into large 2-inch chunks with connective tissue" },
+      { amount: "1.5", unit: "lbs", name: "Beef marrow bones (nalli / pipe bones)", notes: "cleaned and rinsed" },
+      { amount: "1/3", unit: "cup", name: "Pure cow ghee", notes: "Halal certified, for signature richness" },
+      { amount: "1/4", unit: "cup", name: "Mustard oil or vegetable oil" },
+      { amount: "2", unit: "medium", name: "Yellow or red onions", notes: "very thinly sliced" },
+      { amount: "2.5", unit: "tbsp", name: "Fresh ginger paste" },
+      { amount: "2", unit: "tbsp", name: "Fresh garlic paste" },
+      { amount: "2", unit: "tbsp", name: "Kashmiri red chili powder", notes: "for brilliant crimson color and mild heat" },
+      { amount: "1", unit: "tsp", name: "Hot red chili powder", notes: "adjust to heat tolerance" },
+      { amount: "1.5", unit: "tbsp", name: "Ground coriander (dhania powder)" },
+      { amount: "1", unit: "tsp", name: "Turmeric powder" },
+      { amount: "1.5", unit: "tsp", name: "Fine sea salt", notes: "or to taste" },
+      { amount: "8", unit: "cups", name: "Water or rich bone broth" },
+      { amount: "4", unit: "tbsp", name: "Whole wheat flour (atta)", notes: "lightly dry-roasted in a skillet until aromatic" },
+      { amount: "1/2", unit: "cup", name: "Cold water", notes: "for whisking flour slurry" },
+      { amount: "2", unit: "tbsp", name: "Whole fennel seeds (saunf)", notes: "for special Nihari masala" },
+      { amount: "1", unit: "tbsp", name: "Dry ginger powder (sonth)", notes: "vital hallmark Nihari spice" },
+      { amount: "1", unit: "tsp", name: "Whole black peppercorns" },
+      { amount: "5", unit: "pods", name: "Green cardamom" },
+      { amount: "2", unit: "pods", name: "Black cardamom (badi elaichi)" },
+      { amount: "2", unit: "sticks", name: "Cinnamon bark (2 inches each)" },
+      { amount: "6", unit: "whole", name: "Cloves" },
+      { amount: "2", unit: "whole", name: "Star anise" },
+      { amount: "1/2", unit: "piece", name: "Nutmeg (jaiphal)", notes: "crushed" },
+      { amount: "2", unit: "blades", name: "Mace (javitri)" },
+      { amount: "2", unit: "pieces", name: "Long pepper (pipli)", notes: "authentic royal Mughal secret spice" },
+      { amount: "1/3", unit: "cup", name: "Fresh ginger matchsticks (juliennes)", notes: "for fresh crisp garnish" },
+      { amount: "4", unit: "whole", name: "Fresh green chilies", notes: "thinly sliced into rings" },
+      { amount: "2", unit: "whole", name: "Fresh lemons", notes: "cut into wedges for squeezing at table" },
+      { amount: "1/4", unit: "cup", name: "Fresh cilantro (coriander leaves)", notes: "chopped" },
+    ],
+    substitutions: [
+      {
+        original: "Beef shank (bong)",
+        substitute: "Mutton shank or lamb leg shanks",
+        notes: "Mutton Nihari is equally celebrated; reduce the simmering time to approximately 2.5 hours.",
+      },
+      {
+        original: "Whole wheat atta",
+        substitute: "All-purpose flour (maida) or gram flour (besan)",
+        notes: "Toasted whole wheat atta provides the most authentic nutty mouthfeel and smooth emulsion without forming lumps.",
+      },
+      {
+        original: "Long pepper (pipli)",
+        substitute: "1/2 tsp additional freshly cracked black pepper with a pinch of allspice",
+        notes: "Pipli gives a distinctive warming sweet-peppery backnote typical of Old Delhi Shahi recipes.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Grind the Royal Nihari Masala",
+        instruction:
+          "In a dry skillet over low heat, gently toast the fennel seeds, black cardamom seeds, green cardamoms, cinnamon sticks, cloves, star anise, black peppercorns, nutmeg, mace, and long pepper for 90 seconds until fragrant. Let cool completely, then grind into a fine aromatic spice powder. Stir in the dry ginger powder (sonth) and set aside.",
+      },
+      {
+        step: 2,
+        title: "Brown Onions & Sear Beef Shanks",
+        instruction:
+          "In a large, heavy-bottomed Dutch oven, stockpot, or handi, heat the pure cow ghee and mustard oil together over medium-high heat. Add the thinly sliced onions and fry for 8–10 minutes until deep golden-brown. Remove half the fried onions for garnish. Add the ginger paste and garlic paste to the pot, sautéing for 1 minute until fragrant.",
+      },
+      {
+        step: 3,
+        title: "Bhuna (Sauté) the Meat with Spices",
+        instruction:
+          "Add the beef shank chunks and marrow bones to the pot. Sear over high heat for 6–8 minutes, turning frequently, until the meat is browned on all sides. Add the Kashmiri red chili powder, hot chili powder, coriander powder, turmeric, salt, and 3 tablespoons of the prepared Nihari masala. Sauté ('bhuna') continuously for 4–5 minutes, splashing 2 tablespoons of water as needed to prevent the spices from scorching.",
+      },
+      {
+        step: 4,
+        title: "Slow Braise Until Fall-Apart Tender",
+        instruction:
+          "Pour in 8 cups of warm water or bone broth. Bring to a vigorous boil over high heat, then immediately reduce the flame to low. Tightly cover the pot with a heavy lid (or seal with aluminum foil before lidding). Simmer gently on low heat for 3.5 to 4 hours (or cook in an Instant Pot / pressure cooker on High for 50 minutes with natural pressure release) until the beef shank is melt-in-the-mouth tender and pulling effortlessly from the bone.",
+      },
+      {
+        step: 5,
+        title: "Skim the Tari (Rogan) & Thicken with Atta Slurry",
+        instruction:
+          "Uncover the pot. A thick layer of brilliant red spiced oil ('tari' or 'rogan') will have risen to the top. Carefully ladle off 1/2 cup of this red oil into a bowl and set aside (this prevents the flour from dulling the vibrant ruby color). In a small bowl, whisk the 4 tablespoons of dry-roasted atta with 1/2 cup of cold water until completely lump-free. Slowly pour the slurry into the simmering stew in a steady stream while stirring continuously.",
+      },
+      {
+        step: 6,
+        title: "Final Simmer (Dum)",
+        instruction:
+          "Simmer the thickened stew uncovered on medium-low heat for 10–12 minutes until the gravy turns glossy, velvety, and coats the back of a spoon. Taste and adjust salt, adding an extra pinch of Nihari masala if desired.",
+      },
+      {
+        step: 7,
+        title: "Handi Presentation & Royal Garnish",
+        instruction:
+          "Carefully ladle the succulent beef shanks, velvety gravy, and marrow bones into a traditional copper or brass handi. Pour the reserved glistening red rogan (tari) generously over the surface. Garnish generously with fresh ginger matchsticks, sliced green chilies, and a fresh lemon wedge perched on the rim. Serve steaming hot with pillowy tandoori garlic naan, sheermal, or hot parathas.",
+      },
+    ],
+    chefNotes: [
+      "The bone marrow (nalli) is the soul of Nihari. Gently tap the marrow bone with the handle of a heavy spoon or use a small butter knife to slide the rich, buttery marrow into the gravy right before eating.",
+      "Skimming the rogan before adding the atta slurry is the master chef secret that gives restaurant Nihari its irresistible glistening ruby sheen.",
+      "Never skip the raw ginger matchsticks and freshly squeezed lemon juice at the table; their crisp freshness cuts through the deep, collagen-rich velvet gravy.",
+    ],
+    nutrition: {
+      calories: 590,
+      proteinGrams: 48,
+      carbsGrams: 18,
+      fatGrams: 36,
+      fiberGrams: 4,
+      sodiumMg: 780,
+    },
+    storageInstructions:
+      "Nihari is famously even better the next day as the spices deepen! Store refrigerated in an airtight container for up to 4 days. Reheat gently over low heat, adding a splash of water if the collagen thickens too much.",
+    freezingInstructions:
+      "Freezes exceptionally well for up to 2 months. Thaw in the refrigerator overnight and simmer on the stovetop until heated through before garnishing freshly.",
+    servingSuggestions: [
+      "Serve alongside freshly baked tandoori garlic naan, khameeri roti, or layered laccha parathas.",
+      "Accompany with a condiment platter of extra ginger matchsticks, fresh green chili slices, cilantro, and quartered lemons.",
+      "Follow with hot cardamom milk chai or sweet mango kulfi for a complete royal banquet experience.",
+    ],
+    faqs: [
+      {
+        question: "What cut of beef is best for Authentic Nihari?",
+        answer:
+          "Bone-in beef shank (also known as 'bong' meat) with marrow bones ('nalli') is essential. The high concentration of collagen, tendons, and marrow melts during the long braise, giving Nihari its signature velvety body without needing heavy cream.",
+      },
+      {
+        question: "Why do we use dry-toasted whole wheat atta?",
+        answer:
+          "Dry-roasting the whole wheat flour removes raw starch notes and lends a subtle nutty flavor while thickening the stew to a glossy, silk-like consistency that clings beautifully to naan.",
+      },
+      {
+        question: "Can this be made in an Instant Pot or pressure cooker?",
+        answer:
+          "Yes! After searing the meat and spices, pressure cook on High for 50 minutes, allow 15 minutes of natural release, skim the rogan, stir in the atta slurry on sauté mode, and simmer for 8 minutes.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Regional Culinary Director & Halal Recipe Developer",
+    },
+    updatedDate: "September 17, 2026",
+    tags: [
+      "Authentic Nihari",
+      "Nihari",
+      "নিহারী",
+      "নলি নিহারি",
+      "Shahi Nihari",
+      "Beef Shank",
+      "Bone Marrow",
+      "Nalli Nihari",
+      "Halal Beef",
+      "Mughlai Cuisine",
+      "Pakistani Cuisine",
+      "Old Delhi Heritage",
+      "Slow Cooked",
+      "Winter Comfort",
+      "Tandoori Naan Companion",
+    ],
+  },
+  {
+    id: "rec-haleem",
+    slug: "haleem",
+    title: "Haleem (হালিম / Shahi Beef Haleem)",
+    category: "Halal Beef",
+    categorySlug: "halal-beef",
+    cuisine: "Bengali / South Asian Heritage",
+    description:
+      "A royal, slow-simmered feast of authentic Haleem (হালিম)—tender Halal beef slow-braised with five wholesome lentils, cracked wheat, pearl barley, aromatic Chinigura rice, and rich Shahi spices, hand-mashed into a silky, savory porridge and crowned with glistening ghee tarka, caramelized fried onions (beresta), fresh ginger matchsticks, and tart lemon.",
+    introStory:
+      "Across Bengal and South Asia, Haleem (হালিম)—also known as Shahi Haleem—is the undisputed king of celebratory comfort foods, reaching legendary status during Ramadan Iftar gatherings, Eid festivals, and brisk winter evenings. Descended from the ancient Arab porridge 'Harees' and elevated in the royal Nawabi courts of Mughal India, Bengali Haleem holds a special place in the bustling food bazaars of Chawkbazar in Old Dhaka and family kitchens throughout Bangladesh. What sets authentic Bengali Haleem apart is the exquisite alchemy of textures and spices: succulent bone-in Halal beef chuck and marrow-rich soup bones are slow-simmered with five distinct lentils (chana, roasted moong, masoor, urad/mashkalai, and toor dal) alongside hearty cracked wheat, barley, and fragrant petite Chinigura rice. The dish is cooked over gentle heat and vigorously pounded with a traditional wooden masher ('ghota') until the meat breaks down into delicate, melting shreds that weave seamlessly into the golden lentil grain puree. Finished with a sizzling ghee tarka ('baghār') infused with cumin and dry chilies, and served in an earthenware bowl with crispy caramelized fried onions (beresta), zesty ginger juliennes, green chilies, and a generous squeeze of fresh lemon, every spoonful is a deeply nourishing, aromatic celebration.",
+    heroImage: IMAGES.haleem,
+    prepTimeMinutes: 40,
+    cookTimeMinutes: 180,
+    totalTimeMinutes: 220,
+    servings: 8,
+    difficulty: "Medium",
+    calories: 520,
+    rating: 4.99,
+    reviewCount: 284,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified. Made exclusively with hand-slaughtered Halal bone-in beef chunks and beef marrow bones, pure dairy cow ghee, natural pulses, whole grains, and single-origin whole spices. Free from any artificial gelatin, non-halal meat extracts, or commercial flavor cubes.",
+    potentialCautionNotes:
+      "Because of the high starch content from lentils, wheat, and rice, the mixture can settle and stick to the bottom of the pot during the final reduction. Cook on low heat and stir regularly using a flat-edged wooden spoon. Always de-bone the meat before the final blending or mashing phase.",
+    ingredients: [
+      { amount: "2", unit: "lbs", name: "Bone-in Halal beef chuck or stew meat", notes: "cut into bite-sized chunks" },
+      { amount: "1", unit: "lb", name: "Beef soup bones or marrow bones", notes: "cleaned, provides rich gelatinous body" },
+      { amount: "1/2", unit: "cup", name: "Cracked wheat (dalia / bulgur)", notes: "rinsed and soaked for 1 hour" },
+      { amount: "1/4", unit: "cup", name: "Pearl barley (jau)", notes: "rinsed and soaked for 1 hour" },
+      { amount: "1/4", unit: "cup", name: "Chinigura or Kalijeera aromatic rice", notes: "washed and soaked" },
+      { amount: "1/3", unit: "cup", name: "Chana dal (Bengal gram)", notes: "soaked for 2 hours" },
+      { amount: "1/4", unit: "cup", name: "Masoor dal (red lentils)", notes: "washed" },
+      { amount: "1/4", unit: "cup", name: "Yellow moong dal", notes: "dry-roasted in a skillet until fragrant and golden" },
+      { amount: "1/4", unit: "cup", name: "Urad dal / Mashkalai dal (split black gram)", notes: "washed" },
+      { amount: "1/4", unit: "cup", name: "Toor dal (pigeon peas)", notes: "washed" },
+      { amount: "1/2", unit: "cup", name: "Pure cow ghee", notes: "divided between cooking and final tarka" },
+      { amount: "1/3", unit: "cup", name: "Mustard oil or vegetable oil" },
+      { amount: "2.5", unit: "cups", name: "Onions", notes: "thinly sliced, for cooking and crispy beresta garnish" },
+      { amount: "3", unit: "tbsp", name: "Fresh ginger paste" },
+      { amount: "2.5", unit: "tbsp", name: "Fresh garlic paste" },
+      { amount: "2", unit: "tbsp", name: "Kashmiri red chili powder", notes: "for rich color and mild heat" },
+      { amount: "1", unit: "tbsp", name: "Turmeric powder" },
+      { amount: "2", unit: "tbsp", name: "Coriander powder (dhania)" },
+      { amount: "1.5", unit: "tbsp", name: "Cumin powder (jeera)" },
+      { amount: "2", unit: "tsp", name: "Fine sea salt", notes: "or to taste" },
+      { amount: "10", unit: "cups", name: "Water or hot beef bone broth", notes: "added incrementally during simmering" },
+      { amount: "2", unit: "tbsp", name: "Homemade Shahi Haleem Masala", notes: "ground blend of fennel, cumin, caraway, cardamoms, cloves, cinnamon, star anise, nutmeg, mace & cubeb" },
+      { amount: "1/2", unit: "cup", name: "Crispy fried onions (beresta)", notes: "for crown garnish" },
+      { amount: "1/3", unit: "cup", name: "Fresh ginger matchsticks (juliennes)", notes: "vital fresh garnish" },
+      { amount: "4", unit: "whole", name: "Fresh green chilies", notes: "thinly sliced into rings" },
+      { amount: "1/3", unit: "cup", name: "Fresh cilantro (coriander leaves)", notes: "finely chopped" },
+      { amount: "2", unit: "whole", name: "Fresh lemons", notes: "cut into wedges for serving at table" },
+      { amount: "1", unit: "tsp", name: "Chaat masala or roasted cumin powder", notes: "for final table dusting" },
+    ],
+    substitutions: [
+      {
+        original: "Halal beef chuck",
+        substitute: "Bone-in Halal mutton or goat meat",
+        notes: "Mutton Shahi Haleem (খাসির হালিম) is equally revered; follow identical cooking and mashing steps.",
+      },
+      {
+        original: "Chinigura rice",
+        substitute: "Kalijeera rice or broken aged basmati",
+        notes: "Aromatic petite rice lends quintessential Bengali fragrant floral sweetness to the porridge.",
+      },
+      {
+        original: "Cracked wheat (dalia)",
+        substitute: "Rolled oats or bulgur wheat",
+        notes: "Cracked wheat gives the authentic stretch and hearty fiber texture typical of traditional Old Dhaka deghs.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Soak and Cook the Lentils and Grains",
+        instruction:
+          "In a large bowl, combine the soaked cracked wheat, pearl barley, Chinigura rice, chana dal, masoor dal, roasted moong dal, urad dal, and toor dal. Rinse thoroughly under cold running water until clear. Transfer to a large pot with 6 cups of water, 1 teaspoon of turmeric, and 1 teaspoon of salt. Bring to a boil, then reduce heat to low, cover, and simmer for 40–45 minutes until all grains and lentils are very soft and porridge-like. Coarsely blend with an immersion blender or mash with a wooden dal masher (dal ghutni) so texture remains slightly coarse, not baby-food smooth.",
+      },
+      {
+        step: 2,
+        title: "Fry Onions & Make Beresta",
+        instruction:
+          "In a large, heavy-bottomed Dutch oven or handi, heat 1/4 cup of ghee and the mustard oil over medium heat. Fry the thinly sliced onions until deep golden, crispy, and sweet (about 10–12 minutes). Remove half of the crispy fried onions (beresta) onto a paper towel-lined plate to preserve their crunch for the final garnish.",
+      },
+      {
+        step: 3,
+        title: "Bhuna (Sear) Beef with Royal Spices",
+        instruction:
+          "In the same pot with the remaining onions and fragrant oil, add the ginger paste and garlic paste. Sauté for 1–2 minutes until fragrant. Add the beef chunks and marrow soup bones. Sear over medium-high heat for 8 minutes until browned on all sides. Stir in the Kashmiri chili powder, coriander powder, cumin powder, remaining turmeric, salt, and 1.5 tablespoons of Shahi Haleem Masala. Sauté ('bhuna') vigorously for 5 minutes, adding splashes of warm water to prevent spices from burning.",
+      },
+      {
+        step: 4,
+        title: "Slow-Cook the Beef Korma",
+        instruction:
+          "Pour in 4 cups of hot water or beef bone stock. Bring to a rolling boil, then lower the heat, cover tightly, and simmer for 1.5 to 2 hours (or 35 minutes in an Instant Pot / pressure cooker) until the beef is meltingly tender and easily shredded with two forks.",
+      },
+      {
+        step: 5,
+        title: "Debone, Shred Meat & Combine",
+        instruction:
+          "Remove the large beef bones from the pot, tapping any rich bone marrow directly back into the gravy. Discard empty bone pipes. Using two forks or a potato masher, shred the beef chunks into fine, succulent fibers. Pour the cooked lentil-grain mixture directly into the shredded beef and rich spiced gravy.",
+      },
+      {
+        step: 6,
+        title: "The Traditional Pounding & Dum Simmer (Ghotano)",
+        instruction:
+          "Stir thoroughly to integrate the meat fibers with the grain porridge. Simmer over the lowest flame for 30–40 minutes, stirring frequently with a wooden spoon or flat paddle to prevent sticking. Use the back of the spoon or a masher against the sides of the pot to vigorously pound ('ghotano') the mixture until it turns glossy, cohesive, and takes on a thick, stretchable texture. Stir in the remaining 1/2 tablespoon of Shahi Haleem Masala.",
+      },
+      {
+        step: 7,
+        title: "Sizzling Shahi Ghee Tarka (Baghār)",
+        instruction:
+          "In a small skillet, heat the remaining 1/4 cup of pure cow ghee over medium heat. Add 1/2 teaspoon of shahi jeera (caraway seeds) and 2 whole dried red chilies. When they sizzle and release their royal nutty aroma (about 30 seconds), immediately pour the hot sizzling ghee tarka over the bubbling Haleem. Cover immediately with a lid for 3 minutes to trap the heavenly smoke and perfume.",
+      },
+      {
+        step: 8,
+        title: "Earthenware Presentation & Royal Garnish",
+        instruction:
+          "Ladle the piping-hot Haleem into traditional clay or rustic earthenware bowls. Drizzle the surface with a spoonful of the spiced golden ghee rogan. Crown with crispy fried onions (beresta), fresh ginger matchsticks, sliced green chilies, and freshly chopped cilantro. Serve immediately with lemon wedges on the side to squeeze generously before digging in.",
+      },
+    ],
+    chefNotes: [
+      "Roasting the yellow moong dal in a dry pan until golden-brown before boiling adds an irresistible nutty aroma that defines authentic Old Dhaka Haleem.",
+      "The soul of true Haleem is the 'ghota' technique—pounding the beef fibers so they melt into the grains, giving the dish its famous rich, elastic, and velvety pull.",
+      "Always serve Haleem with fresh accompaniments at the table: raw ginger juliennes, chopped green chilies, and fresh lemon wedges are essential to balance the rich, hearty depth.",
+    ],
+    nutrition: {
+      calories: 520,
+      proteinGrams: 42,
+      carbsGrams: 48,
+      fatGrams: 20,
+      fiberGrams: 9,
+      sodiumMg: 710,
+    },
+    storageInstructions:
+      "Haleem cools into a thick stew and reheats wonderfully. Store in an airtight container in the refrigerator for up to 4 days. When reheating, add 1/4 to 1/2 cup of warm water or broth and stir over low heat until steaming and smooth.",
+    freezingInstructions:
+      "Freezes exceptionally well for up to 3 months. Portion into freezer-safe containers. Thaw overnight in the refrigerator and reheat gently on the stovetop with a splash of hot water, then garnish freshly before serving.",
+    servingSuggestions: [
+      "Enjoy as a complete, hearty one-pot meal during Ramadan Iftar or celebratory dinners.",
+      "Serve alongside warm, crisp tandoori roti, garlic butter naan, or flaky laccha parathas.",
+      "Set out a condiment station with fried beresta onions, ginger matchsticks, lemon wedges, chopped chilies, and chaat masala for guests to customize their bowl.",
+    ],
+    faqs: [
+      {
+        question: "What makes Haleem different from Khichuri?",
+        answer:
+          "While both feature lentils and rice, Haleem includes cracked wheat and barley, uses 5-6 different lentils, and features slow-cooked meat that is vigorously pounded until the meat fibers dissolve into the grains, producing a smooth, thick, and velvety porridge rather than separate rice grains.",
+      },
+      {
+        question: "Can I make this with chicken or mutton?",
+        answer:
+          "Yes! Mutton (goat or lamb) is traditional and prepared identically. For Chicken Haleem, use bone-in chicken thighs and reduce the meat simmering time to 40 minutes before shredding.",
+      },
+      {
+        question: "Why do we add cracked wheat and barley?",
+        answer:
+          "Cracked wheat (dalia) and pearl barley contain high levels of natural gluten and soluble fibers that give Haleem its signature rich body, velvety smoothness, and stretchable texture.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Regional Culinary Director & Halal Recipe Developer",
+    },
+    updatedDate: "September 17, 2026",
+    tags: [
+      "Haleem",
+      "হালিম",
+      "Shahi Haleem",
+      "শাহী হালিম",
+      "Beef Haleem",
+      "গরুর হালিম",
+      "Halal Beef",
+      "Ramadan Iftar",
+      "Iftar Special",
+      "Eid Feast",
+      "Bengali Cuisine",
+      "Old Dhaka Heritage",
+      "Mughlai Porridge",
+      "Lentil Beef Stew",
+      "Comfort Food",
+      "Slow Cooked",
+    ],
+  },
+  {
+    id: "rec-chicken-karahi",
+    slug: "chicken-karahi",
+    title: "Chicken Karahi (চিকেন কড়াই / Murgh Karahi)",
+    category: "Halal Chicken",
+    categorySlug: "halal-chicken",
+    cuisine: "South Asian / Pakistani & Bengali Heritage",
+    description:
+      "Sizzling restaurant-style Chicken Karahi (চিকেন কড়াই)—succulent bone-in Halal chicken stir-fried over roaring flame in a traditional heavy karahi wok with vine-ripened tomatoes, fresh ginger matchsticks, crushed garlic, coarsely pounded coriander seeds, and whole green chilies, finished with fresh coriander and fragrant garam masala.",
+    introStory:
+      "Celebrated from the bustling street-side dhabas of Lahore and Peshawar to beloved curry houses across Bangladesh, Chicken Karahi (চিকেন কড়াই / Murgh Karahi) is a triumph of high-heat culinary craftsmanship. Unlike curries that rely on slow-simmered onion purees or heavy nut pastes, an authentic Karahi gets its luscious, clinging ruby-gold gravy purely from ripe tomatoes reduced and caramelized alongside freshly pounded spices over intense wok flames. Tender, curry-cut bone-in Halal chicken is vigorously seared in oil and pure cow ghee with heaps of freshly crushed ginger and garlic until golden. Halved ripe tomatoes are steamed directly on top of the chicken until their skins slip off effortlessly, then mashed down and cooked vigorously ('bhuna') with coarsely crushed coriander seeds, roasted cumin, Kashmiri chili, and freshly cracked black peppercorns until the oil separates in glistening beads. Topped with fiery slit green chilies and a bountiful crown of crisp ginger juliennes and fresh cilantro, Chicken Karahi is served sizzling hot straight from the wok alongside blistering tandoori garlic naan, laccha parathas, or fragrant basmati rice.",
+    heroImage: IMAGES.chickenKarahi,
+    prepTimeMinutes: 15,
+    cookTimeMinutes: 30,
+    totalTimeMinutes: 45,
+    servings: 4,
+    difficulty: "Easy",
+    calories: 460,
+    rating: 4.98,
+    reviewCount: 194,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified. Prepared exclusively with hand-slaughtered small bone-in Halal chicken pieces, pure dairy cow ghee, cold-pressed vegetable oil, and freshly ground whole spices without commercial sauces, preservatives, or artificial flavor enhancers.",
+    potentialCautionNotes:
+      "Authentic Karahi relies on high heat ('bhuna') to emulsify the tomatoes and spices without adding water. Stir frequently to prevent sticking to the bottom of the wok while achieving the signature caramelized smoky crust.",
+    ingredients: [
+      { amount: "2", unit: "lbs", name: "Bone-in Halal chicken", notes: "curry cut into 16–18 small pieces with drumsticks and bone-in thighs" },
+      { amount: "5", unit: "large", name: "Ripe red Roma or vine tomatoes", notes: "stemmed and sliced in half horizontally" },
+      { amount: "1/4", unit: "cup", name: "Vegetable oil or mustard oil", notes: "for high-heat searing" },
+      { amount: "2", unit: "tbsp", name: "Pure cow ghee", notes: "Halal certified, added towards the finish for royal aroma" },
+      { amount: "2.5", unit: "tbsp", name: "Fresh ginger paste or freshly minced ginger" },
+      { amount: "2", unit: "tbsp", name: "Fresh garlic paste or minced garlic" },
+      { amount: "1/4", unit: "cup", name: "Fresh ginger matchsticks (juliennes)", notes: "divided: half cooked in wok, half for fresh garnish" },
+      { amount: "5", unit: "whole", name: "Fresh green chilies", notes: "split lengthwise" },
+      { amount: "1.5", unit: "tbsp", name: "Whole coriander seeds", notes: "coarsely crushed in a mortar & pestle" },
+      { amount: "1", unit: "tbsp", name: "Whole cumin seeds", notes: "dry-roasted and coarsely crushed" },
+      { amount: "1", unit: "tbsp", name: "Kashmiri red chili powder", notes: "for vibrant red color and mellow warmth" },
+      { amount: "1", unit: "tsp", name: "Red chili flakes or hot chili powder", notes: "adjust to heat preference" },
+      { amount: "1/2", unit: "tsp", name: "Turmeric powder" },
+      { amount: "1", unit: "tsp", name: "Coarsely cracked black peppercorns", notes: "essential hallmark Karahi flavor" },
+      { amount: "1", unit: "tsp", name: "Garam masala powder" },
+      { amount: "1", unit: "tsp", name: "Kasuri methi (dried fenugreek leaves)", notes: "crushed between palms" },
+      { amount: "1.5", unit: "tsp", name: "Fine sea salt", notes: "or to taste" },
+      { amount: "1/3", unit: "cup", name: "Fresh cilantro (coriander leaves)", notes: "chopped for garnish" },
+      { amount: "1", unit: "whole", name: "Fresh lemon", notes: "cut into wedges for serving" },
+    ],
+    substitutions: [
+      {
+        original: "Bone-in chicken",
+        substitute: "Boneless chicken thigh chunks",
+        notes: "Bone-in meat yields the most flavorful, succulent sauce, but boneless chicken thighs work well (reduce cooking time by 5 minutes).",
+      },
+      {
+        original: "Roma tomatoes",
+        substitute: "Canned whole peeled San Marzano plum tomatoes",
+        notes: "Crush with your hands before adding; fresh vine-ripened tomatoes are best for traditional fresh sweetness.",
+      },
+      {
+        original: "Ghee",
+        substitute: "Salted butter",
+        notes: "A dollop of butter at the end creates a similarly rich, glossy sheen.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Sear Chicken in High Heat",
+        instruction:
+          "Place a heavy cast-iron wok or deep karahi skillet over high heat. Pour in the 1/4 cup of oil. Once shimmering hot, add the chicken pieces and 1 teaspoon of sea salt. Stir-fry vigorously for 6–8 minutes until the chicken turns opaque, firms up, and begins to develop light golden patches on the edges.",
+      },
+      {
+        step: 2,
+        title: "Infuse Fresh Ginger & Garlic",
+        instruction:
+          "Add the ginger paste and garlic paste directly to the sizzling chicken. Stir-fry vigorously on medium-high heat for 2 minutes until the raw aroma dissipates and the aromatics turn fragrant and lightly toasted.",
+      },
+      {
+        step: 3,
+        title: "Steam & Skin the Tomatoes",
+        instruction:
+          "Arrange the halved tomatoes cut-side down directly over the chicken pieces. Do not add water. Reduce the heat to medium-low, cover the karahi tightly with a lid, and let steam for 8–10 minutes. The natural juices from the tomatoes and chicken will create a rich steam bath, loosening the tomato skins.",
+      },
+      {
+        step: 4,
+        title: "Peel & Crush Tomatoes",
+        instruction:
+          "Remove the lid. Using kitchen tongs, pinch and easily lift away all the loosened tomato skins and discard them. Using the back of a sturdy wooden spoon or spatula, crush the softened tomato pulp directly into the pan until it forms a chunky sauce around the chicken.",
+      },
+      {
+        step: 5,
+        title: "The High-Heat Bhuna (Sauté)",
+        instruction:
+          "Turn the heat back up to high. Stir in the coarsely crushed coriander seeds, crushed cumin, Kashmiri chili powder, chili flakes, turmeric, and half of the slit green chilies. Stir-fry ('bhuna') continuously for 8–10 minutes, tossing the chicken and breaking down the tomato pulp until the liquid reduces and emulsifies into a thick, clinging masala.",
+      },
+      {
+        step: 6,
+        title: "Add Ghee, Pepper & Kasuri Methi",
+        instruction:
+          "Add the 2 tablespoons of pure cow ghee, freshly cracked black pepper, garam masala, and half of the fresh ginger matchsticks. Rub the dried fenugreek leaves (kasuri methi) between your palms and scatter into the pan. Stir-fry on medium-high for another 3 minutes until glistening beads of spiced red-gold oil separate from the gravy edges.",
+      },
+      {
+        step: 7,
+        title: "Garnish & Table Presentation",
+        instruction:
+          "Turn off the heat. Immediately crown the bubbling Chicken Karahi with the remaining crisp ginger matchsticks, remaining slit green chilies, and finely chopped fresh cilantro. Serve sizzling hot straight from the karahi with warm blistered tandoori garlic naan, laccha parathas, or steamed basmati rice, accompanied by fresh lemon wedges.",
+      },
+    ],
+    chefNotes: [
+      "The secret to true street-style Chicken Karahi is cooking at high heat without adding a single drop of water. The chicken braises naturally in its own juices and the fresh tomato moisture.",
+      "Coarsely crushing whole coriander seeds rather than using fine powder creates the unmistakable crunchy, citrusy spice bursts that define authentic Pakistani and Bengali Karahi.",
+      "Always serve Chicken Karahi directly in the pan or wok it was cooked in; the heat retention keeps the thick tomato gravy bubbling and fragrant at the dining table.",
+    ],
+    nutrition: {
+      calories: 460,
+      proteinGrams: 44,
+      carbsGrams: 12,
+      fatGrams: 26,
+      fiberGrams: 3,
+      sodiumMg: 680,
+    },
+    storageInstructions:
+      "Store cooled leftover Chicken Karahi in an airtight container in the refrigerator for up to 3 days. Reheat in a skillet over medium heat with a splash of water and a touch of fresh ghee.",
+    freezingInstructions:
+      "Can be frozen in airtight containers for up to 1 month. Thaw overnight in the refrigerator and reheat in a hot wok, garnishing with fresh ginger and green chilies.",
+    servingSuggestions: [
+      "Pair with hot tandoori garlic naan, pillowy butter naan, or layered laccha parathas straight from the tawa.",
+      "Serve with a cool cucumber raita, sliced red onions, and fresh whole green chilies on the side.",
+      "Enjoy alongside steamed fragrant basmati rice or Bengali Basanti Pulao.",
+    ],
+    faqs: [
+      {
+        question: "Why does authentic Chicken Karahi not use onions?",
+        answer:
+          "Traditional Peshawari and Shinwari-style Karahi strictly avoids onions, relying entirely on ripe tomatoes, garlic, ginger, and green chilies. This creates a clean, tangy, and intensely savory sauce without the heavy sweetness that onions impart.",
+      },
+      {
+        question: "Can I make this in a standard non-stick skillet?",
+        answer:
+          "Yes! While a traditional iron or carbon steel karahi wok imparts unbeatable smoky heat and caramelization, a heavy non-stick deep skillet or cast-iron pan produces delicious results at home.",
+      },
+      {
+        question: "How spicy is this Chicken Karahi?",
+        answer:
+          "It has a vibrant, warming heat from fresh green chilies and cracked black pepper, with Kashmiri chili adding brilliant red color and mild warmth. You can easily adjust the number of green chilies to match your heat preference.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Regional Culinary Director & Halal Recipe Developer",
+    },
+    updatedDate: "September 17, 2026",
+    tags: [
+      "Chicken Karahi",
+      "চিকেন কড়াই",
+      "Murgh Karahi",
+      "Karahi",
+      "কড়াই চিকেন",
+      "Halal Chicken",
+      "Pakistani Cuisine",
+      "Bengali Cuisine",
+      "Lahori Karahi",
+      "Street Food",
+      "Wok Stir Fry",
+      "Quick Dinner",
+      "Tandoori Naan Companion",
+      "Spicy Chicken Curry",
+    ],
+  },
+  {
+    id: "rec-seekh-kebab",
+    slug: "seekh-kebab",
+    title: "Seekh Kebab (শিখ কাবাব / Authentic Halal Beef Seekh Kebab)",
+    category: "Halal Beef",
+    categorySlug: "halal-beef",
+    cuisine: "South Asian / Bengali & Mughlai Heritage",
+    description:
+      "Juicy, melt-in-the-mouth Seekh Kebab (শিখ কাবাব)—finely ground Halal beef infused with caramelized onions, roasted gram flour (besan), ginger-garlic paste, fresh coriander, mint, crushed green chilies, and aromatic Shahi garam masala, skewered and flame-charred to succulent perfection, served with creamy mint-coriander yogurt chutney and pickled onion rings.",
+    introStory:
+      "From the historic kabab gallis of Old Dhaka—where the nocturnal wafts of charcoal smoke from legendary institutions like Star Kabab, Al-Razzak, and Nazira Bazar captivate diners—to the grand royal barbecue feasts of Lucknow, Seekh Kebab (শিখ কাবাব) reigns as the ultimate celebration of grilled meat. The secret to an authentic, restaurant-caliber seekh kebab lies in the meticulous balance of technique and ingredients: double-ground prime Halal beef chuck paired with 20% natural fat for incomparable juiciness, onion pulp squeezed bone-dry to prevent moisture breakage, and roasted gram flour (besan) that binds the spiced keema with a velvety crumb. Before skewering, the meat is vigorously kneaded to awaken natural muscle proteins, then gently kissed with live hardwood charcoal smoke ('dhungar'). Threaded onto skewers and grilled over blazing embers or a cast-iron ridged grill pan, each skewer is basted with golden cow ghee until sizzling and charred with rustic grill stripes. Plated over warm flatbread alongside a bowl of cool, creamy mint-coriander yogurt raita, crisp red onion rings, and a spritz of fresh lemon juice, every bite delivers an explosion of smoky, spiced, and tender perfection.",
+    heroImage: IMAGES.seekhKebab,
+    prepTimeMinutes: 25,
+    cookTimeMinutes: 15,
+    totalTimeMinutes: 40,
+    servings: 6,
+    difficulty: "Medium",
+    calories: 290,
+    rating: 4.99,
+    reviewCount: 245,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified. Made exclusively with hand-slaughtered premium Halal beef chuck and natural beef fat (80/20 ratio), pure dairy cow ghee for basting, garden-fresh herbs, and freshly ground whole spices without synthetic meat binders, artificial nitrates, or non-halal emulsifiers.",
+    potentialCautionNotes:
+      "Excess moisture is the primary cause of seekh kebabs crumbling or slipping off skewers. Always squeeze the grated onions completely dry in a clean kitchen towel before adding. Ensure the ground meat is chilled for at least 1 hour so the fat solidifies and binds securely.",
+    ingredients: [
+      { amount: "1.5", unit: "lbs", name: "Halal beef chuck", notes: "finely double-ground (80% lean)" },
+      { amount: "0.5", unit: "lb", name: "Halal beef or lamb fat", notes: "finely ground, essential 20% fat ratio for tenderness and juiciness" },
+      { amount: "1", unit: "large", name: "Yellow or red onion", notes: "finely grated and squeezed bone-dry in a cheesecloth" },
+      { amount: "2", unit: "tbsp", name: "Fresh ginger-garlic paste", notes: "thick, with excess water drained" },
+      { amount: "3", unit: "whole", name: "Fresh green chilies", notes: "finely minced" },
+      { amount: "1/3", unit: "cup", name: "Fresh cilantro (coriander leaves)", notes: "washed, dried thoroughly, and finely chopped" },
+      { amount: "2", unit: "tbsp", name: "Fresh mint leaves", notes: "finely chopped" },
+      { amount: "3", unit: "tbsp", name: "Roasted gram flour (besan / sattu)", notes: "dry-roasted in a pan until nutty and golden" },
+      { amount: "1", unit: "tbsp", name: "Raw green papaya paste or 1 small egg", notes: "natural tenderizer and binder" },
+      { amount: "1", unit: "tbsp", name: "Pure cow ghee", notes: "kneaded into the meat mixture" },
+      { amount: "1.5", unit: "tsp", name: "Roasted cumin powder (bhuna jeera)" },
+      { amount: "1.5", unit: "tsp", name: "Roasted coriander powder (bhuna dhania)" },
+      { amount: "1", unit: "tbsp", name: "Kashmiri red chili powder", notes: "for rich color and mild heat" },
+      { amount: "1", unit: "tsp", name: "Shahi garam masala powder", notes: "ground mace, cardamom, nutmeg, cinnamon, and cloves" },
+      { amount: "1", unit: "tsp", name: "Coarsely cracked black pepper" },
+      { amount: "1/2", unit: "tsp", name: "Amchur (dried mango powder) or chaat masala" },
+      { amount: "1.5", unit: "tsp", name: "Fine sea salt", notes: "or to taste" },
+      { amount: "2", unit: "tbsp", name: "Pure cow ghee or melted butter", notes: "for basting during grilling" },
+      { amount: "1", unit: "piece", name: "Lump hardwood charcoal", notes: "optional, for authentic dhungar smoke infusion" },
+      { amount: "1", unit: "cup", name: "Creamy mint-coriander yogurt raita", notes: "strained Greek yogurt, mint, cilantro, garlic, roasted cumin & salt" },
+      { amount: "1", unit: "large", name: "Red onion", notes: "thinly sliced into rings and tossed with lemon juice & sumac" },
+      { amount: "1", unit: "whole", name: "Fresh lemon", notes: "cut into wedges for serving" },
+      { amount: "10-12", unit: "pieces", name: "Bamboo skewers", notes: "soaked in cold water for 45 minutes to prevent burning" },
+    ],
+    substitutions: [
+      {
+        original: "Halal ground beef",
+        substitute: "Ground Halal lamb or mutton (খাসির মাংস)",
+        notes: "Mutton Seekh Kebab is equally prized; use 80% mutton leg/shoulder with 20% lamb fat.",
+      },
+      {
+        original: "Roasted gram flour (besan)",
+        substitute: "Cornstarch or finely crushed toasted breadcrumbs",
+        notes: "Provides structural binding to hold meat tightly onto skewers during grilling.",
+      },
+      {
+        original: "Raw papaya paste",
+        substitute: "1 small beaten egg or 1/2 tsp baking soda",
+        notes: "Natural enzymes in green papaya gently break down meat fibers without making them mushy.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Extract Moisture from Aromatics",
+        instruction:
+          "Grate the onion using the fine side of a box grater. Transfer the grated onion pulp into a clean cheesecloth or fine mesh strainer, and squeeze forcefully with both hands to expel every drop of moisture. Squeeze ginger-garlic paste lightly to remove excess water.",
+      },
+      {
+        step: 2,
+        title: "Combine Meat & Roasted Spices",
+        instruction:
+          "In a large mixing bowl, combine the double-ground beef, beef fat, dry squeezed onion pulp, ginger-garlic paste, minced green chilies, chopped cilantro, and chopped mint. Add the roasted gram flour, raw papaya paste (or egg), 1 tablespoon of melted ghee, roasted cumin, roasted coriander, Kashmiri chili powder, Shahi garam masala, cracked black pepper, chaat masala, and sea salt.",
+      },
+      {
+        step: 3,
+        title: "The Kneading Technique (Crucial Step)",
+        instruction:
+          "Using the heel of your hand, knead the meat mixture forcefully for 6 to 8 minutes like bread dough. This mechanical action releases muscle myosin proteins, transforming the minced meat into a sticky, cohesive paste that will cling securely to skewers without cracking.",
+      },
+      {
+        step: 4,
+        title: "Charcoal Smoke Infusion (Dhungar Method)",
+        instruction:
+          "Create a small well in the center of the meat mixture. Place a small steel bowl or piece of heavy foil in the indentation. Heat a lump of natural hardwood charcoal over a gas flame until glowing red-hot. Place the hot coal into the small bowl, drizzle 1/2 teaspoon of ghee over the coal, and immediately cover the mixing bowl tightly with a lid or foil. Let the aromatic smoke infuse the meat for 5–7 minutes, then discard the coal.",
+      },
+      {
+        step: 5,
+        title: "Chill to Solidify & Bind",
+        instruction:
+          "Cover the spiced meat dough tightly with plastic wrap and refrigerate for at least 1 hour (or up to 12 hours). Chilling solidifies the fat and allows the aromatics to deeply penetrate the meat fibers.",
+      },
+      {
+        step: 6,
+        title: "Shape on Skewers",
+        instruction:
+          "Keep a small bowl of cold salted water beside your work station. Divide the chilled meat into 10–12 equal balls (about 2.5 to 3 ounces each). Dip your hands in the cold water. Slide a soaked wooden skewer (or flat metal skewer) through the center of a meat ball. Using your fingers and thumb, gently press and elongate the meat evenly along the skewer (approx 6 to 7 inches long and 1 inch thick). Use your fingertips to press light decorative ridges along the kebab, and seal both ends firmly onto the skewer.",
+      },
+      {
+        step: 7,
+        title: "Grill, Sear & Ghee Baste",
+        instruction:
+          "Heat a heavy ridged cast-iron grill pan, indoor grill, or outdoor charcoal barbecue over medium-high heat. Lightly oil the grill grates. Lay the skewers onto the hot grill. Cook undisturbed for 3–4 minutes until defined golden-charred grill marks form and the meat releases naturally. Gently turn the skewers to cook all sides (about 10–12 minutes total). During the last 2 minutes, generously brush all sides with melted ghee or butter for a glistening, succulent finish.",
+      },
+      {
+        step: 8,
+        title: "Presentation & Serving",
+        instruction:
+          "Transfer the piping-hot Seekh Kebabs to a ceramic serving platter lined with warm naan or flatbread. Sprinkle with fresh chopped cilantro and a pinch of chaat masala. Serve accompanied by the creamy mint-coriander yogurt raita, lemon wedges, and crisp red onion rings.",
+      },
+    ],
+    chefNotes: [
+      "The 80/20 meat-to-fat ratio is the single most important rule of juicy seekh kebabs. Too little fat causes dry, rubbery kebabs that shrink; 20% fat guarantees succulent, melt-in-the-mouth texture.",
+      "Never skip squeezing the onion pulp dry. Water is the enemy of kebab stability on skewers.",
+      "Kneading the mixture vigorously for 6–8 minutes activates the proteins, creating a fine emulsion that prevents the meat from crumbling or separating while grilling.",
+    ],
+    nutrition: {
+      calories: 290,
+      proteinGrams: 32,
+      carbsGrams: 5,
+      fatGrams: 16,
+      fiberGrams: 1,
+      sodiumMg: 520,
+    },
+    storageInstructions:
+      "Store cooked seekh kebabs in an airtight container in the refrigerator for up to 4 days. Reheat on a hot grill pan or skillet with a light brush of butter until heated through.",
+    freezingInstructions:
+      "You can freeze un-cooked shaped skewers on a parchment-lined baking sheet until frozen solid, then wrap individually in cling film and freeze for up to 2 months. Thaw in the refrigerator before grilling. Cooked kebabs can also be frozen for up to 2 months.",
+    servingSuggestions: [
+      "Serve hot off the grill over pillowy tandoori garlic naan, roomali roti, or parathas.",
+      "Wrap into warm flatbread with sliced pickled onions, mint chutney, and green chilies to make a classic street-style Seekh Kebab Roll.",
+      "Pair with aromatic Basanti Pulao or saffron basmati rice alongside cucumber raita and fresh salad.",
+    ],
+    faqs: [
+      {
+        question: "Why do my seekh kebabs fall off the skewers?",
+        answer:
+          "This happens for three common reasons: too much moisture in the onions/ginger, insufficient kneading (which is needed to activate the protein binders), or skipping the chilling step. Squeeze aromatics dry, knead for 7 minutes, and chill the meat for at least 1 hour.",
+      },
+      {
+        question: "Can I make these in an oven or air fryer?",
+        answer:
+          "Yes! For an oven, broil on high on a wire rack set over a foil-lined baking sheet for 12–14 minutes, turning and basting halfway. For an air fryer, preheat to 400°F (200°C) and air-fry for 10–12 minutes, turning once and brushing with ghee.",
+      },
+      {
+        question: "What gives restaurant seekh kebabs their smoky aroma?",
+        answer:
+          "Authentic restaurants cook over open charcoal pits or tandoors. At home, you can replicate this identical aroma using the traditional 'dhungar' method: placing a red-hot charcoal ember in a foil cup inside the meat bowl, drizzling it with ghee, and covering tightly for 5 minutes.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Regional Culinary Director & Halal Recipe Developer",
+    },
+    updatedDate: "September 17, 2026",
+    tags: [
+      "Seekh Kebab",
+      "শিখ কাবাব",
+      "Sheek Kebab",
+      "Shish Kebab",
+      "Beef Seekh Kebab",
+      "গরুর কাবাব",
+      "Halal Beef",
+      "Halal BBQ",
+      "Street Food",
+      "Old Dhaka Heritage",
+      "Mughlai Kebab",
+      "Charcoal Grill",
+      "Tandoori Special",
+      "Ramadan Iftar",
+      "Eid Feast",
+      "Appetizer",
+    ],
+  },
+  {
+    id: "rec-authentic-chicken-shawarma",
+    slug: "authentic-chicken-shawarma",
+    title: "Authentic Chicken Shawarma (আসল ঘরোয়া চিকেন শাওয়ার্মা)",
+    category: "Halal Chicken",
+    categorySlug: "halal-chicken",
+    cuisine: "Middle Eastern / Levantine & Halal Street Food",
+    description:
+      "Juicy, spiced, and flame-crisped Authentic Chicken Shawarma (আসল ঘরোয়া চিকেন শাওয়ার্মা)—tender Halal chicken thighs marinated in creamy yogurt, fresh lemon juice, garlic, and aromatic Levantine warm spices, seared to smoky caramelized perfection, and wrapped in warm flatbread with rich garlic toum sauce, crisp lettuce, ripe tomatoes, and tangy pickles.",
+    introStory:
+      "A quintessential treasure of Middle Eastern and global street food culture, Chicken Shawarma (শাওয়ার্মা / شاورমা) is adored from Beirut and Damascus to the bustling night markets and food streets of Dhaka and Chittagong. While traditional commercial shawarma is stacked high onto towering vertical spits and shaved into paper-thin crispy ribbons as it spins against glowing radiant burners, you can achieve that exact mouthwatering magic right in your home kitchen. The secret lies in marinating boneless, skinless Halal chicken thighs in whole-milk Greek yogurt, fresh lemon juice, extra virgin olive oil, minced garlic, and a master blend of roasted cumin, coriander, smoked paprika, cardamom, cinnamon, allspice, and a hint of turmeric. When cooked at blistering high heat in a cast-iron skillet or charred under an oven broiler, the yogurt sugars and spices caramelize into addictive, crispy-edged savory morsels while keeping the interior meltingly succulent and tender. Wrapped snugly inside warm, pillowy pita or saj flatbread slathered generously with velvety whipped garlic toum (or sesame tahini sauce), crisp romaine lettuce, sweet ripe tomatoes, crunchy pickled cucumbers, and a scattering of fresh parsley, every bite bursts with smoky, garlicky, citrus-perfumed bliss.",
+    heroImage: IMAGES.authenticChickenShawarma,
+    prepTimeMinutes: 20,
+    cookTimeMinutes: 20,
+    totalTimeMinutes: 40,
+    servings: 4,
+    difficulty: "Easy",
+    calories: 480,
+    rating: 4.99,
+    reviewCount: 312,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified. Made exclusively with hand-slaughtered boneless Halal chicken thighs, pure cold-pressed extra virgin olive oil, natural Greek yogurt, and authentic whole ground Levantine spices. Completely free of non-halal emulsifiers, artificial flavorings, or chemical tenderizers.",
+    potentialCautionNotes:
+      "Avoid chicken breast if possible, as white meat dries out quickly under the high-heat searing required for authentic shawarma char. Boneless, skinless chicken thighs retain moisture and develop the signature caramelized edges.",
+    ingredients: [
+      { amount: "1.5", unit: "lbs", name: "Boneless skinless Halal chicken thighs", notes: "trimmed of excess fat, cut into bite-sized strips or left whole for searing" },
+      { amount: "1/3", unit: "cup", name: "Plain whole-milk Greek yogurt", notes: "natural tenderizer that creates a caramelized crust" },
+      { amount: "3", unit: "tbsp", name: "Extra virgin olive oil", notes: "plus 1 tbsp for cooking" },
+      { amount: "3", unit: "tbsp", name: "Fresh lemon juice", notes: "freshly squeezed" },
+      { amount: "6", unit: "cloves", name: "Fresh garlic", notes: "finely minced or grated into a paste" },
+      { amount: "1.5", unit: "tsp", name: "Ground cumin" },
+      { amount: "1.5", unit: "tsp", name: "Ground coriander" },
+      { amount: "1.5", unit: "tsp", name: "Smoked paprika", notes: "for smoky spit-roasted aroma" },
+      { amount: "1", unit: "tsp", name: "Sweet paprika or Kashmiri chili powder", notes: "for vibrant red-golden hue" },
+      { amount: "1/2", unit: "tsp", name: "Ground turmeric" },
+      { amount: "1/2", unit: "tsp", name: "Ground cardamom", notes: "essential floral Middle Eastern note" },
+      { amount: "1/2", unit: "tsp", name: "Ground cinnamon", notes: "delicate warm spice" },
+      { amount: "1/4", unit: "tsp", name: "Ground allspice or nutmeg" },
+      { amount: "1/4", unit: "tsp", name: "Cayenne pepper or chili flakes", notes: "adjust for desired heat" },
+      { amount: "1.5", unit: "tsp", name: "Fine sea salt", notes: "or to taste" },
+      { amount: "1/2", unit: "tsp", name: "Freshly ground black pepper" },
+      { amount: "4", unit: "large", name: "Pita breads, Lebanese flatbreads, or saj wraps", notes: "warmed" },
+      { amount: "1/2", unit: "cup", name: "Authentic garlic toum sauce or creamy garlic sauce", notes: "fluffy garlic, lemon, oil & salt emulsion" },
+      { amount: "2", unit: "cups", name: "Crisp romaine lettuce", notes: "finely shredded" },
+      { amount: "2", unit: "medium", name: "Ripe red tomatoes", notes: "thinly sliced" },
+      { amount: "1/2", unit: "cup", name: "Middle Eastern pickled cucumbers", notes: "thinly sliced lengthwise" },
+      { amount: "1/4", unit: "cup", name: "Fresh flat-leaf parsley", notes: "chopped" },
+      { amount: "1", unit: "whole", name: "Fresh lemon", notes: "cut into wedges for serving" },
+    ],
+    substitutions: [
+      {
+        original: "Halal chicken thighs",
+        substitute: "Boneless Halal chicken breast",
+        notes: "Chicken breast can be used; marinate with 1 extra tablespoon of olive oil and watch closely to avoid overcooking and drying out.",
+      },
+      {
+        original: "Pita bread",
+        substitute: "Saj flatbread, tortilla wrap, or naan",
+        notes: "Thin Lebanese saj or markook bread creates the crispest street-style rolled wraps.",
+      },
+      {
+        original: "Garlic toum sauce",
+        substitute: "Creamy garlic tahini yogurt sauce",
+        notes: "Mix Greek yogurt, tahini paste, minced garlic, lemon juice, and a pinch of salt for a fast alternative sauce.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Whisk the Master Shawarma Marinade",
+        instruction:
+          "In a large glass or ceramic bowl, whisk together the Greek yogurt, 3 tablespoons of extra virgin olive oil, freshly squeezed lemon juice, minced garlic, ground cumin, coriander, smoked paprika, sweet paprika, turmeric, cardamom, cinnamon, allspice, cayenne, sea salt, and black pepper until a rich, fragrant, terracotta-red marinade forms.",
+      },
+      {
+        step: 2,
+        title: "Marinate the Chicken",
+        instruction:
+          "Add the chicken thigh strips or cutlets into the marinade. Toss thoroughly using tongs or clean hands so every surface is generously coated. Cover tightly with plastic wrap and refrigerate for at least 1 hour, or ideally 4 to 8 hours for maximum tenderness and deep spice penetration.",
+      },
+      {
+        step: 3,
+        title: "High-Heat Searing (or Oven Broiling)",
+        instruction:
+          "Heat 1 tablespoon of olive oil in a large cast-iron skillet or ridged grill pan over medium-high heat until shimmering hot. Working in batches to avoid crowding the pan, lay the chicken pieces in a single layer. Sear undisturbed for 4–5 minutes until deeply caramelized and charred with dark crispy edges. Flip and cook for another 4–5 minutes until cooked through (internal temp 165°F / 74°C). (Alternatively, broil on the top rack of your oven on a foil-lined baking sheet for 12–15 minutes, flipping once, until charred).",
+      },
+      {
+        step: 4,
+        title: "Rest & Slice into Crispy Ribbons",
+        instruction:
+          "Transfer the cooked chicken to a wooden cutting board and let rest for 3–5 minutes to lock in the succulent juices. Using a sharp chef's knife, carve the chicken across the grain into thin, crispy-edged shawarma ribbons.",
+      },
+      {
+        step: 5,
+        title: "Warm the Flatbreads",
+        instruction:
+          "Warm the pita breads or Lebanese flatbreads on a dry hot skillet or directly over an open low gas flame for 20–30 seconds per side until pliable, soft, and steaming.",
+      },
+      {
+        step: 6,
+        title: "Assemble the Shawarma Wraps",
+        instruction:
+          "Lay a warm flatbread flat on your clean work surface or a sheet of parchment paper. Spread 2 generous tablespoons of garlic toum sauce down the center. Layer a bed of crisp shredded romaine lettuce, followed by a heaping mound of the sizzling spiced chicken shawarma. Top with sliced ripe tomatoes, tangy pickled cucumbers, and a sprinkle of chopped fresh parsley.",
+      },
+      {
+        step: 7,
+        title: "Street-Style Pan Press (The Pro Secret)",
+        instruction:
+          "Fold the bottom edge up slightly, then roll the flatbread tightly around the filling into a snug cylinder. Place the rolled wrap seam-side down into the hot skillet (with any residual chicken pan drippings) over medium heat. Press down lightly with a spatula for 1–2 minutes per side until the flatbread turns golden, crisp, and sealed.",
+      },
+      {
+        step: 8,
+        title: "Slice & Serve",
+        instruction:
+          "Slice the warm shawarma wrap diagonally down the center. Serve immediately with extra garlic toum sauce, lemon wedges, and hot salted french fries or pickled vegetables on the side.",
+      },
+    ],
+    chefNotes: [
+      "The combination of Greek yogurt and lemon juice tenderizes the chicken fibers while the milk solids caramelize rapidly in the pan, delivering the unmistakable charred flavor of commercial rotating vertical spits.",
+      "Authentic shawarma is defined by its garlic sauce (toum). A thick, emulsified garlic sauce coats the bread and creates the rich, savory bridge between meat and pickles.",
+      "Toasting the finished rolled wrap on a hot skillet for 2 minutes seals the seam and gives the wrap an irresistible street-cart crunch.",
+    ],
+    nutrition: {
+      calories: 480,
+      proteinGrams: 38,
+      carbsGrams: 42,
+      fatGrams: 18,
+      fiberGrams: 4,
+      sodiumMg: 690,
+    },
+    storageInstructions:
+      "Store leftover cooked shawarma chicken in an airtight container in the refrigerator for up to 4 days. Reheat in a hot skillet with a drizzle of oil before assembling fresh wraps.",
+    freezingInstructions:
+      "Raw chicken in marinade can be frozen in freezer bags for up to 3 months. Thaw overnight in the refrigerator and cook as directed. Cooked sliced chicken also freezes well for up to 2 months.",
+    servingSuggestions: [
+      "Serve as a handheld street-style wrap accompanied by hot crispy french fries and extra garlic toum for dipping.",
+      "Create a Shawarma Rice Platter by piling the spiced chicken over fragrant golden turmeric basmati rice, topped with garlic sauce and tomato-cucumber salad.",
+      "Serve over crisp greens as a low-carb Mediterranean Shawarma Salad bowl.",
+    ],
+    faqs: [
+      {
+        question: "Can I make Chicken Shawarma in an air fryer?",
+        answer:
+          "Yes! Preheat your air fryer to 400°F (200°C). Arrange the marinated chicken in a single layer in the basket and air-fry for 12–14 minutes, shaking or flipping at the 7-minute mark, until edges are charred and crispy.",
+      },
+      {
+        question: "What is garlic toum sauce?",
+        answer:
+          "Toum is a traditional Levantine garlic sauce made by emulsifying fresh garlic cloves, neutral oil, fresh lemon juice, and salt into a thick, cloud-like white spread with a bold, velvety garlic punch.",
+      },
+      {
+        question: "Can I prepare the chicken ahead of time?",
+        answer:
+          "Absolutely! Chicken thighs can marinate in the refrigerator for up to 24 hours. In fact, marinating overnight makes the chicken even more flavorful and meltingly tender.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Regional Culinary Director & Halal Recipe Developer",
+    },
+    updatedDate: "September 17, 2026",
+    tags: [
+      "Authentic Chicken Shawarma",
+      "চিকেন শাওয়ার্মা",
+      "Chicken Shawarma",
+      "আসল ঘরোয়া চিকেন শাওয়ার্মা",
+      "Shawarma Wrap",
+      "Halal Chicken",
+      "Middle Eastern",
+      "Street Food",
+      "Levantine Cuisine",
+      "Garlic Toum",
+      "Pita Wrap",
+      "Quick Dinner",
+      "Lunch Special",
+      "Halal Street Food",
+    ],
+  },
+  {
+    id: "rec-crispy-falafel",
+    slug: "crispy-falafel",
+    title: "Crispy Falafel (ক্রিস্পি ফালাফেল / Authentic Middle Eastern Falafel)",
+    category: "Halal Vegetarian",
+    categorySlug: "halal-vegetarian",
+    cuisine: "Middle Eastern / Levantine & Egyptian Heritage",
+    description:
+      "Golden, shatteringly crisp on the outside and wonderfully fluffy, vibrant emerald green on the inside—authentic Crispy Falafel (ক্রিস্পি ফালাফেল) crafted from overnight-soaked raw chickpeas, a generous bouquet of fresh parsley, cilantro, and dill, roasted cumin, coriander, garlic, and toasted sesame seeds, fried to crunchy perfection and served with velvety lemon tahini sauce.",
+    introStory:
+      "A celebrated cornerstone of Levantine, Egyptian, and Middle Eastern street gastronomy, authentic Falafel (ফালাফেল / فلافل) is beloved worldwide as the gold standard of plant-based culinary art. The cardinal rule of authentic falafel that every street master swears by is this: never, ever use canned or cooked chickpeas! Canned chickpeas are saturated with water and turn into a soggy, dense paste that disintegrates in hot oil. Instead, dried whole chickpeas are soaked overnight until swollen and tender yet raw, then coarsely pulsed in a food processor with an abundant garden-fresh bouquet of flat-leaf parsley, cilantro, dill, fresh garlic, sweet yellow onion, roasted cumin, coriander, and toasted sesame seeds. A pinch of baking soda right before frying aerates the crumb, giving the falafel its iconic shatteringly crisp shell and a cloud-like, steaming emerald-green interior. Scooped into round spheres and deep-fried in golden oil until deep hazelnut-brown, they are crowned with a sprinkle of fresh parsley and toasted sesame seeds and served immediately alongside lemon wedges and a rich, nutty bowl of lemon-garlic tahini sauce or wrapped into warm pita pockets with pickled turnips and tomatoes.",
+    heroImage: IMAGES.crispyFalafel,
+    prepTimeMinutes: 25,
+    cookTimeMinutes: 20,
+    totalTimeMinutes: 45,
+    servings: 6,
+    difficulty: "Easy",
+    calories: 260,
+    rating: 4.99,
+    reviewCount: 276,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified and naturally vegan. Crafted exclusively from whole raw legumes, garden-fresh herbs, cold-pressed vegetable oil, single-origin spices, and 100% pure roasted sesame tahini. Completely free of non-halal additives, animal fats, or cross-contaminated fryer oils.",
+    potentialCautionNotes:
+      "Crucial: do not use canned chickpeas under any circumstances—they contain too much moisture and will dissolve into mush in hot oil. Always use dried chickpeas soaked in cold water for 12–18 hours. If the falafel mixture feels slightly crumbly, let it rest in the refrigerator for 1 hour so the natural starches bind.",
+    ingredients: [
+      { amount: "2", unit: "cups (1 lb)", name: "Dried whole chickpeas (garbanzo beans)", notes: "soaked overnight in cold water with 1/2 tsp baking soda for 14–18 hours, drained and patted bone-dry (DO NOT use canned)" },
+      { amount: "1", unit: "medium", name: "Yellow onion", notes: "coarsely chopped" },
+      { amount: "6", unit: "cloves", name: "Fresh garlic", notes: "peeled" },
+      { amount: "1", unit: "cup", name: "Fresh flat-leaf Italian parsley", notes: "leaves and tender stems, packed" },
+      { amount: "1", unit: "cup", name: "Fresh cilantro (coriander leaves)", notes: "leaves and tender stems, packed" },
+      { amount: "1/4", unit: "cup", name: "Fresh dill", notes: "finely chopped, adds authentic Levantine herbaceous brightness" },
+      { amount: "1.5", unit: "tbsp", name: "Ground cumin", notes: "freshly roasted and ground" },
+      { amount: "1.5", unit: "tbsp", name: "Ground coriander", notes: "freshly roasted and ground" },
+      { amount: "1", unit: "tsp", name: "Fine sea salt", notes: "or to taste" },
+      { amount: "1/2", unit: "tsp", name: "Freshly ground black pepper" },
+      { amount: "1/4", unit: "tsp", name: "Cayenne pepper or red chili flakes", notes: "for subtle background warmth" },
+      { amount: "1/4", unit: "tsp", name: "Ground cardamom", notes: "delicate aromatic Middle Eastern note" },
+      { amount: "2", unit: "tbsp", name: "Toasted white sesame seeds", notes: "mixed into batter or pressed onto outer crust" },
+      { amount: "2", unit: "tbsp", name: "Chickpea flour (besan) or all-purpose flour", notes: "optional, used only if extra moisture needs binding" },
+      { amount: "1/2", unit: "tsp", name: "Baking soda", notes: "added right before frying for light, airy texture" },
+      { amount: "4", unit: "cups", name: "Neutral vegetable, sunflower, or peanut oil", notes: "for deep frying" },
+      { amount: "1/2", unit: "cup", name: "Pure roasted sesame tahini paste", notes: "for creamy tahini dip" },
+      { amount: "1/3", unit: "cup", name: "Ice-cold water", notes: "to emulsify tahini into silky dressing" },
+      { amount: "3", unit: "tbsp", name: "Fresh lemon juice", notes: "freshly squeezed" },
+      { amount: "1", unit: "clove", name: "Fresh garlic", notes: "finely grated into tahini sauce" },
+      { amount: "1", unit: "whole", name: "Fresh lemon or lime", notes: "cut into wedges for serving" },
+      { amount: "2", unit: "tbsp", name: "Fresh parsley & extra virgin olive oil", notes: "for garnishing dip and platter" },
+    ],
+    substitutions: [
+      {
+        original: "Dried chickpeas",
+        substitute: "Dried fava beans (split broad beans)",
+        notes: "For authentic Egyptian Ta'ameya (falafel), replace half or all of the chickpeas with soaked peeled dried fava beans.",
+      },
+      {
+        original: "Deep frying",
+        substitute: "Air frying or oven baking",
+        notes: "For air frying: brush falafel balls generously on all sides with oil and air-fry at 375°F (190°C) for 12–15 minutes, shaking halfway through.",
+      },
+      {
+        original: "Tahini dip",
+        substitute: "Garlic toum or tzatziki yogurt sauce",
+        notes: "Both fluffy garlic toum and tangy cucumber-mint yogurt pair excellently with piping-hot falafel.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "The Essential Overnight Chickpea Soak",
+        instruction:
+          "Place the dried whole chickpeas in a large bowl. Cover generously with cold water by at least 3 inches, add 1/2 teaspoon of baking soda, and let soak at room temperature for 14 to 18 hours. The chickpeas will more than double in size. Drain thoroughly and spread out on clean kitchen towels, blotting them until completely dry (removing surface moisture is key to crispiness).",
+      },
+      {
+        step: 2,
+        title: "Pulse the Fresh Herbs & Aromatics",
+        instruction:
+          "In a large food processor, combine the soaked dry chickpeas, chopped yellow onion, garlic cloves, fresh parsley, fresh cilantro, and dill. Pulse in short 2-second bursts until the herbs and chickpeas are finely minced and resemble coarse, sandy cornmeal or wet bulgur. Do not over-process into a smooth hummus puree—coarse texture is what produces a light, crispy falafel.",
+      },
+      {
+        step: 3,
+        title: "Season & Chill the Dough",
+        instruction:
+          "Transfer the mixture to a large mixing bowl. Add the roasted ground cumin, ground coriander, salt, black pepper, cayenne, cardamom, and toasted sesame seeds. If the dough feels overly wet or loose, fold in 1–2 tablespoons of chickpea flour. Stir thoroughly until evenly combined. Cover tightly with plastic wrap and refrigerate for 45–60 minutes to allow the natural starches to settle and hydrate, which ensures the falafels hold their shape.",
+      },
+      {
+        step: 4,
+        title: "Whisk the Creamy Lemon Tahini Sauce",
+        instruction:
+          "While the falafel mixture chills, prepare the sauce. In a medium bowl, whisk together the sesame tahini paste, freshly squeezed lemon juice, grated garlic, and a pinch of salt. Slowly drizzle in ice-cold water, whisking continuously. The sauce will seize at first, then transform into a luxuriously smooth, pale-cream dressing. Drizzle with extra virgin olive oil and a pinch of sweet paprika.",
+      },
+      {
+        step: 5,
+        title: "Aerate & Shape the Falafel Spheres",
+        instruction:
+          "Remove the falafel mixture from the refrigerator. Sprinkle 1/2 teaspoon of baking soda evenly over the top and gently mix through (this reacts during frying to create an airy, cloud-like interior). Using a 2-tablespoon cookie scoop or falafel maker (aleb falafel), scoop portions of the dough and gently shape them with damp hands into smooth round balls or slightly flattened patties about 1.5 inches in diameter.",
+      },
+      {
+        step: 6,
+        title: "Deep-Fry to Golden Crisp Perfection",
+        instruction:
+          "Heat 3 to 4 inches of neutral vegetable oil in a deep heavy-bottomed pot or Dutch oven to 350°F–360°F (175°C–180°C). Gently lower 5 to 6 falafel balls at a time into the hot oil using a slotted metal spoon. Fry undisturbed for 3 to 4 minutes, rolling them gently halfway through, until the exterior develops a deep, crunchy golden-hazelnut crust and the interior is fully cooked.",
+      },
+      {
+        step: 7,
+        title: "Drain on Wire Rack",
+        instruction:
+          "Transfer the fried falafel balls to a wire cooling rack set over a baking sheet (or paper towel-lined platter) using a spider strainer. Immediately dust with a tiny pinch of flaky sea salt and chopped fresh parsley. Allow the oil to return to 355°F before frying the next batch.",
+      },
+      {
+        step: 8,
+        title: "Garnish & Feast",
+        instruction:
+          "Arrange the hot, crispy falafel balls on a rustic platter or wooden bowl with fresh lemon and lime wedges. Serve piping hot alongside the bowl of creamy lemon tahini sauce, warm pita bread, and pickled vegetables.",
+      },
+    ],
+    chefNotes: [
+      "The cardinal rule: dried chickpeas soaked overnight, never canned! Canned chickpeas are pre-cooked and turn into a soggy paste that will disintegrate in hot oil.",
+      "Food processor texture control: Stop pulsing as soon as the mixture reaches the consistency of coarse wet sand. A slight grit creates steam pockets that make the falafel light and airy.",
+      "Maintain oil temperature between 350°F and 365°F (175°C–185°C). If the oil drops below 340°F, the falafel will absorb excess oil and turn greasy; if too hot, the exterior will scorch before the center cooks through.",
+    ],
+    nutrition: {
+      calories: 260,
+      proteinGrams: 11,
+      carbsGrams: 28,
+      fatGrams: 12,
+      fiberGrams: 7,
+      sodiumMg: 340,
+    },
+    storageInstructions:
+      "Store cooked leftover falafel in an airtight container in the refrigerator for up to 4 days. Reheat in a 350°F (175°C) oven or toaster oven for 6–8 minutes until crunchy again. Avoid the microwave, which turns the crust rubbery.",
+    freezingInstructions:
+      "Uncooked shaped falafel balls freeze exceptionally well! Place shaped balls on a parchment-lined baking sheet and freeze until solid, then transfer to a ziplock freezer bag for up to 3 months. Fry directly from frozen at 350°F, adding 1–2 minutes to the frying time.",
+    servingSuggestions: [
+      "Serve as a Mediterranean mezze centerpiece in a wooden bowl with lemon wedges, creamy tahini dip, and warm pita flatbreads.",
+      "Stuff 3–4 crispy falafel balls inside a warm pita pocket with shredded lettuce, diced tomatoes, pickled turnips, and a generous drizzle of tahini sauce.",
+      "Toss atop a fresh Mediterranean grain salad or quinoa bowl for an energizing high-protein plant-based lunch.",
+    ],
+    faqs: [
+      {
+        question: "Why did my falafel fall apart in the hot oil?",
+        answer:
+          "The two main culprits are using canned chickpeas (which are too soft and wet) or not thoroughly drying soaked raw chickpeas. If your mixture feels too wet, chill it for 1 hour and stir in 1–2 tablespoons of chickpea or all-purpose flour to help bind.",
+      },
+      {
+        question: "Can I bake or air-fry these falafel?",
+        answer:
+          "Yes! For air-frying, generously brush or spray the shaped balls with olive oil and cook at 375°F (190°C) for 12–15 minutes, shaking the basket halfway. For baking, bake at 400°F (200°C) on an oiled baking sheet for 20 minutes, flipping halfway.",
+      },
+      {
+        question: "Why is the inside of authentic falafel bright green?",
+        answer:
+          "Authentic Levantine falafel contains a lavish quantity of fresh parsley, cilantro, and dill, which naturally infuses the interior with a stunning emerald-green color and fresh aromatic flavor.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Regional Culinary Director & Halal Recipe Developer",
+    },
+    updatedDate: "September 17, 2026",
+    tags: [
+      "Crispy Falafel",
+      "Falafel",
+      "ক্রিস্পি ফালাফেল",
+      "ফালাফেল",
+      "Halal Vegetarian",
+      "Halal Street Food",
+      "Middle Eastern",
+      "Levantine Cuisine",
+      "Vegan",
+      "Plant Based",
+      "Chickpea Fritters",
+      "Tahini Dip",
+      "Mezze Platter",
+      "Pita Sandwich",
+      "Appetizer",
+    ],
+  },
+  {
+    id: "rec-authentic-hummus",
+    slug: "hummus",
+    title: "Hummus (আসল হুমুস / Authentic Silky Creamy Hummus)",
+    category: "Halal Vegetarian",
+    categorySlug: "halal-vegetarian",
+    cuisine: "Middle Eastern / Levantine & Mediterranean Heritage",
+    description:
+      "Ultra-smooth, velvety, and luxurious Authentic Hummus (আসল হুমুস)—tender slow-simmered chickpeas whipped to cloud-like silkiness with pure roasted sesame tahini, fresh lemon juice, crushed garlic, and ice-cold water, swirled into an artisanal spiral well pooled with rich golden extra virgin olive oil, toasted pine nuts, fresh parsley, and warm pita chips.",
+    introStory:
+      "A venerable culinary pillar of the Levant, Lebanon, Palestine, and the wider Middle East, authentic Hummus bi Tahina (حُمُّص بطحينة / আসল হুমুস) is far more than a simple dip—it is an art form of silky texture, earthy depth, and bright citrus harmony. The secret to achieving true restaurant-grade, cloud-like silkiness lies in two critical traditional techniques: first, simmering chickpeas with a pinch of baking soda until they are collapsing and meltingly soft (even slipping effortlessly out of their skins); and second, emulsifying the pure sesame tahini paste first with ice-cold water and fresh lemon juice in a high-speed food processor until it transforms into a pale, aerated, velvety cream before blending in the warm chickpeas. Whipped for a full 4–5 minutes until utterly frictionless, the hummus is scooped into a wide shallow bowl, styled with the back of a spoon into signature concentric spiral wells, and flooded with fruity, peppery extra virgin olive oil. Garnished with a sprinkle of chopped fresh parsley, freshly cracked black pepper, a pinch of sumac or roasted cumin, and served with oven-toasted pita flatbread triangles and crunchy cucumber rounds, this authentic recipe elevates humble chickpeas into an unforgettable culinary masterpiece.",
+    heroImage: IMAGES.hummus,
+    prepTimeMinutes: 15,
+    cookTimeMinutes: 35,
+    totalTimeMinutes: 50,
+    servings: 6,
+    difficulty: "Easy",
+    calories: 210,
+    rating: 4.99,
+    reviewCount: 384,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified and naturally vegan. Formulated exclusively from whole dried chickpeas, cold-pressed extra virgin olive oil, 100% pure roasted sesame tahini, fresh citrus, and natural minerals. Free from non-halal emulsifiers, artificial gums, preservatives, or animal byproducts.",
+    potentialCautionNotes:
+      "For the creamiest, smoothest texture, ensure the chickpeas are cooked until completely soft and mushy to the pinch. Reserve 1/2 cup of chickpea cooking water (aquafaba) to adjust texture while blending if necessary.",
+    ingredients: [
+      { amount: "1.5", unit: "cups (approx. 250g)", name: "Dried whole chickpeas", notes: "soaked overnight with 1/2 tsp baking soda, OR 2 cans (15 oz each) organic chickpeas, drained" },
+      { amount: "1/2", unit: "tsp", name: "Baking soda", notes: "added during boiling to tenderize chickpea skins until meltingly soft" },
+      { amount: "1/2", unit: "cup", name: "Pure roasted sesame tahini paste", notes: "high-quality, well-stirred from the jar" },
+      { amount: "1/3", unit: "cup", name: "Fresh lemon juice", notes: "freshly squeezed (approx. 2 large lemons)" },
+      { amount: "3", unit: "cloves", name: "Fresh garlic", notes: "minced or grated into a smooth paste" },
+      { amount: "1/3", unit: "cup", name: "Ice-cold water or crushed ice", notes: "essential secret for emulsifying tahini into a pale, fluffy cream" },
+      { amount: "1.5", unit: "tsp", name: "Fine sea salt", notes: "or to taste" },
+      { amount: "1/2", unit: "tsp", name: "Ground roasted cumin", notes: "adds earthy traditional warmth" },
+      { amount: "1/4", unit: "cup", name: "Extra virgin olive oil", notes: "premium first cold-pressed, for the signature spiral well" },
+      { amount: "2", unit: "tbsp", name: "Fresh flat-leaf parsley", notes: "finely chopped for garnish" },
+      { amount: "1", unit: "pinch", name: "Freshly cracked black pepper or ground sumac", notes: "for visual and tangy contrast" },
+      { amount: "1", unit: "tbsp", name: "Toasted pine nuts or whole cooked chickpeas", notes: "optional traditional garnish" },
+      { amount: "4", unit: "rounds", name: "Pita flatbreads or pita chips", notes: "warmed or toasted, for scooping" },
+      { amount: "1", unit: "medium", name: "English cucumber", notes: "sliced into crisp diagonal rounds for dipping" },
+    ],
+    substitutions: [
+      {
+        original: "Dried chickpeas",
+        substitute: "Canned organic chickpeas",
+        notes: "For an express 15-minute version, simmer 2 cans of drained chickpeas in water with 1/2 tsp baking soda for 15 minutes until mushy, then blend.",
+      },
+      {
+        original: "Tahini paste",
+        substitute: "Toasted sunflower seed butter",
+        notes: "If catering to sesame seed allergies, unsweetened sunflower butter provides a comparable creamy richness.",
+      },
+      {
+        original: "Pine nuts",
+        substitute: "Toasted slivered almonds or walnuts",
+        notes: "Gives a pleasant buttery crunch over the velvety dip.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Boil Chickpeas with Baking Soda",
+        instruction:
+          "Drain the overnight-soaked chickpeas and place them into a heavy pot. Add 1/2 teaspoon of baking soda and cook over medium-high heat for 2–3 minutes, tossing constantly to break down pectin in the skins. Add 6 cups of water, bring to a rolling boil, then lower the heat to a gentle simmer. Cook for 30–35 minutes until the chickpeas are collapsing, mushy, and easily smashed between two fingers. Skim off any loose skins that float to the surface. Drain, reserving 1/2 cup of chickpea broth.",
+      },
+      {
+        step: 2,
+        title: "The Cold Emulsion: Whip Tahini, Lemon & Ice Water",
+        instruction:
+          "In a high-powered food processor, combine the pure tahini paste, freshly squeezed lemon juice, grated garlic, and fine sea salt. Process on high speed for 1 to 2 minutes until thick. With the motor running, slowly drizzle in the 1/3 cup of ice-cold water (or drop in 2-3 small crushed ice cubes). Continue processing for 1 minute until the mixture whips into a luxuriously pale, fluffy, aerated cream.",
+      },
+      {
+        step: 3,
+        title: "Whip Chickpeas to Frictionless Silkiness",
+        instruction:
+          "Add the warm, drained chickpeas and ground cumin into the food processor. Process on high speed for 4 to 5 continuous minutes, stopping once or twice to scrape down the sides of the bowl. If the hummus appears too thick, drizzle in 2 to 3 tablespoons of the reserved warm chickpea broth until an ultra-creamy, velvety, pillowy consistency is achieved.",
+      },
+      {
+        step: 4,
+        title: "Taste & Balance Seasoning",
+        instruction:
+          "Taste the whipped hummus and adjust seasoning if desired—adding an extra pinch of sea salt for savoriness or a splash of lemon juice for citrus vibrance. Process for another 30 seconds to incorporate.",
+      },
+      {
+        step: 5,
+        title: "The Artisanal Spiral Swirl Technique",
+        instruction:
+          "Spoon the warm, fluffy hummus onto the center of a wide, shallow ceramic serving bowl or platter. Using the back of a large spoon or offset spatula, press gently while rotating the bowl in a circular motion, carving deep, dramatic concentric spiral ridges with a pronounced well in the center.",
+      },
+      {
+        step: 6,
+        title: "Pool with Golden Olive Oil & Garnish",
+        instruction:
+          "Generously pour the 1/4 cup of golden extra virgin olive oil into the spiral track and center well so it pools like liquid gold. Garnish with a scattering of finely chopped fresh parsley, freshly cracked black pepper, a pinch of ruby-red sumac, and toasted pine nuts or whole reserved chickpeas.",
+      },
+      {
+        step: 7,
+        title: "Serve & Dip",
+        instruction:
+          "Serve immediately at room temperature or slightly warm, accompanied by a generous basket of toasted pita bread triangles, warm pocket pitas, and crisp sliced cucumbers.",
+      },
+    ],
+    chefNotes: [
+      "The Ice-Cold Emulsion Secret: Whipping tahini with lemon juice and ice water before adding chickpeas incorporates micro air bubbles, turning the paste pale ivory and giving the hummus a cloud-like lightness.",
+      "The Baking Soda Trick: Simmering chickpeas with baking soda raises the pH, tenderizing the fibrous pectin in chickpea skins so completely that they blend into seamless cream without the tedious chore of peeling each bean by hand.",
+      "Never skimp on quality olive oil: Since olive oil pools generously in the presentation well, use your finest peppery, fruit-forward cold-pressed extra virgin olive oil.",
+    ],
+    nutrition: {
+      calories: 210,
+      proteinGrams: 7,
+      carbsGrams: 18,
+      fatGrams: 13,
+      fiberGrams: 5,
+      sodiumMg: 290,
+    },
+    storageInstructions:
+      "Store hummus in an airtight glass container in the refrigerator for up to 6 days. To refresh before serving, let come to room temperature, stir in a splash of warm water or lemon juice if thickened, and drizzle with fresh olive oil.",
+    freezingInstructions:
+      "Hummus freezes remarkably well without the olive oil garnish! Transfer to an airtight freezer container leaving 1/2 inch of headspace and freeze for up to 3 months. Thaw overnight in the refrigerator and whisk vigorously before serving.",
+    servingSuggestions: [
+      "The crowning centerpiece of a Mediterranean mezze board alongside Crispy Falafel, authentic Baba Ganoush, and warm pita pockets.",
+      "Spread generously inside Chicken Shawarma wraps or beef seekh kebab rolls for rich, velvety lubrication.",
+      "Top with warm spiced ground beef or lamb (Hummus Kawarma) sautéed with pine nuts and ghee for a hearty Middle Eastern feast.",
+    ],
+    faqs: [
+      {
+        question: "Can I use canned chickpeas instead of dried?",
+        answer:
+          "Yes! To make ultra-smooth hummus with canned chickpeas, rinse and drain two 15-ounce cans, then simmer them in a small pot with 2 cups of water and 1/2 teaspoon of baking soda for 15 minutes until completely soft and collapsing before blending.",
+      },
+      {
+        question: "Why is my homemade hummus grainy instead of smooth?",
+        answer:
+          "Grainy hummus happens when chickpeas are not cooked soft enough or blended for too short a time. Cook the chickpeas until they can be smashed effortlessly into puree with your fingers, and let your food processor run for a full 4 to 5 minutes.",
+      },
+      {
+        question: "Should hummus be served warm or cold?",
+        answer:
+          "In traditional Levantine restaurants, freshly made hummus is served slightly warm or at room temperature, which allows the rich nuttiness of sesame tahini and olive oil to be fully experienced.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Regional Culinary Director & Halal Recipe Developer",
+    },
+    updatedDate: "September 17, 2026",
+    tags: [
+      "Hummus",
+      "আসল হুমুস",
+      "Hummus bi Tahini",
+      "Halal Vegetarian",
+      "Halal Snacks",
+      "Middle Eastern",
+      "Levantine Cuisine",
+      "Mediterranean Mezze",
+      "Dip",
+      "Vegan",
+      "Chickpeas",
+      "Tahini",
+      "Olive Oil",
+      "Pita Dip",
+      "Healthy Snack",
+      "Appetizer",
+    ],
+  },
+  {
+    id: "rec-black-chana",
+    slug: "black-chana",
+    title: "Black Chana (কালো ছোলা / Authentic Bengali Chola Bhuna)",
+    category: "Ramadan & Eid",
+    categorySlug: "ramadan-eid",
+    cuisine: "Bangladeshi / Bengali & South Asian Heritage",
+    description:
+      "Glossy, deeply spiced, and intensely savory Black Chana (কালো ছোলা ভুনা)—earthy desi black chickpeas slow-simmered until tender and sautéed in aromatic mustard oil with golden onions, fresh ginger juliennes, roasted cumin, and Bengali garam masala, creating a luscious clinging masala coating that defines sunset Ramadan Iftar tables.",
+    introStory:
+      "Across Bangladesh and the South Asian diaspora, the sacred arrival of the sunset Adhan during Ramadan is intrinsically tied to the intoxicating aroma of freshly sautéed Chola Bhuna (কালো ছোলা ভুনা / Black Chana). From the bustling historic lanes of Old Dhaka's Chawkbazar to family dawat tables in Sylhet, Chittagong, and Noakhali, a generous mound of spicy, glistening black chickpeas is an indispensable culinary fixture. Known botanically as Cicer arietinum (Desi chana), black chickpeas have a denser, earthier bite and a substantially higher concentration of dietary fiber and iron than light Kabuli chickpeas. The quintessential benchmark of authentic Chola Bhuna lies in the 'Bhuna' technique: after simmering the soaked chickpeas with a pinch of turmeric and salt until tender, they are stir-fried in fragrant cold-pressed mustard oil with a rich paste of caramelized onions, fresh ginger, garlic, roasted cumin (bhuna jeera), coriander, and a hint of boiled mashed potato. The mashed potato melts into the bubbling spices to create a thick, clingy gravy that glazes every single chickpea with deep umami. Garnished with fiery sliced green chilies, fresh ginger slivers, and a shower of chopped coriander, it is traditionally tossed with crispy muri (puffed rice), onion piyaju, and crunchy cucumber to create the ultimate celebratory Iftar spread.",
+    heroImage: IMAGES.blackChana,
+    prepTimeMinutes: 15,
+    cookTimeMinutes: 35,
+    totalTimeMinutes: 50,
+    servings: 6,
+    difficulty: "Easy",
+    calories: 230,
+    rating: 4.98,
+    reviewCount: 412,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified and naturally vegan. Prepared with pure whole black chickpeas (kala chana), authentic cold-pressed mustard oil, single-origin whole and ground spices, and fresh aromatics. Entirely free from non-halal flavorings, animal fats, or cross-contamination.",
+    potentialCautionNotes:
+      "Black chickpeas must be soaked for at least 8 to 12 hours (or overnight) in ample water to soften their dense fibrous husks and ensure optimal digestion.",
+    ingredients: [
+      { amount: "2", unit: "cups (approx. 400g)", name: "Dried black chickpeas (Kala Chana / কালো ছোলা)", notes: "soaked overnight in 6 cups of water" },
+      { amount: "1", unit: "medium", name: "Potato (Alu)", notes: "peeled and halved; boiled along with chana and lightly crushed to thicken the masala" },
+      { amount: "3", unit: "tbsp", name: "Cold-pressed mustard oil (shorsher tel) or ghee", notes: "essential for authentic Bengali pungency and glossy sheen" },
+      { amount: "1", unit: "tsp", name: "Whole cumin seeds (jeera)", notes: "for tempering in hot oil" },
+      { amount: "2", unit: "medium", name: "Bay leaves (tejpatta)", notes: "torn" },
+      { amount: "1", unit: "stick (2-inch)", name: "Cinnamon bark (daruchini)", notes: "whole" },
+      { amount: "3", unit: "pods", name: "Green cardamom (elachi)", notes: "cracked open" },
+      { amount: "1.5", unit: "cups", name: "Red onions", notes: "finely sliced for caramelizing" },
+      { amount: "1", unit: "tbsp", name: "Ginger paste", notes: "freshly grated" },
+      { amount: "1", unit: "tbsp", name: "Garlic paste", notes: "freshly crushed" },
+      { amount: "1", unit: "tsp", name: "Turmeric powder (holud)", notes: "divided (half for boiling, half for masala)" },
+      { amount: "1.5", unit: "tsp", name: "Roasted cumin powder (bhuna jeera gura)", notes: "adds the signature smoky aroma" },
+      { amount: "1.5", unit: "tsp", name: "Coriander powder (dhania gura)", notes: "freshly ground" },
+      { amount: "1", unit: "tsp", name: "Kashmiri red chili powder or Lal Morich", notes: "for rich deep color and balanced warmth" },
+      { amount: "1", unit: "tsp", name: "Bengali Shahi Garam Masala", notes: "ground cardamom, cinnamon, clove, and mace" },
+      { amount: "1/2", unit: "tsp", name: "Chaat masala or amchur (dry mango powder)", notes: "optional, for appetizing tanginess" },
+      { amount: "1.5", unit: "tsp", name: "Salt", notes: "or to taste" },
+      { amount: "4", unit: "whole", name: "Fresh green chilies", notes: "slit lengthwise or sliced into rounds" },
+      { amount: "1", unit: "tbsp", name: "Fresh ginger", notes: "cut into fine matchstick juliennes for garnish" },
+      { amount: "1/4", unit: "cup", name: "Fresh coriander leaves (cilantro)", notes: "finely chopped" },
+      { amount: "1", unit: "wedge", name: "Fresh lemon or lime", notes: "for finishing squeeze" },
+    ],
+    substitutions: [
+      {
+        original: "Mustard oil",
+        substitute: "Sunflower oil, avocado oil, or pure cow ghee",
+        notes: "Ghee provides a royal Shahi flavor profile; neutral vegetable oil softens the pungent mustard bite.",
+      },
+      {
+        original: "Dried black chickpeas",
+        substitute: "Canned brown chickpeas or regular chickpeas (Kabuli Chana)",
+        notes: "Regular chickpeas can be substituted; reduce boiling time as canned varieties are pre-cooked.",
+      },
+      {
+        original: "Potato",
+        substitute: "2 tbsp chickpea flour (besan) slurry",
+        notes: "If avoiding potato, a splash of roasted besan slurry creates an equally glossy, clingy masala gravy.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Soak & Boil the Black Chana with Potato",
+        instruction:
+          "Rinse the dried black chickpeas thoroughly under cold water. Soak in a large bowl with 6 cups of water for at least 8 to 12 hours (or overnight). Drain and transfer to a pressure cooker or heavy pot along with the peeled potato halves, 1/2 teaspoon turmeric powder, 1 teaspoon salt, and 4 cups of water. Pressure cook for 5 to 6 whistles on medium heat (or boil in a covered pot for 40–50 minutes) until the chickpeas are fork-tender yet hold their shape. Drain, reserving 1/2 cup of the nutrient-rich cooking broth.",
+      },
+      {
+        step: 2,
+        title: "Crush the Boiled Potato",
+        instruction:
+          "Take the boiled potato halves out onto a plate and coarsely mash them with a fork. This mashed potato will dissolve into the masala and create the signature glossy coating that clings to the chickpeas.",
+      },
+      {
+        step: 3,
+        title: "Bloom Whole Spices in Mustard Oil",
+        instruction:
+          "Heat the mustard oil in a heavy-bottomed karahi or wok over medium heat until it begins to shimmer lightly (smoking point) to remove raw pungency. Reduce heat to medium-low, add whole cumin seeds, bay leaves, cinnamon bark, and cracked cardamom pods. Sauté for 30 seconds until the spices crackle and perfume the oil.",
+      },
+      {
+        step: 4,
+        title: "Caramelize Onions & Aromatics",
+        instruction:
+          "Add the sliced red onions to the hot oil. Sauté for 6 to 8 minutes, stirring frequently until the onions turn translucent, soft, and take on a rich golden-amber hue. Stir in the ginger paste and garlic paste, cooking for 2 minutes until the raw aroma dissipates completely.",
+      },
+      {
+        step: 5,
+        title: "Bhuna the Spices & Mashed Potato",
+        instruction:
+          "Lower the heat and add the remaining 1/2 teaspoon turmeric, roasted cumin powder, coriander powder, red chili powder, and 1/2 teaspoon salt. Splash in 2 to 3 tablespoons of the reserved chickpea broth to prevent scorching. Sauté the masala paste for 3 minutes until oil separates from the edges. Stir in the mashed potato and mix well so it integrates smoothly into the bubbling masala.",
+      },
+      {
+        step: 6,
+        title: "Simmer Chana to a Glossy Clinging Glaze",
+        instruction:
+          "Tip the boiled black chickpeas into the pan. Stir vigorously to coat every chickpea in the rich spiced gravy. Pour in the remaining reserved chickpea broth. Cover with a lid and simmer on medium-low heat for 6 to 8 minutes, allowing the chickpeas to absorb the spices. Remove the lid and cook on medium-high heat, stirring continuously, until the moisture evaporates and the dark, glossy masala tightly coats each chickpea.",
+      },
+      {
+        step: 7,
+        title: "Finish with Garam Masala, Ginger & Green Chilies",
+        instruction:
+          "Sprinkle the Bengali Shahi garam masala and chaat masala over the hot chickpeas. Toss in the slit green chilies and fresh ginger juliennes. Give everything a final energetic stir for 1 minute, then take the karahi off the heat.",
+      },
+      {
+        step: 8,
+        title: "Garnish & Iftar Presentation",
+        instruction:
+          "Transfer the hot Black Chana to a traditional brass serving bowl or wide platter. Shower with freshly chopped cilantro and a squeeze of fresh lemon juice. Serve piping hot as the centerpiece of your Ramadan Iftar spread.",
+      },
+    ],
+    chefNotes: [
+      "The Mashed Potato Secret: Mashing a single small boiled potato into the spice paste is the traditional Bangladeshi restaurant trick that prevents dry, rolling chickpeas and yields a thick, luscious, clinging gravy.",
+      "Mustard Oil Treatment: Always heat cold-pressed mustard oil until it reaches a gentle smoke point before adding spices to eliminate harshness while unlocking authentic Bengali nutty flavor.",
+      "Smoky Roasted Cumin (Bhuna Jeera): Using dry-roasted cumin seeds ground into fine powder at the end imparts an intoxicating, smoky aroma essential to high-end street-style chola.",
+    ],
+    nutrition: {
+      calories: 230,
+      proteinGrams: 9,
+      carbsGrams: 32,
+      fatGrams: 7,
+      fiberGrams: 8,
+      sodiumMg: 340,
+    },
+    storageInstructions:
+      "Store leftover chola bhuna in an airtight container in the refrigerator for up to 5 days. Reheat gently in a skillet with 2 tablespoons of water or microwave covered until steaming.",
+    freezingInstructions:
+      "Boiled black chickpeas freeze exceptionally well for up to 3 months. Prepare large batches of boiled chana ahead of Ramadan, freeze in portioned zip bags, and simply execute the 10-minute bhuna masala step right before Iftar.",
+    servingSuggestions: [
+      "Classic Bengali Iftar Muri Mix: Toss hot Chola Bhuna with crispy puffed rice (muri), chopped red onions, green chilies, a drizzle of raw mustard oil, and crispy onion piyaju.",
+      "Luchi or Paratha Pairing: Serve alongside hot, puffed Bengali luchis or flaky parathas for a hearty weekend breakfast or Suhoor meal.",
+      "Mezze & Salad Bowl: Spoon over a fresh green salad with diced cucumbers, tomatoes, and boiled eggs for a high-fiber, muscle-building post-fast dinner.",
+    ],
+    faqs: [
+      {
+        question: "Why are black chickpeas (Kala Chana) better for Ramadan fasting than white chickpeas?",
+        answer:
+          "Kala Chana possesses a significantly thicker outer seed coat rich in insoluble dietary fiber and complex carbs. This gives it an exceptionally low glycemic index, providing steady, slow-releasing energy that staves off hunger and stabilizes blood sugar following long fasting hours.",
+      },
+      {
+        question: "Can I make this in an Instant Pot or multi-cooker?",
+        answer:
+          "Yes! Use the Sauté function to fry the aromatics and spices, then add soaked drained chana, diced potato, and 2.5 cups of water. Pressure cook on High for 25 minutes with natural pressure release, then sauté for 3 minutes to thicken the gravy.",
+      },
+      {
+        question: "How do I make the chola less spicy for young children?",
+        answer:
+          "Reduce the red chili powder to 1/2 teaspoon of mild sweet paprika or Kashmiri chili, and leave the green chilies whole rather than slit so they infuse aroma without fiery heat.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Regional Culinary Director & Halal Recipe Developer",
+    },
+    updatedDate: "September 17, 2026",
+    tags: [
+      "Black Chana",
+      "কালো ছোলা",
+      "Chola Bhuna",
+      "Kala Chana",
+      "Ramadan",
+      "Eid",
+      "Iftar",
+      "Iftar Classic",
+      "Halal Vegetarian",
+      "Halal Snacks",
+      "Bengali Cuisine",
+      "Bangladeshi Food",
+      "High Protein",
+      "Vegan",
+      "Desi Chickpeas",
+      "Festive",
+    ],
+  },
+  {
+    id: "rec-egg-roll",
+    slug: "egg-roll",
+    title: "Egg Roll (ডিমের রোল / Crispy Halal Ramadan Egg Rolls)",
+    category: "Ramadan & Eid",
+    categorySlug: "ramadan-eid",
+    cuisine: "Bengali Street Food & Asian-Halal Fusion",
+    description:
+      "Golden, ultra-crispy, and blistered to perfection—Bengali-style Crispy Egg Rolls (ডিমের রোল) packed with savory seasoned minced Halal chicken or beef, finely shredded crisp green cabbage, carrots, fluffy scrambled eggs, green onions, and toasted sesame, fried to a crackling golden crunch and served with zesty sweet chili garlic sauce.",
+    introStory:
+      "A beloved crown jewel of Ramadan Iftar food bazaars from Chawkbazar to modern evening snack joints across Bangladesh, the Egg Roll (ডিমের রোল) is celebrated for its irresistible textural contrast: an audibly crunchy, bubbly, deep-golden crust that yields to a steaming, aromatic filling of seasoned savory ground meat, tender-crisp shredded vegetables, and silky scrambled eggs. While Kolkata street rolls are wrapped in griddled flatbreads, Ramadan Iftar stalls famously craft these delicate fried egg rolls in crispy, paper-thin pastry wrappers—marrying classic Chinese-American spring roll heritage with vibrant South Asian spices. The secret to an unforgettable egg roll lies in wringing all excess moisture from the shredded cabbage and carrots after a high-heat wok toss with ginger, garlic, toasted sesame oil, and freshly cracked black pepper. Rolled tightly with fluffy scrambled eggs and seasoned Halal ground chicken or beef, sealed with an egg wash, and submerged in hot oil until deeply golden and blistered, every bite shatters cleanly with unmatched crispness. Paired with sweet chili garlic dip and fresh spring onions, it is the ultimate celebratory Iftar snack.",
+    heroImage: IMAGES.eggRoll,
+    prepTimeMinutes: 20,
+    cookTimeMinutes: 20,
+    totalTimeMinutes: 40,
+    servings: 6,
+    difficulty: "Easy",
+    calories: 220,
+    rating: 4.97,
+    reviewCount: 328,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified. Made with certified zabiha Halal minced chicken or beef, farm-fresh eggs, pure vegetable oils, and naturally fermented Halal soy sauce. Completely free from pork lard, non-halal wine or mirin flavorings, and artificial additives.",
+    potentialCautionNotes:
+      "Ensure the sautéed meat and vegetable filling is cooled to room temperature and thoroughly drained of any pan juices before rolling. Excess moisture in hot fillings will steam the wrapper and cause sogginess or oil splatters.",
+    ingredients: [
+      { amount: "12", unit: "sheets", name: "Egg roll or large spring roll pastry wrappers", notes: "Halal certified, thawed if frozen" },
+      { amount: "3", unit: "large", name: "Farm-fresh eggs", notes: "scrambled softly in butter or ghee, plus 1 egg lightly beaten for sealing wrappers" },
+      { amount: "250", unit: "g (approx. 1/2 lb)", name: "Halal lean minced chicken or ground beef", notes: "finely ground for even distribution" },
+      { amount: "3", unit: "cups", name: "Green cabbage", notes: "finely shredded into thin ribbons" },
+      { amount: "1", unit: "cup", name: "Carrots", notes: "peeled and finely shredded / julienned" },
+      { amount: "4", unit: "stalks", name: "Spring onions / scallions", notes: "thinly sliced (whites and greens divided)" },
+      { amount: "1", unit: "tbsp", name: "Fresh ginger", notes: "finely grated" },
+      { amount: "1", unit: "tbsp", name: "Fresh garlic", notes: "finely minced" },
+      { amount: "2", unit: "tbsp", name: "Halal dark soy sauce or tamari", notes: "for rich umami and mahogany color" },
+      { amount: "1", unit: "tbsp", name: "Pure toasted sesame oil", notes: "adds intoxicating roasted aroma" },
+      { amount: "1", unit: "tsp", name: "Roasted cumin powder & Bengali garam masala", notes: "infuses the signature Desi street-food touch" },
+      { amount: "1", unit: "tsp", name: "Freshly cracked black pepper", notes: "coarsely ground" },
+      { amount: "1/2", unit: "tsp", name: "Fine sea salt", notes: "or to taste" },
+      { amount: "3", unit: "cups", name: "Neutral vegetable oil", notes: "for deep frying (high smoke point)" },
+      { amount: "1/4", unit: "cup", name: "Sweet chili garlic sauce or tomato chutney", notes: "for dipping" },
+    ],
+    substitutions: [
+      {
+        original: "Minced chicken or beef",
+        substitute: "Finely minced mushrooms or crumbled firm tofu",
+        notes: "For a vegetarian Ramadan egg roll, sautéed shiitake mushrooms deliver rich savory umami.",
+      },
+      {
+        original: "Egg roll wrappers",
+        substitute: "Lumpia wrappers or spring roll pastry sheets",
+        notes: "Spring roll pastry yields an ultra-delicate, glass-crisp exterior with fine flaky layers.",
+      },
+      {
+        original: "Sweet chili sauce",
+        substitute: "Bengali tamarind chutney (tetul er chatni) or mint-coriander dip",
+        notes: "Provides a fiery, sour kick reminiscent of street-side food stalls.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Scramble the Eggs",
+        instruction:
+          "Whisk 3 eggs with a pinch of salt. Heat 1 teaspoon of oil in a non-stick skillet over medium-low heat. Pour in the eggs and stir gently until softly set and tender (do not overcook). Transfer to a wide cutting board, let cool slightly, and roughly chop into small bite-sized curd pieces.",
+      },
+      {
+        step: 2,
+        title: "Brown the Halal Minced Meat",
+        instruction:
+          "In a hot wok or deep skillet, add 1 tablespoon of oil over high heat. Add the minced chicken or beef, breaking it apart with a spatula. Sauté for 4 to 5 minutes until fully cooked, browned, and any liquid evaporates. Transfer the browned meat to a clean bowl.",
+      },
+      {
+        step: 3,
+        title: "High-Heat Stir-Fry of Aromatic Vegetables",
+        instruction:
+          "In the same wok, heat another tablespoon of oil over medium-high heat. Add grated ginger, minced garlic, and scallion whites. Stir-fry for 30 seconds until fragrant. Add shredded cabbage and carrots. Toss vigorously on high heat for 2 to 3 minutes just until slightly wilted but still retaining a pleasant crunch. Drizzle in the soy sauce, toasted sesame oil, garam masala, cumin powder, black pepper, and salt. Toss for 1 minute.",
+      },
+      {
+        step: 4,
+        title: "Combine Filling & Cool Completely",
+        instruction:
+          "Fold the browned minced meat, chopped scrambled eggs, and green scallion slices into the vegetables. Toss thoroughly to combine. Turn off heat and transfer the filling onto a fine mesh colander set over a bowl. Let cool to room temperature (about 15 minutes) and press lightly to strain away any residual pan juices. A dry, cool filling guarantees super-crispy rolls.",
+      },
+      {
+        step: 5,
+        title: "Fill & Roll Like an Envelope",
+        instruction:
+          "Place one egg roll wrapper on a clean flat surface in a diamond orientation with one corner pointing directly toward you. Spoon approximately 1/4 cup of the cooled filling horizontally across the lower center of the wrapper. Fold the bottom corner up and snug over the filling. Fold the left and right corners inward toward the center to form a neat envelope. Brush the exposed top triangular flap with beaten egg wash. Roll forward firmly and snugly to seal tight. Repeat with remaining wrappers.",
+      },
+      {
+        step: 6,
+        title: "Fry to Blistered Golden Crispness",
+        instruction:
+          "Heat 2 to 3 inches of vegetable oil in a heavy Dutch oven or wok to 350°F (175°C). Carefully lower 3 to 4 egg rolls into the shimmering oil seam-side down. Fry for 4 to 5 minutes, turning occasionally with tongs, until the wrappers turn an irresistible deep golden-brown with fine crispy blister bubbles all over.",
+      },
+      {
+        step: 7,
+        title: "Drain & Slice Diagonally",
+        instruction:
+          "Transfer the fried egg rolls with a slotted spoon onto a wire cooling rack set over a baking sheet (never paper towels, which trap steam). Let rest for 2 minutes, then slice diagonally in half to expose the colorful, steaming, savory interior.",
+      },
+      {
+        step: 8,
+        title: "Serve for Iftar",
+        instruction:
+          "Arrange on a rustic platter alongside bowls of sweet chili garlic sauce, fresh coriander, and sliced scallions. Serve piping hot for Ramadan Iftar or festive family gatherings.",
+      },
+    ],
+    chefNotes: [
+      "The Moisture Control Rule: The #1 secret to shatteringly crisp egg rolls is removing moisture from the filling. Straining through a colander and letting it cool prevents steam from turning the delicate wrapper soggy.",
+      "Air Fryer Option: Lightly brush the wrapped egg rolls on all sides with oil. Place seam-side down in the air fryer basket at 380°F (195°C) and cook for 10 to 12 minutes, flipping halfway, until golden and blistered.",
+      "The Envelope Fold: Keep the roll snug without overstretching the pastry skin to prevent bursts while frying.",
+    ],
+    nutrition: {
+      calories: 220,
+      proteinGrams: 11,
+      carbsGrams: 20,
+      fatGrams: 10,
+      fiberGrams: 2,
+      sodiumMg: 380,
+    },
+    storageInstructions:
+      "Store leftover cooked egg rolls in an airtight container in the refrigerator for up to 3 days. Reheat in a preheated oven or toaster oven at 375°F (190°C) for 8 minutes to restore maximum crispness (avoid microwave).",
+    freezingInstructions:
+      "Uncooked rolled egg rolls freeze exceptionally well! Place un-fried assembled rolls on a parchment-lined baking sheet in a single layer and freeze for 2 hours until rock hard. Transfer to freezer zip-top bags for up to 2 months. Fry directly from frozen at 340°F (170°C) for 6 to 7 minutes—no thawing required!",
+    servingSuggestions: [
+      "Serve as an irresistible crispy Iftar finger-food alongside Chola Bhuna, onion piyaju, and chilled Rooh Afza sharbat.",
+      "Pair with hot fried rice, chili chicken, and clear soup for an Asian-Halal banquet night.",
+      "Pack into school lunchboxes or afternoon dawat tea trays with sweet chili dipping sauce.",
+    ],
+    faqs: [
+      {
+        question: "Can I make these egg rolls completely vegetarian?",
+        answer:
+          "Yes! Simply omit the minced meat and double the scrambled eggs and shredded vegetables, or add sautéed paneer or crumbled extra-firm tofu for protein.",
+      },
+      {
+        question: "Why do my egg rolls become soft after frying?",
+        answer:
+          "Softness happens when filling is warm when rolled, contains excess liquid, or when rolls are drained on paper towels where trapped steam softens the crust. Always drain on an elevated wire rack.",
+      },
+      {
+        question: "Can I freeze them before frying for Ramadan meal-prep?",
+        answer:
+          "Yes! Assembling and freezing raw egg rolls on a tray before bagging is a time-honored Ramadan meal-prep strategy. Drop them straight into hot oil from frozen without thawing.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Regional Culinary Director & Halal Recipe Developer",
+    },
+    updatedDate: "September 17, 2026",
+    tags: [
+      "Egg Roll",
+      "ডিমের রোল",
+      "Crispy Egg Rolls",
+      "Ramadan",
+      "Eid",
+      "Iftar",
+      "Iftar Classic",
+      "Halal Snacks",
+      "Halal Street Food",
+      "Asian-Halal Fusion",
+      "Crispy Appetizer",
+      "Meal Prep",
+      "Finger Food",
+      "Deep Fried",
+    ],
+  },
 ];
+
+
+
 
 

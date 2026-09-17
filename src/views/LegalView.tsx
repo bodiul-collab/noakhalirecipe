@@ -61,7 +61,7 @@ export const LegalView: React.FC<LegalViewProps> = ({ initialTab = "privacy" }) 
                 1. Information We Collect
               </h2>
               <p>
-                Noakhali Kitchen collects minimal information necessary to deliver quality culinary content and verified directory listings. This includes newsletter subscription emails, recipe bookmarks stored locally in your browser, and optional geolocation data used exclusively to locate nearby Halal food and mosques when you explicitly activate the location feature.
+                Noakhali Kitchen collects minimal information necessary to deliver quality culinary content, recipes, and food guides. This includes newsletter subscription emails and recipe bookmarks and collections stored locally in your browser. We do not track or store your location data.
               </p>
 
               <h2 className="text-base font-bold text-[#30302F] pt-2">

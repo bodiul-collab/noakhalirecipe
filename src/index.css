@@ -320,9 +320,8 @@ html.dark body {
   background-color: #222220 !important;
 }
 
-/* Recipe cards & directory place cards */
-.dark .recipe-card,
-.dark [id^="place-card-"] {
+/* Recipe cards */
+.dark .recipe-card {
   background-color: #1E1E1C !important;
   border-color: #33322E !important;
 }
@@ -490,9 +489,4 @@ html.dark body {
 .tight-mode section.bg-\[\#F8CD78\] {
   padding-top: 1.5rem !important;
   padding-bottom: 1.5rem !important;
-}
-
-/* Compact Directory Card Height */
-.tight-mode [id^="place-card-"] .h-36 {
-  height: 6.75rem !important;
 }
