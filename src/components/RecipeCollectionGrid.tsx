@@ -216,6 +216,105 @@ const DEFAULT_COLLECTION: CollectionCardItem[] = [
     halalBadge: "100% Halal Dish",
     image: IMAGES.blackChana,
   },
+  {
+    id: "card-chicken-patty",
+    slug: "chicken-patty",
+    title: "Chicken Patty crisp and flaky (চিকেন প্যাটি)",
+    description:
+      "Golden all-butter puff pastry turnovers stuffed with spiced minced chicken, caramelized onions & kalonji seeds.",
+    heritageTag: "🥐 Bakery-Style Ramadan Classic",
+    brandName: "Noakhali Kitchen",
+    halalBadge: "100% Halal Dish",
+    image: IMAGES.chickenPatty,
+  },
+  {
+    id: "card-dal-piyaju",
+    slug: "dal-piyaju-pakora",
+    title: "Dal piyajo Pakoda Pakora (ডালের পেঁয়াজু)",
+    description:
+      "Audibly crunchy red lentil and onion fritters fried to golden blistered perfection with tamarind and mint chutney.",
+    heritageTag: "✨ Iconic Ramadan Iftar Fritter",
+    brandName: "Noakhali Kitchen",
+    halalBadge: "100% Halal Dish",
+    image: IMAGES.dalPiyaju,
+  },
+  {
+    id: "card-narkel-puli",
+    slug: "narkel-puli-pitha",
+    title: "Narkel Puli Pitha Coconut Dumpling (নারকেলের পুলি পিঠা)",
+    description:
+      "Porcelain-white pillowy steamed rice dumplings stuffed with fragrant date palm jaggery caramelized coconut & green cardamom.",
+    heritageTag: "🥥 Traditional Bengali Heritage Sweet",
+    brandName: "Noakhali Kitchen",
+    halalBadge: "100% Halal Dish",
+    image: IMAGES.narkelPuliPitha,
+  },
+  {
+    id: "card-thandai",
+    slug: "thandai",
+    title: "Thandai (ঠান্ডাই)",
+    description:
+      "Chilled royal whole milk steeped with blanched almonds, pistachios, saffron, cooling sweet fennel & fragrant rose petals in clay kulhads.",
+    heritageTag: "🥛 Royal Mughlai Cooling Elixir",
+    brandName: "Noakhali Kitchen",
+    halalBadge: "100% Halal Drink",
+    image: IMAGES.thandai,
+  },
+  {
+    id: "card-salty-lassi",
+    slug: "salty-lassi",
+    title: "Salty Lassi (নোনতা লাচ্চি)",
+    description:
+      "Frothy chilled yogurt blended with roasted cumin (bhuna jeera), Himalayan black salt (bit lobon), lime & fresh mint in tall fluted glasses.",
+    heritageTag: "🌿 Traditional Digestive Cooler",
+    brandName: "Noakhali Kitchen",
+    halalBadge: "100% Halal Drink",
+    image: IMAGES.saltyLassi,
+  },
+  {
+    id: "card-borhani",
+    slug: "borhani",
+    title: "Borhani (বোরহানি بورہانی)",
+    description:
+      "Old Dhaka's royal spiced digestive yogurt drink blended with fresh mint, coriander, roasted cumin, black salt & mustard in clay kulhads.",
+    heritageTag: "🏺 Royal Old Dhaka Festive Drink",
+    brandName: "Noakhali Kitchen",
+    halalBadge: "100% Halal Drink",
+    image: IMAGES.borhani,
+  },
+  {
+    id: "card-buttermilk-chicken-alfredo",
+    slug: "buttermilk-chicken-alfredo-spinach-pasta",
+    title: "Buttermilk Chicken Alfredo Spinach Pasta",
+    description:
+      "Seared buttermilk-marinated chicken bites tossed with penne, charred broccoli & fresh baby spinach in rich garlic-parmesan sauce. Ready in 25 mins!",
+    heritageTag: "⏱️ 25-Minute Weeknight Skillet",
+    brandName: "Noakhali Kitchen",
+    halalBadge: "100% Halal Certified",
+    image: IMAGES.buttermilkChickenAlfredo,
+  },
+  {
+    id: "card-spinach-sun-dried-tomato-pasta",
+    slug: "spinach-sun-dried-tomato-pasta",
+    title: "Spinach & Sun Dried Tomato Pasta",
+    description:
+      "Tuscan spaghetti twirled in a silky garlic-parmesan cream sauce with vibrant baby spinach, tangy sun-dried tomatoes & sweet shallots.",
+    heritageTag: "🌿 25-Min Tuscan Vegetarian",
+    brandName: "Noakhali Kitchen",
+    halalBadge: "100% Halal Vegetarian",
+    image: IMAGES.spinachSunDriedTomatoPasta,
+  },
+  {
+    id: "card-chicken-tikka-masala",
+    slug: "chicken-tikka-masala",
+    title: "Chicken Tikka Masala (چکن تکہ مصالحہ)",
+    description:
+      "Tender chunks of smoky tandoori-charred chicken simmered in a luscious spiced tomato, cream & kasuri methi gravy over fluffy basmati rice.",
+    heritageTag: "🍛 Royal Anglo-Indian & Mughlai Classic",
+    brandName: "Noakhali Kitchen",
+    halalBadge: "100% Halal Certified",
+    image: IMAGES.chickenTikkaMasala,
+  },
 ];
 
 interface SingleCollectionCardProps {

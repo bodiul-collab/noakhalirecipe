@@ -124,6 +124,16 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
           (r.slug === "crispy-falafel" && (activeSlug === "falafel" || activeSlug === "authentic-falafel" || activeSlug === "middle-eastern-falafel")) ||
           (r.slug === "hummus" && (activeSlug === "authentic-hummus" || activeSlug === "hommus" || activeSlug === "houmous")) ||
           (r.slug === "black-chana" && (activeSlug === "kalo-chola" || activeSlug === "chola-bhuna" || activeSlug === "kala-chana" || activeSlug === "bengali-chola-bhuna")) ||
+          (r.slug === "egg-roll" && (activeSlug === "dimer-roll" || activeSlug === "crispy-egg-roll" || activeSlug === "crispy-egg-rolls")) ||
+          (r.slug === "chicken-patty" && (activeSlug === "chicken-patties" || activeSlug === "crispy-chicken-patty" || activeSlug === "chicken-patty-crisp-and-flaky" || activeSlug === "bengali-chicken-patty")) ||
+          (r.slug === "dal-piyaju-pakora" && (activeSlug === "dal-piyaju" || activeSlug === "piyaju" || activeSlug === "piyaji" || activeSlug === "dal-pakora" || activeSlug === "dal-pakoda" || activeSlug === "pakora")) ||
+          (r.slug === "narkel-puli-pitha" && (activeSlug === "puli-pitha" || activeSlug === "narkel-puli" || activeSlug === "coconut-dumpling" || activeSlug === "coconut-dumplings" || activeSlug === "bhapa-puli" || activeSlug === "narkeler-puli-pitha")) ||
+          (r.slug === "thandai" && (activeSlug === "shahi-thandai" || activeSlug === "kesar-thandai" || activeSlug === "kesar-pista-thandai" || activeSlug === "thandai-drink")) ||
+          (r.slug === "salty-lassi" && (activeSlug === "namkeen-lassi" || activeSlug === "salted-lassi" || activeSlug === "chaas" || activeSlug === "savory-lassi" || activeSlug === "salt-lassi")) ||
+          (r.slug === "borhani" && (activeSlug === "traditional-shahi-borhani" || activeSlug === "shahi-borhani" || activeSlug === "dhaka-borhani" || activeSlug === "dhaka-shahi-borhani" || activeSlug === "borhani-drink")) ||
+          (r.slug === "buttermilk-chicken-alfredo-spinach-pasta" && (activeSlug === "buttermilk-chicken-alfredo" || activeSlug === "buttermilk-alfredo-chicken-spinach-pasta" || activeSlug === "buttermilk-alfredo-pasta" || activeSlug === "chicken-alfredo-spinach-pasta" || activeSlug === "buttermilk-chicken-pasta")) ||
+          (r.slug === "spinach-sun-dried-tomato-pasta" && (activeSlug === "spinach-and-sun-dried-tomato-pasta" || activeSlug === "sun-dried-tomato-pasta" || activeSlug === "spinach-sundried-tomato-pasta" || activeSlug === "spinach-and-sundried-tomato-pasta" || activeSlug === "creamy-sun-dried-tomato-pasta")) ||
+          (r.slug === "chicken-tikka-masala" && (activeSlug === "tikka-masala" || activeSlug === "chicken-tikka" || activeSlug === "authentic-chicken-tikka-masala" || activeSlug === "chiken-tikka-masala" || activeSlug === "shahi-chicken-tikka-masala")) ||
           (r.slug === "haleem" && (activeSlug === "bengali-haleem" || activeSlug === "shahi-haleem")) ||
           (r.slug === "bengali-chicken-roast" && activeSlug === "shahi-chicken-roast") ||
           (r.slug === "chicken-machboos-majboos-kabsa" && activeSlug === "authentic-saudi-chicken-kabsa")

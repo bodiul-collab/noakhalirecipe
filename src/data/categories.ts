@@ -10,7 +10,7 @@ export const CATEGORIES: CategoryHub[] = [
     fullDescription:
       "Explore comforting Halal poultry recipes from across Bengal, South Asia, and the Mediterranean. Every recipe utilizes hand-slaughtered or certified Halal chicken cuts, cooked with authentic aromatics, rich natural stocks, and balanced spices.",
     image: IMAGES.heroBiryani,
-    featuredRecipeSlugs: ["authentic-chicken-shawarma", "chicken-karahi", "chicken-biryani", "bengali-chicken-roast", "bengali-chicken-curry-murgir-jhol", "authentic-lahori-chicken-chargha", "authentic-restaurant-style-butter-chicken-murgh-makhani", "creamy-fettuccine-chicken-alfredo", "authentic-arabian-chicken-mandi", "chicken-machboos-majboos-kabsa", "classic-deli-halal-chicken-salad", "tom-zaab-chicken-soup-tom-zaab-gai", "thai-chicken-red-curry-gaeng-phed-gai", "halal-chicken-biryani", "chicken-satay-satay-gai", "chicken-massaman-curry"],
+    featuredRecipeSlugs: ["chicken-tikka-masala", "buttermilk-chicken-alfredo-spinach-pasta", "authentic-chicken-shawarma", "chicken-karahi", "chicken-biryani", "bengali-chicken-roast", "bengali-chicken-curry-murgir-jhol", "authentic-lahori-chicken-chargha", "authentic-restaurant-style-butter-chicken-murgh-makhani", "creamy-fettuccine-chicken-alfredo", "authentic-arabian-chicken-mandi", "chicken-machboos-majboos-kabsa", "classic-deli-halal-chicken-salad", "tom-zaab-chicken-soup-tom-zaab-gai", "thai-chicken-red-curry-gaeng-phed-gai", "halal-chicken-biryani", "chicken-satay-satay-gai", "chicken-massaman-curry"],
     faqs: [
       {
         question: "How do I verify chicken is Halal when shopping?",
@@ -111,7 +111,7 @@ export const CATEGORIES: CategoryHub[] = [
     fullDescription:
       "Pure, nourishing plant-based dishes made with wholesome legumes, cold-pressed mustard oil, whole spices, and garden-fresh vegetables. Completely free from animal byproducts and naturally pork-free.",
     image: IMAGES.vegBhunaKhichuri,
-    featuredRecipeSlugs: ["black-chana", "hummus", "crispy-falafel", "bengali-pulao", "bengali-khichuri-bhuna", "mediterranean-chickpea-salad", "authentic-lebanese-baba-ganoush", "masoor-dal-red-lentil-dal", "crispy-garlic-herb-roasted-potatoes", "pillowy-restaurant-style-garlic-butter-naan", "rainbow-roasted-beet-whipped-goat-cheese-salad", "panera-style-halal-broccoli-cheddar-soup", "crispy-zaatar-chickpea-halloumi-glow-salad", "vegetable-bhuna-khichuri"],
+    featuredRecipeSlugs: ["spinach-sun-dried-tomato-pasta", "black-chana", "hummus", "crispy-falafel", "bengali-pulao", "bengali-khichuri-bhuna", "mediterranean-chickpea-salad", "authentic-lebanese-baba-ganoush", "masoor-dal-red-lentil-dal", "crispy-garlic-herb-roasted-potatoes", "pillowy-restaurant-style-garlic-butter-naan", "rainbow-roasted-beet-whipped-goat-cheese-salad", "panera-style-halal-broccoli-cheddar-soup", "crispy-zaatar-chickpea-halloumi-glow-salad", "vegetable-bhuna-khichuri"],
     faqs: [
       {
         question: "Do vegetarian dishes ever contain non-halal ingredients?",
@@ -131,7 +131,7 @@ export const CATEGORIES: CategoryHub[] = [
     fullDescription:
       "The staple combination that anchors Bengali and South Asian hospitality. Learn the fine art of blooming whole spices in pure ghee, parboiling basmati rice, and creating layered gravies that bring families together.",
     image: IMAGES.chickenRoast,
-    featuredRecipeSlugs: ["chicken-karahi", "haleem", "chicken-biryani", "bengali-pulao", "bengali-khichuri-bhuna", "bengali-chicken-roast", "bengali-beef-tehari", "bengali-fish-curry-macher-jhol", "bengali-chicken-curry-murgir-jhol", "authentic-arabian-chicken-mandi", "chicken-machboos-majboos-kabsa", "pillowy-restaurant-style-garlic-butter-naan", "halal-chicken-biryani", "vegetable-bhuna-khichuri"],
+    featuredRecipeSlugs: ["chicken-tikka-masala", "chicken-karahi", "haleem", "chicken-biryani", "bengali-pulao", "bengali-khichuri-bhuna", "bengali-chicken-roast", "bengali-beef-tehari", "bengali-fish-curry-macher-jhol", "bengali-chicken-curry-murgir-jhol", "authentic-arabian-chicken-mandi", "chicken-machboos-majboos-kabsa", "pillowy-restaurant-style-garlic-butter-naan", "halal-chicken-biryani", "vegetable-bhuna-khichuri"],
     faqs: [
       {
         question: "What rice variety gives the most authentic aroma?",
@@ -151,7 +151,7 @@ export const CATEGORIES: CategoryHub[] = [
     fullDescription:
       "Snack time in Muslim households is a lively affair of spiced pastry triangles, hot fried fritters, and sweet chutneys served alongside cardamom milk tea (chai).",
     image: IMAGES.streetFood,
-    featuredRecipeSlugs: ["egg-roll", "black-chana", "hummus", "crispy-falafel", "authentic-lebanese-baba-ganoush", "tuna-fish-kebab-fritters", "birria-tacos-beef-quesabirria-consome", "kibbeh-lebanese-fried-bulgur-stuffed-shells", "traditional-teler-pitha-gur-pitha", "crispy-halal-samosas"],
+    featuredRecipeSlugs: ["dal-piyaju-pakora", "chicken-patty", "egg-roll", "black-chana", "hummus", "crispy-falafel", "authentic-lebanese-baba-ganoush", "tuna-fish-kebab-fritters", "birria-tacos-beef-quesabirria-consome", "kibbeh-lebanese-fried-bulgur-stuffed-shells", "traditional-teler-pitha-gur-pitha", "crispy-halal-samosas"],
     faqs: [
       {
         question: "Can samosas be prepared in advance?",
@@ -170,7 +170,7 @@ export const CATEGORIES: CategoryHub[] = [
     fullDescription:
       "Celebrate sweet milestones with luxurious Eid desserts perfumed with green cardamom, saffron threads, pistachios, and thickened whole milk. All made without non-halal gelatin or alcohol-based vanilla extracts.",
     image: IMAGES.gulabJamun,
-    featuredRecipeSlugs: ["traditional-teler-pitha-gur-pitha", "traditional-vapa-pitha-steamed-coconut-jaggery", "milk-powder-burfi-quick-mawa-fudge", "shahi-besan-laddu", "basbousa-semolina-cake", "mango-coconut-burfi", "crispy-saffron-jalebi", "shahi-gulab-jamun", "kheer-shahi-rice-kheer-payesh", "royal-gajar-ka-halwa", "bengali-roshogolla"],
+    featuredRecipeSlugs: ["narkel-puli-pitha", "traditional-teler-pitha-gur-pitha", "traditional-vapa-pitha-steamed-coconut-jaggery", "milk-powder-burfi-quick-mawa-fudge", "shahi-besan-laddu", "basbousa-semolina-cake", "mango-coconut-burfi", "crispy-saffron-jalebi", "shahi-gulab-jamun", "kheer-shahi-rice-kheer-payesh", "royal-gajar-ka-halwa", "bengali-roshogolla"],
     faqs: [
       {
         question: "Is vanilla extract Halal?",
@@ -247,6 +247,9 @@ export const CATEGORIES: CategoryHub[] = [
       "Discover revitalizing, traditional, and celebratory 100% Halal drinks from across the Islamic world. From the iconic spiced yogurt Borhani served at royal weddings and Eid feasts, to luscious Alphonso mango lassi, aromatic rose-infused Rooh Afza sharbat with bloomed basil seeds, spiced Gulf Karak chai, and chilled Levantine mint limonana. Prepared with wholesome fresh herbs, real fruit, pure honey, and certified alcohol-free flavors.",
     image: IMAGES.halalDrinks,
     featuredRecipeSlugs: [
+      "borhani",
+      "salty-lassi",
+      "thandai",
       "traditional-shahi-borhani",
       "royal-mango-lassi",
       "royal-rooh-afza-sharbat",
@@ -285,6 +288,12 @@ export const CATEGORIES: CategoryHub[] = [
       "From the sacred evening tranquility of sunset Iftar tables laden with spiced black chana (ছোলা ভুনা), crispy onion piyaju, and cooling Rooh Afza sharbat, to royal Eid morning banquets featuring Shahi beef roast, fragrant pulao, and creamy kheer, our Ramadan & Eid collection honors authentic culinary heritage, spiritual mindfulness, and joyful family gatherings.",
     image: IMAGES.blackChana,
     featuredRecipeSlugs: [
+      "borhani",
+      "salty-lassi",
+      "thandai",
+      "narkel-puli-pitha",
+      "dal-piyaju-pakora",
+      "chicken-patty",
       "egg-roll",
       "black-chana",
       "haleem",

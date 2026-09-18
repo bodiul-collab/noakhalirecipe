@@ -87,6 +87,15 @@ import crispyFalafelImg from "../assets/images/crispy_falafel_1789655593503.jpg"
 import creamyHummusImg from "../assets/images/creamy_authentic_hummus_1789656070932.jpg";
 import bengaliBlackChanaImg from "../assets/images/bengali_black_chana_1789656257884.jpg";
 import crispyEggRollsImg from "../assets/images/crispy_egg_rolls_1789656443680.jpg";
+import crispyChickenPattyImg from "../assets/images/crispy_chicken_patty_1789734823972.jpg";
+import crispyDalPiyajuImg from "../assets/images/crispy_dal_piyaju_1789735018443.jpg";
+import narkelPuliPithaImg from "../assets/images/narkel_puli_pitha_1789735295460.jpg";
+import chilledShahiThandaiImg from "../assets/images/chilled_shahi_thandai_1789735879384.jpg";
+import refreshingSaltyLassiImg from "../assets/images/refreshing_salty_lassi_1789736095532.jpg";
+import dhakaShahiBorhaniImg from "../assets/images/dhaka_shahi_borhani_1789736333991.jpg";
+import buttermilkChickenAlfredoImg from "../assets/images/buttermilk_chicken_alfredo_1789737847757.jpg";
+import spinachSunDriedTomatoPastaImg from "../assets/images/spinach_sun_dried_tomato_pasta_1789738059612.jpg";
+import chickenTikkaMasalaImg from "../assets/images/chicken_tikka_masala_1789738518734.jpg";
 import noakhaliLogoFullImg from "../assets/images/noakhali_kitchen_logo_1789072776240.jpg";
 import noakhaliLogoIconImg from "../assets/images/noakhali_kitchen_logo_1789072776240.jpg";
 
@@ -123,7 +132,7 @@ export const IMAGES = {
   halalDrinks: halalDrinksImg,
   mealPrep: mealPrepImg,
   adeniKarakChai: adeniKarakChaiImg,
-  shahiBorhani: shahiBorhaniImg,
+  shahiBorhani: dhakaShahiBorhaniImg,
   levantineLimonana: levantineLimonanaImg,
   roohAfzaSharbat: roohAfzaSharbatImg,
   mangoLassi: mangoLassiImg,
@@ -186,6 +195,34 @@ export const IMAGES = {
   kaloChola: bengaliBlackChanaImg,
   eggRoll: crispyEggRollsImg,
   dimerRoll: crispyEggRollsImg,
+  chickenPatty: crispyChickenPattyImg,
+  crispyChickenPatty: crispyChickenPattyImg,
+  dalPiyaju: crispyDalPiyajuImg,
+  piyaju: crispyDalPiyajuImg,
+  dalPakora: crispyDalPiyajuImg,
+  dalPakoda: crispyDalPiyajuImg,
+  narkelPuliPitha: narkelPuliPithaImg,
+  puliPitha: narkelPuliPithaImg,
+  bhapaPuli: narkelPuliPithaImg,
+  coconutDumpling: narkelPuliPithaImg,
+  thandai: chilledShahiThandaiImg,
+  shahiThandai: chilledShahiThandaiImg,
+  kesarThandai: chilledShahiThandaiImg,
+  saltyLassi: refreshingSaltyLassiImg,
+  namkeenLassi: refreshingSaltyLassiImg,
+  saltedLassi: refreshingSaltyLassiImg,
+  chaas: refreshingSaltyLassiImg,
+  borhani: dhakaShahiBorhaniImg,
+  dhakaBorhani: dhakaShahiBorhaniImg,
+  buttermilkChickenAlfredo: buttermilkChickenAlfredoImg,
+  buttermilkAlfredoPasta: buttermilkChickenAlfredoImg,
+  chickenAlfredoSpinachPasta: buttermilkChickenAlfredoImg,
+  spinachSunDriedTomatoPasta: spinachSunDriedTomatoPastaImg,
+  sunDriedTomatoPasta: spinachSunDriedTomatoPastaImg,
+  creamyTuscanPasta: spinachSunDriedTomatoPastaImg,
+  chickenTikkaMasala: chickenTikkaMasalaImg,
+  tikkaMasala: chickenTikkaMasalaImg,
+  chickenTikka: chickenTikkaMasalaImg,
   logoFull: noakhaliLogoFullImg,
   logoIcon: noakhaliLogoIconImg,
 };

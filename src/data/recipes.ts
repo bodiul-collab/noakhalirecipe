@@ -7628,16 +7628,16 @@ export const RECIPES: Recipe[] = [
   },
   {
     id: "rec-shahi-borhani",
-    slug: "traditional-shahi-borhani",
-    title: "Traditional Dhaka Shahi Borhani (Spiced Festive Yogurt Drink)",
-    category: "Drinks & Beverages",
-    categorySlug: "halal-drinks",
-    cuisine: "Dhaka / Bengali Heritage",
+    slug: "borhani",
+    title: "Borhani (বোরহানি بورہانی)",
+    category: "Ramadan & Eid",
+    categorySlug: "ramadan-eid",
+    cuisine: "Dhaka, Bengali & Royal Mughlai Heritage",
     description:
-      "The undisputed centerpiece beverage of Old Dhaka royal weddings and Eid celebrations—thick, creamy whole milk curd blended with fresh mint, coriander, roasted ground cumin, black salt (bit lobon), yellow mustard paste, and a dash of green chili.",
+      "The undisputed centerpiece digestive beverage of Old Dhaka royal weddings, Ramadan Iftar, and Eid banquets—thick, creamy whole milk curd blended with fresh mint, coriander, roasted ground cumin (bhuna jeera), black salt (bit lobon), yellow mustard paste (shorshe bata), and green chili, served chilled in rustic terracotta kulhads.",
     introStory:
-      "In the culinary traditions of Dhaka and greater Bengal, no wedding feast (biye bari) or Eid banquet of Kacchi Biryani or Shahi Roast is complete without chilled Borhani. Created during the Mughal era to balance the richness of spiced ghee-laden pilafs, this savory, tangy yogurt elixir is packed with natural probiotics and carminative digestive spices. The secret lies in using hung whole-milk curd, freshly toasted cumin and coriander powders, and stone-ground yellow mustard paste rather than commercial condiments.",
-    heroImage: IMAGES.shahiBorhani,
+      "In the rich culinary traditions of Dhaka and greater Bengal, no celebratory feast, wedding banquet (biye bari), or Eid banquet of Kacchi Biryani, Tehari, or Shahi Roast is complete without chilled, aromatic Borhani (বোরহানি / بورہانی). Revered as both a royal beverage and a therapeutic digestive elixir since the Mughal era, authentic Borhani is crafted to balance the richness of spiced, ghee-laden banquets. The secret lies in blending hung whole-milk curd (tok doi) with an emerald puree of fresh garden mint (pudina) and coriander, stone-ground pungent yellow mustard (shorshe bata), freshly roasted and crushed cumin (bhuna jeera), and mineral-rich Himalayan black salt (bit lobon / kala namak). Served traditionally in earthen terracotta kulhads or clay matkas, the natural porous clay imparts a subtle petrichor essence while keeping the probiotic nectar ice-cold and profoundly refreshing.",
+    heroImage: IMAGES.borhani,
     prepTimeMinutes: 15,
     cookTimeMinutes: 0,
     totalTimeMinutes: 15,
@@ -7737,8 +7737,25 @@ export const RECIPES: Recipe[] = [
       name: "Chef Tariq Rahman",
       role: "Culinary Director & Heritage Specialist",
     },
-    updatedDate: "September 7, 2026",
-    tags: ["Drinks", "Halal Drinks", "Bengali", "Yogurt Drink", "Old Dhaka", "Digestive", "Vegetarian"],
+    updatedDate: "September 18, 2026",
+    tags: [
+      "Borhani",
+      "বোরহানি",
+      "بورہانی",
+      "Shahi Borhani",
+      "Dhaka Borhani",
+      "Ramadan",
+      "Eid",
+      "Iftar Drink",
+      "Halal Drinks",
+      "Bengali",
+      "Yogurt Drink",
+      "Old Dhaka",
+      "Terracotta Kulhad",
+      "Digestive",
+      "Vegetarian",
+      "Gluten Free",
+    ],
   },
   {
     id: "rec-mango-lassi",
@@ -11311,7 +11328,1371 @@ export const RECIPES: Recipe[] = [
       "Deep Fried",
     ],
   },
+  {
+    id: "rec-chicken-patty",
+    slug: "chicken-patty",
+    title: "Chicken Patty crisp and flaky (মুচমুচে ও খাস্তা চিকেন প্যাটি)",
+    category: "Ramadan & Eid",
+    categorySlug: "ramadan-eid",
+    cuisine: "Bengali Bakery Heritage & South Asian Halal Pastry",
+    description:
+      "Golden, multi-layered, and audibly flaky Bengali bakery-style Chicken Patties (মুচমুচে ও খাস্তা চিকেন প্যাটি)—triangular all-butter puff pastry turnovers stuffed with savory spiced minced chicken, caramelized onions, green chilies, and ginger, brushed with egg wash and studded with aromatic nigella seeds (kalonji), baked to a shatteringly crisp, puffed golden-brown.",
+    introStory:
+      "A nostalgic hallmark of Bengali confectioneries, heritage bakeries across Old Dhaka, and celebratory Ramadan Iftar gatherings, the savory Chicken Patty (মুচমুচে ও খাস্তা চিকেন প্যাটি) is an all-time classic. While Western bakeries lean toward chicken pot pies, Bengali bakers elevated the French turnover into an art form of laminated, thousand-layer puff pastry enclosing a zesty, aromatic filling of minced chicken cooked with sweet caramelized onions, crushed ginger, garlic, toasted cumin, and a dash of black pepper. The hallmark of an authentic patty is the dramatic rise and audible shatter when you take the first bite: the cold butter trapped inside paper-thin dough laminations flashes into steam inside a scorching 400°F (200°C) oven, blowing the layers apart into dozens of feather-light, golden, crispy crisps. Brushed with golden egg yolk wash, sprinkled with pungent black nigella seeds (kalonji) and fresh cilantro, and served piping hot alongside tangy tomato ketchup or chili sauce, this beloved snack turns any Ramadan Iftar or afternoon dawat into a festive celebration.",
+    heroImage: IMAGES.chickenPatty,
+    prepTimeMinutes: 25,
+    cookTimeMinutes: 25,
+    totalTimeMinutes: 50,
+    servings: 8,
+    difficulty: "Easy",
+    calories: 280,
+    rating: 4.99,
+    reviewCount: 365,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified. Formulated with certified zabiha Halal chicken breast or thighs, pure grass-fed dairy butter (or Halal-certified vegetable puff pastry margarine free from animal l-cysteine or animal fats), fresh eggs, and pure whole spices. Zero lard, zero alcohol flavor carriers.",
+    potentialCautionNotes:
+      "Keep the puff pastry sheets thoroughly chilled right until folding and baking. If the pastry warms up and the butter melts before entering the hot oven, the layers will fuse together instead of expanding into light, flaky sheets.",
+    ingredients: [
+      { amount: "2", unit: "sheets (approx. 450g / 1 lb)", name: "All-butter puff pastry sheets", notes: "Halal certified, thawed overnight in refrigerator and kept chilled" },
+      { amount: "350", unit: "g (approx. 3/4 lb)", name: "Halal minced chicken (breast or thigh)", notes: "finely minced or ground" },
+      { amount: "2", unit: "large", name: "Red onions", notes: "finely chopped (approx. 2 cups)" },
+      { amount: "1", unit: "tbsp", name: "Fresh ginger paste", notes: "freshly grated" },
+      { amount: "1", unit: "tbsp", name: "Fresh garlic paste", notes: "freshly crushed" },
+      { amount: "3", unit: "whole", name: "Fresh green chilies", notes: "finely minced" },
+      { amount: "2", unit: "tbsp", name: "Pure cow ghee or vegetable oil", notes: "for sautéing the chicken filling" },
+      { amount: "1", unit: "tbsp", name: "All-purpose flour", notes: "stirred into the filling to bind juices so pastry remains crisp" },
+      { amount: "1/4", unit: "cup", name: "Chicken broth or whole milk", notes: "creates a moist, velvety meat filling" },
+      { amount: "1", unit: "tsp", name: "Roasted cumin powder (bhuna jeera)", notes: "signature bakery aroma" },
+      { amount: "1", unit: "tsp", name: "Bengali Shahi garam masala", notes: "ground cardamom, cinnamon, clove, and nutmeg" },
+      { amount: "1", unit: "tsp", name: "Freshly cracked black pepper", notes: "coarsely ground" },
+      { amount: "1/2", unit: "tsp", name: "Turmeric powder & Kashmiri chili", notes: "for warm golden hue" },
+      { amount: "1", unit: "tsp", name: "Fine sea salt", notes: "or to taste" },
+      { amount: "1/4", unit: "cup", name: "Fresh cilantro (coriander leaves)", notes: "finely chopped" },
+      { amount: "1", unit: "large", name: "Egg yolk beaten with 1 tbsp milk", notes: "for rich, shiny golden egg wash" },
+      { amount: "1", unit: "tsp", name: "Nigella seeds (kalonji / কালো জিরে)", notes: "sprinkled on top before baking for authentic bakery crunch" },
+      { amount: "1/3", unit: "cup", name: "Tomato ketchup or sweet chili sauce", notes: "for serving" },
+    ],
+    substitutions: [
+      {
+        original: "Minced chicken",
+        substitute: "Minced Halal beef or lamb (Keema)",
+        notes: "Sauté minced beef for 6-8 minutes until fully browned; produces rich traditional Beef Patties.",
+      },
+      {
+        original: "Puff pastry sheets",
+        substitute: "Homemade laminated butter dough or crescent dough sheets",
+        notes: "All-butter commercial puff pastry delivers the highest rise and crispiest flakes with zero fuss.",
+      },
+      {
+        original: "Nigella seeds (kalonji)",
+        substitute: "White sesame seeds or poppy seeds",
+        notes: "Adds a nutty aroma and attractive visual speckled contrast over the golden crust.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Sauté the Aromatics & Chicken",
+        instruction:
+          "Heat ghee or oil in a skillet over medium heat. Add chopped onions and cook for 5 to 6 minutes until soft, translucent, and lightly golden. Stir in ginger paste, garlic paste, and green chilies, cooking for 1 to 2 minutes until fragrant. Add the minced chicken, breaking it apart vigorously with a spatula. Sauté for 4 to 5 minutes until the chicken turns opaque and releases its juices.",
+      },
+      {
+        step: 2,
+        title: "Season & Bind the Spiced Meat Filling",
+        instruction:
+          "Add salt, turmeric, Kashmiri chili, roasted cumin powder, black pepper, and garam masala. Stir in 1 tablespoon of all-purpose flour and toast for 1 minute with the meat. Pour in 1/4 cup of chicken broth or milk. Simmer gently for 3 to 4 minutes until the liquid reduces into a thick, moist, clingy sauce that coats the chicken without runny puddles. Stir in fresh cilantro and remove from heat.",
+      },
+      {
+        step: 3,
+        title: "Cool the Filling Completely",
+        instruction:
+          "Spread the chicken filling onto a wide plate and let it cool completely to room temperature (approx. 20 minutes, or 10 minutes in the refrigerator). Never put warm filling on puff pastry—the heat will prematurely melt the butter layers and destroy the lamination.",
+      },
+      {
+        step: 4,
+        title: "Cut Puff Pastry into Squares",
+        instruction:
+          "Preheat your oven to 400°F (200°C / Gas Mark 6) and line a large baking sheet with parchment paper. Lightly dust your work surface with flour. Unroll the chilled puff pastry sheets. Using a sharp pizza cutter or knife, cut each sheet into 4 equal squares (yielding 8 large squares total).",
+      },
+      {
+        step: 5,
+        title: "Fill, Fold & Crimp into Triangles",
+        instruction:
+          "Spoon approximately 2 to 3 tablespoons of the cooled chicken filling into the center of each square. Lightly brush the perimeter edges with water or beaten egg. Fold one corner over the filling to meet the opposite diagonal corner, creating a neat triangle. Press the edges together with your fingertips to expel trapped air, then firmly crimp all three outer borders with the tines of a fork to create decorative ridges and ensure a leak-proof seal.",
+      },
+      {
+        step: 6,
+        title: "Egg Wash & Sprinkle Kalonji",
+        instruction:
+          "Carefully transfer the filled triangular patties onto the prepared parchment-lined baking sheet, leaving 2 inches of space between them. Brush the tops generously with the egg yolk and milk glaze for an irresistible mirror shine. Sprinkle the tops with nigella seeds (kalonji) and a pinch of chopped cilantro.",
+      },
+      {
+        step: 7,
+        title: "Bake to Shattering Golden Flakiness",
+        instruction:
+          "Bake in the preheated oven at 400°F (200°C) for 22 to 25 minutes, until the pastry puffs vigorously into distinct crispy layers and turns a deep, glistening golden-amber. Do not open the oven door during the first 15 minutes so the trapped steam lifts the puff pastry layers to their maximum height.",
+      },
+      {
+        step: 8,
+        title: "Rest & Serve Hot",
+        instruction:
+          "Transfer the hot chicken patties onto a wire cooling rack for 5 minutes so the bottom pastry crust stays ultra-crisp. Arrange on a fluted serving platter and serve piping hot with tomato ketchup, chili garlic sauce, and a cup of hot cardamom tea.",
+      },
+    ],
+    chefNotes: [
+      "The Cold Butter Secret: If your kitchen is warm or the assembled patties feel soft before baking, chill the entire baking sheet in the freezer for 10 minutes before placing in the hot oven. Ice-cold butter meeting a scorching oven produces maximum flaky expansion.",
+      "The Flour Binding Trick: Adding 1 tablespoon of flour to the sautéed minced chicken absorbs the pan juices, ensuring the filling stays juicy inside while preventing hot meat liquids from leaking out and making the bottom pastry soggy.",
+      "Oven Temperature Matters: Never bake puff pastry below 400°F (200°C); lower temperatures cause butter to slowly melt and pool out instead of rapidly steaming to puff the layers.",
+    ],
+    nutrition: {
+      calories: 280,
+      proteinGrams: 14,
+      carbsGrams: 24,
+      fatGrams: 15,
+      fiberGrams: 1,
+      sodiumMg: 390,
+    },
+    storageInstructions:
+      "Store leftover baked chicken patties in an airtight container in the refrigerator for up to 4 days. Reheat in a preheated oven or toaster oven at 375°F (190°C) for 6 to 8 minutes to restore crisp, flaky layers (never microwave, which makes puff pastry rubbery).",
+    freezingInstructions:
+      "Assembled, unbaked patties freeze wonderfully! Place unbaked triangles on a parchment-lined tray and freeze until solid (1 to 2 hours). Transfer to a freezer bag for up to 3 months. Bake straight from frozen at 400°F (200°C) for 28 to 30 minutes—brush with egg wash right before baking.",
+    servingSuggestions: [
+      "A show-stopping savory centerpiece on your Ramadan Iftar spread alongside Black Chana, onion piyaju, and fresh fruit chaat.",
+      "Classic Bengali afternoon tea (nasta) served alongside piping hot Adeni Karak Chai or Masala Chai.",
+      "Eid morning or dawat starter paired with sweet chili sauce and tangy tomato ketchup.",
+    ],
+    faqs: [
+      {
+        question: "Why did my puff pastry not rise high or become flaky?",
+        answer:
+          "The two main reasons are: (1) the puff pastry became too warm and the butter melted before baking, or (2) the oven was not hot enough. Always bake at 400°F (200°C) and chill the assembled patties for 10 minutes if they feel soft.",
+      },
+      {
+        question: "Can I make these in an air fryer?",
+        answer:
+          "Yes! Place 2 to 3 egg-washed patties in a single layer in the air fryer basket lined with perforated parchment. Bake at 375°F (190°C) for 12 to 14 minutes until puffed, golden, and flaky, flipping once if needed.",
+      },
+      {
+        question: "Can I use leftover cooked chicken or rotisserie chicken?",
+        answer:
+          "Absolutely! Finely shred or mince 2 cups of cooked chicken and toss it directly into the sautéed spiced onions and gravy for a quick 10-minute filling.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Regional Culinary Director & Halal Recipe Developer",
+    },
+    updatedDate: "September 18, 2026",
+    tags: [
+      "Chicken Patty",
+      "চিকেন প্যাটি",
+      "Crispy Chicken Patty",
+      "Puff Pastry",
+      "Ramadan",
+      "Eid",
+      "Iftar",
+      "Iftar Classic",
+      "Halal Chicken",
+      "Halal Snacks",
+      "Bakery Style",
+      "Bengali Street Food",
+      "Appetizer",
+      "Flaky Pastry",
+      "Tea Time Snack",
+    ],
+  },
+  {
+    id: "rec-dal-piyaju-pakora",
+    slug: "dal-piyaju-pakora",
+    title: "Dal piyajo Pakoda Pakora (ডালের পেঁয়াজু)(دال بياجو)(دাল پیاجو)",
+    category: "Ramadan & Eid",
+    categorySlug: "ramadan-eid",
+    cuisine: "Bangladeshi / Bengali Heritage & South Asian Iftar Classics",
+    description:
+      "Crispy, golden-amber, and audibly crunchy Dal Piyaju Pakora (ডালের পেঁয়াজু / دال بياجو)—bite-sized red lentil and split chickpea fritters loaded with sweet sliced red onions, fiery green chilies, grated ginger, and chopped cilantro, fried until blistered and shatteringly crisp, served with tangy tamarind date chutney and fresh mint dip.",
+    introStory:
+      "Across Bangladesh, Kolkata, and the global South Asian diaspora, no Ramadan Iftar spread is ever complete without the irresistible, crackling presence of hot Dal Piyaju (ডালের পেঁয়াজু / دال پیاجو). Known affectionately as Piyaji, Dal Pakora, or Dal Vada, this humble yet sensational street-side fritter is the beating pulse of Old Dhaka's historic Chawkbazar food stalls during the holy month. The name 'Piyaju' stems from 'Piyaj' (onion)—and authentic Bengali home cooks know that a true piyaju is not a dense dough ball, but an airy, loosely bound cluster where sliced onions and coarsely cracked lentils crisp up together in hot oil. The secret to an audibly crunchy piyaju that stays crisp long after cooling lies in three golden rules: first, blending soaked red lentils (masoor dal) with yellow split chickpeas (chana dal) for superior structural crunch; second, grinding the soaked lentils completely dry without adding a single drop of water so the batter remains coarse (danedar); and third, tossing the sliced onions with salt and spices only seconds before dropping them into the sizzling oil, preventing the onions from releasing excess water. Paired with sweet-tangy tamarind chutney, spicy green mint dip, and a piping-hot bowl of spiced Black Chana and crispy puffed rice (muri), it embodies the authentic taste of sunset Iftar joy.",
+    heroImage: IMAGES.dalPiyaju,
+    prepTimeMinutes: 15,
+    cookTimeMinutes: 15,
+    totalTimeMinutes: 30,
+    servings: 6,
+    difficulty: "Easy",
+    calories: 190,
+    rating: 4.99,
+    reviewCount: 486,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified and naturally vegan. Prepared with pure unadulterated dried lentils, garden-fresh onions and chilies, cold-pressed mustard or sunflower oil, and single-origin ground spices. 100% plant-based, pork-free, alcohol-free, and free from synthetic food additives.",
+    potentialCautionNotes:
+      "Do not add water while grinding the soaked lentils. If the batter becomes watery, the piyaju will absorb excess oil and turn soft rather than light and shatteringly crisp.",
+    ingredients: [
+      { amount: "1", unit: "cup (200g)", name: "Red lentils (Masoor dal / মসুর ডাল)", notes: "rinsed and soaked in room-temperature water for 2 to 3 hours" },
+      { amount: "1/2", unit: "cup (100g)", name: "Yellow split peas or Bengal gram (Chana dal / ছোলার ডাল)", notes: "soaked 2-3 hours; adds phenomenal long-lasting crunch" },
+      { amount: "2", unit: "large", name: "Red onions", notes: "thinly sliced (approx. 2 cups); equal volume to the lentils" },
+      { amount: "4", unit: "whole", name: "Fresh green chilies", notes: "finely chopped (adjust to spice preference)" },
+      { amount: "1", unit: "tbsp", name: "Fresh ginger", notes: "finely grated or crushed" },
+      { amount: "2", unit: "cloves", name: "Fresh garlic", notes: "finely minced" },
+      { amount: "1/3", unit: "cup", name: "Fresh cilantro (coriander leaves)", notes: "finely chopped" },
+      { amount: "1", unit: "tsp", name: "Roasted cumin powder (bhuna jeera gura)", notes: "adds earthy smokiness" },
+      { amount: "1/2", unit: "tsp", name: "Turmeric powder (holud)", notes: "for radiant golden color" },
+      { amount: "1/2", unit: "tsp", name: "Kashmiri red chili powder or Lal Morich", notes: "for gentle warmth and color" },
+      { amount: "1", unit: "tsp", name: "Fine sea salt", notes: "or to taste" },
+      { amount: "2", unit: "tbsp", name: "Rice flour (chaaler gura) or cornstarch", notes: "optional chef secret for extra glass-like crispness" },
+      { amount: "3", unit: "cups", name: "Mustard oil or high-heat vegetable oil", notes: "for deep frying" },
+      { amount: "1/3", unit: "cup", name: "Sweet & tangy tamarind date chutney", notes: "for dipping" },
+      { amount: "1/4", unit: "cup", name: "Zesty green mint-coriander chutney", notes: "for dipping" },
+    ],
+    substitutions: [
+      {
+        original: "Chana dal + Masoor dal",
+        substitute: "100% Masoor dal (red lentils)",
+        notes: "While all-masoor dal is classic and tender, blending 1/3 chana dal keeps the fritters crisp for over an hour.",
+      },
+      {
+        original: "Mustard oil",
+        substitute: "Sunflower oil, peanut oil, or corn oil",
+        notes: "Authentic Bengali street vendors use mustard oil for its sharp nutty aroma; neutral oil yields a lighter, cleaner finish.",
+      },
+      {
+        original: "Rice flour",
+        substitute: "Chickpea flour (besan) or semolina (sooji)",
+        notes: "A spoonful of fine semolina or rice flour creates miniature crisp blisters on the fritter surface.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Soak & Thoroughly Drain the Lentils",
+        instruction:
+          "Wash the red lentils (masoor dal) and chana dal together in cold water until the water runs clear. Soak in plenty of water for 2 to 3 hours until plump and easily broken with a fingernail. Pour into a fine-mesh colander and shake thoroughly. Leave the lentils in the colander for 10 minutes to drain off every drop of excess water. Bone-dry lentils are the foundation of crunchy piyaju.",
+      },
+      {
+        step: 2,
+        title: "Coarse Pulse Grind (Zero Added Water!)",
+        instruction:
+          "Transfer the drained lentils to a food processor or blender. Pulse in brief 2-second bursts. You want a coarse, uneven paste—roughly 70% broken paste and 30% whole and cracked lentils intact. Do not add any water, and do NOT grind into a smooth puree. Transfer the coarse lentil paste to a wide mixing bowl.",
+      },
+      {
+        step: 3,
+        title: "Prep & Bruise the Sliced Onions",
+        instruction:
+          "In a separate small bowl, place the thinly sliced red onions, chopped green chilies, grated ginger, minced garlic, salt, turmeric, Kashmiri chili powder, roasted cumin powder, and chopped cilantro. Using clean hands, gently squeeze and toss the onions for 30 seconds to bruise the slices and awaken their natural aromas.",
+      },
+      {
+        step: 4,
+        title: "Combine Batter Right Before Frying",
+        instruction:
+          "Combine the spiced seasoned onions into the coarse lentil bowl along with 2 tablespoons of rice flour. Mix gently with your fingertips just until the ingredients adhere together. Do not let the mixed batter sit on the counter—fry immediately before the salt draws liquid out of the onions.",
+      },
+      {
+        step: 5,
+        title: "Heat the Frying Oil",
+        instruction:
+          "Heat 2 to 3 inches of oil in a heavy karahi, wok, or Dutch oven over medium heat until it reaches 350°F (175°C). Test the temperature by dropping a tiny bit of batter into the oil; it should sink briefly, then rise to the surface bubbling vigorously within 2 seconds without burning.",
+      },
+      {
+        step: 6,
+        title: "Drop Loose, Rustic Fritter Nuggets",
+        instruction:
+          "Take a small walnut-sized portion of batter (about 1 generous tablespoon) with your fingers. Lightly flatten it into a rough, irregular bite-sized disc or loose nugget. Gently slide 8 to 10 fritters into the hot oil. Do not overcrowd the pan. Avoid packing the dough tightly—loose, uneven edges become the crispiest bites.",
+      },
+      {
+        step: 7,
+        title: "Fry to Blistered Golden Perfection",
+        instruction:
+          "Fry over medium heat for 4 to 5 minutes, gently stirring and flipping with a slotted spoon (spider) so all sides brown evenly. The piyaju will transform into an irresistible, deep reddish-gold color with crackling blistered surfaces.",
+      },
+      {
+        step: 8,
+        title: "Elevated Rack Drain & Presentation",
+        instruction:
+          "Remove the hot fritters with a slotted spoon and immediately place them onto a wire cooling rack set over a tray. Never drain on flat paper towels, which trap steam and cause the crust to soften. Repeat with the remaining batter.",
+      },
+      {
+        step: 9,
+        title: "Serve for Iftar",
+        instruction:
+          "Arrange the hot, crispy Dal Piyaju around a central ceramic bowl of sweet and tangy tamarind date chutney, accompanied by fresh green mint chutney and whole green chilies. Serve piping hot as the quintessential Ramadan Iftar snack!",
+      },
+    ],
+    chefNotes: [
+      "The Masoor + Chana Dal Ratio: Pure masoor dal tastes wonderful but softens quicker; adding 33% chana dal (split chickpeas) introduces starch that retains audible crunch for up to 90 minutes.",
+      "The Paper Towel Trap: Draining hot pakoras on paper towels traps rising steam beneath them, making the bottoms soggy. An elevated wire cooling rack allows air to circulate 360 degrees, locking in crunch.",
+      "No Water Rule: Never add water to the processor. The moisture adhering to the soaked lentils is more than enough to bind the batter.",
+    ],
+    nutrition: {
+      calories: 190,
+      proteinGrams: 8,
+      carbsGrams: 22,
+      fatGrams: 8,
+      fiberGrams: 5,
+      sodiumMg: 280,
+    },
+    storageInstructions:
+      "Piyaju is best enjoyed fresh and piping hot straight from the oil. Leftovers can be stored in an airtight container in the fridge for up to 2 days and recrisped in an oven or air fryer at 375°F (190°C) for 4 minutes (never microwave).",
+    freezingInstructions:
+      "You can freeze the coarse ground lentil paste (before adding onions and salt) in airtight freezer bags for up to 1 month. Thaw completely, mix with freshly sliced onions and seasonings right before frying for fresh-tasting piyaju anytime.",
+    servingSuggestions: [
+      "The Classic Old Dhaka Iftar Bowl: Toss hot crunchy Piyaju with spiced Black Chana (Chola Bhuna), puffed rice (muri), raw chopped onions, and mustard oil.",
+      "Afternoon Chai Companion: Serve alongside hot spiced milk tea (Doodh Cha) or Adeni Karak Chai for rainy day and evening dawats.",
+      "Chutney Platter: Pair with sweet date tamarind chutney and refreshing cilantro-mint yogurt dip.",
+    ],
+    faqs: [
+      {
+        question: "Why did my piyaju turn soft and greasy?",
+        answer:
+          "Piyaju absorbs oil and turns greasy if the oil is not hot enough (below 350°F / 175°C), if water was added while grinding the lentils, or if the onions were mixed with salt too long before frying and released liquid.",
+      },
+      {
+        question: "Can I bake or air fry Dal Piyaju?",
+        answer:
+          "Yes! For air frying, brush or spray the shaped patties generously with oil on both sides. Place on parchment paper in the air fryer at 380°F (195°C) for 12 to 14 minutes, flipping halfway until golden and crispy.",
+      },
+      {
+        question: "Can I add other vegetables to the batter?",
+        answer:
+          "Certainly! You can add finely shredded cabbage, spinach leaves (palong shak), or grated potatoes to make vegetable dal pakoras.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Regional Culinary Director & Halal Recipe Developer",
+    },
+    updatedDate: "September 18, 2026",
+    tags: [
+      "Dal Piyaju",
+      "ডালের পেঁয়াজু",
+      "Piyaji",
+      "Pakora",
+      "Pakoda",
+      "دال بياجو",
+      "دال پیاجو",
+      "Lentil Fritters",
+      "Onion Fritters",
+      "Ramadan",
+      "Eid",
+      "Iftar",
+      "Iftar Classic",
+      "Halal Snacks",
+      "Halal Vegetarian",
+      "Vegan",
+      "Street Food",
+      "High Protein",
+      "Crunchy",
+    ],
+  },
+  {
+    id: "rec-narkel-puli-pitha",
+    slug: "narkel-puli-pitha",
+    title: "Narkel Puli Pitha Coconut Dumpling (নারকেলের পুলি পিঠা)",
+    category: "Ramadan & Eid",
+    categorySlug: "ramadan-eid",
+    cuisine: "Bangladeshi / Bengali Heritage Sweet & Pitha Tradition",
+    description:
+      "Delicate, porcelain-white, and pillowy steamed rice dumplings (নারকেলের ভাপা পুলি পিঠা)—tender handcrafted rice flour crescent shells stuffed with an aromatic filling of freshly grated mature coconut slow-caramelized with fragrant date palm jaggery (khejur gur) and green cardamom, steamed to sweet, chewy perfection for festive Ramadan Iftar and Eid celebrations.",
+    introStory:
+      "Across the lush villages and heritage homes of Bengal, the arrival of festive seasons, peaceful Ramadan sunsets, and joyful Eid dawats is forever sweetened by the gentle, cardamom-scented steam of freshly made Narkel Puli Pitha (নারকেলের পুলি পিঠা / Steamed Coconut Jaggery Dumplings). Also revered as Bhapa Puli, this iconic confectionery represents the pinnacle of Bengali pitha artistry. The creation is an act of communal love: family matriarchs gather around brass platters to slow-simmer freshly grated sweet coconut meat with dark, aromatic date palm jaggery (Khejur Gur or Nolen Gur) and green cardamom until it transforms into a rich, golden, caramel-lacquered filling known as 'Narkel Pur'. The outer envelope is crafted from 'Kayi'—a soft, silky dough formed by scalding fine rice flour in boiling salted water, kneaded while warm to achieve an extraordinarily tender and pillowy bite. Pinched into dainty half-moon parcels and crimped with delicate fluted fork ridges or traditional hand-twisted braids (morod), the dumplings are steamed until glistening and slightly translucent. When warm steam escapes from the first bite, the chewy, delicate rice shell yields to a burst of warm, luscious coconut nectar. It is a timeless celebratory dessert that brings warmth, nostalgia, and festive blessings to every gathering.",
+    heroImage: IMAGES.narkelPuliPitha,
+    prepTimeMinutes: 30,
+    cookTimeMinutes: 20,
+    totalTimeMinutes: 50,
+    servings: 6,
+    difficulty: "Medium",
+    calories: 160,
+    rating: 4.98,
+    reviewCount: 294,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified and naturally vegetarian. Prepared using pure single-origin rice flour, freshly grated coconut, all-natural unrefined date palm jaggery, whole green cardamom, and pure cow ghee. Entirely free from non-halal gelatin, artificial food dyes, animal l-cysteine, and synthetic additives.",
+    potentialCautionNotes:
+      "Always cover the rice flour dough and shaped unsteamed dumplings with a damp, clean muslin cloth. Rice dough dries out rapidly when exposed to room air, which can cause the shells to crack during folding or steaming.",
+    ingredients: [
+      { amount: "2", unit: "cups (approx. 250g)", name: "Fine rice flour (Chaler gura / আতপ বা সিদ্ধ চালের গুঁড়া)", notes: "freshly milled or packaged fine rice flour" },
+      { amount: "1.5", unit: "cups", name: "Water", notes: "boiled for scalding the rice flour into silky dough (kayi)" },
+      { amount: "1/2", unit: "tsp", name: "Fine sea salt", notes: "dissolved in the boiling dough water" },
+      { amount: "1", unit: "tsp", name: "Pure cow ghee", notes: "kneaded into the dough for silky pliability" },
+      { amount: "2", unit: "cups", name: "Freshly grated mature coconut (Narkel kora)", notes: "freshly shredded from whole coconut" },
+      { amount: "1", unit: "cup (approx. 200g)", name: "Date palm jaggery (Khejur gur / Nolen gur / Patali)", notes: "finely shaved or melted with 2 tbsp water" },
+      { amount: "1/2", unit: "tsp", name: "Green cardamom powder (Elachi gura)", notes: "freshly crushed from green pods" },
+      { amount: "2", unit: "tbsp", name: "Full-cream milk powder or mawa / khoya", notes: "optional, adds rich dairy creaminess to the coconut pur" },
+      { amount: "1", unit: "tbsp", name: "Pure cow ghee", notes: "for sautéing the coconut jaggery filling" },
+    ],
+    substitutions: [
+      {
+        original: "Date palm jaggery (Khejur gur)",
+        substitute: "Dark sugarcane jaggery (Aakher gur) or dark brown cane sugar",
+        notes: "While date palm jaggery offers unparalleled floral caramel fragrance, dark brown sugar provides deep sweetness and color.",
+      },
+      {
+        original: "Freshly grated coconut",
+        substitute: "Frozen grated coconut or unsweetened desiccated coconut rehydrated in warm milk",
+        notes: "If using desiccated coconut, soak 2 cups in 1/2 cup warm whole milk for 15 minutes before cooking.",
+      },
+      {
+        original: "Steaming method (Bhapa Puli)",
+        substitute: "Deep-frying (Teler Puli) or simmering in thickened cardamom milk (Dudh Puli)",
+        notes: "You can fry these dumplings in ghee/oil for a crunchy golden exterior, or drop the steamed puli into sweet saffron-infused boiling milk to create royal Dudh Puli.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Cook the Sweet Coconut Jaggery Filling (Narkel Pur)",
+        instruction:
+          "Heat 1 tablespoon of ghee in a heavy-bottomed pan or kadai over medium-low heat. Add the shaved date palm jaggery and 2 tablespoons of water. Stir until the jaggery completely melts into a bubbling syrup. Add the freshly grated coconut and freshly crushed cardamom powder. Cook on medium-low heat, stirring constantly for 10 to 12 minutes, until the coconut absorbs the dark jaggery syrup, thickens, and turns glossy with a sticky caramel consistency. Stir in the milk powder (if using) and cook for 1 more minute. Turn off heat and transfer the filling to a plate to cool completely to room temperature.",
+      },
+      {
+        step: 2,
+        title: "Scald the Rice Flour (Dough / Kayi Making)",
+        instruction:
+          "In a deep saucepan, bring 1.5 cups of water to a rolling boil along with 1/2 teaspoon of salt and 1 teaspoon of ghee. Lower heat to minimum and pour in the rice flour all at once in the center without stirring. Cover tightly with a lid and let it steam undisturbed on low heat for 3 to 4 minutes so the flour absorbs the boiling moisture evenly.",
+      },
+      {
+        step: 3,
+        title: "Mix & Steam the Warm Dough",
+        instruction:
+          "Remove the lid and vigorously stir the mixture with the wooden handle of a spatula or rolling pin until a cohesive, shaggy dough forms. Turn off heat, replace the lid, and let the dough rest covered in its own residual steam for 5 minutes.",
+      },
+      {
+        step: 4,
+        title: "Knead until Silky & Pliable",
+        instruction:
+          "Transfer the warm dough onto a clean kneading board or large platter. While still pleasantly warm to the touch, knead energetically for 5 to 7 minutes with your palms, dipping your hands occasionally in a small bowl of cold water if sticky. Knead until the dough becomes completely smooth, crack-free, and pliable like soft play-dough. Cover immediately with a damp kitchen towel.",
+      },
+      {
+        step: 5,
+        title: "Roll & Cut Round Discs",
+        instruction:
+          "Pinch off a walnut-sized ball of dough (about 25g). Roll it between your palms until perfectly smooth, then lightly flatten it. Roll with a dusted rolling pin into a thin, even circle approximately 3 inches in diameter (or use a round cookie cutter / glass rim for pristine uniform edges). Keep the unused dough covered with the damp towel at all times.",
+      },
+      {
+        step: 6,
+        title: "Fill & Crimp into Delicate Crescents",
+        instruction:
+          "Place 1 generous tablespoon of the cooled coconut jaggery filling into the center of the rolled disc. Lightly moisten the outer rim with a dab of water using your fingertip. Fold the disc in half over the filling to form a half-moon crescent. Gently press the edges together to expel trapped air. Seal firmly, then use the tines of a fork to press decorative fluted ridges along the curved border (or hand-pinch decorative twisted pleats along the seam). Place on a tray under a damp cloth and repeat with remaining dough.",
+      },
+      {
+        step: 7,
+        title: "Steam to Glossy Tenderness",
+        instruction:
+          "Set up a steamer with water in the base and bring it to a vigorous boil. Lightly brush the perforated steamer tier or bamboo basket with a drop of ghee or oil (or line with banana leaf or cheesecloth) to prevent sticking. Arrange the puli pitha in a single layer, ensuring they do not touch. Cover and steam over medium-high heat for 8 to 10 minutes. The dumplings will become glossy, slightly firm, and delightfully translucent when fully cooked.",
+      },
+      {
+        step: 8,
+        title: "Rest & Elegant Presentation",
+        instruction:
+          "Remove the steamer basket from heat and let the dumplings rest for 2 to 3 minutes; this allows the delicate rice skin to set so they can be lifted effortlessly without tearing. Carefully transfer to an oblong ceramic platter. Cut one dumpling in half diagonally to showcase the glistening, golden jaggery-coconut heart. Serve warm or at room temperature for an unforgettable festive Iftar or Eid treat.",
+      },
+    ],
+    chefNotes: [
+      "The Scalded Dough Secret: Pouring rice flour into boiling water and letting it steam covered before stirring gelatinizes the starches, resulting in a soft, crack-free dough that rolls out paper-thin without breaking.",
+      "Never Over-Cook the Filling: Take the coconut filling off the flame while it is still slightly juicy and sticky. Overcooking turns the jaggery chewy and hard like rock candy once cooled.",
+      "Damp Towel Protection: Exposed rice dough dries out in minutes. Keep both the unworked dough balls and the assembled raw dumplings tucked beneath a damp cloth until they enter the steamer.",
+    ],
+    nutrition: {
+      calories: 160,
+      proteinGrams: 3,
+      carbsGrams: 31,
+      fatGrams: 3,
+      fiberGrams: 2,
+      sodiumMg: 45,
+    },
+    storageInstructions:
+      "Steamed Narkel Puli Pitha keeps well in an airtight container at room temperature for 24 hours, or in the refrigerator for up to 4 days. To reheat, steam in a steamer basket for 2 to 3 minutes until warm and soft (avoid dry microwaving).",
+    freezingInstructions:
+      "Freeze raw, assembled dumplings on a parchment-lined tray for 2 hours until solid, then pack into freezer bags for up to 2 months. Steam directly from frozen for 12 to 14 minutes without thawing!",
+    servingSuggestions: [
+      "A soothing sweet blessing on your Ramadan Iftar table served after savory Chola Bhuna and crispy Piyaju.",
+      "Eid morning dessert alongside Sheer Khurma and Shahi Borhani.",
+      "Transform into Dudh Puli: Simmer these steamed dumplings in 1 liter of whole milk reduced with cardamom, saffron, and sugar for 5 minutes.",
+    ],
+    faqs: [
+      {
+        question: "Why did my puli pitha crack while folding or steaming?",
+        answer:
+          "Cracking happens when the rice flour dough was made with water that wasn't at a rolling boil, was under-kneaded, or dried out from air exposure. Always scald with boiling water, knead while warm, and keep covered under a damp towel.",
+      },
+      {
+        question: "Can I use store-bought rice flour?",
+        answer:
+          "Yes! Packaged fine white rice flour works wonderfully. If using roasted or dry milled flour, you may need an extra 1 to 2 tablespoons of boiling water to achieve a soft, pliable consistency.",
+      },
+      {
+        question: "Can I fry these instead of steaming them?",
+        answer:
+          "Yes! Frying them in medium-hot oil (340°F / 170°C) for 4 to 5 minutes yields crispy 'Teler Puli Pitha' with a golden, crunchy shell and sweet chewy interior.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Regional Culinary Director & Halal Recipe Developer",
+    },
+    updatedDate: "September 18, 2026",
+    tags: [
+      "Narkel Puli Pitha",
+      "নারকেলের পুলি পিঠা",
+      "Puli Pitha",
+      "Bhapa Puli",
+      "Coconut Dumplings",
+      "Sweet Dumplings",
+      "Steamed Pitha",
+      "Date Palm Jaggery",
+      "Khejur Gur",
+      "Ramadan",
+      "Eid",
+      "Iftar",
+      "Eid Dessert",
+      "Halal Desserts",
+      "Vegetarian",
+      "Bengali Sweet",
+      "Heritage Recipe",
+      "Gluten Free",
+    ],
+  },
+  {
+    id: "rec-thandai",
+    slug: "thandai",
+    title: "Thandai (ঠান্ডাই)",
+    category: "Ramadan & Eid",
+    categorySlug: "ramadan-eid",
+    cuisine: "Royal Mughlai, South Asian & Bengali Festive Beverage Heritage",
+    description:
+      "Rich, velvety, and deeply rejuvenating Shahi Thandai (ঠান্ডাই)—chilled whole milk infused with an aromatic royal paste of blanched almonds, pistachios, poppy seeds, melon seeds, crushed saffron threads (kesar), cooling sweet fennel, and fragrant rose petals, garnished with slivered nuts in rustic terracotta kulhads.",
+    introStory:
+      "Celebrated across South Asia and royal Mughlai culinary centers as the ultimate elixir of refreshment, Thandai (ঠান্ডাই / ٹھنڈائی) is steeped in centuries of hospitality, celebration, and festive rejuvenation. In Bengali and South Asian Muslim heritage homes, the cooling, nutrient-dense drink is especially beloved during Ramadan Iftar and Eid mornings. The word itself stems from 'Thanda'—meaning cold or soothing—and its ancient formulation functions as culinary medicine: after a long day of fasting under the sun, the stomach craves gentle hydration, cooling nourishment, and sustained energy. The soul of an authentic Thandai is its artisanal nut-and-spice paste: plump soaked almonds and pistachios blended with skinless melon seeds (magaj), sweet digestive fennel seeds (mouri / saunf), fragrant wild rose petals, whole green cardamom, and freshly cracked black peppercorns. The peppercorns provide a delicate, warming contrast that enhances digestion, while crushed Kashmiri saffron transforms the simmered milk into a radiant golden nectar. Served traditionally in handcrafted earthenware cups (kulhads or matkas), the porous clay imparts a nostalgic, earthy petrichor note ('sondhi khushboo') that elevates every sip into an unforgettable sensory blessing.",
+    heroImage: IMAGES.thandai,
+    prepTimeMinutes: 15,
+    cookTimeMinutes: 10,
+    totalTimeMinutes: 25,
+    servings: 4,
+    difficulty: "Easy",
+    calories: 220,
+    rating: 4.99,
+    reviewCount: 382,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified, pure, and vegetarian. Crafted with fresh whole milk, sun-dried nuts and edible seeds, certified pure Kashmiri saffron, dried organic rose petals, whole spices, and raw cane sugar. Completely free from alcohol solvents, synthetic flavorings, artificial food colorings, and animal gelatin.",
+    potentialCautionNotes:
+      "Contains tree nuts (almonds, pistachios, cashews). For guests with tree nut allergies, the beverage can be made using roasted melon seeds (charmagaj), pumpkin seeds, and sunflower seeds while preserving its luscious creamy body.",
+    ingredients: [
+      { amount: "4", unit: "cups (1 liter)", name: "Full-cream whole milk", notes: "fresh pasteurized farm milk for rich, creamy body" },
+      { amount: "1/4", unit: "cup (approx. 25-30 nuts)", name: "Raw whole almonds (badam)", notes: "soaked in warm water and peeled" },
+      { amount: "2", unit: "tbsp", name: "Unsalted pistachios (pista)", notes: "soaked and skins removed" },
+      { amount: "2", unit: "tbsp", name: "Raw cashews (kaju) or melon seeds (magaj / charmagaj)", notes: "soaked; gives velvety thickness" },
+      { amount: "1.5", unit: "tbsp", name: "Poppy seeds (khus khus / posto)", notes: "soaked; adds nutty richness (or white sesame seeds)" },
+      { amount: "1.5", unit: "tbsp", name: "Sweet fennel seeds (mouri / saunf)", notes: "essential for cooling digestion and floral aroma" },
+      { amount: "1", unit: "tbsp", name: "Dried edible organic rose petals (golap patti)", notes: "adds intoxicating garden fragrance" },
+      { amount: "1/2", unit: "tsp", name: "Whole black peppercorns (gol morich)", notes: "essential spice balance that aids digestion" },
+      { amount: "8", unit: "whole", name: "Green cardamom pods (elachi)", notes: "seeds extracted and crushed" },
+      { amount: "1", unit: "generous pinch (30 strands)", name: "Pure saffron threads (kesar / jafran)", notes: "steeped in 2 tbsp warm milk for radiant golden hue" },
+      { amount: "1/3", unit: "cup (approx. 75g)", name: "Raw cane sugar or rock sugar (mishri)", notes: "adjust sweetness to preference" },
+      { amount: "1/4", unit: "tsp", name: "Freshly grated nutmeg (jaiphol)", notes: "adds warm Mughlai nuance" },
+      { amount: "1", unit: "tsp", name: "Pure rose water (golap jol)", notes: "for regal fragrance" },
+      { amount: "2", unit: "tbsp", name: "Slivered pistachios and almonds", notes: "for festive surface garnish" },
+      { amount: "1", unit: "handful", name: "Fresh or dried red rose petals", notes: "for plating & rim presentation" },
+    ],
+    substitutions: [
+      {
+        original: "Poppy seeds (Khus Khus)",
+        substitute: "Melon seeds (Charmagaj), pumpkin seeds, or white sesame seeds",
+        notes: "In regions where food poppy seeds are restricted or unavailable, melon seeds or blanched almonds provide identical creaminess.",
+      },
+      {
+        original: "Whole cow's milk",
+        substitute: "Barista-grade oat milk, almond milk, or light coconut milk",
+        notes: "Rich plant milks pair exceptionally well with saffron and nuts for a 100% plant-based, dairy-free Thandai.",
+      },
+      {
+        original: "Rock sugar (Mishri)",
+        substitute: "Pure raw honey, date syrup (gur), or organic cane sugar",
+        notes: "Mishri has traditional cooling properties; raw honey or maple syrup can be whisked into lukewarm milk.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Soak the Nuts, Seeds & Aromatics",
+        instruction:
+          "In a heatproof bowl, combine the raw almonds, pistachios, cashews (or melon seeds), poppy seeds, fennel seeds, black peppercorns, cardamom seeds, and dried rose petals. Pour 1 cup of warm water over them. Cover and allow to soak for at least 2 to 3 hours (or overnight in the refrigerator) until the nuts and seeds are plump, softened, and fully hydrated.",
+      },
+      {
+        step: 2,
+        title: "Peel the Almonds & Bloom the Saffron",
+        instruction:
+          "Drain the soaked nuts and spices through a fine strainer. Slip the skins off the soaked almonds—they will pop out effortlessly between your thumb and index finger. In a small cup, take 2 tablespoons of warm milk, crush the saffron threads between your fingers, and stir them in. Let the saffron steep for 10 minutes to release its deep amber-golden color and perfume.",
+      },
+      {
+        step: 3,
+        title: "Grind into a Silky Shahi Masala Paste",
+        instruction:
+          "Transfer the peeled almonds, pistachios, and drained soaked spices/seeds into a high-speed blender or stone grinder (sheel-pata). Add 3 to 4 tablespoons of cold milk or water. Grind on high speed for 2 to 3 minutes, scraping down the sides, until an ultra-smooth, velvety, lump-free paste forms. The finer the paste, the more luxurious the mouthfeel.",
+      },
+      {
+        step: 4,
+        title: "Simmer & Sweeten the Milk",
+        instruction:
+          "Pour the remaining whole milk into a heavy-bottomed saucepan. Bring to a gentle boil over medium heat, stirring occasionally to prevent the bottom from scorching. Lower the heat to medium-low, add the sugar (or crushed rock sugar / mishri), and stir until completely dissolved.",
+      },
+      {
+        step: 5,
+        title: "Infuse the Thandai Paste & Saffron",
+        instruction:
+          "Pour the bloomed golden saffron milk and the prepared smooth nut-spice paste into the simmering milk. Whisk thoroughly with a wire whisk to integrate the paste seamlessly into the milk. Add the freshly grated nutmeg. Simmer gently on low heat for 3 to 4 minutes, allowing the aromatic essential oils of fennel, rose, cardamom, and black pepper to infuse every drop. Turn off heat and stir in the pure rose water.",
+      },
+      {
+        step: 6,
+        title: "Strain (Optional) & Chill Thoroughly",
+        instruction:
+          "If you prefer a completely silky-smooth restaurant-style drink, strain the milk through a fine-mesh sieve, pressing the solids gently with the back of a ladle. For traditional rich rustic texture, leave unstrained! Allow the milk to cool to room temperature, then transfer to a sealed glass jug and chill in the refrigerator for at least 3 to 4 hours until ice-cold.",
+      },
+      {
+        step: 7,
+        title: "Serve in Traditional Terracotta Kulhads",
+        instruction:
+          "Pour the chilled, fragrant Shahi Thandai into rustic earthenware clay cups (kulhad / matka). The porous terracotta imparts an inimitable earthy aroma to the cold saffron milk. Generously crown the top with finely slivered emerald pistachios, whole strands of crimson saffron, and fresh fragrant red rose petals. Serve immediately as a royal refresher for Iftar or festive Eid gatherings!",
+      },
+    ],
+    chefNotes: [
+      "The Black Peppercorn Balance: Never omit the whole black peppercorns. Their natural piperine cuts through the rich milk and nut fats, enhances the body's absorption of saffron, and delivers a subtle pleasant warmth in the back of the palate.",
+      "The Terracotta (Kulhad) Magic: Serving Thandai in unglazed earthenware cups is more than visual presentation; the clay naturally wicks away microscopic surface moisture, keeping the beverage frosty while imparting an earthy petrichor fragrance ('sondhi khushboo').",
+      "Make-Ahead Thandai Syrup or Paste: You can prepare double the nut-spice paste, cook it with sugar syrup until thick, and store it in a clean glass jar in the fridge for up to 2 weeks. Simply stir 2 tablespoons into a glass of ice-cold milk whenever craving strikes.",
+    ],
+    nutrition: {
+      calories: 220,
+      proteinGrams: 7,
+      carbsGrams: 24,
+      fatGrams: 11,
+      fiberGrams: 2,
+      sodiumMg: 85,
+    },
+    storageInstructions:
+      "Chilled Thandai can be kept in an airtight glass bottle in the refrigerator for up to 3 days. Give the bottle a vigorous shake before serving as the aromatic nut paste naturally settles.",
+    freezingInstructions:
+      "Pour prepared Thandai into popsicle molds to create heavenly 'Kesar Pista Thandai Kulfi' ice creams for Eid dessert, or freeze the concentrated wet spice paste in silicone ice cube trays for up to 2 months.",
+    servingSuggestions: [
+      "The Ultimate Ramadan Iftar Welcome: Break the fast with sweet Medjool dates and a cold cup of Shahi Thandai to instantly cool the palate and restore energy.",
+      "Eid Morning Royal Breakfast: Serve alongside Sheer Khurma, savory Mughlai parathas, and spiced beef kebabs.",
+      "Festive Afternoon Dawat: Present on a silver tray adorned with fresh red rose petals alongside crispy samosas and Dal Piyaju.",
+    ],
+    faqs: [
+      {
+        question: "Why is black pepper included in a sweet milk drink?",
+        answer:
+          "Black pepper (gol morich) is a cornerstone of traditional Unani and Ayurvedic cooling elixirs. Its piperine content balances the sweetness, aids nutrient absorption, prevents throat irritation from cold dairy, and aids digestion after rich meals.",
+      },
+      {
+        question: "Can I make this drink completely dairy-free?",
+        answer:
+          "Absolutely! Creamy barista-grade oat milk or unsweetened almond milk work wonderfully. The rich almond-cashew paste already provides natural plant creaminess.",
+      },
+      {
+        question: "What is the difference between Thandai and Badam Milk?",
+        answer:
+          "While Badam Milk focuses primarily on almonds, saffron, and cardamom, Thandai is a complex botanical blend featuring cooling fennel seeds, poppy seeds, black peppercorns, melon seeds, and fragrant rose petals, creating a multi-layered sweet, spicy, and floral profile.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Regional Culinary Director & Halal Recipe Developer",
+    },
+    updatedDate: "September 18, 2026",
+    tags: [
+      "Thandai",
+      "ঠান্ডাই",
+      "Shahi Thandai",
+      "Kesar Pista Thandai",
+      "Ramadan",
+      "Eid",
+      "Iftar Drink",
+      "Halal Drinks",
+      "Halal Beverages",
+      "Saffron Milk",
+      "Nuts and Seeds",
+      "Cooling Drink",
+      "Terracotta Kulhad",
+      "Royal Mughlai",
+      "Vegetarian",
+      "Gluten Free",
+    ],
+  },
+  {
+    id: "rec-salty-lassi",
+    slug: "salty-lassi",
+    title: "Salty Lassi (নোনতা লাচ্চি / نمکین لسی)",
+    category: "Ramadan & Eid",
+    categorySlug: "ramadan-eid",
+    cuisine: "Bengali, Punjabi & South Asian Traditional Yogurt Cooler",
+    description:
+      "Ultra-refreshing, velvety, and deeply restorative Salty Lassi (Namkeen Lassi / নোনতা লাচ্চি)—chilled whole milk yogurt blended until airy and frothy with ice-cold water, freshly roasted and crushed cumin seeds (bhuna jeera), mineral-rich Himalayan black salt (bit lobon), sea salt, a splash of tangy lime, and bruised garden mint leaves.",
+    introStory:
+      "Across South Asia and Muslim heritage dining traditions, nothing revives a fasting body at sunset Iftar quite like an ice-cold, frothy glass of authentic Salty Lassi (নোনতা লাচ্চি / نمکین لسی / Chaas). While sweet mango and rose lassis cater to celebratory sugar cravings, the savory salty lassi is revered by culinary historians and traditional physicians alike as the ultimate therapeutic tonic. After 14 to 16 hours of abstaining from food and water, the human body suffers from depleted electrolytes and sluggish digestion. This time-honored cooler instantly replenishes vital minerals with volcanic Himalayan black salt (Kala Namak / Bit Lobon), rich in iron and sulfur compounds that calm the stomach. Whisked with living cultured yogurt (dahi / tok doi) and water using a traditional wooden churner (mathani) or pulsed in a high-speed blender, it builds a thick, feather-light cap of cloud-like froth. Infused with freshly dry-roasted cumin seeds (bhuna jeera) that release intoxicating nutty, earthy aromas and a handful of bruised garden mint leaves, every chilled sip is crisp, savory, tart, and deeply thirst-quenching.",
+    heroImage: IMAGES.saltyLassi,
+    prepTimeMinutes: 5,
+    cookTimeMinutes: 2,
+    totalTimeMinutes: 7,
+    servings: 4,
+    difficulty: "Easy",
+    calories: 110,
+    rating: 4.99,
+    reviewCount: 512,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified, naturally vegetarian, and gluten-free. Crafted with pure live-culture whole cow's milk yogurt (free from gelatin or non-halal animal rennet thickeners), unrefined mineral rock salts, whole spices, and garden-fresh herbs. Pure, clean, wholesome nutrition.",
+    potentialCautionNotes:
+      "Always use fresh, unflavored whole milk yogurt (Tok Doi or Dahi). If the yogurt is excessively sour, increase the cold water or add a tablespoon of chilled whole milk to mellow the tartness without losing body.",
+    ingredients: [
+      { amount: "2", unit: "cups (approx. 500g)", name: "Whole milk plain yogurt (Tok Doi / Dahi)", notes: "chilled; full-fat cultured yogurt for rich froth and velvety mouthfeel" },
+      { amount: "2", unit: "cups", name: "Ice-cold water or crushed ice", notes: "adjust for desired thickness—from thick Punjabi style to light, thirst-quenching Chaas" },
+      { amount: "1.5", unit: "tsp", name: "Whole cumin seeds (Jeera)", notes: "freshly dry-roasted in a skillet until aromatic and dark amber, then coarsely ground" },
+      { amount: "1", unit: "tsp", name: "Himalayan black salt (Bit lobon / Kala namak)", notes: "essential for signature mineral tang and sulfurous digestive notes" },
+      { amount: "1/2", unit: "tsp", name: "Fine sea salt", notes: "or to taste" },
+      { amount: "1", unit: "tbsp", name: "Fresh lime or lemon juice", notes: "for bright citrus balance" },
+      { amount: "8-10", unit: "fresh leaves", name: "Fresh garden mint (Pudina)", notes: "bruised or lightly blended for cooling herbal aroma" },
+      { amount: "1/4", unit: "tsp", name: "Fresh ginger juice or grated ginger", notes: "optional, adds invigorating zesty warmth for digestion" },
+      { amount: "1", unit: "cup", name: "Ice cubes", notes: "for blending and serving" },
+      { amount: "4", unit: "sprigs", name: "Fresh mint sprigs", notes: "for elegant glass garnish" },
+      { amount: "1/2", unit: "tsp", name: "Extra roasted cumin powder", notes: "for dusting the creamy frothy foam" },
+    ],
+    substitutions: [
+      {
+        original: "Whole milk cow's yogurt",
+        substitute: "Plain unsweetened coconut yogurt or cashew yogurt",
+        notes: "Provides a phenomenal plant-based, dairy-free, vegan salty lassi that whips up equally frothy.",
+      },
+      {
+        original: "Himalayan black salt (Kala namak / Bit lobon)",
+        substitute: "Pink Himalayan salt or flaky sea salt plus a drop of chaat masala",
+        notes: "While black salt provides the iconic pungent Umami flavor, sea salt with chaat masala mimics the tangy depth.",
+      },
+      {
+        original: "Cold water",
+        substitute: "Chilled sparkling water or club soda",
+        notes: "Folding in sparkling water right before serving creates a refreshing fizzy 'Soda Lassi' popular in Lahore and Old Delhi.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Toast & Freshly Grind the Cumin (Bhuna Jeera)",
+        instruction:
+          "Heat a small dry skillet or tadka pan over medium-low heat. Add 1.5 teaspoons of whole cumin seeds. Toast for 1 to 2 minutes, swirling continuously until the seeds turn a deep nutty dark amber and release their fragrant, smoky aroma. Immediately remove from the hot pan onto a plate so they do not burn. Once warm, crush coarsely with a mortar and pestle or rolling pin into a textured, aromatic powder.",
+      },
+      {
+        step: 2,
+        title: "Combine Yogurt & Seasonings in Blender",
+        instruction:
+          "Into the jar of a blender, add 2 cups of chilled plain whole milk yogurt, 1 teaspoon of Himalayan black salt (bit lobon), 1/2 teaspoon of sea salt, 1 teaspoon of the freshly toasted cumin powder, 1 tablespoon of freshly squeezed lime juice, and 8 to 10 fresh mint leaves. (If using ginger juice, add it now).",
+      },
+      {
+        step: 3,
+        title: "Add Chilled Water & Ice",
+        instruction:
+          "Pour in 2 cups of ice-cold water and add a handful of ice cubes. The colder the ingredients, the thicker and more stable the foam crown will be when churned.",
+      },
+      {
+        step: 4,
+        title: "Whip to Velvety, Frothy Perfection",
+        instruction:
+          "Blend on high speed for 30 to 45 seconds (or vigorously churn using a traditional wooden hand mathani in a deep ceramic pitcher) until the yogurt completely emulsifies with the water and a thick, creamy layer of pale ivory foam develops across the top.",
+      },
+      {
+        step: 5,
+        title: "Taste & Harmonize the Salt-Acid Balance",
+        instruction:
+          "Pause the blender and taste a spoonful. The lassi should be savory, subtly tart from the yogurt and lime, and rich with smoky cumin and earthy mineral salt. Add an extra pinch of black salt or cold water if you prefer a lighter consistency.",
+      },
+      {
+        step: 6,
+        title: "Serve with Barista-Style Presentation",
+        instruction:
+          "Place a couple of fresh ice cubes into tall fluted or faceted glasses. Pour the chilled Salty Lassi smoothly, allowing the luxuriant, frothy cream head to rise to the very rim of the glass. Generously dust the top of the foam with the reserved roasted cumin powder, tuck a fresh lush mint sprig into the crown, and insert reusable metal straws. Serve immediately for an instant burst of cooling Iftar refreshment!",
+      },
+    ],
+    chefNotes: [
+      "The Essential Role of Bit Lobon (Black Salt): Never substitute ordinary table salt entirely for black salt. The natural volcanic mineral salts provide the quintessential pungent, savory, and restorative profile that defines authentic Namkeen Lassi.",
+      "Fresh Roasting Over Pre-Packaged Powder: Pre-ground store-bought cumin powder has lost most of its volatile aromatic oils. Toasting whole seeds for 90 seconds right before blending makes the beverage smell like an artisan bazaar cooler.",
+      "Temperature Rule: Lassi should always be served bone-chillingly cold. Blend with ice and use glasses straight from the freezer for maximum condensation and crispness.",
+    ],
+    nutrition: {
+      calories: 110,
+      proteinGrams: 6,
+      carbsGrams: 8,
+      fatGrams: 5,
+      fiberGrams: 1,
+      sodiumMg: 390,
+    },
+    storageInstructions:
+      "Salty Lassi is best enjoyed freshly whipped. Any leftovers can be kept in a covered glass bottle in the refrigerator for up to 24 hours; simply shake vigorously or pulse for 5 seconds before pouring to restore the frothy head.",
+    freezingInstructions:
+      "Not recommended for freezing as yogurt milk solids separate upon thawing. However, you can freeze concentrated yogurt-herb cubes in ice trays to blend instantly with cold water.",
+    servingSuggestions: [
+      "The Premier Iftar Restorative: Break your fast with dates and a glass of Salty Lassi to instantly soothe an empty stomach and restore hydration.",
+      "Companion to Rich Feasts: The ultimate digestive palate-cleanser served alongside heavy Shahi Kacchi Biryani, Bengali Beef Bhuna, or spicy Tandoori chicken.",
+      "Post-Workout or Hot Summer Midday Quencher: A natural, clean electrolyte sports drink loaded with bioavailable calcium, potassium, and probiotics.",
+    ],
+    faqs: [
+      {
+        question: "How is Salty Lassi different from Chaas (Buttermilk) and Borhani?",
+        answer:
+          "Salty Lassi has a thicker, richer yogurt-to-water ratio (often 1:1) with a dense frothy head. Chaas is thinner and lighter (often 1:3 ratio) designed for continuous hydration throughout scorching summer days. Borhani is an elaborate royal spiced yogurt banquet drink with mustard seeds, coriander, green chilies, and mint paste.",
+      },
+      {
+        question: "Why is black salt (kala namak) used in salty lassi?",
+        answer:
+          "Himalayan black salt is naturally rich in sulfur, iron, and trace minerals. In traditional Unani and Ayurvedic culinary science, it acts as a carminative, relieving bloating, acidity, and heat exhaustion.",
+      },
+      {
+        question: "Can I add a little heat with green chili?",
+        answer:
+          "Yes! Adding half a seeded green chili (kacha morich) to the blender gives the lassi a delightful subtle kick, popular in Northern Bangladesh and Sindh.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Regional Culinary Director & Halal Recipe Developer",
+    },
+    updatedDate: "September 18, 2026",
+    tags: [
+      "Salty Lassi",
+      "নোনতা লাচ্চি",
+      "Namkeen Lassi",
+      "Chaas",
+      "Salted Lassi",
+      "Ayran",
+      "Ramadan",
+      "Eid",
+      "Iftar Drink",
+      "Halal Drinks",
+      "Halal Beverages",
+      "Yogurt Drink",
+      "Probiotic",
+      "Electrolyte Drink",
+      "Cooling Drink",
+      "Digestive",
+      "Summer Cooler",
+      "Vegetarian",
+      "Gluten Free",
+    ],
+  },
+  {
+    id: "rec-buttermilk-chicken-alfredo-spinach-pasta",
+    slug: "buttermilk-chicken-alfredo-spinach-pasta",
+    title: "Buttermilk Chicken Alfredo Spinach Pasta",
+    category: "Halal Chicken",
+    categorySlug: "halal-chicken",
+    cuisine: "Italian-American Bistro / 100% Halal Continental Comfort",
+    description:
+      "Tender, golden-seared buttermilk-marinated chicken bites tossed with al dente penne pasta, charred broccoli florets, and fresh baby spinach in a rich, velvety garlic-parmesan Alfredo sauce with an appetizing cultured buttermilk tang. Ready in just 25 minutes.",
+    introStory:
+      "Weeknight dining doesn't get more luxurious, comforting, or effortless than this 25-minute skillet wonder. Inspired by rustic Italian-American bistro kitchens and adapted to the highest 100% Halal culinary standards, Buttermilk Chicken Alfredo Spinach Pasta elevates traditional Alfredo into something extraordinary. The secret lies in cultured buttermilk: marinating bite-sized Halal chicken breast pieces in seasoned buttermilk tenderizes the poultry to fork-tender juiciness in mere minutes, while whisking a splash of buttermilk into the scratch-made Alfredo sauce imparts a subtle, appetizing tang that perfectly balances the rich garlic butter and sweet cream. Tossed with al dente penne rigate that traps the velvety sauce inside its ridges, charred tender broccoli florets, and vibrant wilted baby spinach, every bowl is a colorful, high-protein, nutrient-dense feast ready in less time than ordering takeout.",
+    heroImage: IMAGES.buttermilkChickenAlfredo,
+    prepTimeMinutes: 10,
+    cookTimeMinutes: 15,
+    totalTimeMinutes: 25,
+    servings: 4,
+    difficulty: "Easy",
+    calories: 620,
+    rating: 4.99,
+    reviewCount: 388,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: false,
+    halalNotes:
+      "100% Halal certified. Prepared with certified hand-slaughtered Halal chicken breast cutlets, sweet cream butter, real cultured buttermilk, and vegetarian-rennet aged Parmesan (crafted exclusively with microbial or plant enzymes, free from animal rennet, calf lipase, or wine reductions).",
+    potentialCautionNotes:
+      "Contains dairy (butter, buttermilk, heavy cream, parmesan) and wheat gluten. For a gluten-free variation, certified gluten-free corn or brown rice penne cooks up identically.",
+    ingredients: [
+      { amount: "1", unit: "lb (450g)", name: "Boneless skinless Halal chicken breasts", notes: "cut into bite-sized 1-inch pieces" },
+      { amount: "1/2", unit: "cup", name: "Cultured whole buttermilk", notes: "divided: 1/4 cup for tenderizing marinade, 1/4 cup for finishing the sauce" },
+      { amount: "10", unit: "oz (285g)", name: "Penne rigate pasta", notes: "or rigatoni/fusilli; bronze-die cut for gripping sauce" },
+      { amount: "1.5", unit: "cups", name: "Broccoli florets", notes: "cut into small, bite-sized florets" },
+      { amount: "3", unit: "cups (packed)", name: "Fresh baby spinach", notes: "washed and stemmed" },
+      { amount: "2", unit: "tbsp", name: "Extra virgin olive oil", notes: "for searing chicken bites" },
+      { amount: "2", unit: "tbsp", name: "Unsalted butter", notes: "for rich garlic alfredo base" },
+      { amount: "4", unit: "cloves", name: "Fresh garlic", notes: "minced or finely grated" },
+      { amount: "1", unit: "cup", name: "Heavy whipping cream", notes: "full fat for velvety restaurant body" },
+      { amount: "1.25", unit: "cups", name: "Halal / Vegetarian Parmesan cheese", notes: "freshly grated (microbial rennet certified), plus extra for serving" },
+      { amount: "1/2", unit: "cup", name: "Reserved starchy pasta cooking water", notes: "crucial for emulsifying the sauce" },
+      { amount: "1", unit: "tsp", name: "Smoked paprika", notes: "gives golden color and mild smoky warmth to chicken" },
+      { amount: "1", unit: "tsp", name: "Italian herb seasoning", notes: "blend of dried oregano, basil, thyme, and rosemary" },
+      { amount: "1", unit: "tsp", name: "Garlic powder & onion powder", notes: "for chicken seasoning rub" },
+      { amount: "1", unit: "tsp", name: "Fine sea salt", notes: "divided (plus salt for pasta water)" },
+      { amount: "1/2", unit: "tsp", name: "Freshly cracked black pepper", notes: "plus more for garnish" },
+      { amount: "1/8", unit: "tsp", name: "Freshly grated nutmeg", notes: "optional secret trattoria touch that enhances cream sauce" },
+      { amount: "2", unit: "tbsp", name: "Fresh flat-leaf parsley", notes: "finely chopped for vibrant herbaceous garnish" },
+    ],
+    substitutions: [
+      {
+        original: "Cultured buttermilk",
+        substitute: "Whole milk + 1 tsp lemon juice or white vinegar (let sit 5 mins)",
+        notes: "Homemade sour milk buttermilk works wonderfully in a pinch to provide both tenderizing acid and flavor.",
+      },
+      {
+        original: "Heavy whipping cream",
+        substitute: "Half-and-half whisked with 1 tbsp flour or cornstarch",
+        notes: "Yields a lighter weekday Alfredo sauce with reduced calories and fat.",
+      },
+      {
+        original: "Penne rigate",
+        substitute: "Fettuccine ribbons, cavatappi, or gluten-free brown rice penne",
+        notes: "Any textured or tubular pasta that holds cream sauce works brilliantly.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Season & Marinate the Chicken (5 Minutes)",
+        instruction:
+          "In a mixing bowl, combine the bite-sized chicken breast pieces with 1/4 cup of buttermilk, smoked paprika, Italian herbs, garlic powder, onion powder, 1/2 teaspoon of salt, and 1/4 teaspoon of black pepper. Toss well to coat every piece. The natural lactic acid in the buttermilk instantly starts tenderizing the chicken fibers while you prep the remaining ingredients.",
+      },
+      {
+        step: 2,
+        title: "Boil the Penne & Flash-Blanch Broccoli",
+        instruction:
+          "Bring a large pot of generously salted water to a rolling boil. Drop in the penne pasta and cook according to package instructions for al dente (approx. 9 to 10 minutes). In the final 2 minutes of pasta cooking time, drop the broccoli florets directly into the boiling pasta water to flash-blanch them to bright emerald, tender-crisp perfection. Before draining, scoop out and reserve 1/2 cup of starchy pasta water, then drain the pasta and broccoli.",
+      },
+      {
+        step: 3,
+        title: "Sear the Golden-Brown Chicken Bites (5 Minutes)",
+        instruction:
+          "While pasta is boiling, heat 2 tablespoons of olive oil and 1 tablespoon of butter in a large, deep skillet or Dutch oven over medium-high heat. Add the marinated chicken bites in a single layer (do not overcrowd). Sear undisturbed for 2 to 3 minutes until a rich golden-brown crust develops, then flip and sauté for another 2 to 3 minutes until cooked through (internal temperature 165°F / 74°C). Transfer the seared chicken to a warm plate and set aside.",
+      },
+      {
+        step: 4,
+        title: "Sauté Garlic & Wilt Baby Spinach",
+        instruction:
+          "In the same skillet over medium heat (leaving the flavorful browned chicken fond in the pan), melt the remaining 1 tablespoon of butter. Add the minced garlic and sauté for 30 to 45 seconds until aromatic and pale golden. Add the fresh baby spinach and toss for 1 minute until just wilted.",
+      },
+      {
+        step: 5,
+        title: "Build the Velvety Buttermilk Alfredo Sauce",
+        instruction:
+          "Pour the heavy whipping cream and 1/4 cup of the reserved hot starchy pasta water into the skillet. Bring to a gentle simmer over medium-low heat for 2 minutes, using a wooden spoon to scrape up any browned fond from the pan bottom. Reduce heat to low. Gradually whisk in 1 cup of the freshly grated Halal parmesan cheese in batches until completely melted and silky-smooth. Remove from direct heat and whisk in the remaining 1/4 cup of buttermilk, grated nutmeg, and remaining salt and pepper.",
+      },
+      {
+        step: 6,
+        title: "Toss Everything Together",
+        instruction:
+          "Add the drained penne, bright blanched broccoli florets, and seared golden chicken bites (along with any rested juices) directly into the skillet with the velvety sauce. Toss gently over low heat for 1 minute until every tube of penne and floret is luxuriously enveloped in glossy cream sauce. If the sauce is too thick, splash in 1 to 2 tablespoons of the remaining reserved pasta water.",
+      },
+      {
+        step: 7,
+        title: "Garnish & Serve (Ready in 25 Minutes!)",
+        instruction:
+          "Ladle the piping-hot Buttermilk Chicken Alfredo Spinach Pasta into wide, rustic pasta bowls. Crown generously with freshly grated parmesan cheese shavings, a flurry of chopped fresh flat-leaf parsley, and a final crack of black pepper. Serve immediately with warm garlic bread for the ultimate 25-minute weeknight comfort feast!",
+      },
+    ],
+    chefNotes: [
+      "The Buttermilk Secret: Buttermilk adds two major culinary breakthroughs: first, its gentle lactic acid enzymatically tenderizes lean chicken breast in record time without turning it mushy; second, whisking buttermilk into the finished Alfredo creates a light, velvety tang that balances the rich dairy fats so every bite feels refreshing rather than heavy.",
+      "Blanching Broccoli with Pasta: Cooking the broccoli directly in the boiling pasta pot during the last 2 minutes is an incredible time-saving technique. It saves a dirty pot and guarantees bright green, tender-crisp broccoli that holds up to creamy sauce.",
+      "Vegetarian Rennet Certification: Standard Parmigiano Reggiano uses calf rennet. For 100% Halal compliance, always look for high-grade domestic or imported Parmesan labeled 'vegetarian rennet' or 'microbial enzymes'.",
+    ],
+    nutrition: {
+      calories: 620,
+      proteinGrams: 38,
+      carbsGrams: 52,
+      fatGrams: 30,
+      fiberGrams: 4,
+      sodiumMg: 580,
+    },
+    storageInstructions:
+      "Store cooled leftovers in an airtight glass container in the refrigerator for up to 3 to 4 days. Reheat gently in a skillet over medium-low heat with 2 tablespoons of milk or water to restore the glossy, velvety sauce emulsion.",
+    freezingInstructions:
+      "Because cream- and buttermilk-based sauces can separate upon freezing, this dish is best enjoyed fresh. If freezing is necessary, freeze the cooked chicken and pasta separately from the sauce, or reheat very slowly over low heat while whisking in a splash of warm cream.",
+    servingSuggestions: [
+      "The Ultimate 25-Minute Weeknight Dinner: Serve straight from skillet to table alongside warm, crusty garlic herb bread or pillowy garlic naan.",
+      "Family Bistro Feast: Pair with a crisp Italian garden salad tossed with balsamic vinaigrette or lemon parmesan arugula salad to complement the rich pasta.",
+      "Meal Prep Power Lunch: Divides into 4 glass meal prep containers; reheats beautifully in the office microwave with a teaspoon of water.",
+    ],
+    faqs: [
+      {
+        question: "How does buttermilk affect the flavor of Alfredo sauce?",
+        answer:
+          "Traditional Alfredo can sometimes feel one-dimensional and heavy. Cultured buttermilk introduces a bright, delicate tang (similar to sour cream or crème fraîche) that cuts through the rich butter and heavy cream, elevating the flavor profile into bistro-quality territory.",
+      },
+      {
+        question: "Can I use chicken thighs instead of breasts?",
+        answer:
+          "Yes! Boneless, skinless chicken thighs cut into bite-sized pieces work wonderfully and stay extra juicy. Cook them for 6 to 7 minutes until nicely browned and fully cooked through.",
+      },
+      {
+        question: "Can this dish really be made in 25 minutes?",
+        answer:
+          "Yes! By multitasking—marinating the bite-sized chicken while water boils, boiling the pasta while searing the chicken, and dropping the broccoli into the pasta pot during the last 2 minutes—the entire meal comes together seamlessly in 25 minutes.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Regional Culinary Director & Halal Recipe Developer",
+    },
+    updatedDate: "September 18, 2026",
+    tags: [
+      "Buttermilk Chicken Alfredo",
+      "Chicken Alfredo",
+      "Spinach Pasta",
+      "Penne Alfredo",
+      "25 Minute Meal",
+      "Quick Dinner",
+      "Weeknight Meal",
+      "Halal Chicken",
+      "Halal Pasta",
+      "Broccoli Pasta",
+      "Comfort Food",
+      "Italian American",
+      "High Protein",
+    ],
+  },
+  {
+    id: "rec-spinach-sun-dried-tomato-pasta",
+    slug: "spinach-sun-dried-tomato-pasta",
+    title: "Spinach & Sun Dried Tomato Pasta",
+    category: "Halal Vegetarian",
+    categorySlug: "halal-vegetarian",
+    cuisine: "Tuscan Italian / 100% Halal Vegetarian Comfort",
+    description:
+      "Al dente spaghetti twirled in a silky garlic-parmesan cream sauce with vibrant wilted baby spinach, intensely sweet-savory julienned sun-dried tomatoes, and sweet shallots. An elegant 25-minute Tuscan vegetarian favorite.",
+    introStory:
+      "Few pasta dishes capture the essence of Italian trattoria comfort quite like Spinach & Sun Dried Tomato Pasta. Rooted in rustic Tuscan cooking traditions and crafted to meet uncompromising 100% Halal standards, this dish celebrates the transformative magic of simple, vibrant Mediterranean pantry staples. The star of the show is sun-dried tomatoes: slowly concentrated under the Mediterranean sun and steeped in fragrant herb-infused olive oil, each ribbon provides a burst of tangy sweetness and rich umami that cuts cleanly through luscious dairy. Sautéing sweet shallots and fresh garlic directly in the reserved sun-dried tomato oil infuses the entire sauce base with extraordinary depth. When finished with a cascade of tender baby spinach that wilts in the residual heat, velvety heavy cream, and freshly grated vegetarian-rennet Parmesan, every twirl of long spaghetti or linguine delivers pure, unadulterated comfort in just 25 minutes.",
+    heroImage: IMAGES.spinachSunDriedTomatoPasta,
+    prepTimeMinutes: 10,
+    cookTimeMinutes: 15,
+    totalTimeMinutes: 25,
+    servings: 4,
+    difficulty: "Easy",
+    calories: 540,
+    rating: 4.98,
+    reviewCount: 412,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: false,
+    halalNotes:
+      "100% Halal certified and vegetarian. Prepared with certified vegetarian-rennet Parmesan (crafted strictly with microbial enzymes without animal rennet or calf lipase), sun-dried tomatoes preserved in pure oil without wine or alcohol extracts, and fresh dairy.",
+    potentialCautionNotes:
+      "Contains dairy (butter, heavy cream, parmesan) and wheat gluten. To make gluten-free, use certified gluten-free corn or brown rice spaghetti, which twirls and grips the creamy sauce effortlessly.",
+    ingredients: [
+      { amount: "12", unit: "oz (340g)", name: "Spaghetti or Linguine pasta", notes: "bronze-die extruded pasta grips the creamy sauce best" },
+      { amount: "3/4", unit: "cup", name: "Sun-dried tomatoes packed in oil", notes: "drained and julienned into bite-sized strips; reserve 2 tbsp of the flavorful jar oil" },
+      { amount: "4", unit: "cups (packed)", name: "Fresh baby spinach leaves", notes: "washed, dried, and stems trimmed" },
+      { amount: "2", unit: "tbsp", name: "Reserved sun-dried tomato oil", notes: "or high-grade extra virgin olive oil" },
+      { amount: "2", unit: "tbsp", name: "Unsalted butter", notes: "for rich, glossy sauce texture" },
+      { amount: "1", unit: "medium", name: "French shallot", notes: "finely diced (or 1/2 small sweet yellow onion)" },
+      { amount: "4", unit: "cloves", name: "Fresh garlic", notes: "thinly sliced or minced" },
+      { amount: "1", unit: "cup", name: "Heavy whipping cream", notes: "full fat produces a luscious, velvety sauce without breaking" },
+      { amount: "1", unit: "cup", name: "Halal / Vegetarian Parmesan cheese", notes: "freshly grated (microbial rennet certified), plus extra for serving" },
+      { amount: "1/2", unit: "cup", name: "Reserved starchy pasta cooking water", notes: "essential for emulsifying the sauce" },
+      { amount: "1", unit: "tsp", name: "Dried Italian herb seasoning", notes: "blend of basil, oregano, thyme, and marjoram" },
+      { amount: "1/4", unit: "tsp", name: "Crushed red pepper flakes", notes: "optional, provides subtle Tuscan warmth" },
+      { amount: "1/2", unit: "tsp", name: "Fine sea salt", notes: "divided to taste (mind the saltiness of parmesan)" },
+      { amount: "1/2", unit: "tsp", name: "Freshly cracked black pepper", notes: "plus more for garnish" },
+      { amount: "2", unit: "tbsp", name: "Fresh basil leaves", notes: "thinly chiffonade sliced for herbaceous aroma" },
+    ],
+    substitutions: [
+      {
+        original: "Heavy whipping cream",
+        substitute: "Full-fat coconut milk or blended soaked raw cashews",
+        notes: "Creates a rich, completely dairy-free and plant-based vegan cream sauce.",
+      },
+      {
+        original: "Spaghetti / Linguine",
+        substitute: "Fettuccine, penne rigate, or gluten-free brown rice pasta",
+        notes: "Short tubular pasta like penne holds the sun-dried tomatoes inside its crevices equally well.",
+      },
+      {
+        original: "Sun-dried tomatoes in oil",
+        substitute: "Dry-packed sun-dried tomatoes rehydrated in boiling water for 10 mins",
+        notes: "Drain thoroughly and toss with 1 tbsp olive oil and a pinch of oregano.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Cook the Pasta to Al Dente (10 Minutes)",
+        instruction:
+          "Bring a large pot of water to a rolling boil and salt it generously (it should taste like the sea). Add the spaghetti or linguine and cook, stirring occasionally to prevent sticking, until just shy of al dente (about 8 to 9 minutes, or 1 minute less than package instructions). Right before draining, carefully ladle out and reserve 1/2 cup of starchy pasta water. Drain pasta and set aside.",
+      },
+      {
+        step: 2,
+        title: "Sauté Aromatics in Sun-Dried Tomato Oil (3 Minutes)",
+        instruction:
+          "While the pasta is boiling, place a large deep skillet or Dutch oven over medium heat. Heat 2 tablespoons of the reserved flavorful sun-dried tomato oil along with 1 tablespoon of butter. Add the finely diced shallot and cook for 2 to 3 minutes until translucent and tender. Stir in the sliced garlic and crushed red pepper flakes, sautéing for 30 to 45 seconds until fragrant without letting the garlic brown.",
+      },
+      {
+        step: 3,
+        title: "Bloom the Sun-Dried Tomatoes & Herbs (2 Minutes)",
+        instruction:
+          "Add the julienned sun-dried tomatoes, dried Italian seasoning, 1/4 teaspoon salt, and freshly cracked black pepper to the skillet. Sauté gently for 1 to 2 minutes. The warm oil draws out the concentrated sweetness, acidity, and herbal aromatics of the sun-dried tomatoes.",
+      },
+      {
+        step: 4,
+        title: "Simmer the Cream & Melt the Cheese (3 Minutes)",
+        instruction:
+          "Pour the heavy whipping cream and 1/4 cup of the reserved hot starchy pasta water into the skillet. Bring to a gentle simmer over medium-low heat for 2 minutes, allowing the cream to turn a lovely warm blush-ivory color from the tomato oils. Reduce heat to low. Gradually fold in 1 cup of freshly grated vegetarian parmesan cheese in batches, stirring constantly until completely melted, creamy, and velvety smooth.",
+      },
+      {
+        step: 5,
+        title: "Wilt the Fresh Baby Spinach (2 Minutes)",
+        instruction:
+          "Add the fresh baby spinach into the skillet in generous handfuls. Toss gently with tongs. The delicate spinach leaves will wilt in the warm cream sauce in about 60 to 90 seconds, turning bright emerald while remaining tender.",
+      },
+      {
+        step: 6,
+        title: "Toss Pasta in the Sauce (1 Minute)",
+        instruction:
+          "Transfer the drained al dente pasta directly into the skillet. Using tongs, twirl and toss the pasta vigorously with the sauce over low heat for 1 minute. The starchy pasta water in the sauce helps the creamy emulsion cling to every strand. If the sauce seems too thick, splash in 1 to 2 additional tablespoons of the remaining reserved pasta water until glossy and fluid.",
+      },
+      {
+        step: 7,
+        title: "Plate, Garnish & Serve (Ready in 25 Minutes!)",
+        instruction:
+          "Twirl generous portions of the creamy pasta into shallow serving bowls or plates. Top with extra freshly grated vegetarian parmesan shavings, fresh basil chiffonade, and an extra crack of black pepper. Serve immediately with warm garlic focaccia or crusty artisan bread!",
+      },
+    ],
+    chefNotes: [
+      "The Secret Is In The Jar Oil: Do not discard the oil from your sun-dried tomato jar! It is already infused with garlic, herbs, and concentrated tomato essence. Using it to sauté your shallots and garlic lays down an unbeatable flavor foundation.",
+      "Preventing Cream Sauce Separation: Keep your heat on low when stirring in the grated parmesan cheese. High boiling heat can cause dairy to curdle or separate. The residual heat of the sauce is plenty to melt the cheese smoothly.",
+      "Emulsifying with Pasta Water: Starch shed from the boiling pasta acts as a natural binder. It marries the fat of the cream and cheese with the liquid to form a restaurant-quality glossy glaze that clings to the pasta strands rather than pooling at the bottom of the bowl.",
+    ],
+    nutrition: {
+      calories: 540,
+      proteinGrams: 18,
+      carbsGrams: 58,
+      fatGrams: 28,
+      fiberGrams: 5,
+      sodiumMg: 520,
+    },
+    storageInstructions:
+      "Store leftover pasta in an airtight container in the refrigerator for up to 3 to 4 days. When reheating, warm gently in a skillet over medium-low heat with a splash of milk, cream, or water to restore the silky sauce emulsion.",
+    freezingInstructions:
+      "Because cream-based pasta sauces can separate upon freezing and thawing, we recommend enjoying this dish fresh or refrigerating for several days. If needed, freeze cooked pasta and sauce in an airtight container for up to 1 month, reheating gently over low heat while whisking.",
+    servingSuggestions: [
+      "Classic Italian Trattoria Night: Pair with warm garlic-rubbed toasted ciabatta bread and a crisp romaine salad with lemon-dijon vinaigrette.",
+      "Elevated Dinner Party: Serve alongside chilled Italian sparkling water with lemon, followed by a light seasonal fruit dessert.",
+      "Quick Weeknight Vegetarian Win: Ready from scratch in just 25 minutes with minimal cleanup.",
+    ],
+    faqs: [
+      {
+        question: "Is Parmesan cheese Halal and vegetarian?",
+        answer:
+          "Traditional Italian Parmigiano Reggiano is made with animal (calf) rennet. However, high-quality domestic and international Parmesan certified with 'microbial enzymes' or 'vegetarian rennet' is 100% Halal and vegetarian-friendly. We specify vegetarian-rennet Parmesan for this recipe.",
+      },
+      {
+        question: "Can I add protein like grilled chicken or shrimp?",
+        answer:
+          "Absolutely! Seared Halal chicken breast slices, grilled tiger shrimp, or crispy baked spiced chickpeas make fantastic high-protein additions to this dish.",
+      },
+      {
+        question: "Can I use frozen spinach instead of fresh?",
+        answer:
+          "Fresh baby spinach is preferred for tender texture and vibrant color. If using frozen spinach, thaw it completely and squeeze out all excess moisture thoroughly before stirring into the sauce.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Regional Culinary Director & Halal Recipe Developer",
+    },
+    updatedDate: "September 18, 2026",
+    tags: [
+      "Spinach & Sun Dried Tomato Pasta",
+      "Sun Dried Tomato Pasta",
+      "Spinach Pasta",
+      "Creamy Pasta",
+      "Vegetarian Pasta",
+      "Halal Vegetarian",
+      "Tuscan Pasta",
+      "25 Minute Meal",
+      "Quick Dinner",
+      "Comfort Food",
+      "Italian Pasta",
+      "Spaghetti",
+    ],
+  },
+  {
+    id: "rec-chicken-tikka-masala",
+    slug: "chicken-tikka-masala",
+    title: "Chicken Tikka Masala (چکن تکہ مصالحہ)",
+    category: "Halal Chicken",
+    categorySlug: "halal-chicken",
+    cuisine: "Anglo-Indian & Mughlai Heritage / British-South Asian Classic",
+    description:
+      "Tender chunks of spiced yogurt-marinated chicken charred to smoky tandoori perfection, then enveloped in a luscious, vibrant orange-red spiced tomato, cream, and crushed fenugreek (kasuri methi) gravy. Piled high over steamed basmati rice with fresh cilantro.",
+    introStory:
+      "Celebrated across the world as the quintessential South Asian curry house masterpiece, Chicken Tikka Masala (چکن تکہ مصالحہ) is an extraordinary marriage of Mughlai tandoori grilling traditions and rich, comforting restaurant gravy craftsmanship. Popularized by pioneering South Asian immigrant chefs across the UK and the subcontinent, the secret to unforgettable Chicken Tikka Masala lies in its two-stage orchestration: first, marinating succulent bite-sized Halal chicken cubes in hung curd, fresh ginger-garlic, freshly ground roasted cumin, and vibrant ruby-red Kashmiri chili, then searing or broiling them under blistering heat until deeply caramelized and kissed with smoke. Second, simmering these charred bites in a silky, aromatic onion-tomato reduction enriched with ground cashews, sweet cream, butter, and fragrant crushed kasuri methi (fenugreek leaves). Served generously over a steaming mound of fragrant long-grain white basmati rice in a sleek black bowl, every spoonful delivers explosive depth, velvety richness, and soothing aromatic warmth.",
+    heroImage: IMAGES.chickenTikkaMasala,
+    prepTimeMinutes: 20,
+    cookTimeMinutes: 25,
+    totalTimeMinutes: 45,
+    servings: 4,
+    difficulty: "Medium",
+    calories: 580,
+    rating: 4.99,
+    reviewCount: 620,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified. Prepared exclusively with certified hand-slaughtered Halal chicken breast and boneless thigh cuts, pure cultured plain whole-milk yogurt, sweet cream butter, pure cow ghee, and unadulterated single-origin ground spices.",
+    potentialCautionNotes:
+      "Contains dairy (yogurt, butter, heavy cream) and tree nuts (cashews). For nut allergies, the cashew nut paste can be replaced with 2 tablespoons of soaked melon seeds (chhar magaz) or omitted entirely; the heavy cream provides ample body.",
+    ingredients: [
+      { amount: "1.5", unit: "lbs (680g)", name: "Boneless skinless Halal chicken (breasts or thighs)", notes: "cut into uniform 1.5-inch bite-sized cubes" },
+      { amount: "1/2", unit: "cup", name: "Thick plain whole-milk yogurt (hung curd or Greek yogurt)", notes: "for chicken marinade" },
+      { amount: "2", unit: "tbsp", name: "Fresh ginger-garlic paste", notes: "divided: 1 tbsp for marinade, 1 tbsp for masala gravy" },
+      { amount: "2", unit: "tbsp", name: "Kashmiri red chili powder (Deggi Mirch)", notes: "gives brilliant ruby-red restaurant color with mild, sweet warmth" },
+      { amount: "1", unit: "tbsp", name: "Fresh lemon juice", notes: "for tenderizing chicken marinade" },
+      { amount: "1", unit: "tbsp", name: "Mustard oil or ghee", notes: "adds signature authentic tandoori pungency" },
+      { amount: "1.5", unit: "tsp", name: "Ground roasted cumin (bhuna jeera)", notes: "divided" },
+      { amount: "1.5", unit: "tsp", name: "Ground coriander powder (dhaniya)", notes: "divided" },
+      { amount: "1.5", unit: "tsp", name: "Garam masala powder", notes: "aromatic blend of cardamom, cinnamon, cloves, mace" },
+      { amount: "1", unit: "tsp", name: "Turmeric powder (haldi)", notes: "divided" },
+      { amount: "1.5", unit: "tsp", name: "Fine sea salt", notes: "divided to taste" },
+      { amount: "2", unit: "tbsp", name: "Pure cow ghee or vegetable oil", notes: "for searing and sauce base" },
+      { amount: "2", unit: "tbsp", name: "Unsalted butter", notes: "for finishing the silky restaurant gravy" },
+      { amount: "1", unit: "large", name: "Yellow onion", notes: "very finely minced or grated for smooth gravy" },
+      { amount: "1.5", unit: "cups (14 oz can)", name: "San Marzano or high-grade tomato puree", notes: "smooth, sweet strained tomato passata" },
+      { amount: "1/4", unit: "cup", name: "Raw cashew nuts", notes: "soaked in hot water for 15 minutes and blended into a smooth cream" },
+      { amount: "1/2", unit: "cup", name: "Heavy whipping cream", notes: "creates the iconic silky orange-red emulsion" },
+      { amount: "1.5", unit: "tbsp", name: "Kasuri Methi (dried fenugreek leaves)", notes: "crushed between palms right before finishing—indispensable for authentic aroma" },
+      { amount: "1", unit: "tsp", name: "Pure honey or brown sugar", notes: "optional, balances tomato acidity" },
+      { amount: "3", unit: "cups", name: "Cooked long-grain white Basmati rice", notes: "steamed with cumin or whole green cardamom for serving" },
+      { amount: "3", unit: "tbsp", name: "Fresh coriander / cilantro leaves", notes: "chopped for vibrant garnish" },
+    ],
+    substitutions: [
+      {
+        original: "Cashew nut paste",
+        substitute: "2 tbsp soaked melon seeds (magaz) or an extra 2 tbsp heavy cream",
+        notes: "Keeps the recipe completely nut-free while preserving restaurant silkiness.",
+      },
+      {
+        original: "Heavy whipping cream",
+        substitute: "Full-fat canned coconut milk or additional cashew paste",
+        notes: "Provides a luscious dairy-free alternative with a pleasant subtle richness.",
+      },
+      {
+        original: "Chicken breast",
+        substitute: "Boneless chicken thighs, paneer cubes, or large tiger prawns",
+        notes: "Boneless chicken thighs remain exceptionally juicy under high-heat charring.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Marinate the Chicken Tikka (15 Minutes to Overnight)",
+        instruction:
+          "In a glass or stainless bowl, whisk together thick yogurt, 1 tablespoon ginger-garlic paste, 1 tablespoon Kashmiri red chili powder, 1 tablespoon lemon juice, 1 tablespoon mustard oil, 1 teaspoon roasted cumin, 1/2 teaspoon turmeric, 1 teaspoon garam masala, and 1 teaspoon salt. Add the chicken cubes and toss thoroughly to coat every piece. Let marinate for at least 15 minutes at room temperature, or covered in the refrigerator for up to 12 hours for maximum flavor absorption.",
+      },
+      {
+        step: 2,
+        title: "High-Heat Char the Chicken (8 to 10 Minutes)",
+        instruction:
+          "Preheat your oven broiler on high (or heat an outdoor grill / cast-iron grill skillet over high heat with 1 tablespoon of oil). Thread chicken onto skewers or arrange on a foil-lined baking rack in a single layer. Broil 5 to 6 inches away from the heating element for 5 minutes, flip, and broil another 4 to 5 minutes until edges develop signature blackened tandoori char spots and the chicken is 90% cooked through. Remove from heat and set aside.",
+      },
+      {
+        step: 3,
+        title: "Sauté the Aromatics & Onion Base (6 Minutes)",
+        instruction:
+          "In a deep heavy-bottomed pan or Dutch oven, heat 2 tablespoons of ghee over medium heat. Add the finely minced onions with 1/2 teaspoon salt and sauté, stirring frequently, for 5 to 6 minutes until sweet, soft, and lightly golden brown around the edges. Stir in the remaining 1 tablespoon ginger-garlic paste and sauté for 1 minute until fragrant.",
+      },
+      {
+        step: 4,
+        title: "Bloom the Spices & Simmer Tomato Base (8 Minutes)",
+        instruction:
+          "Turn heat to medium-low. Add the remaining 1 tablespoon Kashmiri red chili powder, 1/2 teaspoon ground cumin, 1 teaspoon ground coriander, and 1/2 teaspoon turmeric. Stir continuously for 30 seconds to bloom the spices in the hot ghee. Pour in the smooth tomato puree and 1/2 cup of water. Cover and simmer gently for 7 to 8 minutes until the gravy thickens and droplets of red spiced oil (roghan) separate along the edges.",
+      },
+      {
+        step: 5,
+        title: "Enrich with Cashew Paste & Heavy Cream (3 Minutes)",
+        instruction:
+          "Whisk the silky cashew cream and heavy whipping cream into the simmering tomato sauce. Stir in the honey (to temper tomato sharpness) and remaining 1/2 teaspoon garam masala. Watch as the gravy transforms into a rich, glowing sunset-orange color with a luxurious glossy sheen.",
+      },
+      {
+        step: 6,
+        title: "Simmer Chicken Tikka & Perfume with Kasuri Methi (4 Minutes)",
+        instruction:
+          "Slide the charred chicken tikka pieces (along with any flavorful accumulated resting juices on the plate) directly into the simmering sauce. Stir in 2 tablespoons of butter and crush the dried fenugreek leaves (kasuri methi) between your warm palms directly over the pot. Simmer gently on low heat for 3 to 4 minutes until the chicken is fork-tender, juicy, and fully infused with the masala.",
+      },
+      {
+        step: 7,
+        title: "Plate Over Basmati Rice & Garnish",
+        instruction:
+          "Spoon a generous bed of warm, fluffy steamed white basmati rice into wide matte black bowls. Ladle the piping-hot, rich Chicken Tikka Masala right into the center so the creamy sauce cascades over the rice. Garnish generously with fresh cilantro leaves and serve immediately with hot garlic butter naan and lemon wedges!",
+      },
+    ],
+    chefNotes: [
+      "The Double-Cook Principle: Authentic Chicken Tikka Masala is never boiled in the gravy from raw chicken. The chicken must be charred dry first (broiled, grilled, or pan-seared) to seal in juices and develop smoky Maillard caramelization, then finished briefly in the simmering gravy.",
+      "Deggi Mirch / Kashmiri Chili: Provides the vibrant ruby-orange hue of high-end restaurant curry without overwhelming fiery heat. If using standard spicy cayenne or chili powder, reduce quantity to 1/2 tsp to avoid overpowering the dish.",
+      "Kasuri Methi (Fenugreek): The definitive secret ingredient that gives British-Indian restaurant curries their intoxicating, savory aroma. Always crush the dried leaves between your palms before adding to release their volatile essential oils.",
+    ],
+    nutrition: {
+      calories: 580,
+      proteinGrams: 42,
+      carbsGrams: 22,
+      fatGrams: 36,
+      fiberGrams: 4,
+      sodiumMg: 680,
+    },
+    storageInstructions:
+      "Allow to cool completely and store in airtight glass containers in the refrigerator for up to 4 days. Like many braised curries, the flavors marry and deepen overnight, tasting even better the next day! Reheat gently over medium-low heat with a splash of water or cream.",
+    freezingInstructions:
+      "Freezes exceptionally well for up to 3 months. Thaw overnight in the refrigerator, then warm in a saucepan on the stove over low heat, stirring occasionally to re-emulsify the cream and tomato gravy.",
+    servingSuggestions: [
+      "Classic Curry House Style: Serve over steaming long-grain fragrant white basmati rice in wide matte black bowls with a side of crispy poppadoms and mango chutney.",
+      "Royal Banquet: Pair with pillowy Garlic Butter Naan, refreshing Salty Lassi or chilled Shahi Borhani, and a crisp cucumber-red onion kachumber salad.",
+      "High-Protein Meal Prep: Divides cleanly into glass meal prep bowls with basmati rice or cauliflower rice for 4 days of gourmet Halal lunches.",
+    ],
+    faqs: [
+      {
+        question: "What is the difference between Chicken Tikka Masala and Butter Chicken (Murgh Makhani)?",
+        answer:
+          "While both are beloved creamy tomato-based curries, Butter Chicken features a sweeter, silkier, strained tomato gravy enriched primarily with lots of butter and cream. Chicken Tikka Masala features an onion-tomato masala base with stronger savory spices, less sugar, and a slightly thicker texture.",
+      },
+      {
+        question: "Can I make this on a stovetop without an oven broiler?",
+        answer:
+          "Yes! Heat a heavy cast-iron skillet or grill pan with 1 tablespoon of oil over high heat. Sear the chicken pieces in batches for 3 to 4 minutes per side until deeply browned and charred on the outside before sliding them into the sauce.",
+      },
+      {
+        question: "Is Chicken Tikka Masala spicy?",
+        answer:
+          "Our authentic recipe uses mild Kashmiri chili, which imparts deep color and gentle warmth rather than intense fire. It is accessible for the whole family, with a rich, comforting, and mildly spiced profile.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Regional Culinary Director & Halal Recipe Developer",
+    },
+    updatedDate: "September 18, 2026",
+    tags: [
+      "Chicken Tikka Masala",
+      "چکن تکہ مصالحہ",
+      "Chicken Tikka",
+      "Tikka Masala",
+      "Halal Chicken",
+      "Halal Curry",
+      "Halal Rice & Curry",
+      "Basmati Rice",
+      "Curry House",
+      "Anglo-Indian",
+      "Mughlai",
+      "Tandoori Chicken",
+      "Comfort Food",
+      "High Protein",
+    ],
+  },
 ];
+
+
 
 
 
