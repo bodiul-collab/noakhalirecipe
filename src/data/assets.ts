@@ -104,6 +104,9 @@ import bengaliMangoChutneyImg from "../assets/images/bengali_mango_chutney_17898
 import bengaliTexasBeefBbqImg from "../assets/images/bengali_texas_beef_bbq_1789838484366.jpg";
 import bengaliTexasChickenBbqImg from "../assets/images/bengali_texas_chicken_bbq_1789838616676.jpg";
 import shrimpTandooriImg from "../assets/images/shrimp_tandoori_1789838880529.jpg";
+import kacchiBiryaniImg from "../assets/images/kacchi_biryani_1789839258339.jpg";
+import beefKalaBhunaImg from "../assets/images/beef_kala_bhuna_1789839269395.jpg";
+import chickenRezalaImg from "../assets/images/chicken_rezala_1789839281368.jpg";
 import noakhaliLogoFullImg from "../assets/images/noakhali_kitchen_logo_1789072776240.jpg";
 import noakhaliLogoIconImg from "../assets/images/noakhali_kitchen_logo_1789072776240.jpg";
 
@@ -255,6 +258,11 @@ export const IMAGES = {
   shrimpTandoori: shrimpTandooriImg,
   tandooriShrimp: shrimpTandooriImg,
   chingriTandoori: shrimpTandooriImg,
+  kacchiBiryani: kacchiBiryaniImg,
+  beefKalaBhuna: beefKalaBhunaImg,
+  kalaBhuna: beefKalaBhunaImg,
+  chickenRezala: chickenRezalaImg,
+  shahiRezala: chickenRezalaImg,
   logoFull: noakhaliLogoFullImg,
   logoIcon: noakhaliLogoIconImg,
 };

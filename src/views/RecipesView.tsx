@@ -38,6 +38,11 @@ import { openPrintWindow, downloadPrintableHtml } from "../utils/printableRecipe
 import { calculatePerServingNutrition } from "../utils/nutritionEstimator";
 import { RecipeRatingCard } from "../components/RecipeRatingCard";
 import { YouTubePlayer } from "../components/YouTubePlayer";
+import {
+  RecipeWhySpecialBanner,
+  RecipeVideoMasterclass,
+  RecipeCulinaryEcosystem,
+} from "../components/RecipeProductionEngineSection";
 import { COOKING_GUIDES } from "../data/guides";
 import {
   loadUserRatings,
@@ -678,30 +683,8 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
               scaledServings={scaledServings}
             />
 
-            {/* WATCH THE FULL RECIPE (Optional YouTube Video Player) */}
-            {(currentRecipe.youtubeVideoId || currentRecipe.youtubeUrl) && (
-              <div className="space-y-3 pt-2 print:hidden">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#E97520] animate-pulse" />
-                    <h2 className="text-sm sm:text-base font-bold uppercase tracking-wider text-[#242423] font-heading">
-                      WATCH THE FULL RECIPE
-                    </h2>
-                  </div>
-                  <span className="text-[11px] text-[#77736D] font-medium hidden sm:inline">
-                    Companion Cooking Video &bull; Noakhali Kitchen YouTube
-                  </span>
-                </div>
-                <YouTubePlayer
-                  videoId={currentRecipe.youtubeVideoId}
-                  videoUrl={currentRecipe.youtubeUrl}
-                  title={currentRecipe.videoTitle || currentRecipe.title}
-                  thumbnailUrl={currentRecipe.heroImage}
-                  duration={currentRecipe.videoDuration}
-                  subtitle={`Step-by-step masterclass: ${currentRecipe.title}`}
-                />
-              </div>
-            )}
+            {/* WATCH THE FULL RECIPE & PRODUCTION ENGINE MASTERCLASS */}
+            <RecipeVideoMasterclass recipe={currentRecipe} />
 
             {/* PRINT / SAVE / SCALE RECIPE Structured Action Bar */}
             <div className="p-4 bg-white rounded-xl border border-[#E6E1D8] shadow-2xs space-y-3 print:hidden">
@@ -784,6 +767,9 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
                 {currentRecipe.introStory}
               </p>
             </div>
+
+            {/* What Sets This Dish Apart */}
+            <RecipeWhySpecialBanner whySpecial={currentRecipe.whySpecial} />
 
             {/* Halal Verification Component */}
             <HalalCheck
@@ -1084,6 +1070,19 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
                 Noakhali Kitchen Verified Standard
               </span>
             </div>
+
+            {/* Culinary Ecosystem: Tips, Pitfalls, Food Culture, Kitchen Gear & Companion Recipes */}
+            <RecipeCulinaryEcosystem
+              recipe={currentRecipe}
+              onNavigate={onNavigate}
+              onSelectRecipe={(slug) => {
+                setActiveSlug(slug);
+                try {
+                  window.history.pushState({}, "", `/recipes/${slug}`);
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                } catch {}
+              }}
+            />
 
             {/* Connected Cooking Guides (Internal Linking) */}
             {relatedGuides.length > 0 && (

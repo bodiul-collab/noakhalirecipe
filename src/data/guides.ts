@@ -171,4 +171,263 @@ Blend smooth with minimal water. Spread into silicone ice-cube trays (1 tablespo
     readTimeMinutes: 4,
     relatedRecipeSlugs: ["authentic-lahori-chicken-chargha", "shahi-chicken-roast"],
   },
+  {
+    id: "guide-bangladeshi-spice-base",
+    slug: "how-to-build-a-bangladeshi-spice-base",
+    title: "How to Build an Authentic Bangladeshi Spice Base",
+    category: "Spice Guides",
+    excerpt:
+      "Master the fundamental aromatics of Bengali curries: the precise sequence of blooming whole spices, caramelizing onion paste, and tempering ginger-garlic.",
+    content: `A true Bangladeshi curry does not rely on generic curry powder. Instead, it is built on a four-tier foundation of fresh whole aromatics and wet pastes:
+
+### Tier 1: Blooming Whole Garam Masala (Khoro Moshla)
+Heat your cooking fat (pure mustard oil or ghee) until shimmering. Drop in green cardamom pods (cracked open), Ceylon cinnamon sticks, whole cloves, and bay leaves (tejpatta). Sauté for 20-30 seconds until they swell and perfume the oil.
+
+### Tier 2: The Onion Dual-Method
+Bengali cuisine uses two distinct onion preparations:
+1. **Thinly sliced onions** fried slowly until translucent and sweet.
+2. **Finely ground onion paste (peyaj bata)** cooked until the raw sulfur compounds dissipate and the paste turns pale hazelnut.
+
+### Tier 3: Ginger & Garlic (Ada-Roshun Bata)
+Add equal parts fresh ginger and garlic paste. Sauté over medium heat for 90 seconds. To prevent scorching, keep a small bowl of warm water next to your pan and deglaze with 1 tablespoon whenever the paste begins to cling to the bottom.
+
+### Tier 4: Ground Spices Slurry
+Rather than tossing dry ground spices directly into hot oil (which burns turmeric and chili in seconds), mix your ground cumin, coriander, turmeric, and Kashmiri chili with 3 tablespoons of warm water to form a smooth paste before sliding it into the aromatics. Cook until oil cleanly beads along the perimeter ("tel chhara").`,
+    heroImage: IMAGES.beefBhuna,
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Culinary Director",
+    },
+    publishedDate: "September 15, 2026",
+    updatedDate: "September 18, 2026",
+    readTimeMinutes: 6,
+    relatedRecipeSlugs: ["bengali-beef-bhuna", "bengali-beef-tehari", "chicken-rezala"],
+  },
+  {
+    id: "guide-brown-onions-beresta",
+    slug: "how-to-properly-brown-onions-beresta",
+    title: "How to Properly Brown Onions: The Golden Beresta Masterclass",
+    category: "Cooking Techniques",
+    excerpt:
+      "Crispy, deeply golden fried onions (beresta) are the crown jewel of biryanis, roasts, and tehari. Avoid soggy or scorched onions with this reliable method.",
+    content: `Beresta (fried onions) provides sweetness, rich umami depth, and decorative elegance. Uneven slicing or rushed high-heat frying results in burnt, bitter onions that ruin an entire pot of biryani.
+
+### The 4 Rules for Flawless Beresta
+1. **Uniform Paper-Thin Slicing:** Use a sharp mandoline or chef's knife to slice onions crosswise into 1.5mm rings. If some slices are thick and others paper-thin, the thin ones will burn while thick ones stay soggy.
+2. **Moisture Evaporation:** Spread sliced onions across paper towels for 15 minutes before frying to dry the exterior.
+3. **Medium-Low, Consistent Heat:** Submerge the onions in ample warm oil or ghee. Fry over medium heat, stirring continuously in circular motions to ensure equal heat exposure.
+4. **The Carryover Cooking Factor:** Remove the onions from the oil when they are golden honey (not dark brown!). They will continue to darken by two shades on the plate. Spread immediately onto wire racks or parchment paper so steam escapes, locking in shatter-crisp crunch.`,
+    heroImage: IMAGES.chickenRoast,
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Culinary Director",
+    },
+    publishedDate: "September 14, 2026",
+    updatedDate: "September 18, 2026",
+    readTimeMinutes: 5,
+    relatedRecipeSlugs: ["bengali-chicken-roast", "kacchi-biryani", "chicken-biryani"],
+  },
+  {
+    id: "guide-basmati-rice-biryani",
+    slug: "how-to-cook-basmati-rice-for-biryani",
+    title: "How to Cook Basmati Rice for Biryani: The 70% Parboil Rule",
+    category: "Cooking Techniques",
+    excerpt:
+      "Achieve feather-light, elongated grains that remain distinct without breaking during sealed dum cooking.",
+    content: `Biryani rice must never be fully cooked in boiling water. Because the rice will spend 25-35 minutes steaming over hot meat and gravy during the final 'dum' stage, it must be parboiled to exactly 70% to 75% doneness.
+
+### The Step-by-Step Science
+1. **Choose Aged Extra-Long Grain Basmati:** Aged basmati has reduced moisture content, allowing the grain to expand longitudinally up to twice its raw length without splitting horizontally.
+2. **Wash Until Crystal Clear:** Rinse 4-5 times gently without crushing the grains to remove loose surface amylose. Soak in room temperature water for exactly 30 minutes.
+3. **Abundant Rolling Boil:** Boil at least 5 times more water than rice. Add whole green cardamom, bay leaves, 1 teaspoon of oil, and generous salt (the water should taste seasoned like light soup).
+4. **The 5-Minute Window:** Add soaked drained rice to the rolling boil. At 4.5 to 5 minutes, test a grain: the exterior should be pliable and translucent, but the center core should feel firm and break into three pieces when pressed between your thumb and forefinger.
+5. **Rapid Strain & Fan:** Immediately dump into a wide colander and spread over a tray to release steam, preventing overcooking.`,
+    heroImage: IMAGES.heroBiryani,
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Culinary Director",
+    },
+    publishedDate: "September 12, 2026",
+    updatedDate: "September 17, 2026",
+    readTimeMinutes: 6,
+    relatedRecipeSlugs: ["chicken-biryani", "kacchi-biryani", "bengali-beef-tehari"],
+  },
+  {
+    id: "guide-layer-kacchi-biryani",
+    slug: "how-to-layer-kacchi-biryani",
+    title: "How to Layer Kacchi Biryani: Dough Sealing & Dum Mastery",
+    category: "Cooking Techniques",
+    excerpt:
+      "Raw marinated mutton or beef, parboiled rice, fried potatoes, and saffron milk: the definitive Old Dhaka architectural layering method.",
+    content: `Unlike Pakki Biryani where cooked meat and cooked rice are combined, authentic Kacchi Biryani begins with raw, marinated meat at the bottom of the pot. The meat and rice cook together entirely via trapped internal steam ('dum').
+
+### Layering Blueprint
+1. **Bottom Layer (Raw Meat Bed):** Press the heavily marinated bone-in meat flat into the bottom of a heavy copper or aluminum handi. The marinade juices provide the liquid foundation for steam.
+2. **Potato Buffer:** Wedge par-fried whole halved golden potatoes between the meat pieces.
+3. **First Rice Tier (60% Cooked):** Add the first half of parboiled rice directly over the raw meat. This lower layer absorbs the rich meat fond.
+4. **Second Rice Tier (75% Cooked):** Add the remaining rice on top, which will finish cooking in pure rising steam.
+5. **Garnish Canopy:** Drizzle warm saffron milk, kewra water, melted ghee, fried onions (beresta), and tucked alubukhara (dried sour prunes).
+6. **The Dough Hermetic Seal (Dum):** Roll whole wheat dough into a snake, press along the rim of the pot, and press the lid down firmly. Cook on high heat for 10 minutes to generate internal steam, then transfer over a heavy cast-iron tawa on low heat for 50-60 minutes.`,
+    heroImage: IMAGES.kacchiBiryani,
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Culinary Director",
+    },
+    publishedDate: "September 11, 2026",
+    updatedDate: "September 17, 2026",
+    readTimeMinutes: 7,
+    relatedRecipeSlugs: ["kacchi-biryani", "bengali-beef-tehari", "chicken-biryani"],
+  },
+  {
+    id: "guide-prevent-rice-mushy",
+    slug: "how-to-prevent-rice-from-becoming-mushy",
+    title: "How to Prevent Rice from Becoming Mushy: Starch & Water Ratios",
+    category: "Beginner Cooking",
+    excerpt:
+      "Avoid sticky, gummy, or clumpy rice dishes. Understand the critical balance of starch rinsing, boiling liquid volume, and steam dissipation.",
+    content: `Mushy rice is caused by two fundamental mistakes: excess loose surface starch that gelatinizes into glue, and too much cooking water that bursts the delicate grain cells.
+
+### The Fix Checklist
+- **Never Skip the Cold Rinse:** Agitate raw rice gently in cold water until the water is transparent. Rinsing strips away amylose dust created during grain milling.
+- **Respect the 1:1.5 Volumetric Rule for Basmati:** For soaked basmati, never exceed 1.5 cups of liquid per 1 cup of dry rice when using the absorption method.
+- **Never Stir Boiling Rice:** Stirring vigorously breaks fragile grains and releases internal starch into the cooking broth, creating wallpaper paste.
+- **The Off-Heat Rest:** When cooking time finishes, turn off the burner and leave the lid sealed for 10 minutes. This allows moisture to equalize throughout the pot. Fluff gently with a wide wooden spatula or silicone rice paddle from the outer edge inward.`,
+    heroImage: IMAGES.vegBhunaKhichuri,
+    author: {
+      name: "Dr. Aaminah Siddiqui",
+      role: "Food Scientist",
+    },
+    publishedDate: "September 9, 2026",
+    updatedDate: "September 15, 2026",
+    readTimeMinutes: 5,
+    relatedRecipeSlugs: ["bengali-beef-tehari", "chicken-biryani", "vegetable-bhuna-khichuri"],
+  },
+  {
+    id: "guide-tenderize-beef-slow-cooking",
+    slug: "how-to-tenderize-beef-for-slow-cooking",
+    title: "How to Tenderize Beef for Slow Cooking: Collagen Science & Acid Cures",
+    category: "Cooking Techniques",
+    excerpt:
+      "Transform tough stewing beef, chuck roast, and shank into melt-in-your-mouth tender curries using natural meat tenderizers and patient braising.",
+    content: `Tough cuts of beef (such as chuck, shank, or brisket) are packed with intramuscular collagen. When cooked too fast over high dry heat, muscle fibers contract and turn tough like leather.
+
+### The 3 Secrets to Velvet-Soft Halal Beef
+1. **Raw Papaya Paste (The Papain Enzyme):** In dishes like Beef Kala Bhuna and Kacchi Biryani, green raw papaya paste (skin included) acts as a powerful natural proteolytic tenderizer that breaks down tough connective fibers without altering flavor. Use 1 tablespoon per pound of meat for 2 hours.
+2. **Yogurt & Lime Lactic Acid:** Lactic acid in plain whole milk yogurt gently softens external muscle bundles and helps spices penetrate deeply.
+3. **The 160°F–180°F Gelatin Window:** Collagen begins converting into succulent gelatin between 160°F and 180°F (71°C to 82°C). Maintain a gentle, lazy bubble rather than a violent rolling boil. Over 2 to 3 hours, tough connective tissue dissolves into rich, velvety mouthfeel.`,
+    heroImage: IMAGES.beefKalaBhuna,
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Culinary Director",
+    },
+    publishedDate: "September 8, 2026",
+    updatedDate: "September 14, 2026",
+    readTimeMinutes: 6,
+    relatedRecipeSlugs: ["beef-kala-bhuna", "bengali-beef-bhuna", "authentic-nihari"],
+  },
+  {
+    id: "guide-balance-whole-spices",
+    slug: "how-to-balance-whole-spices",
+    title: "How to Balance Whole Spices: Bloom Timing & Fragrance Layering",
+    category: "Spice Guides",
+    excerpt:
+      "Avoid overpowering your curries with too much clove or harsh cinnamon. Learn the flavor hierarchy of whole South Asian spices.",
+    content: `South Asian cooking balances spices across warm, sweet, pungent, and bitter flavor profiles:
+
+### The Potency Hierarchy
+- **Aggressive Spices (Use Sparingly):** Cloves (long) and Black Cardamom (badi elaichi). For 1 kg of meat, 3-4 cloves and 1 black cardamom pod provide ample camphor notes. Adding more overwhelms the palate.
+- **Sweet & Aromatic Spices (The Harmony Makers):** Green cardamom (chhoti elaichi), Ceylon cinnamon bark (dalchini), and mace (javitri). These provide elegance and floral sweetness in wedding-style roasts and biryanis.
+- **Earthy Spices (The Foundation):** Whole cumin (jeera), coriander seeds, and bay leaves (tejpatta).
+- **Tempering Rule:** Add dense wood bark (cinnamon) and pods first. Add delicate seeds (cumin, fennel) 15 seconds later so they toast golden without charring black.`,
+    heroImage: IMAGES.chickenRoast,
+    author: {
+      name: "Dr. Aaminah Siddiqui",
+      role: "Food Scientist",
+    },
+    publishedDate: "September 7, 2026",
+    updatedDate: "September 13, 2026",
+    readTimeMinutes: 5,
+    relatedRecipeSlugs: ["bengali-chicken-roast", "chicken-rezala", "authentic-nihari"],
+  },
+  {
+    id: "guide-restaurant-chicken-karahi",
+    slug: "how-to-make-restaurant-style-chicken-karahi",
+    title: "How to Make Restaurant-Style Chicken Karahi: High-Heat Wok Mastery",
+    category: "Cooking Techniques",
+    excerpt:
+      "Pakistani road-side dhaba chicken karahi cooked over high roaring flame with fresh tomatoes, ginger matchsticks, and zero onion filler.",
+    content: `Authentic Peshawar and Lahore-style Chicken Karahi is unique in South Asian cuisine because it uses **zero onions**. Its thick, clings-to-the-bone masala is derived entirely from fresh vine-ripened tomatoes, fresh ginger-garlic paste, and green chilies.
+
+### Key Karahi Techniques
+1. **Bone-In Small Cuts:** Cut chicken into small 16-18 piece curry cuts. Small pieces maximize surface searing in the round-bottom karahi.
+2. **The High-Heat Oil Sear:** Sauté the chicken in ample neutral oil or ghee with 1 teaspoon of salt until the exterior turns golden and skin tightens.
+3. **The Tomato Blanket:** Halve ripe red tomatoes and place them cut-side down directly over the sizzling chicken. Cover with a lid for 8 minutes; the steam loosens the tomato skins so they can be easily plucked off with culinary tongs.
+4. **The Bhunai Sear:** Crank the heat to maximum and crush the softened tomatoes with the back of a ladle. Sauté vigorously until the tomato juices reduce into a glistening, clinging glaze and the oil separates completely.
+5. **Fresh Finishing:** Finish with julienned ginger, chopped fresh cilantro, and freshly crushed coarse black pepper off the heat.`,
+    heroImage: IMAGES.chickenKarahi,
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Culinary Director",
+    },
+    publishedDate: "September 6, 2026",
+    updatedDate: "September 12, 2026",
+    readTimeMinutes: 6,
+    relatedRecipeSlugs: ["chicken-karahi", "authentic-chicken-shawarma", "bengali-chicken-roast"],
+  },
+  {
+    id: "guide-homemade-shawarma-spice",
+    slug: "how-to-build-homemade-shawarma-spice",
+    title: "How to Build Homemade Shawarma Spice: Warm Levant Aromatics",
+    category: "Spice Guides",
+    excerpt:
+      "Craft the iconic street-style Middle Eastern shawarma seasoning blend combining cumin, coriander, allspice, sumac, and cardamom.",
+    content: `Authentic street-style Middle Eastern shawarma has a distinctive, deeply warming aroma that balances savory spices with citrusy tartness:
+
+### The Levant Ratio (Makes 1/2 Cup Blend)
+- **2 tbsp Ground Cumin:** Earthy foundation.
+- **2 tbsp Ground Coriander:** Herbal, citrusy background note.
+- **1 tbsp Garlic Powder:** Savory baseline.
+- **1 tbsp Smoked or Sweet Paprika:** Vibrant color and gentle smokiness.
+- **1 tbsp Ground Allspice (Pimento):** The signature Middle Eastern secret note combining clove, nutmeg, and cinnamon warmth.
+- **1 tsp Ground Cardamom:** Bright, floral punch.
+- **1 tsp Ground Turmeric:** Golden hue.
+- **1/2 tsp Ground Cinnamon:** Subtle warmth.
+- **1 tbsp Ground Sumac:** Tart, lemony berry tang (essential for authentic flavor).
+
+### Marination Formula
+For every 1 lb of thinly sliced boneless chicken thighs: Combine 2 tablespoons of this spice blend, 3 tablespoons Greek yogurt, 2 tablespoons extra virgin olive oil, 2 tablespoons fresh lemon juice, and 4 minced garlic cloves. Marinate for at least 2 hours before roasting or pan-searing.`,
+    heroImage: IMAGES.authenticChickenShawarma,
+    author: {
+      name: "Dr. Aaminah Siddiqui",
+      role: "Food Scientist",
+    },
+    publishedDate: "September 5, 2026",
+    updatedDate: "September 11, 2026",
+    readTimeMinutes: 5,
+    relatedRecipeSlugs: ["authentic-chicken-shawarma", "chicken-karahi", "hummus"],
+  },
+  {
+    id: "guide-properly-rest-rice-dishes",
+    slug: "how-to-properly-rest-cooked-rice-dishes",
+    title: "How to Properly Rest Cooked Rice Dishes: Trapping Steam & Grain Separation",
+    category: "Cooking Techniques",
+    excerpt:
+      "Why uncovering or digging into biryani, tehari, or polao the moment the heat is turned off ruins texture, and how a 15-minute rest creates culinary perfection.",
+    content: `The most common heartbreak in home cooking happens right at the finish line: lifting the lid off a hot pot of biryani or tehari and digging in immediately with a spoon. The rushing steam instantly collapses fragile starch jackets, resulting in mushy, clumping rice.
+
+### The Physics of the 15-Minute Off-Heat Rest
+1. **Internal Moisture Redistribution:** When heat is applied from below, water vapor collects in the upper chamber of the pot. When heat is turned off, resting allows this moisture to settle uniformly throughout the bottom, middle, and top rice tiers.
+2. **Retrogradation & Starch Firming:** As the temperature drops slightly from boiling point, the outer amylose layer of each grain firms up ('retrogradation'), transforming from delicate gelatin into a smooth, non-sticky outer sheath.
+3. **The Uncovering Technique:** After a 15-minute sealed rest, unseal the pot. Allow excess billowing steam to escape for 2 minutes.
+4. **The Outer-Inward Fluff:** Use a flat, thin-edged wooden spatula or rice paddle. Slice gently into the outer circumference and turn the grains over from bottom to top in sweeping motions. Never chop or mash down into the center.`,
+    heroImage: IMAGES.bengaliBeefTehari,
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Culinary Director",
+    },
+    publishedDate: "September 4, 2026",
+    updatedDate: "September 10, 2026",
+    readTimeMinutes: 5,
+    relatedRecipeSlugs: ["bengali-beef-tehari", "kacchi-biryani", "chicken-biryani"],
+  },
 ];

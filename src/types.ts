@@ -54,11 +54,52 @@ export interface Recipe {
   };
   updatedDate: string;
   tags: string[];
+  whySpecial?: string;
+  cookingTips?: string[];
+  commonMistakes?: string[];
+  relatedRecipeSlugs?: string[];
+  relatedGuideSlugs?: string[];
+  relatedCultureSlug?: string;
+  relatedKitchenToolId?: string;
+  seoTitle?: string;
+  seoDescription?: string;
   youtubeUrl?: string;
   youtubeVideoId?: string;
   videoTitle?: string;
   videoDuration?: string;
-  relatedGuideSlugs?: string[];
+  videoChapters?: VideoChapter[];
+  videoProduction?: VideoProductionData;
+}
+
+export interface VideoChapter {
+  time: string; // e.g. "00:00", "01:45"
+  title: string;
+}
+
+export interface ShortClipItem {
+  title: string;
+  focus: "Ingredient Preparation" | "Key Cooking Technique" | "Sizzling Moment" | "Final Dish Reveal";
+  description: string;
+  targetSeconds: string;
+}
+
+export interface VideoProductionData {
+  status: "Editorial Planning" | "Scripted" | "In Visual Production" | "Ready for YouTube" | "Published";
+  targetDuration: string; // e.g. "12-15 min"
+  hook: string; // 0:00-0:20 Hook description
+  introduction: string; // 0:20-0:50 Recipe intro
+  ingredientsVisual: string; // 0:50-2:00 Ingredients shot
+  preparationVisual: string; // 2:00-4:00 Prep process
+  cookingVisual: string; // 4:00-10:30 Cooking process
+  keyTechnique: string; // 10:30-12:00 Key technique
+  finalDishVisual: string; // 12:00-13:00 Plating
+  servingVisual: string; // 13:00-14:00 Serving suggestions
+  ctaOutro: string; // 14:00-15:00 Outro and CTA
+  cinematographyNotes: string[];
+  voiceoverSample: string;
+  youtubeOptimizedTitle: string;
+  youtubeDescription: string;
+  shortsClips: ShortClipItem[];
 }
 
 export interface CookingVideo {
@@ -78,6 +119,9 @@ export interface CookingVideo {
   relatedRecipeSlugs?: string[];
   relatedGuideSlugs?: string[];
   featured?: boolean;
+  videoChapters?: VideoChapter[];
+  channelPlaceholder?: string;
+  productionNotes?: string;
 }
 
 export interface CookingGuide {

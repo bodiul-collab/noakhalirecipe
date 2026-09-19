@@ -1,7 +1,8 @@
 import { Recipe } from "../types";
 import { IMAGES } from "./assets";
+import { enhanceRecipesWithCornerstones } from "./cornerstoneEnhancer";
 
-export const RECIPES: Recipe[] = [
+const BASE_RECIPES: Recipe[] = [
   {
     id: "rec-shrimp-tandoori",
     slug: "shrimp-tandoori",
@@ -14211,6 +14212,8 @@ export const RECIPES: Recipe[] = [
     ],
   },
 ];
+
+export const RECIPES: Recipe[] = enhanceRecipesWithCornerstones(BASE_RECIPES);
 
 
 
