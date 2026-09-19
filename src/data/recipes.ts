@@ -3,6 +3,1526 @@ import { IMAGES } from "./assets";
 
 export const RECIPES: Recipe[] = [
   {
+    id: "rec-shrimp-tandoori",
+    slug: "shrimp-tandoori",
+    title: "Shrimp Tandoori (বাঙালি স্টাইল চিংড়ি তন্দুরি / Tandoori Prawns)",
+    category: "Halal Fish & Seafood",
+    categorySlug: "halal-seafood",
+    cuisine: "Bengali & Mughlai Fusion",
+    description:
+      "Plump, juicy jumbo prawns marinated in a fragrant Bengali-style tandoori spiced yogurt emulsion with cold-pressed mustard oil, crushed black pepper, toasted cumin, Kashmiri chili, ginger-garlic paste, and roasted gram flour (besan), grilled or broiled to blistered, smoky perfection and served with fresh lime wedges, kachumber salad, and cooling mint-coriander chutney.",
+    introStory:
+      "In the rich culinary tapestry of Bengal, few ingredients are celebrated with greater reverence than fresh coastal tiger prawns (Golda Chingri / Bagda Chingri). When combined with the royal charcoal traditions of Mughlai tandoori cooking, the result is 'Shrimp Tandoori' (বাঙালি স্টাইল চিংড়ি তন্দুরি)—a dish that captures explosive smoky char on the outside while preserving the sweet, tender, snap-in-your-mouth juiciness of fresh seafood within.\n\nTraditional tandoori seafood requires a delicate touch: prawns can easily turn dry and rubbery if overcooked. This recipe utilizes an authentic two-stage marination method perfected in high-end Bengali grill houses. First, clean peeled jumbo shrimp (with tails left on for elegant presentation and handling) are cured for 10 minutes in fresh lime juice, sea salt, turmeric, and crushed garlic to tighten the flesh and neutralize any maritime sharpness. Second, they are enveloped in a thick, velvety coating made of hung curd (strained Greek yogurt), cold-pressed mustard oil (shorsher tel), roasted chickpea flour (besan) to lock in moisture, Kashmiri chili powder for natural ruby brilliance, toasted cumin, aromatic garam masala, crushed kasoori methi (dried fenugreek leaves), and a hint of black salt (bit lobon).\n\nWhether seared in a smoking cast-iron skillet, threaded onto skewers over glowing charcoal embers, or charred under an oven broiler, the prawns cook in just 4 to 6 minutes. Basted with sizzling pure cow ghee in the final seconds, they develop deeply caramelized, blistered edges. Piled generously on an oblong platter with lime wedges, crisp cucumber-tomato kachumber, and chilled coriander-mint chutney, this is the ultimate Halal seafood showstopper.",
+    heroImage: IMAGES.shrimpTandoori,
+    prepTimeMinutes: 20,
+    cookTimeMinutes: 8,
+    totalTimeMinutes: 28,
+    servings: 4,
+    difficulty: "Easy",
+    calories: 220,
+    rating: 4.98,
+    reviewCount: 92,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified seafood. Prepared with fresh sustainably caught tiger prawns or jumbo shrimp, pure cow ghee, natural whole spices, and zero alcohol-based flavorings or synthetic artificial food dyes. The brilliant crimson color comes purely from mild sun-dried Kashmiri red chili powder.",
+    potentialCautionNotes:
+      "Shrimp cook extraordinarily fast. Cook for only 2 to 3 minutes per side until pink, curled into a loose 'C' shape, and lightly blistered with brown charred edges. If the shrimp curl tightly into an 'O' shape, they are overcooked and will become tough.",
+    ingredients: [
+      { amount: "1.5", unit: "lbs / 700g", name: "Jumbo tiger prawns or shrimp (16/20 count)", notes: "peeled, deveined, with tails left intact for presentation" },
+      { amount: "1/2", unit: "cup", name: "Thick Greek yogurt or hung curd", notes: "whisked smooth; thick curd clings without dripping off during grilling" },
+      { amount: "2", unit: "tbsp", name: "Cold-pressed Bengali mustard oil (shorsher tel)", notes: "essential for authentic sharp pungency and smoky char" },
+      { amount: "1.5", unit: "tbsp", name: "Roasted gram flour (besan / sattu)", notes: "dry-roasted in a skillet until nutty; acts as a moisture binder" },
+      { amount: "1.5", unit: "tbsp", name: "Kashmiri red chili powder", notes: "for stunning crimson color with mild, pleasant heat" },
+      { amount: "1", unit: "tbsp", name: "Fresh garlic paste", notes: "freshly crushed" },
+      { amount: "1", unit: "tbsp", name: "Fresh ginger paste", notes: "freshly crushed" },
+      { amount: "1.5", unit: "tbsp", name: "Fresh lime or lemon juice", notes: "divided for first and second marinades" },
+      { amount: "1", unit: "tsp", name: "Roasted cumin powder (bhuna jeera)" },
+      { amount: "1", unit: "tsp", name: "Ground coriander seed" },
+      { amount: "1/2", unit: "tsp", name: "Turmeric powder (haldi)" },
+      { amount: "1/2", unit: "tsp", name: "Garam masala powder" },
+      { amount: "1/2", unit: "tsp", name: "Black salt (bit lobon)", notes: "for tangy savory depth" },
+      { amount: "1", unit: "tsp", name: "Fine sea salt", notes: "or to taste" },
+      { amount: "1", unit: "tsp", name: "Kasoori methi (dried fenugreek leaves)", notes: "crushed between palms for restaurant aroma" },
+      { amount: "1/2", unit: "tsp", name: "Chaat masala", notes: "for finishing sprinkle" },
+      { amount: "2", unit: "tbsp", name: "Pure cow ghee or butter", notes: "melted, for basting during sizzling sear" },
+      { amount: "1", unit: "lime", name: "Fresh lime wedges", notes: "for serving garnish" },
+      { amount: "1", unit: "batch", name: "Fresh Kachumber Salad", notes: "diced Persian cucumbers, red onion, vine tomatoes, green chili, and lemon juice" },
+      { amount: "1/2", unit: "cup", name: "Bengali Mint & Coriander Chutney", notes: "blended fresh mint, cilantro, green chili, black salt, and yogurt" },
+    ],
+    substitutions: [
+      {
+        original: "Jumbo tiger prawns",
+        substitute: "Colossal shrimp, king prawns, or firm fish cubes (salmon, sea bass, cod)",
+        notes: "Firm fish cubes can be seasoned identically and skewered or pan-seared in 6 to 8 minutes.",
+      },
+      {
+        original: "Roasted gram flour (besan)",
+        substitute: "Chickpea flour, cornstarch, or rice flour",
+        notes: "Dry-roast chickpea flour for 2 minutes to eliminate the raw taste before whisking into yogurt.",
+      },
+      {
+        original: "Cold-pressed mustard oil",
+        substitute: "Pure cow ghee or extra virgin olive oil",
+        notes: "Mustard oil delivers the signature Bengali tandoori zing; ghee gives a rich butter-basted finish.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Clean and Butterfly the Jumbo Prawns",
+        instruction:
+          "Peel the shells from the prawns while leaving the tail segment intact. Using a small paring knife, make a shallow slit down the center of the curved back to remove the dark intestinal vein. Butterfly the back slightly so the tandoori marinade coats more surface area. Pat the shrimp thoroughly dry with clean paper towels.",
+      },
+      {
+        step: 2,
+        title: "Stage One Citrus & Garlic Cure (10 Minutes)",
+        instruction:
+          "Place the dried shrimp into a glass bowl. Toss with 1 tablespoon fresh lime juice, 1/2 teaspoon turmeric powder, 1/2 teaspoon fine sea salt, and 1 teaspoon of the crushed garlic paste. Toss gently and let cure for 10 minutes at room temperature. Drain off any accumulated moisture that releases.",
+      },
+      {
+        step: 3,
+        title: "Prepare the Thick Tandoori Marinade",
+        instruction:
+          "In a separate medium mixing bowl, whisk together the thick Greek yogurt, mustard oil, roasted besan, Kashmiri chili powder, remaining ginger-garlic paste, roasted cumin, ground coriander, garam masala, crushed kasoori methi, and black salt (bit lobon) until completely smooth and thick like a velvety paste.",
+      },
+      {
+        step: 4,
+        title: "Coat and Marinate the Shrimp",
+        instruction:
+          "Add the cured shrimp into the tandoori marinade. Using your hands or a spatula, gently coat every prawn thoroughly so the thick spiced batter clings to all crevices. Cover and let marinate in the refrigerator for 20 to 30 minutes (do not marinate seafood longer than 45 minutes, as the citrus and salt will over-cure the delicate texture).",
+      },
+      {
+        step: 5,
+        title: "High-Heat Sear (Grill, Cast-Iron Skillet, or Broiler)",
+        instruction:
+          "For Cast-Iron Skillet (Stovetop): Heat a heavy cast-iron skillet over high heat until smoking hot. Brush with 1 tablespoon of mustard oil or ghee. Working in batches to avoid crowding, lay the shrimp in a single layer. Sear undisturbed for 2 to 2.5 minutes until the bottom edges turn opaque pink with dark caramelized blistered spots. Flip and sear the other side for an additional 2 minutes.\n\nFor Outdoor Grill / Skewers: Thread the prawns onto soaked bamboo or stainless steel skewers. Place over direct glowing charcoal heat (450°F / 230°C) for 2 to 3 minutes per side, brushing with melted ghee.\n\nFor Oven Broiler: Arrange marinated shrimp on a foil-lined baking sheet and broil on the top rack 4 inches from the heating element at 500°F (260°C) for 5 to 6 minutes total, flipping halfway through.",
+      },
+      {
+        step: 6,
+        title: "Ghee Baste and Chaat Masala Sprinkle",
+        instruction:
+          "Just as the shrimp curl into tender pink 'C' shapes and display smoky charred marks, brush immediately with melted cow ghee right in the hot pan or off the grill. Transfer to a resting plate and dust lightly with chaat masala.",
+      },
+      {
+        step: 7,
+        title: "Plate and Serve with Accompaniments",
+        instruction:
+          "Arrange the hot charred tandoori prawns on an oblong black serving platter. Garnish with fresh lime wedges. Serve immediately alongside a vibrant bowl of fresh diced cucumber-tomato-onion kachumber salad, chilled green mint-coriander chutney, and warm garlic naan or fragrant saffron pulao.",
+      },
+    ],
+    chefNotes: [
+      "The secret to restaurant-style tandoori coating that never slides off is roasting the besan (gram flour) and using thick hung curd or Greek yogurt with zero excess water.",
+      "The short 10-minute citrus cure firms up the prawn flesh so they maintain a crisp, snap-to-the-bite texture rather than getting soggy during high-heat cooking.",
+      "Always serve immediately while piping hot—as tandoori shrimp cool down, their moisture retreats, so eat them fresh from the grates.",
+    ],
+    nutrition: {
+      calories: 220,
+      proteinGrams: 32,
+      carbsGrams: 6,
+      fatGrams: 8,
+      fiberGrams: 1,
+      sodiumMg: 580,
+      servingSizeDescription: "5-6 jumbo tandoori shrimp (approx. 160g)",
+      perServing: {
+        calories: 220,
+        proteinGrams: 32,
+        fatGrams: 8,
+        carbsGrams: 6,
+        fiberGrams: 1,
+        sodiumMg: 580,
+      },
+      totalRecipe: {
+        calories: 880,
+        proteinGrams: 128,
+        fatGrams: 32,
+        carbsGrams: 24,
+        fiberGrams: 4,
+        sodiumMg: 2320,
+      },
+    },
+    storageInstructions:
+      "Best enjoyed immediately when freshly charred. Store leftovers in an airtight glass container in the refrigerator for up to 2 days. Reheat gently in a hot non-stick skillet with a drop of ghee for 1.5 minutes—do not microwave as it turns shrimp rubbery.",
+    freezingInstructions:
+      "Not recommended to freeze cooked shrimp, as the delicate texture will degrade. You can, however, marinate raw shrimp and freeze raw in an airtight freezer bag for up to 1 month; thaw overnight in the fridge and grill fresh.",
+    servingSuggestions: [
+      "Serve as an exquisite appetizer on a black ceramic platter with fresh lime wedges and spicy green mint-coriander chutney.",
+      "Pair with hot tandoori roti, garlic butter naan, or fragrant Bengali Basmati Pulao for a complete banquet meal.",
+      "Accompany with crisp, chilled kachumber salad and an iced glass of Bengali Borhani or Mango Lassi.",
+    ],
+    faqs: [
+      {
+        question: "Why do my shrimp get watery when grilling or pan-searing?",
+        answer:
+          "Excess surface moisture and thin watery yogurt cause shrimp to boil rather than sear. Thoroughly pat the shrimp dry with paper towels, use thick strained Greek yogurt, and dry-roast the gram flour (besan) which absorbs excess liquids.",
+      },
+      {
+        question: "Can I make this with frozen shrimp?",
+        answer:
+          "Yes! Thaw frozen shrimp completely in cold water, peel and devein, and pat completely dry with paper towels before starting the stage-one marinade.",
+      },
+      {
+        question: "How do I know when the tandoori shrimp are fully cooked?",
+        answer:
+          "Cooked shrimp turn opaque pearlescent pink and white, curving gently into a 'C' shape. If they curl into a tight circle ('O' shape), they are overdone.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Regional Culinary Director & Seafood Specialist",
+    },
+    updatedDate: "September 19, 2026",
+    tags: [
+      "Shrimp Tandoori",
+      "বাঙালি স্টাইল চিংড়ি তন্দুরি",
+      "Tandoori Prawns",
+      "Halal Seafood",
+      "Halal Fish & Seafood",
+      "Bengali Chingri",
+      "Tandoori Spices",
+      "Mustard Oil",
+      "Mughlai Fusion",
+      "Grilled Shrimp",
+      "Kachumber Salad",
+      "Mint Chutney",
+      "Halal Snacks",
+    ],
+  },
+  {
+    id: "rec-bengali-texas-chicken-bbq",
+    slug: "bengali-texas-chicken-bbq",
+    title: "Bengali Texas Chicken BBQ (বাঙালি টেক্সাস চিকেন বারবিকিউ / Smoked & Grilled Halal BBQ Chicken)",
+    category: "Halal Chicken",
+    categorySlug: "halal-chicken",
+    cuisine: "Tex-Mughlai Fusion & American Halal Barbecue",
+    description:
+      "Juicy, smoke-kissed Halal chicken leg quarters grilled over charcoal and hardwood embers (বাঙালি টেক্সাস চিকেন বারবিকিউ). Marinated in a pungent cold-pressed mustard oil and yogurt binder infused with roasted cumin, crushed black tellicherry pepper, garlic, ginger, Kashmiri chili, and a touch of panch phoron, smoked to succulent tenderness and finished with a sticky, caramelized glaze of Bengali spiced tamarind-jaggery barbecue sauce right on the blistered grill grates.",
+    introStory:
+      "Following in the footsteps of legendary Central Texas smokehouse traditions and the fragrant charcoal grills of Old Dhaka's Nazira Bazar, Bengali Texas Chicken BBQ (বাঙালি টেক্সাস চিকেন বারবিকিউ) brings the best of both pit worlds to the backyard grate. Where ordinary barbecue chicken often ends up either dried out or with rubbery skin, this method employs the time-honored Texas two-zone smoke-and-sear technique combined with South Asian yogurt-acid tenderization.\n\nWhole bone-in chicken leg quarters (thigh and drumstick attached) are scored and marinated in a robust emulsion of cold-pressed Bengali mustard oil, whisked whole milk yogurt, freshly pounded ginger-garlic paste, fresh lemon juice, coarse 16-mesh black pepper, roasted cumin, and crushed coriander. The meat is first smoked gently over indirect heat at 275°F (135°C) using aged pecan or post oak wood until the internal temperature reaches 155°F and the rendered chicken fat perfumes the air. In the final phase, the chicken quarters are moved directly over sizzling hot coals and repeatedly mopped with a signature Bengali Tamarind-Jaggery BBQ Glaze—a simmered reduction of tangy tamarind pulp, dark date palm jaggery, apple cider vinegar, smoked paprika, and roasted cumin. The glaze caramelizes into sticky, mahogany-blistered charred edges while sealing in an astonishingly juicy interior.",
+    heroImage: IMAGES.bengaliTexasChickenBbq,
+    prepTimeMinutes: 20,
+    cookTimeMinutes: 45,
+    totalTimeMinutes: 65,
+    servings: 6,
+    difficulty: "Medium",
+    calories: 460,
+    rating: 4.98,
+    reviewCount: 134,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified. Prepared exclusively with fresh, zabiha hand-slaughtered bone-in chicken leg quarters from certified Halal poultry farms, pure cold-pressed mustard oil, and natural spices with zero alcohol-based barbecue sauces, non-halal liquid smokes, or chemical marinades.",
+    potentialCautionNotes:
+      "Use bone-in chicken leg quarters or bone-in thighs for this recipe; boneless skinless chicken breasts will dry out before developing the signature charred barbecue crust. Do not apply the sugary tamarind barbecue glaze too early during smoking—apply only during the last 10 to 12 minutes over direct heat to avoid scorching the jaggery.",
+    ingredients: [
+      { amount: "6", unit: "large", name: "Halal chicken leg quarters (thigh & drumstick)", notes: "bone-in, skin-on (approx. 4.5 lbs / 2 kg), scored deeply to bone" },
+      { amount: "1/4", unit: "cup", name: "Cold-pressed Bengali mustard oil (shorsher tel)", notes: "essential pungent binder for Texas-Bengali bark" },
+      { amount: "1/2", unit: "cup", name: "Plain whole milk yogurt", notes: "whisked smooth; enzyme-tenderizes dark meat" },
+      { amount: "2", unit: "tbsp", name: "Fresh ginger paste", notes: "freshly crushed" },
+      { amount: "2", unit: "tbsp", name: "Fresh garlic paste", notes: "freshly crushed" },
+      { amount: "2", unit: "tbsp", name: "Fresh lemon juice" },
+      { amount: "1.5", unit: "tbsp", name: "Coarse 16-mesh black Tellicherry pepper", notes: "provides the peppery Texas barbecue crunch" },
+      { amount: "1.5", unit: "tbsp", name: "Coarse kosher sea salt" },
+      { amount: "1.5", unit: "tbsp", name: "Kashmiri red chili powder", notes: "for rich mahogany-red color and gentle warmth" },
+      { amount: "1", unit: "tbsp", name: "Roasted ground cumin (bhuna jeera)" },
+      { amount: "1", unit: "tbsp", name: "Ground coriander seed" },
+      { amount: "1", unit: "tsp", name: "Turmeric powder (haldi)" },
+      { amount: "1", unit: "tsp", name: "Bengali Panch Phoron", notes: "toasted and finely ground" },
+      { amount: "1", unit: "tsp", name: "Garam masala powder" },
+      { amount: "2", unit: "tbsp", name: "Pure cow ghee", notes: "melted, for grill basting" },
+      { amount: "3/4", unit: "cup", name: "Thick strained tamarind pulp (tetul kaath)", notes: "for the BBQ mop glaze" },
+      { amount: "1/2", unit: "cup", name: "Grated date palm jaggery (khejur gur) or dark brown sugar" },
+      { amount: "1/3", unit: "cup", name: "Halal tomato passata or organic ketchup" },
+      { amount: "2", unit: "tbsp", name: "Apple cider vinegar" },
+      { amount: "1", unit: "tsp", name: "Smoked paprika" },
+      { amount: "1/2", unit: "tsp", name: "Black salt (bit lobon)", notes: "for savory tang" },
+      { amount: "1/2", unit: "tsp", name: "Crushed red pepper flakes" },
+      { amount: "1", unit: "bunch", name: "Fresh cilantro and lemon wedges", notes: "for serving garnish" },
+    ],
+    substitutions: [
+      {
+        original: "Chicken Leg Quarters",
+        substitute: "Bone-in chicken thighs, drumsticks, or whole spatchcocked chicken",
+        notes: "Bone-in chicken thighs cook in 30 minutes and remain extraordinarily juicy on the grill.",
+      },
+      {
+        original: "Hardwood charcoal smoker",
+        substitute: "Outdoor gas grill with smoker box, or home oven broiler",
+        notes: "For indoor oven: bake on a wire rack at 400°F (200°C) for 35 minutes, brush with glaze, and broil 4 minutes until blistered.",
+      },
+      {
+        original: "Date palm jaggery (khejur gur)",
+        substitute: "Dark brown sugar, raw honey, or molasses",
+        notes: "Provides the requisite caramel viscosity and charred mahogany finish.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Trim and Score the Chicken Leg Quarters",
+        instruction:
+          "Rinse and thoroughly pat dry the chicken leg quarters with paper towels. Trim off any excess hanging skin or loose fat pockets around the thighs. Make 3 deep diagonal slashes across the thickest part of the thigh and 2 across the drumstick, cutting almost to the bone so the marinade penetrates deeply and the joints cook evenly.",
+      },
+      {
+        step: 2,
+        title: "Emulsify the Mustard-Yogurt & Spice Marinade",
+        instruction:
+          "In a large bowl, whisk together the cold-pressed mustard oil, whisked yogurt, ginger paste, garlic paste, lemon juice, coarse black pepper, kosher salt, Kashmiri chili powder, roasted cumin, ground coriander, turmeric, crushed panch phoron, and garam masala into a thick, vibrant orange-red marinade.",
+      },
+      {
+        step: 3,
+        title: "Marinate the Poultry",
+        instruction:
+          "Coat the chicken leg quarters thoroughly with the marinade, working it generously under the skin and deep into the scored flesh cuts. Cover and refrigerate for at least 2 hours (or overnight up to 12 hours for maximum flavor infusion). Remove from refrigerator 30 minutes before grilling to take off the chill.",
+      },
+      {
+        step: 4,
+        title: "Simmer the Bengali Tamarind-Jaggery BBQ Glaze",
+        instruction:
+          "While the chicken comes to room temperature, combine the tamarind pulp, date palm jaggery, tomato passata, apple cider vinegar, smoked paprika, black salt, and crushed chili flakes in a small saucepan over medium heat. Bring to a gentle boil, then simmer for 8–10 minutes, stirring occasionally, until thickened into a glossy, velvety barbecue mop sauce. Set aside half for basting and half for table dipping.",
+      },
+      {
+        step: 5,
+        title: "Set Up a Two-Zone Fire (275°F–300°F)",
+        instruction:
+          "Prepare your charcoal kettle grill, ceramic kamado, or offset smoker for two-zone indirect cooking: bank all hot coals to one side, leaving the other side unheated. Add chunks of aged pecan or post oak hardwood onto the hot coals. Close the lid and stabilize pit temperature between 275°F and 300°F (135°C–150°C). Lightly oil the grates.",
+      },
+      {
+        step: 6,
+        title: "Smoke Gently over Indirect Heat",
+        instruction:
+          "Place the chicken leg quarters skin-side up on the cooler, indirect side of the grill, with the drumsticks pointing toward the heat source. Close the lid and smoke undisturbed for 30–35 minutes until the skin renders taut and the internal temperature at the thickest part of the thigh registers 155°F (68°C).",
+      },
+      {
+        step: 7,
+        title: "Sear Over Coals and Mop with Caramelizing Glaze",
+        instruction:
+          "Brush the chicken pieces with melted cow ghee. Move the chicken quarters directly over the hot glowing coals skin-side down for 2–3 minutes to blister and crisp the skin (watch for flare-ups). Flip skin-side up and liberally mop with the warm Bengali Tamarind-Jaggery BBQ Glaze. Close the lid for 2 minutes to let the glaze caramelize into sticky, charred mahogany goodness. Baste one more time until internal temperature reaches 175°F–180°F (79°C–82°C)—the ideal texture for melt-in-the-mouth dark meat.",
+      },
+      {
+        step: 8,
+        title: "Rest and Serve Sizzling Hot",
+        instruction:
+          "Transfer the glistening chicken quarters from the grill grates onto a cutting board or platter. Let them rest for 5–7 minutes to allow the juices to redistribute. Garnish with chopped fresh cilantro, fresh lemon wedges, and crisp sliced red onions. Serve immediately with warm naan, parathas, or alongside grilled corn and chilled raita.",
+      },
+    ],
+    chefNotes: [
+      "Chicken dark meat (thighs and legs) tastes significantly more tender at 175°F–180°F than breast meat, because the extra heat dissolves the tough collagen around the joints into rich gelatin.",
+      "The combination of mustard oil and yogurt in the marinade is a classic South Asian technique: the lactic acid gently softens the meat while mustard oil infuses a distinct peppery piquancy that stands up to heavy wood smoke.",
+      "Never brush barbecue sauce containing sugar or jaggery early in the cook, as it will turn bitter and burn black before the meat cooks through. Reserve the glaze for the final 5 to 7 minutes over the coals.",
+    ],
+    nutrition: {
+      calories: 460,
+      proteinGrams: 42,
+      carbsGrams: 12,
+      fatGrams: 26,
+      fiberGrams: 1,
+      sodiumMg: 710,
+      servingSizeDescription: "1 whole chicken leg quarter with charred BBQ glaze (approx. 250g)",
+      perServing: {
+        calories: 460,
+        proteinGrams: 42,
+        fatGrams: 26,
+        carbsGrams: 12,
+        fiberGrams: 1,
+        sodiumMg: 710,
+      },
+      totalRecipe: {
+        calories: 2760,
+        proteinGrams: 252,
+        fatGrams: 156,
+        carbsGrams: 72,
+        fiberGrams: 6,
+        sodiumMg: 4260,
+      },
+    },
+    storageInstructions:
+      "Store leftover grilled chicken leg quarters in an airtight glass container in the refrigerator for up to 4 days. Reheat in an oven or air fryer at 350°F (175°C) for 8–10 minutes to restore the crispy skin and warm the glaze.",
+    freezingInstructions:
+      "Wrap individual cooled chicken quarters in wax butcher paper and foil, then seal in a freezer bag for up to 3 months. Thaw overnight in the refrigerator before reheating in the oven.",
+    servingSuggestions: [
+      "Serve piping hot with blistered garlic butter naan, tandoori rotis, or flaky Bengali lachha parathas.",
+      "Pair with a cooling cucumber-mint yogurt raita, sumac-dusted red onion salad, and roasted corn on the cob.",
+      "A superb main course for outdoor summer family cookouts, Eid barbecue parties, or weekend meal prep boxes.",
+    ],
+    faqs: [
+      {
+        question: "Can I use boneless chicken breasts instead of leg quarters?",
+        answer:
+          "While possible, boneless breasts dry out easily over prolonged smoke. If using breasts, marinate for only 1 hour and smoke at 300°F until internal temperature reaches 160°F, then glaze briefly so they stay juicy.",
+      },
+      {
+        question: "How do I prevent flare-ups on the charcoal grill when basting?",
+        answer:
+          "Keep the grill lid closed as much as possible to limit oxygen, and baste the chicken on the indirect side before sliding it over the hot coals for just 1 to 2 minutes of direct heat caramelization.",
+      },
+      {
+        question: "Can this recipe be made in an air fryer?",
+        answer:
+          "Yes! Air fry the marinated chicken leg quarters at 375°F (190°C) for 22–25 minutes until internal temp reaches 165°F. Brush generously with the tamarind glaze and air fry for an additional 3–4 minutes at 400°F (200°C) until sticky and caramelized.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Regional Culinary Director & Pitmaster Specialist",
+    },
+    updatedDate: "September 19, 2026",
+    tags: [
+      "Bengali Texas Chicken BBQ",
+      "বাঙালি টেক্সাস চিকেন বারবিকিউ",
+      "Halal BBQ Chicken",
+      "Smoked Chicken Leg Quarters",
+      "Halal Chicken",
+      "Texas Barbecue",
+      "Tamarind BBQ Glaze",
+      "Mustard Oil Marinade",
+      "Charcoal Grilled Chicken",
+      "Meal Prep",
+      "Summer Cookout",
+      "Dhaka Austin Fusion",
+    ],
+  },
+  {
+    id: "rec-bengali-texas-beef-bbq",
+    slug: "bengali-texas-beef-bbq",
+    title: "Bengali Texas Beef BBQ (বাঙালি টেক্সাস বিফ বারবিকিউ / Smoked Halal Beef Brisket)",
+    category: "Halal Beef",
+    categorySlug: "halal-beef",
+    cuisine: "Tex-Mughlai Fusion & American Halal Barbecue",
+    description:
+      "Legendary Texas-style low-and-slow smoked Halal beef brisket infused with bold Bengali spices (বাঙালি টেক্সাস বিফ বারবিকিউ). Coated with a jet-black peppery bark of coarsely cracked black tellicherry pepper, roasted cumin, panch phoron aromatics, garlic, and smoked paprika, smoked over post oak wood until meltingly tender with a vivid rosy smoke ring, sliced thick on butcher paper and drizzled with a glossy Bengali tamarind-jaggery barbecue mop glaze.",
+    introStory:
+      "Where Central Texas pitmaster craftsmanship meets the fiery soul of Bengali spice mastery—Bengali Texas Beef BBQ (বাঙালি টেক্সাস বিফ বারবিকিউ) represents the pinnacle of modern Halal barbecue fusion. Inspired by the rich traditions of both the Austin Hill Country smokehouses and Chittagong's slow-cooked Mezbani beef, this recipe takes a whole USDA Choice or Prime Halal beef brisket (packer cut, flat and point) and transforms it into unforgettably tender, gelatinous, bark-crusted perfection.\n\nUnlike traditional Texas brisket which uses strictly salt and black pepper ('Dalmatian rub'), this cross-cultural masterpiece builds upon a binder of cold-pressed Bengali mustard oil, coated in a specialized 'Dhaka-Austin Bark Rub': coarse 16-mesh black pepper, kosher salt, toasted cumin, roasted coriander, granulated garlic, Kashmiri chili, and finely crushed panch phoron. Smoked low and slow at 225°F–250°F over aromatic post oak, hickory, or pecan wood for 12 to 14 hours, the brisket develops a signature deep mahogany bark and an unmistakable pink smoke ring. Once reaching the stall at 165°F, it is wrapped in un-waxed pink peach butcher paper basted with pure beef tallow and pure cow ghee to preserve moisture without softening the bark. Sliced thick against the grain while steaming hot, each slice is crowned with an intoxicating drizzle of house-made Bengali Spiced Tamarind Barbecue Sauce—a velvety blend of sour tamarind pulp, date palm jaggery (gur), apple cider vinegar, and black salt (bit lobon).",
+    heroImage: IMAGES.bengaliTexasBeefBbq,
+    prepTimeMinutes: 30,
+    cookTimeMinutes: 720,
+    totalTimeMinutes: 750,
+    servings: 12,
+    difficulty: "Advanced",
+    calories: 540,
+    rating: 4.99,
+    reviewCount: 118,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified. Prepared exclusively with zabiha hand-slaughtered beef brisket from certified Halal ranches, smoked using pure hardwood (post oak or hickory) with zero alcohol-based spritzes, non-halal flavorings, or pork-cross-contaminated pit grates. Spritzed exclusively with apple cider vinegar, halal beef bone broth, and pure cow ghee.",
+    potentialCautionNotes:
+      "Patience and accurate temperature tracking are paramount. Do not rush the brisket or cook above 250°F (121°C); the internal collagen and connective tissue in the brisket flat require long, slow heat to break down into gelatin. Wrap in pink peach butcher paper (not foil) once the bark is set and internal temperature reads 165°F–170°F. Always let the cooked brisket rest wrapped in a warm dry cooler for at least 1 to 2 hours before slicing.",
+    ingredients: [
+      { amount: "12-14", unit: "lbs / 5.5-6.5 kg", name: "Halal whole packer beef brisket", notes: "USDA Choice or Prime, fat cap trimmed evenly to 1/4-inch" },
+      { amount: "1/4", unit: "cup", name: "Cold-pressed Bengali mustard oil", notes: "authentic aromatic binder that helps the dry rub adhere" },
+      { amount: "1/2", unit: "cup", name: "Coarse 16-mesh black Tellicherry pepper", notes: "crucial for the authentic crunchy Texas bark" },
+      { amount: "1/3", unit: "cup", name: "Coarse kosher sea salt" },
+      { amount: "2", unit: "tbsp", name: "Roasted ground cumin (bhuna jeera)", notes: "freshly toasted and ground" },
+      { amount: "2", unit: "tbsp", name: "Ground coriander seed" },
+      { amount: "2", unit: "tbsp", name: "Kashmiri red chili powder", notes: "for vivid red-amber color and mild warmth" },
+      { amount: "2", unit: "tbsp", name: "Granulated garlic powder" },
+      { amount: "1.5", unit: "tbsp", name: "Granulated onion powder" },
+      { amount: "1", unit: "tbsp", name: "Crushed Bengali Panch Phoron", notes: "toasted and finely ground fennel, cumin, mustard, fenugreek, and nigella" },
+      { amount: "1/4", unit: "cup", name: "Pure cow ghee or rendered halal beef tallow", notes: "melted, for brushing during butcher paper wrap" },
+      { amount: "1", unit: "batch", name: "Spritzing liquid", notes: "1 cup apple cider vinegar, 1 cup halal beef bone broth, 1/4 cup water, 1 tbsp halal Worcestershire sauce" },
+      { amount: "1", unit: "cup", name: "Thick strained tamarind pulp (tetul kaath)", notes: "for the signature Bengali BBQ glaze" },
+      { amount: "1/2", unit: "cup", name: "Grated date palm jaggery (khejur gur)", notes: "or dark brown sugar for deep molasses sweetness" },
+      { amount: "1/2", unit: "cup", name: "Halal tomato passata or organic ketchup" },
+      { amount: "1/4", unit: "cup", name: "Apple cider vinegar" },
+      { amount: "1", unit: "tbsp", name: "Smoked paprika" },
+      { amount: "1", unit: "tsp", name: "Black salt (bit lobon)", notes: "for authentic tangy umami" },
+      { amount: "1", unit: "tsp", name: "Bengali Bhaja Moshla (roasted cumin & chili)" },
+      { amount: "1", unit: "tbsp", name: "Freshly grated ginger" },
+    ],
+    substitutions: [
+      {
+        original: "Whole Packer Beef Brisket",
+        substitute: "Halal Beef Chuck Roast or Beef Short Ribs (Dino Ribs)",
+        notes: "Chuck roast delivers identical beefy shredded tenderness in 6 to 8 hours; short ribs yield monumental gelatinous bark on the bone.",
+      },
+      {
+        original: "Post oak hardwood smoker",
+        substitute: "Pellet grill, ceramic Kamado grill, or conventional home oven",
+        notes: "For indoor oven: braise low-and-slow at 225°F covered with butcher paper and foil, adding 1 tsp natural hardwood liquid smoke to the spritz.",
+      },
+      {
+        original: "Date palm jaggery (khejur gur)",
+        substitute: "Dark brown sugar or blackstrap molasses",
+        notes: "Provides the rich caramel-molasses notes essential for the glistening barbecue glaze.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Trim and Aerodynamically Shape the Brisket",
+        instruction:
+          "Place the cold brisket on a large cutting board. Trim the top fat cap evenly to approximately 1/4-inch thickness so the fat renders smoothly without shielding the meat. Remove the hard, brittle deckle fat on the underside between the flat and point. Round off any jagged corners so smoke flows smoothly over the meat surface without burning thin edges.",
+      },
+      {
+        step: 2,
+        title: "Apply Mustard Oil Binder and Dhaka-Austin Bark Rub",
+        instruction:
+          "Rub the entire surface of the brisket with 1/4 cup of cold-pressed Bengali mustard oil. In a bowl, combine the coarse 16-mesh black pepper, kosher salt, roasted cumin, ground coriander, Kashmiri chili, garlic powder, onion powder, and crushed panch phoron. Coat the brisket generously on all sides with the rub, pressing gently so the coarse spices adhere. Let the seasoned brisket sweat at room temperature for 45 minutes while preparing the smoker.",
+      },
+      {
+        step: 3,
+        title: "Fire the Smoker with Post Oak to 225°F–250°F",
+        instruction:
+          "Preheat your offset smoker, pellet grill, or charcoal pit to a steady 225°F–250°F (107°C–121°C) using aged post oak, hickory, or pecan hardwood. Establish a clean, translucent blue smoke stream before placing meat inside.",
+      },
+      {
+        step: 4,
+        title: "Low-and-Slow Smoke with Vinegar-Broth Spritz",
+        instruction:
+          "Place the brisket on the smoker grate with the fat cap facing up (or toward the heat source) and the thicker point facing the firebox. Smoke undisturbed for the first 3 hours to allow the spices to set. Then, every 45–60 minutes, lightly spritz the surface with the apple cider vinegar and beef broth mixture to keep the bark cool, humid, and receptive to smoke rings.",
+      },
+      {
+        step: 5,
+        title: "Wrap in Pink Peach Butcher Paper (The Texas Crutch)",
+        instruction:
+          "Around 6 to 8 hours into the cook, when the internal temperature reaches 165°F–170°F (74°C–77°C) and the outer bark is set, jet-black, and mahogany, transfer the brisket onto two overlapping sheets of pink peach butcher paper. Drizzle with melted cow ghee or rendered beef tallow. Wrap the brisket tightly like a package, folding the edges underneath. Return to the smoker and continue cooking until an instant-read thermometer slides into the center of the flat like warm butter (internal temperature 203°F–205°F / 95°C–96°C).",
+      },
+      {
+        step: 6,
+        title: "Simmer the Signature Bengali Tamarind BBQ Glaze",
+        instruction:
+          "While the brisket finishes smoking, combine tamarind pulp, date palm jaggery, tomato passata, apple cider vinegar, smoked paprika, black salt (bit lobon), grated ginger, and bhaja moshla in a saucepan over medium heat. Bring to a gentle simmer for 10–12 minutes until thickened into a glossy, velvety glaze. Taste and adjust sweetness or acidity.",
+      },
+      {
+        step: 7,
+        title: "The Pitmaster Cooler Rest (Crucial Step)",
+        instruction:
+          "Once probe-tender, remove the wrapped brisket from the smoker. Place the wrapped brisket inside an empty, clean cooler lined with clean towels (faux cambro). Let it rest undisturbed for 1.5 to 2 hours. This resting phase allows the rendered collagen to settle back into every muscle fiber, creating astonishingly juicy meat.",
+      },
+      {
+        step: 8,
+        title: "Slice Thick on Butcher Paper & Serve",
+        instruction:
+          "Transfer the rested brisket to a wooden board lined with butcher paper. Using a long scalloped slicing knife, slice the flat against the grain into pencil-thick 1/4-inch slices, and cube the rich point into succulent burnt ends. Drizzle generously with the warm Bengali Tamarind BBQ glaze. Serve immediately with warm parathas, tandoori naan, or brioche rolls, accompanied by pickled red onions and fresh green chilies.",
+      },
+    ],
+    chefNotes: [
+      "The '16-mesh' coarse grind of black pepper is what pitmasters swear by for creating a true aerodynamic bark that doesn't cake or wash off during spritzing.",
+      "Never substitute pink butcher paper with foil if you value a crunchy bark. Foil steams the meat and turns the bark soft; porous butcher paper lets steam escape while trapping rendered fat.",
+      "The brisket rest is not optional. Slicing too early causes all moisture to pour out onto the cutting board, leaving the slices dry within minutes.",
+    ],
+    nutrition: {
+      calories: 540,
+      proteinGrams: 48,
+      carbsGrams: 8,
+      fatGrams: 36,
+      fiberGrams: 1,
+      sodiumMg: 780,
+      servingSizeDescription: "2 thick slices of brisket flat and point with glaze (approx. 220g)",
+      perServing: {
+        calories: 540,
+        proteinGrams: 48,
+        fatGrams: 36,
+        carbsGrams: 8,
+        fiberGrams: 1,
+        sodiumMg: 780,
+      },
+      totalRecipe: {
+        calories: 6480,
+        proteinGrams: 576,
+        fatGrams: 432,
+        carbsGrams: 96,
+        fiberGrams: 12,
+        sodiumMg: 9360,
+      },
+    },
+    storageInstructions:
+      "Store unsliced leftover brisket tightly wrapped in butcher paper and foil in the refrigerator for up to 5 days. Reheat wrapped tightly in a 250°F (120°C) oven with a splash of beef broth and melted ghee for 30–40 minutes until warmed through.",
+    freezingInstructions:
+      "Vacuum-seal unsliced or thick-sliced brisket with a spoonful of rendered tallow; freeze for up to 3 months. Thaw overnight in the refrigerator and warm gently in the oven or sous-vide at 150°F.",
+    servingSuggestions: [
+      "Serve hot on brown butcher paper accompanied by warm flaky Bengali lachha parathas, garlic naan, or buttered brioche slider buns.",
+      "Accompany with house-made Bengali Tamarind BBQ glaze, sumac-pickled red onion rings, fresh jalapeño and green chili rounds, and cooling cucumber raita.",
+      "Pair with a frosty earthen cup of Dhaka Shahi Borhani or iced Karak Chai.",
+    ],
+    faqs: [
+      {
+        question: "How is Bengali Texas BBQ different from traditional Texas brisket?",
+        answer:
+          "Traditional Texas brisket uses strictly coarse black pepper and kosher salt. Bengali Texas BBQ honors that peppery core but enriches the bark with toasted cumin, coriander, and panch phoron, using cold-pressed mustard oil as the binder and glazing with sweet-sour tamarind and date palm jaggery.",
+      },
+      {
+        question: "What is the 'stall' and how do I push past it?",
+        answer:
+          "Between 150°F and 165°F, evaporative cooling causes the brisket's internal temperature to plateau for hours. Wrapping the brisket in pink peach butcher paper at 165°F traps radiant heat, pushes through the stall quickly, and prevents the meat from drying out.",
+      },
+      {
+        question: "Can this be made in an indoor kitchen oven?",
+        answer:
+          "Yes! Season identically, place on a wire rack over a rimmed baking sheet, and cook at 225°F with 1 tsp smoked paprika and a dash of natural liquid smoke in the spritz until internal temp reaches 165°F. Wrap tightly in butcher paper and foil, and bake until probe-tender at 203°F.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Regional Culinary Director & Pitmaster Specialist",
+    },
+    updatedDate: "September 19, 2026",
+    tags: [
+      "Bengali Texas Beef BBQ",
+      "Texas Beef BBQ",
+      "বাঙালি টেক্সাস বিফ বারবিকিউ",
+      "Smoked Beef Brisket",
+      "Halal BBQ",
+      "Texas Brisket",
+      "Halal Beef",
+      "BBQ Bark",
+      "Tamarind BBQ Sauce",
+      "Smoke Ring",
+      "American Halal",
+      "Mezbani Fusion",
+      "Low and Slow",
+    ],
+  },
+  {
+    id: "rec-bengali-mango-chutney",
+    slug: "bengali-mango-chutney",
+    title: "Mango Chutney (বাঙালি আম চাটনি / কাঁচা আমের চাটনি / بنگالی آم کی چٹنی)",
+    category: "Halal Vegetarian",
+    categorySlug: "halal-vegetarian",
+    cuisine: "Bengali & South Asian Heritage",
+    description:
+      "Traditional Bengali Sweet and Tangy Green Mango Chutney (বাঙালি আম চাটনি / কাঁচা আমের চাটনি / بنگالی آم کی چٹنی). Firm tart raw mango slices gently simmered in a luscious golden sugar syrup, tempered in pure mustard oil with aromatic black nigella seeds (kalo jeere / kalonji), whole dry red chilies, sweet fennel seeds, plump raisins, and a finishing pinch of roasted five-spice bhaja moshla and black salt (bit lobon).",
+    introStory:
+      "In the grand sequence of a traditional multi-course Bengali banquet, no feast is complete without the arrival of 'Aamer Chatni' (কাঁচা আমের চাটনি). Served traditionally toward the conclusion of the meal right after the savory rich curries and before the mishti (sweets), this jewel-toned condiment accompanied by crispy fried lentil papadums cleanses the palate with an intoxicating balance of mouth-puckering sourness, honeyed sweetness, and subtle warmth.\n\nCrafted from firm, unripe green mangoes (kachha aam), the fruit is sliced into thin wedges and bloomed in hot mustard oil with whole dried red chilies, sweet fennel seeds (mouri), and pungent black nigella seeds (kalo jeere). As the mangoes simmer in water with a pinch of turmeric and sea salt until translucent, pure cane sugar dissolves into a glossy, honey-like amber reduction speckled with jet-black nigella seeds and golden raisins. The grand finale is a sprinkling of freshly roasted Bengali 'bhaja moshla' (dry-roasted cumin, fennel, and dry red chili coarsely ground) and black salt (bit lobon). Bottled in clear glass jars, this shimmering relish is not only a wedding feast staple but also a beloved accompaniment to afternoon samosas, shingaras, parathas, and rice.",
+    heroImage: IMAGES.bengaliMangoChutney,
+    prepTimeMinutes: 15,
+    cookTimeMinutes: 20,
+    totalTimeMinutes: 35,
+    servings: 8,
+    difficulty: "Easy",
+    calories: 110,
+    rating: 4.98,
+    reviewCount: 146,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified and naturally vegan. Prepared with pure raw unripe green mangoes, organic cane sugar, cold-pressed mustard oil, and authentic whole spices with zero artificial preservatives, alcohol-based flavor extracts, non-halal gelatin thickeners, or chemical colors.",
+    potentialCautionNotes:
+      "Do not over-mash the mangoes while cooking; the slices should turn translucent and fork-tender while retaining their distinct wedge shape. Also, let the chutney cool completely before storing in an airtight sterilized glass jar—it will naturally thicken into a jammy consistency as it cools.",
+    ingredients: [
+      { amount: "3", unit: "large", name: "Firm unripe green mangoes (কাঁচা আম)", notes: "peeled and sliced into thin 1/4-inch lengthwise wedges" },
+      { amount: "1.5", unit: "cups", name: "Granulated cane sugar", notes: "or 1 cup sugar plus 1/2 cup grated date palm jaggery (gur) for deep caramel color" },
+      { amount: "1.5", unit: "cups", name: "Filtered water" },
+      { amount: "1.5", unit: "tbsp", name: "Pure cold-pressed mustard oil (shorsher tel)", notes: "essential for authentic Bengali pungency" },
+      { amount: "1", unit: "tsp", name: "Black nigella seeds (kalo jeere / kalonji)", notes: "provides iconic smoky-peppery speckles" },
+      { amount: "1/2", unit: "tsp", name: "Fennel seeds (mouri / saunf)", notes: "adds refreshing sweet herbal notes" },
+      { amount: "2", unit: "whole", name: "Dried red chilies (shukno morich)", notes: "broken in half to release gentle warmth" },
+      { amount: "1/2", unit: "tsp", name: "Turmeric powder (haldi)", notes: "for sunny golden-amber brilliance" },
+      { amount: "1/2", unit: "tsp", name: "Fine sea salt" },
+      { amount: "1/2", unit: "tsp", name: "Black salt (bit lobon)", notes: "finishing touch for Bengali tangy umami" },
+      { amount: "1", unit: "tsp", name: "Bengali Bhaja Moshla", notes: "freshly dry-roasted cumin, fennel, and whole red chili coarsely ground" },
+      { amount: "2", unit: "tbsp", name: "Golden raisins (kishmish)", notes: "soaked in warm water until plump" },
+      { amount: "1", unit: "tbsp", name: "Blanched slivered almonds or cashews", notes: "optional royal Mughal touch" },
+    ],
+    substitutions: [
+      {
+        original: "Unripe green mangoes (kacha aam)",
+        substitute: "Tart green Granny Smith apples or semi-ripe tart mangoes",
+        notes: "Granny Smith apples cook similarly in 15 minutes and mimic the crisp tartness of young green mangoes.",
+      },
+      {
+        original: "Pure cold-pressed mustard oil",
+        substitute: "Pure cow ghee or cold-pressed coconut oil",
+        notes: "Ghee provides a mellow, sweet nutty aroma favored in festive sweet preparations.",
+      },
+      {
+        original: "Granulated cane sugar",
+        substitute: "Date palm jaggery (khejur gur) or coconut sugar",
+        notes: "Lends a darker molasses color and an earthy, smoky undertone beloved during winter.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Prepare the Tart Green Mangoes",
+        instruction:
+          "Wash, peel, and dry the raw green mangoes thoroughly. Slice the mango cheeks away from the central seed stone, then cut lengthwise into uniform 1/4-inch thick slices or wedges. Toss with 1/2 teaspoon turmeric powder and 1/2 teaspoon sea salt in a bowl; let rest for 5 minutes so the mangoes absorb the bright yellow color.",
+      },
+      {
+        step: 2,
+        title: "Temper Mustard Oil with Kalonji and Dried Chilies",
+        instruction:
+          "Heat pure mustard oil in a heavy saucepan or karahi over medium heat until it gently smokes, then reduce heat to medium-low. Add the dried red chilies, sweet fennel seeds (mouri), and black nigella seeds (kalo jeere). Let them sizzle and splutter for 25–30 seconds until the oil is fragrant with nutty, peppery aromatics.",
+      },
+      {
+        step: 3,
+        title: "Sauté the Mango Wedges",
+        instruction:
+          "Slide the seasoned mango slices into the tempered oil. Sauté gently over medium heat for 3–4 minutes, turning carefully with a silicone spatula so the slices are coated in the fragrant oil and lightly softened without breaking.",
+      },
+      {
+        step: 4,
+        title: "Simmer with Water and Golden Raisins",
+        instruction:
+          "Pour in 1.5 cups of filtered water and add the soaked golden raisins. Bring the liquid to a rolling boil over medium-high heat. Cover the pan with a lid, lower heat to medium-low, and simmer for 6–8 minutes until the mango wedges turn tender and semi-translucent when pierced with a fork.",
+      },
+      {
+        step: 5,
+        title: "Dissolve Sugar into Honeyed Amber Syrup",
+        instruction:
+          "Uncover and pour in the granulated cane sugar (or jaggery). Stir gently until the sugar completely dissolves. Simmer uncovered on medium heat for 6–8 minutes as the syrup thickens into a glossy, honey-like consistency that coats the back of a spoon with tiny bubbles (one-string consistency). Do not over-reduce, as the syrup thickens substantially as it cools.",
+      },
+      {
+        step: 6,
+        title: "Infuse Bhaja Moshla and Black Salt (Bit Lobon)",
+        instruction:
+          "Sprinkle the freshly roasted Bengali Bhaja Moshla and tangy black salt (bit lobon) over the surface. Turn off the heat immediately. Gently swirl the pot so the spices perfume the golden syrup without bruising the tender mango pieces.",
+      },
+      {
+        step: 7,
+        title: "Cool, Jar in Glass, and Serve with Papad",
+        instruction:
+          "Allow the chutney to cool to room temperature in the pan. The mango pieces will plump up and absorb the sweet-tart syrup, turning glistening and translucent. Transfer into a sterilized glass jar. Serve chilled or at room temperature in small glass or brass bowls accompanied by crispy fried lentil papadums.",
+      },
+    ],
+    chefNotes: [
+      "The secret to authentic Bengali chutney is the 'bit lobon' (black salt) and 'bhaja moshla'. The sulfurous tang of black salt cuts right through the rich sweetness and elevates the green mango's fruit acidity.",
+      "The syrup should remain slightly loose when hot; it firms into a rich, spoonable preserve as it cools to room temperature and chills.",
+      "Always use a dry, clean spoon when dipping into your chutney jar to ensure it stays fresh for weeks without preservatives.",
+    ],
+    nutrition: {
+      calories: 110,
+      proteinGrams: 0.5,
+      carbsGrams: 28,
+      fatGrams: 0.5,
+      fiberGrams: 1.5,
+      sodiumMg: 120,
+      servingSizeDescription: "2 tablespoons (approx. 45g)",
+      perServing: {
+        calories: 110,
+        proteinGrams: 0.5,
+        fatGrams: 0.5,
+        carbsGrams: 28,
+        fiberGrams: 1.5,
+        sodiumMg: 120,
+      },
+      totalRecipe: {
+        calories: 880,
+        proteinGrams: 4,
+        fatGrams: 4,
+        carbsGrams: 224,
+        fiberGrams: 12,
+        sodiumMg: 960,
+      },
+    },
+    storageInstructions:
+      "Store cooled chutney in a clean, airtight sterilized glass jar in the refrigerator for up to 1 month. Always use a clean, dry spoon to serve.",
+    freezingInstructions:
+      "Can be frozen in small freezer-safe glass jars or airtight containers for up to 6 months. Thaw in the refrigerator overnight before serving.",
+    servingSuggestions: [
+      "Traditional Bengali multi-course style: Serve after dal and meat curries with freshly fried crispy lentil papadums.",
+      "Afternoon tea snack accompaniment: Perfect pairing for hot spicy vegetable shingaras, chicken patties, or onion piyaju pakoras.",
+      "Festive Eid & Iftar table: Refreshing sweet-tart relish alongside Haleem, Beef Bhuna, and fragrant Polao.",
+    ],
+    faqs: [
+      {
+        question: "Why is Bengali mango chutney served at the end of the meal?",
+        answer:
+          "In Bengali gastronomic philosophy, sweet-and-sour fruit chutneys (chatni) with papad act as a digestive palate cleanser, refreshing the tastebuds after heavy spiced meat, fish, and ghee-laden rice curries before the final sweet dessert (mishti) is served.",
+      },
+      {
+        question: "Can I use ripe mangoes instead of green raw mangoes?",
+        answer:
+          "Ripe sweet mangoes will turn into jam and lack the crucial tart bite. Traditional Aamer Chatni strictly calls for firm, sour green mangoes (kachha aam) so the interplay between fruit acid and sugar syrup is vibrant.",
+      },
+      {
+        question: "What is Bhaja Moshla?",
+        answer:
+          "Bhaja Moshla is the iconic Bengali dry-roasted spice blend made by gently toasting whole cumin seeds, fennel seeds, and whole dry red chilies in a dry pan until aromatic, then grinding them coarsely.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Regional Culinary Director & South Asian Heritage Specialist",
+    },
+    updatedDate: "September 19, 2026",
+    tags: [
+      "Mango Chutney",
+      "বাঙালি আম চাটনি",
+      "কাঁচা আমের চাটনি",
+      "بنگالی آم کی چٹنی",
+      "Aamer Chatni",
+      "Bengali Chutney",
+      "Kalonji",
+      "Bhaja Moshla",
+      "Halal Vegetarian",
+      "Halal Snacks",
+      "Eid Condiment",
+      "Papadum Accompaniment",
+    ],
+  },
+  {
+    id: "rec-pakistani-aloo-keema",
+    slug: "pakistani-aloo-keema",
+    title: "Pakistani Aloo Keema (Ground Beef And Potato Curry / গরুর কিমা ও আলুর কারি / آلو قیمہ)",
+    category: "Halal Beef",
+    categorySlug: "halal-beef",
+    cuisine: "Pakistani, Punjabi & South Asian Comfort Food",
+    description:
+      "Classic comforting Pakistani Aloo Keema (গরুর কিমা ও আলুর কারি / آلو قیمہ)—succulent lean ground beef (keema) braised with fork-tender golden potato cubes, caramelized onions, fresh ginger, garlic, ripe tomatoes, and fragrant whole spices in a deeply aromatic, glistening homestyle curry, finished with fresh cilantro, slivered ginger, and fiery green chilies.",
+    introStory:
+      "Across Pakistan, Bangladesh, and North India, Aloo Keema (آلو قیمہ / গরুর কিমা ও আলুর কারি) is celebrated as the undisputed sovereign of weeknight comfort food. Found in beloved roadside dhabas, Lahore family kitchens, and Dhaka dinner tables, this soul-satisfying curry strikes the ultimate balance between rich, savory minced beef and fluffy, sweet-starchy potatoes that drink up the seasoned spiced gravy like sponges.\n\nThe art of exceptional Aloo Keema lies in the traditional 'bhunai' technique—patiently sautéing the ground beef over medium-high heat with whole cumin seeds, black cardamom, cinnamon, fresh ginger-garlic paste, and finely minced red onions until the meat browns deeply and its natural moisture evaporates, allowing the aromatic spices and tomatoes to caramelize into a glossy, concentrated masala base (rogahn). Whisked whole-milk yogurt is folded in to lend silkiness and a delicate tang, before cubed golden potatoes are nestled in to simmer gently until fork-tender and infused with every drop of spiced beef jus. Garnished with a mountain of freshly chopped cilantro, julienned ginger matchsticks, and sliced green chilies, Aloo Keema is best enjoyed scooped up with piping-hot blistered tandoori naan, flaky layered parathas, or spooned over steaming basmati rice.",
+    heroImage: IMAGES.pakistaniAlooKeema,
+    prepTimeMinutes: 15,
+    cookTimeMinutes: 35,
+    totalTimeMinutes: 50,
+    servings: 5,
+    difficulty: "Easy",
+    calories: 420,
+    rating: 4.97,
+    reviewCount: 189,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified. Prepared exclusively with fresh, zabiha hand-slaughtered ground beef (80/20 or 85/15 lean-to-fat ratio) sourced from certified Halal butcheries, pure cow ghee or cold-pressed oil, and natural spices with zero artificial meat stock powders, pork enzyme derivatives, or chemical additives.",
+    potentialCautionNotes:
+      "Do not skip the 'bhunai' (browning) step after adding the minced beef; sautéing until the water completely evaporates and oil begins separating from the masala eliminates raw meat aroma and develops deep caramelized flavor. Cut the potatoes into uniform 1-inch cubes so they cook evenly without turning mushy.",
+    ingredients: [
+      { amount: "1.5", unit: "lbs / 700g", name: "Halal ground beef (keema)", notes: "80/20 or 85/15 lean-to-fat ratio for succulent flavor" },
+      { amount: "3", unit: "medium", name: "Russet or Yukon Gold potatoes", notes: "peeled and cut into uniform 1-inch cubes" },
+      { amount: "2", unit: "large", name: "Red or yellow onions", notes: "finely chopped" },
+      { amount: "3", unit: "large", name: "Ripe Roma tomatoes", notes: "finely diced or pureed" },
+      { amount: "1/4", unit: "cup", name: "Plain whole milk yogurt", notes: "whisked until smooth and creamy" },
+      { amount: "2", unit: "tbsp", name: "Fresh ginger-garlic paste", notes: "freshly crushed equal parts ginger and garlic" },
+      { amount: "1/4", unit: "cup", name: "Pure cow ghee, mustard oil, or neutral oil", notes: "for blooming spices and browning meat" },
+      { amount: "1.5", unit: "tbsp", name: "Kashmiri red chili powder", notes: "for rich red color and gentle warmth" },
+      { amount: "1", unit: "tsp", name: "Spicy red chili powder or cayenne", notes: "adjust to desired spice tolerance" },
+      { amount: "1", unit: "tbsp", name: "Ground coriander powder (dhania)" },
+      { amount: "1", unit: "tsp", name: "Roasted cumin powder (bhuna jeera)" },
+      { amount: "1/2", unit: "tsp", name: "Turmeric powder (haldi)" },
+      { amount: "1", unit: "tsp", name: "Garam masala powder", notes: "freshly ground whole spice blend" },
+      { amount: "1", unit: "tsp", name: "Kasuri methi (dried fenugreek leaves)", notes: "crushed between palms for dhaba aroma" },
+      { amount: "1.5", unit: "tsp", name: "Fine sea salt", notes: "or to taste" },
+      { amount: "Whole spices for tempering", unit: "batch", name: "1 tsp whole cumin seeds (zeera), 1 black cardamom, 3 green cardamoms, 1-inch cinnamon stick, 4 cloves, 1 bay leaf" },
+      { amount: "1", unit: "cup", name: "Warm water or halal beef broth", notes: "for simmering gravy" },
+      { amount: "3-4", unit: "whole", name: "Fresh green chilies", notes: "slit lengthwise or sliced into rounds" },
+      { amount: "1/3", unit: "cup", name: "Fresh cilantro / coriander leaves", notes: "finely chopped for garnish" },
+      { amount: "1", unit: "tbsp", name: "Fresh ginger", notes: "peeled and sliced into thin julienne matchsticks" },
+      { amount: "1", unit: "whole", name: "Fresh lemon", notes: "cut into wedges for serving" },
+    ],
+    substitutions: [
+      {
+        original: "Halal ground beef (keema)",
+        substitute: "Halal ground lamb, goat (mutton keema), or ground chicken/turkey",
+        notes: "Mutton keema gives a rich rustic dhaba flavor; ground chicken cooks 10 minutes faster with a lighter profile.",
+      },
+      {
+        original: "Potatoes (Aloo)",
+        substitute: "1 cup sweet potato cubes or 1 cup sweet green peas (Keema Matar)",
+        notes: "Keema Matar is another beloved South Asian variation; add frozen or fresh green peas in the last 5 minutes of simmering.",
+      },
+      {
+        original: "Fresh Roma tomatoes",
+        substitute: "3 tbsp double-concentrated tomato paste whisked into 1/2 cup warm water",
+        notes: "Produces an equally rich, thick red masala gravy with concentrated sweetness.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Bloom Whole Spices and Caramelize Onions",
+        instruction:
+          "Heat ghee or oil in a heavy-bottomed pan, Dutch oven, or karahi over medium heat. Add the whole spices (cumin seeds, black cardamom, green cardamoms, cinnamon stick, cloves, and bay leaf). Let them sizzle and splutter for 30–40 seconds until intensely fragrant. Add the finely chopped onions and sauté for 8–10 minutes, stirring frequently, until they turn a rich golden-amber brown.",
+      },
+      {
+        step: 2,
+        title: "Sauté Ginger-Garlic and Bhunai (Brown) the Ground Beef",
+        instruction:
+          "Stir in the fresh ginger-garlic paste and sauté for 1–2 minutes until the raw aroma dissipates. Increase the heat to medium-high and add the ground beef (keema). Break up any clumps with a wooden spoon. Sauté continuously for 8–10 minutes (the essential 'bhunai' technique) until all the released meat juices evaporate completely and the minced beef begins browning and sizzling in the rendered oil.",
+      },
+      {
+        step: 3,
+        title: "Integrate Ground Spices and Stewed Tomatoes",
+        instruction:
+          "Lower the heat slightly to medium. Add the Kashmiri red chili powder, spicy chili powder, coriander powder, roasted cumin powder, turmeric powder, and sea salt. Stir-fry the spices with the meat for 60 seconds to release their essential oils. Add the diced tomatoes and cook for 5–6 minutes, stirring and pressing down with your spoon, until the tomatoes break down completely into a luscious, glossy red masala.",
+      },
+      {
+        step: 4,
+        title: "Whisk in Yogurt and Simmer Meat",
+        instruction:
+          "Reduce the heat to low. Whisk the plain yogurt until silky and stir it smoothly into the keema. Cook for 3–4 minutes until the yogurt is fully integrated and tiny beads of red-gold oil (rogahn) begin separating at the edges of the pan.",
+      },
+      {
+        step: 5,
+        title: "Add Potato Cubes and Braise until Fork-Tender",
+        instruction:
+          "Add the 1-inch potato cubes and 1 cup of warm water (or halal beef broth). Stir well to combine. Bring the curry to a gentle boil, then cover the pot with a tight-fitting lid and reduce heat to medium-low. Simmer undisturbed for 12–15 minutes, or until the potatoes are completely fork-tender and creamy in the center without falling apart.",
+      },
+      {
+        step: 6,
+        title: "Infuse Kasuri Methi, Garam Masala and Chilies",
+        instruction:
+          "Remove the lid. If the gravy is too liquid, increase heat to medium for 2 minutes to reduce to your desired thick, glistening consistency. Sprinkle the crushed kasuri methi (dried fenugreek), freshly ground garam masala, and slit green chilies over the curry. Stir gently to avoid breaking the tender potato cubes. Cover and let rest on lowest heat for 3 minutes for the aromas to meld.",
+      },
+      {
+        step: 7,
+        title: "Garnish with Fresh Cilantro and Serve",
+        instruction:
+          "Turn off the heat. Transfer the steaming Pakistani Aloo Keema into a wide serving bowl. Garnish generously with freshly chopped cilantro leaves and thin slivers of julienned ginger. Serve immediately with warm blistered tandoori naan, parathas, or basmati rice, accompanied by fresh lemon wedges and crisp onion rings.",
+      },
+    ],
+    chefNotes: [
+      "The 'bhunai' stage is non-negotiable in keema cooking. Sautéing the minced meat until all liquid evaporates eliminates any gaminess and creates rich caramelized fond on the bottom of the pot.",
+      "Rubbing dried kasuri methi vigorously between your palms before adding crushes the leaves and releases their potent volatile aromatic oils.",
+      "A 80/20 or 85/15 lean-to-fat beef ratio delivers optimal flavor and succulence; if using ultra-lean 90/10 beef, add an extra tablespoon of pure cow ghee for moisture.",
+    ],
+    nutrition: {
+      calories: 420,
+      proteinGrams: 32,
+      carbsGrams: 24,
+      fatGrams: 22,
+      fiberGrams: 4,
+      sodiumMg: 610,
+      servingSizeDescription: "1 generous bowl with potatoes and gravy (approx. 280g)",
+      perServing: {
+        calories: 420,
+        proteinGrams: 32,
+        fatGrams: 22,
+        carbsGrams: 24,
+        fiberGrams: 4,
+        sodiumMg: 610,
+      },
+      totalRecipe: {
+        calories: 2100,
+        proteinGrams: 160,
+        fatGrams: 110,
+        carbsGrams: 120,
+        fiberGrams: 20,
+        sodiumMg: 3050,
+      },
+    },
+    storageInstructions:
+      "Store cooled leftover Aloo Keema in an airtight glass container in the refrigerator for up to 4 days. In fact, the flavors deepen and improve the next day as the potatoes continue absorbing the spiced gravy! Reheat in a covered skillet over medium-low heat with 2 tablespoons of water.",
+    freezingInstructions:
+      "Aloo Keema can be frozen in airtight freezer containers for up to 2 months. Note that cooked potatoes can become slightly softer upon thawing, but the rich beef curry retains its exquisite flavor. Thaw in the refrigerator overnight before reheating.",
+    servingSuggestions: [
+      "Serve hot with pillowy garlic butter tandoori naan, whole wheat rotis, or flaky lachha parathas.",
+      "Delicious layered over fragrant cumin rice (jeera rice), steamed Kalijeera rice, or sweet pea pulao.",
+      "Pair with crisp red onion rings tossed with sumac, fresh mint yogurt raita, and a cold glass of salted lassi or Borhani.",
+    ],
+    faqs: [
+      {
+        question: "What is the best cut and grind of beef for Aloo Keema?",
+        answer:
+          "Regular coarse-ground Halal beef chuck with 15% to 20% fat provides the best texture and rich flavor. Coarse mince maintains distinct meat morsels rather than becoming pasty.",
+      },
+      {
+        question: "Can I make this curry dry (sukha) or saucy (gravy)?",
+        answer:
+          "Yes! For a dry dhaba-style keema, simmer with only 1/2 cup of water until the sauce clings tightly to the meat. For a more saucy curry to pour over rice, use 1 to 1.5 cups of broth or water.",
+      },
+      {
+        question: "Why do my potatoes take long to cook in keema?",
+        answer:
+          "Acid from tomatoes and yogurt can slow down potato softening. Be sure to cut potatoes into small 1-inch cubes and simmer covered over medium-low heat until completely fork-tender.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Regional Culinary Director & South Asian Heritage Specialist",
+    },
+    updatedDate: "September 19, 2026",
+    tags: [
+      "Pakistani Aloo Keema",
+      "Aloo Keema",
+      "Ground Beef And Potato Curry",
+      "গরুর কিমা ও আলুর কারি",
+      "آلو قیمہ",
+      "Halal Beef",
+      "Keema Curry",
+      "Pakistani Comfort Food",
+      "Meal Prep",
+      "Weeknight Dinner",
+      "Dhaba Style Keema",
+      "Tandoori Naan",
+    ],
+  },
+  {
+    id: "rec-bengali-chicken-biryani",
+    slug: "bengali-chicken-biryani",
+    title: "Bengali Chicken Biryani (বাঙালি চিকেন বিরিয়ানি / بنگالی چکن بریانی)",
+    category: "Halal Chicken",
+    categorySlug: "halal-chicken",
+    cuisine: "Bengali, Kolkata-Mughlai & Awadhi Heritage",
+    description:
+      "The undisputed crown jewel of Bengali culinary craftsmanship—royal Bengali Chicken Biryani (বাঙালি চিকেন বিরিয়ানি / بنگالی چکن بریانی). Fragrant long-grain aged Basmati rice layered with succulent bone-in chicken thighs, signature golden-fried melt-in-the-mouth whole potatoes (biryani aloo), whole hard-boiled eggs, and golden fried onions (beresta), infused with saffron milk, pure cow ghee, kewra water, and a whisper of royal meetha ittar, slow-cooked to fragrant perfection on traditional low-heat dum.",
+    introStory:
+      "Born from the culinary alchemy of the royal Awadhi kitchens when Nawab Wajid Ali Shah was exiled to Metiabruz in Bengal in 1856, the Bengali Biryani (বাঙালি বিরিয়ানি) evolved into one of the most sublime and poetic rice masterworks in the world. While Lucknow biryanis focus purely on floral meat broths and Hyderabadi biryanis burst with fiery masalas, the Bengali version is celebrated for its subtlety, aromatic lightness, and two iconic, non-negotiable additions: large golden-fried potatoes (biryani aloo) and whole boiled eggs.\n\nThe large potato is revered by Bengalis above all else—it is gently parboiled, deep-fried until blistered and golden, and braised directly in the rich chicken yakhni broth where it absorbs all the savory meat juices, aromatic spices, and pure ghee until it turns melt-in-the-mouth tender like butter. Fragrant aged long-grain Basmati rice is steeped in whole spices and parboiled to precise 70% doneness before being layered over the succulent spiced chicken pieces and potatoes. The assembly is perfumed with warm saffron-infused milk, sweet mawa (khoya), dried aloo bukhara (sour plums), rose water, kewra essence, and a microscopic drop of royal food-grade Meetha Ittar (edible sweet attar). Sealed tightly in a heavy handi pot or terracotta clay matka and cooked over a gentle, indirect flame (dum), the steam locks every nuance of flavor inside the grains. Served piping hot in rustic earthenware bowls on fresh banana leaves with a hard-boiled egg, cooling onion-cucumber salad, and chilled mint raita, this biryani is an unforgettable celebration of Bengali soul and Mughal heritage.",
+    heroImage: IMAGES.bengaliChickenBiryani,
+    prepTimeMinutes: 45,
+    cookTimeMinutes: 55,
+    totalTimeMinutes: 100,
+    servings: 6,
+    difficulty: "Medium",
+    calories: 620,
+    rating: 4.99,
+    reviewCount: 342,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified. Prepared exclusively with zabiha hand-slaughtered bone-in chicken leg quarters, pure cow ghee, whole milk dairy, and 100% alcohol-free certified essences (kewra water, rose water, and food-grade edible sweet ittar). Contains no artificial meat broths, alcohol-based flavorings, or non-halal animal fats.",
+    potentialCautionNotes:
+      "Do not over-boil the rice in the initial step; remove the basmati at exactly 70% doneness (when the grain breaks into 3 pieces when pressed between your thumb and forefinger). The remaining 30% of cooking occurs gently in the trapped steam during the 25-minute sealed dum stage. Also, use food-grade Meetha Ittar extremely sparingly—only 1 to 2 drops is plenty to perfume the entire pot without overpowering.",
+    ingredients: [
+      { amount: "2", unit: "lbs / 900g", name: "Halal bone-in chicken thighs & drumsticks", notes: "skinless, scored deeply to absorb marinade" },
+      { amount: "3", unit: "cups / 600g", name: "Aged extra-long grain Basmati rice (1121 grade)", notes: "rinsed gently until water runs clear and soaked for 30 minutes" },
+      { amount: "3", unit: "large", name: "Yukon gold or russet potatoes", notes: "peeled, halved crosswise or whole, parboiled with turmeric and salt, then golden-fried" },
+      { amount: "4-6", unit: "whole", name: "Hard-boiled eggs", notes: "peeled, lightly scored, and pan-fried with a pinch of turmeric and salt" },
+      { amount: "2", unit: "cups", name: "Golden fried onions (Beresta)", notes: "thinly sliced red onions fried until crisp and golden-amber, divided" },
+      { amount: "1/2", unit: "cup", name: "Plain whole milk yogurt", notes: "whisked until completely silky" },
+      { amount: "2", unit: "tbsp", name: "Fresh ginger paste", notes: "freshly grated" },
+      { amount: "2", unit: "tbsp", name: "Fresh garlic paste", notes: "freshly crushed" },
+      { amount: "1.5", unit: "tbsp", name: "Kashmiri red chili powder", notes: "for rich sunset color without burning heat" },
+      { amount: "1", unit: "tbsp", name: "Roasted cumin and coriander powder" },
+      { amount: "1.5", unit: "tbsp", name: "Bespoke Bengali Biryani Masala", notes: "freshly ground green cardamom, mace (javitri), nutmeg (jaiphal), cloves, cinnamon, shahi jeera, and cubeb pepper (kabab chini)" },
+      { amount: "1/2", unit: "cup", name: "Pure cow ghee", notes: "divided between cooking gravy and layering rice" },
+      { amount: "1/4", unit: "cup", name: "Mustard oil or neutral oil", notes: "for frying potatoes and onions" },
+      { amount: "6-8", unit: "pieces", name: "Dried aloo bukhara (sour plums)", notes: "essential Bengali sweet-tart flavor bursts" },
+      { amount: "1/2", unit: "cup", name: "Warm whole milk", notes: "steeped with generous saffron threads (kesar)" },
+      { amount: "1", unit: "tbsp", name: "Kewra water", notes: "alcohol-free aromatic essence" },
+      { amount: "1", unit: "tbsp", name: "Rose water", notes: "culinary grade distilled floral water" },
+      { amount: "1-2", unit: "drops", name: "Food-grade Meetha Ittar (edible sweet attar)", notes: "the regal Mughlai Metiabruz perfume" },
+      { amount: "3", unit: "tbsp", name: "Unsweetened Khoya / Mawa (crumbled)", notes: "adds decadent richness between rice layers (optional)" },
+      { amount: "Whole spices for rice", unit: "batch", name: "4 green cardamoms, 2 black cardamoms, 1 cinnamon stick, 4 cloves, 2 bay leaves, 1 star anise, 1 tsp shahi jeera, 2 tbsp sea salt" },
+      { amount: "1/4", unit: "cup", name: "Fresh mint and cilantro leaves", notes: "finely chopped for aromatic layering" },
+    ],
+    substitutions: [
+      {
+        original: "Halal bone-in chicken thighs & drumsticks",
+        substitute: "Halal mutton or goat leg / shoulder chunks",
+        notes: "Transforms the dish into legendary Kolkata Mutton Biryani; braise mutton for 45 minutes until tender before assembling.",
+      },
+      {
+        original: "Food-grade Meetha Ittar",
+        substitute: "1 extra teaspoon kewra water and a pinch of ground cardamom and mace",
+        notes: "Mughlai sweet ittar gives a distinct royal wedding fragrance; if unavailable, kewra and mace provide comparable floral warmth.",
+      },
+      {
+        original: "Unsweetened Khoya / Mawa",
+        substitute: "2 tbsp full-fat milk powder or 2 tbsp heavy clotted cream",
+        notes: "Recreates the velvety mouthfeel and subtle dairy sweetness found in luxury Shahi biryanis.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Marinate the Succulent Chicken",
+        instruction:
+          "In a large bowl, combine the scored chicken pieces with whisked yogurt, ginger paste, garlic paste, Kashmiri red chili powder, roasted cumin-coriander powder, 1 tablespoon of Bengali biryani masala, half of the crushed fried onions (beresta), 1 teaspoon salt, and 1 tablespoon of mustard oil. Massage the spices thoroughly into the cuts of meat. Cover and marinate for at least 1 hour (or refrigerate overnight for best results).",
+      },
+      {
+        step: 2,
+        title: "Fry the Signature Biryani Potatoes (Aloo)",
+        instruction:
+          "Peel the large potatoes and cut in half crosswise (or leave whole if medium). Parboil in lightly salted water with 1/2 tsp turmeric for 6–8 minutes until knife-tender on the surface but still firm in the center. Drain thoroughly. Heat oil and 1 tablespoon of ghee in a pan over medium heat; fry the potatoes until evenly golden-brown and blistered all over (about 5–7 minutes). Remove and set aside.",
+      },
+      {
+        step: 3,
+        title: "Sear Chicken and Braise with Potatoes in Gravy (Koshano)",
+        instruction:
+          "In a heavy-bottomed biryani pot or degchi, melt 3 tablespoons of ghee. Add the marinated chicken pieces and sear over high heat for 6–8 minutes until lightly browned. Add 1 cup of warm water, the fried potatoes, and the dried aloo bukhara. Cover and simmer over medium-low heat for 15 minutes until the chicken is 80% cooked and the potatoes are tender, having absorbed the rich spiced gravy. Separate chicken and potatoes from the bottom gravy, reserving the concentrated yakhni.",
+      },
+      {
+        step: 4,
+        title: "Parboil the Fragrant Basmati Rice (70% Cooked)",
+        instruction:
+          "In a large pot, bring 12 cups of water to a rolling boil with 2 tablespoons of sea salt and the whole spices (green and black cardamoms, cinnamon, cloves, bay leaves, star anise, shahi jeera, and 1 teaspoon of ghee). Add the soaked, drained basmati rice. Boil vigorously for exactly 5–6 minutes until the rice is 70% cooked (grains should be elongated and pliable, breaking into 3 firm parts when pinched). Drain immediately in a wide colander and spread gently to release steam.",
+      },
+      {
+        step: 5,
+        title: "Infuse Royal Saffron Milk & Aromatics",
+        instruction:
+          "In a warm bowl, stir saffron threads into warm milk until it turns a brilliant sunset golden-orange. Whisk in the kewra water, rose water, melted ghee, and 1 to 2 drops of food-grade Meetha Ittar. Set aside.",
+      },
+      {
+        step: 6,
+        title: "Layer the Biryani in Traditional Earthenware or Degchi",
+        instruction:
+          "At the base of your heavy pot (or terracotta clay handi), layer the chicken pieces with their rich gravy. Nest the golden biryani potatoes and fried hard-boiled eggs between the meat pieces. Scatter half of the remaining fried onions (beresta), chopped mint, cilantro, and crumbled khoya. Layer the parboiled basmati rice gently over the chicken and potatoes without pressing down. Drizzle the saffron milk, aromatic essence mixture, and remaining ghee generously over the rice surface. Top with the final crispy beresta.",
+      },
+      {
+        step: 7,
+        title: "Sealed Dum Cooking (Low-Heat Steam Sealing)",
+        instruction:
+          "Seal the rim of the pot tightly with heavy aluminum foil or soft wheat dough, then place the heavy lid on top to create an airtight seal. Place a heavy cast-iron tawa/griddle on the stovetop over high heat for 5 minutes, then place the sealed biryani handi on the tawa. Reduce heat to low and cook on dum for 25 minutes. Turn off the heat and let the pot rest undisturbed for 15 minutes without lifting the lid so the internal steam settles.",
+      },
+      {
+        step: 8,
+        title: "Clay Pot & Banana Leaf Presentation",
+        instruction:
+          "Carefully unseal the pot. Using a wide flat spatula, gently fold from the edges toward the center to reveal the glistening layers of saffron-streaked basmati, spiced chicken, tender potato, and egg. Spoon into traditional terracotta handi bowls lined with fresh banana leaves. Serve piping hot with chilled mint raita, sliced cucumber and red onion rings, fresh green chilies, and a glass of Dhaka Shahi Borhani.",
+      },
+    ],
+    chefNotes: [
+      "The potato in Bengali biryani is not an afterthought or filler; it is the crowning glory. Searing it and simmering it in the chicken yakhni allows it to drink up all the rich spices and pure ghee.",
+      "Meetha Ittar is intensely concentrated. Never pour it directly from the bottle; use a dropper or dip the tip of a toothpick into the ittar and swirl into the saffron milk.",
+      "Using a heavy cast-iron tawa under the handi during dum provides gentle, indirect radiant heat that ensures zero scorching at the base of the pot.",
+    ],
+    nutrition: {
+      calories: 620,
+      proteinGrams: 42,
+      carbsGrams: 68,
+      fatGrams: 20,
+      fiberGrams: 4,
+      sodiumMg: 740,
+      servingSizeDescription: "1 generous handi portion with 1 potato, 1 egg, and chicken (approx. 420g)",
+      perServing: {
+        calories: 620,
+        proteinGrams: 42,
+        fatGrams: 20,
+        carbsGrams: 68,
+        fiberGrams: 4,
+        sodiumMg: 740,
+      },
+      totalRecipe: {
+        calories: 3720,
+        proteinGrams: 252,
+        fatGrams: 120,
+        carbsGrams: 408,
+        fiberGrams: 24,
+        sodiumMg: 4440,
+      },
+    },
+    storageInstructions:
+      "Store leftover biryani in an airtight glass container in the refrigerator for up to 4 days. Reheat gently in a covered saucepan with a tablespoon of water or milk on low heat, or microwave covered with a damp paper towel to restore moisture to the rice.",
+    freezingInstructions:
+      "Cooled biryani can be frozen in sealed airtight freezer-safe containers for up to 1 month. Thaw overnight in the refrigerator and steam in a covered vessel until hot.",
+    servingSuggestions: [
+      "Serve steaming hot in rustic earthenware clay handi pots over vibrant green banana leaves.",
+      "Pair with cooling cucumber-onion salad tossed with lime juice, and a bowl of thick cumin-spiced mint yogurt raita.",
+      "Accompany with a chilled clay kulhar cup of royal Dhaka Shahi Borhani or sweet Rooh Afza sharbat.",
+    ],
+    faqs: [
+      {
+        question: "Why does Bengali biryani always have a large potato?",
+        answer:
+          "When Nawab Wajid Ali Shah was exiled to Metiabruz (Kolkata) in 1856, royal chefs incorporated large potatoes into the biryani. The potato was an exotic delicacy that absorbed the aromatic meat jus and ghee even better than meat itself, becoming the signature beloved hallmark of Bengali biryani.",
+      },
+      {
+        question: "How do I know when the rice is at 70% doneness?",
+        answer:
+          "Take a grain of basmati between your thumb and forefinger and press. If it bends slightly and snaps into three firm pieces without squishing into paste, it is precisely 70% done and ready to drain.",
+      },
+      {
+        question: "What is Meetha Ittar and can it be omitted?",
+        answer:
+          "Meetha Ittar is an edible, food-grade perfume distilled from musk, sandalwood, and floral essences. It gives Kolkata and Bengali biryani its iconic street-side and royal banquet scent. If unavailable, use kewra water and a pinch of ground mace and cardamom.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Regional Culinary Director & Heritage Biryani Master",
+    },
+    updatedDate: "September 19, 2026",
+    tags: [
+      "Bengali Chicken Biryani",
+      "বাঙালি চিকেন বিরিয়ানি",
+      "بنگالی چکن بریانی",
+      "Chicken Biryani",
+      "Kolkata Biryani",
+      "Biryani Aloo",
+      "Halal Chicken",
+      "Halal Rice & Curry",
+      "Eid Special",
+      "Ramadan Feast",
+      "Dum Biryani",
+      "Mughlai Heritage",
+      "Terracotta Handi",
+    ],
+  },
+  {
+    id: "rec-bangladeshi-beef-noodles",
+    slug: "bangladeshi-beef-noodles",
+    title: "Bangladeshi Beef Noodles (বাংলাদেশি বিফ নুডলস / بنگلہ دیشی بیف نوڈلز)",
+    category: "Halal Beef",
+    categorySlug: "halal-beef",
+    cuisine: "Bangla-Chinese & Bangladeshi Street Food",
+    description:
+      "Iconic Bangladeshi Chinese restaurant-style beef noodles (বাংলাদেশি বিফ নুডলস / بنگلہ دیشی بیف نوڈلز)—thick, chewy noodles tossed over screaming-hot wok flames with velvety marinated beef strips, crisp green capsicum, julienned carrots, fiery green & red chilies, dark mushroom soy sauce, oyster-style stir-fry sauce, and aromatic toasted sesame oil, finished with fresh scallions and toasted white sesame seeds.",
+    introStory:
+      "In Bangladesh, 'Bangla-Chinese' cuisine is a beloved institution in its own right. Born in the vibrant metropolitan dining districts of Dhanmondi, Bailey Road, and Gulshan in Dhaka, as well as GEC Circle in Chittagong, Chinese cooking was passionately adapted to the Bengali palate—bolder, savorier, and packed with zesty fresh green chilies, minced garlic, ginger, and aromatic toasted sesame oil. Among these revered staples, Bangladeshi Beef Noodles (বাংলাদেশি বিফ নুডলস) stands out as an all-time favorite street food and celebratory family order.\n\nUnlike mild East Asian lo mein, the authentic Bangladeshi rendition pairs thick, springy noodles with velvety strips of Halal beef flank or sirloin, crunchy green capsicum (bell pepper), shredded carrots, crushed red chilies, and fiery sliced bird's eye chilies. The secret to authentic restaurant-style beef noodles lies in 'velveting' the beef with cornstarch, soy sauce, and white vinegar so the meat stays astonishingly tender and juicy under scorching heat, followed by high-heat wok tossing ('wok hei') that caramelizes the savory dark glaze around every noodle strand. Garnished with sliced green onions and nutty toasted sesame seeds, it delivers an unforgettable harmony of umami, crunch, and chili heat.",
+    heroImage: IMAGES.bangladeshiBeefNoodles,
+    prepTimeMinutes: 20,
+    cookTimeMinutes: 15,
+    totalTimeMinutes: 35,
+    servings: 4,
+    difficulty: "Easy",
+    calories: 480,
+    rating: 4.98,
+    reviewCount: 162,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified. Prepared exclusively with zabiha hand-slaughtered Halal beef sirloin or flank steak. All sauces—including dark soy sauce, oyster-style stir-fry sauce, and toasted sesame oil—are verified 100% alcohol-free and certified Halal, completely free from non-halal animal extracts or wine vinegars.",
+    potentialCautionNotes:
+      "Stir-frying requires screaming-high heat; have all your ingredients prepped and within arm's reach before lighting the stove. Sear the beef quickly without crowding the wok so it sears with caramelized edges rather than stewing in its juices.",
+    ingredients: [
+      { amount: "1", unit: "lb / 450g", name: "Halal beef sirloin or flank steak", notes: "sliced thinly against the grain into 2-inch long bite-sized strips" },
+      { amount: "12", unit: "oz / 350g", name: "Thick fresh wheat noodles, egg noodles, or udon", notes: "boiled al dente, rinsed in cold water, and tossed with 1 tsp sesame oil" },
+      { amount: "1.5", unit: "tbsp", name: "Cornstarch / cornflour", notes: "for the essential Chinese velveting tenderizing method" },
+      { amount: "2", unit: "tbsp", name: "Dark mushroom soy sauce", notes: "divided for meat marinade and noodle glaze" },
+      { amount: "2", unit: "tbsp", name: "Light soy sauce (regular)", notes: "for savory umami seasoning" },
+      { amount: "1.5", unit: "tbsp", name: "Halal vegetarian oyster-style sauce", notes: "rich stir-fry glaze" },
+      { amount: "1", unit: "tbsp", name: "Pure toasted sesame oil", notes: "for signature nutty aroma" },
+      { amount: "1", unit: "tbsp", name: "Chili garlic sauce or sriracha", notes: "for classic Bangla-Chinese fiery tang" },
+      { amount: "1", unit: "tsp", name: "Distilled white vinegar", notes: "for the tenderizing marinade" },
+      { amount: "1", unit: "tsp", name: "Cane sugar or brown sugar", notes: "balances savory soy and chilies" },
+      { amount: "3", unit: "tbsp", name: "High-smoke-point neutral oil", notes: "sunflower, canola, or avocado oil" },
+      { amount: "6", unit: "cloves", name: "Fresh garlic", notes: "finely minced" },
+      { amount: "1.5", unit: "tbsp", name: "Fresh ginger", notes: "peeled and cut into fine matchsticks or grated" },
+      { amount: "1", unit: "large", name: "Green bell pepper (capsicum)", notes: "seeded and sliced into thin strips" },
+      { amount: "1", unit: "medium", name: "Carrot", notes: "peeled and julienned into thin matchsticks" },
+      { amount: "4-5", unit: "whole", name: "Fresh red and green chilies", notes: "sliced diagonally with seeds for authentic heat" },
+      { amount: "4", unit: "stalks", name: "Scallions / green onions", notes: "cut into 1.5-inch batons, white and green parts separated" },
+      { amount: "1", unit: "tsp", name: "Cracked black pepper or white pepper", notes: "freshly ground" },
+      { amount: "1", unit: "tbsp", name: "Toasted white sesame seeds", notes: "for final garnish" },
+    ],
+    substitutions: [
+      {
+        original: "Halal beef sirloin/flank",
+        substitute: "Boneless Halal chicken breast or thigh strips",
+        notes: "Transforms the dish into classic Bangladeshi Chicken Chowmein; stir-fry chicken strips for 3–4 minutes until golden.",
+      },
+      {
+        original: "Thick fresh noodles / udon",
+        substitute: "Packaged Hakka noodles, dried egg noodles, or spaghetti",
+        notes: "Cook dried noodles 1 minute under package directions so they hold their chew during the high-heat stir-fry.",
+      },
+      {
+        original: "Halal oyster-style sauce",
+        substitute: "Vegetarian mushroom stir-fry sauce or hoisin sauce (certified Halal)",
+        notes: "Mushroom stir-fry sauce provides the identical deep umami gloss without any cross-contamination concerns.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Velvet and Marinate the Beef Strips",
+        instruction:
+          "In a mixing bowl, combine the thinly sliced beef strips with 1.5 tablespoons cornstarch, 1 tablespoon dark soy sauce, 1 teaspoon light soy sauce, 1 teaspoon white vinegar, and 1 tablespoon water. Massage thoroughly for 2 minutes with your hands until the beef absorbs the liquid and develops a velvety, glossy coating. Set aside to marinate for 15–20 minutes.",
+      },
+      {
+        step: 2,
+        title: "Boil and Condition the Noodles",
+        instruction:
+          "Bring a large pot of water to a rolling boil. Add noodles and cook according to package instructions until just al dente (do not overcook). Drain immediately in a colander, rinse thoroughly with cold tap water to wash away surface starch, and toss with 1 teaspoon of sesame oil to keep individual strands springy and separate.",
+      },
+      {
+        step: 3,
+        title: "Whisk the Savory Bangla-Chinese Stir-Fry Sauce",
+        instruction:
+          "In a small bowl, whisk together the remaining 1 tablespoon dark soy sauce, 1 tablespoon light soy sauce, 1.5 tablespoons halal oyster-style sauce, 1 tablespoon chili garlic sauce, 1 teaspoon sesame oil, 1 teaspoon sugar, cracked black pepper, and 2 tablespoons water until completely smooth. Keep right beside your stovetop.",
+      },
+      {
+        step: 4,
+        title: "Flash-Sear the Velveted Beef (High-Heat Searing)",
+        instruction:
+          "Heat 2 tablespoons of oil in a large wok or heavy carbon steel skillet over maximum heat until smoking hot. Spread the marinated beef strips in a single layer across the smoking surface. Let sear undisturbed for 90 seconds to develop a deep brown caramelized crust, then flip and stir-fry vigorously for another 60–90 seconds until 90% cooked through. Transfer the beef and rendered juices to a plate and set aside.",
+      },
+      {
+        step: 5,
+        title: "Blister the Aromatics and Crisp Vegetables",
+        instruction:
+          "Add the remaining 1 tablespoon of oil to the screaming-hot wok. Toss in the minced garlic, julienned ginger, sliced red/green chilies, and the white parts of the scallions. Stir-fry rapidly for 30 seconds until fragrant and sizzling. Add the sliced green bell pepper (capsicum) and julienned carrots. Stir-fry over high heat for 2 minutes until vegetables are crisp-tender and lightly blistered on the edges.",
+      },
+      {
+        step: 6,
+        title: "Toss Noodles, Beef, and Savory Glaze Together",
+        instruction:
+          "Return the seared beef strips and any resting pan juices back into the wok with the vegetables. Add the conditioned noodles on top. Pour the prepared savory stir-fry sauce evenly over the noodles. Using two spatulas or tongs, toss and lift the noodles continuously over high heat for 2–3 minutes until every strand is thoroughly coated in the dark, glossy glaze and sizzling with wok-smoke aroma.",
+      },
+      {
+        step: 7,
+        title: "Garnish with Scallions and Toasted Sesame",
+        instruction:
+          "Turn off the heat. Toss in the sliced green scallion tops and give a final gentle fold. Transfer the piping-hot Bangladeshi Beef Noodles into deep ceramic bowls. Sprinkle generously with toasted white sesame seeds and extra fresh chili rings. Serve immediately with chopsticks or forks.",
+      },
+    ],
+    chefNotes: [
+      "Velveting is the indispensable secret to restaurant-tender beef. The cornstarch-soy coating shields the muscle fibers from drying out during high-heat wok searing.",
+      "Always rinse boiled noodles in cold running water; this halts the cooking process instantly and removes excess surface starch so noodles never become gummy or clumpy.",
+      "The signature Bangladeshi flavor profile comes from the interplay of fresh ginger, garlic, and fiery fresh green chilies with rich dark soy sauce.",
+    ],
+    nutrition: {
+      calories: 480,
+      proteinGrams: 34,
+      carbsGrams: 52,
+      fatGrams: 16,
+      fiberGrams: 4,
+      sodiumMg: 780,
+      servingSizeDescription: "1 large bowl (approx. 320g)",
+      perServing: {
+        calories: 480,
+        proteinGrams: 34,
+        fatGrams: 16,
+        carbsGrams: 52,
+        fiberGrams: 4,
+        sodiumMg: 780,
+      },
+      totalRecipe: {
+        calories: 1920,
+        proteinGrams: 136,
+        fatGrams: 64,
+        carbsGrams: 208,
+        fiberGrams: 16,
+        sodiumMg: 3120,
+      },
+    },
+    storageInstructions:
+      "Store cooled leftover noodles in an airtight container in the refrigerator for up to 3 days. Reheat in a smoking-hot skillet or wok with 1 teaspoon of water for 2 minutes to restore noodle texture.",
+    freezingInstructions:
+      "Freezing cooked noodles is not recommended as noodles lose elasticity upon thawing. Marinated uncooked beef strips can be sealed in freezer bags and frozen for up to 2 months.",
+    servingSuggestions: [
+      "Serve piping hot in deep ceramic bowls with chopsticks, alongside a small dish of sliced green chilies steeped in white vinegar (traditional Dhaka restaurant condiment).",
+      "Pair with extra garlic chili sauce or sweet chili dip, crispy chicken wontons, or vegetable spring rolls.",
+      "Enjoy alongside a refreshing glass of chilled iced mint lemon drink or fresh fruit juice.",
+    ],
+    faqs: [
+      {
+        question: "What makes Bangladeshi Chinese noodles distinct from traditional Chinese lo mein?",
+        answer:
+          "Bangla-Chinese noodles feature bolder seasonings—freshly crushed garlic, pungent ginger matchsticks, fiery sliced green chilies, and a darker, slightly sweeter savory soy glaze tailored to South Asian spice preferences.",
+      },
+      {
+        question: "What types of noodles are best for this recipe?",
+        answer:
+          "Fresh thick wheat noodles, packaged Hakka noodles, fresh egg noodles, or thick fresh udon noodles give the ideal chewy, satisfying bite and hold the savory sauce glaze without breaking.",
+      },
+      {
+        question: "Can this recipe be prepared for meal prep?",
+        answer:
+          "Yes! Bangladeshi Beef Noodles hold their texture remarkably well in the refrigerator and make an exceptional, high-protein grab-and-go lunch for busy workdays.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Regional Culinary Director & Asian Heritage Specialist",
+    },
+    updatedDate: "September 19, 2026",
+    tags: [
+      "Bangladeshi Beef Noodles",
+      "বাংলাদেশি বিফ নুডলস",
+      "بنگلہ دیشی بیف نوڈلز",
+      "Beef Noodles",
+      "Bangla Chinese",
+      "Halal Beef",
+      "Stir-Fried Noodles",
+      "Desi Chinese",
+      "Dhaka Street Food",
+      "Chili Beef Noodles",
+      "Wok Stir Fry",
+      "High Protein Meal",
+    ],
+  },
+  {
+    id: "rec-bihari-boti-kebabs",
+    slug: "bihari-boti-kebabs",
+    title: "BIHARI BOTI KEBABS (بہاری بوٹی کباب / Authentic Melt-in-Mouth Spiced Beef Skewers)",
+    category: "Halal Beef",
+    categorySlug: "halal-beef",
+    cuisine: "Bihari, Karachi & Mughlai BBQ Heritage",
+    description:
+      "Legendary melt-in-the-mouth Bihari Boti Kebabs (بہاری بوٹی کباب)—paper-thin ribbons of prime Halal beef undercut marinated in raw green papaya, pungent cold-pressed mustard oil, golden fried onions (beresta), roasted gram flour (sattu), whisked yogurt, and a bespoke roasted Bihari garam masala, threaded accordion-style on skewers and charred to juicy, smoky perfection over live coals.",
+    introStory:
+      "Hailing from the historic culinary corridors of Bihar and elevated to legendary barbecue folklore along Karachi's bustling Burns Road, Bihari Boti Kebab (بہاری بوٹی کباب) is revered across South Asia as the quintessential masterclass in skewered beef. Unlike minced seekh kebabs or thick boti cubes, authentic Bihari Boti demands razor-thin, wide ribbons of prime beef undercut (pasanday/tenderloin) sliced meticulously against the muscle grain. The secret to its signature velvety, 'dissolve-on-the-tongue' tenderness lies in a dual-stage marination: first in active raw green papaya (papain) that naturally breaks down dense beef fibers, followed by pungent cold-pressed mustard oil, sweet caramelized fried onions (beresta), nutty dry-roasted sattu (gram flour), and a deeply aromatic roasted spice bouquet featuring ground poppy seeds (khashkhash), cubeb pepper (kabab chini), star anise, mace, nutmeg, and black cardamom.\n\nThreaded onto flat skewers in continuous accordion folds and flame-kissed over red-hot hardwood charcoal—or a smoking cast-iron grill—the kebabs are basted continuously with pure cow ghee until sizzling with rustic charred edges while holding pockets of spicy, succulent jus. Served piping hot over blistered tandoori naan or flaky lachha parathas alongside a bowl of chilled mint-coriander yogurt raita, razor-thin onion rings, ripe tomato slices, whole green chilies, and juicy lemon wedges, Bihari Boti represents the absolute pinnacle of Halal barbecue craft.",
+    heroImage: IMAGES.bihariBotiKebab,
+    prepTimeMinutes: 30,
+    cookTimeMinutes: 20,
+    totalTimeMinutes: 50,
+    servings: 6,
+    difficulty: "Medium",
+    calories: 340,
+    rating: 4.99,
+    reviewCount: 218,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified. Prepared exclusively with zabiha hand-slaughtered beef undercut (tenderloin/pasanday), pure cow ghee for basting, single-origin cold-pressed mustard oil, and natural green papaya tenderizer without chemical meat tenderizers, artificial tenderizing powders, MSG, or non-halal flavor enhancers.",
+    potentialCautionNotes:
+      "Raw green papaya paste (with green skin intact) is an active natural enzyme (papain); marinate the beef ribbons for 4 to 8 hours (or overnight in the refrigerator). If marinating for more than 12 hours, reduce the papaya quantity slightly so the meat does not become overly soft or lose its structural integrity on the skewers.",
+    ingredients: [
+      { amount: "2 lbs / 900g", unit: "ribbons", name: "Halal beef undercut or beef tenderloin (pasanday)", notes: "cut against the grain into thin 1.5-inch wide, flat ribbon strips" },
+      { amount: "3", unit: "tbsp", name: "Raw green papaya paste", notes: "fresh green papaya grated with skin on and blended into a smooth paste (essential natural tenderizer)" },
+      { amount: "1/2", unit: "cup", name: "Plain whole milk yogurt or hung curd", notes: "whisked until completely silky and thick" },
+      { amount: "1", unit: "cup", name: "Golden fried onions (Beresta)", notes: "crispy fried red onions, finely crushed or powdered" },
+      { amount: "1/4", unit: "cup", name: "Cold-pressed mustard oil", notes: "authentic non-negotiable Bihari pungent aroma and flavor" },
+      { amount: "3", unit: "tbsp", name: "Roasted gram flour (sattu / dry-roasted besan)", notes: "roasted in a dry skillet until nutty and fragrant" },
+      { amount: "2", unit: "tbsp", name: "Fresh ginger paste", notes: "freshly grated, excess moisture squeezed out" },
+      { amount: "2", unit: "tbsp", name: "Fresh garlic paste", notes: "freshly crushed" },
+      { amount: "1", unit: "tbsp", name: "Roasted white poppy seeds (khashkhash)", notes: "lightly toasted and ground into a fine paste/powder" },
+      { amount: "1.5", unit: "tbsp", name: "Kashmiri red chili powder", notes: "for signature deep ruby color and mild warmth" },
+      { amount: "1", unit: "tsp", name: "Spicy red chili powder or crushed chili flakes", notes: "for authentic barbecue heat" },
+      { amount: "1.5", unit: "tsp", name: "Roasted cumin powder (bhuna jeera)" },
+      { amount: "1.5", unit: "tsp", name: "Roasted coriander powder (bhuna dhania)" },
+      { amount: "1/2", unit: "tsp", name: "Ground mace (javitri) & Nutmeg (jaiphal) powder", notes: "the royal Shahi aromatic note" },
+      { amount: "1/2", unit: "tsp", name: "Cubeb pepper (kabab chini / pipli) & Black cardamom powder", notes: "signature peppery allspice fragrance" },
+      { amount: "1", unit: "tsp", name: "Garam masala powder", notes: "freshly ground whole spice blend" },
+      { amount: "1", unit: "tsp", name: "Chaat masala powder", notes: "for tangy finishing zest" },
+      { amount: "1.5", unit: "tsp", name: "Fine sea salt", notes: "or to taste" },
+      { amount: "3", unit: "tbsp", name: "Pure cow ghee or melted unsalted butter", notes: "for basting skewers during grilling" },
+      { amount: "1", unit: "piece", name: "Hardwood lump charcoal", notes: "for traditional dhungar smoke infusion" },
+      { amount: "8-10", unit: "skewers", name: "Flat stainless steel or soaked bamboo skewers", notes: "soaked in water for 45 minutes if wooden" },
+      { amount: "1", unit: "cup", name: "Creamy mint-coriander yogurt raita", notes: "chilled accompaniment" },
+      { amount: "1", unit: "large", name: "Red onion", notes: "thinly sliced into rings and tossed with lemon juice & sumac" },
+      { amount: "2", unit: "medium", name: "Ripe tomatoes", notes: "sliced into rounds" },
+      { amount: "4-5", unit: "whole", name: "Fresh green chilies", notes: "for plating garnish" },
+      { amount: "1", unit: "whole", name: "Fresh lemon", notes: "cut into wedges" },
+      { amount: "1/4", unit: "cup", name: "Fresh cilantro leaves", notes: "chopped for garnish" },
+    ],
+    substitutions: [
+      {
+        original: "Halal beef undercut (tenderloin/pasanday)",
+        substitute: "Halal boneless leg or shoulder mutton/lamb ribbons",
+        notes: "Mutton Bihari Boti is extraordinarily flavorful; use the same marination technique and grill for 12–15 minutes.",
+      },
+      {
+        original: "Raw green papaya paste",
+        substitute: "1.5 tbsp fresh kiwi fruit paste or 1 tsp commercial Halal meat tenderizer",
+        notes: "Raw papaya contains papain which tenderizes beef without altering texture. Kiwi fruit provides similar natural actinidin enzymes.",
+      },
+      {
+        original: "Roasted sattu (roasted gram flour)",
+        substitute: "Dry-roasted chickpea flour (besan) or roasted oat flour",
+        notes: "Sattu binds the marinade spices, prevents dripping on coals, and lends a rich nutty undertone.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Slice & Tenderize the Beef Ribbons",
+        instruction:
+          "Place the beef undercut on a sturdy cutting board. Using a very sharp chef's knife, slice the beef across the grain into very thin, wide ribbon strips (approx. 1.5 inches wide, 4–5 inches long, and 1/8-inch thick). Place the strips between two sheets of parchment paper and gently flatten them with the flat side of a meat mallet or rolling pin to ensure uniform thickness.",
+      },
+      {
+        step: 2,
+        title: "First Stage Papaya Marination",
+        instruction:
+          "Transfer the beef ribbons to a glass or ceramic bowl. Add the raw green papaya paste, ginger paste, garlic paste, and 1 teaspoon of sea salt. Massage and rub the mixture thoroughly into each strip for 3–4 minutes ensuring every surface is coated. Let it rest for 30 minutes at room temperature.",
+      },
+      {
+        step: 3,
+        title: "Prepare the Signature Bihari Spice Paste",
+        instruction:
+          "In a small skillet over low heat, dry-roast the gram flour (besan/sattu) and poppy seeds until aromatic (about 2 minutes). In a bowl, combine the whisked yogurt, crushed fried onions (beresta), roasted sattu, mustard oil, poppy seed powder, Kashmiri red chili powder, spicy chili powder, roasted cumin, roasted coriander, mace-nutmeg powder, cubeb pepper/black cardamom powder, garam masala, and remaining salt. Whisk vigorously into a rich, fragrant, velvety marinade paste.",
+      },
+      {
+        step: 4,
+        title: "Secondary Marination (Deep Flavor Infusion)",
+        instruction:
+          "Pour the Bihari spice paste over the papaya-marinated beef ribbons. Using your hands (wear gloves if sensitive to chili), massage the spices into every fold and crevice of the meat strips. Cover tightly with plastic wrap and transfer to the refrigerator to marinate for at least 4 to 8 hours (ideally overnight for legendary melt-in-the-mouth texture).",
+      },
+      {
+        step: 5,
+        title: "Hardwood Charcoal Smoke Infusion (Dhungar Method)",
+        instruction:
+          "Remove the marinated meat from the refrigerator 30 minutes before cooking to bring to room temperature. Create a small well in the center of the bowl and place a small steel bowl or heavy foil cup. Heat a lump of hardwood charcoal over an open flame until glowing red-hot. Place the hot coal into the cup, drizzle 1/2 teaspoon of ghee over the coal to produce dense white aromatic smoke, and seal the bowl tightly with a lid or foil for 7–10 minutes. Discard the coal.",
+      },
+      {
+        step: 6,
+        title: "Thread Ribbons Accordion-Style on Skewers",
+        instruction:
+          "Take a skewer in one hand and a strip of marinated beef in the other. Thread the beef strip onto the skewer by weaving it in a tight, undulating wave or accordion pattern (folding the strip back and forth over the skewer). Slide the ribbon down and repeat with subsequent strips until 6 to 8 inches of the skewer is filled. Press gently along the skewer to compact the folds evenly so no loose flaps hang down.",
+      },
+      {
+        step: 7,
+        title: "Flame Grilling, Searing & Ghee Basting",
+        instruction:
+          "Preheat an outdoor charcoal barbecue to medium-high heat, or heat a heavy cast-iron ridged grill pan on the stovetop over medium-high heat. Brush the grates lightly with oil. Lay the skewers onto the hot grill. Sear undisturbed for 3–4 minutes until rich golden grill marks and char spots form. Turn the skewers carefully to sear all sides (about 12–15 minutes total). During the final 3 minutes of cooking, generously baste all sides of the kebabs with melted cow ghee, allowing the dripping ghee to flare lightly and create signature smoky crustiness.",
+      },
+      {
+        step: 8,
+        title: "Festive Naan Platter Presentation",
+        instruction:
+          "Warm soft tandoori naan flatbreads and place them over a parchment-lined serving board or rustic metal platter. Arrange the sizzling skewers of Bihari Boti Kebabs directly over the naan. Garnish with crisp red onion rings, fresh tomato slices, whole green chilies, a sprinkle of fresh cilantro, and a dusting of tangy chaat masala. Serve immediately accompanied by chilled mint-coriander yogurt raita and fresh lemon wedges.",
+      },
+    ],
+    chefNotes: [
+      "Slicing across the grain is the fundamental secret to Bihari Boti. Cutting perpendicular to the muscle fibers shortens them, allowing the natural papaya enzymes and spices to tenderize the meat to perfection.",
+      "Cold-pressed mustard oil is non-negotiable; its natural pungency mellows under high heat into an incomparable nutty richness that defines authentic Bihari cuisine.",
+      "Threading the meat in tight accordion folds prevents thin strips from drying out on the grill and traps moisture inside the folds for unmatched juiciness.",
+    ],
+    nutrition: {
+      calories: 340,
+      proteinGrams: 36,
+      carbsGrams: 8,
+      fatGrams: 18,
+      fiberGrams: 2,
+      sodiumMg: 560,
+      servingSizeDescription: "2 skewers with onion garnish (approx. 220g)",
+      perServing: {
+        calories: 340,
+        proteinGrams: 36,
+        fatGrams: 18,
+        carbsGrams: 8,
+        fiberGrams: 2,
+        sodiumMg: 560,
+      },
+      totalRecipe: {
+        calories: 2040,
+        proteinGrams: 216,
+        fatGrams: 108,
+        carbsGrams: 48,
+        fiberGrams: 12,
+        sodiumMg: 3360,
+      },
+    },
+    storageInstructions:
+      "Store cooled leftover kebabs in an airtight glass container in the refrigerator for up to 4 days. Reheat gently in a covered skillet over medium-low heat with a brush of ghee or microwave in 45-second intervals with a damp paper towel.",
+    freezingInstructions:
+      "Uncooked skewered or marinated beef strips can be frozen in a single layer on a parchment-lined tray, then transferred to vacuum-seal bags for up to 2 months. Thaw overnight in the refrigerator before grilling. Cooked kebabs can also be frozen for up to 1 month.",
+    servingSuggestions: [
+      "Serve steaming hot on skewers over fluffy tandoori naan or flaky layered lachha paratha to catch every drop of spiced jus and ghee.",
+      "Pair with crisp red onion rings tossed in lemon juice and sumac, fresh sliced tomatoes, and spicy green chilies.",
+      "Accompany with a chilled bowl of creamy mint-coriander yogurt raita and a frosty glass of Dhaka Shahi Borhani or salty lassi.",
+    ],
+    faqs: [
+      {
+        question: "Why is raw green papaya paste essential for Bihari Boti?",
+        answer:
+          "Raw green papaya contains papain, a powerful natural proteolytic enzyme that tenderizes tough muscle fibers into a melt-in-the-mouth texture without degrading the meat into mush.",
+      },
+      {
+        question: "Can I prepare Bihari Boti in an oven or air fryer?",
+        answer:
+          "Yes! In an oven, place skewers on a wire rack over a foil-lined baking sheet and bake at 450°F (230°C) for 12–14 minutes, basting with ghee halfway through, then broil on High for 2 minutes for charred edges. In an air fryer, cook at 400°F (200°C) for 10–12 minutes, turning and basting at 6 minutes.",
+      },
+      {
+        question: "What cut of Halal beef is best for Bihari Boti?",
+        answer:
+          "Beef undercut (tenderloin/pasanday) is ideal for its fine grain and tenderness. Beef sirloin tip or flat iron steak can also be used if sliced very thinly against the grain.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Regional Culinary Director & Heritage Barbecue Specialist",
+    },
+    updatedDate: "September 19, 2026",
+    tags: [
+      "BIHARI BOTI KEBABS",
+      "بہاری بوٹی کباب",
+      "Bihari Boti Kebab",
+      "Bihari Boti",
+      "Bihari Kebab",
+      "Halal Beef",
+      "Beef Kebab",
+      "Karachi Street Food",
+      "Mughlai BBQ",
+      "Halal BBQ",
+      "Eid Special",
+      "Bakra Eid Recipe",
+      "Tandoori Naan Companion",
+    ],
+  },
+  {
     id: "rec-bengali-beef-tehari-dhaka",
     slug: "bengali-beef-tehari",
     title: "Bengali Beef Tehari (পুরান ঢাকার বিফ তেহারি)",

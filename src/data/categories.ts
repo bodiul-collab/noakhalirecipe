@@ -10,7 +10,7 @@ export const CATEGORIES: CategoryHub[] = [
     fullDescription:
       "Explore comforting Halal poultry recipes from across Bengal, South Asia, and the Mediterranean. Every recipe utilizes hand-slaughtered or certified Halal chicken cuts, cooked with authentic aromatics, rich natural stocks, and balanced spices.",
     image: IMAGES.heroBiryani,
-    featuredRecipeSlugs: ["chicken-tikka-masala", "buttermilk-chicken-alfredo-spinach-pasta", "authentic-chicken-shawarma", "chicken-karahi", "chicken-biryani", "bengali-chicken-roast", "bengali-chicken-curry-murgir-jhol", "authentic-lahori-chicken-chargha", "authentic-restaurant-style-butter-chicken-murgh-makhani", "creamy-fettuccine-chicken-alfredo", "authentic-arabian-chicken-mandi", "chicken-machboos-majboos-kabsa", "classic-deli-halal-chicken-salad", "tom-zaab-chicken-soup-tom-zaab-gai", "thai-chicken-red-curry-gaeng-phed-gai", "halal-chicken-biryani", "chicken-satay-satay-gai", "chicken-massaman-curry"],
+    featuredRecipeSlugs: ["bengali-texas-chicken-bbq", "bengali-chicken-biryani", "chicken-tikka-masala", "buttermilk-chicken-alfredo-spinach-pasta", "authentic-chicken-shawarma", "chicken-karahi", "chicken-biryani", "bengali-chicken-roast", "bengali-chicken-curry-murgir-jhol", "authentic-lahori-chicken-chargha", "authentic-restaurant-style-butter-chicken-murgh-makhani", "creamy-fettuccine-chicken-alfredo", "authentic-arabian-chicken-mandi", "chicken-machboos-majboos-kabsa", "classic-deli-halal-chicken-salad", "tom-zaab-chicken-soup-tom-zaab-gai", "thai-chicken-red-curry-gaeng-phed-gai", "halal-chicken-biryani", "chicken-satay-satay-gai", "chicken-massaman-curry"],
     faqs: [
       {
         question: "How do I verify chicken is Halal when shopping?",
@@ -36,7 +36,7 @@ export const CATEGORIES: CategoryHub[] = [
     fullDescription:
       "From melt-in-your-mouth slow-braised Bengali beef bhuna to Dhaka-style beef tehari and rich bone marrow curries, our Halal beef collection celebrates deep caramelized flavors and patient cooking techniques.",
     image: IMAGES.beefBhuna,
-    featuredRecipeSlugs: ["seekh-kebab", "haleem", "authentic-nihari", "bengali-beef-tehari", "bengali-beef-bhuna", "birria-tacos-beef-quesabirria-consome", "kofta-tagine-with-eggs-middle-eastern-flavors", "chittagong-mezbani-beef-curry", "kibbeh-lebanese-fried-bulgur-stuffed-shells", "classic-baked-beef-lasagna-bolognese", "patlican-kebabi-turkish-eggplant-kebab", "turkish-lamb-chops-kuzu-pirzola", "turkish-izgara-kofte-kebab", "adana-kebab-hand-minced-lamb", "yogurt-kebab-yogurtlu-kebap"],
+    featuredRecipeSlugs: ["bengali-texas-beef-bbq", "pakistani-aloo-keema", "bangladeshi-beef-noodles", "bihari-boti-kebabs", "seekh-kebab", "haleem", "authentic-nihari", "bengali-beef-tehari", "bengali-beef-bhuna", "birria-tacos-beef-quesabirria-consome", "kofta-tagine-with-eggs-middle-eastern-flavors", "chittagong-mezbani-beef-curry", "kibbeh-lebanese-fried-bulgur-stuffed-shells", "classic-baked-beef-lasagna-bolognese", "patlican-kebabi-turkish-eggplant-kebab", "turkish-lamb-chops-kuzu-pirzola", "turkish-izgara-kofte-kebab", "adana-kebab-hand-minced-lamb", "yogurt-kebab-yogurtlu-kebap"],
     faqs: [
       {
         question: "Which beef cuts are best for Bengali bhuna?",
@@ -57,7 +57,7 @@ export const CATEGORIES: CategoryHub[] = [
     fullDescription:
       "Fresh river fish and coastal seafood hold an esteemed place in regional Halal heritage dining. Our collection features revered silver Hilsa (Ilish) in golden mustard gravy, tender tiger prawns in coconut cream, and crisp pan-fried seasonal catch seasoned with five-spice panch phoron.",
     image: IMAGES.shorsheIlish,
-    featuredRecipeSlugs: ["bengali-fish-curry-macher-jhol", "noakhali-shorshe-ilish", "chingri-malai-curry", "loitta-shutki-bhuna-dried-fermented-fish", "crispy-golden-salmon-patties-dish", "tuna-fish-kebab-fritters", "green-goddess-wild-salmon-asparagus-bowl", "tom-yum-soup-goong-gai"],
+    featuredRecipeSlugs: ["shrimp-tandoori", "bengali-fish-curry-macher-jhol", "noakhali-shorshe-ilish", "chingri-malai-curry", "loitta-shutki-bhuna-dried-fermented-fish", "crispy-golden-salmon-patties-dish", "tuna-fish-kebab-fritters", "green-goddess-wild-salmon-asparagus-bowl", "tom-yum-soup-goong-gai"],
     faqs: [
       {
         question: "Are all types of fish and seafood Halal?",
@@ -111,7 +111,7 @@ export const CATEGORIES: CategoryHub[] = [
     fullDescription:
       "Pure, nourishing plant-based dishes made with wholesome legumes, cold-pressed mustard oil, whole spices, and garden-fresh vegetables. Completely free from animal byproducts and naturally pork-free.",
     image: IMAGES.vegBhunaKhichuri,
-    featuredRecipeSlugs: ["spinach-sun-dried-tomato-pasta", "black-chana", "hummus", "crispy-falafel", "bengali-pulao", "bengali-khichuri-bhuna", "mediterranean-chickpea-salad", "authentic-lebanese-baba-ganoush", "masoor-dal-red-lentil-dal", "crispy-garlic-herb-roasted-potatoes", "pillowy-restaurant-style-garlic-butter-naan", "rainbow-roasted-beet-whipped-goat-cheese-salad", "panera-style-halal-broccoli-cheddar-soup", "crispy-zaatar-chickpea-halloumi-glow-salad", "vegetable-bhuna-khichuri"],
+    featuredRecipeSlugs: ["bengali-mango-chutney", "spinach-sun-dried-tomato-pasta", "black-chana", "hummus", "crispy-falafel", "bengali-pulao", "bengali-khichuri-bhuna", "mediterranean-chickpea-salad", "authentic-lebanese-baba-ganoush", "masoor-dal-red-lentil-dal", "crispy-garlic-herb-roasted-potatoes", "pillowy-restaurant-style-garlic-butter-naan", "rainbow-roasted-beet-whipped-goat-cheese-salad", "panera-style-halal-broccoli-cheddar-soup", "crispy-zaatar-chickpea-halloumi-glow-salad", "vegetable-bhuna-khichuri"],
     faqs: [
       {
         question: "Do vegetarian dishes ever contain non-halal ingredients?",
@@ -131,7 +131,7 @@ export const CATEGORIES: CategoryHub[] = [
     fullDescription:
       "The staple combination that anchors Bengali and South Asian hospitality. Learn the fine art of blooming whole spices in pure ghee, parboiling basmati rice, and creating layered gravies that bring families together.",
     image: IMAGES.chickenRoast,
-    featuredRecipeSlugs: ["chicken-tikka-masala", "chicken-karahi", "haleem", "chicken-biryani", "bengali-pulao", "bengali-khichuri-bhuna", "bengali-chicken-roast", "bengali-beef-tehari", "bengali-fish-curry-macher-jhol", "bengali-chicken-curry-murgir-jhol", "authentic-arabian-chicken-mandi", "chicken-machboos-majboos-kabsa", "pillowy-restaurant-style-garlic-butter-naan", "halal-chicken-biryani", "vegetable-bhuna-khichuri"],
+    featuredRecipeSlugs: ["pakistani-aloo-keema", "bengali-chicken-biryani", "chicken-tikka-masala", "chicken-karahi", "haleem", "chicken-biryani", "bengali-pulao", "bengali-khichuri-bhuna", "bengali-chicken-roast", "bengali-beef-tehari", "bengali-fish-curry-macher-jhol", "bengali-chicken-curry-murgir-jhol", "authentic-arabian-chicken-mandi", "chicken-machboos-majboos-kabsa", "pillowy-restaurant-style-garlic-butter-naan", "halal-chicken-biryani", "vegetable-bhuna-khichuri"],
     faqs: [
       {
         question: "What rice variety gives the most authentic aroma?",
@@ -151,7 +151,7 @@ export const CATEGORIES: CategoryHub[] = [
     fullDescription:
       "Snack time in Muslim households is a lively affair of spiced pastry triangles, hot fried fritters, and sweet chutneys served alongside cardamom milk tea (chai).",
     image: IMAGES.streetFood,
-    featuredRecipeSlugs: ["dal-piyaju-pakora", "chicken-patty", "egg-roll", "black-chana", "hummus", "crispy-falafel", "authentic-lebanese-baba-ganoush", "tuna-fish-kebab-fritters", "birria-tacos-beef-quesabirria-consome", "kibbeh-lebanese-fried-bulgur-stuffed-shells", "traditional-teler-pitha-gur-pitha", "crispy-halal-samosas"],
+    featuredRecipeSlugs: ["shrimp-tandoori", "bengali-mango-chutney", "dal-piyaju-pakora", "chicken-patty", "egg-roll", "black-chana", "hummus", "crispy-falafel", "authentic-lebanese-baba-ganoush", "tuna-fish-kebab-fritters", "birria-tacos-beef-quesabirria-consome", "kibbeh-lebanese-fried-bulgur-stuffed-shells", "traditional-teler-pitha-gur-pitha", "crispy-halal-samosas"],
     faqs: [
       {
         question: "Can samosas be prepared in advance?",
@@ -190,7 +190,7 @@ export const CATEGORIES: CategoryHub[] = [
     fullDescription:
       "Transport your kitchen to the bustling night markets of Bangkok, Dhaka, Chittagong, and Old Delhi with street foods bursting with tangy tamarind, roasted cumin, and fiery green chilies.",
     image: IMAGES.padThai,
-    featuredRecipeSlugs: ["crispy-falafel", "authentic-chicken-shawarma", "seekh-kebab", "thai-style-papaya-salad-som-tum", "authentic-halal-pad-thai", "chicken-satay-satay-gai", "crispy-halal-samosas"],
+    featuredRecipeSlugs: ["bangladeshi-beef-noodles", "bihari-boti-kebabs", "crispy-falafel", "authentic-chicken-shawarma", "seekh-kebab", "thai-style-papaya-salad-som-tum", "authentic-halal-pad-thai", "chicken-satay-satay-gai", "crispy-halal-samosas"],
     faqs: [
       {
         question: "What is the key spice in street food?",
@@ -210,6 +210,10 @@ export const CATEGORIES: CategoryHub[] = [
       "Save hours during busy workweeks, university semesters, and family routines with smart Halal batch-cooking strategies. From spiced sheet-pan chicken shawarma bowls with golden turmeric rice to Moroccan harissa beef meatballs and slow-simmered stews, our meal prep guides ensure healthy, flavorful, 100% Halal lunches and dinners every single day.",
     image: IMAGES.mealPrep,
     featuredRecipeSlugs: [
+      "bengali-texas-chicken-bbq",
+      "bengali-texas-beef-bbq",
+      "pakistani-aloo-keema",
+      "bangladeshi-beef-noodles",
       "halal-sheet-pan-shawarma-bowls",
       "moroccan-harissa-beef-meatballs-prep",
       "bengali-beef-bhuna",
@@ -288,6 +292,9 @@ export const CATEGORIES: CategoryHub[] = [
       "From the sacred evening tranquility of sunset Iftar tables laden with spiced black chana (ছোলা ভুনা), crispy onion piyaju, and cooling Rooh Afza sharbat, to royal Eid morning banquets featuring Shahi beef roast, fragrant pulao, and creamy kheer, our Ramadan & Eid collection honors authentic culinary heritage, spiritual mindfulness, and joyful family gatherings.",
     image: IMAGES.blackChana,
     featuredRecipeSlugs: [
+      "bengali-mango-chutney",
+      "bengali-chicken-biryani",
+      "bihari-boti-kebabs",
       "borhani",
       "salty-lassi",
       "thandai",

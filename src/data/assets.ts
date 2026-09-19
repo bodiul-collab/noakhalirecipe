@@ -96,6 +96,14 @@ import dhakaShahiBorhaniImg from "../assets/images/dhaka_shahi_borhani_178973633
 import buttermilkChickenAlfredoImg from "../assets/images/buttermilk_chicken_alfredo_1789737847757.jpg";
 import spinachSunDriedTomatoPastaImg from "../assets/images/spinach_sun_dried_tomato_pasta_1789738059612.jpg";
 import chickenTikkaMasalaImg from "../assets/images/chicken_tikka_masala_1789738518734.jpg";
+import bihariBotiKebabImg from "../assets/images/bihari_boti_kebab_1789836993216.jpg";
+import bangladeshiBeefNoodlesImg from "../assets/images/bangladeshi_beef_noodles_1789837364017.jpg";
+import bengaliChickenBiryaniImg from "../assets/images/bengali_chicken_biryani_1789837635057.jpg";
+import pakistaniAlooKeemaImg from "../assets/images/pakistani_aloo_keema_1789837831753.jpg";
+import bengaliMangoChutneyImg from "../assets/images/bengali_mango_chutney_1789838178896.jpg";
+import bengaliTexasBeefBbqImg from "../assets/images/bengali_texas_beef_bbq_1789838484366.jpg";
+import bengaliTexasChickenBbqImg from "../assets/images/bengali_texas_chicken_bbq_1789838616676.jpg";
+import shrimpTandooriImg from "../assets/images/shrimp_tandoori_1789838880529.jpg";
 import noakhaliLogoFullImg from "../assets/images/noakhali_kitchen_logo_1789072776240.jpg";
 import noakhaliLogoIconImg from "../assets/images/noakhali_kitchen_logo_1789072776240.jpg";
 
@@ -223,6 +231,30 @@ export const IMAGES = {
   chickenTikkaMasala: chickenTikkaMasalaImg,
   tikkaMasala: chickenTikkaMasalaImg,
   chickenTikka: chickenTikkaMasalaImg,
+  bihariBotiKebab: bihariBotiKebabImg,
+  bihariBoti: bihariBotiKebabImg,
+  bihariKebab: bihariBotiKebabImg,
+  bangladeshiBeefNoodles: bangladeshiBeefNoodlesImg,
+  beefNoodles: bangladeshiBeefNoodlesImg,
+  banglaBeefNoodles: bangladeshiBeefNoodlesImg,
+  bengaliChickenBiryani: bengaliChickenBiryaniImg,
+  bengaliBiryani: bengaliChickenBiryaniImg,
+  banglaChickenBiryani: bengaliChickenBiryaniImg,
+  pakistaniAlooKeema: pakistaniAlooKeemaImg,
+  alooKeema: pakistaniAlooKeemaImg,
+  beefAlooKeema: pakistaniAlooKeemaImg,
+  bengaliMangoChutney: bengaliMangoChutneyImg,
+  mangoChutney: bengaliMangoChutneyImg,
+  aamerChatni: bengaliMangoChutneyImg,
+  bengaliTexasBeefBbq: bengaliTexasBeefBbqImg,
+  texasBeefBbq: bengaliTexasBeefBbqImg,
+  bengaliBbqBrisket: bengaliTexasBeefBbqImg,
+  bengaliTexasChickenBbq: bengaliTexasChickenBbqImg,
+  texasChickenBbq: bengaliTexasChickenBbqImg,
+  bengaliChickenBbq: bengaliTexasChickenBbqImg,
+  shrimpTandoori: shrimpTandooriImg,
+  tandooriShrimp: shrimpTandooriImg,
+  chingriTandoori: shrimpTandooriImg,
   logoFull: noakhaliLogoFullImg,
   logoIcon: noakhaliLogoIconImg,
 };

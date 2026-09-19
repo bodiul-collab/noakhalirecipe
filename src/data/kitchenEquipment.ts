@@ -14,7 +14,7 @@ export const KITCHEN_EQUIPMENT: KitchenToolItem[] = [
       "Seal the rim with wheat flour dough or heavy double-foil before placing the lid on.",
       "Place a flat cast iron tawa underneath the pot for diffuse indirect flame during the final 20-minute dum stage.",
     ],
-    relatedRecipeSlugs: ["halal-chicken-biryani", "vegetable-bhuna-khichuri"],
+    relatedRecipeSlugs: ["bengali-chicken-biryani", "halal-chicken-biryani", "vegetable-bhuna-khichuri"],
     badge: "Heritage Essential",
   },
   {
