@@ -250,6 +250,61 @@ const DEFAULT_COLLECTION: CollectionCardItem[] = [
     image: IMAGES.narkelPuliPitha,
   },
   {
+    id: "card-saag-paneer",
+    slug: "saag-paneer",
+    title: "Rich Restaurant Saag Paneer (শাক পনির)",
+    description:
+      "Silky spiced emerald spinach and mustard greens gravy simmered with aromatic garlic, ginger, and cumin, topped with golden-crisped cubes of Halal paneer cheese.",
+    heritageTag: "🧀 Royal Vegetarian Feast Classic",
+    brandName: "Noakhali Kitchen",
+    halalBadge: "100% Halal Vegetarian",
+    image: IMAGES.saagPaneer,
+  },
+  {
+    id: "card-easy-basmati-rice",
+    slug: "easy-basmati-rice-cooking",
+    title: "Easy Fluffy Basmati Rice (সহজে বাসমতী চাল রান্না)",
+    description:
+      "Foolproof technique for fragrance-rich, non-sticky, distinct extra-long grain basmati rice with gentle soaking, steam-absorption & fresh herb finish.",
+    heritageTag: "🍚 Royal Grain & Everyday Halal Essential",
+    brandName: "Noakhali Kitchen",
+    halalBadge: "100% Halal Certified",
+    image: IMAGES.easyBasmatiRice,
+  },
+  {
+    id: "card-peri-peri-chicken",
+    slug: "peri-peri-chicken",
+    title: "Fiery Flame-Grilled Peri Peri Chicken (পেরি পেরি চিকেন)",
+    description:
+      "Succulent bone-in chicken thighs and drumsticks marinated in bird's eye chili, garlic, lemon, and smoked paprika, flame-seared in cast iron to smoky perfection.",
+    heritageTag: "🌶️ African-Portuguese Flame-Grilled Classic",
+    brandName: "Noakhali Kitchen",
+    halalBadge: "100% Halal Certified",
+    image: IMAGES.periPeriChicken,
+  },
+  {
+    id: "card-moroccan-meatballs",
+    slug: "moroccan-harissa-beef-meatballs-prep",
+    title: "Moroccan Spiced Halal Beef Meatballs & Couscous",
+    description:
+      "Succulent spiced Halal beef meatballs in rich zesty tomato sauce with fluffy herb-tossed pearl couscous, fresh parsley & lemon.",
+    heritageTag: "🇲🇦 Maghrebian & Moroccan Feast",
+    brandName: "Noakhali Kitchen",
+    halalBadge: "100% Halal Certified",
+    image: IMAGES.moroccanBeefMeatballs,
+  },
+  {
+    id: "card-keema-paratha",
+    slug: "keema-paratha",
+    title: "Crispy Stuffed Keema Paratha (কিমা পরোটা)",
+    description:
+      "Golden, flaky whole-wheat flatbread generously stuffed with spiced aromatic minced beef keema, fresh herbs & green chilies, served with zesty mint chutney.",
+    heritageTag: "🫓 Royal Mughlai & Street Food Classic",
+    brandName: "Noakhali Kitchen",
+    halalBadge: "100% Halal Certified",
+    image: IMAGES.keemaParatha,
+  },
+  {
     id: "card-corned-beef-reuben",
     slug: "corned-beef-reuben-sandwich",
     title: "Corned Beef Reuben Sandwich (রুবেন স্যান্ডউইচ)",

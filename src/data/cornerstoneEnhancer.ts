@@ -15,6 +15,66 @@ const RECIPE_EDITORIAL_EXTRAS: Record<
     commonMistakes: string[];
   }
 > = {
+  "saag-paneer": {
+    whySpecial:
+      "The quintessential jewel of South Asian vegetarian cuisine: fresh spinach leaves and mustard greens blanched in an ice bath to preserve their electric emerald color, pureed with caramelized aromatics, and simmered with pure ghee, garam masala, and golden pan-seared cubes of Halal paneer cheese.",
+    cookingTips: [
+      "Blanch spinach leaves in salted boiling water for exactly 90 seconds, then immediately plunge them into an ice water bath; this halts the enzymes that cause greens to oxidize into a drab olive-brown.",
+      "Pan-fry paneer cubes in ghee until golden-crisp on all sides, then transfer them immediately to a bowl of warm, lightly salted water for 5 minutes; this keeps the paneer pillow-soft and spongy.",
+      "Blend half the cooked greens silky smooth and keep the other half coarsely pulsed for the authentic rustic dhaba texture.",
+      "Finish with a final flourish of kasoori methi (dried fenugreek leaves) crushed between your palms and a swirl of heavy cream or ghee.",
+    ],
+    commonMistakes: [
+      "Overcooking the spinach in boiling water without an ice bath, which destroys both nutrients and the striking vibrant green color.",
+      "Adding unseared, cold paneer directly from the fridge, which can turn rubbery and dilute the sauce.",
+      "Forgetting to check the paneer label for Halal-friendly microbial or vegetarian rennet.",
+    ],
+  },
+  "easy-basmati-rice-cooking": {
+    whySpecial:
+      "The definitive guide to restaurant-fluffy, fragrant basmati rice: aged extra-long Himalayan grains washed of excess starch, soaked for optimal elongation, and cooked using the foolproof absorption method with a hint of ghee and whole aromatics for tender, separated grains that never clump or turn mushy.",
+    cookingTips: [
+      "Rinse the grains gently under cold water in a fine mesh sieve until the water runs completely crystal clear; this washes away excess surface amylose that causes clumping.",
+      "Always soak basmati rice for 25 to 30 minutes in room temperature water before cooking; this allows the grains to absorb water to the core so they expand lengthwise without fracturing.",
+      "The golden ratio: for soaked basmati rice, use exactly 1.5 cups of boiling water or broth per 1 cup of dry rice.",
+      "Keep the lid tightly sealed on low heat for 12 minutes, then let it rest off the heat undisturbed for 10 minutes before fluffing with a wide fork or paddle.",
+    ],
+    commonMistakes: [
+      "Skipping the 30-minute pre-soak, which leads to unevenly cooked grains that snap in the middle.",
+      "Stirring the rice with a spoon while it is simmering; stirring breaks the delicate starch chains and makes the rice sticky and gummy.",
+      "Taking off the lid prematurely, which releases essential steam and ruins the absorption ratio.",
+    ],
+  },
+  "peri-peri-chicken": {
+    whySpecial:
+      "The globally celebrated African-Portuguese flame-grilled masterpiece: succulent bone-in chicken thighs and drumsticks steeped in a fiery homemade sauce of bird's eye chilies, roasted red peppers, garlic, lemon juice, smoked paprika, and oregano, then skillet-seared to produce smoky charred blisters and juicy meat.",
+    cookingTips: [
+      "Score chicken drumsticks and thighs with 2 shallow diagonal slashes to allow the vibrant peri-peri marinade to penetrate deep to the bone.",
+      "Reserve 1/3 of the blended peri-peri sauce before adding raw chicken; use this clean reserved sauce for basting on the skillet and as a table dipping sauce.",
+      "Start searing skin-side down in a smoking hot cast-iron skillet to get deep caramelized blister marks, then transfer skillet to a 400°F (200°C) oven to cook through gently.",
+      "Brush generously with melted garlic butter and warm peri-peri sauce during the final 2 minutes of roasting for an intoxicating glossy lacquer.",
+    ],
+    commonMistakes: [
+      "Shortchanging marination time; bone-in chicken needs at least 4 hours (ideally overnight) for the lemon acid and spices to permeate the meat.",
+      "Crowding a cold pan, which steams the chicken instead of building that signature flame-grilled char.",
+      "Using pre-bottled vinegar sauce instead of fresh lemon juice, roasted red peppers, and garlic.",
+    ],
+  },
+  "keema-paratha": {
+    whySpecial:
+      "The ultimate Mughlai street food and breakfast luxury: crisp, flaky golden-brown flatbreads stuffed to the brim with spiced, savory minced Halal beef keema, fresh mint, coriander, and green chilies, toasted in pure ghee to deliver an irresistible crunch and juicy spiced interior.",
+    cookingTips: [
+      "Cook the keema filling until all pan moisture is completely dry; wet meat will make the dough soggy and tear during rolling.",
+      "Allow the spiced keema to cool completely to room temperature before stuffing into dough balls; warm filling weakens the gluten and causes bursts.",
+      "Roll gently with light, even pressure from the center outward, dusting lightly with flour to distribute the keema evenly from edge to edge.",
+      "Dry-roast the paratha on a medium-hot tawa until pale spots appear on both sides before brushing with pure cow ghee; this locks in steam and creates flaky, crisp layers.",
+    ],
+    commonMistakes: [
+      "Stuffing hot or wet keema into the dough, which immediately tears the paratha and leaks filling during rolling.",
+      "Using heavy downward pressure with the rolling pin rather than delicate, radiating strokes.",
+      "Frying on excessively high heat, which scorches the exterior crust before the inner dough layers cook through.",
+    ],
+  },
   "corned-beef-reuben-sandwich": {
     whySpecial:
       "The undisputed king of classic New York deli sandwiches: generous folds of warm, thinly sliced spiced Halal corned beef brisket layered with melted Swiss cheese, crisp tangy sauerkraut, and creamy Russian dressing, griddled between thick slices of caraway rye bread to golden, buttery perfection.",

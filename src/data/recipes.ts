@@ -4,6 +4,177 @@ import { enhanceRecipesWithCornerstones } from "./cornerstoneEnhancer";
 
 const BASE_RECIPES: Recipe[] = [
   {
+    id: "rec-keema-paratha",
+    slug: "keema-paratha",
+    title: "Crispy Stuffed Keema Paratha (কিমা পরোটা)",
+    category: "Halal Beef",
+    categorySlug: "halal-beef",
+    cuisine: "Mughlai / Bangladeshi & North Indian Heritage",
+    description:
+      "Golden, flaky whole-wheat flatbread generously stuffed with fragrant, spiced minced Halal beef keema, fresh herbs & green chilies, pan-toasted in pure cow ghee to crispy perfection.",
+    introStory:
+      "In the rich culinary tapestry of South Asia, few dishes evoke morning comfort, street food indulgence, and royal Mughlai grandeur quite like Keema Paratha (কিমা পরোটা). Revering traditions spanning from the historic alleys of Old Dhaka and Lahore to royal Lucknowi kitchens, this beloved stuffed flatbread transforms humble ground meat into a luxurious handheld feast.\n\nAt the heart of an authentic Keema Paratha is the filling: premium lean Halal minced beef (or mutton) braised gently with finely minced onions, ginger-garlic paste, roasted ground cumin, fragrant coriander powder, turmeric, Kashmiri red chili, and warm garam masala. Crucially, the meat is simmered until every droplet of excess liquid evaporates, then finished with a shower of finely chopped fresh mint leaves, cilantro, fiery green chilies, and a squeeze of fresh lemon juice for brightness.\n\nThe dough is crafted from a balanced blend of stoneground whole-wheat flour (atta) and unbleached all-purpose flour (maida), kneaded with a touch of ghee and warm water until pillowy, pliable, and elastic. Each dough disc is flattened, cupped, and generously packed with the cooled, aromatic keema before being pleated, sealed into a neat parcel, and gently rolled out into a smooth, even round without tearing.\n\nWhen placed on a piping-hot cast-iron tawa, the paratha begins to puff with aromatic steam. Basted generously with pure golden cow ghee, the outer crust develops signature mottled leopard spots and an intoxicating, flaky crunch, encasing a juicy, savory meat filling in every single bite. Served hot off the griddle with a bowl of refreshing mint-coriander green chutney, cooling cucumber raita, and pickled onions, it stands as an undisputed classic of South Asian culinary mastery.",
+    heroImage: IMAGES.keemaParatha,
+    prepTimeMinutes: 25,
+    cookTimeMinutes: 25,
+    totalTimeMinutes: 50,
+    servings: 4,
+    difficulty: "Medium",
+    calories: 410,
+    rating: 4.99,
+    reviewCount: 168,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified. Prepared exclusively with zabiha hand-slaughtered minced beef (or mutton), pure dairy cow ghee, and unadulterated ground spices. No artificial additives, non-halal fats, or preservatives.",
+    potentialCautionNotes:
+      "Ensure the cooked keema filling is completely dry and cooled to room temperature before stuffing. Hot or wet keema weakens dough gluten and causes the paratha to tear and leak filling during rolling.",
+    ingredients: [
+      { amount: "1", unit: "lb / 450g", name: "Lean Halal minced beef or mutton keema", notes: "freshly ground, 85/15 or 90/10 lean" },
+      { amount: "2", unit: "cups", name: "Stoneground whole-wheat flour (atta)", notes: "for rich nutty flavor and structure" },
+      { amount: "1/2", unit: "cup", name: "All-purpose flour (maida)", notes: "gives elasticity and prevents tearing" },
+      { amount: "1", unit: "cup", name: "Yellow onion", notes: "very finely minced" },
+      { amount: "1.5", unit: "tbsp", name: "Ginger-garlic paste", notes: "freshly grated or crushed" },
+      { amount: "2 to 3", unit: "pieces", name: "Fresh green chilies", notes: "finely minced" },
+      { amount: "1/4", unit: "cup", name: "Fresh coriander leaves", notes: "finely chopped" },
+      { amount: "2", unit: "tbsp", name: "Fresh mint leaves (pudina)", notes: "finely chopped for bright aroma" },
+      { amount: "1", unit: "tsp", name: "Kashmiri red chili powder", notes: "for warm color and mild heat" },
+      { amount: "1", unit: "tsp", name: "Roasted cumin powder (bhuna jeera)" },
+      { amount: "1", unit: "tsp", name: "Ground coriander (dhania powder)" },
+      { amount: "1/2", unit: "tsp", name: "Turmeric powder" },
+      { amount: "1", unit: "tsp", name: "Shahi garam masala powder", notes: "cardamom, cinnamon, mace & clove blend" },
+      { amount: "1/2", unit: "tsp", name: "Chaat masala powder", notes: "optional, for street-style tangy zest" },
+      { amount: "1", unit: "tbsp", name: "Fresh lemon juice" },
+      { amount: "1", unit: "tsp", name: "Fine sea salt (for keema) + 1/2 tsp for dough", notes: "adjust to taste" },
+      { amount: "1.5", unit: "tbsp", name: "Mustard oil or vegetable oil", notes: "to cook the keema filling" },
+      { amount: "3/4 to 1", unit: "cup", name: "Lukewarm water", notes: "to knead a soft pliable dough" },
+      { amount: "3 to 4", unit: "tbsp", name: "Pure cow ghee", notes: "for basting and pan-toasting to a golden crunch" },
+    ],
+    substitutions: [
+      {
+        original: "Minced beef keema",
+        substitute: "Minced Halal mutton, lamb, or chicken breast keema",
+        notes: "Mutton offers rich traditional gamey depth; chicken cooks faster and yields a lighter profile.",
+      },
+      {
+        original: "Atta & Maida blend",
+        substitute: "100% whole wheat chapati flour or gluten-free 1-to-1 baking blend",
+        notes: "100% atta gives a heartier texture; maida addition makes rolling easier without tears.",
+      },
+      {
+        original: "Pure cow ghee",
+        substitute: "Mustard oil, sunflower oil, or plant-based vegan ghee",
+        notes: "Ghee provides the signature royal Mughlai richness and crisp leopard spots.",
+      },
+      {
+        original: "Fresh mint leaves",
+        substitute: "Additional fresh coriander leaves and a pinch of dried kasuri methi",
+        notes: "Adds earthy herbal fragrance.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Cook the Spiced Keema Filling",
+        instruction:
+          "Heat 1.5 tablespoons of oil in a wide pan over medium flame. Add finely chopped onions and sauté for 4 to 5 minutes until translucent and lightly golden. Stir in ginger-garlic paste and sauté for 1 minute until fragrant. Add the minced beef, breaking up any clumps with a wooden spatula. Cook over medium-high heat for 5 minutes until the meat changes color.",
+      },
+      {
+        step: 2,
+        title: "Simmer with Spices until Bone-Dry",
+        instruction:
+          "Stir in Kashmiri chili powder, roasted cumin, ground coriander, turmeric, garam masala, chaat masala, and salt. Lower the heat to medium-low, cover, and let the keema simmer in its own juices for 12 to 15 minutes until tender. Uncover and increase heat to cook off every trace of moisture—the filling must be completely dry so it does not make the dough soggy.",
+      },
+      {
+        step: 3,
+        title: "Cool and Mix in Fresh Herbs & Lemon Juice",
+        instruction:
+          "Turn off the heat. Stir in the fresh lemon juice, chopped coriander, mint leaves, and minced green chilies. Mix thoroughly and spread the keema onto a flat plate to cool completely to room temperature. Never stuff hot keema into dough, as heat will tear the gluten.",
+      },
+      {
+        step: 4,
+        title: "Knead the Soft Paratha Dough",
+        instruction:
+          "In a large mixing bowl, combine whole wheat flour, all-purpose flour, 1/2 tsp salt, and 1 tablespoon of ghee. Gradually add lukewarm water while kneading for 7 to 8 minutes until a smooth, soft, and pliable dough forms (slightly softer than regular roti dough). Cover with a damp kitchen towel and let rest for 15 to 20 minutes.",
+      },
+      {
+        step: 5,
+        title: "Portion and Stuff the Dough Parcels",
+        instruction:
+          "Divide dough into 4 to 6 equal smooth balls. Take one dough ball, dust with dry flour, and roll into a 4-inch disc, keeping the edges slightly thinner than the center. Cup the dough in your palm and place 3 generous tablespoons of cooled keema filling in the center. Bring all the edges together over the filling, pleating like a pouch, and pinch tightly at the top to seal completely.",
+      },
+      {
+        step: 6,
+        title: "Gently Roll Out the Parathas",
+        instruction:
+          "Dust the stuffed dough ball generously with flour. Press down gently with your fingertips to flatten and distribute the keema evenly inside. Using a rolling pin, roll with gentle, even radiating strokes from the center outward into a 7 to 8-inch flatbread. Do not press hard to avoid tearing the skin.",
+      },
+      {
+        step: 7,
+        title: "Tawa Toast & Ghee-Crisp to Perfection",
+        instruction:
+          "Preheat a heavy cast-iron tawa or skillet over medium-high flame. Place the rolled paratha on the hot dry pan. Cook for 1 to 2 minutes until small bubbles begin to form on the surface. Flip and cook the second side for 1 minute. Drizzle 1 teaspoon of pure cow ghee over the top, flip, and press gently around the perimeter with a flat spatula. Apply another teaspoon of ghee to the other side and flip again. Fry for 1 to 2 minutes, pressing gently, until both sides turn crisp, puffy, and speckled with deep golden leopard spots. Remove and repeat with remaining parathas.",
+      },
+    ],
+    chefNotes: [
+      "The #1 reason keema parathas burst is moisture or warmth in the filling: ensure the keema is cooked bone-dry and thoroughly cooled before stuffing.",
+      "Keeping the center of the initial dough disc slightly thicker than the edges prevents the bottom from stretching too thin when sealed.",
+      "Dry-roasting the paratha first on both sides before brushing with ghee allows internal steam to puff the bread, creating flaky layers and a crisp, non-greasy crust.",
+    ],
+    nutrition: {
+      calories: 410,
+      proteinGrams: 24,
+      carbsGrams: 46,
+      fatGrams: 16,
+      fiberGrams: 6,
+      sodiumMg: 580,
+    },
+    storageInstructions:
+      "Best enjoyed immediately piping hot off the tawa. Leftover cooked parathas can be wrapped in foil and refrigerated for up to 3 days. Reheat on a hot dry skillet for 1 to 2 minutes per side to restore crunch.",
+    freezingInstructions:
+      "Raw stuffed and rolled parathas freeze wonderfully: stack them separated by parchment sheets, wrap securely in foil or freezer bags, and freeze for up to 2 months. Cook straight from frozen on a medium-low tawa with ghee without thawing.",
+    servingSuggestions: [
+      "Slice into halves or quarters to showcase the rich savory minced meat layers.",
+      "Serve accompanied by chilled mint-coriander green chutney, tangy lemon wedges, and crunchy pickled red onions.",
+      "Pair with a bowl of cooling cucumber cumin raita or hot spiced milk chai for a legendary brunch or evening snack.",
+    ],
+    faqs: [
+      {
+        question: "Why does my keema paratha tear during rolling?",
+        answer:
+          "Tearing happens if the keema filling has excess liquid or is still warm, or if rolled with heavy downward force. Ensure the meat is bone-dry and cold, and roll with gentle, feather-light strokes from the center outward.",
+      },
+      {
+        question: "Can I use chicken or lamb instead of beef?",
+        answer:
+          "Yes! Halal minced lamb or mutton produces exceptional rich flavor, while minced chicken breast or thigh yields a lighter, quick-cooking alternative.",
+      },
+      {
+        question: "How do I ensure the paratha puffs up?",
+        answer:
+          "A well-kneaded dough with a 15-minute rest, a completely sealed pouch, and dry-roasting on a hot tawa before applying ghee will build the steam required to puff the flatbread.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman & Noakhali Heritage Culinary Team",
+      role: "Executive Chef & Mughlai Bread Artisan",
+    },
+    updatedDate: "September 21, 2026",
+    tags: [
+      "Halal Beef",
+      "Keema Paratha",
+      "Mughlai Food",
+      "Paratha",
+      "Stuffed Bread",
+      "Halal Snacks",
+      "Halal Street Food",
+      "Breakfast",
+      "Brunch",
+      "Ground Beef",
+    ],
+  },
+  {
     id: "rec-corned-beef-reuben-sandwich",
     slug: "corned-beef-reuben-sandwich",
     title: "Corned Beef Reuben Sandwich (রুবেন স্যান্ডউইচ)",
@@ -10897,7 +11068,7 @@ const BASE_RECIPES: Recipe[] = [
       "Lean Halal ground beef meatballs seasoned with cumin, coriander, cinnamon, and fresh mint, baked until golden and served over fluffy golden couscous with fire-roasted tomato sauce and roasted zucchini.",
     introStory:
       "A fragrant, comfort-packed lunch prep inspired by the aromatic souks of Marrakech. Seasoned with warming ras el hanout, fresh coriander, and mint, these baked Halal beef meatballs are simmered in a zesty smoked tomato sauce that coats fluffy steamed couscous. Each bite delivers deeply satisfying savory flavor that actually improves overnight as the spices meld.",
-    heroImage: IMAGES.mealPrep,
+    heroImage: IMAGES.moroccanBeefMeatballs,
     prepTimeMinutes: 20,
     cookTimeMinutes: 25,
     totalTimeMinutes: 45,
@@ -15299,6 +15470,550 @@ const BASE_RECIPES: Recipe[] = [
       "Tandoori Chicken",
       "Comfort Food",
       "High Protein",
+    ],
+  },
+  {
+    id: "rec-peri-peri-chicken",
+    slug: "peri-peri-chicken",
+    title: "Peri Peri Chicken (পেরি পেরি চিকেন)",
+    category: "Chicken",
+    categorySlug: "halal-chicken",
+    cuisine: "African-Portuguese / Mozambican",
+    description:
+      "Flame-charred, succulent bone-in Halal chicken thighs and drumsticks marinated in a vibrant homemade peri peri sauce of bird's eye chilies, roasted red peppers, garlic, fresh lemon juice, and smoked paprika, skillet-roasted to spicy, smoky perfection.",
+    introStory:
+      "Peri Peri Chicken (also known as Piri-Piri or Pili-Pili / পেরি পেরি চিকেন / پیری پیری چکن / دجاج بيري بيري) is one of the world's most celebrated flame-grilled poultry dishes, originating from the historic convergence of Mozambican, Angolan, and Portuguese culinary traditions. The soul of this legendary dish lies in the African Bird's Eye chili (Capsicum frutescens), which when pounded with fire-roasted sweet bell peppers, whole garlic cloves, extra virgin olive oil, freshly squeezed lemon juice, wild oregano, and smoked Spanish pimentón, yields a fiery, deeply aromatic sauce that tenderizes the meat while caramelizing into blistered, charred perfection over high heat. In this 100% Halal home-cooking masterclass, fresh bone-in chicken thighs and drumsticks are scored down to the bone, steeped in scratch-made peri-peri marinade, seared skin-down in a smoking cast-iron skillet, and roasted to juicy tenderness. Basted with molten garlic butter and served sizzling with lemon wedges and extra dipping sauce, this is the definitive restaurant-grade Peri Peri feast.",
+    heroImage: IMAGES.periPeriChicken,
+    prepTimeMinutes: 20,
+    cookTimeMinutes: 35,
+    totalTimeMinutes: 55,
+    servings: 4,
+    difficulty: "Medium",
+    calories: 480,
+    rating: 4.95,
+    reviewCount: 142,
+    isTrending: true,
+    isFeatured: true,
+    halalNotes:
+      "100% Halal certified or hand-slaughtered Zabiha poultry. Prepared using pure natural spices, fresh lemon juice, unadulterated cold-pressed olive oil, and Halal vinegar with zero alcohol additives or synthetic colorings.",
+    ingredients: [
+      { amount: "4", unit: "pieces", name: "Bone-in, skin-on Halal chicken thighs", notes: "approx. 600g / 1.3 lbs, trimmed of excess fat" },
+      { amount: "4", unit: "pieces", name: "Bone-in Halal chicken drumsticks", notes: "approx. 500g / 1.1 lbs" },
+      { amount: "1", unit: "tsp", name: "Fine sea salt", notes: "for dry-seasoning chicken before marinade" },
+      { amount: "1/2", unit: "tsp", name: "Freshly ground black pepper", notes: "coarsely cracked" },
+      { amount: "6-8", unit: "pieces", name: "Fresh red bird's eye chilies (piri-piri)", notes: "stemmed, seeds left in for authentic fiery heat (or halved & deseeded for medium heat)" },
+      { amount: "1", unit: "large", name: "Red bell pepper", notes: "roasted, charred skin peeled, deseeded and chopped" },
+      { amount: "6", unit: "cloves", name: "Fresh garlic", notes: "peeled and roughly smashed" },
+      { amount: "1/4", unit: "cup", name: "Extra virgin olive oil", notes: "cold-pressed, plus 1 tbsp for the skillet" },
+      { amount: "1/4", unit: "cup", name: "Fresh lemon juice", notes: "freshly squeezed from 2 ripe lemons" },
+      { amount: "1", unit: "tbsp", name: "Apple cider vinegar or Halal grape vinegar", notes: "for bright, clean acidity" },
+      { amount: "1", unit: "tbsp", name: "Smoked Spanish sweet paprika (pimentón dulce)", notes: "for rich color and woodsmoke depth" },
+      { amount: "1", unit: "tsp", name: "Dried oregano", notes: "rubbed between palms" },
+      { amount: "1", unit: "tsp", name: "Ground coriander", notes: "freshly toasted" },
+      { amount: "1/2", unit: "tsp", name: "Ground cumin", notes: "warm earthy undertone" },
+      { amount: "1", unit: "tsp", name: "Sea salt", notes: "for peri-peri marinade balance" },
+      { amount: "1", unit: "tsp", name: "Light brown sugar", notes: "essential for deep caramelization and blistered char" },
+      { amount: "2", unit: "leaves", name: "Fresh bay leaves", notes: "tucked into chicken marinating dish" },
+      { amount: "2", unit: "tbsp", name: "Unsalted butter", notes: "melted with 3 tbsp reserved sauce for finishing baste" },
+      { amount: "1/4", unit: "cup", name: "Fresh flat-leaf parsley or cilantro", notes: "finely chopped for finishing garnish" },
+      { amount: "1", unit: "whole", name: "Lemon", notes: "cut into wedges for table service" },
+    ],
+    substitutions: [
+      {
+        original: "Bird's eye chilies",
+        substitute: "Red Fresno chilies or red jalapeños",
+        notes: "Provides authentic red color and fruity pepper aroma with significantly milder heat.",
+      },
+      {
+        original: "Bone-in chicken thighs and drumsticks",
+        substitute: "Boneless chicken breasts or spatchcocked whole chicken",
+        notes: "Reduce oven cooking time to 12-14 minutes for boneless breasts to prevent drying out.",
+      },
+      {
+        original: "Apple cider vinegar",
+        substitute: "Halal certified white grape vinegar or freshly squeezed lime juice",
+        notes: "Delivers crisp citrus acidity without altering the spice balance.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Score & Dry Season Chicken",
+        instruction:
+          "Pat the chicken thighs and drumsticks thoroughly dry on all sides using paper towels. Using a sharp knife, make 2 shallow diagonal slits across the thickest meat of each thigh and drumstick, cutting down towards the bone. Season all pieces evenly with 1 teaspoon sea salt and 1/2 teaspoon black pepper. Set aside.",
+        tip: "Scoring the meat allows the acidic citrus and fragrant chilies to permeate deep to the marrow rather than just coating the outer skin.",
+      },
+      {
+        step: 2,
+        title: "Blend the Artisan Peri Peri Sauce",
+        instruction:
+          "In a high-speed blender or food processor, combine the bird's eye chilies, roasted red bell pepper, garlic cloves, olive oil, fresh lemon juice, vinegar, smoked paprika, dried oregano, coriander, cumin, sea salt, and brown sugar. Puree on high speed for 60 to 90 seconds until emulsified into a vibrant scarlet, glossy sauce.",
+        tip: "Blending roasted sweet red pepper with the fiery bird's eye chilies creates that signature thick, glossy restaurant-grade texture without needing artificial thickeners.",
+      },
+      {
+        step: 3,
+        title: "Reserve Basting & Dipping Sauce",
+        instruction:
+          "Pour approximately 1/3 cup of the freshly blended peri-peri sauce into a clean small glass jar or bowl. Cover and refrigerate; this clean portion will be used for basting at the end and serving as an irresistible table condiment.",
+        tip: "Always separate your basting sauce before touching raw poultry to maintain impeccable food safety.",
+      },
+      {
+        step: 4,
+        title: "Deep Marinate",
+        instruction:
+          "Place the seasoned chicken in a large glass dish or heavy-duty zip-top bag. Pour the remaining 2/3 of the peri-peri marinade over the chicken and tuck in 2 bay leaves. Thoroughly massage the marinade into every cut, slit, and under the edges of the skin. Seal tightly and refrigerate for a minimum of 4 hours, or ideally overnight (up to 24 hours).",
+        tip: "An overnight marinade lets the citric acid tenderize the muscle fibers, yielding exceptionally succulent meat that pulls easily from the bone.",
+      },
+      {
+        step: 5,
+        title: "Preheat Oven & Cast-Iron Skillet",
+        instruction:
+          "Remove the marinated chicken from the refrigerator 30 minutes before cooking to bring it closer to room temperature for even cooking. Preheat your oven to 400°F (200°C / Gas Mark 6). Place a large (12-inch) heavy cast-iron skillet on the stovetop over medium-high heat with 1 tablespoon olive oil until shimmering and faintly smoking.",
+      },
+      {
+        step: 6,
+        title: "Sear for Golden Char Marks",
+        instruction:
+          "Using tongs, place the chicken pieces into the hot skillet skin-side down in a single layer (they should produce an immediate, vigorous sizzle). Sear undisturbed for 5 to 6 minutes until the skin turns deeply golden-brown with caramelized, smoky char blisters around the edges. Turn the chicken pieces over skin-side up.",
+        tip: "Resist the urge to move the chicken during the first 5 minutes; undisturbed contact with the heavy iron creates that iconic flame-grilled char.",
+      },
+      {
+        step: 7,
+        title: "Skillet Oven Roast",
+        instruction:
+          "Carefully transfer the entire cast-iron skillet directly into the preheated 400°F (200°C) oven. Roast for 22 to 25 minutes until the chicken reaches an internal temperature of 165°F (74°C) on a digital meat thermometer inserted into the thickest part of the thigh without touching bone.",
+      },
+      {
+        step: 8,
+        title: "Glaze with Garlic Peri Butter",
+        instruction:
+          "While the chicken roasts, warm the 2 tablespoons of melted butter and whisk in 3 tablespoons of the clean reserved peri-peri sauce. At the 22-minute mark, brush this molten garlic peri butter lavishly over each piece of sizzling chicken and roast for another 2 to 3 minutes until bubbling and glossy.",
+        tip: "The butter glaze tames the raw chili acidity with rich dairy fat, lending an irresistible high-gloss restaurant sheen.",
+      },
+      {
+        step: 9,
+        title: "Rest, Garnish & Sizzle Service",
+        instruction:
+          "Remove the cast-iron skillet from the oven and allow the chicken to rest for 5 minutes so the savory juices redistribute throughout each cut. Sprinkle generously with fresh chopped parsley or cilantro. Serve sizzling in the skillet garnished with juicy lemon wedges, accompanied by warm garlic pita bread, spiced turmeric rice, or crispy salted fries.",
+      },
+    ],
+    chefNotes: [
+      "The Cast-Iron Advantage: Cast iron retains heat like commercial charcoal grills, allowing the sugars and paprikas in the marinade to blacken and caramelize rather than sweat.",
+      "Food Safety on Basting: Never use marinade that has touched raw chicken to baste cooked meat. Always reserve a clean portion directly from the blender as instructed.",
+      "Lemon and Vinegar Balance: Fresh lemon provides high floral acidity, while vinegar stabilizes the sauce for storage and adds a tangy lingering kick.",
+    ],
+    nutrition: {
+      calories: 480,
+      proteinGrams: 42,
+      carbsGrams: 6,
+      fatGrams: 32,
+      fiberGrams: 1.5,
+      sodiumMg: 780,
+      servingSizeDescription: "2 pieces (1 thigh + 1 drumstick with peri-peri glaze)",
+    },
+    storageInstructions:
+      "Allow leftover chicken to cool completely before transferring to an airtight glass container. Store in the refrigerator for up to 4 days. Reheat in a preheated 375°F (190°C) oven or air fryer for 8-10 minutes to re-crisp the skin while keeping the interior juicy.",
+    freezingInstructions:
+      "Raw marinated chicken can be frozen in a freezer bag with marinade for up to 3 months. Thaw overnight in the refrigerator before skillet-searing. Cooked chicken can also be frozen for up to 2 months.",
+    servingSuggestions: [
+      "Spiced Turmeric Rice: Fluffy long-grain rice sautéed with butter, turmeric, garlic, and sweet peas.",
+      "Peri Peri Salted Chips: Crispy skin-on french fries tossed with smoked paprika, sea salt, garlic powder, and oregano.",
+      "Flame-Charred Garlic Naan / Pita: Warm flatbread brushed with garlic butter to wrap around the pulled spicy chicken.",
+      "Cooling Cucumber Raita or Coleslaw: Crisp cabbage slaw with lemon-herb dressing to temper the chili heat.",
+    ],
+    faqs: [
+      {
+        question: "How spicy is authentic Peri Peri chicken, and can I adjust the heat?",
+        answer:
+          "Authentic peri-peri packs noticeable fiery heat from African bird's eye chilies (ranging between 50,000 to 100,000 Scoville units). In this recipe, blending with roasted sweet red bell pepper tempers the bite with rich sweetness. To make it mild-to-medium, simply remove the seeds and white ribs from the chilies before blending, or substitute with mild Fresno chilies. For extra hot, add 2 additional bird's eye chilies and 1/2 tsp cayenne pepper.",
+      },
+      {
+        question: "Can I prepare this recipe on an outdoor BBQ grill instead of a cast-iron skillet?",
+        answer:
+          "Yes! Outdoor charcoal grilling yields incredible woodsmoke aroma. Set up a two-zone fire (direct heat on one side, indirect heat on the other). Sear chicken pieces over direct medium coals for 3-4 minutes per side to build distinct grill char, then move to the indirect cooler side, close the grill lid, and cook for 25-30 minutes until 165°F internal temperature, basting frequently with the garlic-peri butter during the final 10 minutes.",
+      },
+      {
+        question: "Can I make the peri-peri marinade in advance?",
+        answer:
+          "Absolutely. The blended peri-peri marinade keeps exceptionally well in an airtight glass jar in the refrigerator for up to 2 weeks, and can also be frozen in ice cube trays for up to 4 months. In fact, the flavors deepen and harmonize after 24 to 48 hours in the fridge.",
+      },
+      {
+        question: "What are the traditional side dishes to serve with Halal Peri Peri Chicken?",
+        answer:
+          "Peri-peri chicken is famously paired with fragrant spiced turmeric peri rice, crispy hand-cut fries (chips) dusted with peri salt, charred sweet corn cobs brushed with butter, creamy coleslaw, and fresh charred garlic pita flatbreads.",
+      },
+    ],
+    author: {
+      name: "Chef Bodiul Alam",
+      role: "Culinary Director & Halal Grill Specialist",
+    },
+    updatedDate: "September 21, 2026",
+    tags: [
+      "Peri Peri Chicken",
+      "Piri Piri Chicken",
+      "পেরি পেরি চিকেন",
+      "پیری پیری چکن",
+      "دجاج بيري بيري",
+      "Halal Chicken",
+      "Halal Poultry",
+      "Flame-Grilled",
+      "Cast Iron Chicken",
+      "African Portuguese",
+      "Mozambican",
+      "Spicy Chicken",
+      "High Protein",
+      "Halal Street Food",
+      "Gluten-Free Option",
+    ],
+  },
+  {
+    id: "rec-easy-basmati-rice",
+    slug: "easy-basmati-rice-cooking",
+    title: "Easy Basmati Rice Cooking (সহজে বাসমতী চাল রান্না)",
+    category: "Rice & Curry",
+    categorySlug: "halal-rice-curry",
+    cuisine: "South Asian / Middle Eastern / Bengali",
+    description:
+      "Master the foolproof absorption technique for cooking fluffy, aromatic, non-sticky extra-long grain basmati rice with individual separated grains, gentle ghee aroma, and fresh herb garnish.",
+    introStory:
+      "Basmati rice—etymologically rooted in the Sanskrit word 'Vasmati' meaning 'fragrant' or 'perfumed' (সহজে বাসমতী চাল রান্না / طريقة سهلة لطهي أرز البسمتي)—is the indisputable crowning jewel of South Asian, Middle Eastern, and Persian royal dining. Yet home cooks frequently struggle with either broken, mushy clumping or undercooked, brittle grains. The secret to restaurant-grade, cloud-fluffy basmati rice with elongated, needle-sharp separate grains lies in three non-negotiable culinary principles: gently washing away surface amylose starch until the water is completely clear, allowing the dried grains to soak for 25 to 30 minutes so moisture reaches the core without fracturing, and applying the precise 1:1.5 water-to-soaked-rice steam absorption ratio. Simmered with a hint of pure cow ghee, whole green cardamom, and bay leaf, this foundational Halal recipe produces tender, feather-light grains that elevate any curry, roast, or grilled kebab into an unforgettable feast.",
+    heroImage: IMAGES.easyBasmatiRice,
+    prepTimeMinutes: 10,
+    cookTimeMinutes: 15,
+    totalTimeMinutes: 25,
+    servings: 4,
+    difficulty: "Easy",
+    calories: 205,
+    rating: 4.98,
+    reviewCount: 184,
+    isTrending: true,
+    isFeatured: true,
+    halalNotes:
+      "100% naturally Halal, vegetarian, vegan-adaptable, and gluten-free staple cooked with pure unadulterated cow ghee or cold-pressed olive oil and whole natural spices.",
+    ingredients: [
+      { amount: "2", unit: "cups", name: "Aged extra-long grain Basmati rice", notes: "approx. 400g (look for aged 1121 or Himalayan basmati)" },
+      { amount: "3", unit: "cups", name: "Water or light Halal broth", notes: "720ml, boiling hot (exact 1:1.5 ratio for pre-soaked rice)" },
+      { amount: "1", unit: "tbsp", name: "Pure cow ghee or extra virgin olive oil", notes: "coats the grains to prevent sticking and imparts rich aroma" },
+      { amount: "1", unit: "tsp", name: "Fine sea salt", notes: "essential for seasoning the rice throughout" },
+      { amount: "2", unit: "pods", name: "Green cardamom", notes: "lightly crushed (optional for subtle royal aroma)" },
+      { amount: "1", unit: "small", name: "Cinnamon stick", notes: "about 1.5 inches (optional)" },
+      { amount: "1", unit: "leaf", name: "Bay leaf (tejpatta)", notes: "bruised (optional)" },
+      { amount: "1/2", unit: "tsp", name: "Fresh lemon juice", notes: "adds shine and helps keep grains dazzling white (optional)" },
+      { amount: "2", unit: "tbsp", name: "Fresh cilantro or flat-leaf parsley", notes: "finely chopped for finishing garnish" },
+    ],
+    substitutions: [
+      {
+        original: "Pure cow ghee",
+        substitute: "Extra virgin olive oil or neutral avocado oil",
+        notes: "Keeps the dish 100% plant-based/vegan while maintaining grain separation.",
+      },
+      {
+        original: "Aged 1121 Basmati rice",
+        substitute: "Kalijeera baby basmati or Jasmine rice",
+        notes: "If using Jasmine rice, reduce water ratio to 1:1.25 as Jasmine rice absorbs less liquid than aged basmati.",
+      },
+      {
+        original: "Plain water",
+        substitute: "Halal chicken bone broth or vegetable stock",
+        notes: "Infuses the grains with deep savory richness for pilaf-style dining.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Gentle Washing (Removing Starch)",
+        instruction:
+          "Place the basmati rice in a fine-mesh strainer or large mixing bowl. Rinse gently with cold running water, swirling the grains delicately with your fingertips in circular motions. Drain and repeat 3 to 4 times until the drained water runs completely crystal clear, with no cloudy milky starch remaining.",
+        tip: "Do not rub the grains aggressively between your palms; aged basmati grains are long and delicate and can fracture easily if mishandled.",
+      },
+      {
+        step: 2,
+        title: "The 30-Minute Essential Soak",
+        instruction:
+          "Transfer the washed rice to a bowl and cover with 3 inches of cool water. Let it soak undisturbed at room temperature for 25 to 30 minutes. Drain thoroughly in a colander for 2 minutes to remove excess surface water before cooking.",
+        tip: "Soaking hydrates the interior starch granules before heat is applied, enabling the rice grains to expand up to double their dry length without breaking.",
+      },
+      {
+        step: 3,
+        title: "Bloom Aromatics & Coat Grains",
+        instruction:
+          "In a medium heavy-bottomed saucepan or Dutch oven with a tight-fitting lid, melt 1 tablespoon of ghee or oil over medium heat. Add the crushed cardamom pods, cinnamon stick, and bay leaf. Sauté for 30 seconds until fragrant. Add the drained rice and stir gently with a silicone spatula for 60 seconds to coat each grain evenly in shimmering fat.",
+        tip: "Coating the rice in warm fat seals the exterior starch layer, ensuring each grain cooks individually without sticking together.",
+      },
+      {
+        step: 4,
+        title: "Add Boiling Water & Salt",
+        instruction:
+          "Pour in exactly 3 cups of freshly boiled water (or broth), sea salt, and lemon juice. Stir once gently to distribute the salt and rice evenly across the bottom of the pot. Bring the liquid to a rapid rolling boil over medium-high heat until the water level recedes to just expose the surface of the rice (about 2 minutes).",
+        tip: "Adding boiling water instead of cold water prevents the soaked grains from sitting in lukewarm liquid and turning mushy.",
+      },
+      {
+        step: 5,
+        title: "Cover & Steam Simmer (12 Minutes)",
+        instruction:
+          "Immediately turn the stove heat down to the lowest possible setting. Cover the pot with a heavy, tight-fitting lid. Cook undisturbed on low heat for exactly 12 minutes. Under no circumstances should you lift the lid or stir during this time, as trapped steam does the cooking.",
+      },
+      {
+        step: 6,
+        title: "Off-Heat Steam Rest (10 Minutes)",
+        instruction:
+          "After 12 minutes, turn off the stove burner completely. Leave the covered pot undisturbed on the warm burner or counter for a full 10 minutes. The residual trapped steam will finish tenderizing the rice cores and allow excess moisture to evaporate cleanly.",
+        tip: "The 10-minute rest is when the magic happens: the starch sets and the grains firm up, preventing breakage when served.",
+      },
+      {
+        step: 7,
+        title: "Fluff, Garnish & Serve",
+        instruction:
+          "Remove the lid. Using a wide fork or wooden rice paddle, gently fluff the rice by lifting from the edges toward the center. Discard whole whole spices if desired. Transfer to a serving bowl, sprinkle with fresh chopped parsley or cilantro, and serve piping hot.",
+      },
+    ],
+    chefNotes: [
+      "The Golden Water-to-Rice Ratio: For soaked basmati rice, the exact ratio is 1.5 cups of boiling liquid per 1 cup of dry rice. For unsoaked rice, it would require 1.75 to 2 cups.",
+      "The Lemon Secret: Adding just 1/2 teaspoon of fresh lemon juice prevents discoloration, ensuring your cooked rice has that dazzling pearl-white restaurant appearance without any sour taste.",
+      "Aged Rice Matters: Always look for basmati marked 'Aged 1 to 2 Years' or 'Aged 1121'. Aged rice has lower moisture content, which allows the grains to absorb water and stretch longer without turning sticky.",
+    ],
+    nutrition: {
+      calories: 205,
+      proteinGrams: 4,
+      carbsGrams: 44,
+      fatGrams: 1.5,
+      fiberGrams: 1,
+      sodiumMg: 280,
+      servingSizeDescription: "1 bowl (approx. 180g cooked fluffy rice)",
+    },
+    storageInstructions:
+      "Cool leftover rice quickly and store in an airtight glass container in the refrigerator for up to 4 days. Reheat with 1 tablespoon of water or broth, covered, in the microwave or on the stovetop for 2-3 minutes to restore steamy fluffiness.",
+    freezingInstructions:
+      "Spread cooked basmati rice on a baking sheet to cool, then portion into freezer-safe zip-top bags and freeze flat for up to 3 months. Reheat directly from frozen with a splash of water.",
+    servingSuggestions: [
+      "Rich Halal Curries: The supreme companion to Kashmiri Rogan Josh, Bengali Beef Bhuna, Chicken Rezala, or Chicken Tikka Masala.",
+      "Lentil Dals: Spoon over hot Bengali Tarka Dal or Chana Dal with a dollop of ghee and fresh green chili.",
+      "Grilled Kebabs: Serve alongside flame-grilled Bihari Boti, Seekh Kebabs, or Peri Peri Chicken with cooling cucumber raita.",
+      "Fresh Salads: Pair with a crisp Middle Eastern fattoush or spiced chopped kachumber salad.",
+    ],
+    faqs: [
+      {
+        question: "Why is my basmati rice sticky or mushy?",
+        answer:
+          "Mushy rice is usually caused by three mistakes: not rinsing away the cloudy surface starch, using too much water (exceeding the 1:1.5 ratio for soaked rice), or stirring the rice while it is simmering, which bursts the starch granules.",
+      },
+      {
+        question: "Can I use an electric rice cooker or Instant Pot for this recipe?",
+        answer:
+          "Yes! In a standard rice cooker, wash and soak the rice for 20 minutes, drain, add 1.25 cups of water per 1 cup of soaked rice, 1/2 tsp salt, and ghee, then press the White Rice cycle. In an Instant Pot: use a 1:1 ratio with rinsed/soaked rice, high pressure for 4 minutes, followed by a 10-minute natural release.",
+      },
+      {
+        question: "Do I have to add whole spices like cardamom and bay leaf?",
+        answer:
+          "Whole spices are entirely optional. While they impart an exquisite subtle fragrance reminiscent of wedding feasts and royal banquets, you can omit them completely for pure, plain steamed basmati rice.",
+      },
+      {
+        question: "What is the difference between Basmati and Jasmine rice?",
+        answer:
+          "Basmati is an extra-long grain rice native to the foothills of the Himalayas with a nutty, pandan-like aroma that cooks dry, fluffy, and separate. Jasmine rice is a medium-to-long grain rice from Southeast Asia that naturally contains more amylopectin starch, making it soft, moist, and pleasantly clingy.",
+      },
+    ],
+    author: {
+      name: "Chef Bodiul Alam",
+      role: "Culinary Director & Rice Heritage Specialist",
+    },
+    updatedDate: "September 21, 2026",
+    tags: [
+      "Basmati Rice",
+      "Easy Basmati Rice",
+      "সহজে বাসমতী চাল রান্না",
+      "طريقة سهلة لطهي أرز البسمتي",
+      "White Rice",
+      "Halal Rice",
+      "Rice & Curry",
+      "Meal Prep",
+      "Gluten-Free",
+      "Vegetarian",
+      "Vegan Option",
+      "How to Cook Rice",
+      "Aged Basmati",
+    ],
+  },
+  {
+    id: "rec-saag-paneer",
+    slug: "saag-paneer",
+    title: "Saag Paneer (শাক পনির)",
+    category: "Vegetarian",
+    categorySlug: "halal-vegetarian",
+    cuisine: "North Indian / South Asian / Bengali",
+    description:
+      "A lush, vibrant emerald green spinach and spiced greens curry simmered with aromatic garlic, ginger, and cumin, enriched with a touch of cream and topped with golden, pan-seared cubes of Halal paneer cheese.",
+    introStory:
+      "Saag Paneer (শাক পনির / ساگ پنیر / ساغ بانير) is one of the most celebrated and beloved vegetarian treasures of the South Asian subcontinent, cherished from roadside highway dhabas in Punjab to festive family banquets in Dhaka, Lahore, and Delhi. The culinary magic of authentic Saag Paneer begins in the balance of greens: tender sweet baby spinach (palak) simmered alongside earthy mustard greens (sarson) or fenugreek leaves (methi) to create a complex, bittersweet foundation with incredible depth. By blanching the freshly picked greens in rapid boiling water and immediately plunging them into an ice bath, the chlorophyll is locked in, preventing oxidation and preserving a showstopping bright emerald hue. Pureed with caramelized garlic, ginger, and toasted cumin, the silky spiced gravy embraces cubes of fresh Halal paneer—pan-seared in golden cow ghee until crisp on the outside and pillow-soft within. Finished with a swirl of rich cream and fragrant kasoori methi, this is comfort food in its purest, most vibrant form.",
+    heroImage: IMAGES.saagPaneer,
+    prepTimeMinutes: 20,
+    cookTimeMinutes: 25,
+    totalTimeMinutes: 45,
+    servings: 4,
+    difficulty: "Medium",
+    calories: 360,
+    rating: 4.96,
+    reviewCount: 165,
+    isTrending: true,
+    isFeatured: true,
+    halalNotes:
+      "100% Halal certified vegetarian dish. Made using fresh dairy paneer prepared exclusively with microbial or vegetarian non-animal rennet, pure cow ghee, and unadulterated spices.",
+    ingredients: [
+      { amount: "400", unit: "g", name: "Fresh Halal paneer cheese", notes: "14 oz, cut into 1-inch bite-sized cubes (verified vegetarian/microbial rennet)" },
+      { amount: "500", unit: "g", name: "Fresh baby spinach leaves (palak)", notes: "approx. 1 lb, thoroughly rinsed and tough stems removed" },
+      { amount: "150", unit: "g", name: "Fresh mustard greens (sarson) or methi leaves", notes: "approx. 5 oz, rinsed and trimmed for deep herbal complexity" },
+      { amount: "2", unit: "tbsp", name: "Pure cow ghee or mustard oil", notes: "divided: 1 tbsp for searing paneer, 1 tbsp for the curry base" },
+      { amount: "1", unit: "medium", name: "Yellow onion", notes: "finely minced" },
+      { amount: "6", unit: "cloves", name: "Fresh garlic", notes: "finely minced or pounded" },
+      { amount: "1.5", unit: "tbsp", name: "Fresh ginger root", notes: "freshly grated" },
+      { amount: "2", unit: "pieces", name: "Fresh green chilies", notes: "slit lengthwise (adjust seeds to taste)" },
+      { amount: "1", unit: "large", name: "Ripe Roma tomato", notes: "finely diced or pureed" },
+      { amount: "1", unit: "tsp", name: "Whole cumin seeds (jeera)", notes: "for blooming in hot ghee" },
+      { amount: "1", unit: "tsp", name: "Ground coriander", notes: "toasted" },
+      { amount: "1/2", unit: "tsp", name: "Turmeric powder", notes: "for warm earthy color" },
+      { amount: "1/2", unit: "tsp", name: "Kashmiri red chili powder", notes: "for mild warmth and color" },
+      { amount: "1", unit: "tsp", name: "Royal Garam Masala", notes: "freshly ground aromatic blend" },
+      { amount: "1", unit: "tsp", name: "Fine sea salt", notes: "or to taste" },
+      { amount: "1", unit: "tbsp", name: "Kasoori methi (dried fenugreek leaves)", notes: "lightly warmed and crushed between palms" },
+      { amount: "3", unit: "tbsp", name: "Heavy whipping cream or fresh malai", notes: "for luxurious velvet finish" },
+      { amount: "1/2", unit: "whole", name: "Fresh lemon", notes: "freshly squeezed juice to brighten the greens" },
+      { amount: "1/2", unit: "small", name: "Red onion", notes: "sliced into delicate rings for table garnish" },
+    ],
+    substitutions: [
+      {
+        original: "Halal Paneer cheese",
+        substitute: "Extra-firm pressed tofu or Halal Halloumi",
+        notes: "Press tofu under a heavy weight for 20 minutes before searing to create a delicious 100% plant-based vegan version.",
+      },
+      {
+        original: "Mustard greens (sarson)",
+        substitute: "All baby spinach, kale, or Swiss chard",
+        notes: "Using 100% spinach creates a milder, sweeter Palak Paneer style without the peppery bite of mustard greens.",
+      },
+      {
+        original: "Heavy cream",
+        substitute: "Full-fat coconut cream or cashew paste",
+        notes: "Yields a silky dairy-free richness that balances the herbal spices perfectly.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Ice-Bath Blanching the Greens",
+        instruction:
+          "Bring a large pot of generously salted water to a rolling boil. Drop in the washed spinach and mustard greens. Blanch for exactly 90 seconds until the leaves wilt and turn luminous emerald green. Immediately remove with a slotted spoon and plunge into a prepared bowl of ice water for 2 minutes to halt cooking and preserve the chlorophyll. Drain thoroughly in a colander.",
+        tip: "Shocking the greens in ice water is the cardinal secret to restaurant-style bright green saag. Without it, the greens will turn dull brownish-olive.",
+      },
+      {
+        step: 2,
+        title: "Golden Pan-Sear the Paneer",
+        instruction:
+          "Heat 1 tablespoon of ghee in a wide non-stick or cast-iron skillet over medium-high heat. Add the cubed paneer in a single layer. Pan-sear undisturbed for 2 to 3 minutes per side until beautifully golden-brown and lightly crisped around the edges. Transfer seared paneer immediately into a bowl of warm, lightly salted water to soak while making the sauce.",
+        tip: "Soaking pan-seared paneer in warm salted water keeps the interior delightfully spongy, tender, and juicy rather than rubbery.",
+      },
+      {
+        step: 3,
+        title: "Puree the Greens",
+        instruction:
+          "Transfer the cooled, drained greens into a blender or food processor along with 1 slit green chili and 3 tablespoons of water. Pulse until you achieve a thick, vibrant green puree. (Keep it slightly coarse if you prefer authentic rustic dhaba texture, or blend completely smooth for a velvety restaurant finish). Set aside.",
+      },
+      {
+        step: 4,
+        title: "Sauté Aromatics & Whole Spices",
+        instruction:
+          "In a deep heavy skillet or kadai, melt the remaining 1 tablespoon of ghee over medium heat. Add the whole cumin seeds and let them sizzle for 30 seconds until nutty and aromatic. Add the finely minced onion and cook for 6 to 7 minutes until sweet and golden translucent. Stir in the minced garlic, grated ginger, and remaining green chili, sautéing for another 2 minutes until intensely fragrant.",
+      },
+      {
+        step: 5,
+        title: "Simmer the Masala Base",
+        instruction:
+          "Add the diced tomato, ground coriander, turmeric, Kashmiri chili powder, and sea salt. Cook over medium-low heat for 4 to 5 minutes, mashing the tomatoes with the back of your spoon, until the tomatoes soften completely and tiny droplets of ghee separate at the edges of the pan.",
+      },
+      {
+        step: 6,
+        title: "Combine Greens & Gently Simmer",
+        instruction:
+          "Pour the vibrant green saag puree into the simmering tomato-onion masala. Stir gently to incorporate. Reduce heat to low, partially cover with a lid to catch splatters, and simmer gently for 5 to 6 minutes so the spices infuse into the greens.",
+      },
+      {
+        step: 7,
+        title: "Fold in Paneer & Aromatic Spices",
+        instruction:
+          "Drain the soaked paneer cubes and gently slide them into the simmering saag gravy. Sprinkle in the royal garam masala, lemon juice, and the crushed kasoori methi. Stir with a soft silicone spatula, taking care not to break the tender paneer cubes. Simmer for 2 minutes to warm the cheese through.",
+      },
+      {
+        step: 8,
+        title: "Velvet Swirl & Festive Garnish",
+        instruction:
+          "Turn off the heat. Drizzle the heavy cream over the top in an elegant swirl. Transfer the saag paneer to a rustic serving bowl. Garnish with thinly sliced red onion rings, fresh cilantro leaves, and an extra pinch of kasoori methi. Serve piping hot with garlic butter naan, crisp parathas, or fluffy basmati rice.",
+      },
+    ],
+    chefNotes: [
+      "The Ice-Bath Chlorophyll Rule: Chlorophyll in leafy greens degrades rapidly under sustained heat and acidic conditions. Blanching briefly and shocking in freezing water inactivates the chlorophyllase enzyme, preserving that jaw-dropping electric green color.",
+      "The Salt-Water Soak for Paneer: Frying paneer drives out moisture. Dropping the hot cubes into warm salted water instantly draws water back into the protein matrix via osmosis, guaranteeing melt-in-the-mouth tenderness.",
+      "Checking Rennet for Halal Compliance: Always check commercial paneer packaging to confirm it uses 'microbial rennet', 'vegetarian rennet', or acid coagulation (citric acid/lemon juice). Avoid any cheese made with animal-derived rennet.",
+    ],
+    nutrition: {
+      calories: 360,
+      proteinGrams: 18,
+      carbsGrams: 12,
+      fatGrams: 28,
+      fiberGrams: 4.5,
+      sodiumMg: 620,
+      servingSizeDescription: "1 generous bowl (approx. 280g with seared paneer & gravy)",
+    },
+    storageInstructions:
+      "Store leftover Saag Paneer in an airtight glass container in the refrigerator for up to 4 days. Reheat gently over low heat on the stovetop with 2 tablespoons of water or milk to restore its velvety consistency.",
+    freezingInstructions:
+      "The saag gravy base freezes wonderfully for up to 2 months. However, freeze without the paneer cheese, as frozen dairy paneer can become crumbly. Thaw the gravy, bring to a simmer, and fold in fresh pan-seared paneer before serving.",
+    servingSuggestions: [
+      "Garlic Butter Naan: Tear off warm, pillowy tandoori naan or laccha paratha and scoop up the velvety emerald gravy.",
+      "Fluffy Basmati Rice: Ladle over steaming long-grain Basmati Rice or Bengali Pulao for a wholesome comforting dinner.",
+      "Pickled Accompaniments: Serve with tangy spicy lime or mango pickle and crisp cucumber kachumber salad.",
+      "Lentil Pairings: Complete the vegetarian royal thali with yellow Moong Dal Tadka or rich Dal Makhani.",
+    ],
+    faqs: [
+      {
+        question: "What is the difference between Saag Paneer and Palak Paneer?",
+        answer:
+          "Palak Paneer is made exclusively with spinach ('palak'). Saag Paneer incorporates a blend of various leafy greens ('saag'), such as baby spinach mixed with mustard greens (sarson), fenugreek (methi), or bathua, which gives Saag Paneer a slightly more complex, earthy, and rustic profile.",
+      },
+      {
+        question: "Is paneer cheese always Halal?",
+        answer:
+          "Traditional home-style paneer is coagulated using lemon juice or vinegar and is naturally 100% Halal. However, mass-produced commercial store-bought cheeses sometimes use animal rennet enzymes derived from non-halal calf slaughter. In this recipe and in our guidance, always look for Halal certification or labels explicitly stating 'microbial rennet' or 'vegetarian rennet'.",
+      },
+      {
+        question: "Why did my saag turn army green or brownish?",
+        answer:
+          "Greens turn brown if they are over-boiled, cooked without salt, left to sit in hot water without an ice-water shock, or simmered with the lid completely sealed for too long. Follow our 90-second blanch and immediate ice bath to keep it luminous emerald.",
+      },
+      {
+        question: "Can I make this recipe vegan?",
+        answer:
+          "Yes! Substitute the paneer with firm pressed tofu (pan-seared in olive or avocado oil) and swap the heavy cream with rich coconut cream or blended cashew paste for an equally silky, plant-based feast.",
+      },
+    ],
+    author: {
+      name: "Chef Bodiul Alam",
+      role: "Culinary Director & Halal Vegetarian Specialist",
+    },
+    updatedDate: "September 21, 2026",
+    tags: [
+      "Saag Paneer",
+      "Palak Paneer",
+      "শাক পনির",
+      "সাগ پنیر",
+      "ساغ بانير",
+      "Halal Vegetarian",
+      "Halal Paneer",
+      "Spinach Curry",
+      "High Protein Vegetarian",
+      "Gluten-Free",
+      "Indian Cuisine",
+      "Bengali Cuisine",
+      "Dhaba Style",
+      "Comfort Food",
     ],
   },
 ];

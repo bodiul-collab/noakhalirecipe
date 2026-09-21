@@ -115,6 +115,11 @@ import chickenJalfreziImg from "../assets/images/chicken_jalfrezi_1789951537165.
 import lambCurryImg from "../assets/images/lamb_curry_1789951735032.jpg";
 import roganJoshImg from "../assets/images/rogan_josh_1789951856240.jpg";
 import cornedBeefReubenImg from "../assets/images/corned_beef_reuben_1789952073053.jpg";
+import keemaParathaImg from "../assets/images/keema_paratha_1790006770390.jpg";
+import moroccanMeatballsImg from "../assets/images/moroccan_meatballs_1790007163491.jpg";
+import periPeriChickenImg from "../assets/images/peri_peri_chicken_1790007478397.jpg";
+import easyBasmatiRiceImg from "../assets/images/easy_basmati_rice_1790007738957.jpg";
+import saagPaneerImg from "../assets/images/saag_paneer_1790008024459.jpg";
 import noakhaliLogoFullImg from "../assets/images/noakhali_kitchen_logo_1789072776240.jpg";
 import noakhaliLogoIconImg from "../assets/images/noakhali_kitchen_logo_1789072776240.jpg";
 
@@ -299,6 +304,22 @@ export const IMAGES = {
   cornBeefReuben: cornedBeefReubenImg,
   reubenSandwich: cornedBeefReubenImg,
   halalReubenSandwich: cornedBeefReubenImg,
+  keemaParatha: keemaParathaImg,
+  halalKeemaParatha: keemaParathaImg,
+  bengaliKeemaParatha: keemaParathaImg,
+  qeemaParatha: keemaParathaImg,
+  moroccanMeatballs: moroccanMeatballsImg,
+  moroccanBeefMeatballs: moroccanMeatballsImg,
+  moroccanHarissaMeatballs: moroccanMeatballsImg,
+  periPeriChicken: periPeriChickenImg,
+  halalPeriPeriChicken: periPeriChickenImg,
+  piriPiriChicken: periPeriChickenImg,
+  easyBasmatiRice: easyBasmatiRiceImg,
+  basmatiRice: easyBasmatiRiceImg,
+  perfectBasmatiRice: easyBasmatiRiceImg,
+  saagPaneer: saagPaneerImg,
+  palakPaneer: saagPaneerImg,
+  halalSaagPaneer: saagPaneerImg,
   logoFull: noakhaliLogoFullImg,
   logoIcon: noakhaliLogoIconImg,
 };
