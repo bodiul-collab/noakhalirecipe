@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { NoakhaliLogo } from "./NoakhaliLogo";
 import {
-  Search,
   Bookmark,
   Menu,
   X,
@@ -30,7 +29,7 @@ interface HeaderProps {
   onNavigate: (route: string) => void;
   savedCount: number;
   onOpenSaved: () => void;
-  onOpenSearch: () => void;
+  onOpenSearch?: () => void;
   onOpenAssistant: () => void;
   theme?: "dark" | "light";
   onToggleTheme?: () => void;
@@ -79,7 +78,7 @@ export const Header: React.FC<HeaderProps> = ({
   ];
 
   return (
-    <header className="w-full bg-white z-40 sticky top-0 shadow-[0_1px_4px_rgba(0,0,0,0.05)] print:hidden">
+    <header className="w-full bg-white z-50 sticky top-0 shadow-[0_1px_4px_rgba(0,0,0,0.05)] print:hidden">
       {/* Top Thin Utility Bar */}
       <div className="w-full bg-[#242423] text-[#E6E1D8] text-xs font-sans border-b border-[#30302F]">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 h-8 flex items-center justify-between">
@@ -115,11 +114,11 @@ export const Header: React.FC<HeaderProps> = ({
       </div>
 
       {/* Main Brand & Navigation Bar */}
-      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 h-16 sm:h-18 flex items-center justify-between gap-4">
+      <div className="max-w-[1280px] mx-auto px-3 sm:px-6 h-16 sm:h-18 flex items-center justify-between gap-2 sm:gap-4">
         {/* Brand Logo */}
         <button
           onClick={() => onNavigate("/")}
-          className="group flex items-center text-left focus:outline-none shrink-0 transition-transform hover:opacity-95 cursor-pointer py-1"
+          className="group flex items-center text-left focus:outline-none shrink min-w-0 transition-transform hover:opacity-95 cursor-pointer py-1"
           aria-label="Noākhāli Kitchen Home"
         >
           <NoakhaliLogo size="md" theme={theme} />
@@ -256,34 +255,34 @@ export const Header: React.FC<HeaderProps> = ({
         </nav>
 
         {/* Right Side Utility Actions */}
-        <div className="flex items-center gap-1.5 sm:gap-2.5 shrink-0">
-          {/* Density (Tight / Relaxed Mood) Toggle */}
+        <div className="flex items-center gap-1 sm:gap-2 shrink-0">
+          {/* Density (Tight / Relaxed Mood) Toggle - Desktop only */}
           {onToggleDensity && (
             <button
               onClick={onToggleDensity}
-              className="flex items-center gap-1 px-2 sm:px-2.5 py-1.5 text-xs font-semibold text-[#55504A] hover:text-[#E97520] bg-[#FAF9F6] hover:bg-[#F3F2EE] border border-[#E6E1D8] rounded-lg transition-colors cursor-pointer"
+              className="hidden md:flex items-center gap-1 px-2 sm:px-2.5 py-1.5 text-xs font-semibold text-[#55504A] hover:text-[#E97520] bg-[#FAF9F6] hover:bg-[#F3F2EE] border border-[#E6E1D8] rounded-lg transition-colors cursor-pointer"
               aria-label={`Density mood: ${density === "tight" ? "Tight" : "Relaxed"}`}
               title={`Layout Density: ${density === "tight" ? "Tight Mood (Compact)" : "Relaxed Mood (Spacious)"}. Click to toggle.`}
             >
               {density === "tight" ? (
                 <>
                   <Minimize2 className="w-3.5 h-3.5 text-[#E97520]" />
-                  <span className="text-[11px] font-bold hidden sm:inline text-[#E97520]">Tight</span>
+                  <span className="text-[11px] font-bold hidden lg:inline text-[#E97520]">Tight</span>
                 </>
               ) : (
                 <>
                   <Maximize2 className="w-3.5 h-3.5 text-[#8A857E]" />
-                  <span className="text-[11px] font-medium hidden sm:inline text-[#8A857E]">Relaxed</span>
+                  <span className="text-[11px] font-medium hidden lg:inline text-[#8A857E]">Relaxed</span>
                 </>
               )}
             </button>
           )}
 
-          {/* Theme (Dark / Light) Toggle */}
+          {/* Theme (Dark / Light) Toggle - Tablet/Desktop */}
           {onToggleTheme && (
             <button
               onClick={onToggleTheme}
-              className="p-2 text-[#3F3C38] hover:text-[#E97520] hover:bg-[#FAF9F6] rounded-lg transition-colors cursor-pointer"
+              className="hidden sm:flex p-2 text-[#3F3C38] hover:text-[#E97520] hover:bg-[#FAF9F6] rounded-lg transition-colors cursor-pointer"
               aria-label={theme === "dark" ? "Switch to Light Theme" : "Switch to Dark Theme"}
               title={theme === "dark" ? "Switch to Light Theme" : "Switch to Dark Theme"}
             >
@@ -295,30 +294,20 @@ export const Header: React.FC<HeaderProps> = ({
             </button>
           )}
 
-          {/* AI Chef Assistant Trigger */}
+          {/* AI Chef Assistant Trigger - Desktop/Tablet */}
           <button
             onClick={onOpenAssistant}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#FFF9F0] border border-[#F8CD78] text-[#D75D17] hover:bg-[#F8CD78]/40 hover:border-[#E97520] text-xs font-semibold tracking-wide transition-all cursor-pointer shadow-2xs"
+            className="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#FFF9F0] border border-[#F8CD78] text-[#D75D17] hover:bg-[#F8CD78]/40 hover:border-[#E97520] text-xs font-semibold tracking-wide transition-all cursor-pointer shadow-2xs"
             title="Ask Noakhali Kitchen AI Culinary Assistant"
           >
             <Sparkles className="w-3.5 h-3.5 text-[#E97520]" />
-            <span className="hidden md:inline">Ask AI Chef</span>
+            <span className="hidden lg:inline">Ask AI Chef</span>
           </button>
 
-          {/* Search Trigger */}
-          <button
-            onClick={onOpenSearch}
-            className="p-2 text-[#3F3C38] hover:text-[#E97520] hover:bg-[#FAF9F6] rounded-lg transition-colors cursor-pointer"
-            aria-label="Open Search"
-            title="Search recipes"
-          >
-            <Search className="w-4.5 h-4.5" />
-          </button>
-
-          {/* Saved Recipes Trigger */}
+          {/* Saved Recipes Trigger - Tablet/Desktop (Mobile has dedicated bottom bar) */}
           <button
             onClick={onOpenSaved}
-            className="relative p-2 text-[#3F3C38] hover:text-[#E97520] hover:bg-[#FAF9F6] rounded-lg transition-colors cursor-pointer"
+            className="hidden sm:flex relative p-2 text-[#3F3C38] hover:text-[#E97520] hover:bg-[#FAF9F6] rounded-lg transition-colors cursor-pointer"
             aria-label="View Saved Recipes"
             title="Saved Recipes"
           >
@@ -330,17 +319,20 @@ export const Header: React.FC<HeaderProps> = ({
             )}
           </button>
 
-          {/* Mobile Menu Button */}
+          {/* 3-Line Mobile/Tablet Menu Button in Right Corner */}
           <button
+            type="button"
+            id="mobile-menu-toggle-button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 text-[#242423] hover:text-[#E97520] hover:bg-[#FAF9F6] rounded-lg transition-colors shrink-0 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-[#E97520]/30"
-            aria-label={mobileMenuOpen ? "Close menu" : "Open navigation menu"}
+            className="lg:hidden p-2 sm:p-2.5 text-[#242423] hover:text-[#E97520] hover:bg-[#FFF9F0] active:bg-[#F3F2EE] rounded-lg transition-colors shrink-0 flex items-center justify-center border border-[#E6E1D8] bg-[#FAF9F6] shadow-2xs focus:outline-none focus:ring-2 focus:ring-[#E97520]/40 cursor-pointer"
+            aria-label={mobileMenuOpen ? "Close navigation menu" : "Open 3-line navigation menu"}
             aria-expanded={mobileMenuOpen}
+            title={mobileMenuOpen ? "Close menu" : "Open navigation menu"}
           >
             {mobileMenuOpen ? (
-              <X className="w-5 h-5 text-[#E97520]" />
+              <X className="w-5.5 h-5.5 text-[#E97520]" />
             ) : (
-              <Menu className="w-5 h-5" />
+              <Menu className="w-5.5 h-5.5 text-[#242423]" />
             )}
           </button>
         </div>

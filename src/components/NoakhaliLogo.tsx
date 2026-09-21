@@ -18,14 +18,14 @@ export const NoakhaliLogo: React.FC<NoakhaliLogoProps> = ({
 }) => {
   const sizeDimensions = {
     sm: "w-8 h-8",
-    md: "w-10 h-10 sm:w-11 sm:h-11",
+    md: "w-9 h-9 sm:w-11 sm:h-11",
     lg: "w-14 h-14 sm:w-16 sm:h-16",
     xl: "w-20 h-20 sm:w-24 sm:h-24",
   };
 
   const textClasses = {
     sm: "text-base",
-    md: "text-xl sm:text-2xl",
+    md: "text-lg sm:text-2xl",
     lg: "text-3xl sm:text-4xl",
     xl: "text-4xl sm:text-5xl",
   };

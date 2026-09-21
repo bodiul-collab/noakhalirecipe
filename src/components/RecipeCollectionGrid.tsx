@@ -76,7 +76,7 @@ const DEFAULT_COLLECTION: CollectionCardItem[] = [
   {
     id: "card-bengali-chicken-roast",
     slug: "bengali-chicken-roast",
-    title: "Bengali Chicken Roast (বাংলাদেশি চিকেন রোস্ট)",
+    title: "Dhaka Shahi Chicken Roast (বিয়ে বাড়ির শাহী চিকেন রোস্ট)",
     description:
       "Tender chicken quarters seared in ghee and slow-braised in a velvety yogurt, onion & cashew nut gravy.",
     heritageTag: "👑 Biye Bari Shahi Feast",
@@ -250,6 +250,72 @@ const DEFAULT_COLLECTION: CollectionCardItem[] = [
     image: IMAGES.narkelPuliPitha,
   },
   {
+    id: "card-corned-beef-reuben",
+    slug: "corned-beef-reuben-sandwich",
+    title: "Corned Beef Reuben Sandwich (রুবেন স্যান্ডউইচ)",
+    description:
+      "Towering layers of warm cured Halal corned beef brisket, melted Swiss cheese, tangy sauerkraut & creamy Russian dressing on griddled rye bread.",
+    heritageTag: "🥪 Legendary New York Deli Classic",
+    brandName: "Noakhali Kitchen",
+    halalBadge: "100% Halal Certified",
+    image: IMAGES.cornedBeefReuben,
+  },
+  {
+    id: "card-rogan-josh",
+    slug: "rogan-josh",
+    title: "Authentic Kashmiri Rogan Josh (রোগান জোশ কারি)",
+    description:
+      "Tender braised lamb chunks in a royal crimson gravy infused with Kashmiri chilies, fennel powder, dry ginger, and whole aromatic spices.",
+    heritageTag: "👑 Royal Kashmiri Wazwan Classic",
+    brandName: "Noakhali Kitchen",
+    halalBadge: "100% Halal Certified",
+    image: IMAGES.roganJosh,
+  },
+  {
+    id: "card-lamb-curry",
+    slug: "lamb-curry",
+    title: "Bengali Lamb Curry / Khasir Mangsho (খাসির মাংসের কারি)",
+    description:
+      "Tender slow-simmered bone-in lamb and rich marrow in a fragrant golden-red spiced gravy with braised potatoes & aromatic mustard oil.",
+    heritageTag: "🥘 Bengali Heritage Festive Classic",
+    brandName: "Noakhali Kitchen",
+    halalBadge: "100% Halal Certified",
+    image: IMAGES.lambCurry,
+  },
+  {
+    id: "card-chicken-jalfrezi",
+    slug: "chicken-jalfrezi",
+    title: "Restaurant Style Chicken Jalfrezi (চিকেন জলফ্রেজি)",
+    description:
+      "Succulent stir-fried chicken tossed with crunchy bell peppers, chunky onions & juicy tomatoes in a fiery, tangy spiced masala reduction.",
+    heritageTag: "🌶️ Iconic Anglo-Indian & Bengali Classic",
+    brandName: "Noakhali Kitchen",
+    halalBadge: "100% Halal Certified",
+    image: IMAGES.chickenJalfrezi,
+  },
+  {
+    id: "card-chicken-bhuna-masala",
+    slug: "chicken-bhuna-masala-curry-bengali-style",
+    title: "Chicken Bhuna Masala Curry Bengali Style (চিকেন ভুনা মশলা কারি)",
+    description:
+      "Succulent bone-in chicken slow-braised in a dark, glossy caramelized onion & roasted spice masala with slit green chilies & fresh cilantro.",
+    heritageTag: "🍗 Signature Bengali Poultry Heritage",
+    brandName: "Noakhali Kitchen",
+    halalBadge: "100% Halal Certified",
+    image: IMAGES.chickenBhunaMasala,
+  },
+  {
+    id: "card-bengali-sweet-doi",
+    slug: "bengali-sweet-doi",
+    title: "Bengali Sweet Doi (Mishti Doi/Dahi বাঙালি দই)",
+    description:
+      "Authentic caramelized sweet fermented yogurt set in traditional terracotta handi with cardamom, saffron threads & crushed pistachios.",
+    heritageTag: "🏺 Iconic Bengali Heritage Dessert",
+    brandName: "Noakhali Kitchen",
+    halalBadge: "100% Halal Dessert",
+    image: IMAGES.bengaliSweetDoi,
+  },
+  {
     id: "card-thandai",
     slug: "thandai",
     title: "Thandai (ঠান্ডাই)",
@@ -320,9 +386,10 @@ const DEFAULT_COLLECTION: CollectionCardItem[] = [
 interface SingleCollectionCardProps {
   item: CollectionCardItem;
   onOpen: (slug: string) => void;
+  index?: number;
 }
 
-const SingleCollectionCard: React.FC<SingleCollectionCardProps> = ({ item, onOpen }) => {
+const SingleCollectionCard: React.FC<SingleCollectionCardProps> = ({ item, onOpen, index = 0 }) => {
   const cardRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
   const [transformStyle, setTransformStyle] = useState<React.CSSProperties>({
@@ -368,8 +435,11 @@ const SingleCollectionCard: React.FC<SingleCollectionCardProps> = ({ item, onOpe
 
   return (
     <div
-      className="recipe-card-container w-full flex justify-center"
-      style={{ perspective: "1200px" }}
+      className="recipe-card-container recipe-card-fade w-full flex justify-center"
+      style={{
+        perspective: "1200px",
+        animationDelay: `${Math.min(index * 60, 600)}ms`,
+      }}
     >
       <div
         ref={cardRef}
@@ -463,10 +533,11 @@ export const RecipeCollectionGrid: React.FC<RecipeCollectionGridProps> = ({
         gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
       }}
     >
-      {cards.map((item) => (
+      {cards.map((item, index) => (
         <SingleCollectionCard
           key={item.id}
           item={item}
+          index={index}
           onOpen={onSelectRecipeBySlug}
         />
       ))}

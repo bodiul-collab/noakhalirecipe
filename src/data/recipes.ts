@@ -4,6 +4,997 @@ import { enhanceRecipesWithCornerstones } from "./cornerstoneEnhancer";
 
 const BASE_RECIPES: Recipe[] = [
   {
+    id: "rec-corned-beef-reuben-sandwich",
+    slug: "corned-beef-reuben-sandwich",
+    title: "Corned Beef Reuben Sandwich (রুবেন স্যান্ডউইচ)",
+    category: "Halal Beef",
+    categorySlug: "halal-beef",
+    cuisine: "American Deli / New York Heritage",
+    description:
+      "Towering hot deli sandwich featuring succulent folds of thinly sliced cured Halal corned beef brisket, melted Swiss cheese, tangy drained sauerkraut, and creamy homemade Russian dressing on golden, crispy butter-griddled caraway rye bread.",
+    introStory:
+      "Born in the bustling Jewish delis of early 20th-century New York and Nebraska, the Reuben Sandwich (ক্লাসিক রুবেন স্যান্ডউইচ) has reigned for generations as one of the most celebrated culinary masterpieces in the American sandwich canon. Built upon the irresistible harmony of savory, salty, sour, creamy, and crunchy elements, a true Reuben is a masterclass in textural balance.\n\nThis 100% Halal rendition honors the timeless deli tradition without compromise. At its core is premium Halal beef brisket, cured with sea salt, coriander seeds, mustard seeds, black peppercorns, and allspice, then slow-simmered until extraordinarily tender, juicy, and ruby-hued. Sliced razor-thin and gently warmed to release its savory juices, the corned beef is piled generously atop sturdy, earthy seeded Jewish rye bread smeared with homemade creamy Russian dressing (crafted from quality mayonnaise, chili sauce, finely minced dill pickles, horseradish, and smoked paprika).\n\nTo prevent sogginess, crisp sauerkraut is thoroughly pressed dry before joining the stack, flanked by generous slices of Swiss or baby Swiss cheese. As the assembled sandwich hits a foaming, buttered cast-iron skillet or flat-top griddle over steady medium-low heat, magic happens: the seeded rye toasts to an audible, golden-brown shatter, the cheese turns into a molten, creamy blanket sealing the meat and sauerkraut, and every slice cut across the diagonal reveals gorgeous, juicy layers dripping with savory goodness. Served alongside kosher dill pickle spears and crispy kettle chips, it brings the authentic New York deli counter straight to your home.",
+    heroImage: IMAGES.cornedBeefReuben,
+    prepTimeMinutes: 10,
+    cookTimeMinutes: 15,
+    totalTimeMinutes: 25,
+    servings: 2,
+    difficulty: "Easy",
+    calories: 640,
+    rating: 4.98,
+    reviewCount: 142,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified. Made exclusively with hand-slaughtered zabiha beef brisket cured with pure Halal spices and kosher sea salt, vegetarian-cultured Swiss or Emmental cheese (rennet-free / microbial rennet), and alcohol-free Russian dressing. No animal gelatin, pork rennet, or artificial preservatives.",
+    potentialCautionNotes:
+      "Never skip squeezing out the excess brine from the sauerkraut. Wet sauerkraut will release steam and turn your toasted rye bread soggy instead of crisp. Griddle over medium-low heat so the rye crisps gradually while the cheese melts through to the core.",
+    ingredients: [
+      { amount: "1/2", unit: "lb / 225g", name: "Halal corned beef brisket", notes: "cured beef brisket, sliced deli-thin (or Halal pastrami)" },
+      { amount: "4", unit: "thick slices", name: "Seeded Jewish Rye bread or Marble Rye", notes: "sturdy artisan caraway seeded rye" },
+      { amount: "4", unit: "slices", name: "Swiss or Emmental cheese", notes: "microbial / vegetarian rennet, naturally creamy and nutty" },
+      { amount: "3/4", unit: "cup", name: "Sauerkraut", notes: "drained and squeezed firmly dry in a clean kitchen towel" },
+      { amount: "3", unit: "tbsp", name: "Unsalted butter", notes: "softened at room temperature for edge-to-edge crust browning" },
+      { amount: "1/4", unit: "cup", name: "Real mayonnaise", notes: "for the homemade Russian dressing" },
+      { amount: "2", unit: "tbsp", name: "Chili sauce or organic ketchup", notes: "for tangy sweetness in dressing" },
+      { amount: "1", unit: "tbsp", name: "Dill pickle relish or finely minced dill pickles" },
+      { amount: "1", unit: "tsp", name: "Prepared horseradish", notes: "essential for classic zesty deli kick" },
+      { amount: "1/2", unit: "tsp", name: "Halal Worcestershire sauce", notes: "anchovy/tamarind based, alcohol-free" },
+      { amount: "1/4", unit: "tsp", name: "Smoked paprika", notes: "for smoky depth and color" },
+      { amount: "1/8", unit: "tsp", name: "Freshly cracked black pepper and sea salt", notes: "to taste" },
+    ],
+    substitutions: [
+      {
+        original: "Halal corned beef brisket",
+        substitute: "Halal pastrami, smoked roast beef brisket, or roasted deli turkey breast (for a 'Rachel' sandwich)",
+        notes: "Pastrami offers a peppery smoked bark; roast beef yields classic deli richness.",
+      },
+      {
+        original: "Seeded Jewish Rye bread",
+        substitute: "Marble rye, pumpernickel, or thick-cut sourdough",
+        notes: "Rye with caraway seeds provides the authentic earthy flavor profile.",
+      },
+      {
+        original: "Swiss cheese",
+        substitute: "Gruyère, provolone, or havarti cheese",
+        notes: "Ensure cheese is made with microbial/vegetarian rennet.",
+      },
+      {
+        original: "Russian dressing",
+        substitute: "Thousand Island dressing or spicy garlic aioli",
+        notes: "Thousand Island provides a sweeter, milder finish.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Whisk the Homemade Zesty Russian Dressing",
+        instruction:
+          "In a small mixing bowl, whisk together the mayonnaise, chili sauce (or ketchup), minced dill pickles, prepared horseradish, Halal Worcestershire sauce, smoked paprika, black pepper, and a pinch of salt until creamy, uniform, and slightly rosy in color. Taste and adjust horseradish for desired punch. Set aside.",
+      },
+      {
+        step: 2,
+        title: "Thoroughly Drain & Squeeze Sauerkraut Dry",
+        instruction:
+          "Place 3/4 cup of sauerkraut in a fine mesh sieve or clean kitchen towel. Press firmly over the sink or twist the towel to squeeze out every drop of excess liquid. Fluff lightly with a fork. Thorough drying prevents the hot sandwich from turning soggy.",
+      },
+      {
+        step: 3,
+        title: "Gently Warm the Halal Corned Beef",
+        instruction:
+          "Place a skillet over medium heat. Add the thinly sliced Halal corned beef with 1 tablespoon of water or beef broth. Toss gently for 1 to 2 minutes just until warmed through, aromatic, and steaming. Remove from heat and divide into two equal portions. Pre-warming the meat ensures the cheese melts rapidly on the griddle.",
+      },
+      {
+        step: 4,
+        title: "Butter and Dress the Rye Bread Slices",
+        instruction:
+          "Lay all 4 slices of rye bread on a clean cutting board. Spread 1.5 tablespoons of softened butter generously over one side of each slice (these will be the outside griddled crusts). Flip the slices over so the unbuttered sides face up. Spread 1 to 1.5 tablespoons of Russian dressing across all 4 inside surfaces.",
+      },
+      {
+        step: 5,
+        title: "Layer the Reuben Towers",
+        instruction:
+          "On two of the dressed bread slices, place 1 slice of Swiss cheese. Top with the warm mounds of sliced Halal corned beef. Spread the squeezed sauerkraut evenly over the beef, followed by another generous drizzle of Russian dressing, and crown each with a second slice of Swiss cheese (placing cheese on both top and bottom seals the fillings and protects the bread from steam). Close sandwiches with the remaining bread slices, buttered sides facing outward.",
+      },
+      {
+        step: 6,
+        title: "Griddle to Golden, Melty Perfection",
+        instruction:
+          "Heat a heavy cast-iron skillet or flat griddle over medium-low heat. Place the sandwiches into the skillet. Cook gently for 4 to 5 minutes, pressing lightly with a spatula or sandwich press, until the bottom bread is deeply golden, crispy, and fragrant with toasted caraway. Carefully flip and cook the other side for 3 to 4 minutes until both sides are crisp and the Swiss cheese is completely molten and bubbling.",
+      },
+      {
+        step: 7,
+        title: "Slice on the Bias and Serve Hot",
+        instruction:
+          "Transfer sandwiches to a wooden cutting board and let rest for 1 minute so the melted cheese sets slightly. Using a sharp serrated knife, slice each sandwich in half diagonally. Serve immediately while hot and steaming.",
+      },
+    ],
+    chefNotes: [
+      "Pressing the sauerkraut completely dry in a towel is the single most important technique to prevent a soggy crust.",
+      "Placing a slice of Swiss cheese both under the meat and over the sauerkraut acts as a delicious melted shield that keeps moisture away from the toasted rye.",
+      "Cooking over medium-low heat gives the thick bread enough time to turn evenly deep golden and crusty while allowing the interior cheese to melt luxuriously.",
+    ],
+    nutrition: {
+      calories: 640,
+      proteinGrams: 36,
+      carbsGrams: 42,
+      fatGrams: 37,
+      fiberGrams: 5,
+      sodiumMg: 1180,
+    },
+    storageInstructions:
+      "Best enjoyed immediately straight from the griddle. For leftovers, store assembled sandwiches wrapped in aluminum foil in the refrigerator for up to 2 days. Reheat in a 375°F (190°C) oven or toaster oven for 10 minutes until heated through and re-crisped.",
+    freezingInstructions:
+      "Freezing assembled sandwiches is not recommended due to the texture change of sauerkraut and dressing. Sliced Halal corned beef freezes excellently on its own for up to 3 months.",
+    servingSuggestions: [
+      "Serve piping hot cut in half diagonally on a rustic cutting board or deli basket lined with wax paper.",
+      "Pair with crisp kosher dill pickle spears and a handful of kettle-cooked sea salt potato chips.",
+      "Accompany with iced black tea, cold lemonade, or craft root beer for a complete deli luncheon.",
+    ],
+    faqs: [
+      {
+        question: "What makes a Reuben sandwich authentic?",
+        answer:
+          "The hallmark combination of cured corned beef, Swiss cheese, sauerkraut, and Russian or Thousand Island dressing grilled on rye bread.",
+      },
+      {
+        question: "Can I make this in an air fryer or panini press?",
+        answer:
+          "Yes! In a panini press, grill at medium-high for 4 to 5 minutes until toasted and melted. In an air fryer, cook at 360°F (182°C) for 6 to 8 minutes, flipping halfway through.",
+      },
+      {
+        question: "What is the difference between corned beef and pastrami?",
+        answer:
+          "Both are made from beef brisket. Corned beef is cured in a spiced salt brine and then boiled or steamed. Pastrami is cured, heavily coated in a crushed black pepper and coriander rub, and then smoked before steaming.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman & Noakhali Heritage Culinary Team",
+      role: "Executive Chef & Halal Deli Specialist",
+    },
+    updatedDate: "September 20, 2026",
+    tags: [
+      "Halal Beef",
+      "Corned Beef",
+      "Reuben Sandwich",
+      "Deli Classic",
+      "Sandwich",
+      "Lunch",
+      "Halal Snacks",
+      "Quick Dinner",
+      "New York Deli",
+    ],
+  },
+  {
+    id: "rec-rogan-josh",
+    slug: "rogan-josh",
+    title: "Authentic Kashmiri Rogan Josh (রোগান জোশ কারি)",
+    category: "Halal Beef",
+    categorySlug: "halal-beef",
+    cuisine: "Kashmiri Wazwan / Royal Mughlai Heritage",
+    description:
+      "Royal slow-braised lamb infused in pure ghee, aromatic whole spices, sweet fennel powder (saunf), dry ginger (sonth), and Kashmiri red chilies, producing an intoxicating crimson gravy capped with glistening spiced oil (rogan).",
+    introStory:
+      "Among the imperial delicacies of the Indian subcontinent, few curries hold the celestial status of authentic Kashmiri Rogan Josh (রোগান জোশ কারি). Originating in the breathtaking Kashmir valley and introduced to royal Mughal courts by Persian culinary masters, its name evokes its two defining characteristics: 'Rogan' (meaning clarified butter, oil, or red color in Persian) and 'Josh' (meaning passion, intense bubbling heat, or simmering vigour).\n\nUnlike standard restaurant curries that rely heavily on pureed onions, garlic, and chopped tomatoes, authentic Kashmiri Rogan Josh derives its luxurious body, intoxicating fragrance, and deep jewel-toned crimson red hue from a revered trio of Kashmiri pantry treasures: generous measures of mild Kashmiri chili powder (traditionally accented by 'ratan jot' or cockscomb flower/maval petals), freshly ground sweet fennel seeds (saunf), and aromatic sun-dried ginger root powder (sonth).\n\nBone-in succulent lamb pieces (shoulder and shanks) are first seared in pure fragrant cow ghee along with whole black and green cardamoms, cinnamon quills, cloves, and bay leaves until golden and richly sealed. Whisked yogurt, tempered with spiced broth and Kashmiri chili, is gently stirred into the pot over low heat to form a smooth, velvety emulsion. As the pot gently simmers undisturbed with a tight lid, the meat turns tender enough to cut with a fork, while the spiced ghee separates and rises to the top to form a breathtaking, glossy crimson lacquer ('rogan'). Traditionally dished out in ornate antique copper vessels beside steaming golden zafrani saffron rice or crisp tandoori naan, it offers an unforgettable sensory journey through Mughal majesty.",
+    heroImage: IMAGES.roganJosh,
+    prepTimeMinutes: 15,
+    cookTimeMinutes: 60,
+    totalTimeMinutes: 75,
+    servings: 5,
+    difficulty: "Medium",
+    calories: 480,
+    rating: 4.99,
+    reviewCount: 158,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified meat. Prepared strictly with hand-slaughtered zabiha bone-in lamb, pure cow ghee, whole Kashmiri dried spices, natural herbs, and probiotic yogurt. Free from artificial red food coloring, gelatin, animal tallow additives, or MSG.",
+    potentialCautionNotes:
+      "Always whisk the yogurt thoroughly and lower the heat before adding it to the pan; adding cold yogurt directly to hot ghee can cause it to split or curdle. Simmer gently on low flame to allow the signature glistening red oil (rogan) to separate.",
+    ingredients: [
+      { amount: "2", unit: "lbs / 900g", name: "Halal bone-in lamb", notes: "shoulder and shank cuts, chopped into 1.5-inch pieces" },
+      { amount: "1/3", unit: "cup", name: "Pure cow ghee", notes: "essential for authentic royal richness and rogan separation" },
+      { amount: "1", unit: "cup", name: "Plain whole milk yogurt", notes: "whisked until completely smooth at room temperature" },
+      { amount: "2.5", unit: "tbsp", name: "Kashmiri red chili powder", notes: "provides the radiant scarlet hue and fruity mild warmth" },
+      { amount: "1.5", unit: "tbsp", name: "Fennel seed powder (Saunf)", notes: "freshly dry-roasted and finely ground; key Kashmiri aroma" },
+      { amount: "1", unit: "tbsp", name: "Dry ginger powder (Sonth)", notes: "vital spicy-warm counterpoint to the fennel" },
+      { amount: "1", unit: "tsp", name: "Whole cumin seeds (Shahi Jeera or Jeera)" },
+      { amount: "2", unit: "whole", name: "Black cardamom pods", notes: "cracked open for smoky depth" },
+      { amount: "5", unit: "whole", name: "Green cardamom pods", notes: "lightly bruised to release seeds" },
+      { amount: "2", unit: "sticks", name: "Cinnamon bark", notes: "approx. 2 inches each" },
+      { amount: "4", unit: "whole", name: "Cloves (Laung)" },
+      { amount: "2", unit: "whole", name: "Bay leaves (Tejpata)", notes: "dried Indian bay leaves" },
+      { amount: "1/4", unit: "tsp", name: "Asafoetida (Hing)", notes: "dissolved in 1 tbsp warm water for traditional savory undertone" },
+      { amount: "1", unit: "tsp", name: "Kashmiri Shahi Garam Masala powder" },
+      { amount: "1/2", unit: "tsp", name: "Freshly cracked black peppercorns" },
+      { amount: "1.5", unit: "tsp", name: "Fine sea salt", notes: "or to taste" },
+      { amount: "1.5", unit: "cups", name: "Hot water or Halal lamb bone broth" },
+      { amount: "1", unit: "pinch", name: "Saffron threads", notes: "steeped in 2 tbsp warm milk (optional royal flourish)" },
+      { amount: "2", unit: "tbsp", name: "Fresh cilantro / coriander leaves", notes: "finely chopped for garnish" },
+    ],
+    substitutions: [
+      {
+        original: "Halal bone-in lamb",
+        substitute: "Halal bone-in goat meat (mutton) or beef chuck chunks",
+        notes: "Goat meat is the traditional Kashmiri Wazwan choice; beef chuck yields deep savory richness (simmer 15 minutes longer).",
+      },
+      {
+        original: "Pure cow ghee",
+        substitute: "Cold-pressed mustard oil or neutral avocado oil",
+        notes: "Ghee provides the authentic royal Mughal flavor and silky rogan sheen.",
+      },
+      {
+        original: "Dry ginger powder (Sonth)",
+        substitute: "1.5 tbsp fresh ginger paste",
+        notes: "Dry ginger is traditional, but fresh ginger paste works in a pinch.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Sear the Lamb in Pure Ghee",
+        instruction:
+          "Heat pure cow ghee in a heavy-bottomed Dutch oven, handi, or deep copper-bottomed pot over medium-high heat. Add the lamb pieces in a single layer and sear for 6 to 8 minutes, turning occasionally until browned on all sides. Transfer seared lamb onto a plate, keeping the hot rendered ghee in the pot.",
+      },
+      {
+        step: 2,
+        title: "Bloom Kashmiri Whole Spices",
+        instruction:
+          "Lower the heat to medium. To the hot ghee, add cumin seeds, crushed black cardamoms, bruised green cardamoms, cinnamon sticks, cloves, and bay leaves. Let the spices crackle and release their fragrant essential oils for 30 to 45 seconds.",
+      },
+      {
+        step: 3,
+        title: "Add Asafoetida & Dry Ginger (Sonth)",
+        instruction:
+          "Stir in the dissolved asafoetida (hing) water, quickly followed by dry ginger powder (sonth). Sauté for 30 seconds until the ginger aroma blooms into the ghee without burning.",
+      },
+      {
+        step: 4,
+        title: "Temper and Whisk in Kashmiri Chili Yogurt",
+        instruction:
+          "In a small bowl, whisk the yogurt with Kashmiri chili powder, fine sea salt, and 2 tablespoons of warm water until smooth and crimson. Lower pot heat to low. Slowly pour the spiced yogurt into the ghee while stirring continuously in one direction for 3 to 4 minutes to prevent curdling. Increase heat to medium-low and simmer until the yogurt base thickens and releases ghee around the edges.",
+      },
+      {
+        step: 5,
+        title: "Add Ground Fennel (Saunf) & Return Lamb",
+        instruction:
+          "Add the freshly ground fennel powder (saunf) and cracked black pepper to the crimson yogurt masala. Return the seared lamb pieces and any resting juices back into the pot. Sauté the meat in the masala for 5 to 7 minutes until the gravy turns deeply aromatic and coats every piece.",
+      },
+      {
+        step: 6,
+        title: "Low & Slow Covered Simmer",
+        instruction:
+          "Pour in 1.5 cups of hot water or lamb broth. Bring to a gentle boil, scrape up all the flavorful fond from the base, then reduce heat to the lowest setting. Cover tightly with a heavy lid and let it slow-simmer undisturbed for 50 to 55 minutes until the lamb is exquisitely tender and pulls cleanly from the bone.",
+      },
+      {
+        step: 7,
+        title: "Royal Finish & Separation of the 'Rogan'",
+        instruction:
+          "Uncover the pot. Sprinkle Kashmiri garam masala and drizzle the steeped saffron milk over the surface. Gently simmer uncovered on low for 3 to 5 minutes without stirring vigorously. Watch as the glowing crimson spiced ghee ('rogan') floats freely to the surface. Remove from heat, let rest for 5 minutes, garnish with fresh cilantro, and serve in an antique copper dish.",
+      },
+    ],
+    chefNotes: [
+      "Authentic Kashmiri Rogan Josh gets its luxurious body strictly from reduced yogurt, fennel powder, and dry ginger—never from heavy onion or tomato purees.",
+      "Whisking the yogurt with Kashmiri chili powder and tempering it over low heat while stirring continuously guarantees a velvety, non-split sauce.",
+      "The glowing crimson oil layer on top is the dish's namesake ('rogan') and carries the deep essence of cardamom, mace, and Kashmiri chili; serve it spooned over the meat.",
+    ],
+    nutrition: {
+      calories: 480,
+      proteinGrams: 38,
+      carbsGrams: 8,
+      fatGrams: 32,
+      fiberGrams: 2,
+      sodiumMg: 520,
+    },
+    storageInstructions:
+      "Store cooled curry in an airtight container in the refrigerator for up to 5 days. The flavor profile matures and deepens overnight. Reheat gently on low heat until the spiced rogan melts back into a shimmering red sauce.",
+    freezingInstructions:
+      "Freeze in airtight freezer-safe containers for up to 3 months. Thaw overnight in the refrigerator and warm slowly in a saucepan.",
+    servingSuggestions: [
+      "Serve piping hot in an antique copper karahi or shallow oval serving dish.",
+      "Accompany with fragrant golden saffron basmati rice (zafrani pulao), warm butter naan, or flaky laccha parathas.",
+      "Pair alongside fresh cucumber-mint raita or traditional walnut chutney (doon chetin).",
+    ],
+    faqs: [
+      {
+        question: "Why is traditional Rogan Josh red without tomatoes?",
+        answer:
+          "The brilliant red hue comes naturally from generous amounts of Kashmiri red chili powder, which is intensely red but mild in Scoville heat, traditionally complemented by cockscomb flower extract (maval) or ratan jot.",
+      },
+      {
+        question: "Can this dish be made with goat meat or beef?",
+        answer:
+          "Yes! Bone-in goat meat (mutton) is authentic across Kashmiri Wazwan feasts. If using beef chuck or shank, increase the gentle simmer time by 15 to 20 minutes until fork-tender.",
+      },
+      {
+        question: "Why are fennel seeds and dry ginger crucial?",
+        answer:
+          "In Kashmiri cuisine, fennel powder (saunf) and dry ginger (sonth) form the foundational spice signature, balancing the richness of ghee and meat with digestive warmth and floral sweetness.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman & Noakhali Heritage Culinary Team",
+      role: "Executive Chef & Mughlai Cuisine Specialist",
+    },
+    updatedDate: "September 20, 2026",
+    tags: [
+      "Halal Lamb",
+      "Rogan Josh",
+      "Kashmiri Cuisine",
+      "Mutton Curry",
+      "Wazwan",
+      "Mughlai",
+      "Royal Feast",
+      "Dinner",
+      "Heritage Recipes",
+    ],
+  },
+  {
+    id: "rec-lamb-curry",
+    slug: "lamb-curry",
+    title: "Bengali Lamb Curry / Khasir Mangsho (খাসির মাংসের কারি)",
+    category: "Halal Beef",
+    categorySlug: "halal-beef",
+    cuisine: "Traditional Bengali / South Asian Heritage",
+    description:
+      "Melt-in-your-mouth bone-in lamb shanks and succulent bone marrow simmered in cold-pressed mustard oil with caramelized onions, golden fried potatoes (aloo), green cardamoms, cinnamon bark, and a fragrant reddish-amber spiced gravy.",
+    introStory:
+      "In Bengali households, Sunday afternoon is synonymous with one sacred aroma wafting from the kitchen: 'Khasir Mangsho' (বাঙালি খাসির মাংসের কারি / ঝোল)—a majestic, slow-simmered lamb and mutton curry with fork-tender bone-in meat, melting bone marrow ('nalli'), and velvet golden potatoes swimming in an aromatic, red-amber spiced gravy ('tari'). From celebratory Eid-ul-Adha gatherings and wedding receptions to cherished weekend family lunches, this dish represents the highest expression of Bengali hospitality.\n\nThe artistry of authentic Bengali lamb curry lies in the technique of patient 'koshano' (continuous slow braising). Fresh bone-in lamb cuts—featuring a balanced mix of shank with marrow bones, shoulder chunks, and ribs—are first marinated in thick plain yogurt, crushed ginger, garlic paste, turmeric, mustard oil, and a touch of red chili. Meanwhile, large potato halves are gently fried in smoking-hot cold-pressed mustard oil with a pinch of turmeric until a blistered, golden crust forms; these potatoes will later absorb the rendered lamb jus like savory sponges.\n\nWhole green cardamoms, black cardamom, cinnamon sticks, cloves, and bay leaves are bloomed in the aromatic mustard oil, followed by slow-caramelized red onions until sweet and amber-brown. The marinated lamb is seared vigorously over high heat to seal the meat, and then slowly braised with ground cumin, coriander, and Kashmiri chili as the natural marrow and fats melt into the onion base. Finally, boiling water and the golden potatoes are introduced, and the curry is gently simmered until the meat gives way effortlessly with a spoon and the crimson spiced oil pools on the surface. Ladled piping hot over fragrant steamed Chinigura or Basmati rice, every mouthful provides an unforgettable balance of warm spices, rich marrow fond, and comforting home-style soul.",
+    heroImage: IMAGES.lambCurry,
+    prepTimeMinutes: 20,
+    cookTimeMinutes: 60,
+    totalTimeMinutes: 80,
+    servings: 6,
+    difficulty: "Medium",
+    calories: 520,
+    rating: 4.99,
+    reviewCount: 164,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified meat. Sourced exclusively from hand-slaughtered zabiha bone-in young lamb or goat (khasir mangsho), pure cold-pressed mustard oil, whole freshly roasted spices, and natural aromatics. Prepared without synthetic food dyes, MSG, or alcohol-derived preservatives.",
+    potentialCautionNotes:
+      "Never add cold tap water to simmering lamb; cold water shocks the meat muscle fibers and prevents them from turning fork-tender. Always use boiling water. Fry the potatoes separately first so they hold their shape without turning to mush during the long braise.",
+    ingredients: [
+      { amount: "2.5", unit: "lbs / 1.2 kg", name: "Halal bone-in lamb", notes: "shank rounds with marrow bones, shoulder & ribs cut into 2-inch pieces" },
+      { amount: "3", unit: "large", name: "Yukon Gold or Russet potatoes", notes: "peeled and cut into halves" },
+      { amount: "4", unit: "large", name: "Red onions", notes: "finely sliced for the sweet caramelized base" },
+      { amount: "1/3", unit: "cup", name: "Cold-pressed Bengali mustard oil", notes: "divided for potato frying, meat marination, and braising" },
+      { amount: "1/3", unit: "cup", name: "Plain whole milk yogurt", notes: "whisked smooth; natural tenderizer for red meat" },
+      { amount: "2.5", unit: "tbsp", name: "Fresh ginger paste", notes: "freshly grated" },
+      { amount: "2.5", unit: "tbsp", name: "Fresh garlic paste", notes: "freshly crushed" },
+      { amount: "2", unit: "whole", name: "Bay leaves (Tejpata)", notes: "dried Indian bay leaves" },
+      { amount: "5", unit: "whole", name: "Green cardamom pods", notes: "lightly crushed to expose seeds" },
+      { amount: "1", unit: "whole", name: "Black cardamom pod", notes: "cracked open for smoky depth" },
+      { amount: "2", unit: "sticks", name: "Cinnamon bark", notes: "approx. 2 inches each" },
+      { amount: "5", unit: "whole", name: "Cloves (Laung)" },
+      { amount: "1.5", unit: "tbsp", name: "Ground coriander powder" },
+      { amount: "1.5", unit: "tbsp", name: "Kashmiri red chili powder", notes: "for radiant crimson color with mild sweet warmth" },
+      { amount: "1", unit: "tsp", name: "Hot red chili powder", notes: "adjust to heat preference" },
+      { amount: "1.5", unit: "tsp", name: "Ground turmeric powder", notes: "divided for marination and potato frying" },
+      { amount: "1", unit: "tbsp", name: "Roasted cumin powder (Bhuna Jeera)", notes: "freshly roasted and ground" },
+      { amount: "1.5", unit: "tsp", name: "Bengali Shahi Garam Masala powder", notes: "ground cardamom, cinnamon, mace, and nutmeg" },
+      { amount: "6", unit: "whole", name: "Fresh green chilies", notes: "slit lengthwise down the center" },
+      { amount: "1.5", unit: "tsp", name: "Fine sea salt", notes: "or to taste" },
+      { amount: "3", unit: "cups", name: "Boiling water", notes: "for creating the velvety spiced gravy" },
+      { amount: "3", unit: "tbsp", name: "Fresh cilantro / coriander leaves", notes: "finely chopped for garnish" },
+      { amount: "1", unit: "tbsp", name: "Pure cow ghee", notes: "drizzled at the end for royal richness" },
+    ],
+    substitutions: [
+      {
+        original: "Halal bone-in lamb",
+        substitute: "Halal bone-in goat meat (mutton) or beef shank with marrow",
+        notes: "Goat meat provides the classic traditional village flavor; beef shank yields comparable gelatinous richness.",
+      },
+      {
+        original: "Cold-pressed mustard oil",
+        substitute: "Pure cow ghee or neutral avocado oil",
+        notes: "Mustard oil gives the hallmark sharp nutty warmth of authentic Bengali home cooking.",
+      },
+      {
+        original: "Yukon Gold potatoes",
+        substitute: "Red potatoes, baby Dutch yellow potatoes, or halved sweet potatoes",
+        notes: "Waxy potatoes hold their shape cleanly during slow simmering.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Marinate the Bone-In Lamb",
+        instruction:
+          "Rinse lamb pieces and pat dry thoroughly with paper towels. In a large bowl, combine the lamb with whisked yogurt, 1 tablespoon mustard oil, 1 tablespoon ginger paste, 1 tablespoon garlic paste, 1 teaspoon turmeric powder, 1/2 teaspoon chili powder, and 1/2 teaspoon salt. Massage the marinade into the meat and bone crevices. Cover and let marinate at room temperature for 30 minutes, or refrigerate up to 4 hours.",
+      },
+      {
+        step: 2,
+        title: "Golden-Fry the Potatoes (Aloo Bhaja)",
+        instruction:
+          "In a heavy-bottomed Dutch oven, handi, or deep pot, heat 2 tablespoons of mustard oil over medium-high heat until hot. Toss potato halves with 1/2 teaspoon turmeric and a pinch of salt. Fry for 4 to 5 minutes, turning occasionally, until all sides develop a blistered, golden-brown crust. Remove potatoes with a slotted spoon and set aside on a plate.",
+      },
+      {
+        step: 3,
+        title: "Bloom Royal Whole Spices in Mustard Oil",
+        instruction:
+          "Add the remaining mustard oil to the pot and heat until light wisps of smoke appear, then reduce heat to medium. Add bay leaves, crushed green cardamoms, cracked black cardamom, cinnamon sticks, and cloves. Let them sizzle and swell for 30 to 40 seconds until intensely fragrant.",
+      },
+      {
+        step: 4,
+        title: "Slow-Caramelize the Sliced Onions",
+        instruction:
+          "Add the finely sliced red onions and 1/2 teaspoon salt to the spiced oil. Sauté over medium heat for 12 to 15 minutes, stirring frequently. Allow the onions to soften, brown gently, and turn a sweet golden-amber color. Stir in the remaining ginger paste and garlic paste; sauté for 2 minutes until raw aroma mellows.",
+      },
+      {
+        step: 5,
+        title: "High-Heat Sear and 'Koshano' the Lamb",
+        instruction:
+          "Add the ground coriander, Kashmiri chili powder, hot chili powder, and 1/2 teaspoon salt. Splash with 2 tablespoons of hot water to prevent spices from scorching. Increase heat to medium-high and add the marinated lamb along with all bowl juices. Sear and braise ('koshano') vigorously for 15 to 20 minutes, stirring continuously as marrow and natural fat render, creating a glistening dark reddish masala clinging tightly to the meat.",
+      },
+      {
+        step: 6,
+        title: "Slow Braise with Boiling Broth & Potatoes",
+        instruction:
+          "Pour in 3 cups of boiling water and scrape up all the caramelized fond from the bottom of the pot. Bring to a rapid rolling boil, then reduce heat to low. Cover tightly with a heavy lid and simmer gently for 40 minutes. Add the fried golden potatoes and slit green chilies, cover again, and simmer for an additional 20 to 25 minutes until the lamb is meltingly tender and the potatoes can be pierced effortlessly with a fork.",
+      },
+      {
+        step: 7,
+        title: "Royal Finish with Ghee, Garam Masala & Cilantro",
+        instruction:
+          "Uncover the pot. Gently sprinkle roasted cumin powder (bhuna jeera) and Bengali Shahi garam masala over the simmering curry. Drizzle 1 tablespoon of pure cow ghee on top and swirl the pot gently without breaking the tender potatoes. Simmer uncovered for 2 minutes as crimson-amber oil ('tari') pools on top. Remove from heat, garnish with chopped fresh cilantro, and let rest covered for 10 minutes before serving.",
+      },
+    ],
+    chefNotes: [
+      "Bone marrow shanks ('nalli') are the soul of Khasir Mangsho; as the marrow slowly melts into the sauce, it gives the curry a silky, velvety body that cannot be replicated with boneless meat.",
+      "Searing the marinated meat over high heat for at least 15 to 20 minutes ('koshano') before adding water renders the fats, builds deep caramelized fond on the pot, and eliminates any gaminess.",
+      "Adding a drizzle of pure cow ghee and freshly ground Bengali garam masala in the last 2 minutes seals in the royal banquet aroma that defines authentic Bengali celebration food.",
+    ],
+    nutrition: {
+      calories: 520,
+      proteinGrams: 42,
+      carbsGrams: 18,
+      fatGrams: 32,
+      fiberGrams: 4,
+      sodiumMg: 580,
+    },
+    storageInstructions:
+      "Store cooled curry in an airtight glass container in the refrigerator for up to 5 days. Curries made with bone-in lamb and potatoes taste even richer the next day as the potatoes absorb the spiced marrow gravy.",
+    freezingInstructions:
+      "Freeze without the potatoes (potatoes can turn mealy when frozen) in freezer-safe containers for up to 3 months. Thaw in the refrigerator overnight and reheat gently on the stovetop.",
+    servingSuggestions: [
+      "Serve piping hot in a rustic enameled Dutch oven or large earthenware handi.",
+      "Ladle generously over steaming hot Chinigura or Basmati white rice, Bengali Pulao, or soft flaky parathas.",
+      "Accompany with fresh lime wedges, sliced red onions, cucumber salad, and a dollop of mango chutney or sweet mishti doi for dessert.",
+    ],
+    faqs: [
+      {
+        question: "What cut of lamb is best for Bengali Lamb Curry?",
+        answer:
+          "A combination of bone-in shank rounds with bone marrow, shoulder, and ribs is ideal. The bones impart gelatin and marrow, while the shoulder meat stays succulent and tender.",
+      },
+      {
+        question: "Can I cook this in a pressure cooker or Instant Pot?",
+        answer:
+          "Yes! After the 'koshano' phase, transfer to a pressure cooker with 2.5 cups of boiling water and cook for 6 to 7 whistles, or in an Instant Pot on High Pressure for 25 minutes with natural release. Add fried potatoes for the last 5 minutes.",
+      },
+      {
+        question: "What is the significance of potatoes in Bengali meat curry?",
+        answer:
+          "In Bengal, the potato in Khasir Mangsho is often prized even more than the meat itself! The starchy potato absorbs the rendered fat, bone marrow, and spices, becoming creamy and deeply flavorful.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman & Noakhali Heritage Culinary Team",
+      role: "Master Bengali Heritage Chef & Meat Specialist",
+    },
+    updatedDate: "September 20, 2026",
+    tags: [
+      "Halal Lamb",
+      "Khasir Mangsho",
+      "Lamb Curry",
+      "Mutton Curry",
+      "Bengali Cuisine",
+      "Aloo Diye Mangsho",
+      "Festive",
+      "Sunday Lunch",
+      "Comfort Food",
+      "Heritage Recipes",
+    ],
+  },
+  {
+    id: "rec-chicken-jalfrezi",
+    slug: "chicken-jalfrezi",
+    title: "Restaurant Style Chicken Jalfrezi (চিকেন জলফ্রেজি)",
+    category: "Halal Chicken",
+    categorySlug: "halal-chicken",
+    cuisine: "Anglo-Indian & Bengali Heritage",
+    description:
+      "Succulent chicken breast chunks stir-fried at high heat with crunchy red and green bell peppers, chunky onion petals, and fiery green chilies tossed in a thick, tangy, aromatic spiced tomato reduction.",
+    introStory:
+      "Few curries possess the electric energy and visual drama of an authentic restaurant-style Chicken Jalfrezi (চিকেন জলফ্রেজি). Originating in the bustling kitchens of colonial Bengal, where British-era cooks created spicy stir-fries ('jhāl porhezi'—meaning spicy, stir-fried diet in Bengali) to transform leftover roasted meats into sizzling culinary triumphs, Jalfrezi quickly evolved into one of the most beloved curry house classics across South Asia and Great Britain.\n\nWhat sets real Jalfrezi apart from ordinary curries is its stir-fry soul: high heat, quick searing, and perfectly timed additions. Bite-sized pieces of tender Halal chicken breast or thigh are quickly marinated with ginger, garlic, turmeric, and cumin, then seared in a smoking-hot wok or wide karahi until golden and blistered. Rather than melting into a smooth purée, vibrant red and green bell peppers and sweet onion petals are flash-fried just long enough to kiss the heat—retaining their signature juicy crunch and sweet garden snap.\n\nThe glossy sauce that coats every morsel is a vibrant reduction of ripe plum tomatoes, tomato paste, toasted cumin seeds, fragrant garam masala, Kashmiri chili, and a delicate splash of malt or white vinegar and natural honey to strike the quintessential sweet-sour-spicy equilibrium. Crowned with fine matchsticks of fresh root ginger, slit green finger chilies, and a confetti of fresh cilantro, each sizzling spoonful delivers layers of zesty heat, smoky char, and crisp aromatic freshness.",
+    heroImage: IMAGES.chickenJalfrezi,
+    prepTimeMinutes: 15,
+    cookTimeMinutes: 20,
+    totalTimeMinutes: 35,
+    servings: 4,
+    difficulty: "Easy",
+    calories: 360,
+    rating: 4.98,
+    reviewCount: 138,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified poultry. Made exclusively with hand-slaughtered zabiha chicken breast or thigh cuts, natural whole spices, fresh farm vegetables, and pure unadulterated seasonings. Free from alcohol-derived flavorings, artificial coloring, or MSG.",
+    potentialCautionNotes:
+      "High heat and swift stirring are essential. Do not add the bell peppers and onions too early or cover the pan for too long, as excess steam will turn the vegetables limp and watery instead of crisp-tender.",
+    ingredients: [
+      { amount: "1.5", unit: "lbs / 700g", name: "Halal boneless skinless chicken breast or thighs", notes: "cut into 1-inch bite-sized cubes" },
+      { amount: "1", unit: "large", name: "Red bell pepper", notes: "deseeded and cut into 1-inch squares" },
+      { amount: "1", unit: "large", name: "Green bell pepper", notes: "deseeded and cut into 1-inch squares" },
+      { amount: "1", unit: "large", name: "Red or yellow onion", notes: "cut into 1-inch chunks and separated into petals" },
+      { amount: "3", unit: "medium", name: "Ripe Roma tomatoes", notes: "finely chopped or puréed" },
+      { amount: "2", unit: "tbsp", name: "Concentrated tomato paste", notes: "provides rich crimson hue and concentrated umami" },
+      { amount: "3", unit: "tbsp", name: "Neutral vegetable oil or pure cow ghee", notes: "divided for searing chicken and sautéing masala" },
+      { amount: "1.5", unit: "tbsp", name: "Fresh garlic paste", notes: "freshly crushed" },
+      { amount: "1.5", unit: "tbsp", name: "Fresh ginger paste", notes: "freshly grated" },
+      { amount: "1", unit: "tsp", name: "Whole cumin seeds (Jeera)" },
+      { amount: "1", unit: "tbsp", name: "Ground coriander powder" },
+      { amount: "1", unit: "tbsp", name: "Roasted cumin powder (Bhuna Jeera)", notes: "freshly dry-roasted and ground" },
+      { amount: "1", unit: "tbsp", name: "Kashmiri red chili powder", notes: "for rich color and mild fruity warmth" },
+      { amount: "1/2", unit: "tsp", name: "Turmeric powder (Haldi)" },
+      { amount: "1/2", unit: "tsp", name: "Hot red chili powder", notes: "adjust to heat preference" },
+      { amount: "1", unit: "tsp", name: "Garam Masala powder", notes: "aromatic blend of cardamom, cinnamon, and cloves" },
+      { amount: "1", unit: "tbsp", name: "White vinegar or fresh lime juice", notes: "essential for authentic Jalfrezi tangy kick" },
+      { amount: "1", unit: "tsp", name: "Pure cane sugar or natural honey", notes: "balances the acidity of tomatoes and vinegar" },
+      { amount: "4", unit: "whole", name: "Fresh green finger chilies", notes: "slit lengthwise or sliced diagonally" },
+      { amount: "1", unit: "inch piece", name: "Fresh root ginger", notes: "peeled and sliced into fine matchsticks for garnish" },
+      { amount: "1/4", unit: "cup", name: "Hot water or Halal chicken broth", notes: "for deglazing" },
+      { amount: "1", unit: "tsp", name: "Fine sea salt", notes: "or to taste" },
+      { amount: "3", unit: "tbsp", name: "Fresh cilantro / coriander leaves", notes: "finely chopped for garnish" },
+    ],
+    substitutions: [
+      {
+        original: "Chicken breast",
+        substitute: "Boneless chicken thighs cut into 1-inch chunks",
+        notes: "Chicken thighs stay extra juicy and have higher heat tolerance during stir-frying.",
+      },
+      {
+        original: "Red & green bell peppers",
+        substitute: "Yellow or orange sweet bell peppers or mild poblano peppers",
+        notes: "Maintains sweet crunchy contrast and vibrant color.",
+      },
+      {
+        original: "White vinegar",
+        substitute: "Fresh lemon juice or apple cider vinegar",
+        notes: "Preserves the signature tangy lift.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Marinate the Chicken",
+        instruction:
+          "Place chicken pieces in a mixing bowl. Add 1/2 teaspoon turmeric powder, 1/2 teaspoon salt, 1/2 tablespoon ginger paste, 1/2 tablespoon garlic paste, and 1 teaspoon oil. Toss to coat evenly and let sit at room temperature for 10 to 15 minutes.",
+      },
+      {
+        step: 2,
+        title: "Flash-Sear the Chicken at High Heat",
+        instruction:
+          "Heat 1.5 tablespoons of oil or ghee in a wide heavy-bottomed wok, kadai, or deep skillet over high heat until smoking hot. Add the chicken pieces in a single layer and sear without moving for 2 minutes to develop golden browned edges. Stir-fry vigorously for another 3 to 4 minutes until roughly 80% cooked through. Transfer chicken and any pan juices onto a plate.",
+      },
+      {
+        step: 3,
+        title: "Bloom Cumin Seeds & Sauté Aromatics",
+        instruction:
+          "Return the same pan to medium heat and add the remaining 1.5 tablespoons of oil. Add the whole cumin seeds; let them sizzle for 20 seconds until fragrant. Add the remaining ginger paste and garlic paste, sautéing for 1 minute until fragrant and light golden.",
+      },
+      {
+        step: 4,
+        title: "Build the Tangy Spiced Tomato Masala",
+        instruction:
+          "Stir in the chopped tomatoes, tomato paste, coriander powder, Kashmiri chili powder, hot chili powder, remaining turmeric, and 1/2 teaspoon salt. Cook over medium-high heat for 4 to 5 minutes, breaking down the tomatoes with a wooden spatula until the sauce thickens into a glossy, concentrated paste with oil separating at the edges.",
+      },
+      {
+        step: 5,
+        title: "Toss Chicken and Crisp Bell Peppers",
+        instruction:
+          "Increase heat to high. Add the seared chicken and any resting juices back into the pan. Immediately toss in the onion petals, red bell pepper chunks, and green bell pepper chunks. Stir-fry rapidly for 2 minutes, coating all vegetables in the sizzling masala.",
+      },
+      {
+        step: 6,
+        title: "Quick Flash Reduction",
+        instruction:
+          "Pour in 1/4 cup hot water or chicken broth, vinegar (or lime juice), and sugar/honey. Stir rapidly over high heat for 2 to 3 minutes. The liquid will reduce into a thick, clingy, glossy sauce coating every chicken cube and pepper petal, leaving the peppers vibrant and pleasantly crisp-tender.",
+      },
+      {
+        step: 7,
+        title: "Garnish and Serve Sizzling",
+        instruction:
+          "Sprinkle the roasted garam masala and bhuna jeera over the curry. Toss in the sliced green chilies and half of the fresh ginger matchsticks. Stir for 30 seconds off heat. Transfer immediately to a serving bowl, shower with chopped fresh cilantro and remaining ginger matchsticks, and serve piping hot.",
+      },
+    ],
+    chefNotes: [
+      "The defining hallmark of Jalfrezi is crisp-tender vegetables—never cover the pan or stew the peppers, otherwise they will lose their crunch and vibrant jewel-like colors.",
+      "Searing the chicken over smoking high heat creates a savory fond on the pan that infuses deep restaurant-style smokiness into the tomato masala.",
+      "The splash of vinegar and sugar balances the rich tomato base with a zesty, sweet-sour lift that elevates this far above everyday curries.",
+    ],
+    nutrition: {
+      calories: 360,
+      proteinGrams: 36,
+      carbsGrams: 14,
+      fatGrams: 18,
+      fiberGrams: 4,
+      sodiumMg: 490,
+    },
+    storageInstructions:
+      "Store cooled leftovers in an airtight container in the refrigerator for up to 4 days. Reheat in a dry hot skillet over medium-high heat for 2 to 3 minutes to preserve the texture of the vegetables.",
+    freezingInstructions:
+      "Freezing is not recommended as thawed bell peppers and onions lose their crisp texture. Best enjoyed freshly made.",
+    servingSuggestions: [
+      "Serve piping hot directly in a rustic shallow bowl or sizzling fajita-style cast-iron platter.",
+      "Accompany with warm butter garlic naan, layered parathas, or fragrant cumin jeera rice.",
+      "Pair with a cooling mint-cucumber raita or crisp kachumber salad to balance the bold pepper heat.",
+    ],
+    faqs: [
+      {
+        question: "What does the name 'Jalfrezi' mean?",
+        answer:
+          "The word originates from the Bengali 'jhāl porhezi' (ঝাল পরহেজি), meaning a spicy hot stir-fried dish. It was originally created in Bengal to quickly flash-fry roasted meats with vibrant peppers, onions, and fresh chilies.",
+      },
+      {
+        question: "How spicy is authentic Chicken Jalfrezi?",
+        answer:
+          "Traditional Jalfrezi is pleasantly spicy with a zesty bite from fresh green chilies and Kashmiri chili. You can control the heat by deseeding the green chilies or adjusting the hot chili powder.",
+      },
+      {
+        question: "How do I ensure the bell peppers stay crisp?",
+        answer:
+          "Add the bell peppers in the final 3 to 4 minutes of cooking over high heat, and never cover the pot with a lid. This ensures they soften slightly while retaining their juicy, sweet crunch.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman & Noakhali Heritage Culinary Team",
+      role: "Executive Chef & South Asian Heritage Specialist",
+    },
+    updatedDate: "September 20, 2026",
+    tags: [
+      "Halal Chicken",
+      "Chicken Jalfrezi",
+      "Curry House Classic",
+      "Stir Fry",
+      "Bengali Heritage",
+      "Spicy",
+      "Quick Dinner",
+      "Bell Peppers",
+      "High Protein",
+    ],
+  },
+  {
+    id: "rec-chicken-bhuna-masala",
+    slug: "chicken-bhuna-masala-curry-bengali-style",
+    title: "Chicken Bhuna Masala Curry Bengali Style (চিকেন ভুনা মশলা কারি)",
+    category: "Halal Chicken",
+    categorySlug: "halal-chicken",
+    cuisine: "Traditional Bengali / Bangladeshi Heritage",
+    description:
+      "Tender bone-in chicken braised to perfection in an intensely caramelized onion and aromatic spiced tomato masala gravy, infused with cold-pressed mustard oil, roasted bhuna jeera, green chilies, and fresh coriander leaves.",
+    introStory:
+      "In the grand culinary canon of Bengal, 'Bhuna' (বাঙালি ভুনা) represents the absolute pinnacle of stovetop mastery. Far more than just a curry, 'Chicken Bhuna Masala' is defined by the venerable technique of 'koshano'—a patient process where tender bone-in chicken cuts are seared and slowly braised in a dense, aromatic matrix of slow-caramelized red onions, crushed ginger, garlic, and freshly toasted whole and ground spices.\n\nUnlike everyday soupy curries (murgir jhol), an authentic Bengali Chicken Bhuna contains very little liquid. Instead, as the chicken simmers gently in its own juices and the natural sweetness of caramelized onions, the spice paste reduces and thickens until it turns a deep, glistening reddish-mahogany fond that intimately coats every contour of the meat. Aromatic cold-pressed mustard oil (shorsher tel) provides an assertive, nutty undertone, while whole black and green cardamoms, cinnamon bark, and cloves release warm royal aromatics throughout the kitchen.\n\nThe final touch is where authentic Noakhali and Bengali craft shines: a generous scattering of freshly dry-roasted and ground cumin powder (bhuna jeera), a splash of fresh lime, slit fiery green chilies, and a shower of finely chopped fresh cilantro leaves. The resulting dish features tender, succulent chicken pieces swimming in a rich, velvety, oil-separated sauce with a glossy sheen and deep roasted warmth—flawlessly paired with hot steamed Basmati or Chinigura rice, flaky parathas, or crisp puffed luchis.",
+    heroImage: IMAGES.chickenBhunaMasala,
+    prepTimeMinutes: 15,
+    cookTimeMinutes: 40,
+    totalTimeMinutes: 55,
+    servings: 5,
+    difficulty: "Medium",
+    calories: 410,
+    rating: 4.99,
+    reviewCount: 142,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified poultry. Prepared exclusively with certified hand-slaughtered zabiha bone-in chicken, pure cold-pressed mustard oil, whole freshly roasted spices, and natural aromatics. Free from synthetic food colors, MSG, artificial flavor enhancers, or alcohol-derived extracts.",
+    potentialCautionNotes:
+      "Take your time during the onion caramelization phase; rushed heat can burn the onion edges black and turn the gravy bitter. Deglaze only with small splashes of hot boiling water to release the pan fond without making the bhuna watery.",
+    ingredients: [
+      { amount: "2.5", unit: "lbs / 1.2 kg", name: "Halal bone-in chicken", notes: "skinless, cut into 12-14 curry-size pieces with thighs & drumsticks" },
+      { amount: "4", unit: "large", name: "Red onions", notes: "finely sliced for the caramelized bhuna base" },
+      { amount: "1/3", unit: "cup", name: "Cold-pressed Bengali mustard oil", notes: "essential for authentic sharp pungency and smoky char" },
+      { amount: "2", unit: "medium", name: "Ripe Roma tomatoes", notes: "finely chopped or crushed" },
+      { amount: "3", unit: "tbsp", name: "Plain whole milk yogurt", notes: "whisked smooth to tenderize chicken and balance spices" },
+      { amount: "2", unit: "tbsp", name: "Fresh ginger paste", notes: "freshly grated or ground" },
+      { amount: "2", unit: "tbsp", name: "Fresh garlic paste", notes: "freshly crushed" },
+      { amount: "2", unit: "whole", name: "Bay leaves (Tejpata)", notes: "dried Indian bay leaves" },
+      { amount: "4", unit: "whole", name: "Green cardamom pods", notes: "lightly crushed to expose seeds" },
+      { amount: "1", unit: "whole", name: "Black cardamom pod", notes: "cracked open for smoky depth" },
+      { amount: "2", unit: "sticks", name: "Cinnamon bark", notes: "approx. 2 inches each" },
+      { amount: "4", unit: "whole", name: "Cloves (Laung)" },
+      { amount: "1.5", unit: "tbsp", name: "Ground coriander powder" },
+      { amount: "1", unit: "tbsp", name: "Kashmiri red chili powder", notes: "for stunning crimson hue with mild pleasant heat" },
+      { amount: "1", unit: "tsp", name: "Hot red chili powder", notes: "adjust to heat preference" },
+      { amount: "1", unit: "tsp", name: "Turmeric powder (Haldi)" },
+      { amount: "1", unit: "tbsp", name: "Roasted cumin powder (Bhuna Jeera)", notes: "freshly dry-roasted in a skillet and ground fine" },
+      { amount: "1", unit: "tsp", name: "Bengali Shahi Garam Masala powder", notes: "aromatic blend of cardamom, cinnamon, mace, and nutmeg" },
+      { amount: "6", unit: "whole", name: "Fresh green chilies", notes: "slit lengthwise down the center" },
+      { amount: "1", unit: "tsp", name: "Fine sea salt", notes: "or to taste" },
+      { amount: "1/2", unit: "cup", name: "Boiling water", notes: "for deglazing and gentle simmer" },
+      { amount: "3", unit: "tbsp", name: "Fresh cilantro / coriander leaves", notes: "finely chopped for garnish" },
+      { amount: "1", unit: "tbsp", name: "Fresh lemon juice", notes: "added at finish for brightness" },
+    ],
+    substitutions: [
+      {
+        original: "Cold-pressed mustard oil",
+        substitute: "Pure cow ghee or neutral avocado oil",
+        notes: "Mustard oil yields the distinct pungent aroma characteristic of authentic Bengali kitchens; ghee provides royal richness.",
+      },
+      {
+        original: "Halal bone-in chicken",
+        substitute: "Halal boneless skinless chicken thighs cut into 2-inch chunks",
+        notes: "Reduce simmering time by 8 to 10 minutes to prevent overcooking.",
+      },
+      {
+        original: "Fresh Roma tomatoes",
+        substitute: "2 tbsp concentrated tomato paste whisked with 3 tbsp warm water",
+        notes: "Provides rich umami and red color without extra acidity.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Clean and Marinate the Chicken",
+        instruction:
+          "Rinse chicken pieces gently and pat dry with paper towels. In a large mixing bowl, combine the chicken with 1 teaspoon turmeric powder, 1/2 teaspoon salt, 1 tablespoon mustard oil, and 3 tablespoons whisked yogurt. Toss well to coat every piece evenly and let it rest for 15 to 20 minutes while preparing the aromatics.",
+      },
+      {
+        step: 2,
+        title: "Bloom Whole Spices in Mustard Oil",
+        instruction:
+          "In a heavy-bottomed kadai, Dutch oven, or deep skillet, heat the remaining mustard oil over medium heat until a faint wisp of smoke rises (this eliminates raw sulfur pungency). Lower heat slightly and add the bay leaves, crushed green cardamoms, cracked black cardamom, cinnamon sticks, and cloves. Sauté for 30–40 seconds until they crackle and perfume the oil.",
+      },
+      {
+        step: 3,
+        title: "Slow-Caramelize the Onions (The Bhuna Base)",
+        instruction:
+          "Add the finely sliced red onions and 1/2 teaspoon salt to the spiced oil. Sauté over medium-low heat for 12 to 15 minutes, stirring frequently. Watch as the onions soften, lose their moisture, and gradually turn a rich golden-amber hue. Do not rush this step—the sweet caramelized onions provide the body and color of the bhuna gravy.",
+      },
+      {
+        step: 4,
+        title: "Sauté Ginger, Garlic & Ground Masala Paste",
+        instruction:
+          "Add the crushed garlic and ginger pastes to the caramelized onions. Sauté vigorously for 2 minutes until the raw aroma dissipates. Stir in the chopped tomatoes, Kashmiri red chili powder, hot chili powder, ground coriander, and remaining turmeric. Cook for 4 to 5 minutes, splashing 2 tablespoons of hot water if needed, until tomatoes soften completely into a glossy, oil-separating paste.",
+      },
+      {
+        step: 5,
+        title: "Sear and 'Koshano' the Chicken",
+        instruction:
+          "Increase heat to medium-high and add the marinated chicken pieces to the kadai. Sauté and braise ('koshano') the chicken vigorously for 8 to 10 minutes, turning constantly with a flat spatula. As the meat sears, it releases juices that mingle with the onion-spice paste, forming a deep brownish-red fond that clings to every piece.",
+      },
+      {
+        step: 6,
+        title: "Gentle Simmer and Oil Separation",
+        instruction:
+          "Pour in 1/2 cup of boiling water and stir to deglaze the bottom of the pan. Reduce heat to low, cover tightly with a lid, and let it gently simmer for 15 to 18 minutes, stirring once halfway through. The chicken will cook until tender and juicy, while the liquid reduces into a thick, glossy gravy with crimson oil pools separating around the perimeter.",
+      },
+      {
+        step: 7,
+        title: "Finish with Bhuna Jeera, Green Chilies & Cilantro",
+        instruction:
+          "Uncover the pot. Sprinkle the freshly roasted cumin powder (bhuna jeera) and Bengali Shahi garam masala all over. Drop in the slit green chilies and drizzle with 1 tablespoon of fresh lemon juice. Stir gently over medium heat for 2 minutes as the roasted aromatics envelop the chicken. Remove from flame, scatter chopped fresh cilantro on top, and let it rest covered for 5 minutes before serving.",
+      },
+    ],
+    chefNotes: [
+      "The soul of a true Bhuna is 'koshano'—cooking off moisture until the oil clearly separates ('tel chere deya') and glistens around the edges of the dark spiced gravy.",
+      "Adding the freshly dry-roasted and ground cumin (bhuna jeera) in the final 2 minutes locks in an irresistible smoky aroma that distinguishes authentic Bengali bhuna from ordinary curries.",
+      "Using bone-in chicken cuts (especially drumsticks and thighs) is crucial; the bones release natural gelatin and rich savory flavor into the reducing sauce.",
+    ],
+    nutrition: {
+      calories: 410,
+      proteinGrams: 38,
+      carbsGrams: 12,
+      fatGrams: 24,
+      fiberGrams: 3,
+      sodiumMg: 520,
+    },
+    storageInstructions:
+      "Store cooled curry in an airtight container in the refrigerator for up to 5 days. The flavors meld and deepen noticeably overnight. Reheat gently on the stovetop with a splash of hot water.",
+    freezingInstructions:
+      "Freeze in a freezer-safe container for up to 2 months. Thaw overnight in the refrigerator and warm thoroughly over low heat on the stove.",
+    servingSuggestions: [
+      "Serve piping hot directly from the kadai or in an earthenware bowl with steamed fragrant Chinigura or Basmati rice.",
+      "Pair alongside hot flaky parathas, crisp puffed luchis, or warm garlic naan for dipping into the thick spiced fond.",
+      "Complement with crisp sliced cucumbers, rings of red onion, lime wedges, and a cooling bowl of raita or salad.",
+    ],
+    faqs: [
+      {
+        question: "What makes Bengali Chicken Bhuna different from ordinary Chicken Curry?",
+        answer:
+          "While standard chicken curry (Murgir Jhol) features a lighter, soupy broth with potatoes, Chicken Bhuna is heavily reduced through the 'koshano' technique, resulting in a thick, dark, glossy sauce of caramelized onions and roasted spices clinging directly to the meat with separated aromatic oil.",
+      },
+      {
+        question: "Can I make this dish with boneless chicken breast?",
+        answer:
+          "Yes, but chicken breast can easily dry out during braising. If using breast meat, cut into larger 2-inch chunks, reduce simmering time by 10 minutes, or prefer boneless chicken thighs for maximum juiciness.",
+      },
+      {
+        question: "Why do we smoke the mustard oil before cooking?",
+        answer:
+          "Mustard oil has a natural pungent compound (allyl isothiocyanate). Heating it until light smoke rises mellows the harshness, leaving a rich, nutty, and savory aroma essential for authentic Bengali cooking.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman & Noakhali Heritage Culinary Team",
+      role: "Executive Chef & Bengali Heritage Specialist",
+    },
+    updatedDate: "September 20, 2026",
+    tags: [
+      "Halal Chicken",
+      "Chicken Bhuna",
+      "Bengali Cuisine",
+      "Curry",
+      "Koshano Murgi",
+      "Dinner",
+      "Heritage Recipes",
+      "Spicy",
+      "Comfort Food",
+      "Noakhali Special",
+    ],
+  },
+  {
+    id: "rec-bengali-sweet-doi",
+    slug: "bengali-sweet-doi",
+    title: "Bengali Sweet Doi (Mishti Doi/Dahi বাঙালি দই)",
+    category: "Halal Desserts",
+    categorySlug: "halal-desserts",
+    cuisine: "Traditional Bengali",
+    description:
+      "Iconic artisanal Bengali sweet fermented yogurt prepared in traditional porous terracotta earthen pots (matir handi). Made by slow-reducing rich whole milk, folding in delicate golden caramelized cane sugar, fragrant green cardamom, and rich probiotic cultures, producing a thick, silky, custard-like texture with a golden-caramel surface garnished with saffron strands and slivered pistachios.",
+    introStory:
+      "Few culinary treasures capture the sweet soul of Bengal quite like authentic Mishti Doi (বাঙালি মিষ্টি দই). Originating centuries ago in royal Bengal and perfected across generations in storied confectionery epicenters such as Bogura (বগুড়ার দই) and Nabadwip (লাল দই), this world-famous sweet fermented curd represents the celebratory climax of traditional feasts, wedding banquets, Pahela Baishakh, and Eid gatherings.\n\nThe magic of authentic artisanal Mishti Doi rests upon three culinary pillars: patience, caramelization, and terracotta. First, full-cream cow milk is simmered gently over a slow flame and reduced to almost half its volume, evaporating water and concentrating natural milk solids (rabri) into a velvety base. Second, granulated cane sugar is gently melted in a dry skillet into a glistening deep amber caramel. When folded into the hot milk, this caramel imparts the signature dusky blush, subtle butterscotch complexity, and mellow roasted sweetness that defines real Bengali doi without any artificial coloring. Third, once cooled to a precise lukewarm temperature (approx. 110°F / 43°C), the enriched milk is tempered with live probiotic yogurt culture and poured into unglazed earthen clay bowls (matir shora or handi).\n\nThe porous, breathable clay walls naturally wick away excess whey and moisture during the warm 8-to-12 hour incubation period, condensing the curd so thoroughly that a spoon can stand upright in it. Thoroughly chilled before serving and crowned with Kashmiri saffron threads, crushed green pistachios, and slivered almonds, every chilled spoonful offers a cool, velvety melt with notes of caramelized cream and floral cardamom.",
+    heroImage: IMAGES.bengaliSweetDoi,
+    prepTimeMinutes: 15,
+    cookTimeMinutes: 40,
+    totalTimeMinutes: 55,
+    servings: 6,
+    difficulty: "Medium",
+    calories: 210,
+    rating: 4.99,
+    reviewCount: 156,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified dessert. Crafted solely with organic full-cream whole milk, natural caramelized cane sugar, active probiotic cultures, pure ground cardamom, and saffron. Contains zero gelatin, non-halal rennet, alcohol-based extracts, or synthetic artificial thickening agents.",
+    potentialCautionNotes:
+      "Milk temperature when introducing the yogurt starter is critical: ensure the milk is lukewarm (between 110°F–115°F / 43°C–46°C). If the milk is too hot, it will scald and kill the active bacterial cultures; if too cold, the yogurt will fail to set or become watery.",
+    ingredients: [
+      { amount: "4", unit: "cups / 1 liter", name: "Full-cream whole cow or buffalo milk", notes: "fresh high-fat whole milk ensures a dense, luxurious curd" },
+      { amount: "3", unit: "tbsp", name: "Thick Greek yogurt or hung curd (starter culture)", notes: "strained in cheesecloth for 30 minutes to eliminate excess whey" },
+      { amount: "1/2", unit: "cup", name: "Granulated white sugar", notes: "stirred directly into the simmering milk" },
+      { amount: "1/4", unit: "cup", name: "Granulated white sugar (for caramel)", notes: "melted in a dry skillet into deep amber caramel" },
+      { amount: "3", unit: "tbsp", name: "Full-cream milk powder or evaporated milk", notes: "whisked in for extra rich, velvety body" },
+      { amount: "1/2", unit: "tsp", name: "Freshly ground green cardamom powder", notes: "adds warm traditional confectionery perfume" },
+      { amount: "1", unit: "generous pinch", name: "Kashmiri saffron strands", notes: "steeped in 1 tbsp lukewarm milk for golden hue and royal aroma" },
+      { amount: "1", unit: "tbsp", name: "Raw green pistachios & slivered almonds", notes: "finely chopped, for classic festive top garnish" },
+    ],
+    substitutions: [
+      {
+        original: "Granulated white sugar",
+        substitute: "Bengali date palm jaggery (nolen gur or jhola khejur gur)",
+        notes: "Produces winter seasonal Nolen Gurer Mishti Doi with smoky, molasses-like depth.",
+      },
+      {
+        original: "Unglazed terracotta clay pot (matir handi)",
+        substitute: "Heavy ceramic ramekins, stoneware bowls, or thick glass jars",
+        notes: "Clay pots absorb moisture for the thickest set; if using ceramic or glass, wrap the outside in a warm towel during incubation.",
+      },
+      {
+        original: "Full-cream whole milk",
+        substitute: "Whole milk combined with 1/2 cup heavy whipping cream",
+        notes: "Ideal if using supermarket homogenized milk that has lower natural butterfat.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Strain the Starter Yogurt Culture",
+        instruction:
+          "Place 3 tablespoons of plain whole milk yogurt or Greek yogurt into a fine-mesh strainer lined with cheesecloth or a paper towel set over a small bowl. Let it drain undisturbed for 30 minutes to discard acidic liquid whey. This produces thick, concentrated hung curd that prevents the Mishti Doi from turning watery.",
+      },
+      {
+        step: 2,
+        title: "Simmer and Reduce the Milk Base",
+        instruction:
+          "In a heavy-bottomed stainless steel or copper pot, pour the whole milk and bring to a gentle boil over medium flame, stirring frequently with a silicone spatula to prevent scorching at the bottom. Whisk in the milk powder and 1/2 cup of sugar. Reduce heat to low and simmer for 20–25 minutes until the milk reduces by roughly 35% to 40% and coats the back of a spoon.",
+      },
+      {
+        step: 3,
+        title: "Craft the Deep Golden Caramel",
+        instruction:
+          "In a separate non-stick or stainless steel saucepan, spread the remaining 1/4 cup of sugar in an even layer with 1 tablespoon of water. Heat over medium-low flame without stirring until the sugar melts and begins bubbling. As it turns from pale straw to rich, fragrant amber-brown caramel (about 4–5 minutes), immediately remove from heat. Carefully ladle 1/2 cup of the hot reduced milk into the bubbling caramel (it will sputter excitedly). Whisk briskly until completely smooth and molten.",
+      },
+      {
+        step: 4,
+        title: "Incorporate Caramel & Aromatics into Reduced Milk",
+        instruction:
+          "Pour the molten golden caramel syrup back into the main pot of reduced milk. Whisk continuously over low heat for 2 minutes until the entire milk turns a uniform dusky caramel-tan hue. Stir in the freshly ground cardamom powder and steeped saffron milk. Remove from heat and allow the milk to cool until it reaches lukewarm incubation temperature (110°F–115°F / 43°C–46°C; comfortable when testing with a clean fingertip for 10 seconds).",
+      },
+      {
+        step: 5,
+        title: "Whisk and Temper the Starter Culture",
+        instruction:
+          "In a mixing bowl, whisk the drained hung curd until completely lump-free and satiny smooth. Pour in one ladleful of the lukewarm caramel milk into the curd and whisk thoroughly to temper it. Pour this tempered mixture back into the main pot of lukewarm milk, whisking vigorously with a balloon whisk for 60 seconds to create a delicate frothy micro-foam on the surface.",
+      },
+      {
+        step: 6,
+        title: "Pour into Earthenware & Warm Incubation",
+        instruction:
+          "Pour the warm frothy milk mixture into traditional unglazed terracotta clay pots (matir handi or shora) or ceramic ramekins. Cover the tops snugly with parchment paper or breathable aluminum foil secured with an elastic band. Place the clay pots in a draft-free, warm environment (such as an unheated oven with the interior light turned on, or an insulated cooler bag) for 8 to 12 hours undisturbed until the yogurt firmly sets and does not wobble when tilted.",
+      },
+      {
+        step: 7,
+        title: "Chill and Garnish",
+        instruction:
+          "Once set, transfer the clay pots to the refrigerator for at least 4 hours (or overnight). Chilling firms the set, enhances the silky texture, and deepens the butterscotch sweetness. Before serving, garnish the golden surface with red Kashmiri saffron strands and crushed green pistachios and almonds. Serve chilled directly from the earthenware.",
+      },
+    ],
+    chefNotes: [
+      "The breathable, unglazed walls of terracotta clay pots (matir shora) naturally absorb excess moisture during the incubation cycle, yielding the legendary firm, dense texture unique to Bengali confectioneries.",
+      "If you are using brand-new unglazed earthenware pots, soak them in clean water for 2 hours, then dry them thoroughly in a warm oven or under the sun before pouring the milk.",
+      "Never stir, jostle, or move the pots during the first 8 hours of incubation; disturbing the developing lactic acid bacterial matrix will cause whey separation.",
+    ],
+    nutrition: {
+      calories: 210,
+      proteinGrams: 7,
+      carbsGrams: 29,
+      fatGrams: 8,
+      fiberGrams: 0,
+      sodiumMg: 85,
+    },
+    storageInstructions:
+      "Cover with parchment paper and store in the refrigerator for up to 7 days. The flavor actually continues to mature and deepen after day two.",
+    freezingInstructions:
+      "Do not freeze Mishti Doi. Freezing ruptures the delicate protein emulsion and probiotic cultures, turning the set curd watery and grainy upon thawing.",
+    servingSuggestions: [
+      "Serve chilled straight out of individual terracotta handis with wooden spoons as the grand celebratory conclusion to spicy banquet dishes like Kacchi Biryani or Dhaka Shahi Chicken Roast.",
+      "Pair alongside warm Roshogolla or Shahi Pitha during Eid or Pahela Baishakh celebrations.",
+      "Garnish with edible saffron threads, crushed green pistachios, and slivered California almonds for regal presentation.",
+    ],
+    faqs: [
+      {
+        question: "Why is my Mishti Doi watery or why did it not set?",
+        answer:
+          "Watery doi usually results from either inoculating the culture while the milk was too hot (which kills the bacterial cultures), not straining the starter yogurt beforehand, or incubating in too cold a room. Using an oven with the light bulb on maintains the ideal 105°F–110°F setting environment.",
+      },
+      {
+        question: "How does traditional Mishti Doi achieve its signature reddish-caramel color?",
+        answer:
+          "Authentic Mishti Doi obtains its tan-caramel hue through the Maillard reaction from slow milk reduction combined with deeply caramelized sugar or date palm jaggery (gur)—never from artificial brown food coloring.",
+      },
+      {
+        question: "Can I make this with jaggery instead of sugar?",
+        answer:
+          "Yes! For authentic winter Nolen Gurer Doi, replace the granulated sugar with high-quality date palm jaggery (khejur gur). Melt the jaggery gently with 2 tbsp of water and fold it into warm milk (never add jaggery to boiling milk as the acidity can curdle it).",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman & Noakhali Heritage Sweets Team",
+      role: "Master Bengali Confectionery Specialist",
+    },
+    updatedDate: "September 19, 2026",
+    tags: [
+      "Halal Desserts",
+      "Bengali Sweets",
+      "Mishti Doi",
+      "Heritage Recipes",
+      "Dahi",
+      "Yogurt",
+      "Bogura Special",
+      "Festive",
+      "Eid Classics",
+    ],
+  },
+  {
     id: "rec-shrimp-tandoori",
     slug: "shrimp-tandoori",
     title: "Shrimp Tandoori (বাঙালি স্টাইল চিংড়ি তন্দুরি / Tandoori Prawns)",
@@ -4481,26 +5472,118 @@ const BASE_RECIPES: Recipe[] = [
   {
     id: "rec-4",
     slug: "bengali-chicken-roast",
-    title: "Bengali Chicken Roast (বাংলাদেশি চিকেন রোস্ট)",
+    title: "Dhaka Shahi Chicken Roast (বিয়ে বাড়ির শাহী চিকেন রোস্ট / Biye Barir Roast)",
     category: "Halal Chicken",
     categorySlug: "halal-chicken",
     cuisine: "Bengali / Bangladeshi Heritage",
     description:
-      "Iconic Bangladeshi wedding feast Chicken Roast (বাংলাদেশি চিকেন রোস্ট)—succulent bone-in chicken leg quarters seared in ghee and slow-braised in a velvety yogurt, onion, cashew, and aromatic Shahi spice reduction topped with golden beresta.",
+      "Iconic Bangladeshi wedding banquet Dhaka Shahi Chicken Roast (বিয়ে বাড়ির শাহী চিকেন রোস্ট)—succulent bone-in chicken leg quarters lightly seared in pure cow ghee and slow-braised in a velvety, clinging gravy of caramelized beresta, whipped yogurt, cashew cream, and aromatic mace-nutmeg perfume.",
     introStory:
-      "No celebratory Bangladeshi banquet, wedding feast ('biye bari'), or festive Eid table is complete without authentic Bengali Chicken Roast (বাংলাদেশি চিকেন রোস্ট). Far from an ordinary Western oven roast, this cherished culinary treasure features whole bone-in chicken leg quarters lightly seasoned and seared in pure fragrant cow ghee, then slow-braised in an opulent, velvety gravy composed of whipped yogurt, sweet onion paste, cashew cream, golden raisins, crushed fried onions (beresta), and delicate Shahi warm spices like mace and green cardamom. The result is a glossy, mildly sweet, aromatic gravy clinging to fall-apart tender chicken, punctuated by whole green chilies and a whisper of screwpine (kewra) water. It is traditionally paired with fragrant Kalijeera Morog Polao or saffron basmati rice.",
-    heroImage: IMAGES.bengaliChickenRoast,
+      "No celebratory Bangladeshi banquet, wedding feast ('biye bari'), or festive Eid table is complete without authentic Dhaka Shahi Chicken Roast (বিয়ে বাড়ির শাহী চিকেন রোস্ট). Far from an ordinary Western oven roast, this cherished culinary treasure features whole bone-in chicken leg quarters lightly seasoned and seared in pure fragrant cow ghee, then slow-braised in an opulent, velvety gravy composed of whipped yogurt, sweet onion paste, cashew cream, golden raisins, crushed fried onions (beresta), and delicate Shahi warm spices like mace and green cardamom. The result is a glossy, mildly sweet, aromatic gravy clinging to fall-apart tender chicken, punctuated by whole green chilies and a whisper of screwpine (kewra) water. It is traditionally paired with fragrant Kalijeera Morog Polao or saffron basmati rice.",
+    heroImage: IMAGES.bengaliShahiChickenRoast,
     prepTimeMinutes: 25,
     cookTimeMinutes: 40,
     totalTimeMinutes: 65,
     servings: 4,
     difficulty: "Medium",
     calories: 580,
-    rating: 4.96,
-    reviewCount: 142,
+    rating: 4.98,
+    reviewCount: 168,
     isTrending: true,
     isFeatured: true,
     isRegionalHeritage: true,
+    videoDuration: "14:15",
+    videoTitle: "Dhaka Shahi Chicken Roast Masterclass (Biye Bari Style)",
+    whySpecial:
+      "The quintessential royal centerpiece of Bengali wedding feasts: tender chicken leg quarters gently seared in cow ghee, then braised in a luxurious, glossy, sweet-and-savory emulsion of cashew paste, golden beresta, yogurt, mace, and royal kewra water.",
+    cookingTips: [
+      "Score chicken leg quarters with shallow diagonal incisions so the yogurt and aromatics penetrate all the way to the bone.",
+      "Sear chicken in pure cow ghee for only 90 seconds to 2 minutes per side—do not let the chicken brown or crisp like tandoori.",
+      "Blend golden fried onions (beresta) with plain yogurt and soaked cashews into a silky, lump-free paste for that iconic banquet gloss.",
+      "Keep green chilies whole with stems intact; they impart an intoxicating floral aroma without bursting raw pungency into the sweet-savory gravy.",
+    ],
+    commonMistakes: [
+      "Browning the chicken heavily; authentic wedding roast must maintain its signature golden ivory hue.",
+      "Pouring cold yogurt directly into scorching ghee, which breaks the emulsion and causes unappealing curdling.",
+      "Omitting ground mace (javitri) and kewra water, which provide the quintessential royal Mughlai aroma.",
+    ],
+    videoChapters: [
+      {
+        time: "00:00",
+        title: "The Royal Wedding Banquet Secret",
+      },
+      {
+        time: "01:10",
+        title: "Chicken Scoring & Flavor Penetration",
+      },
+      {
+        time: "02:45",
+        title: "The 90-Second Ghee Sear (No Browning)",
+      },
+      {
+        time: "04:30",
+        title: "Blending Velvet Beresta & Cashew Silk",
+      },
+      {
+        time: "07:15",
+        title: "Tempering Whole Spices & Slow Braising",
+      },
+      {
+        time: "11:20",
+        title: "Green Chilies, Kewra Essence & Royal Rest",
+      },
+      {
+        time: "13:30",
+        title: "Plating with Golden Beresta Garnish",
+      },
+    ],
+    videoProduction: {
+      status: "Ready for YouTube",
+      targetDuration: "14:15",
+      hook: "0:00-0:20: A golden chicken leg quarter coated in a glossy, ivory-caramel gravy drizzled with ghee and garnished with crisp fried onions and golden raisins.",
+      introduction: "0:20-0:50: Explaining how Bengali wedding roast differs from Western roasted chicken: it is lightly seared in ghee then braised in a nutty, aromatic gravy.",
+      ingredientsVisual: "0:50-2:00: Bone-in chicken leg quarters, whipped plain yogurt, cashew-poppy seed paste, golden onion beresta, raisins, mace, nutmeg, and kewra water.",
+      preparationVisual: "2:00-4:00: Making shallow diagonal incisions into the chicken; blending fried onions with yogurt and cashew paste into a luxurious silk sauce.",
+      cookingVisual: "4:00-10:30: Sautéing the chicken in ghee for 90 seconds per side without browning the skin, sliding in the shahi gravy, and gently braising on medium-low heat.",
+      keyTechnique: "Gentle 90-second ghee sear to lock in meat juices followed by a covered slow braise in whipped yogurt-cashew emulsion, never boiling on high flame.",
+      finalDishVisual: "12:00-13:00: Spooning the thick glaze over the chicken pieces as ghee floats like liquid amber to the surface.",
+      servingVisual: "13:00-14:00: Served over a bed of fragrant Kalijira Shahi Polao, alongside chilled Borhani.",
+      ctaOutro: "14:00-15:00: Encouraging viewers to prepare this for festive family dinners, with a link to the onion browning masterclass.",
+      cinematographyNotes: [
+        "Top-down overhead shot of whole spices crackling in golden cow ghee.",
+        "Macro lens capturing the thick textured sauce clinging to the chicken leg piece as a spoon lifts it with rising aromatic steam.",
+        "60fps slow-motion sprinkle of crispy golden beresta.",
+      ],
+      voiceoverSample:
+        "In every Bengali wedding banquet, the grand entrance of the Shahi Chicken Roast alongside piping hot Chinigura polao is pure celebration. The magic lies in the balance: rich pure ghee, sweet caramelized beresta, luscious cashew silk, and that haunting aroma of mace, cardamom, and kewra water.",
+      youtubeOptimizedTitle:
+        "Dhaka Shahi Chicken Roast (বিয়ে বাড়ির আসল রোস্ট) | Authentic Recipe with Beresta & Ghee Gravy",
+      youtubeDescription:
+        "Learn the royal catering secret to tender, fall-apart Dhaka Shahi Chicken Roast with rich, clinging, golden cashew-beresta gravy.",
+      shortsClips: [
+        {
+          title: "The Ghee Searing Secret",
+          focus: "Key Cooking Technique",
+          description: "Why you must sear chicken in pure cow ghee without browning the skin.",
+          targetSeconds: "0:45",
+        },
+        {
+          title: "Velvet Beresta & Cashew Gravy",
+          focus: "Ingredient Preparation",
+          description: "Emulsifying whisked yogurt with soaked cashew paste and fried onions.",
+          targetSeconds: "0:40",
+        },
+        {
+          title: "The Royal Biye Bari Aroma",
+          focus: "Final Dish Reveal",
+          description: "The finish: whole green chilies, golden raisins, and kewra water essence.",
+          targetSeconds: "0:35",
+        },
+      ],
+    },
+    relatedCultureSlug: "bangladeshi-eid-food-traditions",
+    relatedKitchenToolId: "dekchi-biryani-pot",
+    relatedRecipeSlugs: ["bengali-pulao", "dhaka-shahi-borhani", "kacchi-biryani"],
     halalNotes:
       "100% Halal certified. Made exclusively with zabiha hand-slaughtered bone-in chicken leg quarters or whole thighs, pure unadulterated cow ghee, and natural single-origin spices. Completely free of artificial flavoring cubes or non-halal animal fats.",
     potentialCautionNotes:
@@ -4628,10 +5711,17 @@ const BASE_RECIPES: Recipe[] = [
     },
     updatedDate: "September 17, 2026",
     tags: [
+      "Dhaka Shahi Chicken Roast",
+      "Bengali Shahi Chicken Roast",
       "Bengali Chicken Roast",
+      "বিয়ে বাড়ির শাহী চিকেন রোস্ট",
       "বাংলাদেশি চিকেন রোস্ট",
       "Biye Bari Chicken Roast",
+      "Biye Bari Shahi Roast",
       "Shahi Chicken Roast",
+      "dhaka-shahi-chicken-roast",
+      "shahi-chicken-roast",
+      "bengali-shahi-chicken-roast",
       "Chicken Roast",
       "Halal Chicken",
       "Halal Rice & Curry",

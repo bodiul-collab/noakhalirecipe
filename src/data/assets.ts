@@ -107,6 +107,14 @@ import shrimpTandooriImg from "../assets/images/shrimp_tandoori_1789838880529.jp
 import kacchiBiryaniImg from "../assets/images/kacchi_biryani_1789839258339.jpg";
 import beefKalaBhunaImg from "../assets/images/beef_kala_bhuna_1789839269395.jpg";
 import chickenRezalaImg from "../assets/images/chicken_rezala_1789839281368.jpg";
+import bengaliShahiRoastImg from "../assets/images/bengali_shahi_roast_1789847102045.jpg";
+import shahiRoastHeroImg from "../assets/images/shahi_roast_hero_1789847114010.jpg";
+import bengaliMishtiDoiImg from "../assets/images/bengali_mishti_doi_1789850125072.jpg";
+import chickenBhunaMasalaImg from "../assets/images/chicken_bhuna_masala_1789951345548.jpg";
+import chickenJalfreziImg from "../assets/images/chicken_jalfrezi_1789951537165.jpg";
+import lambCurryImg from "../assets/images/lamb_curry_1789951735032.jpg";
+import roganJoshImg from "../assets/images/rogan_josh_1789951856240.jpg";
+import cornedBeefReubenImg from "../assets/images/corned_beef_reuben_1789952073053.jpg";
 import noakhaliLogoFullImg from "../assets/images/noakhali_kitchen_logo_1789072776240.jpg";
 import noakhaliLogoIconImg from "../assets/images/noakhali_kitchen_logo_1789072776240.jpg";
 
@@ -116,7 +124,11 @@ export const IMAGES = {
   beefBhuna: bengaliBeefBhunaImg,
   bengaliBeefBhuna: bengaliBeefBhunaImg,
   chingriMalai: chingriMalaiImg,
-  chickenRoast: bengaliChickenRoastImg,
+  chickenRoast: shahiRoastHeroImg,
+  shahiChickenRoast: shahiRoastHeroImg,
+  bengaliShahiChickenRoast: shahiRoastHeroImg,
+  dhakaShahiChickenRoast: shahiRoastHeroImg,
+  bengaliShahiRoastVertical: bengaliShahiRoastImg,
   streetFood: halalStreetFoodImg,
   cookbook: noakhaliCookbookImg,
   chefNoakhali: chefNoakhaliImg,
@@ -188,7 +200,7 @@ export const IMAGES = {
   bengaliChickenCurry: bengaliChickenCurryImg,
   bengaliFishCurry: bengaliFishCurryImg,
   bengaliBeefTehari: bengaliBeefTehariImg,
-  bengaliChickenRoast: bengaliChickenRoastImg,
+  bengaliChickenRoast: shahiRoastHeroImg,
   bengaliKhichuriBhuna: bengaliKhichuriBhunaImg,
   bengaliPulao: bengaliPulaoImg,
   authenticNihari: authenticNihariImg,
@@ -263,6 +275,30 @@ export const IMAGES = {
   kalaBhuna: beefKalaBhunaImg,
   chickenRezala: chickenRezalaImg,
   shahiRezala: chickenRezalaImg,
+  bengaliMishtiDoi: bengaliMishtiDoiImg,
+  mishtiDoi: bengaliMishtiDoiImg,
+  sweetDoi: bengaliMishtiDoiImg,
+  sweetDahi: bengaliMishtiDoiImg,
+  bengaliSweetDoi: bengaliMishtiDoiImg,
+  chickenBhunaMasala: chickenBhunaMasalaImg,
+  chickenBhuna: chickenBhunaMasalaImg,
+  chickenBhunaCurry: chickenBhunaMasalaImg,
+  bengaliChickenBhuna: chickenBhunaMasalaImg,
+  chickenJalfrezi: chickenJalfreziImg,
+  jalfrezi: chickenJalfreziImg,
+  halalChickenJalfrezi: chickenJalfreziImg,
+  lambCurry: lambCurryImg,
+  halalLambCurry: lambCurryImg,
+  khasirMangsho: lambCurryImg,
+  khasirCurry: lambCurryImg,
+  roganJosh: roganJoshImg,
+  kashmiriRoganJosh: roganJoshImg,
+  halalRoganJosh: roganJoshImg,
+  roganJoshCurry: roganJoshImg,
+  cornedBeefReuben: cornedBeefReubenImg,
+  cornBeefReuben: cornedBeefReubenImg,
+  reubenSandwich: cornedBeefReubenImg,
+  halalReubenSandwich: cornedBeefReubenImg,
   logoFull: noakhaliLogoFullImg,
   logoIcon: noakhaliLogoIconImg,
 };

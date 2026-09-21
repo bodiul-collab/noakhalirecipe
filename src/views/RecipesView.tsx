@@ -140,8 +140,14 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
           (r.slug === "spinach-sun-dried-tomato-pasta" && (activeSlug === "spinach-and-sun-dried-tomato-pasta" || activeSlug === "sun-dried-tomato-pasta" || activeSlug === "spinach-sundried-tomato-pasta" || activeSlug === "spinach-and-sundried-tomato-pasta" || activeSlug === "creamy-sun-dried-tomato-pasta")) ||
           (r.slug === "chicken-tikka-masala" && (activeSlug === "tikka-masala" || activeSlug === "chicken-tikka" || activeSlug === "authentic-chicken-tikka-masala" || activeSlug === "chiken-tikka-masala" || activeSlug === "shahi-chicken-tikka-masala")) ||
           (r.slug === "haleem" && (activeSlug === "bengali-haleem" || activeSlug === "shahi-haleem")) ||
-          (r.slug === "bengali-chicken-roast" && activeSlug === "shahi-chicken-roast") ||
-          (r.slug === "chicken-machboos-majboos-kabsa" && activeSlug === "authentic-saudi-chicken-kabsa")
+          (r.slug === "bengali-chicken-roast" && (activeSlug === "dhaka-shahi-chicken-roast" || activeSlug === "dhaka-shahi-roast" || activeSlug === "shahi-chicken-roast" || activeSlug === "bengali-shahi-chicken-roast" || activeSlug === "shahi-roast" || activeSlug === "biye-bari-chicken-roast")) ||
+          (r.slug === "chicken-machboos-majboos-kabsa" && activeSlug === "authentic-saudi-chicken-kabsa") ||
+          (r.slug === "bengali-sweet-doi" && (activeSlug === "mishti-doi" || activeSlug === "sweet-doi" || activeSlug === "bengali-sweet-dahi" || activeSlug === "sweet-dahi" || activeSlug === "mishti-dahi" || activeSlug === "bogura-doi")) ||
+          (r.slug === "chicken-bhuna-masala-curry-bengali-style" && (activeSlug === "chicken-bhuna-masala" || activeSlug === "chicken-bhuna" || activeSlug === "bengali-chicken-bhuna" || activeSlug === "chicken-bhuna-curry" || activeSlug === "chicken-bhuna-masala-curry" || activeSlug === "murgir-bhuna")) ||
+          (r.slug === "chicken-jalfrezi" && (activeSlug === "jalfrezi" || activeSlug === "chicken-jalfrezi-curry" || activeSlug === "authentic-chicken-jalfrezi" || activeSlug === "restaurant-style-chicken-jalfrezi" || activeSlug === "bengali-chicken-jalfrezi")) ||
+          (r.slug === "lamb-curry" && (activeSlug === "khasir-mangsho" || activeSlug === "khasir-mangshor-jhol" || activeSlug === "khasir-curry" || activeSlug === "bengali-lamb-curry" || activeSlug === "mutton-curry" || activeSlug === "halal-lamb-curry")) ||
+          (r.slug === "rogan-josh" && (activeSlug === "kashmiri-rogan-josh" || activeSlug === "rogan-josh-curry" || activeSlug === "mutton-rogan-josh" || activeSlug === "lamb-rogan-josh" || activeSlug === "authentic-rogan-josh")) ||
+          (r.slug === "corned-beef-reuben-sandwich" && (activeSlug === "reuben" || activeSlug === "reuben-sandwich" || activeSlug === "corn-beef-reuben" || activeSlug === "corn-beef-reuben-sandwich" || activeSlug === "corned-beef-reuben" || activeSlug === "halal-reuben" || activeSlug === "halal-reuben-sandwich"))
       ) || null
     );
   }, [activeSlug]);
@@ -1414,22 +1420,27 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
             </button>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredRecipes.map((recipe) => (
-              <RecipeCard
+          <div className="recipe-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredRecipes.map((recipe, index) => (
+              <div
                 key={recipe.id}
-                recipe={recipe}
-                isSaved={savedRecipeIds.has(recipe.id)}
-                onToggleSave={onToggleSaveRecipe}
-                onClick={(r) => {
-                  setActiveSlug(r.slug);
-                  onNavigate(`/recipe/${r.slug}`, true);
-                  window.scrollTo({ top: 0, left: 0, behavior: "instant" });
-                }}
-                collections={collections}
-                onOpenCollections={(r) => setRecipeForCollection(r)}
-                userRating={userRatings[recipe.id]?.rating}
-              />
+                className="recipe-card-fade h-full"
+                style={{ animationDelay: `${Math.min(index * 45, 500)}ms` }}
+              >
+                <RecipeCard
+                  recipe={recipe}
+                  isSaved={savedRecipeIds.has(recipe.id)}
+                  onToggleSave={onToggleSaveRecipe}
+                  onClick={(r) => {
+                    setActiveSlug(r.slug);
+                    onNavigate(`/recipe/${r.slug}`, true);
+                    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+                  }}
+                  collections={collections}
+                  onOpenCollections={(r) => setRecipeForCollection(r)}
+                  userRating={userRatings[recipe.id]?.rating}
+                />
+              </div>
             ))}
           </div>
         )}

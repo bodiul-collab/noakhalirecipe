@@ -85,13 +85,52 @@
   transition-duration: 0.1s;
 }
 
+/* ==========================================================================
+   CSS Fade-in Animation for Recipe Cards in Recipe Grid
+   ========================================================================== */
+@keyframes recipeCardFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.recipe-card-fade,
+.recipe-card-container {
+  animation: recipeCardFadeIn 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Staggered entrance cascade for cards rendered inside any .recipe-grid */
+.recipe-grid > *:nth-child(1) { animation-delay: 40ms; }
+.recipe-grid > *:nth-child(2) { animation-delay: 80ms; }
+.recipe-grid > *:nth-child(3) { animation-delay: 120ms; }
+.recipe-grid > *:nth-child(4) { animation-delay: 160ms; }
+.recipe-grid > *:nth-child(5) { animation-delay: 200ms; }
+.recipe-grid > *:nth-child(6) { animation-delay: 240ms; }
+.recipe-grid > *:nth-child(7) { animation-delay: 280ms; }
+.recipe-grid > *:nth-child(8) { animation-delay: 320ms; }
+.recipe-grid > *:nth-child(9) { animation-delay: 360ms; }
+.recipe-grid > *:nth-child(10) { animation-delay: 400ms; }
+.recipe-grid > *:nth-child(11) { animation-delay: 440ms; }
+.recipe-grid > *:nth-child(12) { animation-delay: 480ms; }
+.recipe-grid > *:nth-child(n+13) { animation-delay: 520ms; }
+
 /* Accessible Reduced-Motion Support */
 @media (prefers-reduced-motion: reduce) {
   .recipe-card,
   .recipe-card:hover,
-  .recipe-card:active {
+  .recipe-card:active,
+  .recipe-card-fade,
+  .recipe-card-container,
+  .recipe-grid > * {
     transform: none !important;
     transition: none !important;
+    animation: none !important;
+    opacity: 1 !important;
   }
 }
 

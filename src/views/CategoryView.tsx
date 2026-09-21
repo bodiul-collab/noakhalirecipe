@@ -161,17 +161,22 @@ export const CategoryView: React.FC<CategoryViewProps> = ({
                 </button>
               </div>
             ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {categoryRecipes.map((recipe) => (
-                  <RecipeCard
+              <div className="recipe-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {categoryRecipes.map((recipe, index) => (
+                  <div
                     key={recipe.id}
-                    recipe={recipe}
-                    isSaved={savedRecipeIds.has(recipe.id)}
-                    onToggleSave={onToggleSaveRecipe}
-                    onClick={onSelectRecipe}
-                    collections={collections}
-                    onOpenCollections={onOpenCollections}
-                  />
+                    className="recipe-card-fade h-full"
+                    style={{ animationDelay: `${Math.min(index * 45, 500)}ms` }}
+                  >
+                    <RecipeCard
+                      recipe={recipe}
+                      isSaved={savedRecipeIds.has(recipe.id)}
+                      onToggleSave={onToggleSaveRecipe}
+                      onClick={onSelectRecipe}
+                      collections={collections}
+                      onOpenCollections={onOpenCollections}
+                    />
+                  </div>
                 ))}
               </div>
             )}

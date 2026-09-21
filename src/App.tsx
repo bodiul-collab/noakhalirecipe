@@ -549,10 +549,6 @@ export default function App() {
         onNavigate={navigate}
         savedCount={savedRecipes.length}
         onOpenSaved={() => setSavedDrawerOpen(true)}
-        onOpenSearch={() => {
-          const inputEl = document.querySelector('input[placeholder*="Search recipes"]') as HTMLInputElement;
-          if (inputEl) inputEl.focus();
-        }}
         onOpenAssistant={() => setAssistantOpen(true)}
         theme={theme}
         onToggleTheme={handleToggleTheme}

@@ -61,7 +61,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
     RECIPES.find((r) => r.slug === "noakhali-shorshe-ilish") || RECIPES[0];
   const trendingRecipes = RECIPES.slice(0, 4);
   const featuredEditorialRecipe =
-    RECIPES.find((r) => r.slug === "bengali-chicken-roast" || r.slug === "shahi-chicken-roast") || RECIPES[1];
+    RECIPES.find((r) => r.slug === "bengali-chicken-roast" || r.slug === "dhaka-shahi-chicken-roast" || r.slug === "shahi-chicken-roast") || RECIPES[1];
   const regionalRecipes = [
     signatureHeritageRecipe,
     ...RECIPES.filter((r) => r.id !== signatureHeritageRecipe.id && r.isRegionalHeritage).slice(0, 3),
@@ -92,17 +92,22 @@ export const HomeView: React.FC<HomeViewProps> = ({
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {trendingRecipes.map((recipe) => (
-              <RecipeCard
+          <div className="recipe-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {trendingRecipes.map((recipe, index) => (
+              <div
                 key={recipe.id}
-                recipe={recipe}
-                isSaved={savedRecipeIds.has(recipe.id)}
-                onToggleSave={onToggleSaveRecipe}
-                onClick={onSelectRecipe}
-                collections={collections}
-                onOpenCollections={onOpenCollections}
-              />
+                className="recipe-card-fade h-full"
+                style={{ animationDelay: `${Math.min(index * 50, 400)}ms` }}
+              >
+                <RecipeCard
+                  recipe={recipe}
+                  isSaved={savedRecipeIds.has(recipe.id)}
+                  onToggleSave={onToggleSaveRecipe}
+                  onClick={onSelectRecipe}
+                  collections={collections}
+                  onOpenCollections={onOpenCollections}
+                />
+              </div>
             ))}
           </div>
 
