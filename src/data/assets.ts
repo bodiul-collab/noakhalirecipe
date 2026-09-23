@@ -120,6 +120,25 @@ import moroccanMeatballsImg from "../assets/images/moroccan_meatballs_1790007163
 import periPeriChickenImg from "../assets/images/peri_peri_chicken_1790007478397.jpg";
 import easyBasmatiRiceImg from "../assets/images/easy_basmati_rice_1790007738957.jpg";
 import saagPaneerImg from "../assets/images/saag_paneer_1790008024459.jpg";
+import chickenMarsalaImg from "../assets/images/chicken_marsala_1790169596704.jpg";
+import rohuFishCurryImg from "../assets/images/rohu_fish_curry_1790170155827.jpg";
+import steakFajitasImg from "../assets/images/steak_fajitas_1790170335010.jpg";
+import chickenChowMeinImg from "../assets/images/chicken_chow_mein_1790170565151.jpg";
+import chineseBeefStirFryImg from "../assets/images/chinese_beef_stir_fry_1790170814337.jpg";
+import homemadeChiliOilImg from "../assets/images/homemade_chili_oil_1790170989781.jpg";
+import beefLoMeinImg from "../assets/images/beef_lo_mein_1790171240837.jpg";
+import hyderabadiMuttonHaleemImg from "../assets/images/hyderabadi_mutton_haleem_1790171582209.jpg";
+import crispyFriedFishImg from "../assets/images/crispy_fried_fish_1790171924244.jpg";
+import plainParathaImg from "../assets/images/plain_paratha_1790172103816.jpg";
+import carneAsadaTacosImg from "../assets/images/carne_asada_steak_tacos_1790172280616.jpg";
+import fishBiryaniImg from "../assets/images/fish_biryani_1790172428676.jpg";
+import ilishFishEggCurryImg from "../assets/images/ilish_fish_egg_curry_1790172892328.jpg";
+import chickenLoMeinImg from "../assets/images/chicken_lo_mein_1790173078987.jpg";
+import bangladeshiBeefCurryImg from "../assets/images/bangladeshi_beef_curry_1790173302516.jpg";
+import beefNihariImg from "../assets/images/beef_nihari_handi_1790173482450.jpg";
+import moroccanLambTagineImg from "../assets/images/moroccan_lamb_tagine_1790173678233.jpg";
+import shrimpGreenBeanStirFryImg from "../assets/images/shrimp_green_bean_stir_fry_1790173863320.jpg";
+import bengaliAlooDumImg from "../assets/images/bengali_aloo_dum_1790174068470.jpg";
 import noakhaliLogoFullImg from "../assets/images/noakhali_kitchen_logo_1789072776240.jpg";
 import noakhaliLogoIconImg from "../assets/images/noakhali_kitchen_logo_1789072776240.jpg";
 
@@ -320,6 +339,64 @@ export const IMAGES = {
   saagPaneer: saagPaneerImg,
   palakPaneer: saagPaneerImg,
   halalSaagPaneer: saagPaneerImg,
+  chickenMarsala: chickenMarsalaImg,
+  halalChickenMarsala: chickenMarsalaImg,
+  rohuFishCurry: rohuFishCurryImg,
+  ruiMacherJhol: rohuFishCurryImg,
+  rohuFish: rohuFishCurryImg,
+  steakFajitas: steakFajitasImg,
+  halalSteakFajitas: steakFajitasImg,
+  skilletSteakFajitas: steakFajitasImg,
+  chickenChowMein: chickenChowMeinImg,
+  chickenNoodles: chickenChowMeinImg,
+  halalChickenChowMein: chickenChowMeinImg,
+  chineseBeefStirFry: chineseBeefStirFryImg,
+  halalChineseBeefStirFry: chineseBeefStirFryImg,
+  beefStirFry: chineseBeefStirFryImg,
+  homemadeChiliOil: homemadeChiliOilImg,
+  chiliOil: homemadeChiliOilImg,
+  halalChiliOil: homemadeChiliOilImg,
+  chiliCrispOil: homemadeChiliOilImg,
+  beefLoMein: beefLoMeinImg,
+  halalBeefLoMein: beefLoMeinImg,
+  loMein: beefLoMeinImg,
+  hyderabadiMuttonHaleem: hyderabadiMuttonHaleemImg,
+  royalHyderabadiMuttonHaleem: hyderabadiMuttonHaleemImg,
+  muttonHaleem: hyderabadiMuttonHaleemImg,
+  crispyFriedFish: crispyFriedFishImg,
+  soySauceCrispyFish: crispyFriedFishImg,
+  deepFriedFish: crispyFriedFishImg,
+  halalCrispyFish: crispyFriedFishImg,
+  plainParatha: plainParathaImg,
+  bengaliParatha: plainParathaImg,
+  layeredParatha: plainParathaImg,
+  carneAsadaTacos: carneAsadaTacosImg,
+  carneAsadaSteakTacos: carneAsadaTacosImg,
+  beefCarneAsadaTacos: carneAsadaTacosImg,
+  fishBiryani: fishBiryaniImg,
+  halalFishBiryani: fishBiryaniImg,
+  macherBiryani: fishBiryaniImg,
+  ilishFishEggCurry: ilishFishEggCurryImg,
+  ilishMacherDimBhuna: ilishFishEggCurryImg,
+  hilsaFishEggCurry: ilishFishEggCurryImg,
+  chickenLoMein: chickenLoMeinImg,
+  halalChickenLoMein: chickenLoMeinImg,
+  chickenChowMeinLoMein: chickenLoMeinImg,
+  bangladeshiBeefCurry: bangladeshiBeefCurryImg,
+  authenticBangladeshiBeefCurry: bangladeshiBeefCurryImg,
+  gorurMangshoCurry: bangladeshiBeefCurryImg,
+  beefNahari: beefNihariImg,
+  beefNihari: beefNihariImg,
+  halalBeefNihari: beefNihariImg,
+  moroccanLambTagine: moroccanLambTagineImg,
+  lambTaginePrunesAlmonds: moroccanLambTagineImg,
+  authenticMoroccanLambTagine: moroccanLambTagineImg,
+  bangladeshiSpicedShrimpGreenBeanStirFry: shrimpGreenBeanStirFryImg,
+  shrimpGreenBeanStirFry: shrimpGreenBeanStirFryImg,
+  chingriBorbotiBhaji: shrimpGreenBeanStirFryImg,
+  bengaliAlooDum: bengaliAlooDumImg,
+  alooDum: bengaliAlooDumImg,
+  alurDom: bengaliAlooDumImg,
   logoFull: noakhaliLogoFullImg,
   logoIcon: noakhaliLogoIconImg,
 };

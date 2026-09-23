@@ -16016,6 +16016,3201 @@ const BASE_RECIPES: Recipe[] = [
       "Comfort Food",
     ],
   },
+  {
+    id: "rec-chicken-marsala",
+    slug: "chicken-marsala",
+    title: "Chicken Marsala (চিকেন মারসালা)",
+    category: "Chicken",
+    categorySlug: "halal-chicken",
+    cuisine: "Italian-American / Mediterranean (Halal)",
+    description:
+      "Golden pan-seared chicken cutlets nestled in a savory, velvety caramelized mushroom sauce simmered with cremini mushrooms, garlic, fresh herbs, and a scratch-made zero-alcohol Marsala reduction.",
+    introStory:
+      "Chicken Marsala (চিকেন মারসালা / چکن مارسالا / دجاج مارسالا) is one of the crown jewels of classic Italian-American trattoria dining, celebrated worldwide for its tender, golden-crusted poultry cutlets smothered in a rich, velvety mushroom reduction. Traditionally originating from 19th-century Sicily, the dish relied on fortified Marsala wine for its signature nutty, caramelized, and slightly sweet finish. In traditional Halal cooking, where all intoxicants and alcohol are strictly forbidden, Muslim gourmands have long craved an authentic restaurant-quality version. Our master chefs have meticulously formulated a 100% Halal zero-alcohol Marsala reduction using pure pressed white grape juice, aged Halal balsamic vinegar, simmered chicken bone broth, and aromatic herbs. Seared in a smoking Staub cast-iron skillet with earthy cremini and baby bella mushrooms, finished with cold butter and fresh flat-leaf parsley, this recipe delivers the exact luxurious depth, glossy sheen, and umami richness of five-star dining.",
+    heroImage: IMAGES.chickenMarsala,
+    prepTimeMinutes: 15,
+    cookTimeMinutes: 20,
+    totalTimeMinutes: 35,
+    servings: 4,
+    difficulty: "Medium",
+    calories: 420,
+    rating: 4.97,
+    reviewCount: 158,
+    isTrending: true,
+    isFeatured: true,
+    halalNotes:
+      "100% Halal certified and strictly alcohol-free. Traditional Sicilian Marsala wine is replaced with a scratch-crafted reduction of pure white grape juice, aged balsamic vinegar, and rich Halal chicken bone broth to achieve the iconic nutty, caramelized savor without a single drop of alcohol.",
+    ingredients: [
+      { amount: "4", unit: "pieces", name: "Halal chicken breast cutlets", notes: "approx. 700g / 1.5 lbs, butterflied and pounded evenly to 1/4-inch thickness" },
+      { amount: "1/3", unit: "cup", name: "All-purpose flour", notes: "for light dredging" },
+      { amount: "1", unit: "tsp", name: "Fine sea salt", notes: "divided between flour dredge and mushroom sauce" },
+      { amount: "1/2", unit: "tsp", name: "Freshly cracked black pepper", notes: "coarsely ground" },
+      { amount: "1/2", unit: "tsp", name: "Garlic powder", notes: "blended into flour dredge" },
+      { amount: "1/2", unit: "tsp", name: "Dried oregano", notes: "rubbed into seasoned flour" },
+      { amount: "2", unit: "tbsp", name: "Extra virgin olive oil", notes: "for searing cutlets in skillet" },
+      { amount: "3", unit: "tbsp", name: "Unsalted butter", notes: "divided: 1 tbsp for searing, 2 tbsp chilled for finishing pan sauce" },
+      { amount: "350", unit: "g", name: "Fresh cremini (baby bella) mushrooms", notes: "cleaned, stems trimmed, thickly sliced (approx. 12 oz)" },
+      { amount: "1", unit: "medium", name: "Shallot", notes: "finely minced (or 1/4 cup minced red onion)" },
+      { amount: "4", unit: "cloves", name: "Fresh garlic", notes: "finely minced" },
+      { amount: "3/4", unit: "cup", name: "100% pure white grape juice", notes: "unsweetened, provides natural fruity sweetness of Sicilian grapes" },
+      { amount: "1", unit: "tbsp", name: "Aged balsamic vinegar or Halal grape vinegar", notes: "delivers wood-aged acidity and dark caramelized color" },
+      { amount: "3/4", unit: "cup", name: "Rich Halal chicken bone broth", notes: "low-sodium, simmered with aromatics" },
+      { amount: "2", unit: "sprigs", name: "Fresh thyme", notes: "leaves stripped (or 1/2 tsp dried thyme)" },
+      { amount: "3", unit: "tbsp", name: "Fresh flat-leaf Italian parsley", notes: "finely chopped for finishing garnish" },
+    ],
+    substitutions: [
+      {
+        original: "White grape juice + balsamic reduction",
+        substitute: "Apple cider with a splash of tamarind paste or pomegranate molasses",
+        notes: "Creates a delicious alternative sweet-tangy base if grape juice is unavailable.",
+      },
+      {
+        original: "All-purpose flour",
+        substitute: "1:1 Gluten-free baking flour or cornstarch",
+        notes: "Yields a crisp golden crust while keeping the entire dish 100% gluten-free.",
+      },
+      {
+        original: "Cremini mushrooms",
+        substitute: "Shiitake, portobello, or white button mushrooms",
+        notes: "A wild mushroom mix gives an intensely earthy forest aroma.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Pound & Season Chicken Cutlets",
+        instruction:
+          "Place the butterflied chicken cutlets between two sheets of plastic wrap or parchment paper. Using the flat side of a meat mallet or heavy rolling pin, gently pound each cutlet to an even 1/4-inch thickness. Pat thoroughly dry with paper towels. Season both sides with 1/2 teaspoon sea salt and cracked black pepper.",
+        tip: "Pounding the chicken to a uniform thickness guarantees the cutlets cook through rapidly in just minutes without drying out.",
+      },
+      {
+        step: 2,
+        title: "Dredge in Seasoned Flour",
+        instruction:
+          "In a shallow dish, whisk together the all-purpose flour, garlic powder, dried oregano, and 1/4 teaspoon sea salt. Dredge each chicken cutlet in the seasoned flour, turning to coat evenly on all sides. Vigorously shake off all excess flour so only a very delicate veil remains.",
+        tip: "Shaking off excess flour prevents the oil from burning and guarantees a crisp golden crust that gently thickens the sauce later.",
+      },
+      {
+        step: 3,
+        title: "Sear Cutlets to Golden Perfection",
+        instruction:
+          "Heat 2 tablespoons of olive oil and 1 tablespoon of butter in a large (12-inch) heavy cast-iron skillet over medium-high heat until shimmering. Add the chicken cutlets in a single layer (working in two batches if necessary to avoid crowding). Sear undisturbed for 3 to 4 minutes on the first side until deeply golden-brown, then flip and sear for 2 to 3 minutes on the second side until just cooked through (165°F / 74°C internal temp). Transfer to a warm plate and tent loosely with foil.",
+      },
+      {
+        step: 4,
+        title: "Caramelize the Mushrooms",
+        instruction:
+          "In the same skillet over medium heat (with all the savory chicken drippings still in the pan), add the sliced cremini mushrooms. Spread them into an even layer and cook undisturbed for 3 to 4 minutes so they develop a deep brown crust. Stir and continue sautéing for another 3 minutes until tender and caramelized. Add the minced shallot and garlic; cook for 1 to 2 minutes until aromatic.",
+        tip: "Do not salt the mushrooms at the start of cooking; letting them sear dry first produces rich caramelized browning rather than steaming in released water.",
+      },
+      {
+        step: 5,
+        title: "Deglaze & Simmer the Zero-Wine Reduction",
+        instruction:
+          "Pour the white grape juice and balsamic vinegar directly into the hot skillet, scraping up all the golden browned bits (fond) stuck to the bottom of the pan with a wooden spoon. Bring to a vigorous simmer and allow the liquid to reduce by half (about 3 to 4 minutes). Pour in the chicken bone broth and fresh thyme sprigs. Simmer for another 4 to 5 minutes until the sauce slightly thickens into a glossy, rich brown gravy.",
+      },
+      {
+        step: 6,
+        title: "Mount with Butter & Return Chicken",
+        instruction:
+          "Reduce the heat to low. Whisk in the remaining 2 tablespoons of cold unsalted butter into the sauce until completely melted and emulsified, giving the sauce its signature velvet restaurant sheen. Slide the seared chicken cutlets and any accumulated savory resting juices back into the skillet. Spoon the rich mushroom sauce generously over each piece and simmer gently for 1 to 2 minutes to heat through.",
+        tip: "Whisking in cold butter off the heat (known in classical cooking as 'monter au beurre') emulsifies the sauce into a luxurious, glossy glaze.",
+      },
+      {
+        step: 7,
+        title: "Garnish & Sizzle Service",
+        instruction:
+          "Remove skillet from the heat. Scatter freshly chopped flat-leaf parsley across the top. Serve immediately straight from the rustic skillet alongside buttery egg noodles, garlic mashed potatoes, or warm crusty bread.",
+      },
+    ],
+    chefNotes: [
+      "The Halal Marsala Secret: Marsala wine is celebrated for its caramelized grape notes with oak-aged acidity. Combining pure white grape juice with aged balsamic vinegar and roasted chicken stock captures this identical flavor profile with zero alcohol.",
+      "The Staub / Cast Iron Pan Factor: A heavy enamel cast-iron skillet retains searing heat exceptionally well, building the caramelized fond that forms the backbone of the sauce.",
+      "Optional Creamy Marsala Variation: For a luxurious Creamy Chicken Marsala, stir in 3 to 4 tablespoons of heavy whipping cream along with the chicken broth in Step 5.",
+    ],
+    nutrition: {
+      calories: 420,
+      proteinGrams: 46,
+      carbsGrams: 14,
+      fatGrams: 18,
+      fiberGrams: 2,
+      sodiumMg: 640,
+      servingSizeDescription: "1 tender cutlet with abundant mushroom pan sauce (approx. 250g)",
+    },
+    storageInstructions:
+      "Store leftover Chicken Marsala in an airtight glass container in the refrigerator for up to 4 days. Reheat gently in a covered skillet over medium-low heat with a splash of chicken broth or water to preserve the tenderness of the chicken.",
+    freezingInstructions:
+      "Cooked chicken and mushroom sauce can be frozen in a freezer-safe container for up to 2 months. Thaw overnight in the refrigerator and warm gently in a skillet.",
+    servingSuggestions: [
+      "Buttery Herb Egg Noodles: Toss wide ribbon egg noodles with melted butter, chopped parsley, and black pepper to catch every drop of mushroom gravy.",
+      "Garlic Mashed Potatoes: Spoon the rich caramelized sauce over creamy Yukon Gold mashed potatoes.",
+      "Easy Basmati Rice: Pair with our fluffy steamed Basmati Rice for an aromatic, comforting dinner.",
+      "Crisp Steamed Asparagus or Broccolini: Tender green vegetables drizzled with lemon juice provide a fresh, bright contrast.",
+    ],
+    faqs: [
+      {
+        question: "How can Chicken Marsala be made Halal if the classic recipe uses Marsala wine?",
+        answer:
+          "Traditional Marsala wine is an alcoholic fortified wine from Sicily. In our 100% Halal kitchen, we replicate Marsala's signature caramelized sweetness and balanced tang using a master chef reduction of 100% pure unsweetened white grape juice, aged balsamic vinegar, and rich chicken bone broth. This yields the exact deep umami, gloss, and aroma of trattoria Marsala with zero alcohol.",
+      },
+      {
+        question: "Can I use chicken thighs instead of breasts?",
+        answer:
+          "Yes! Boneless, skinless chicken thighs work splendidly. Pound them slightly to even out the thickness and increase the sear time by about 2 minutes per side to ensure they are fully cooked through.",
+      },
+      {
+        question: "Can I add cream to this recipe?",
+        answer:
+          "Absolutely. While classic Marsala is a clear glossy brown reduction, many Italian-American bistros make 'Creamy Chicken Marsala'. Simply stir in 3 to 4 tablespoons of heavy cream in Step 5 when adding the chicken stock.",
+      },
+      {
+        question: "What mushrooms are best for Chicken Marsala?",
+        answer:
+          "Cremini (baby bella) mushrooms are ideal because they have a deeper, earthier flavor and firmer texture than plain white button mushrooms. You can also mix in sliced shiitake or oyster mushrooms for extra gourmet depth.",
+      },
+    ],
+    author: {
+      name: "Chef Bodiul Alam",
+      role: "Culinary Director & Halal Bistro Specialist",
+    },
+    updatedDate: "September 23, 2026",
+    tags: [
+      "Chicken Marsala",
+      "চিকেন মারসালা",
+      "چکن مارسالا",
+      "دجاج مارسالا",
+      "Halal Chicken",
+      "Zero Alcohol",
+      "Mushroom Sauce",
+      "Italian American",
+      "Bistro Classic",
+      "Cast Iron Skillet",
+      "High Protein",
+      "Weeknight Dinner",
+    ],
+  },
+  {
+    id: "rec-rohu-fish-curry",
+    slug: "rohu-fish-curry",
+    title: "Rohu Fish Curry (রুই মাছের কারি)",
+    category: "Fish & Seafood",
+    categorySlug: "halal-seafood",
+    cuisine: "Bengali / South Asian",
+    description:
+      "A timeless Bengali river delicacy: succulent steaks of fresh Rohu carp pan-fried with turmeric and simmered in a luscious gravy of roasted cumin, sweet onions, ripe tomatoes, slit green chilies, and fresh lemon.",
+    introStory:
+      "In the fertile delta of Bangladesh and the rivers of Bengal, there is an ancient, cherished proverb: 'Mache-Bhate Bangali' (মাছে ভাতে বাঙালি)—'Fish and rice make a Bengali' (রুই মাছের কারি / روئی مچھلی کی کری / كاري سمك الروي). At the heart of daily riverine feasts reigns the mighty Rohu (Labeo rohita / রুই মাছ), a prized freshwater river carp celebrated for its firm, flaky flesh, natural sweet undertones, and delicate ribbons of heart-healthy omega-3 fats. In this traditional village and city home staple, Rohu steaks are gently marinated in turmeric and coarse sea salt, then kissed in hot mustard oil just until their edges caramelize. They are then nestled into a simmering, aromatic gravy made of bloomed whole cumin seeds, caramelized onions, freshly pounded ginger, ripe tomatoes, and slit fiery green chilies. Finished with a squeeze of fresh lemon to highlight its river-sweet tenderness, this soul-warming curry paired with a mound of steaming Basmati or Kalijeera rice represents the pinnacle of comforting Halal seafood hospitality.",
+    heroImage: IMAGES.rohuFishCurry,
+    prepTimeMinutes: 15,
+    cookTimeMinutes: 20,
+    totalTimeMinutes: 35,
+    servings: 4,
+    difficulty: "Medium",
+    calories: 310,
+    rating: 4.96,
+    reviewCount: 147,
+    isTrending: true,
+    isFeatured: true,
+    halalNotes:
+      "100% Halal certified scaled river fish (Labeo rohita / Rohu Carp). In Islamic dietary jurisprudence across all mainstream madhabs, scaled freshwater fish is completely Halal. Cooked in pure virgin mustard oil and natural ground spices without any artificial colorings or additives.",
+    ingredients: [
+      { amount: "4-5", unit: "steaks", name: "Fresh Rohu fish steaks (Rui mach)", notes: "approx. 700g / 1.5 lbs, scaled, cleaned, and cut 1-inch thick" },
+      { amount: "1", unit: "tsp", name: "Turmeric powder", notes: "divided: 1/2 tsp for rub, 1/2 tsp for gravy" },
+      { amount: "1", unit: "tsp", name: "Kashmiri red chili powder", notes: "for rich red color and gentle warmth" },
+      { amount: "1.5", unit: "tsp", name: "Roasted cumin powder (bhuna jeera)", notes: "essential for authentic Bengali macher jhol aroma" },
+      { amount: "1", unit: "tsp", name: "Ground coriander powder", notes: "toasted" },
+      { amount: "1", unit: "tsp", name: "Fine sea salt", notes: "or to taste, divided" },
+      { amount: "3", unit: "tbsp", name: "Pure virgin mustard oil (shorsher tel)", notes: "delivers authentic pungent aroma; or sunflower oil" },
+      { amount: "1", unit: "tsp", name: "Whole cumin seeds (jeera)", notes: "for tempering in hot oil" },
+      { amount: "1", unit: "piece", name: "Bay leaf (tejpatta)", notes: "lightly bruised" },
+      { amount: "1", unit: "large", name: "Red or yellow onion", notes: "finely chopped" },
+      { amount: "1", unit: "tbsp", name: "Fresh ginger paste", notes: "freshly grated or pounded" },
+      { amount: "1", unit: "tbsp", name: "Fresh garlic paste", notes: "finely minced" },
+      { amount: "2", unit: "medium", name: "Ripe Roma tomatoes", notes: "finely diced or crushed" },
+      { amount: "4", unit: "pieces", name: "Fresh green chilies", notes: "slit lengthwise to release aroma without intense heat" },
+      { amount: "1.5", unit: "cups", name: "Warm water", notes: "for simmering the savory gravy (jhol)" },
+      { amount: "1", unit: "whole", name: "Fresh lemon", notes: "half juiced at finish, half cut into wheels for presentation" },
+      { amount: "3", unit: "tbsp", name: "Fresh cilantro (coriander leaves)", notes: "finely chopped for finishing garnish" },
+    ],
+    substitutions: [
+      {
+        original: "Rohu fish steaks (Rui mach)",
+        substitute: "Katla carp, Wild Salmon, Red Snapper, or Sea Bass steaks",
+        notes: "Any firm, sweet-fleshed fish holds up beautifully in this aromatic cumin-tomato gravy.",
+      },
+      {
+        original: "Pure mustard oil",
+        substitute: "Neutral sunflower or avocado oil with 1/2 tsp crushed mustard seeds",
+        notes: "Gives a milder flavor profile while preserving traditional spice notes.",
+      },
+      {
+        original: "Kashmiri red chili powder",
+        substitute: "Sweet Hungarian paprika with a pinch of cayenne",
+        notes: "Provides the same gorgeous ruby hue with controllable heat levels.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Wash & Season Rohu Steaks",
+        instruction:
+          "Rinse the Rohu fish steaks gently in cold water with 1 teaspoon of coarse salt and a squeeze of lemon juice to eliminate freshwater siltiness. Pat each steak thoroughly dry with paper towels. Season evenly on all sides with 1/2 teaspoon turmeric powder and 1/2 teaspoon sea salt. Allow to rest for 10 minutes.",
+        tip: "Drying the fish before frying prevents hot oil splatters and guarantees a delicate, golden-crusted sear.",
+      },
+      {
+        step: 2,
+        title: "Flash Pan-Fry the Fish",
+        instruction:
+          "Heat 3 tablespoons of pure mustard oil in a wide, heavy-bottomed skillet or kadai over high heat until it faintly smokes (this tames the raw pungency of mustard oil). Lower heat to medium-high. Gently slide the seasoned fish steaks into the oil in a single layer. Fry undisturbed for 2 to 3 minutes per side until light golden-brown and lightly sealed. Transfer to a warm plate and set aside. (Do not over-fry; the fish will finish cooking in the gravy).",
+        tip: "Frying the steaks lightly firms the delicate protein fibers so the fish remains intact and flaky without crumbling into the gravy.",
+      },
+      {
+        step: 3,
+        title: "Temper Whole Aromatics",
+        instruction:
+          "In the same skillet with the fragrant residual mustard oil over medium heat, add the whole cumin seeds and bay leaf. Let them sizzle and pop for 30 seconds until nutty and deeply aromatic.",
+      },
+      {
+        step: 4,
+        title: "Caramelize Onions & Aromatics",
+        instruction:
+          "Add the finely chopped onion to the skillet. Cook over medium heat for 6 to 7 minutes, stirring occasionally, until sweet and golden-brown around the edges. Stir in the fresh ginger paste and garlic paste; sauté for 2 minutes until intensely fragrant and no raw aroma remains.",
+      },
+      {
+        step: 5,
+        title: "Simmer the Tomato-Cumin Masala",
+        instruction:
+          "Add the diced Roma tomatoes, remaining 1/2 teaspoon turmeric, Kashmiri red chili powder, ground coriander, roasted cumin powder, and 1/2 teaspoon sea salt. Cook over medium-low heat for 4 to 5 minutes, mashing the tomatoes with the back of your spoon, until they break down into a jammy sauce and shimmering oil droplets separate around the edges (tel chhara).",
+      },
+      {
+        step: 6,
+        title: "Add Water & Bring to Simmer",
+        instruction:
+          "Pour in 1.5 cups of warm water. Stir well to dissolve the caramelized masala into the liquid. Bring the gravy to a vigorous rolling boil over medium-high heat for 2 minutes.",
+      },
+      {
+        step: 7,
+        title: "Nestle Fish Steaks & Infuse",
+        instruction:
+          "Carefully slide the seared Rohu fish steaks and their resting juices back into the simmering gravy. Tuck in the slit green chilies between the fish pieces. Gently swirl the skillet by its handles rather than stirring with a spoon to coat the steaks in sauce. Lower heat to medium-low, cover with a lid, and simmer gently for 6 to 8 minutes until the fish is tender, succulent, and fully infused with the spices.",
+        tip: "Swirling the pan rather than using a spatula preserves the tender, flaky integrity of the river carp steaks.",
+      },
+      {
+        step: 8,
+        title: "Garnish & Table Presentation",
+        instruction:
+          "Turn off the heat. Squeeze 1 to 2 teaspoons of fresh lemon juice directly over the curry. Garnish lavishly with fresh chopped cilantro and crown with fresh lemon wheels and bright green chilies. Serve piping hot with steaming mounds of fluffy Basmati rice.",
+      },
+    ],
+    chefNotes: [
+      "The Role of Roasted Cumin (Bhuna Jeera): In authentic Bengali fish cookery, roasted cumin powder is what provides the signature smoky, earthy back-note that complements the natural sweetness of freshwater carp.",
+      "The Mustard Oil Smoking Technique: Always heat raw mustard oil until white wisps of smoke appear, then let it cool slightly before adding food. This mellows harsh pungency while retaining its beloved nutty mustard fragrance.",
+      "Finishing Lemon Secret: A light squeeze of fresh citrus at the very end brightens the rich earthy gravy and cuts through the natural oils of the carp.",
+    ],
+    nutrition: {
+      calories: 310,
+      proteinGrams: 34,
+      carbsGrams: 8,
+      fatGrams: 16,
+      fiberGrams: 2,
+      sodiumMg: 520,
+      servingSizeDescription: "1 generous Rohu carp steak with rich tomato-cumin gravy (approx. 220g)",
+    },
+    storageInstructions:
+      "Store leftover Rohu Fish Curry in an airtight glass container in the refrigerator for up to 3 days (Bengalis famously believe fish curry tastes even richer the next day as the spices permeate the meat!). Reheat gently on the stovetop over low heat with a splash of warm water.",
+    freezingInstructions:
+      "Because freshwater carp has delicate flaky flesh, freezing cooked fish curry is not recommended as it alters the texture. Fresh uncooked marinated fish steaks can be frozen for up to 2 months.",
+    servingSuggestions: [
+      "Steaming White Basmati Rice: The ultimate pairing—mix the rich red-golden cumin gravy directly into hot fluffy rice.",
+      "Crispy Alu Bhaja (Matchstick Potatoes): Crispy fried spiced potatoes add an irresistible crunch to the meal.",
+      "Tarka Masoor Dal: A bowl of hot red lentil soup with garlic tempering completes the quintessential Bengali lunch.",
+      "Fresh Lemon & Raw Green Chili: Always serve with a juicy lemon wedge and crunchy green chili on the side for authentic dining.",
+    ],
+    faqs: [
+      {
+        question: "Is Rohu (Rui) fish Halal?",
+        answer:
+          "Yes! Rohu (Labeo rohita) is a scaled freshwater river carp. Across all mainstream Islamic schools of jurisprudence (Hanafi, Shafi'i, Maliki, Hanbali), all fish with scales are unanimously and unequivocally Halal.",
+      },
+      {
+        question: "How do I remove the strong freshwater smell from Rohu fish?",
+        answer:
+          "Soaking the cleaned fish steaks in cold water with 1 teaspoon of coarse salt and 1 tablespoon of lemon juice or vinegar for 10 minutes before draining and seasoning completely eliminates any river siltiness.",
+      },
+      {
+        question: "Can I add potatoes (aloo) or cauliflower to this curry?",
+        answer:
+          "Yes! 'Rui Macher Jhol with Aloo and Phulkopi' is a beloved winter classic in Bengal. Simply cut potatoes into wedges, lightly fry them in mustard oil before searing the fish, and simmer them in the gravy in Step 5 until fork-tender.",
+      },
+      {
+        question: "What if I cannot find Rohu fish in my local supermarket?",
+        answer:
+          "You can find Rohu in South Asian and Asian fish markets (often labeled as Rui or Rohtak carp). If unavailable, Katla carp, Sea Bass, Halibut, Salmon, or Red Snapper steaks are magnificent substitutes with similar firm flaky textures.",
+      },
+    ],
+    author: {
+      name: "Chef Bodiul Alam",
+      role: "Culinary Director & Bengali River Heritage Specialist",
+    },
+    updatedDate: "September 23, 2026",
+    tags: [
+      "Rohu Fish Curry",
+      "Rui Macher Jhol",
+      "রুই মাছের কারি",
+      "روئی مچھلی کی کری",
+      "كاري سمك الروي",
+      "Halal Seafood",
+      "Halal Fish",
+      "Bengali Cuisine",
+      "River Fish",
+      "Mustard Oil",
+      "Macher Jhol",
+      "High Protein",
+      "Gluten-Free",
+      "Authentic Heritage",
+    ],
+  },
+  {
+    id: "rec-steak-fajitas",
+    slug: "steak-fajitas",
+    title: "Steak Fajitas (স্টেক ফাহিটাস)",
+    category: "Beef",
+    categorySlug: "halal-beef",
+    cuisine: "Tex-Mex / Mexican (Halal)",
+    description:
+      "Sizzling cast-iron skillet Halal flank steak marinated in fresh lime, garlic, and Mexican spices, seared to juicy medium-rare perfection and sliced against the grain with blistered bell peppers and onions.",
+    introStory:
+      "Steak Fajitas (স্টেক ফাহিটাস / اسٹیک فجیٹاز / فاهيتا الستيك) are the theatrical, sizzle-in-the-air masterpiece of Tex-Mex campfire and cantina heritage. Originally created by Tejano vaqueros (cowboys) in South and West Texas using skirt steak (fajita, meaning 'little band' or 'strip'), this dish transformed hearty cuts of beef into tender culinary royalty. In our 100% Halal rendition, thick hand-cut Halal flank or skirt steak is infused with a punchy marinade of freshly squeezed lime juice, extra virgin olive oil, toasted cumin, smoked paprika, crushed garlic, and Mexican oregano. Seared at blistering heat in a screaming hot cast-iron skillet to achieve caramelized mahogany crusts with juicy, tender pink centers, the steak is thinly carved across the grain and plated alongside sweet blistered tri-color bell peppers and caramelized onions. Served piping hot straight from the skillet with warm charred tortillas, cool sour cream, sliced creamy avocados, and freshly tossed pico de gallo, this is celebratory family dining at its boldest and most flavorful.",
+    heroImage: IMAGES.steakFajitas,
+    prepTimeMinutes: 20,
+    cookTimeMinutes: 15,
+    totalTimeMinutes: 35,
+    servings: 4,
+    difficulty: "Easy",
+    calories: 480,
+    rating: 4.98,
+    reviewCount: 192,
+    isTrending: true,
+    isFeatured: true,
+    halalNotes:
+      "100% certified Halal beef flank or skirt steak, hand-slaughtered and zabiha compliant. Seasoned exclusively with natural citrus juices, virgin olive oil, and unadulterated spices. Completely pork-free and alcohol-free.",
+    ingredients: [
+      { amount: "1.5", unit: "lbs", name: "Halal beef flank steak or skirt steak", notes: "approx. 700g, trimmed of excess silver skin" },
+      { amount: "3", unit: "tbsp", name: "Extra virgin olive oil", notes: "divided: 2 tbsp for marinade, 1 tbsp for searing skillet" },
+      { amount: "3", unit: "tbsp", name: "Fresh lime juice", notes: "freshly squeezed from 2 juicy limes" },
+      { amount: "4", unit: "cloves", name: "Fresh garlic", notes: "finely minced or pressed" },
+      { amount: "1", unit: "tsp", name: "Ground cumin", notes: "toasted for fragrant warmth" },
+      { amount: "1", unit: "tsp", name: "Smoked Spanish paprika", notes: "for rich smoky campfire depth" },
+      { amount: "1/2", unit: "tsp", name: "Chili powder", notes: "mild ancho or standard chili powder" },
+      { amount: "1/2", unit: "tsp", name: "Dried Mexican oregano", notes: "crushed between fingers" },
+      { amount: "1", unit: "tsp", name: "Fine sea salt", notes: "plus flaky sea salt for finishing" },
+      { amount: "1/2", unit: "tsp", name: "Freshly cracked black pepper", notes: "coarsely ground" },
+      { amount: "1", unit: "large", name: "Red bell pepper", notes: "stemmed, seeded, cut into 1/2-inch strips" },
+      { amount: "1", unit: "large", name: "Yellow or orange bell pepper", notes: "cut into 1/2-inch strips" },
+      { amount: "1", unit: "large", name: "Green bell pepper", notes: "cut into 1/2-inch strips" },
+      { amount: "1", unit: "large", name: "Sweet yellow onion", notes: "sliced into 1/2-inch half-moons" },
+      { amount: "8", unit: "pieces", name: "Flour or corn tortillas", notes: "warmed and lightly charred over open flame" },
+      { amount: "1", unit: "medium", name: "Ripe Hass avocado", notes: "sliced or mashed into guacamole" },
+      { amount: "1/2", unit: "cup", name: "Sour cream or Mexican crema", notes: "for cooling drizzle" },
+      { amount: "1/2", unit: "cup", name: "Fresh pico de gallo salsa", notes: "diced tomato, onion, jalapeño, cilantro, lime" },
+      { amount: "1/4", unit: "cup", name: "Fresh cilantro leaves", notes: "for rustic finishing garnish" },
+      { amount: "1", unit: "whole", name: "Fresh lime", notes: "cut into wedges for table service" },
+    ],
+    substitutions: [
+      {
+        original: "Halal beef flank steak",
+        substitute: "Halal skirt steak, hanger steak, or sirloin tips",
+        notes: "Skirt steak has slightly more fat and intense beefy flavor; flank steak offers lean, tender, wide ribbons.",
+      },
+      {
+        original: "Flour tortillas",
+        substitute: "Warm yellow or white corn tortillas",
+        notes: "Makes the entire meal naturally 100% gluten-free while providing authentic rustic Mexican flavor.",
+      },
+      {
+        original: "Sour cream",
+        substitute: "Thick Greek yogurt or dairy-free cashew crema",
+        notes: "A lighter, high-protein alternative with delightful tang.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Whisk the Citrus-Garlic Marinade",
+        instruction:
+          "In a bowl or large zip-top bag, combine 2 tablespoons olive oil, fresh lime juice, minced garlic, ground cumin, smoked paprika, chili powder, Mexican oregano, sea salt, and black pepper. Whisk until emulsified.",
+      },
+      {
+        step: 2,
+        title: "Marinate the Steak (1 to 2 Hours)",
+        instruction:
+          "Add the Halal flank steak to the marinade, massaging thoroughly so the beef is coated on all sides. Seal and refrigerate for at least 1 hour, or up to 4 hours maximum. Remove steak from refrigerator 20 minutes prior to cooking so it approaches room temperature.",
+        tip: "Do not marinate flank steak longer than 4 to 6 hours; the high acidity of lime juice will break down the meat fibers excessively and make them mushy.",
+      },
+      {
+        step: 3,
+        title: "Blistering Heat Cast-Iron Sear",
+        instruction:
+          "Place a large 12-inch heavy cast-iron skillet over high heat until it begins to smoke faintly. Add 1 tablespoon of olive oil. Lift steak from marinade, letting excess liquid drip off (reserve marinade). Lay the steak into the skillet; it should sizzle aggressively. Sear undisturbed for 4 minutes on the first side to develop a deep charred crust, then flip and cook for 3 to 4 minutes on the second side for a juicy medium-rare (internal temp 130°-135°F / 55°-57°C).",
+        tip: "A smoking hot cast-iron pan is essential to get charred cantina-style crusts without overcooking the tender center.",
+      },
+      {
+        step: 4,
+        title: "The 10-Minute Rest (Locking Juices)",
+        instruction:
+          "Transfer the seared steak to a wooden cutting board. Tent loosely with aluminum foil and let rest undisturbed for 8 to 10 minutes. The internal juices will redistribute evenly throughout the meat fibers.",
+      },
+      {
+        step: 5,
+        title: "Sizzle the Peppers & Onions",
+        instruction:
+          "While the steak rests, add the sliced tri-color bell peppers and onions directly into the smoking hot cast-iron skillet with the flavorful beef pan drippings. Toss and sear over high heat for 5 to 6 minutes until the vegetables are tender-crisp with charred blistered edges. Drizzle with 1 tablespoon of fresh lime juice.",
+      },
+      {
+        step: 6,
+        title: "Carve Against the Grain",
+        instruction:
+          "Identify the direction of the grain (the long parallel muscle fibers) on the rested flank steak. Using a sharp chef's knife held at a 45-degree angle, slice the steak across the grain into thin 1/4-inch ribbons. Sprinkle the sliced steak with flaky sea salt.",
+        tip: "Slicing across the grain is the #1 secret to fork-tender flank steak; slicing with the grain makes it tough and chewy.",
+      },
+      {
+        step: 7,
+        title: "Assemble the Sizzling Platter & Serve",
+        instruction:
+          "Arrange the sliced steak ribbons into the sizzling skillet next to the blistered peppers and onions. Scatter fresh cilantro over top. Serve immediately accompanied by warm charred tortillas, sliced avocado, cool sour cream, fresh pico de gallo, and juicy lime wedges so guests can build their own custom tacos.",
+      },
+    ],
+    chefNotes: [
+      "The Grain Direction Rule: Flank steak has prominent, easily visible muscle fibers running down its length. Always slice perpendicular to these grain lines. This cuts the chewy fibers short, giving you melt-in-your-mouth tenderness in every tortilla bite.",
+      "Cast Iron Retains Sizzle: Serving straight from a hot cast iron retains the sizzling sound and keeps the meat and peppers piping hot at the dining table.",
+      "Tortilla Warming Hack: Toast your tortillas directly over an open gas flame for 10 seconds per side using tongs to get appetizing charred blisters and incredible aroma.",
+    ],
+    nutrition: {
+      calories: 480,
+      proteinGrams: 42,
+      carbsGrams: 24,
+      fatGrams: 24,
+      fiberGrams: 5,
+      sodiumMg: 680,
+      servingSizeDescription: "Generous serving of sliced steak with peppers, onions, and 2 tortillas (approx. 300g)",
+    },
+    storageInstructions:
+      "Store leftover sliced steak and fajita vegetables in separate airtight containers in the refrigerator for up to 4 days. Reheat rapidly in a hot skillet for 2 minutes to preserve the medium-rare tenderness of the beef.",
+    freezingInstructions:
+      "Raw flank steak can be frozen inside the marinade for up to 3 months. Thaw overnight in the refrigerator; it will marinate as it defrosts and be ready to sear!",
+    servingSuggestions: [
+      "Warm Charred Tortillas: Wrap tender steak and peppers in warm flour or corn tortillas with a smear of guacamole.",
+      "Mexican Fiesta Rice & Black Beans: Serve with golden cilantro-lime rice and slow-cooked seasoned black beans.",
+      "Cool Creamy Guacamole: A bowl of fresh mashed avocado with lime, jalapeño, and sea salt balances the smoky beef.",
+      "Fajita Bowls / Salads: Pile over crisp romaine lettuce with black beans, sweet corn, and chipotle crema for an easy low-carb meal prep bowl.",
+    ],
+    faqs: [
+      {
+        question: "What is the best cut of beef for Halal Steak Fajitas?",
+        answer:
+          "Flank steak and skirt steak are the two undisputed champions of authentic fajitas. Flank steak is leaner, thicker, and produces wide, beautiful, tender ribbons when sliced thinly against the grain. Skirt steak is more marbled with fat and yields a deeply beefy, buttery chew.",
+      },
+      {
+        question: "How do I make sure the flank steak is tender and not tough?",
+        answer:
+          "Three cardinal rules: (1) marinate in lime juice for 1 to 4 hours to tenderize the surface; (2) sear quickly over screaming high heat to medium-rare (135°F), never overcooking to well-done; and (3) always slice thinly across the grain at a 45-degree angle.",
+      },
+      {
+        question: "Can I make these fajitas on an outdoor grill?",
+        answer:
+          "Absolutely! Grill the marinated flank steak over direct high heat (500°F) for 4 to 5 minutes per side. Cook the peppers and onions in a grill basket or cast-iron skillet placed right on the grill grates.",
+      },
+      {
+        question: "Is this recipe dairy-free and gluten-free?",
+        answer:
+          "The steak and fajita vegetables are naturally 100% dairy-free and gluten-free! To keep the entire meal gluten-free, serve with warm corn tortillas instead of flour tortillas, and swap the sour cream with guacamole.",
+      },
+    ],
+    author: {
+      name: "Chef Bodiul Alam",
+      role: "Culinary Director & Halal Grill Specialist",
+    },
+    updatedDate: "September 23, 2026",
+    tags: [
+      "Steak Fajitas",
+      "স্টেক ফাহিটাস",
+      "اسٹیک فجیٹاز",
+      "فاهيتا الستيك",
+      "Halal Beef",
+      "Halal Steak",
+      "Flank Steak",
+      "Tex-Mex",
+      "Mexican Food",
+      "Cast Iron Skillet",
+      "High Protein",
+      "Gluten-Free Option",
+      "Weeknight Dinner",
+    ],
+  },
+  {
+    id: "rec-classic-wok-tossed-chicken-noodles-chow-mein",
+    slug: "classic-wok-tossed-chicken-noodles-chow-mein",
+    title: "Classic Wok-Tossed Chicken Noodles (Chow Mein)",
+    category: "Chicken",
+    categorySlug: "halal-chicken",
+    cuisine: "Indo-Chinese / Asian Fusion / Cantonese (Halal)",
+    description:
+      "Springy noodles flash-tossed over smoking wok heat with velvety soy-marinated chicken breast, crisp julienned bell peppers, shredded cabbage, carrots, and an addictive savory-sweet garlic soy glaze.",
+    introStory:
+      "Classic Wok-Tossed Chicken Noodles (চিকেন চাউমিন / چکن چومین / نودلز الدجاج المقلي)—universally adored as Chicken Chow Mein—stands as the ultimate crowd-pleasing celebration of Asian wok mastery. Popularized across Cantonese banquet halls, Hong Kong hawker stalls, and vibrant Indo-Chinese street eateries from Kolkata to Dhaka and Karachi, this iconic dish is all about texture and aromatics: springy, tender noodles with lightly charred edges, tossed in a smoking wok with velvety chicken strips, crunchy ribbons of red and green bell peppers, sweet carrots, and shredded cabbage. The secret to its magnetic flavor lies in the sauce—a balanced emulsion of dark soy sauce for caramel depth, light soy for savory saltiness, certified Halal oyster sauce, toasted sesame oil, minced ginger, and garlic, finished with the high-heat breath of the wok ('wok hei'). Quick, nourishing, and wildly addictive, this 100% Halal weeknight dinner brings restaurant-grade street food excitement directly to your home table.",
+    heroImage: IMAGES.chickenChowMein,
+    prepTimeMinutes: 20,
+    cookTimeMinutes: 10,
+    totalTimeMinutes: 30,
+    servings: 4,
+    difficulty: "Easy",
+    calories: 430,
+    rating: 4.97,
+    reviewCount: 184,
+    isTrending: true,
+    isFeatured: true,
+    halalNotes:
+      "100% Halal certified poultry and pantry staples. Made using hand-slaughtered zabiha chicken breast, certified Halal oyster sauce (or mushroom vegetarian stir-fry sauce), non-alcoholic naturally brewed soy sauces, and pure sesame oil without any unverified flavor enhancers or animal byproducts.",
+    ingredients: [
+      { amount: "300", unit: "g", name: "Chow mein egg noodles", notes: "approx. 10 oz, fresh or dried Chinese egg noodles (or ramen/spaghetti)" },
+      { amount: "400", unit: "g", name: "Halal boneless skinless chicken breast", notes: "approx. 14 oz, thinly sliced into 2-inch bite-sized strips" },
+      { amount: "1", unit: "tbsp", name: "Light soy sauce", notes: "for chicken velveting marinade" },
+      { amount: "1", unit: "tbsp", name: "Cornstarch", notes: "essential for Chinese velveting technique, locks in moisture" },
+      { amount: "1", unit: "tsp", name: "Toasted sesame oil", notes: "for marinade" },
+      { amount: "1/4", unit: "tsp", name: "Ground white pepper", notes: "or finely cracked black pepper" },
+      { amount: "3", unit: "tbsp", name: "High-heat cooking oil", notes: "peanut, canola, or avocado oil, divided" },
+      { amount: "4", unit: "cloves", name: "Fresh garlic", notes: "finely minced" },
+      { amount: "1", unit: "tbsp", name: "Fresh ginger", notes: "finely grated" },
+      { amount: "1", unit: "medium", name: "Red bell pepper", notes: "cored and julienned into thin matchsticks" },
+      { amount: "1", unit: "medium", name: "Green bell pepper", notes: "cored and julienned into thin matchsticks" },
+      { amount: "1", unit: "medium", name: "Carrot", notes: "peeled and sliced into thin matchsticks" },
+      { amount: "1.5", unit: "cups", name: "Shredded green cabbage", notes: "thinly shaved for tender crunch" },
+      { amount: "1/2", unit: "medium", name: "Red onion", notes: "thinly sliced into half-moons" },
+      { amount: "3", unit: "stalks", name: "Green onions (scallions)", notes: "cut into 2-inch batons, whites and greens separated" },
+      { amount: "2", unit: "tbsp", name: "Light soy sauce", notes: "for chow mein sauce" },
+      { amount: "1.5", unit: "tbsp", name: "Dark soy sauce", notes: "for signature glossy amber caramel color" },
+      { amount: "1.5", unit: "tbsp", name: "Certified Halal oyster sauce", notes: "or vegetarian mushroom stir-fry sauce for rich umami" },
+      { amount: "1", unit: "tsp", name: "Pure toasted sesame oil", notes: "for finishing aroma" },
+      { amount: "1", unit: "tsp", name: "Rice vinegar or white vinegar", notes: "for a delicate balancing tang" },
+      { amount: "1", unit: "tsp", name: "Raw cane sugar or honey", notes: "to harmonize the savory-salty soy reduction" },
+      { amount: "3", unit: "tbsp", name: "Low-sodium Halal chicken broth or water", notes: "to create a luscious pan glaze" },
+    ],
+    substitutions: [
+      {
+        original: "Chow mein egg noodles",
+        substitute: "Dried ramen noodles, yakisoba, or thin spaghetti",
+        notes: "Thin spaghetti cooked al dente and tossed in sesame oil works remarkably well in a home kitchen.",
+      },
+      {
+        original: "Halal chicken breast",
+        substitute: "Halal chicken thigh strips, peeled shrimp, or pressed firm tofu",
+        notes: "Shrimp cooks in under 2 minutes and pairs exquisitely with the garlic-soy sauce.",
+      },
+      {
+        original: "Certified Halal oyster sauce",
+        substitute: "Vegetarian mushroom stir-fry sauce or sweet kecap manis",
+        notes: "Mushroom sauce provides identical deep umami and gloss while keeping the pantry 100% vegetarian-friendly.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Velvet the Chicken Strips",
+        instruction:
+          "In a mixing bowl, combine the thinly sliced chicken breast strips with 1 tablespoon light soy sauce, 1 tablespoon cornstarch, 1 teaspoon toasted sesame oil, and 1/4 teaspoon white pepper. Mix vigorously until the chicken absorbs the liquid and a glossy coating forms. Marinate at room temperature for 15 minutes while preparing the vegetables.",
+        tip: "Cornstarch velveting is the authentic Chinese restaurant technique that prevents lean chicken breast from drying out, keeping every strip remarkably silky and tender under high wok heat.",
+      },
+      {
+        step: 2,
+        title: "Whisk the Chow Mein Glaze",
+        instruction:
+          "In a small measuring jug or bowl, whisk together 2 tablespoons light soy sauce, 1.5 tablespoons dark soy sauce, 1.5 tablespoons Halal oyster sauce, 1 teaspoon sesame oil, 1 teaspoon rice vinegar, 1 teaspoon sugar, and 3 tablespoons chicken broth or water until dissolved. Set right by your stove.",
+      },
+      {
+        step: 3,
+        title: "Boil & Shock the Noodles",
+        instruction:
+          "Bring a large pot of water to a rolling boil. Add the chow mein noodles and cook 1 minute less than package instructions (about 2 to 3 minutes for fresh noodles, 3 to 4 minutes for dried) until just al dente. Drain immediately in a colander, rinse under cold running water for 30 seconds to wash away excess surface starch, and toss with 1 teaspoon of sesame oil to prevent sticking.",
+        tip: "Rinsing the cooked noodles in cold water halts cooking immediately and washes off surface starch so your stir-fry stays light and bouncy rather than gummy.",
+      },
+      {
+        step: 4,
+        title: "Flash-Sear the Velveted Chicken",
+        instruction:
+          "Heat a large wok or wide 12-inch heavy skillet over high heat until wisps of white smoke rise. Swirl in 1.5 tablespoons of cooking oil to coat the bottom. Add the marinated chicken strips in a single spread layer. Let sear undisturbed for 1 minute to develop golden browning, then stir-fry rapidly for 2 minutes until just cooked through and pale golden. Transfer chicken to a clean plate.",
+      },
+      {
+        step: 5,
+        title: "High-Heat Stir-Fry the Crisp Vegetables",
+        instruction:
+          "Return the wok to high heat. Add the remaining 1.5 tablespoons of oil. Toss in the minced garlic, grated ginger, and the white parts of the scallions; stir-fry for 20 seconds until intensely aromatic. Add the julienned red bell pepper, green bell pepper, matchstick carrots, sliced red onion, and shredded cabbage. Stir-fry vigorously over maximum heat for 2 minutes until tender-crisp with blistered edges.",
+      },
+      {
+        step: 6,
+        title: "Toss Noodles, Chicken & Pour Sauce",
+        instruction:
+          "Add the drained noodles and seared chicken back into the smoking wok over the vegetables. Pour the prepared chow mein sauce all around the edges of the hot wok (this caramelizes the soy sauce instantly against the hot metal). Using tongs or two wooden spatulas, lift and toss everything continuously for 2 minutes until the noodles are uniformly coated in a glossy amber glaze and piping hot.",
+        tip: "Pouring the sauce along the sizzling perimeter of the wok gives the dish authentic 'wok hei' (breath of the wok) smoky fragrance.",
+      },
+      {
+        step: 7,
+        title: "Garnish & Table Presentation",
+        instruction:
+          "Turn off the heat. Toss in the green scallion tops and give one final swirl. Transfer the steaming tangle of noodles to a deep serving platter or individual bowls. Serve immediately with chili crisp or sriracha on the side.",
+      },
+    ],
+    chefNotes: [
+      "The 'Wok Hei' Secret at Home: If you don't have a high-BTU commercial wok burner, use a heavy cast-iron skillet or carbon steel wok preheated until smoking hot, and avoid overcrowding the pan by stir-frying in swift, distinct stages.",
+      "The Noodle Texture Test: Always err on the side of under-boiling the noodles; they absorb hot sauce in the skillet during the final toss, which finishes cooking them to absolute perfection.",
+      "Sauce Balancing: Dark soy sauce provides deep amber caramel color, while light soy sauce provides salinity and umami. Never omit the touch of sugar, which rounds out the sharp savory edges.",
+    ],
+    nutrition: {
+      calories: 430,
+      proteinGrams: 32,
+      carbsGrams: 52,
+      fatGrams: 12,
+      fiberGrams: 4,
+      sodiumMg: 790,
+      servingSizeDescription: "1 generous bowl of chicken noodles with vegetables (approx. 320g)",
+    },
+    storageInstructions:
+      "Store leftover Chicken Chow Mein in an airtight container in the refrigerator for up to 4 days. Reheat in a hot wok or non-stick skillet with 1 tablespoon of water for 2 to 3 minutes to restore noodle bounce.",
+    freezingInstructions:
+      "Not recommended for freezing, as boiled noodles and crunchy vegetables can become limp and waterlogged upon thawing. Fresh leftovers are best enjoyed within 3 to 4 days.",
+    servingSuggestions: [
+      "Indo-Chinese Chili Chicken: Pair with saucy Indo-Chinese Chilli Chicken or Crispy Manchurian Chicken for a restaurant banquet.",
+      "Hot & Sour Soup: Start the meal with a steaming bowl of spicy-sour chicken vegetable soup.",
+      "Crispy Spring Rolls: Serve alongside crispy vegetable spring rolls with sweet chili dipping sauce.",
+      "Spicy Garlic Chili Oil: Drizzle with homemade garlic chili crisp or Halal Sriracha for extra fiery excitement.",
+    ],
+    faqs: [
+      {
+        question: "What noodles work best for Chicken Chow Mein?",
+        answer:
+          "Fresh or dried thin Chinese egg noodles (labeled as chow mein noodles, lo mein noodles, or wonton noodles) are ideal for their springy, chewy texture. In a pinch, dried ramen noodles (without the seasoning packet) or thin spaghetti cooked al dente work surprisingly well.",
+      },
+      {
+        question: "What is the secret to tender, juicy chicken in stir-fries?",
+        answer:
+          "Velveting! Marinating the thinly sliced chicken strips with a touch of soy sauce and cornstarch coats the meat proteins in a protective starch matrix that prevents moisture loss during rapid high-heat wok frying.",
+      },
+      {
+        question: "Is oyster sauce Halal?",
+        answer:
+          "Oyster sauce can be Halal provided it is produced by certified Halal brands (look for certified Halal logos on the bottle) and contains zero non-halal alcohol or unauthorized additives. Alternatively, vegetarian oyster sauce made from mushroom extract is naturally Halal and equally delicious.",
+      },
+      {
+        question: "Can I make this vegetarian or with beef?",
+        answer:
+          "Yes! Substitute the chicken with strips of pressed extra-firm tofu, sliced mushrooms, or Halal flank steak strips for an authentic Beef Chow Mein.",
+      },
+    ],
+    author: {
+      name: "Chef Bodiul Alam",
+      role: "Culinary Director & Asian Fusion Specialist",
+    },
+    updatedDate: "September 23, 2026",
+    tags: [
+      "Chicken Chow Mein",
+      "Classic Wok-Tossed Chicken Noodles",
+      "চিকেন চাউমিন",
+      "চাউমিন",
+      "چکن چومین",
+      "نودلز الدجاج المقلي",
+      "Halal Chicken",
+      "Stir Fry Noodles",
+      "Egg Noodles",
+      "Indo Chinese",
+      "Cantonese Cuisine",
+      "Asian Street Food",
+      "Quick Weeknight Dinner",
+      "High Protein",
+    ],
+  },
+  {
+    id: "rec-chinese-beef-stir-fry",
+    slug: "chinese-beef-stir-fry",
+    title: "Chinese Beef Stir Fry (চাইনিজ বিফ স্টার-ফ্রাই)",
+    category: "Beef",
+    categorySlug: "halal-beef",
+    cuisine: "Chinese / Cantonese (Halal)",
+    description:
+      "Tender velveted ribbons of Halal flank steak flash-seared in a smoking wok with crisp sugar snap peas, sweet bell peppers, and chewy noodles coated in a rich garlic-ginger soy glaze with toasted sesame seeds.",
+    introStory:
+      "Chinese Beef Stir Fry (চাইনিজ বিফ স্টার-ফ্রাই / چینی بیف سٹر فرائی / ستير فراي اللحم الصيني) is celebrated worldwide as the quintessential showstopper of Cantonese wok gastronomy. At the heart of this iconic dish is the revered Chinese technique of 'velveting'—coating thinly carved flank steak ribbons in soy sauce, baking soda, and cornstarch, resulting in beef that is impossibly tender, silky, and juicy. Flash-seared over smoking wok heat until deeply caramelized around the edges, the beef is tossed with vibrant crisp-tender sugar snap peas, bright yellow and red bell peppers, and springy Asian noodles. Everything is enveloped in a glossy, savory glaze made of dark soy sauce, light soy sauce, certified Halal oyster sauce, pure toasted sesame oil, minced ginger, and garlic, crowned with nutty toasted sesame seeds and fresh scallions. Bringing the bustling atmosphere of Hong Kong hawker stands and banquet halls directly to your kitchen, this 100% Halal weeknight dinner is lightning-fast, nutrient-dense, and deeply satisfying.",
+    heroImage: IMAGES.chineseBeefStirFry,
+    prepTimeMinutes: 20,
+    cookTimeMinutes: 10,
+    totalTimeMinutes: 30,
+    servings: 4,
+    difficulty: "Easy",
+    calories: 470,
+    rating: 4.98,
+    reviewCount: 176,
+    isTrending: true,
+    isFeatured: true,
+    halalNotes:
+      "100% Halal certified beef and pantry ingredients. Made with hand-slaughtered zabiha flank steak, certified Halal oyster sauce (or mushroom vegetarian stir-fry sauce), non-alcoholic naturally brewed soy sauces, and pure toasted sesame oil. Completely free of Shaoxing cooking wine or non-halal meat additives.",
+    ingredients: [
+      { amount: "450", unit: "g", name: "Halal beef flank steak or sirloin", notes: "approx. 1 lb, sliced across the grain into thin 1/8-inch strips" },
+      { amount: "1", unit: "tbsp", name: "Light soy sauce", notes: "for beef velveting marinade" },
+      { amount: "1/2", unit: "tsp", name: "Baking soda", notes: "alkaline tenderizer, breaks down meat fibers for melt-in-mouth texture" },
+      { amount: "1", unit: "tbsp", name: "Cornstarch", notes: "divided: 2 tsp for beef velvet, 1 tsp for sauce thickening" },
+      { amount: "1", unit: "tsp", name: "Toasted sesame oil", notes: "for marinade" },
+      { amount: "250", unit: "g", name: "Chinese egg noodles or lo mein", notes: "approx. 9 oz, fresh or dried noodles cooked al dente" },
+      { amount: "3", unit: "tbsp", name: "High-heat cooking oil", notes: "peanut, canola, or avocado oil, divided" },
+      { amount: "1.5", unit: "cups", name: "Fresh sugar snap peas", notes: "cleaned, tough strings removed" },
+      { amount: "1", unit: "medium", name: "Yellow bell pepper", notes: "cored and sliced into thin strips" },
+      { amount: "1", unit: "medium", name: "Red bell pepper", notes: "cored and sliced into thin strips" },
+      { amount: "4", unit: "cloves", name: "Fresh garlic", notes: "finely minced" },
+      { amount: "1", unit: "tbsp", name: "Fresh ginger", notes: "finely minced or grated" },
+      { amount: "2", unit: "stalks", name: "Green onions (scallions)", notes: "sliced diagonally, whites and greens separated" },
+      { amount: "1", unit: "tbsp", name: "Toasted white sesame seeds", notes: "for aromatic finishing garnish" },
+      { amount: "2", unit: "tbsp", name: "Light soy sauce", notes: "for stir-fry glaze" },
+      { amount: "1.5", unit: "tbsp", name: "Dark soy sauce", notes: "for signature deep amber color" },
+      { amount: "1.5", unit: "tbsp", name: "Certified Halal oyster sauce", notes: "or vegetarian mushroom stir-fry sauce" },
+      { amount: "1", unit: "tsp", name: "Pure toasted sesame oil", notes: "for finishing fragrance" },
+      { amount: "1", unit: "tsp", name: "Raw honey or brown sugar", notes: "to balance savory umami" },
+      { amount: "1/4", unit: "cup", name: "Rich Halal beef bone broth or water", notes: "to create a luscious pan reduction" },
+    ],
+    substitutions: [
+      {
+        original: "Halal beef flank steak",
+        substitute: "Halal sirloin, skirt steak, or ribeye strips",
+        notes: "Sirloin provides exceptional tenderness with quick cooking times.",
+      },
+      {
+        original: "Sugar snap peas",
+        substitute: "Snow peas, steamed broccoli florets, or baby bok choy",
+        notes: "Crisp green vegetables maintain a vibrant crunch in stir-fries.",
+      },
+      {
+        original: "Chinese egg noodles",
+        substitute: "Steamed Jasmine rice, ramen noodles, or udon",
+        notes: "Spoon the saucy beef and vegetables directly over hot jasmine rice for a traditional rice bowl.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Velvet the Beef Ribbons",
+        instruction:
+          "Place the thinly sliced flank steak into a bowl. Add 1 tablespoon light soy sauce, 1/2 teaspoon baking soda, 2 teaspoons cornstarch, and 1 teaspoon toasted sesame oil. Massage with your hands for 1 to 2 minutes until the beef absorbs all the liquid and turns velvety smooth. Let marinate at room temperature for 15 minutes.",
+        tip: "Baking soda elevates the meat's surface pH, keeping muscle proteins from tightening during cooking; this guarantees restaurant-level, melt-in-your-mouth beef tenderness.",
+      },
+      {
+        step: 2,
+        title: "Whisk the Savory Garlic-Soy Glaze",
+        instruction:
+          "In a small bowl, whisk together 2 tablespoons light soy sauce, 1.5 tablespoons dark soy sauce, 1.5 tablespoons Halal oyster sauce, 1 teaspoon sesame oil, 1 teaspoon honey, 1 teaspoon cornstarch, and 1/4 cup beef bone broth until smooth and completely dissolved. Place right by the stove.",
+      },
+      {
+        step: 3,
+        title: "Cook & Prep the Noodles",
+        instruction:
+          "Boil the noodles in a large pot of water according to package instructions until just al dente. Drain, rinse briefly with cold water, and toss with a drop of sesame oil so they stay springy and separate.",
+      },
+      {
+        step: 4,
+        title: "Flash-Sear the Beef over High Heat",
+        instruction:
+          "Heat a large wok or heavy 12-inch skillet over high heat until it begins to smoke faintly. Swirl in 1.5 tablespoons of oil. Add the marinated beef strips, spreading them out into an even layer. Let sear undisturbed for 90 seconds to develop a deep caramelized brown crust. Flip and stir-fry vigorously for 1 minute until just cooked through. Immediately transfer beef to a clean plate.",
+        tip: "Searing undisturbed for the first 90 seconds creates deep browning without drawing out juices, preventing the meat from stewing.",
+      },
+      {
+        step: 5,
+        title: "Wok-Sear Crisp Vegetables & Aromatics",
+        instruction:
+          "Add the remaining 1.5 tablespoons of oil to the hot wok. Add the minced garlic, ginger, and scallion whites; stir-fry for 20 seconds until fragrant. Add the snap peas, yellow bell pepper, and red bell pepper strips. Stir-fry over high heat for 2 minutes until the vegetables are vibrant in color and crisp-tender.",
+      },
+      {
+        step: 6,
+        title: "Combine, Glaze & Gloss",
+        instruction:
+          "Return the seared beef and cooked noodles to the wok. Give the prepared sauce a quick re-whisk and pour it all over the ingredients. Toss vigorously over high heat for 1 to 2 minutes. The cornstarch in the sauce will bubble and instantly thicken into a glossy, velvety glaze clinging to every ribbon of beef and strand of noodle.",
+      },
+      {
+        step: 7,
+        title: "Garnish with Toasted Sesame & Scallions",
+        instruction:
+          "Remove from heat. Sprinkle generously with toasted white sesame seeds and fresh scallion greens. Serve immediately straight from the wok on shallow dinner plates.",
+      },
+    ],
+    chefNotes: [
+      "The Grain Rule for Beef: Always observe the direction of the long muscle grain on the flank steak. Slice strictly perpendicular to the grain into 1/8-inch ribbons. This shortens the fibers and guarantees fork tenderness.",
+      "The Cornstarch Glaze Shine: Cornstarch blended into the cold sauce blooms rapidly upon hitting the hot wok, coating the ingredients in a high-gloss restaurant sheen without any greasy residue.",
+      "Custom Spice Level: For spicy Hunan-style beef, toss 2 to 3 sliced fresh red bird's eye chilies or a teaspoon of chili crisp into Step 5 alongside the garlic and ginger.",
+    ],
+    nutrition: {
+      calories: 470,
+      proteinGrams: 38,
+      carbsGrams: 48,
+      fatGrams: 14,
+      fiberGrams: 4,
+      sodiumMg: 760,
+      servingSizeDescription: "1 generous plate of beef stir fry with vegetables and noodles (approx. 320g)",
+    },
+    storageInstructions:
+      "Store leftover Chinese Beef Stir Fry in an airtight glass container in the refrigerator for up to 4 days. Reheat in a smoking hot skillet with 1 tablespoon of water for 2 minutes to revive the glossy glaze.",
+    freezingInstructions:
+      "Marinated raw beef strips can be frozen for up to 3 months. Once cooked with noodles and fresh snap peas, freezing is not recommended as vegetables lose their crisp snap.",
+    servingSuggestions: [
+      "Crispy Vegetable Egg Rolls: Serve alongside crispy spring rolls with sweet chili sauce.",
+      "Steamed Jasmine Rice: For a noodle-free option, serve the saucy beef and vegetables atop fluffy jasmine rice.",
+      "Chinese Wonton Soup: Begin dinner with a warming bowl of Halal chicken or shrimp wonton broth.",
+      "Chili Garlic Oil: Drizzle with extra homemade chili crisp for fiery street-food heat.",
+    ],
+    faqs: [
+      {
+        question: "What is the secret to Chinese restaurant beef tenderness?",
+        answer:
+          "The secret is 'velveting' with a pinch of baking soda and cornstarch. Baking soda tenderizes the meat fibers by lowering acidity, while cornstarch locks in moisture during searing.",
+      },
+      {
+        question: "Can I make this gluten-free?",
+        answer:
+          "Yes! Substitute the light and dark soy sauce with Tamari or gluten-free coconut aminos, use certified gluten-free Halal oyster sauce, and serve over rice noodles or steamed jasmine rice.",
+      },
+      {
+        question: "What other vegetables can I add to beef stir fry?",
+        answer:
+          "Baby bok choy, broccoli florets, sliced cremini mushrooms, baby corn, and water chestnuts are all wonderful additions.",
+      },
+      {
+        question: "Is this recipe dairy-free?",
+        answer:
+          "Yes, this recipe is naturally 100% dairy-free!",
+      },
+    ],
+    author: {
+      name: "Chef Bodiul Alam",
+      role: "Culinary Director & Asian Fusion Specialist",
+    },
+    updatedDate: "September 23, 2026",
+    tags: [
+      "Chinese Beef Stir Fry",
+      "চাইনিজ বিফ স্টার-ফ্রাই",
+      "چینی بیف سٹر فرائی",
+      "ستير فراي اللحم الصيني",
+      "Halal Beef",
+      "Beef Stir Fry",
+      "Stir Fry Noodles",
+      "Flank Steak",
+      "Wok Cooking",
+      "Asian Fusion",
+      "High Protein",
+      "Quick Weeknight Dinner",
+    ],
+  },
+  {
+    id: "rec-homemade-chili-oil",
+    slug: "homemade-chili-oil",
+    title: "Homemade Chili Oil (চীনা চিলি অয়েল)",
+    category: "Vegetarian",
+    categorySlug: "halal-vegetarian",
+    cuisine: "Chinese / Sichuan / Asian Condiment (Halal)",
+    description:
+      "Vibrant ruby-red infused chili oil slow-steeped with star anise, cinnamon, black cardamom, fresh ginger, and garlic, sizzled over coarse chili flakes and toasted sesame seeds.",
+    introStory:
+      "Homemade Chili Oil (চীনা চিলি অয়েল / روغن مرچ / زيت الفلفل الحار)—also cherished across regional cuisines as Chinese Chili Oil or Chili Crisp Oil—is the beating aromatic heart of Asian and fusion kitchens. Far surpassing any store-bought bottle, crafting chili oil from scratch fills your home with intoxicating scents of caramelized spices and toasted chilis. In this authentic chef technique, neutral high-heat oil is gently infused over low flame with sweet cassia cinnamon, fragrant star anise, smoky black cardamom pods, bay leaves, fresh crushed ginger, and sliced garlic until their essence permeates every drop. The strained hot oil is then carefully poured in stages over a vibrant crimson blend of coarse Sichuan chili flakes, Korean gochugaru (for sweet fruity depth and electric red hue), nutty toasted white sesame seeds, sea salt, and a pinch of raw sugar. The resulting glowing ruby oil is versatile magic: spoon it generously over hot noodle soups, steamed dumplings, fried eggs, grilled meats, fluffy basmati rice, or stir-fries for instant warmth, crackle, and restaurant-quality excitement.",
+    heroImage: IMAGES.homemadeChiliOil,
+    prepTimeMinutes: 15,
+    cookTimeMinutes: 25,
+    totalTimeMinutes: 40,
+    servings: 24,
+    difficulty: "Easy",
+    calories: 85,
+    rating: 4.99,
+    reviewCount: 215,
+    isTrending: true,
+    isFeatured: true,
+    halalNotes:
+      "100% naturally vegan, vegetarian, and Halal certified ingredients. Free from alcohol extracts, animal-derived MSG or broth powders, artificial food dyes, or cross-contaminated frying oils.",
+    ingredients: [
+      { amount: "2", unit: "cups", name: "Neutral high-smoke-point oil", notes: "peanut oil, canola oil, avocado oil, or sunflower oil (480ml)" },
+      { amount: "3", unit: "pieces", name: "Whole star anise pods", notes: "imparts sweet licorice aroma" },
+      { amount: "1", unit: "stick", name: "Cinnamon stick or cassia bark", notes: "approx. 3 inches" },
+      { amount: "2", unit: "pods", name: "Black cardamom pods", notes: "or 3 green cardamom pods, lightly cracked" },
+      { amount: "4", unit: "pieces", name: "Whole cloves", notes: "for warm, spicy depth" },
+      { amount: "2", unit: "leaves", name: "Dried bay leaves", notes: "whole fragrant leaves" },
+      { amount: "1", unit: "piece", name: "Fresh ginger", notes: "approx. 2 inches, sliced into thick coins" },
+      { amount: "4", unit: "cloves", name: "Fresh garlic", notes: "peeled and lightly smashed with the side of a knife" },
+      { amount: "2", unit: "stalks", name: "Green onions (scallions)", notes: "cut into 3-inch finger batons" },
+      { amount: "1", unit: "tsp", name: "Sichuan peppercorns", notes: "optional, for gentle citrusy tingling aroma" },
+      { amount: "1/2", unit: "cup", name: "Coarse Chinese or Sichuan chili flakes", notes: "or Korean gochugaru for brilliant ruby color (approx. 50g)" },
+      { amount: "2", unit: "tbsp", name: "Crushed red pepper flakes", notes: "for sharp, punchy heat" },
+      { amount: "2", unit: "tbsp", name: "Toasted white sesame seeds", notes: "adds delightful nutty crunch" },
+      { amount: "1.5", unit: "tsp", name: "Fine sea salt", notes: "enhances savory pepper nuance" },
+      { amount: "1", unit: "tsp", name: "Raw cane sugar or brown sugar", notes: "rounds out bitter roasted edges" },
+      { amount: "1/2", unit: "tsp", name: "Chinese five-spice powder", notes: "optional, for bakery spice undertones" },
+      { amount: "1", unit: "tsp", name: "Chinese black vinegar or rice vinegar", notes: "stirred into dry chili bowl right before pouring oil to prevent scorching" },
+    ],
+    substitutions: [
+      {
+        original: "Chinese / Sichuan chili flakes",
+        substitute: "Korean Gochugaru (coarse) or crushed Aleppo pepper",
+        notes: "Gochugaru produces an exceptionally vibrant crimson red oil with mild, fruity, smoky heat.",
+      },
+      {
+        original: "Peanut oil",
+        substitute: "Canola oil, avocado oil, or grapeseed oil",
+        notes: "Any neutral oil with a high smoke point above 400°F (200°C) works superbly.",
+      },
+      {
+        original: "Black cardamom",
+        substitute: "Green cardamom pods or 1/4 tsp smoked paprika",
+        notes: "Provides subtle smoky complexity to the oil base.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Combine Dry Chili Base in Heat-Safe Bowl",
+        instruction:
+          "In a large, deep heat-proof glass or ceramic bowl (do not use plastic or thin glass), combine the coarse chili flakes, crushed red pepper flakes, toasted sesame seeds, sea salt, sugar, five-spice powder, and 1 teaspoon of vinegar. Stir gently to distribute the seasonings evenly. The drop of vinegar dampens the flakes slightly, safeguarding them against burning when the hot oil is poured.",
+        tip: "Always use a bowl twice the volume of the oil, as the mixture will bubble up vigorously when the hot oil hits the chili flakes.",
+      },
+      {
+        step: 2,
+        title: "Infuse Whole Aromatics on Low Flame",
+        instruction:
+          "Pour the 2 cups of neutral oil into a medium saucepan or small pot. Add the star anise, cinnamon stick, cracked cardamom, cloves, bay leaves, ginger slices, smashed garlic, scallion pieces, and Sichuan peppercorns. Place over medium-low heat. Let the oil gently come up to temperature (around 225°-250°F / 110°-120°C).",
+      },
+      {
+        step: 3,
+        title: "Slow Simmer for 20-25 Minutes",
+        instruction:
+          "Simmer the aromatics gently over low heat for 20 to 25 minutes. Tiny bubbles should continuously form around the ginger, garlic, and scallions. Cook until the scallions and garlic cloves turn light golden-brown and your entire kitchen smells heavenly. Never let the spices turn black.",
+        tip: "Slow, patient extraction is the secret: high heat will burn the whole spices and impart bitterness to the oil.",
+      },
+      {
+        step: 4,
+        title: "Strain Aromatics & Check Temperature",
+        instruction:
+          "Using a slotted spoon or fine-mesh metal spider strainer, remove all the whole spices, garlic, ginger, and scallions from the oil and discard them. Using a digital thermometer, check that the oil is between 325°F and 350°F (165°C to 175°C). If too hot, let it cool down for 2 to 3 minutes. If too cool, heat briefly for 1 minute.",
+      },
+      {
+        step: 5,
+        title: "Pour Hot Oil in Two Stages",
+        instruction:
+          "Carefully pour roughly half of the hot strained oil over the chili flake bowl. It will sizzle dramatically and foam up with an intoxicating toasted aroma. Stir gently with a metal spoon for 30 seconds. Then pour the remaining hot oil over the bowl and stir once more. The gradual pour ensures every chili flake is perfectly toasted without scorching.",
+      },
+      {
+        step: 6,
+        title: "Cool & Steep for 12 to 24 Hours",
+        instruction:
+          "Let the chili oil cool completely uncovered at room temperature for 2 to 3 hours. As it rests, the color will transform into a stunning, luminescent ruby red. For the most profound flavor, let it steep undisturbed for 12 to 24 hours before transferring to clean, dry glass mason jars.",
+      },
+      {
+        step: 7,
+        title: "Jar, Store & Drizzle",
+        instruction:
+          "Transfer the cooled chili oil along with the settled crispy flakes into clean, airtight glass jars. Seal tightly. Spoon generously over noodles, dumplings, fried eggs, steamed rice, or grilled meats.",
+      },
+    ],
+    chefNotes: [
+      "The Temperature Golden Window: 325°F to 350°F (165°C - 175°C) is the magic sweet spot. Oil hotter than 375°F will char the chili flakes black instantly; oil cooler than 300°F will leave the oil pale orange without toasted aroma.",
+      "The Vinegar Hack: Stirring 1 teaspoon of Chinese black vinegar or rice vinegar into the dry chili flakes creates a tiny protective moisture barrier that blooms the paprika/capsanthin pigments into vibrant glowing red without burning.",
+      "Chili Crisp Texture: If you love extra crunch, stir in 2 tablespoons of fried crispy garlic or crispy shallots into the oil after it has cooled to room temperature.",
+    ],
+    nutrition: {
+      calories: 85,
+      proteinGrams: 0.5,
+      carbsGrams: 1,
+      fatGrams: 9,
+      fiberGrams: 0.5,
+      sodiumMg: 140,
+      servingSizeDescription: "1 tablespoon of infused oil with aromatic chili flakes (approx. 15ml)",
+    },
+    storageInstructions:
+      "Store Homemade Chili Oil in a clean, airtight glass mason jar in a cool, dark pantry for up to 3 months, or in the refrigerator for up to 6 months. Always use a clean, completely dry spoon when serving to avoid introducing moisture.",
+    freezingInstructions:
+      "Freezing is not necessary due to the 100% oil base, but small portions can be frozen in silicone ice cube trays for up to 1 year if desired.",
+    servingSuggestions: [
+      "Wok-Tossed Noodles: Drizzle 1 to 2 tablespoons over Chicken Chow Mein or Beef Stir Fry for restaurant-grade heat.",
+      "Steamed Dumplings & Potstickers: Mix with equal parts soy sauce and black vinegar for the ultimate dumpling dipping sauce.",
+      "Crispy Fried Eggs: Spoon shimmering chili oil over sunny-side-up eggs resting on a bowl of warm basmati rice.",
+      "Creamy Soups & Dips: Swirl into hummus, lentil soup, or Greek yogurt for an eye-catching spicy garnish.",
+    ],
+    faqs: [
+      {
+        question: "Why did my chili oil turn dark brown or black?",
+        answer:
+          "The oil was too hot when poured over the chili flakes. Always let the infused oil cool to 325°F - 350°F (165°C - 175°C) before pouring. If you don't have a thermometer, drop one chili flake into the oil: it should sizzle gently, not turn black instantly.",
+      },
+      {
+        question: "How do I get that vibrant, glowing ruby-red color?",
+        answer:
+          "The secret is using Korean gochugaru or Sichuan chili flakes, which have high natural capsanthin pigment, and giving the oil a full 12 to 24 hours of resting time so the pigments infuse thoroughly into the fat.",
+      },
+      {
+        question: "Does homemade chili oil need to be refrigerated?",
+        answer:
+          "Since all fresh aromatics (garlic, ginger, scallions) are fully strained out and only dry spices/flakes remain, it is safe to keep at room temperature in a sealed glass jar for up to 3 months. Storing it in the fridge extends its shelf life to 6+ months.",
+      },
+      {
+        question: "Can I make it less spicy or extra spicy?",
+        answer:
+          "Yes! For milder, sweeter chili oil, use 100% Korean coarse gochugaru. For intense fiery heat, add 1 tablespoon of crushed bird's eye chili powder or cayenne pepper to the dry flake bowl.",
+      },
+    ],
+    author: {
+      name: "Chef Bodiul Alam",
+      role: "Culinary Director & Master of Spices",
+    },
+    updatedDate: "September 23, 2026",
+    tags: [
+      "Homemade Chili Oil",
+      "Chinese Chili Oil",
+      "চীনা চিলি অয়েল",
+      "চিলি অয়েল",
+      "روغن مرچ",
+      "زيت الفلفل الحار",
+      "Sichuan Chili Oil",
+      "Chili Crisp",
+      "Halal Condiment",
+      "Vegan",
+      "Gluten-Free",
+      "Pantry Staple",
+      "Spicy Dip",
+    ],
+  },
+  {
+    id: "rec-beef-lo-mein",
+    slug: "beef-lo-mein",
+    title: "Beef Lo Mein (বিফ লো মেইন)",
+    category: "Beef",
+    categorySlug: "halal-beef",
+    cuisine: "Chinese / Cantonese (Halal)",
+    description:
+      "Thick, springy egg noodles tossed in a rich, glossy garlic-soy oyster gravy with thick caramelized Halal flank steak slices, tender-crisp red peppers, and fragrant scallions.",
+    introStory:
+      "Beef Lo Mein (বিফ লো মেইন / بیف لو مین / لو مين لحم بقري)—literally meaning 'tossed' or 'stirred' noodles (撈麵)—is the reigning comfort king of Cantonese dining halls and beloved Chinese bistros. What sets Beef Lo Mein apart from its stir-fried sister Chow Mein is its decadent sauciness and substantial noodle heft: thick, chewy round egg noodles tossed in a generous, velvety glaze of dark soy sauce, light soy, certified Halal oyster sauce, pure sesame oil, and fragrant broth. In this premier 100% Halal rendition, succulent thick-cut slices of Halal flank steak are velveted to buttery tenderness with cornstarch and a touch of baking soda, then flash-seared in a screaming hot skillet to form gorgeous caramelized mahogany crusts with juicy interiors. Tossed together with blistered sweet red bell pepper ribbons, vibrant green scallions, fresh ginger, and garlic, every single bite delivers comforting noodle bounce and deep umami richness.",
+    heroImage: IMAGES.beefLoMein,
+    prepTimeMinutes: 20,
+    cookTimeMinutes: 12,
+    totalTimeMinutes: 32,
+    servings: 4,
+    difficulty: "Easy",
+    calories: 510,
+    rating: 4.99,
+    reviewCount: 198,
+    isTrending: true,
+    isFeatured: true,
+    halalNotes:
+      "100% certified Halal beef flank steak (hand-slaughtered zabiha). Prepared with certified Halal oyster sauce, naturally brewed alcohol-free soy sauces, and pure sesame oil. Free from non-halal meat extracts or Shaoxing wine.",
+    ingredients: [
+      { amount: "450", unit: "g", name: "Halal beef flank steak", notes: "approx. 1 lb, sliced across the grain into thick 1/4-inch juicy strips" },
+      { amount: "1", unit: "tbsp", name: "Light soy sauce", notes: "for beef velveting marinade" },
+      { amount: "1/2", unit: "tsp", name: "Baking soda", notes: "alkaline tenderizer for melt-in-your-mouth beef tenderness" },
+      { amount: "1", unit: "tbsp", name: "Cornstarch", notes: "for velveting coating that locks in natural juices" },
+      { amount: "1", unit: "tsp", name: "Toasted sesame oil", notes: "for marinade" },
+      { amount: "1/4", unit: "tsp", name: "Coarsely ground black pepper", notes: "for savory steak warmth" },
+      { amount: "350", unit: "g", name: "Thick fresh or dried lo mein egg noodles", notes: "approx. 12 oz, cooked just al dente" },
+      { amount: "3", unit: "tbsp", name: "High-heat cooking oil", notes: "peanut, canola, or avocado oil, divided" },
+      { amount: "1", unit: "large", name: "Red bell pepper", notes: "cored and sliced into 1/3-inch strips" },
+      { amount: "4", unit: "stalks", name: "Green onions (scallions)", notes: "cut into 2-inch batons, whites and greens separated" },
+      { amount: "4", unit: "cloves", name: "Fresh garlic", notes: "finely minced" },
+      { amount: "1", unit: "tbsp", name: "Fresh ginger", notes: "finely grated" },
+      { amount: "1", unit: "tbsp", name: "Toasted white sesame seeds", notes: "for finishing garnish" },
+      { amount: "3", unit: "tbsp", name: "Certified Halal oyster sauce", notes: "or vegetarian mushroom stir-fry sauce for lush umami body" },
+      { amount: "2", unit: "tbsp", name: "Light soy sauce", notes: "for savory depth" },
+      { amount: "1.5", unit: "tbsp", name: "Dark soy sauce", notes: "for rich mahogany caramel glaze" },
+      { amount: "1", unit: "tbsp", name: "Pure toasted sesame oil", notes: "for finishing aroma" },
+      { amount: "1", unit: "tsp", name: "Brown sugar or honey", notes: "to harmonize the savory sauce" },
+      { amount: "1/3", unit: "cup", name: "Low-sodium Halal beef or chicken broth", notes: "for signature generous lo mein sauciness" },
+      { amount: "1.5", unit: "tsp", name: "Cornstarch", notes: "whisked into sauce to create a velvety noodle glaze" },
+    ],
+    substitutions: [
+      {
+        original: "Thick lo mein egg noodles",
+        substitute: "Fresh round ramen, thick udon, or thick spaghetti",
+        notes: "Thick round noodles provide the signature chewy bite that holds the generous lo mein sauce.",
+      },
+      {
+        original: "Halal flank steak",
+        substitute: "Halal sirloin tips, strip steak, or ribeye",
+        notes: "Sirloin provides exceptional tenderness with rich beef flavor.",
+      },
+      {
+        original: "Certified Halal oyster sauce",
+        substitute: "Vegetarian mushroom oyster sauce",
+        notes: "Provides identical glossy dark sheen and umami without shellfish.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Velvet the Thick Beef Slices",
+        instruction:
+          "In a bowl, combine the thick-cut flank steak slices with 1 tablespoon light soy sauce, 1/2 teaspoon baking soda, 1 tablespoon cornstarch, 1 teaspoon toasted sesame oil, and 1/4 teaspoon black pepper. Massage thoroughly for 2 minutes until the beef absorbs the marinade. Let rest at room temperature for 15 minutes.",
+        tip: "Because the beef is sliced thicker than in stir fries, the baking soda and cornstarch velveting are crucial for keeping every piece tender and juicy.",
+      },
+      {
+        step: 2,
+        title: "Whisk the Rich Lo Mein Sauce",
+        instruction:
+          "In a measuring cup or small bowl, whisk together the Halal oyster sauce, light soy sauce, dark soy sauce, sesame oil, brown sugar, broth, and 1.5 teaspoons cornstarch until completely dissolved. Set right by your cooking station.",
+      },
+      {
+        step: 3,
+        title: "Boil the Thick Lo Mein Noodles",
+        instruction:
+          "Bring a large pot of water to a boil. Add the lo mein noodles and boil until just tender with a firm bite (about 3 to 4 minutes for fresh noodles, 5 to 6 minutes for dried). Drain thoroughly and toss with 1 teaspoon of sesame oil to keep them springy and glossy.",
+      },
+      {
+        step: 4,
+        title: "Caramelize the Beef Slices in a Hot Skillet",
+        instruction:
+          "Heat a large 12-inch heavy cast-iron skillet or wok over high heat until smoking. Add 1.5 tablespoons of oil. Add the marinated beef slices in a single uncrowded layer. Sear undisturbed for 2 minutes until a deep, dark caramelized mahogany crust forms on the bottom. Flip and cook for 1 minute on the other side until just browned. Immediately transfer beef to a plate.",
+        tip: "High-heat searing undisturbed creates that iconic steakhouse char while keeping the interior juicy pink and tender.",
+      },
+      {
+        step: 5,
+        title: "Stir-Fry Aromatics & Red Peppers",
+        instruction:
+          "Add the remaining 1.5 tablespoons of oil to the same skillet. Add the minced garlic, ginger, and scallion whites; stir-fry for 20 seconds until fragrant. Add the red bell pepper strips and toss over high heat for 1.5 minutes until tender-crisp.",
+      },
+      {
+        step: 6,
+        title: "Toss Noodles & Sauce to Coat",
+        instruction:
+          "Return the seared beef slices and drained noodles to the skillet. Give the prepared lo mein sauce a quick whisk and pour it all over the noodles and beef. Toss continuously over medium-high heat for 2 minutes. The sauce will bubble vigorously and thicken into a glossy, clingy glaze that completely envelops every noodle strand.",
+        tip: "Lo Mein literally means 'tossed noodles'—keep lifting and folding the noodles into the sauce until every strand is thoroughly coated in dark amber gravy.",
+      },
+      {
+        step: 7,
+        title: "Garnish with Sesame & Scallions",
+        instruction:
+          "Remove skillet from heat. Scatter the green scallion tops and toasted white sesame seeds over the top. Serve steaming hot directly from the skillet or transfer to wide shallow bowls.",
+      },
+    ],
+    chefNotes: [
+      "Lo Mein vs. Chow Mein Difference: Chow mein is focused on fried, crisped noodles with lighter sauce. Lo mein is defined by soft, chewy, springy noodles drenched in a lavish, thick, glistening gravy.",
+      "The Skillet Sizzle: Using a heavy black skillet or carbon-steel wok retains immense heat, allowing the dark soy sauce in the gravy to caramelize along the pan edges for irresistible smoky depth.",
+      "Spicy Variation: Toss in 1 tablespoon of our Homemade Chili Oil or sliced fresh Thai red chilies at Step 6 for a spicy Szechuan-style beef lo mein.",
+    ],
+    nutrition: {
+      calories: 510,
+      proteinGrams: 42,
+      carbsGrams: 54,
+      fatGrams: 16,
+      fiberGrams: 4,
+      sodiumMg: 820,
+      servingSizeDescription: "1 hearty bowl of beef lo mein noodles (approx. 340g)",
+    },
+    storageInstructions:
+      "Store leftover Beef Lo Mein in an airtight glass container in the refrigerator for up to 4 days. Reheat in a skillet over medium heat with 2 tablespoons of water or broth to re-emulsify the luscious sauce.",
+    freezingInstructions:
+      "Freezing cooked lo mein is not recommended, as egg noodles lose their chew upon thawing. Enjoy fresh leftovers within 3 to 4 days.",
+    servingSuggestions: [
+      "Homemade Chili Oil Drizzle: Spoon 1 tablespoon of aromatic ruby chili oil over the noodles for spicy excitement.",
+      "Crispy Halal Egg Rolls: Serve with golden crispy vegetable spring rolls or chicken egg rolls.",
+      "Steamed Garlic Green Beans: Pair with blistered green beans tossed in garlic and soy sauce.",
+      "Egg Drop Soup: Start the feast with a soothing, velvety bowl of chicken sweet corn or egg drop soup.",
+    ],
+    faqs: [
+      {
+        question: "What is the difference between Lo Mein and Chow Mein?",
+        answer:
+          "Lo Mein translates to 'tossed noodles'—the boiled noodles are tossed into a generous, luscious, velvety sauce at the end so they stay soft and chewy. Chow Mein means 'fried noodles'—the noodles are stir-fried until crispy or charred with less sauce.",
+      },
+      {
+        question: "How do I ensure the thick beef strips remain tender?",
+        answer:
+          "Velveting with baking soda and cornstarch is essential! The baking soda tenderizes the meat fibers, while cornstarch forms a barrier that seals in moisture during the intense high-heat sear.",
+      },
+      {
+        question: "What kind of noodles are best for Beef Lo Mein?",
+        answer:
+          "Thick, round fresh Chinese egg noodles (labeled as Lo Mein noodles or Shanghai noodles) are best. If unavailable, thick ramen noodles or thick spaghetti cooked al dente are great substitutes.",
+      },
+      {
+        question: "Is oyster sauce Halal?",
+        answer:
+          "Yes, when purchased from certified Halal manufacturers (or using mushroom-based vegetarian oyster sauce, which has identical savory umami depth).",
+      },
+    ],
+    author: {
+      name: "Chef Bodiul Alam",
+      role: "Culinary Director & Asian Fusion Specialist",
+    },
+    updatedDate: "September 23, 2026",
+    tags: [
+      "Beef Lo Mein",
+      "বিফ লো মেইন",
+      "بیف لو مین",
+      "لو مين لحم بقري",
+      "Halal Beef",
+      "Lo Mein",
+      "Egg Noodles",
+      "Chinese Food",
+      "Cantonese Cuisine",
+      "Asian Street Food",
+      "Skillet Dinner",
+      "High Protein",
+      "Quick Weeknight Dinner",
+    ],
+  },
+  {
+    id: "rec-royal-hyderabadi-mutton-haleem",
+    slug: "royal-hyderabadi-mutton-haleem",
+    title: "Royal Hyderabadi Mutton Haleem (Slow-Cooked Spiced Meat, Wheat & Lentil Stew)",
+    category: "Ramadan & Eid",
+    categorySlug: "ramadan-eid",
+    cuisine: "Hyderabadi / Nizami / Deccani Mughlai (Halal)",
+    description:
+      "The iconic Geographical Indication (GI) tagged royal delicacy: tender bone-in Halal mutton slow-braised with broken wheat, four lentils, pure cow ghee, and aromatic potli spices, pounded to a velvety, stringy perfection and crowned with golden fried onions, roasted cashews, raisins, fresh mint, and spiced ghee.",
+    introStory:
+      "Royal Hyderabadi Mutton Haleem (হায়দ্রাবাদী মাটন হালিম / شاہی حیدرآبادی مٹن حلیم / هريس حيدر اباد باللحم الملكي) is the undisputed crown jewel of Deccani Mughlai gastronomy and the crowning glory of Ramadan Iftar tables across the globe. Originating from the ancient Arab dish 'Harees' introduced to Hyderabad by Chaush (Hadhrami Arab soldiers) during the era of the sixth Nizam Mahbub Ali Khan, this royal delicacy was elevated into an iconic culinary masterwork with Indian spices, four pulses, broken wheat, and pure cow ghee—becoming the first meat dish in India to receive a coveted Geographical Indication (GI) status.\n\nIn our authentic royal recipe, tender bone-in Halal mutton shoulder and marrow bones are slow-simmered for hours with fragrant broken wheat (dalia) and a blend of four lentils (chana, masoor, moong, and urad dal). As the marrow melts and the spices infuse, the meat is pounded vigorously by hand using a heavy wooden masher (ghotni) until the meat fibers shred and weave into a luscious, elastic, velvety porridge ('reshaydar' consistency). Served in royal Nizami style, it is ladled into a ceremonial fluted bowl and lavishly crowned with crisp golden birista (fried onions), a glistening swirl of aromatic spiced ghee (roghan), whole buttery roasted cashews, plump golden sultanas, finely chopped fresh mint and coriander leaves, and freshly squeezed lemon juice.",
+    heroImage: IMAGES.hyderabadiMuttonHaleem,
+    prepTimeMinutes: 45,
+    cookTimeMinutes: 180,
+    totalTimeMinutes: 225,
+    servings: 8,
+    difficulty: "Advanced",
+    calories: 590,
+    rating: 5.0,
+    reviewCount: 245,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified. Made exclusively with hand-slaughtered zabiha mutton (shoulder and marrow shanks), 100% pure churned cow ghee (deshi ghee), single-origin whole grains, and unadulterated spice seeds. Verified completely free of alcohol, artificial preservatives, or commercial gelatin.",
+    potentialCautionNotes:
+      "Hot mutton bones contain molten marrow; carefully discard hard bone fragments before the mashing stage. Pounding with a wooden masher requires stamina and caution over hot steam.",
+    ingredients: [
+      { amount: "1", unit: "kg", name: "Halal bone-in mutton (goat or lamb)", notes: "approx. 2.2 lbs, shoulder cut with marrow bones for rich collagen" },
+      { amount: "1", unit: "cup", name: "Broken / cracked wheat (dalia)", notes: "washed and soaked in water for 4 hours (approx. 180g)" },
+      { amount: "1/4", unit: "cup", name: "Chana dal (split Bengal gram)", notes: "soaked for 4 hours" },
+      { amount: "2", unit: "tbsp", name: "Masoor dal (red lentils)", notes: "soaked" },
+      { amount: "2", unit: "tbsp", name: "Moong dal (yellow split mung beans)", notes: "soaked" },
+      { amount: "2", unit: "tbsp", name: "Urad dal (split husked black gram)", notes: "soaked" },
+      { amount: "2", unit: "tbsp", name: "Aromatic Basmati rice", notes: "for silky starch body" },
+      { amount: "10", unit: "pieces", name: "Raw almonds & cashews", notes: "soaked and blended with the lentils" },
+      { amount: "3/4", unit: "cup", name: "Pure cow ghee", notes: "divided: 1/2 cup for braising, 1/4 cup for royal tempering" },
+      { amount: "2", unit: "large", name: "Red onions", notes: "thinly sliced and fried into crispy golden-brown birista" },
+      { amount: "2", unit: "tbsp", name: "Fresh ginger-garlic paste", notes: "freshly stone-ground" },
+      { amount: "1/2", unit: "cup", name: "Plain whole milk yogurt", notes: "whisked smoothly" },
+      { amount: "4", unit: "pieces", name: "Fresh green chilies", notes: "slit lengthwise" },
+      { amount: "1", unit: "tsp", name: "Turmeric powder", notes: "pure organic ground turmeric" },
+      { amount: "1.5", unit: "tbsp", name: "Kashmiri red chili powder", notes: "for rich color and mild heat" },
+      { amount: "1", unit: "tbsp", name: "Coriander powder", notes: "freshly roasted and ground" },
+      { amount: "1", unit: "tsp", name: "Roasted cumin powder", notes: "for earthy aroma" },
+      { amount: "1", unit: "tbsp", name: "Royal Hyderabadi Potli Masala", notes: "ground blend of green & black cardamom, cinnamon, cloves, kabab chini (cubeb), star anise, mace (javitri), nutmeg, and shahi jeera" },
+      { amount: "1", unit: "cup", name: "Fresh mint leaves", notes: "washed and finely chopped, divided" },
+      { amount: "1", unit: "cup", name: "Fresh cilantro (coriander leaves)", notes: "washed and finely chopped, divided" },
+      { amount: "1.5", unit: "tbsp", name: "Fine sea salt", notes: "divided, to taste" },
+      { amount: "7", unit: "cups", name: "Water or light mutton bone broth", notes: "for slow-simmering grains" },
+      { amount: "1/4", unit: "cup", name: "Whole roasted golden cashew nuts", notes: "for royal top garnish" },
+      { amount: "2", unit: "tbsp", name: "Golden sultanas (raisins)", notes: "lightly sautéed in ghee for garnish" },
+      { amount: "2", unit: "medium", name: "Lemons or limes", notes: "sliced into wedges for serving" },
+    ],
+    substitutions: [
+      {
+        original: "Halal bone-in mutton (goat)",
+        substitute: "Halal bone-in lamb shoulder or beef shank",
+        notes: "Lamb shoulder yields identical unctuousness; beef shank gives deep rich flavor with extra collagen.",
+      },
+      {
+        original: "Broken wheat (dalia)",
+        substitute: "Rolled oats, pearl barley, or cracked spelt",
+        notes: "Barley or oats create a very creamy texture, though traditional Nizami GI standard requires cracked wheat.",
+      },
+      {
+        original: "Kabab chini (allspice / cubeb pepper)",
+        substitute: "Whole Jamaican allspice berries and black peppercorns",
+        notes: "Essential for that hallmark peppery, clove-like Hyderabadi royal perfume.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Soak Wheat, Lentils & Nuts",
+        instruction:
+          "In a large bowl, combine the broken wheat (dalia), chana dal, masoor dal, moong dal, urad dal, basmati rice, soaked almonds, and cashews. Rinse thoroughly in cold water 3 times, then soak in plenty of clean water for at least 4 hours (or overnight) so grains soften completely.",
+        tip: "Proper soaking ensures the lentils and cracked wheat break down into a smooth, silky porridge during cooking without gritty lumps.",
+      },
+      {
+        step: 2,
+        title: "Cook the Wheat & Lentil Porridge",
+        instruction:
+          "Drain the soaked wheat-lentil mixture and place into a large heavy-bottomed stockpot or pressure cooker with 6 cups of water, 1/2 teaspoon turmeric, and 1 teaspoon salt. Bring to a boil, skim off any foam, then cover and simmer on low for 40 minutes (or pressure cook for 15 minutes) until grains are completely soft and mushy. Mash lightly with a potato masher or give a brief 5-second pulse with an immersion blender to a coarse porridge consistency. Set aside.",
+      },
+      {
+        step: 3,
+        title: "Braise the Royal Mutton Korma Base",
+        instruction:
+          "In a separate heavy handi or pot, heat 1/2 cup pure cow ghee over medium heat. Add half of the ginger-garlic paste and sauté for 1 minute. Add the mutton pieces, slit green chilies, Kashmiri chili powder, coriander powder, cumin, 1/2 of the royal potli masala, and remaining salt. Bhuna (sauté) the mutton on medium-high heat for 10 minutes until the meat is well-browned and fragrant. Add the whisked yogurt and half of the fried onions (birista). Mix well.",
+      },
+      {
+        step: 4,
+        title: "Slow-Simmer Mutton Until Falling off the Bone",
+        instruction:
+          "Pour 3 cups of water into the mutton pot. Cover tightly and simmer on low heat for 1.5 to 2 hours (or pressure cook on high for 30 minutes) until the mutton is exceptionally tender and literally falling off the bone.",
+        tip: "Before proceeding, skim off 3 to 4 tablespoons of the vibrant aromatic red ghee (roghan) floating on top of the korma and reserve it in a bowl for the royal finish.",
+      },
+      {
+        step: 5,
+        title: "Debone the Mutton & Shred the Meat",
+        instruction:
+          "Remove the mutton pieces from the gravy onto a cutting board. Discard all hard bones and gristle, scraping all luscious bone marrow back into the gravy. Shred the cooked mutton meat finely with two forks or your fingers into stringy fibers (reshay). Never blend the meat—authentic haleem requires distinct meat strands.",
+      },
+      {
+        step: 6,
+        title: "Combine Mutton with Wheat-Lentil Porridge",
+        instruction:
+          "Add the shredded mutton, the rich korma gravy, and remaining potli masala into the pot containing the cooked wheat-lentil porridge. Place over low heat. Add half of the chopped fresh mint and cilantro.",
+      },
+      {
+        step: 7,
+        title: "Pound & Mash ('Ghotna') for Signature Stretch",
+        instruction:
+          "Using a heavy traditional wooden masher (ghotni or wooden pestle) or a sturdy potato masher, mash and pound the mixture vigorously against the sides and bottom of the pot in a circular motion for 20 to 25 minutes. Cook on low heat while pounding continuously. As the collagen from the bones and gluten from the wheat meld with the meat strands, the haleem will transform into an extraordinarily velvety, glossy, elastic, and thick stew that ribbons off the wooden spoon.",
+        tip: "This vigorous mashing process—known in Hyderabad as 'Ghotna'—is the soul of authentic haleem. It creates the iconic stretchy texture without liquid separation.",
+      },
+      {
+        step: 8,
+        title: "Royal Tempering & Fluted Dish Presentation",
+        instruction:
+          "In a small skillet, heat the remaining 1/4 cup pure cow ghee. Add the cashew nuts and raisins; fry for 1 minute until cashews are golden and raisins puff up. Remove from heat. Ladle the steaming hot, velvety Haleem into a decorative white fluted serving dish. Drizzle the reserved red roghan and hot cashew-ghee all over the surface. Generously garnish with crispy golden birista, chopped fresh mint, fresh cilantro, and julienned ginger. Serve immediately with fresh lemon wedges.",
+      },
+    ],
+    chefNotes: [
+      "The Ghotna Technique: True Hyderabadi Haleem owes its legend to the wooden masher. High-speed food processors cut the meat into grainy paste; hand-mashing shreds the meat along natural muscle fibers, weaving it with the wheat porridge for that iconic stretchy mouthfeel.",
+      "The Marrow Collagen Factor: Never use purely boneless meat. Showning mutton marrow bones into the braise melts natural gelatin into the stew, creating a velvety shine that clings lovingly to your spoon.",
+      "Reheating Perfection: Haleem naturally thickens as it cools. When reheating, add 1/4 cup warm water or broth per bowl and stir gently over low heat until steaming and glossy.",
+    ],
+    nutrition: {
+      calories: 590,
+      proteinGrams: 48,
+      carbsGrams: 46,
+      fatGrams: 24,
+      fiberGrams: 9,
+      sodiumMg: 780,
+      servingSizeDescription: "1 generous festive bowl of royal mutton haleem with garnishes (approx. 380g)",
+    },
+    storageInstructions:
+      "Store leftover Royal Hyderabadi Haleem in an airtight glass container in the refrigerator for up to 4 days. Reheat on low in a heavy saucepan with a splash of hot water, stirring continuously to restore its glossy consistency.",
+    freezingInstructions:
+      "Haleem freezes magnificently! Portion into freezer-safe containers and freeze for up to 2 months. Thaw in the refrigerator overnight and reheat gently with 2 tablespoons of water and a teaspoon of fresh ghee.",
+    servingSuggestions: [
+      "Ramadan Iftar Banquet: Serve steaming hot alongside sweet dates, crispy onion piyaju, and chilled Rooh Afza sharbat.",
+      "Crispy Garlic Naan or Sheermal: Dip warm saffron sheermal, buttery paratha, or tandoori naan into the luscious stew.",
+      "Fresh Lemon Squeeze: Always squeeze fresh lime or lemon juice over your bowl before the first bite to cut the rich ghee and brighten the deep spices.",
+      "Extra Birista & Cashew Bowl: Provide extra small bowls of crispy golden fried onions and toasted cashews at the table for guests to customize.",
+    ],
+    faqs: [
+      {
+        question: "What is the history behind Hyderabadi Haleem's GI status?",
+        answer:
+          "Hyderabadi Haleem was granted Geographical Indication (GI) status in 2010—the first meat product in India to earn this honor. The GI recognition protects the traditional heritage recipe requiring pure cow ghee, goat mutton, broken wheat, specific lentils, and the ancient wooden mashing technique.",
+      },
+      {
+        question: "Can I use an immersion blender instead of a wooden masher?",
+        answer:
+          "You can pulse the wheat and lentils briefly before adding the meat, but the cooked mutton should strictly be shredded by hand and mashed with a wooden spoon or potato masher. Blending the meat shears the long fibers and produces a baby-food paste rather than authentic stringy haleem.",
+      },
+      {
+        question: "What is 'Roghan' and why is it reserved?",
+        answer:
+          "'Roghan' is the aromatic spiced red ghee that floats to the surface while simmering the mutton korma. Skimming and saving it prevents it from disappearing during mashing, allowing you to drizzle it over the finished dish for that iconic, mouthwatering restaurant shine.",
+      },
+      {
+        question: "Can I make this in an Instant Pot or pressure cooker?",
+        answer:
+          "Yes! Pressure cook the wheat-lentils for 15 minutes, and pressure cook the mutton for 30 minutes until fall-apart tender. Combine in the pot on Sauté (Low) mode and mash vigorously for 15 minutes.",
+      },
+    ],
+    author: {
+      name: "Chef Bodiul Alam",
+      role: "Culinary Director & Mughlai Heritage Specialist",
+    },
+    updatedDate: "September 23, 2026",
+    tags: [
+      "Royal Hyderabadi Mutton Haleem",
+      "Hyderabadi Haleem",
+      "হায়দ্রাবাদী মাটন হালিম",
+      "মাটন হালিম",
+      "شاہی حیدرآبادی مٹن حلیم",
+      "هريس حيدر اباد باللحم الملكي",
+      "Ramadan Recipe",
+      "Eid Feast",
+      "Mutton Haleem",
+      "Nizami Cuisine",
+      "Slow-Cooked Stew",
+      "High Protein",
+      "Comfort Food",
+      "GI Tagged Heritage",
+    ],
+  },
+  {
+    id: "rec-soy-sauce-deep-fried-crispy-fish",
+    slug: "soy-sauce-deep-fried-crispy-fish",
+    title: "Soy Sauce Deep Fried Crispy Fish (সয়া সস দিয়ে ভাজা মুচমুচে মাছ)",
+    category: "Fish & Seafood",
+    categorySlug: "halal-seafood",
+    cuisine: "Cantonese / Chinese Coastal / Asian Seafood (Halal)",
+    description:
+      "Whole white-flesh fish scored in diamond cross-hatches, fried until crackling crisp with moist flaky flesh, served over an aromatic warm ginger-soy reduction and garnished with julienned ginger, scallion ribbons, and fresh chilies.",
+    introStory:
+      "Soy Sauce Deep Fried Crispy Fish (সয়া সস দিয়ে ভাজা মুচমুচে মাছ / سمك مقرمش مقلي / گہری کڑھائی میں تلی ہوئی خستہ مچھلی)—often celebrated in Cantonese banquet cuisine as 'You Jin Yu' (油浸魚)—is the crown jewel of Asian coastal seafood dining. Whole scaled, fresh white-flesh fish such as sea bass, red snapper, pomfret, or tilapia is scored with deep diamond-cut incisions, seasoned with sea salt and white pepper, and dusted lightly in cornstarch. Submerged in clean, hot bubbling oil, the skin puffs and shatters into an electric golden crust while the thick white meat stays steaming, moist, and flaky. Instead of drenching the crispy fish and compromising its crunch, the fish is placed over a fragrant, warm shallow pool of seasoned light soy sauce simmered with smashed ginger, garlic, cilantro roots, raw sugar, and pure sesame oil. Topped with fresh matchstick ginger, curling scallion ribbons, sliced red chilies, fresh cilantro, and lime wedges, this showstopping 100% Halal dish delivers high-contrast harmony: audibly crispy, succulent, savory, and aromatic.",
+    heroImage: IMAGES.crispyFriedFish,
+    prepTimeMinutes: 20,
+    cookTimeMinutes: 15,
+    totalTimeMinutes: 35,
+    servings: 4,
+    difficulty: "Medium",
+    calories: 420,
+    rating: 4.99,
+    reviewCount: 184,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal scaled wild-caught or sustainably farm-raised fish (Sea Bass, Red Snapper, Tilapia, or Pomfret). Scaled fish is universally permissible across all Islamic legal schools. Prepared with non-alcoholic, naturally brewed soy sauces, Halal oyster sauce, and pure sesame oil in virgin vegetable frying oil. Free from cooking wines or non-halal animal seasonings.",
+    potentialCautionNotes:
+      "Deep-frying whole fish requires extra caution when lowering the fish into hot oil. Ensure the fish is patted bone-dry to prevent hot oil splatters. Exercise caution with whole fish bones when consuming.",
+    ingredients: [
+      { amount: "1", unit: "whole", name: "Fresh scaled white fish (Sea Bass, Red Snapper, Tilapia, or Pomfret)", notes: "approx. 800g-1kg (1.8-2.2 lbs), scaled, gutted, fins trimmed, and thoroughly washed" },
+      { amount: "1", unit: "tsp", name: "Fine sea salt", notes: "for seasoning inside cavity and skin" },
+      { amount: "1/2", unit: "tsp", name: "Ground white pepper", notes: "for subtle peppery warmth" },
+      { amount: "1/4", unit: "cup", name: "Cornstarch or potato starch", notes: "for light exterior dusting to achieve maximum crunch" },
+      { amount: "4", unit: "cups", name: "High-smoke-point neutral oil", notes: "peanut, canola, or corn oil for deep frying (approx. 1 liter)" },
+      { amount: "2", unit: "inches", name: "Fresh ginger root", notes: "divided: 1 inch sliced for sauce infusion, 1 inch peeled and sliced into paper-thin matchsticks for garnish" },
+      { amount: "3", unit: "cloves", name: "Fresh garlic", notes: "peeled and lightly smashed" },
+      { amount: "3", unit: "stalks", name: "Green onions (scallions)", notes: "divided: white stems for sauce, green tops shredded into fine curled ribbons" },
+      { amount: "1/2", unit: "cup", name: "Fresh cilantro (coriander)", notes: "tender sprigs with washed stems and leaves" },
+      { amount: "1", unit: "whole", name: "Fresh red chili or bird's eye chili", notes: "thinly sliced into rings" },
+      { amount: "1", unit: "whole", name: "Fresh lime or lemon", notes: "cut into wedges for bright finishing acidity" },
+      { amount: "3", unit: "tbsp", name: "Light soy sauce", notes: "for aromatic umami sauce reduction" },
+      { amount: "1", unit: "tbsp", name: "Dark soy sauce", notes: "for deep amber color and gloss" },
+      { amount: "1", unit: "tbsp", name: "Certified Halal oyster sauce", notes: "or vegetarian mushroom stir-fry sauce" },
+      { amount: "1", unit: "tbsp", name: "Raw cane sugar or rock sugar", notes: "to harmonize the savory soy base" },
+      { amount: "1", unit: "tsp", name: "Pure toasted sesame oil", notes: "swirled into sauce off the heat" },
+      { amount: "1/3", unit: "cup", name: "Rich fish bone broth, vegetable broth, or water", notes: "to create a light, balanced pan reduction" },
+    ],
+    substitutions: [
+      {
+        original: "Whole sea bass or red snapper",
+        substitute: "Whole pomfret, trout, branzino, or thick bone-in fish steaks",
+        notes: "Any mild, firm white-fleshed scaled fish will crisp up wonderfully in the hot oil.",
+      },
+      {
+        original: "Light and dark soy sauce",
+        substitute: "Gluten-free tamari and coconut aminos",
+        notes: "For a gluten-free adaptation that retains rich savory umami.",
+      },
+      {
+        original: "Cornstarch",
+        substitute: "Tapioca starch or rice flour",
+        notes: "Rice flour yields an exceptionally delicate, glass-like crunch.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Clean, Score & Dry the Fish",
+        instruction:
+          "Wash the whole fish under cold water, thoroughly cleaning out the cavity. Using paper towels, pat the fish completely bone-dry inside and out. With a sharp chef's knife, score deep diagonal cuts into the thickest parts of the flesh on both sides down to the backbone, spaced 1 inch apart in a diamond cross-hatch pattern. Dry once more with fresh paper towels.",
+        tip: "Surface moisture is the single biggest enemy of crispy fish. The drier the skin, the crisper the fry, and the less the oil will splatter.",
+      },
+      {
+        step: 2,
+        title: "Season & Dust with Cornstarch",
+        instruction:
+          "Rub the sea salt and ground white pepper evenly all over the skin, inside the scored cuts, and inside the stomach cavity. Dust the entire fish with a thin, light veil of cornstarch, making sure some starch gets into the crevices of the cuts. Shake off any excess starch so only a sheer, translucent coating remains.",
+      },
+      {
+        step: 3,
+        title: "Infuse the Savory Ginger-Soy Sauce",
+        instruction:
+          "In a small saucepan, heat 1 teaspoon of oil over medium heat. Add the sliced ginger, crushed garlic, and bruised scallion whites; sauté for 30 seconds until fragrant. Pour in the 1/3 cup broth or water, light soy sauce, dark soy sauce, Halal oyster sauce, and sugar. Bring to a gentle boil, stirring until sugar dissolves, then simmer on low for 3 minutes. Turn off heat and stir in the toasted sesame oil. Keep warm.",
+      },
+      {
+        step: 4,
+        title: "Heat Oil to 375°F (190°C)",
+        instruction:
+          "Fill a large wok or deep oval roasting pan with 4 cups of neutral oil (at least 2 inches deep). Heat over medium-high until the oil reaches 365°F to 375°F (185°C to 190°C) on a thermometer, or until wooden chopsticks dipped into the oil bubble furiously.",
+      },
+      {
+        step: 5,
+        title: "Deep-Fry Whole Fish Until Golden & Shatter-Crisp",
+        instruction:
+          "Carefully hold the fish by its tail and gently lower it away from you into the hot bubbling oil. Do not move the fish for the first 3 minutes while the crust sets. Using a metal ladle, continuously baste the exposed head and top side with hot oil. Fry for 5 to 7 minutes on the first side until deep golden brown, then carefully flip with two spatulas and fry for another 4 to 5 minutes until fully cooked, buoyant, and shatteringly crispy all over.",
+        tip: "Continuous oil basting with a ladle ensures the head, fins, and top edges cook to a crisp texture simultaneously.",
+      },
+      {
+        step: 6,
+        title: "Drain on Wire Rack",
+        instruction:
+          "Carefully lift the crispy fish out of the oil with two large slotted spatulas, letting excess oil drain back into the wok. Transfer the fish to a wire rack placed over a baking sheet for 2 minutes to drain completely.",
+      },
+      {
+        step: 7,
+        title: "Plate over Ginger-Soy Sauce & Garnish",
+        instruction:
+          "Strain the warm seasoned soy sauce and ladle it directly onto the bottom of a wide oval presentation platter. Gently lay the crispy fried fish on top of the sauce (never pour the sauce over the fish). Lavishly crown the fish with paper-thin ginger matchsticks, curled scallion ribbons, sliced red chilies, fresh cilantro sprigs, and lime wedges. Serve piping hot immediately with steamed jasmine rice.",
+        tip: "Serving the fish resting ON the sauce pool rather than under it preserves the crackling, glass-like crispness of the top skin through the entire feast.",
+      },
+    ],
+    chefNotes: [
+      "The Diamond Score Secret: Scoring through the thick muscle right down to the bone exposes more surface area to the boiling oil. This fries the flesh quickly and evenly while puffing the diamond cubes into bite-sized crispy nuggets.",
+      "The Cornstarch Film: Avoid heavy batter; a gossamer veil of cornstarch draws out surface starch and fries into a delicate, glass-like crust that stays crisp long after leaving the wok.",
+      "Table Etiquette: Dip flakes of the tender, snowy interior meat into the savory sauce on the bottom of the platter alongside a slice of fresh ginger and chili for the perfect bite.",
+    ],
+    nutrition: {
+      calories: 420,
+      proteinGrams: 36,
+      carbsGrams: 12,
+      fatGrams: 26,
+      fiberGrams: 1,
+      sodiumMg: 680,
+      servingSizeDescription: "1 generous serving of crispy fish with aromatics and sauce (approx. 220g)",
+    },
+    storageInstructions:
+      "Soy Sauce Crispy Fish is best enjoyed fresh off the wok for maximum crunch. Leftover fish meat can be picked from the bone and stored in an airtight container for up to 2 days. Reheat in an air fryer or convection oven at 375°F (190°C) for 5 minutes to restore crispness.",
+    freezingInstructions:
+      "Freezing cooked deep-fried fish is not recommended, as the delicate skin and flesh will become soggy upon defrosting.",
+    servingSuggestions: [
+      "Fragrant Steamed Jasmine Rice: Spoon the ginger-infused soy sauce from the platter over hot, fluffy jasmine rice.",
+      "Wok-Tossed Baby Bok Choy: Pair with garlic-stir-fried greens or Chinese broccoli (Gai Lan).",
+      "Homemade Chili Oil: Offer a small dipping bowl of our ruby-red homemade chili oil for fiery heat.",
+      "Hot Wonton Broth: Serve with a light bowl of clear wonton or egg drop soup.",
+    ],
+    faqs: [
+      {
+        question: "Which fish species works best for deep frying whole?",
+        answer:
+          "Sea Bass, Red Snapper, Branzino, Black or White Pomfret, and Tilapia are ideal because they have firm white flesh, low oiliness, and skin that crisps into a delicate crackling crust.",
+      },
+      {
+        question: "Why should the sauce be poured under the fish rather than over it?",
+        answer:
+          "Pouring sauce over the top will instantly soften the crispy fried skin. Plating the fish on top of the sauce pool keeps the prized top skin audibly crunchy while letting you dip the tender white meat below.",
+      },
+      {
+        question: "How do I prevent the fish from sticking to the wok or pan?",
+        answer:
+          "Ensure the oil is heated to at least 365°F (185°C) before adding the fish, and do not attempt to move or touch the fish for the first 3 minutes until the cornstarch crust has fully set.",
+      },
+      {
+        question: "Can this be made in an air fryer?",
+        answer:
+          "Yes! Score and season the fish as instructed, spray generously with cooking oil, and air-fry at 400°F (200°C) for 18 to 22 minutes, flipping halfway through.",
+      },
+    ],
+    author: {
+      name: "Chef Bodiul Alam",
+      role: "Culinary Director & Coastal Seafood Specialist",
+    },
+    updatedDate: "September 23, 2026",
+    tags: [
+      "Soy Sauce Deep Fried Crispy Fish",
+      "সয়া সস দিয়ে ভাজা মুচমুচে মাছ",
+      "ভাজা মাছ",
+      "سمك مقرمش مقلي",
+      "گہری کڑھائی میں تلی ہوئی خستہ مچھلی",
+      "Crispy Fried Fish",
+      "Halal Seafood",
+      "Whole Fish",
+      "Cantonese Seafood",
+      "Asian Banquet",
+      "High Protein",
+      "Dinner Party Showstopper",
+    ],
+  },
+  {
+    id: "rec-plain-paratha",
+    slug: "plain-paratha",
+    title: "Plain Paratha (সাধারণ পরোটা)",
+    category: "Vegetarian",
+    categorySlug: "halal-vegetarian",
+    cuisine: "Bengali / South Asian / Mughlai (Halal)",
+    description:
+      "Crisp, flaky, golden-brown layered round flatbread made from wheat flour and pan-roasted with pure deshi ghee until blistered and puffed to perfection.",
+    introStory:
+      "Plain Paratha (সাধারণ পরোটা / باراثا سادة / سادہ پراٹھا)—the undisputed soul of South Asian and Bengali breakfast culture—is an artisan marvel of buttery, flaky lamination. Across Dhaka, Chittagong, Kolkata, Lahore, and Karachi, mornings begin with the rhythmic slap of soft unleavened dough on rolling boards and the irresistible aroma of ghee sizzling on cast-iron tawas. In our authentic heritage recipe, finely ground flour is kneaded with warm water, a touch of milk, and oil to velvety suppleness. Rolled paper-thin, brushed with pure golden cow ghee, dusted with flour, and rolled into a tight spiral coil, it is gently re-rolled into a round disk and pan-roasted in two deliberate phases: first dry-toasted on a hot tawa to seal the tender inner layers, then shallow-fried with pure ghee until the exterior blisters into crackling, concentric golden-brown spots. Served piping hot straight off the griddle in a stack alongside a steaming cup of spiced milk tea (doodh cha), spicy beef bhuna, egg omelette, or aloo bhaji, every tear reveals dozens of paper-thin, melt-in-your-mouth buttery layers.",
+    heroImage: IMAGES.plainParatha,
+    prepTimeMinutes: 20,
+    cookTimeMinutes: 15,
+    totalTimeMinutes: 35,
+    servings: 6,
+    difficulty: "Easy",
+    calories: 260,
+    rating: 5.0,
+    reviewCount: 312,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal Vegetarian. Made with unbleached flour, pure churned cow ghee (deshi ghee), and pure plant-based oils. Free from animal L-cysteine (dough conditioner E920), animal shortenings, or synthetic additives.",
+    potentialCautionNotes:
+      "Hot parathas coming off the iron tawa hold steam between their layers; allow a minute before tearing by hand.",
+    ingredients: [
+      { amount: "3", unit: "cups", name: "All-purpose flour (maida)", notes: "approx. 375g, or 50/50 blend of maida and whole-wheat atta for a heartier bite" },
+      { amount: "1", unit: "tsp", name: "Fine sea salt", notes: "for balanced seasoning in the dough" },
+      { amount: "1", unit: "tsp", name: "Raw cane sugar", notes: "helps achieve rich golden-brown blistering and tender crumb" },
+      { amount: "2", unit: "tbsp", name: "Neutral vegetable oil", notes: "kneaded into the dough for pliability" },
+      { amount: "1/4", unit: "cup", name: "Warm whole milk", notes: "creates a remarkably soft, tender interior crumb" },
+      { amount: "3/4", unit: "cup", name: "Lukewarm water", notes: "added gradually until a soft, non-sticky dough forms (approx. 180ml)" },
+      { amount: "5", unit: "tbsp", name: "Pure cow ghee", notes: "melted; 2 tbsp brushed between dough layers, 3 tbsp for pan-frying" },
+      { amount: "3", unit: "tbsp", name: "Extra flour", notes: "for dusting during rolling and layering" },
+    ],
+    substitutions: [
+      {
+        original: "All-purpose flour (maida)",
+        substitute: "100% whole wheat flour (Chakki Atta)",
+        notes: "Produces hearty, nutty, traditional whole-wheat parathas with higher dietary fiber.",
+      },
+      {
+        original: "Pure cow ghee",
+        substitute: "Vegan butter or neutral cooking oil",
+        notes: "For a 100% dairy-free / vegan version that still puffs and crisps nicely.",
+      },
+      {
+        original: "Warm whole milk",
+        substitute: "Warm water or oat milk",
+        notes: "Keeps the dough supple without dairy.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Knead Supple Dough (Moyen)",
+        instruction:
+          "In a large mixing bowl, whisk together the flour, salt, and sugar. Drizzle in the 2 tablespoons of vegetable oil and rub the oil into the flour with your fingertips for 1 minute until it resembles fine breadcrumbs (the 'moyen' technique). Pour in the warm milk and half the warm water. Knead continuously for 6 to 8 minutes, adding more water 1 tablespoon at a time, until you have a smooth, pliable, elastic dough that is soft to the touch and does not stick to your fingers.",
+        tip: "Rubbing oil into the dry flour before adding water coats the flour proteins and guarantees a tender, melt-in-the-mouth texture rather than a rubbery chew.",
+      },
+      {
+        step: 2,
+        title: "Rest the Dough",
+        instruction:
+          "Shape the dough into a smooth ball and brush the surface with a few drops of oil. Cover the bowl with a clean damp kitchen towel and let it rest undisturbed at room temperature for 25 to 30 minutes. This relaxes the gluten strands completely.",
+      },
+      {
+        step: 3,
+        title: "Divide & Roll Thin Base Disks",
+        instruction:
+          "Uncover the dough and divide into 6 equal smooth portions (approx. 85g each). Take one dough ball, flatten it slightly, dust lightly with dry flour, and roll it out with a rolling pin into a large, paper-thin round disk (about 8 to 9 inches in diameter).",
+      },
+      {
+        step: 4,
+        title: "Laminate with Ghee & Spiral Coil",
+        instruction:
+          "Brush 1 teaspoon of melted pure cow ghee evenly over the entire surface of the rolled dough. Sprinkle a light, even dusting of dry flour over the ghee. Make a single straight cut from the exact center of the circle out to the edge (a radius slit). Beginning at the cut edge, roll the dough tightly around in a circle to form a tight cone. Stand the cone upright on its wide base, then gently press the pointed tip straight down with the palm of your hand into a flat, swirled disk. Repeat for all 6 dough balls. Cover and let the coils rest for 10 minutes.",
+        tip: "This cone-and-press spiral technique locks dozens of concentric micro-layers of ghee and flour into the dough, resulting in flaky lachha rings.",
+      },
+      {
+        step: 5,
+        title: "Roll into Round Parathas",
+        instruction:
+          "Take a rested spiral dough patty, dust lightly with flour, and roll gently from the center outward into an even, circular flatbread about 7 to 8 inches wide and 1/8-inch thick. Do not press down too heavily with the rolling pin, which can crush the delicate lamination layers.",
+      },
+      {
+        step: 6,
+        title: "Two-Stage Dry Toast on Hot Tawa",
+        instruction:
+          "Preheat a heavy cast-iron tawa or flat griddle over medium heat until a drop of water sizzles instantly. Place the rolled paratha onto the hot, dry pan without any oil. Cook undisturbed for 35 to 40 seconds until small bubbles appear on top and pale golden-opaque spots form on the underside. Flip the paratha and cook the second side dry for 30 seconds.",
+        tip: "Dry-toasting both sides first cooks the inner raw dough layers thoroughly so the paratha never tastes doughy or greasy inside.",
+      },
+      {
+        step: 7,
+        title: "Ghee Fry & Puff into Golden Blisters",
+        instruction:
+          "Drizzle 1 teaspoon of melted pure cow ghee all around the edges and over the top surface of the paratha. Flip immediately. Using a flat metal spatula or clean folded tea towel, press down gently around the edges in a circular motion. The paratha will immediately inflate with hot steam, puffing into crisp, golden-brown blistered rings. Flip once more and fry the other side for 25 seconds until shatter-crisp and golden. Transfer to a paper-towel-lined plate. Repeat with the remaining parathas, stacking them up to keep warm. Serve immediately.",
+      },
+    ],
+    chefNotes: [
+      "The Two-Stage Heat Rule: Never add ghee to a cold paratha on the tawa. Cooking it dry first seals the starch structure; adding ghee second fries the outer surface into that iconic crackling, blistered crust.",
+      "The 'Clap' Technique: For maximum flakiness, right after removing a hot paratha from the tawa, cup it lightly between your hands and give it a quick gentle clap or scrunch—this instantly separates the internal flaky layers into feathery ribbons.",
+      "Pure Cow Ghee vs. Oil: While parathas can be fried in vegetable oil, authentic deshi cow ghee delivers an irreplaceable nutty aroma and golden caramelization that defines true South Asian breakfast comfort.",
+    ],
+    nutrition: {
+      calories: 260,
+      proteinGrams: 5,
+      carbsGrams: 36,
+      fatGrams: 11,
+      fiberGrams: 2,
+      sodiumMg: 210,
+      servingSizeDescription: "1 large golden-brown layered paratha (approx. 90g)",
+    },
+    storageInstructions:
+      "Stack cooked parathas with pieces of parchment paper in between, wrap tightly in foil, and store in the refrigerator for up to 3 days. Reheat on a dry hot tawa for 1 minute on each side until crisp again.",
+    freezingInstructions:
+      "To freeze uncooked parathas: roll the parathas, stack them separated by wax paper, wrap tightly in plastic wrap, and freeze for up to 2 months. Cook directly from frozen on a medium tawa without thawing!",
+    servingSuggestions: [
+      "Hot Masala Milk Tea (Doodh Cha): The timeless morning pairing—dip crispy paratha directly into sweet, milky spiced tea.",
+      "Bengali Beef Bhuna: Roll tender, slow-braised caramelized spicy beef bhuna into warm parathas for a hearty breakfast or brunch.",
+      "Desi Egg Omelette / Bhurji: Serve with a soft-scrambled or golden fried egg folded with diced onions, green chilies, and fresh coriander.",
+      "Spiced Bengali Aloo Bhaji: Pair with comforting cumin and turmeric stir-fried potato cubes.",
+    ],
+    faqs: [
+      {
+        question: "Why do my parathas turn hard and rubbery after cooling?",
+        answer:
+          "Two common causes: the dough wasn't kneaded enough or rested long enough, or the tawa wasn't hot enough. Cooking parathas on low heat for too long dries out the internal moisture, turning them like cardboard. Always cook on medium-high heat with prompt flipping.",
+      },
+      {
+        question: "Can I use whole wheat flour (atta) instead of all-purpose flour (maida)?",
+        answer:
+          "Yes! Traditional everyday home parathas are often made with 100% whole wheat atta or a 50/50 blend of atta and maida for a wholesome, rustic flavor and added fiber.",
+      },
+      {
+        question: "How do I get those crispy concentric rings shown in the picture?",
+        answer:
+          "The spiral cone method (Step 4) followed by gentle rolling creates concentric circles of laminated dough that blister and fry into the golden spiral rings seen in the photo.",
+      },
+      {
+        question: "Are these parathas suitable for making egg rolls or kathi rolls?",
+        answer:
+          "Absolutely! Beat an egg with a pinch of salt and chili, pour it onto the tawa, immediately press a cooked paratha onto the liquid egg until it adheres, flip, and roll with sliced onions, cucumbers, and sauces.",
+      },
+    ],
+    author: {
+      name: "Chef Bodiul Alam",
+      role: "Culinary Director & Traditional Bread Specialist",
+    },
+    updatedDate: "September 23, 2026",
+    tags: [
+      "Plain Paratha",
+      "সাধারণ পরোটা",
+      "পরোটা",
+      "باراثا سادة",
+      "سادہ پراٹھا",
+      "Paratha",
+      "Flaky Bread",
+      "Halal Vegetarian",
+      "Desi Breakfast",
+      "Bengali Breakfast",
+      "Indian Flatbread",
+      "Comfort Food",
+      "Tawa Bread",
+    ],
+  },
+  {
+    id: "rec-carne-asada-steak-tacos",
+    slug: "carne-asada-steak-tacos",
+    title: "Carne Asada Steak Tacos (Beef)",
+    category: "Beef",
+    categorySlug: "halal-beef",
+    cuisine: "Mexican / Street Taquería / Latin American (Halal)",
+    description:
+      "Tender, juicy Halal flank steak marinated in citrus mojo, garlic, and Mexican chili spices, charred over high heat, sliced across the grain, and served on warm blistered tortillas with fresh pico de gallo salsa and shredded cheese.",
+    introStory:
+      "Carne Asada Steak Tacos (Beef)—the undisputed king of Mexican street food and taquería culture—celebrates the primal magic of fire, citrus, and premium beef. In Northern Mexico and across Southern California, street vendors master the art of marinating flank or skirt steak in a zesty 'mojo' of fresh lime juice, orange juice, crushed garlic, Mexican oregano, cumin, and smoky chili. When the steak hits a screaming-hot cast-iron skillet or hardwood grill, the citrus sugars caramelize into deep, blistered, savory char while the center remains succulent, tender, and medium-rare. Rested and sliced thick across the grain, the juicy steak ribbons are piled into warm, lightly blistered tortillas, topped with vibrant homemade pico de gallo (vine-ripened tomatoes, diced red onion, fiery jalapeño, and fresh cilantro), and shredded cheese. Every bite bursts with beefy umami, smoky crust, bright citrus acidity, and fresh garden crunch.",
+    heroImage: IMAGES.carneAsadaTacos,
+    prepTimeMinutes: 20,
+    cookTimeMinutes: 10,
+    totalTimeMinutes: 30,
+    servings: 4,
+    difficulty: "Medium",
+    calories: 480,
+    rating: 4.98,
+    reviewCount: 226,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified beef. Prepared exclusively with zabiha Halal flank steak or skirt steak, fresh citrus juices, unadulterated ground Mexican spices, and fresh herbs. Verified completely free of alcohol (no beer, wine, or tequila in the marinade), pork lard, or cross-contaminated grill surfaces.",
+    potentialCautionNotes:
+      "Searing at high heat generates pleasant smoky aromas; ensure kitchen range hood is on high. Discard leftover marinade that touched raw meat.",
+    ingredients: [
+      { amount: "1.5", unit: "lbs", name: "Halal flank steak or skirt steak", notes: "approx. 700g, trimmed of excess surface fat" },
+      { amount: "1/4", unit: "cup", name: "Freshly squeezed lime juice", notes: "about 2 large juicy limes" },
+      { amount: "1/4", unit: "cup", name: "Freshly squeezed orange juice", notes: "natural enzymes tenderize the beef and provide subtle sweetness" },
+      { amount: "3", unit: "tbsp", name: "Extra virgin olive oil", notes: "helps coat the beef and carry fat-soluble spices" },
+      { amount: "4", unit: "cloves", name: "Fresh garlic", notes: "finely minced or pressed" },
+      { amount: "1", unit: "tbsp", name: "Ground cumin", notes: "freshly roasted and ground" },
+      { amount: "1", unit: "tbsp", name: "Smoked paprika", notes: "for rich red color and campfire smokiness" },
+      { amount: "1", unit: "tsp", name: "Mexican oregano", notes: "dried and crushed between your palms" },
+      { amount: "1", unit: "tsp", name: "Chili powder (ancho or chipotle)", notes: "for earthy warmth and mild kick" },
+      { amount: "1.5", unit: "tsp", name: "Coarse sea salt", notes: "divided, to taste" },
+      { amount: "1/2", unit: "tsp", name: "Freshly cracked black pepper", notes: "coarsely ground" },
+      { amount: "1/4", unit: "cup", name: "Fresh cilantro leaves", notes: "washed and finely chopped" },
+      { amount: "8-10", unit: "pieces", name: "Small soft flour or corn tortillas", notes: "warmed and lightly charred on a hot dry griddle" },
+      { amount: "1", unit: "cup", name: "Fresh pico de gallo salsa", notes: "freshly diced tomatoes, red onion, jalapeño, cilantro, lime juice, and salt" },
+      { amount: "1/2", unit: "cup", name: "Shredded cheese", notes: "mild cheddar, Monterey Jack, or Mexican blend" },
+      { amount: "1", unit: "whole", name: "Fresh lime", notes: "cut into wedges for squeezing over tacos" },
+    ],
+    substitutions: [
+      {
+        original: "Flank steak",
+        substitute: "Halal skirt steak, sirloin flap, or flat iron steak",
+        notes: "Skirt steak has even deeper beefy flavor and loose muscle fibers that absorb marinade exceptionally well.",
+      },
+      {
+        original: "Flour tortillas",
+        substitute: "Traditional white or yellow corn tortillas",
+        notes: "For an authentic gluten-free street taco experience with wholesome corn flavor.",
+      },
+      {
+        original: "Pico de gallo",
+        substitute: "Roasted tomatillo salsa verde or spicy salsa roja",
+        notes: "Provides different layers of smoky, tangy street-taco heat.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Whisk the Citrus Mojo Marinade",
+        instruction:
+          "In a glass bowl or measuring cup, whisk together the lime juice, orange juice, olive oil, minced garlic, cumin, smoked paprika, Mexican oregano, chili powder, sea salt, black pepper, and chopped cilantro until thoroughly blended.",
+        tip: "The natural citric acid in the lime and orange juice acts as an enzymatic tenderizer, softening the long, fibrous strands of flank steak.",
+      },
+      {
+        step: 2,
+        title: "Marinate the Steak (2 to 4 Hours)",
+        instruction:
+          "Place the flank steak in a shallow glass dish or gallon ziplock bag. Pour the marinade over the meat, turning to coat evenly on all sides. Seal tightly and refrigerate for at least 2 hours (ideally 4 hours, and up to 8 hours). Do not marinate past 12 hours, or the acid will over-soften the meat texture.",
+      },
+      {
+        step: 3,
+        title: "Prepare the Fresh Pico de Gallo",
+        instruction:
+          "While the steak marinates, dice 2 ripe Roma tomatoes, 1/2 small red onion, and 1 deseeded jalapeño finely. Toss together in a bowl with 2 tablespoons chopped fresh cilantro, 1 tablespoon fresh lime juice, and 1/4 teaspoon sea salt. Taste and adjust seasoning; chill until ready to serve.",
+      },
+      {
+        step: 4,
+        title: "Blistering High-Heat Sear",
+        instruction:
+          "Remove the steak from the refrigerator 20 minutes before cooking to take the chill off. Heat a heavy cast-iron skillet, plancha, or outdoor grill over screaming-high heat until lightly smoking (around 500°F / 260°C). Remove the steak from the marinade, shaking off excess liquid. Lay the steak down firmly into the sizzling pan. Sear undisturbed for 3 to 4 minutes until deeply charred and caramelized, then flip and sear the other side for 3 to 4 minutes for juicy medium-rare (internal temp 130°F-135°F / 55°C-57°C).",
+        tip: "Intense heat is essential for carne asada: you want a rapid, dark caramelized crust before the interior loses its pink succulence.",
+      },
+      {
+        step: 5,
+        title: "Rest the Steak for 8 to 10 Minutes",
+        instruction:
+          "Transfer the seared steak to a wooden cutting board. Tent loosely with aluminum foil and let rest undisturbed for 8 to 10 minutes. Slicing too early will cause all the flavorful juices to gush out onto the board.",
+      },
+      {
+        step: 6,
+        title: "Slice Thick Ribbons Across the Grain",
+        instruction:
+          "Identify the direction of the long muscle fibers (the grain) running through the steak. Using a very sharp chef's knife or carving knife, slice the steak strictly perpendicular (across) the grain at a slight 45-degree angle into 1/4-inch to 1/2-inch thick juicy strips. Drizzle any cutting board juices over the sliced meat.",
+        tip: "Slicing across the grain shortens the meat fibers, ensuring each bite melts in your mouth without any chewiness.",
+      },
+      {
+        step: 7,
+        title: "Warm Tortillas & Build Carne Asada Tacos",
+        instruction:
+          "Warm the flour or corn tortillas on a dry hot skillet or directly over an open gas flame for 15 to 20 seconds per side until soft, pliable, and lightly blistered with brown spots. Lay the warm tortillas on a serving board or platter. Generously pile the thick, juicy carne asada steak strips down the center. Top with shredded cheese and a heaping spoonful of crisp pico de gallo salsa. Serve immediately with fresh lime wedges for squeezing.",
+      },
+    ],
+    chefNotes: [
+      "The Grain Rule: Flank steak has long, distinct muscle fibers. Always cut across the grain—never parallel to it—so the strips break apart effortlessly with each bite.",
+      "High Heat Cast-Iron Sear: A cast-iron skillet holds maximum heat, ensuring rapid Maillard browning that mimics the charred flavor of Mexican taquería planchas.",
+      "Tortilla Warmth: Cold tortillas crack and taste raw. Always blister tortillas on a dry tawa until fragrant, pliable, and steaming before assembling.",
+    ],
+    nutrition: {
+      calories: 480,
+      proteinGrams: 38,
+      carbsGrams: 32,
+      fatGrams: 22,
+      fiberGrams: 3,
+      sodiumMg: 720,
+      servingSizeDescription: "2 fully loaded steak tacos with pico de gallo and cheese (approx. 240g)",
+    },
+    storageInstructions:
+      "Store leftover sliced carne asada steak in an airtight glass container in the refrigerator for up to 4 days. Keep tortillas and pico de gallo in separate containers to avoid sogginess. Reheat the steak quickly in a hot skillet with a splash of lime juice for 2 minutes.",
+    freezingInstructions:
+      "You can freeze the uncooked flank steak in the citrus mojo marinade in a freezer-safe vacuum bag for up to 2 months. Thaw in the refrigerator overnight—it marinates as it defrosts!",
+    servingSuggestions: [
+      "Authentic Taquería Platter: Serve with lime wedges, pickled red onions, sliced radishes, and grilled scallions (cebollitas).",
+      "Mexican Street Corn (Elote): Pair with grilled sweet corn brushed with lime crema, cotija cheese, and smoked chili powder.",
+      "Cilantro Lime Rice & Black Beans: Round out into a complete fiesta dinner platter.",
+      "Avocado Salsa Verde: Drizzle with tangy roasted tomatillo and avocado salsa for creamy richness.",
+    ],
+    faqs: [
+      {
+        question: "What is the best cut of beef for authentic Carne Asada?",
+        answer:
+          "Flank steak and skirt steak (arrachera) are the premier cuts. Flank is slightly leaner and thicker with intense beefy flavor, while skirt steak is rich and beautifully marbled.",
+      },
+      {
+        question: "Can I make this on an outdoor barbecue grill?",
+        answer:
+          "Yes! Cook over direct medium-high charcoal or gas flame for 3 to 4 minutes per side until nicely charred with distinct grill marks.",
+      },
+      {
+        question: "How spicy are these Carne Asada tacos?",
+        answer:
+          "The steak marinade is savory, smoky, and mildly spiced. The heat level is fully adjustable through the jalapeño in the fresh pico de gallo salsa.",
+      },
+      {
+        question: "Should I use corn or flour tortillas?",
+        answer:
+          "Both are delicious! Corn tortillas are traditional in Central and Southern Mexican street taquerías, while flour tortillas are popular in Northern Mexico (Sonora) and Texas.",
+      },
+    ],
+    author: {
+      name: "Chef Bodiul Alam",
+      role: "Culinary Director & Global Halal Street Food Specialist",
+    },
+    updatedDate: "September 23, 2026",
+    tags: [
+      "Carne Asada Steak Tacos",
+      "Carne Asada",
+      "Steak Tacos",
+      "Halal Beef",
+      "Mexican Street Food",
+      "Taqueria",
+      "Flank Steak",
+      "Pico de Gallo",
+      "High Protein",
+      "Dinner Party",
+      "Quick Weeknight Dinner",
+    ],
+  },
+  {
+    id: "rec-fish-biryani",
+    slug: "fish-biryani",
+    title: "Fish Biryani (মাছের বিরিয়ানি)",
+    category: "Fish & Seafood",
+    categorySlug: "halal-seafood",
+    cuisine: "Coastal Mughlai / Bengali / Hyderabadi (Halal)",
+    description:
+      "Fragrant aged basmati rice infused with saffron milk and whole spices, layered with golden pan-seared spiced fish fillets, caramelized crispy onions (birista), fresh mint, and lemon wheels, slow-steamed under dum.",
+    introStory:
+      "Fish Biryani (মাছের বিরিয়ানি / برياني السمك / مچھلی کی بریانی)—the crowning triumph of coastal South Asian banquet cooking—marries the delicate sweetness of fresh sea catch with the regal majesty of Mughlai dum cooking. While mutton and chicken biryanis demand lengthy simmering, fish biryani is an exercise in culinary precision: thick, pristine fillets of firm white fish (such as kingfish, sea bass, cod, or rohu) are gently marinated in golden turmeric, Kashmiri red chili, ginger-garlic paste, and crushed cumin, then kissed in hot cow ghee for barely two minutes until a delicate golden crust forms while the center stays tender and moist. The fish is gently layered between beds of long-grain aged basmati rice parboiled with green cardamom, cloves, cinnamon, and bay leaves. Splashes of saffron-infused warm milk, crispy caramelized onions (birista), fresh mint leaves, and sliced lemon wheels seal the pot before it is placed on a heavy iron tawa for gentle 'dum' steaming. When the lid is lifted, intoxicating waves of saffron, ghee, and savory coastal aromatics rise into the air. Every spoonful delivers fluffy, non-sticky rice grains and moist, melt-in-the-mouth fish that flakes effortlessly upon your tongue.",
+    heroImage: IMAGES.fishBiryani,
+    prepTimeMinutes: 25,
+    cookTimeMinutes: 35,
+    totalTimeMinutes: 60,
+    servings: 6,
+    difficulty: "Medium",
+    calories: 510,
+    rating: 4.97,
+    reviewCount: 284,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified. Prepared exclusively with fresh scaled white fish, unadulterated whole spices, pure deshi cow ghee, saffron threads, and aged basmati rice. Free from alcohol, animal shortenings, or synthetic colorings.",
+    potentialCautionNotes:
+      "Fish is delicate; handle cooked fillets with care when dishing out to keep the golden pieces intact.",
+    ingredients: [
+      { amount: "1.5", unit: "lbs", name: "Firm white fish fillets (cod, sea bass, kingfish/surmai, or rohu)", notes: "cut into generous 2-inch thick pieces" },
+      { amount: "1", unit: "tsp", name: "Kashmiri red chili powder", notes: "for rich red color and gentle warmth" },
+      { amount: "1/2", unit: "tsp", name: "Ground turmeric", notes: "for golden color and natural deodorizing" },
+      { amount: "1", unit: "tsp", name: "Coriander powder", notes: "freshly ground" },
+      { amount: "1/2", unit: "tsp", name: "Roasted cumin powder", notes: "aromatic coastal seasoning" },
+      { amount: "1", unit: "tbsp", name: "Ginger-garlic paste", notes: "freshly crushed" },
+      { amount: "1", unit: "tbsp", name: "Fresh lemon juice", notes: "brightens marinade and tenderizes fish" },
+      { amount: "1", unit: "tsp", name: "Fine sea salt", notes: "for fish seasoning" },
+      { amount: "5", unit: "tbsp", name: "Pure cow ghee", notes: "divided: 3 tbsp for pan-searing fish, 2 tbsp drizzled over rice" },
+      { amount: "2.5", unit: "cups", name: "Aged long-grain basmati rice (sella or 1121)", notes: "approx. 500g, rinsed gently until water runs clear, soaked 30 minutes" },
+      { amount: "8", unit: "cups", name: "Water", notes: "for parboiling rice with whole spices" },
+      { amount: "1", unit: "tbsp", name: "Coarse sea salt", notes: "for rice boiling water (should taste savory like soup)" },
+      { amount: "4", unit: "pods", name: "Green cardamom", notes: "cracked open" },
+      { amount: "4", unit: "whole", name: "Cloves", notes: "for aromatic rice broth" },
+      { amount: "1", unit: "stick", name: "Cinnamon", notes: "2-inch stick" },
+      { amount: "2", unit: "leaves", name: "Bay leaves (Tej Pata)", notes: "bruised" },
+      { amount: "1", unit: "cup", name: "Golden fried onions (birista)", notes: "thinly sliced crispy caramelized onions" },
+      { amount: "1/4", unit: "cup", name: "Warm whole milk", notes: "steeped with a generous pinch of pure saffron threads" },
+      { amount: "1/4", unit: "cup", name: "Fresh cilantro leaves", notes: "roughly chopped" },
+      { amount: "1/4", unit: "cup", name: "Fresh mint leaves", notes: "torn" },
+      { amount: "1", unit: "whole", name: "Lemon", notes: "sliced into thin rounds" },
+      { amount: "3", unit: "whole", name: "Green chilies", notes: "slit lengthwise for fragrant aroma without fiery heat" },
+      { amount: "1/2", unit: "tsp", name: "Shahi biryani masala powder", notes: "dusted between layers" },
+    ],
+    substitutions: [
+      {
+        original: "Cod or Sea Bass",
+        substitute: "Kingfish (Surmai), Rohu, Halibut, or Salmon steaks",
+        notes: "Any firm, thick, scaled white or pink fish that holds its shape under gentle steaming.",
+      },
+      {
+        original: "Pure cow ghee",
+        substitute: "Mustard oil or clarified butter",
+        notes: "Mustard oil lends an authentic rustic Bengali coastal tang.",
+      },
+      {
+        original: "Aged basmati rice",
+        substitute: "Kalijeera rice or Gobindobhog (baby basmati)",
+        notes: "Produces an intensely fragrant, traditional Bengali-style wedding pulao texture.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Soak Rice & Steep Royal Saffron",
+        instruction:
+          "Rinse the aged basmati rice gently under cold water 3 to 4 times until the water runs clear. Soak the rice in clean cold water for 30 minutes, then drain completely. Meanwhile, crush a generous pinch of saffron threads between your fingers and steep in 1/4 cup of warm milk; let sit for 20 minutes until it turns into a vibrant, fragrant golden-amber liquor.",
+      },
+      {
+        step: 2,
+        title: "Marinate the Spiced Fish Chunks",
+        instruction:
+          "In a wide glass bowl, whisk together the Kashmiri red chili powder, turmeric, coriander powder, roasted cumin powder, ginger-garlic paste, lemon juice, and 1 teaspoon of sea salt. Pat the cut fish pieces dry with paper towels. Gently coat each fish piece in the spice paste on all sides. Let marinate at room temperature for 15 to 20 minutes (do not over-marinate, as lemon juice cures delicate fish quickly).",
+      },
+      {
+        step: 3,
+        title: "Parboil Basmati Rice to 70% Doneness",
+        instruction:
+          "In a large stockpot, bring 8 cups of water to a rolling boil with 1 tablespoon coarse sea salt, cracked green cardamoms, cloves, cinnamon stick, and bay leaves. Add the drained basmati rice. Cook uncovered over high heat for exactly 5 to 6 minutes, stirring gently just once. Test a grain: it should break into three pieces when pressed firmly between your fingernails (soft on the outside with a firm core, 70% cooked). Immediately drain thoroughly in a colander.",
+        tip: "Draining at precisely 70% is crucial; if the rice is over-boiled, the moisture from the steaming fish will turn the biryani mushy.",
+      },
+      {
+        step: 4,
+        title: "Quick Ghee Sear of the Fish",
+        instruction:
+          "Heat 3 tablespoons of pure cow ghee in a wide non-stick pan or skillet over medium-high heat. Carefully place the marinated fish pieces in a single layer without crowding. Sear for 1.5 to 2 minutes on the first side until a golden crust forms, gently flip with a fish spatula, and sear the other side for just 1 minute. Remove the fish immediately onto a plate. Do not cook the fish through; it will finish cooking gently during the dum steaming.",
+      },
+      {
+        step: 5,
+        title: "Layer the Biryani in Heavy Pot",
+        instruction:
+          "In a heavy-bottomed Dutch oven or biryani handi, spread half of the parboiled rice across the bottom. Arrange the seared fish pieces evenly over the rice bed, spooning any pan drippings from the fish over them. Scatter half of the crispy fried onions (birista), chopped mint, cilantro, slit green chilies, lemon slices, and a pinch of shahi biryani masala. Cover with the remaining parboiled rice. Drizzle the saffron milk and remaining 2 tablespoons melted ghee in patterns over the rice. Top with the rest of the fried onions, mint, and lemon slices.",
+      },
+      {
+        step: 6,
+        title: "Dum Steaming on Cast-Iron Tawa (15 Minutes)",
+        instruction:
+          "Cover the pot tightly with aluminum foil to trap all steam, then press the heavy lid down firmly. Place a flat cast-iron tawa or griddle over medium heat for 5 minutes until very hot, then set the biryani pot directly onto the tawa. Reduce heat to low and allow the biryani to steam under gentle dum for 15 minutes. Turn off the heat and let the pot rest undisturbed for 10 minutes without opening the lid.",
+        tip: "Using a tawa as a heat diffuser prevents direct flame contact with the bottom of the pot, ensuring the delicate fish and bottom rice grains never scorch.",
+      },
+      {
+        step: 7,
+        title: "Rest & Gentle Plating",
+        instruction:
+          "Uncover the pot to release the glorious aroma of saffron, ghee, and ocean-fresh fish. Using a flat saucer or wide wooden spatula, gently lift portions from the side down to the bottom, placing fluffy golden rice grains and whole tender fish fillets onto a wide serving platter. Garnish with fresh cilantro sprigs and extra lemon wheels. Serve hot with chilled cucumber raita.",
+      },
+    ],
+    chefNotes: [
+      "Firm Fish Selection: Always choose thick, meaty fillets (like cod, sea bass, halibut, or kingfish) that don't flake apart easily. Delicate fish like tilapia or whiting disintegrates under the weight of rice.",
+      "The Saucer Method: Never stir biryani with a large serving spoon, which shatters the long rice grains and breaks the fish. Always use a flat saucer or palette knife to scoop gently from the bottom.",
+      "70% Rice Rule: The moisture released from the fish as it steams in the dum provides the exact amount of liquid needed to finish cooking the remaining 30% of the rice to fluffy perfection.",
+    ],
+    nutrition: {
+      calories: 510,
+      proteinGrams: 36,
+      carbsGrams: 58,
+      fatGrams: 14,
+      fiberGrams: 3,
+      sodiumMg: 580,
+      servingSizeDescription: "1 generous plate of fish biryani with fish fillet and rice (approx. 380g)",
+    },
+    storageInstructions:
+      "Allow leftovers to cool completely, transfer to an airtight glass container, and refrigerate for up to 2 days. Reheat gently in a covered skillet with a splash of water over low heat, or microwave on medium power to preserve fish moisture.",
+    freezingInstructions:
+      "Due to the delicate texture of cooked fish and steamed rice, freezing is not recommended. Freshly made fish biryani is best enjoyed the day it is cooked.",
+    servingSuggestions: [
+      "Chilled Herb Raita: Whisk Greek yogurt with grated cucumber, minced mint, roasted cumin, and black salt.",
+      "Tangy Lemon & Mango Pickle: Adds a sharp, sour counterpoint to the buttery rice.",
+      "Hard-Boiled Spiced Eggs: Halved boiled eggs dusted with roasted cumin and Kashmiri chili make a traditional royal garnish.",
+      "Fresh Kachumber Salad: Crisp diced cucumbers, tomatoes, red onions, and cilantro tossed in fresh lime juice.",
+    ],
+    faqs: [
+      {
+        question: "Can I make this fish biryani with salmon?",
+        answer:
+          "Yes! Salmon works wonderfully because of its rich, heart-healthy omega-3 fats and firm texture. Sear it lightly on both sides before layering with the basmati rice.",
+      },
+      {
+        question: "How do I prevent the fish from smelling fishy in the biryani?",
+        answer:
+          "Always use ocean-fresh fish. Marinating with fresh lemon juice, turmeric, and ginger-garlic paste naturally deodorizes the fish while infusing it with vibrant savory flavor.",
+      },
+      {
+        question: "Can I use bone-in fish steaks instead of boneless fillets?",
+        answer:
+          "Yes! Traditional Bengali Macher Biryani often uses thick center-cut bone-in steaks of Rohu, Katla, or Ilish. Just ensure your dinner guests are aware of the bones.",
+      },
+      {
+        question: "What is 'dum' cooking and why is it important?",
+        answer:
+          "Dum cooking is an ancient Mughlai technique of trapping fragrant steam in a sealed pot. It allows the subtle flavors of saffron, whole spices, and fish juices to permeate every single grain of basmati rice evenly without drying out the ingredients.",
+      },
+    ],
+    author: {
+      name: "Chef Bodiul Alam",
+      role: "Culinary Director & Coastal Cuisine Specialist",
+    },
+    updatedDate: "September 23, 2026",
+    tags: [
+      "Fish Biryani",
+      "মাছের বিরিয়ানি",
+      "برياني السمك",
+      "مچھلی کی بریانی",
+      "Macher Biryani",
+      "Halal Seafood",
+      "Halal Biryani",
+      "Royal Mughlai",
+      "Coastal Feast",
+      "Basmati Rice",
+      "Dinner Party Showstopper",
+      "High Protein",
+    ],
+  },
+  {
+    id: "rec-fish-egg-curry-ilish",
+    slug: "fish-egg-curry-ilish",
+    title: "Fish Egg Curry ILISH (Hilsa Fish Egg Curry - ইলিশ মাছের ডিম ভুনা)",
+    category: "Fish & Seafood",
+    categorySlug: "halal-seafood",
+    cuisine: "Bengali / Noakhali Coastal Heritage (Halal)",
+    description:
+      "Prized whole silver Hilsa (Ilish) fish egg roe sacs lightly seared in pungent mustard oil and simmered in a luscious onion, garlic, cumin, and green chili gravy.",
+    introStory:
+      "Fish Egg Curry ILISH (Hilsa Fish Egg Curry / ইলিশ মাছের ডিম ভুনা / কারি)—the undisputed gold standard of monsoon coastal Bengali cuisine—is an artisanal delicacy cherished across Bangladesh and West Bengal. When the Padma and Meghna rivers swell during the monsoon rains, mature silver Hilsa (Tenualosa ilisha) swim upstream, yielding pairs of plump, crescent-shaped roe sacs bursting with delicate, rich golden eggs. In our heritage Noakhali recipe, the whole egg sacs are carefully rinsed and patted dry, keeping their paper-thin natural membrane intact. Tossed gently in sea salt and bright yellow turmeric, they are lightly flash-seared in bubbling virgin cold-pressed mustard oil (shorsher tel) to firm their outer casing while preserving an intensely buttery, creamy interior. The roe is then braised in a rich, deeply caramelized onion base tempered with aromatic nigella seeds (kalo jeere), freshly ground cumin, coriander, minced garlic, and a splash of mustard paste. As the gravy thickens, vibrant red and green bird's eye chilies are folded in to release their fresh, fruity perfume without overwhelming heat. Poured hot over steaming platters of fragrant white rice or soft hand-rolled rotis, each spoonful offers a sensational pop of savory, buttery river caviar bathed in spicy, pungent mustard gravy.",
+    heroImage: IMAGES.ilishFishEggCurry,
+    prepTimeMinutes: 15,
+    cookTimeMinutes: 20,
+    totalTimeMinutes: 35,
+    servings: 4,
+    difficulty: "Medium",
+    calories: 340,
+    rating: 4.99,
+    reviewCount: 198,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified. Sourced exclusively from wild-caught river Hilsa (Tenualosa ilisha)—a scaled fish species universally declared pure and Halal across all Islamic jurisprudential schools. Cooked strictly with unadulterated cold-pressed mustard oil, whole spices, and natural aromatics with zero alcohol or cross-contamination.",
+    potentialCautionNotes:
+      "Fish egg sacs contain delicate natural membranes; handle gently during searing so the roe does not rupture into the oil.",
+    ingredients: [
+      { amount: "400", unit: "g", name: "Fresh Hilsa (Ilish) fish egg roe sacs", notes: "approx. 4 to 6 whole pairs, rinsed gently with cold water and patted dry" },
+      { amount: "1/2", unit: "tsp", name: "Ground turmeric", notes: "for initial dusting on the roe" },
+      { amount: "1/2", unit: "tsp", name: "Fine sea salt", notes: "for initial seasoning on the roe" },
+      { amount: "4", unit: "tbsp", name: "Pure cold-pressed mustard oil (shorsher tel)", notes: "divided: 2 tbsp for light searing, 2 tbsp for aromatic curry base" },
+      { amount: "1/2", unit: "tsp", name: "Nigella seeds (kalo jeere / kalonji)", notes: "whole seeds for temper" },
+      { amount: "1.5", unit: "cups", name: "Red onions", notes: "very finely sliced" },
+      { amount: "1", unit: "tbsp", name: "Ginger-garlic paste", notes: "freshly ground 50/50 ratio" },
+      { amount: "1", unit: "tsp", name: "Kashmiri red chili powder", notes: "for vibrant red color and gentle warmth" },
+      { amount: "1/2", unit: "tsp", name: "Ground turmeric (for gravy)", notes: "for brilliant golden-yellow hue" },
+      { amount: "1", unit: "tsp", name: "Roasted cumin powder (bhuna jeera)", notes: "freshly roasted and ground" },
+      { amount: "1", unit: "tsp", name: "Ground coriander", notes: "for herbal sweetness" },
+      { amount: "1", unit: "tsp", name: "Yellow mustard paste (shorshe bata)", notes: "soaked and blended with a pinch of salt and green chili" },
+      { amount: "1/2", unit: "cup", name: "Warm water", notes: "to create a luscious clinging bhuna gravy" },
+      { amount: "5", unit: "whole", name: "Fresh green chilies", notes: "slit down the middle for aroma" },
+      { amount: "2", unit: "whole", name: "Fresh red chilies", notes: "for visual brightness and mild pungency" },
+      { amount: "2", unit: "tbsp", name: "Fresh cilantro leaves", notes: "finely chopped for garnish" },
+      { amount: "1/2", unit: "tsp", name: "Raw virgin mustard oil", notes: "drizzled right before serving for authentic Bengali pungent kick" },
+    ],
+    substitutions: [
+      {
+        original: "Hilsa (Ilish) fish roe",
+        substitute: "Rohu (Rui), Katla, or Salmon roe / fish eggs",
+        notes: "Rohu or Katla fish roe has a slightly denser grain but cooks beautifully using the identical bhuna technique.",
+      },
+      {
+        original: "Mustard oil",
+        substitute: "Pure ghee or neutral peanut oil",
+        notes: "Mustard oil is iconic to Bengali fish preparations, but ghee delivers a rich, buttery royal profile.",
+      },
+      {
+        original: "Yellow mustard paste",
+        substitute: "Dijon mustard or skip entirely",
+        notes: "Adds signature Bengali piquancy to the onion gravy.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Gently Clean & Season the Fish Roe",
+        instruction:
+          "Carefully inspect the whole Hilsa egg roe sacs under a slow trickle of cold water, keeping the delicate natural protective membrane intact. Pat bone-dry with paper towels. Place the roe on a plate, dust with 1/2 teaspoon turmeric and 1/2 teaspoon fine sea salt, and gently rub on all sides with your fingertips. Let sit for 5 minutes.",
+        tip: "Never cut or puncture the roe sacs before frying; the outer membrane seals in the moisture and prevents the eggs from scattering in the oil.",
+      },
+      {
+        step: 2,
+        title: "Flash-Sear in Pungent Mustard Oil",
+        instruction:
+          "Heat 2 tablespoons of pure mustard oil in a wide heavy-bottomed karahi or skillet over medium heat until it lightly smokes (reaching its pungent smoke point), then reduce the heat to medium-low. Gently slide in the seasoned Hilsa egg sacs in a single layer. Fry undisturbed for 1.5 to 2 minutes on the first side until the skin firms and turns golden yellow. Using a soft silicone spatula, gently flip and fry the other side for 1.5 minutes. Transfer to a clean plate immediately. Do not over-fry.",
+        tip: "Fish roe hardens quickly if overcooked; searing for just 3 minutes total keeps the interior custardy and tender.",
+      },
+      {
+        step: 3,
+        title: "Temper Nigella Seeds & Caramelize Onions",
+        instruction:
+          "In the same skillet, add the remaining 2 tablespoons of mustard oil. When hot, toss in the 1/2 teaspoon of nigella seeds (kalo jeere) and let them crackle for 15 seconds to release their peppery herbal oils. Add the sliced red onions and 1/2 teaspoon sea salt. Sauté over medium heat for 6 to 8 minutes, stirring frequently, until the onions soften, collapse, and turn a rich translucent golden brown.",
+      },
+      {
+        step: 4,
+        title: "Bloom the Bengali Spice Pastes (Koshano)",
+        instruction:
+          "Stir in the ginger-garlic paste and sauté for 1 minute until the raw aroma dissipates. Add the Kashmiri red chili powder, remaining turmeric, roasted cumin powder, ground coriander, and yellow mustard paste. Pour in 2 tablespoons of warm water to prevent the dry spices from burning. Sauté vigorously ('koshano') for 2 to 3 minutes until the oil separates and glistens at the surface of the spice paste.",
+      },
+      {
+        step: 5,
+        title: "Simmer Gravy & Slide in Seared Roe",
+        instruction:
+          "Pour in 1/2 cup of warm water and bring the gravy to a gentle simmer. Carefully slide the seared Hilsa fish egg sacs back into the pan, nestling them down into the spiced sauce. Scatter the slit green chilies and whole red chilies across the top. Cover the pan with a tight-fitting lid, lower the heat to gentle simmer, and cook undisturbed for 6 to 8 minutes so the roe drinks in the spiced gravy.",
+      },
+      {
+        step: 6,
+        title: "Thicken Gravy & Final Aromatics",
+        instruction:
+          "Remove the lid and gently spoon the thick, glossy onion-mustard gravy over the tops of the egg sacs. The gravy should cling tightly to the roe (bhuna style). Drizzle 1/2 teaspoon of raw cold-pressed mustard oil over the dish and scatter fresh chopped cilantro across the surface. Turn off the heat and let the curry rest covered for 3 minutes.",
+        tip: "The final drizzle of raw virgin mustard oil right before serving is a time-honored Noakhali secret that imparts a vibrant, authentic mustard aroma (jhaanjh).",
+      },
+      {
+        step: 7,
+        title: "Serve Piping Hot",
+        instruction:
+          "Carefully ladle the whole golden Hilsa roe sacs into a warm serving bowl, pouring the rich, chili-studded onion gravy all around them. Serve hot alongside piping bowls of steaming white basmati or kalijeera rice, fresh lemon wedges, and extra green chilies.",
+      },
+    ],
+    chefNotes: [
+      "The Fragility Rule: Hilsa roe is one of the most delicate ingredients in coastal cooking. Always handle with extreme care and avoid vigorous stirring once the egg sacs are in the pan.",
+      "Smoke the Mustard Oil: Cold-pressed kachi ghani mustard oil has natural pungency. Heating it until it just starts to wisps of smoke mellows the harshness into a rounded, nutty flavor.",
+      "The Bhuna Consistency: Unlike watery fish curries (jhol), Ilish Macher Dim is traditionally cooked as a 'bhuna' where the onion gravy is cooked down until thick, jammy, and clinging to the roe.",
+    ],
+    nutrition: {
+      calories: 340,
+      proteinGrams: 28,
+      carbsGrams: 12,
+      fatGrams: 20,
+      fiberGrams: 2,
+      sodiumMg: 520,
+      servingSizeDescription: "1 generous portion of Hilsa fish roe with gravy (approx. 180g)",
+    },
+    storageInstructions:
+      "Store leftover curry in a glass airtight container in the refrigerator for up to 2 days. Reheat gently in a covered saucepan over low heat with a tablespoon of water; avoid high heat or microwave blasting which can pop the delicate eggs.",
+    freezingInstructions:
+      "Uncooked fresh Hilsa roe sacs can be individually wrapped in plastic wrap and frozen for up to 1 month. Thaw gently in the refrigerator overnight before cooking.",
+    servingSuggestions: [
+      "Steaming White Rice (Bhaat): The ultimate classic pairing—mash the tender fish eggs into hot rice with a spoonful of the spicy mustard gravy.",
+      "Patla Masoor Dal: A simple, comforting red lentil soup with a squeeze of fresh lime balances the rich fish roe.",
+      "Fried Green Chilies & Lemon: Serve with whole fresh chilies and juicy lemon wedges for guests who love extra heat and acidity.",
+      "Crispy Begun Bhaja: Thick rounds of turmeric-spiced fried eggplant make a quintessential companion dish.",
+    ],
+    faqs: [
+      {
+        question: "What does Hilsa (Ilish) fish egg taste like?",
+        answer:
+          "Hilsa fish eggs have a luxurious, buttery, rich, and slightly nutty flavor with a fine granular texture that gently pops in the mouth. It is widely regarded as the caviar of the Ganges and Meghna rivers.",
+      },
+      {
+        question: "Can I make this recipe if the egg sac is already broken?",
+        answer:
+          "Yes! If your fish roe is broken or loose, you can scramble it into the sautéed onions and spices to create 'Ilish Dim Bhaji' (spiced scrambled fish eggs), which is equally beloved.",
+      },
+      {
+        question: "Is Hilsa fish egg Halal?",
+        answer:
+          "Yes, 100% Halal. Hilsa (Ilish) is a scaled fish species, and both its meat and roe are universally recognized as Halal across all major schools of Islamic jurisprudence.",
+      },
+      {
+        question: "How do I know when the fish eggs are done cooking?",
+        answer:
+          "The roe will feel firm to the gentle touch, plump up slightly, and turn an opaque golden-yellow throughout. It cooks rapidly—usually taking just 8 to 10 minutes total.",
+      },
+    ],
+    author: {
+      name: "Chef Bodiul Alam",
+      role: "Culinary Director & Riverine Heritage Specialist",
+    },
+    updatedDate: "September 23, 2026",
+    tags: [
+      "Fish Egg Curry ILISH",
+      "Ilish Macher Dim Bhuna",
+      "Hilsa Fish Egg Curry",
+      "Hilsa Roe",
+      "Ilish Dim",
+      "ইলিশ মাছের ডিম ভুনা",
+      "Halal Seafood",
+      "Bengali Heritage",
+      "Noakhali Cuisine",
+      "Mustard Oil Curry",
+      "Monsoon Delicacy",
+      "High Protein",
+    ],
+  },
+  {
+    id: "rec-chicken-lo-mein",
+    slug: "chicken-lo-mein",
+    title: "Chicken Lo Mein (চিকেন লো মেইন / چکن لو مین)",
+    category: "Chicken",
+    categorySlug: "halal-chicken",
+    cuisine: "Chinese / Cantonese Wok Takeout / Asian Street Food (Halal)",
+    description:
+      "Tender velveted chicken breast tossed with chewy lo mein egg noodles, crisp cabbage, julienned bell peppers, and scallions in a glossy, savory-sweet dark soy glaze.",
+    introStory:
+      "Chicken Lo Mein (চিকেন লো মেইন / چکن لو مین / دجاج لو مين)—the undisputed monarch of Cantonese takeout and vibrant Asian street-food markets—is a celebration of wok mastery, contrasting textures, and savory umami. The Cantonese term 'Lō Mihn' translates to 'stirred noodles,' distinguishing it from crispy pan-fried chow mein. In this authentic Halal kitchen recipe, tender strips of boneless chicken breast undergo traditional Chinese 'velveting' with light soy sauce, cornstarch, and toasted sesame oil to ensure every slice remains silky, juicy, and succulent even over intense wok heat. Fresh yellow lo mein egg noodles are boiled until springy and al dente, then flash-tossed in a smoking-hot wok alongside crisp julienned red and green bell peppers, shredded green cabbage, sweet carrots, and pungent scallions. An amber-dark sauce formulated with premium dark soy sauce, naturally brewed light soy sauce, certified Halal oyster sauce, a dash of pure toasted sesame oil, minced ginger, and garlic coats every single noodle strand in a glistening, aromatic veil. Lifted high from the wok with tongs, each mouthful yields springy chew, tender poultry, crunchy garden vegetables, and deep wok-charred perfume.",
+    heroImage: IMAGES.chickenLoMein,
+    prepTimeMinutes: 20,
+    cookTimeMinutes: 10,
+    totalTimeMinutes: 30,
+    servings: 4,
+    difficulty: "Easy",
+    calories: 430,
+    rating: 4.98,
+    reviewCount: 342,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified. Made with zabiha Halal chicken breast, authentic alcohol-free Chinese pantry staples, certified Halal oyster sauce, naturally brewed soy sauces, and 100% vegetarian noodle dough. Free from Shaoxing cooking wine, mirin, pork lard, or cross-contamination.",
+    potentialCautionNotes:
+      "High-heat wok cooking happens very quickly; have all ingredients chopped and the sauce pre-mixed before firing up the stove.",
+    ingredients: [
+      { amount: "1", unit: "lb", name: "Halal boneless skinless chicken breast", notes: "approx. 450g, sliced thinly across the grain into bite-sized strips" },
+      { amount: "1", unit: "tbsp", name: "Light soy sauce (for chicken marinade)", notes: "naturally brewed" },
+      { amount: "1", unit: "tbsp", name: "Cornstarch", notes: "creates a protective velvety moisture seal around the chicken" },
+      { amount: "1", unit: "tsp", name: "Toasted sesame oil (for chicken)", notes: "for nutty warmth" },
+      { amount: "1", unit: "tbsp", name: "Water or chicken broth", notes: "for chicken hydration during velveting" },
+      { amount: "1/4", unit: "tsp", name: "Ground white pepper", notes: "classic Chinese peppery heat" },
+      { amount: "12", unit: "oz", name: "Lo mein egg noodles (fresh or dried)", notes: "approx. 340g, or fresh yakisoba / thick ramen noodles" },
+      { amount: "2", unit: "tbsp", name: "Neutral vegetable cooking oil", notes: "divided: 1 tbsp for chicken, 1 tbsp for aromatics & noodles" },
+      { amount: "3", unit: "cloves", name: "Fresh garlic", notes: "finely minced" },
+      { amount: "1", unit: "tbsp", name: "Fresh ginger", notes: "peeled and finely grated or minced" },
+      { amount: "1", unit: "medium", name: "Red bell pepper", notes: "cored and thinly julienned" },
+      { amount: "1/2", unit: "medium", name: "Green bell pepper", notes: "cored and thinly julienned" },
+      { amount: "1", unit: "cup", name: "Green cabbage", notes: "thinly shredded" },
+      { amount: "1", unit: "medium", name: "Carrot", notes: "peeled and cut into thin matchsticks" },
+      { amount: "4", unit: "stalks", name: "Scallions / Green onions", notes: "cut into 2-inch batons, whites and greens separated" },
+      { amount: "2", unit: "tbsp", name: "Light soy sauce (for sauce)", notes: "for clean salty savory umami" },
+      { amount: "1.5", unit: "tbsp", name: "Dark soy sauce", notes: "imparts the iconic rich deep-amber glaze and subtle caramel sweetness" },
+      { amount: "2", unit: "tbsp", name: "Certified Halal oyster sauce", notes: "adds thick, velvety body and savory umami" },
+      { amount: "1", unit: "tsp", name: "Raw cane sugar", notes: "balances the saltiness of the soy sauces" },
+      { amount: "1", unit: "tsp", name: "Pure toasted sesame oil (for sauce)", notes: "finishing nutty sheen" },
+      { amount: "3", unit: "tbsp", name: "Low-sodium Halal chicken broth", notes: "loosens the sauce to coat every noodle strand effortlessly" },
+    ],
+    substitutions: [
+      {
+        original: "Lo mein egg noodles",
+        substitute: "Fresh ramen noodles, udon, or Italian spaghetti / linguine",
+        notes: "If using dried spaghetti, cook al dente with 1/2 tsp baking soda in the boiling water for an authentic springy ramen/lo mein chew.",
+      },
+      {
+        original: "Chicken breast",
+        substitute: "Boneless chicken thighs, flank steak, or peeled tiger shrimp",
+        notes: "Chicken thighs stay remarkably juicy; shrimp requires just 90 seconds in the wok.",
+      },
+      {
+        original: "Halal oyster sauce",
+        substitute: "Vegetarian mushroom stir-fry sauce",
+        notes: "Provides identical dark gloss and rich savory depth with 100% plant-based ingredients.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Whisk the Master Lo Mein Sauce",
+        instruction:
+          "In a small bowl, whisk together 2 tablespoons light soy sauce, 1.5 tablespoons dark soy sauce, 2 tablespoons certified Halal oyster sauce, 1 teaspoon sugar, 1 teaspoon toasted sesame oil, and 3 tablespoons chicken broth until the sugar dissolves completely. Set the sauce bowl next to your stove.",
+        tip: "Pre-mixing your stir-fry sauce is essential: high-heat wok cooking happens in minutes and leaves zero time to measure seasonings on the fly.",
+      },
+      {
+        step: 2,
+        title: "Velvet the Chicken Breast",
+        instruction:
+          "Slice the chicken breast into thin bite-sized strips about 1/4-inch thick. Place into a bowl with 1 tablespoon light soy sauce, 1 tablespoon cornstarch, 1 teaspoon sesame oil, 1 tablespoon water, and 1/4 teaspoon white pepper. Mix thoroughly with your fingers until the liquid is fully absorbed into the meat and a silky sheen coats each piece. Let marinate for 15 minutes.",
+        tip: "Cornstarch creates a gelatinous protective shield around the chicken, locking in natural juices so lean chicken breast remains wonderfully tender.",
+      },
+      {
+        step: 3,
+        title: "Cook, Drain & Oil the Noodles",
+        instruction:
+          "Bring a large pot of water to a rolling boil. Add the lo mein egg noodles and cook until just al dente (about 3 to 4 minutes for fresh noodles, 5 to 6 minutes for dried, or 1 minute less than package instructions). Immediately drain in a colander and rinse thoroughly under cold tap water to stop the cooking and wash away excess surface starch. Drizzle with 1 teaspoon of sesame oil and toss gently so the strands stay slippery and separate.",
+      },
+      {
+        step: 4,
+        title: "Flash-Sear the Velveted Chicken",
+        instruction:
+          "Heat 1 tablespoon of neutral oil in a large wok or wide 12-inch heavy skillet over high heat until wisps of smoke appear. Add the marinated chicken strips in a single layer. Let sear undisturbed for 90 seconds until lightly browned on the bottom, then toss vigorously for 2 minutes until cooked through and opaque. Transfer the cooked chicken to a clean plate, leaving any savory oil in the wok.",
+      },
+      {
+        step: 5,
+        title: "Wok-Toss the Crisp Aromatics & Vegetables",
+        instruction:
+          "Add the remaining 1 tablespoon of oil to the screaming-hot wok. Toss in the minced garlic, ginger, and white parts of the scallions. Stir-fry rapidly for 20 seconds until fragrant without burning. Add the julienned red and green bell peppers, shredded cabbage, and carrots. Stir-fry over high heat for 1 to 2 minutes until the vegetables are vibrant and tender-crisp with light wok-char.",
+      },
+      {
+        step: 6,
+        title: "Toss Noodles, Chicken & Pour Dark Amber Glaze",
+        instruction:
+          "Return the cooked chicken and any resting juices back to the wok. Add the drained lo mein noodles, the green scallion tops, and pour the prepared sauce all over the noodles. Using metal kitchen tongs in both hands, lift and toss the noodles vigorously over high heat for 1.5 to 2 minutes until every single noodle strand is saturated with the glossy, deep-amber savory glaze and steaming hot.",
+      },
+      {
+        step: 7,
+        title: "Garnish & Serve Sizzling",
+        instruction:
+          "Transfer the steaming chicken lo mein to a large serving platter or individual noodle bowls, lifting tall tangled nests with tongs. Garnish with a final sprinkle of sliced green scallions and toasted sesame seeds, with homemade chili crisp on the side for those who enjoy fiery heat. Serve immediately.",
+      },
+    ],
+    chefNotes: [
+      "The Velveting Secret: Never skip the cornstarch and light soy marinade. In Chinese banquet kitchens, velveting is the defining technique that turns lean chicken breast melt-in-your-mouth soft.",
+      "The Cold Water Rinse: Always rinse boiled noodles under cold water and toss with sesame oil. This prevents them from swelling, sticking together, and turning mushy when hitting the hot sauce in the wok.",
+      "Tongs Are Essential: Using two wooden spatulas or kitchen tongs allows you to lift and untangle the noodles smoothly without chopping them into broken short pieces.",
+    ],
+    nutrition: {
+      calories: 430,
+      proteinGrams: 32,
+      carbsGrams: 52,
+      fatGrams: 11,
+      fiberGrams: 4,
+      sodiumMg: 780,
+      servingSizeDescription: "1 generous bowl of chicken lo mein noodles with vegetables (approx. 320g)",
+    },
+    storageInstructions:
+      "Store leftover chicken lo mein in an airtight glass container in the refrigerator for up to 4 days. Reheat in a smoking-hot skillet or wok with a tablespoon of water or broth for 2 minutes until heated through and glossy.",
+    freezingInstructions:
+      "Cooked lo mein noodles can be frozen in freezer-safe containers for up to 1 month. Thaw overnight in the refrigerator and stir-fry briefly to revive the chewy texture.",
+    servingSuggestions: [
+      "Crispy Halal Spring Rolls: Serve alongside crunchy vegetable or chicken egg rolls with sweet duck sauce.",
+      "Hot Chili Crisp Oil: Drizzle our homemade Sichuan chili oil over the noodles for spicy numbing crunch.",
+      "Comforting Egg Drop Soup: A light, silky chicken broth soup with beaten egg ribbons balances the savory noodles.",
+      "Stir-Fried Garlic Bok Choy: Add steamed baby bok choy for extra fresh garden greens.",
+    ],
+    faqs: [
+      {
+        question: "What is the difference between Lo Mein and Chow Mein?",
+        answer:
+          "Lo Mein means 'stirred noodles'—the boiled noodles are tossed gently into the sauce at the very end to stay soft, chewy, and coated in rich glaze. Chow Mein means 'fried noodles,' where the noodles are fried until crisp on the bottom before toppings are spooned over.",
+      },
+      {
+        question: "Can I use spaghetti if I cannot find Chinese egg noodles?",
+        answer:
+          "Yes! Regular Italian spaghetti or linguine works surprisingly well. Add 1/2 teaspoon of baking soda to the boiling water; the alkaline water alters the wheat starch, giving regular pasta the bouncy, chewy texture and yellowish hue of Asian egg noodles!",
+      },
+      {
+        question: "Is this recipe authentic without Shaoxing wine?",
+        answer:
+          "Yes. Authentic Halal Chinese cooking replaces alcohol-based cooking wines with rich Halal chicken broth, a touch of apple cider vinegar, and fragrant ginger-garlic paste, yielding identical umami and aromatic depth without any alcohol.",
+      },
+      {
+        question: "Why is dark soy sauce necessary?",
+        answer:
+          "Dark soy sauce is thicker, less salty, and sweeter than regular light soy sauce. It is what gives restaurant-style Lo Mein that gorgeous, glistening mahogany-amber color and deep caramelized undertone.",
+      },
+    ],
+    author: {
+      name: "Chef Bodiul Alam",
+      role: "Culinary Director & Asian Wok Specialist",
+    },
+    updatedDate: "September 23, 2026",
+    tags: [
+      "Chicken Lo Mein",
+      "চিকেন লো মেইন",
+      "چکن لو مین",
+      "دجاج لو مين",
+      "Halal Chicken",
+      "Chinese Takeout",
+      "Wok Noodles",
+      "Lo Mein",
+      "Asian Street Food",
+      "Quick Weeknight Meal",
+      "High Protein",
+      "Noodle Bowls",
+    ],
+  },
+  {
+    id: "rec-authentic-bangladeshi-beef-curry",
+    slug: "authentic-bangladeshi-beef-curry",
+    title: "Authentic Bangladeshi Beef Curry (খাঁটি বাংলাদেশি গরুর মাংসের কারি / كاري اللحم البقري)",
+    category: "Beef, Lamb & Mutton",
+    categorySlug: "halal-beef",
+    cuisine: "Bengali / Bangladeshi Heritage (Halal)",
+    description:
+      "Melt-in-your-mouth slow-braised beef chunks simmered in a deeply caramelized onion, garlic, and mustard oil gravy with whole garam masala, glistening spiced tori oil, and refreshing citrus garnish.",
+    introStory:
+      "Authentic Bangladeshi Beef Curry (খাঁটি বাংলাদেশি গরুর মাংসের কারি / كاري اللحم البقري البنغلاديشي الأصيل / مستند بنگلہ دیشی بیف کری)—revered in households from Dhaka to Chittagong and Sylhet—is the crowning glory of Bengali home cooking and Eid celebratory banquets. Unlike light, brothy curries, an authentic Bangladeshi beef curry relies on the time-honored technique of 'Koshano'—a patient, multi-stage braising method where generous cuts of bone-in beef chuck, brisket, and marrow bone are browned in virgin cold-pressed mustard oil with a lavish mountain of finely sliced red onions. As whole spices (black cardamom, fragrant green cardamom, Ceylon cinnamon, cloves, and bay leaves) crackle and bloom, the beef slowly releases its rich natural juices. Without adding a drop of water initially, the meat simmers gently in its own juices and rendered marrow, allowing the onions to dissolve completely into a velvety, thick mahogany sauce. A vibrant blend of roasted cumin (bhuna jeera), coriander, turmeric, and Kashmiri chili infuses every fiber with deep savory warmth. When cooked to fork-tender perfection, the spiced fat separates to form that prized, glistening ruby-red layer of seasoned oil ('tori' or 'roghan') at the top. Served in a wide glass casserole dish with a regal touch of sweet orange slices and fresh mint to cut through the decadent richness, every mouthful of tender meat and clinging gravy is an unforgettable testament to Bangladeshi culinary heritage.",
+    heroImage: IMAGES.bangladeshiBeefCurry,
+    prepTimeMinutes: 25,
+    cookTimeMinutes: 75,
+    totalTimeMinutes: 100,
+    servings: 6,
+    difficulty: "Medium",
+    calories: 460,
+    rating: 4.99,
+    reviewCount: 388,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified. Prepared exclusively with hand-slaughtered Zabiha Halal beef cuts (bone-in chuck, brisket, and marrow bone), pure unadulterated cold-pressed mustard oil, whole spices, and natural aromatics. Completely free of alcohol, artificial tenderizers, or gelatinous thickeners.",
+    potentialCautionNotes:
+      "Bone-in cuts contain bone fragments and marrow; eat with care. The gravy is rich with natural beef fat and mustard oil.",
+    ingredients: [
+      { amount: "2.5", unit: "lbs", name: "Zabiha Halal beef (mix of chuck roast, brisket, and marrow bones)", notes: "cut into generous 1.5-inch pieces with a little fat attached" },
+      { amount: "4", unit: "tbsp", name: "Pure cold-pressed mustard oil (shorsher tel)", notes: "divided: 3 tbsp for cooking, 1 tbsp for final aroma" },
+      { amount: "3", unit: "cups", name: "Red onions", notes: "approx. 4 large onions, very finely sliced" },
+      { amount: "2", unit: "tbsp", name: "Ginger paste", notes: "freshly grated" },
+      { amount: "2", unit: "tbsp", name: "Garlic paste", notes: "freshly crushed" },
+      { amount: "2", unit: "pods", name: "Black cardamom (boro elaichi)", notes: "cracked open for smoky depth" },
+      { amount: "5", unit: "pods", name: "Green cardamom", notes: "lightly bruised" },
+      { amount: "2", unit: "sticks", name: "Cinnamon (dalchini)", notes: "2-inch sticks" },
+      { amount: "5", unit: "whole", name: "Cloves (lobongo)", notes: "whole fragrant buds" },
+      { amount: "3", unit: "leaves", name: "Bay leaves (tej pata)", notes: "torn to release fragrance" },
+      { amount: "1.5", unit: "tbsp", name: "Kashmiri red chili powder", notes: "for brilliant deep ruby-red color and mild heat" },
+      { amount: "1", unit: "tsp", name: "Hot red chili powder", notes: "for traditional Bengali warmth (adjust to taste)" },
+      { amount: "1", unit: "tbsp", name: "Ground turmeric", notes: "earthy golden base" },
+      { amount: "1.5", unit: "tbsp", name: "Ground coriander", notes: "sweet herbal body" },
+      { amount: "1.5", unit: "tbsp", name: "Roasted cumin powder (bhuna jeera)", notes: "divided: 1 tbsp in braise, 1/2 tbsp dusted at finish" },
+      { amount: "1.5", unit: "tsp", name: "Fine sea salt", notes: "or to taste" },
+      { amount: "1.5", unit: "cups", name: "Boiling water", notes: "only added after meat is thoroughly browned/koshano" },
+      { amount: "1", unit: "tsp", name: "Bengali Shahi Garam Masala powder", notes: "blend of mace, nutmeg, cardamom, and cinnamon" },
+      { amount: "6", unit: "whole", name: "Fresh green chilies", notes: "slit down the center for fresh aroma without extra fiery heat" },
+      { amount: "2", unit: "slices", name: "Fresh sweet orange", notes: "cut into half-wheels for festive citrus garnish" },
+      { amount: "1", unit: "sprig", name: "Fresh garden mint leaves", notes: "for aromatic top garnish" },
+    ],
+    substitutions: [
+      {
+        original: "Beef chuck & brisket",
+        substitute: "Bone-in goat, mutton shoulder, or veal shank",
+        notes: "Goat or mutton cooks beautifully with the same slow koshano technique (simmer for 60 minutes).",
+      },
+      {
+        original: "Mustard oil",
+        substitute: "Pure cow ghee or neutral sunflower oil",
+        notes: "Ghee provides a luxurious Mughlai banquet profile; mustard oil provides iconic rustic Bengali punch.",
+      },
+      {
+        original: "Black cardamom",
+        substitute: "Extra green cardamom + 1 pinch smoked paprika",
+        notes: "Replicates the subtle smoky undertone that black cardamom imparts to slow-cooked beef.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Clean & Drain the Beef",
+        instruction:
+          "Rinse the cut beef chunks and bone marrow pieces under cold running water. Drain thoroughly in a colander for 10 minutes and pat dry with paper towels. Excess water prevents the meat from searing properly.",
+      },
+      {
+        step: 2,
+        title: "Bloom Whole Spices in Mustard Oil",
+        instruction:
+          "Heat 3 tablespoons of pure cold-pressed mustard oil in a heavy-bottomed Dutch oven or wide handi over medium-high heat until it begins to wisp with white smoke. Reduce heat to medium. Add the bay leaves, black cardamoms, green cardamoms, cinnamon sticks, and cloves. Let them sizzle and bloom for 30 to 45 seconds until intensely fragrant.",
+        tip: "Heating mustard oil until it lightly smokes mellows its raw bite into a rounded, nutty, pungent warmth.",
+      },
+      {
+        step: 3,
+        title: "Caramelize the Onions",
+        instruction:
+          "Add the 3 cups of finely sliced red onions and 1/2 teaspoon of salt to the spiced oil. Sauté over medium heat for 10 to 12 minutes, stirring regularly, until the onions soften, reduce in volume, and turn a rich, translucent golden amber color.",
+      },
+      {
+        step: 4,
+        title: "Bloom the Ginger, Garlic & Ground Spices",
+        instruction:
+          "Stir in the fresh ginger and garlic pastes. Cook for 2 minutes until the pungent raw aroma transforms into a sweet fragrance. Add the turmeric, Kashmiri red chili powder, hot chili powder, ground coriander, and 1 tablespoon of roasted cumin powder. Add 2 tablespoons of warm water to prevent the dry spices from scorching. Stir continuously for 2 minutes until the oil begins to separate from the spice paste.",
+      },
+      {
+        step: 5,
+        title: "The Master 'Koshano' (Sautéing the Beef)",
+        instruction:
+          "Add all the beef chunks and marrow bones into the caramelized spice base along with the remaining salt. Turn heat to medium-high and sauté vigorously for 15 to 20 minutes, stirring every 2 minutes. As the beef heats up, it will release its own natural savory juices. Keep sautéing until those juices evaporate and the beef is deeply coated in dark, glistening caramelized masala, with shimmering spiced oil separating at the edges.",
+        tip: "This patient 'koshano' phase is the single most important secret to authentic Bangladeshi beef curry; rushing this step produces a watery, unintegrated curry.",
+      },
+      {
+        step: 6,
+        title: "Slow-Simmer to Melt-in-Your-Mouth Tenderness",
+        instruction:
+          "Pour in 1.5 cups of boiling water (never use cold water, which shocks and toughens the meat fibers). Stir well, scraping up any caramelized brown bits stuck to the bottom of the pot. Bring to a rolling boil, then cover with a tight-fitting heavy lid and reduce heat to the lowest setting. Simmer gently for 55 to 60 minutes, stirring occasionally, until the beef is fork-tender and yields like butter when pressed with a spoon.",
+      },
+      {
+        step: 7,
+        title: "Tori Separation, Garam Masala & Garnish",
+        instruction:
+          "Uncover the pot. The gravy should be thick, velvety, and dark, with a brilliant ruby-red layer of seasoned oil ('tori' or 'roghan') floating on top. Gently fold in the slit green chilies, Bengali Shahi Garam Masala, and remaining 1/2 tablespoon of roasted cumin powder. Drizzle 1 tablespoon of fresh mustard oil or ghee over the top. Cover and let sit on low heat for 5 minutes, then turn off the heat.",
+      },
+      {
+        step: 8,
+        title: "Plate in Glass Casserole with Citrus Garnish",
+        instruction:
+          "Carefully ladle the succulent beef chunks, rich bone marrow, and clinging velvety gravy into a wide rectangular glass baking dish or ceramic serving platter, allowing the glistening red tori oil to pool attractively around the beef. Place fresh sweet orange half-slices and a sprig of fresh mint in the center as an authentic festive presentation. Serve steaming hot with fluffy basmati rice, khichuri, or flaky parathas.",
+      },
+    ],
+    chefNotes: [
+      "The Collagen Factor: Always include at least one piece of marrow bone or cartilage. The dissolved collagen during the slow braise gives the gravy its silky, spoon-coating body without needing cornstarch or flour.",
+      "Boiling Water Only: When adding liquid to the browned beef, always ensure the water is boiling hot. Adding cold water drops the temperature abruptly, contracting the meat proteins and turning beef chewy.",
+      "The Citrus Counterpoint: Garnishing with orange wheels isn't just ornamental—the gentle floral sweet citrus aroma balances the heavy beef richness and pungent mustard oil, elevating this dish into true celebration territory.",
+    ],
+    nutrition: {
+      calories: 460,
+      proteinGrams: 38,
+      carbsGrams: 9,
+      fatGrams: 30,
+      fiberGrams: 2,
+      sodiumMg: 620,
+      servingSizeDescription: "1 generous bowl of tender beef with velvety gravy (approx. 250g)",
+    },
+    storageInstructions:
+      "Like all great braised stews, this beef curry tastes even better the next day! Store in an airtight container in the refrigerator for up to 4 days. Reheat gently on the stovetop over medium-low heat with a splash of water.",
+    freezingInstructions:
+      "Freezes exceptionally well for up to 3 months. Thaw in the refrigerator overnight and simmer on low heat for 10 minutes until piping hot throughout.",
+    servingSuggestions: [
+      "Steaming Kalijeera or Basmati Rice: The ultimate canvas for soaking up the velvety spiced onion gravy.",
+      "Flaky Crispy Parathas: Tear off layers of buttery paratha to scoop up tender pieces of beef.",
+      "Bhuna Khichuri: The legendary Bengali monsoon combination of spiced lentil rice and slow-cooked beef curry.",
+      "Crisp Onion & Cucumber Kachumber Salad: Freshly squeezed lime juice and crunchy red onions provide a zesty palate cleanser.",
+    ],
+    faqs: [
+      {
+        question: "Why is the oil floating on top of the curry?",
+        answer:
+          "In South Asian culinary tradition, this glistening layer of spiced oil is called 'tori' or 'roghan'. It is the hallmark of a properly cooked, well-braised meat curry (koshano), indicating that the water has cooked down and the flavors are fully concentrated.",
+      },
+      {
+        question: "Can I make this in a pressure cooker or Instant Pot?",
+        answer:
+          "Yes! Follow the recipe through Step 5 in the pressure cooker pot. Then add 1 cup of boiling water, seal the lid, and cook under high pressure for 25 to 30 minutes. Let the pressure release naturally for 15 minutes for tender results.",
+      },
+      {
+        question: "Why is the orange garnish used in this curry?",
+        answer:
+          "Sweet citrus slices are a beloved festive presentation in Bengali banquet culture. The subtle hint of sweet orange oils wafts through the steam, perfectly cutting the deep savory richness of the beef fat and mustard oil.",
+      },
+      {
+        question: "What beef cut makes the best Bangladeshi curry?",
+        answer:
+          "Beef chuck roast (gordon/shoulder) or brisket with moderate fat marbling, combined with bone-in cuts and marrow bone. Lean cuts like sirloin or round tend to dry out and become stringy during slow cooking.",
+      },
+    ],
+    author: {
+      name: "Chef Bodiul Alam",
+      role: "Culinary Director & Bengali Heritage Specialist",
+    },
+    updatedDate: "September 23, 2026",
+    tags: [
+      "Authentic Bangladeshi Beef Curry",
+      "খাঁটি বাংলাদেশি গরুর মাংসের কারি",
+      "كاري اللحم البقري",
+      "مستند بنگلہ دیشی بیف کری",
+      "Gorur Mangsho Curry",
+      "Bengali Beef Curry",
+      "Gorur Mangsho Bhuna",
+      "Halal Beef",
+      "Eid Special",
+      "Slow Braised Beef",
+      "Mustard Oil Curry",
+      "Desi Comfort Food",
+      "High Protein",
+    ],
+  },
+  {
+    id: "rec-beef-nahari",
+    slug: "beef-nahari",
+    title: "Beef Nahari (بیف نہاری / গরুর মাংসের নিহারি / نيهاري اللحم)",
+    category: "Beef, Lamb & Mutton",
+    categorySlug: "halal-beef",
+    cuisine: "Old Delhi / Karachi / Mughlai / Bangladeshi (Halal)",
+    description:
+      "Royal Mughal slow-simmered beef shank (bong) and bone marrow stew in a velvety, spiced bone broth crowned with ginger juliennes, green chilies, fresh cilantro, and a vibrant red chili roghan oil.",
+    introStory:
+      "Beef Nahari (بیف نہاری / গরুর মাংসের নিহারি / نيهاري اللحم البقري)—the crowning culinary jewel of the Mughal royal courts and old-city breakfast bazaars from Old Delhi to Lahore, Karachi, and Old Dhaka—is a stew of majestic grandeur and unmatched therapeutic comfort. Derived from the Arabic word 'Nahar' (meaning morning or dawn), Nahari was originally slow-simmered overnight in colossal sealed copper deghs over dying embers for Nawabs and royal armies to eat after morning Fajr prayers before facing long, demanding days. At the heart of an authentic Beef Nahari are bone-in beef shanks (bong)—cuts brimming with rich connective marrow and gelatinous collagen that, over hours of gentle simmering, melt into an unctuous, silky broth. The broth is perfumed with a specialized royal 'Nihari Potli' masala featuring toasted fennel seeds (saunf), dried ginger powder (saunth), aromatic star anise, mace, nutmeg, black cardamom, and stone flower (dagad phool). To achieve its world-famous glossy, gravy-clinging texture, lightly toasted stone-ground whole wheat flour (atta) slurry is whisked into the bubbling stew. Sizzling spiced ghee with Kashmiri red chili (roghan) floats like liquid rubies on top, waiting to be garnished at the table with crisp matchstick ginger, sliced green chilies, chopped cilantro, and fresh lemon wedges, scooped up with pillowy, oven-hot tandoori naan.",
+    heroImage: IMAGES.beefNahari,
+    prepTimeMinutes: 25,
+    cookTimeMinutes: 180,
+    totalTimeMinutes: 205,
+    servings: 6,
+    difficulty: "Medium",
+    calories: 540,
+    rating: 4.99,
+    reviewCount: 462,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified. Prepared exclusively with hand-slaughtered Zabiha Halal beef shanks (bong) and marrow bones, pure cow ghee or certified Halal mustard oil, natural whole spices, and stone-ground wheat flour. Absolutely zero alcohol, artificial colors, or gelatins.",
+    potentialCautionNotes:
+      "Contains large bone marrow shanks with rich collagen. Eat marrow with a marrow spoon or tap gently onto hot naan.",
+    ingredients: [
+      { amount: "3", unit: "lbs", name: "Halal beef shank (bong) & marrow bones", notes: "cut into thick 2.5-inch pieces with bone marrow intact" },
+      { amount: "1/2", unit: "cup", name: "Pure cow ghee or mustard oil", notes: "divided: 1/4 cup for browning, 1/4 cup for finishing roghan float" },
+      { amount: "2", unit: "large", name: "Red onions", notes: "finely sliced" },
+      { amount: "2", unit: "tbsp", name: "Ginger-garlic paste", notes: "freshly crushed" },
+      { amount: "2", unit: "tbsp", name: "Kashmiri red chili powder", notes: "for rich red color and gentle warmth" },
+      { amount: "1", unit: "tsp", name: "Hot red chili powder", notes: "for traditional old-city piquancy" },
+      { amount: "1", unit: "tsp", name: "Ground turmeric", notes: "golden base" },
+      { amount: "1.5", unit: "tbsp", name: "Ground coriander", notes: "freshly ground" },
+      { amount: "1.5", unit: "tbsp", name: "Fine sea salt", notes: "or to taste" },
+      { amount: "7", unit: "cups", name: "Water or rich beef bone broth", notes: "for long slow simmer" },
+      { amount: "1/3", unit: "cup", name: "Whole wheat flour (atta)", notes: "lightly dry-toasted in a pan for 2 minutes until nutty" },
+      { amount: "3/4", unit: "cup", name: "Cold water", notes: "to whisk with toasted atta for a smooth lump-free slurry" },
+      { amount: "1.5", unit: "tbsp", name: "Fennel seeds (saunf)", notes: "toasted and finely powdered for royal Nihari masala" },
+      { amount: "1", unit: "tbsp", name: "Dry ginger powder (saunth)", notes: "signature warming heat of Nihari" },
+      { amount: "1", unit: "whole", name: "Star anise (badian ka phool)", notes: "toasted and ground" },
+      { amount: "2", unit: "pods", name: "Black cardamom seeds", notes: "seeds extracted and ground" },
+      { amount: "1/2", unit: "tsp", name: "Mace & Nutmeg (javitri & jaiphal)", notes: "freshly grated" },
+      { amount: "1", unit: "tsp", name: "Roasted cumin powder", notes: "ground" },
+      { amount: "1/4", unit: "cup", name: "Fresh ginger", notes: "peeled and cut into fine matchsticks for table garnish" },
+      { amount: "4", unit: "whole", name: "Fresh green chilies", notes: "thinly sliced into coins" },
+      { amount: "1/2", unit: "cup", name: "Fresh cilantro leaves", notes: "chopped for garnish" },
+      { amount: "2", unit: "whole", name: "Lemons", notes: "cut into wedges for table service" },
+    ],
+    substitutions: [
+      {
+        original: "Beef shank (bong)",
+        substitute: "Mutton shank (nalli), goat leg, or veal shank",
+        notes: "Mutton or goat nalli nihari is equally authentic and cooks in about 90 minutes.",
+      },
+      {
+        original: "Whole wheat flour (atta)",
+        substitute: "All-purpose flour (maida) or roasted gram flour (besan)",
+        notes: "Atta provides the traditional silky body without being pasty; besan lends an earthier nutty flavor.",
+      },
+      {
+        original: "Pure cow ghee",
+        substitute: "Mustard oil or clarified butter",
+        notes: "Deshi ghee gives that unmistakable royal Mughal aroma; mustard oil provides rustic Bengali pungency.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Toast & Blend the Royal Nihari Masala",
+        instruction:
+          "In a dry skillet over low heat, lightly toast the fennel seeds, star anise, black cardamom seeds, and cumin for 1 to 2 minutes until intensely fragrant. Transfer to a spice grinder and pulse into a fine powder with the dry ginger powder (saunth), mace, and nutmeg. Set this signature royal Nihari masala aside.",
+      },
+      {
+        step: 2,
+        title: "Sear the Beef Shanks & Brown Onions",
+        instruction:
+          "Heat 1/4 cup of ghee in a heavy Dutch oven or large copper-bottomed pot over medium heat. Add the sliced onions and fry for 8 to 10 minutes until golden brown. Remove half of the fried onions for garnish. Add the beef shanks and bone marrow pieces to the pot. Sear over medium-high heat for 6 to 8 minutes, turning occasionally, until nicely browned on all sides.",
+      },
+      {
+        step: 3,
+        title: "Bloom Aromatics & Spices",
+        instruction:
+          "Add the ginger-garlic paste and sauté for 2 minutes. Stir in the Kashmiri red chili powder, hot chili powder, ground turmeric, ground coriander, salt, and 3/4 of the prepared royal Nihari masala. Sauté ('koshano') for 3 minutes, adding 2 tablespoons of water so the spices don't scorch, until the ghee separates into vibrant red oil.",
+      },
+      {
+        step: 4,
+        title: "Slow-Simmer the Bone Broth (2.5 to 3 Hours)",
+        instruction:
+          "Pour in 7 cups of water or rich beef bone broth. Stir well and bring to a vigorous rolling boil. Cover the pot with a heavy, tight-fitting lid, turn the flame to the lowest setting, and let it simmer undisturbed for 2.5 to 3 hours (or 40 minutes in a pressure cooker) until the beef shank is buttery tender and begins to pull away effortlessly from the marrow bones.",
+        tip: "A low, continuous simmer dissolves the tendon and collagen into gelatin, creating the signature velvety mouthfeel of authentic Nihari.",
+      },
+      {
+        step: 5,
+        title: "Skim the Roghan (The Precious Red Oil)",
+        instruction:
+          "Uncover the pot. You will see a glistening, brilliant layer of spiced red oil ('roghan') floating on top. Use a wide ladle to carefully skim off about 1/2 cup of this red oil into a small bowl and set aside. (Once flour slurry is added, it absorbs and dims this vibrant red oil, so reserving it ensures a restaurant-grade finish).",
+      },
+      {
+        step: 6,
+        title: "Thicken with Toasted Atta Slurry",
+        instruction:
+          "In a dry skillet, toast the 1/3 cup of whole wheat flour (atta) for 2 minutes over medium-low heat until fragrant and slightly golden. In a bowl, whisk the toasted flour with 3/4 cup cold water until completely smooth without any lumps. Slowly drizzle the slurry into the simmering stew with one hand while continuously stirring with the other. Simmer on low heat for 12 to 15 minutes as the stew thickens into a glossy, velvety gravy. Stir in the remaining royal Nihari masala.",
+      },
+      {
+        step: 7,
+        title: "Plate in Traditional Handi with Roghan & Garnishes",
+        instruction:
+          "Ladle the tender beef shanks, bone marrow, and rich velvety stew into a traditional copper or ceramic handi serving bowl. Spoon the reserved glistening ruby-red roghan generously over the surface. Crown the center with a mound of fresh ginger matchsticks, thinly sliced green chilies, and fresh chopped cilantro. Serve piping hot with lemon wedges and fresh pillowy tandoori naan or kulcha.",
+      },
+    ],
+    chefNotes: [
+      "The Shank Bone Secret: Beef shank ('bong') has the highest natural collagen of any cut. As it simmers for hours, the connective tissue melts into gelatin, creating that famous sticky, lip-smacking thickness that defines authentic Nihari.",
+      "Toasting the Atta: Always toast the flour before making the slurry. Toasting cooks out the raw grain taste and imparts a wonderful toasted nutty aroma to the stew.",
+      "The Roghan Trick: Professional Nihari chefs always skim the roghan before adding the wheat slurry and restore it when plating. This ensures the stew arrives at the table with an irresistible shimmering red crown.",
+    ],
+    nutrition: {
+      calories: 540,
+      proteinGrams: 44,
+      carbsGrams: 16,
+      fatGrams: 34,
+      fiberGrams: 3,
+      sodiumMg: 720,
+      servingSizeDescription: "1 generous serving of beef shank and marrow stew with gravy (approx. 350g)",
+    },
+    storageInstructions:
+      "Nihari develops deeper complexity as it sits! Store in an airtight container in the refrigerator for up to 4 days. Reheat slowly in a saucepan over low heat, adding a splash of water if the gelatinous gravy has set firm.",
+    freezingInstructions:
+      "Freezes wonderfully for up to 3 months. Thaw overnight in the refrigerator and bring to a gentle simmer for 10 minutes before garnishing fresh.",
+    servingSuggestions: [
+      "Pillowy Tandoori Naan or Taftan: The mandatory companion—tear off warm pieces of naan to soak up the velvety bone marrow gravy.",
+      "Hot Roghani Naan: Brushed with butter, sesame seeds, and saffron.",
+      "Fresh Ginger & Lemon Plate: Keep extra ginger matchsticks, slit green chilies, and lemon halves at the table for custom seasoning.",
+      "Spiced Bone Marrow Spoon: Tap the marrow out of the bones directly onto naan for an ultra-luxurious royal bite.",
+    ],
+    faqs: [
+      {
+        question: "Why is it called 'Nahari' or 'Nihari'?",
+        answer:
+          "The name comes from the Arabic word 'Nahar' (morning). In Mughal times, it was slow-cooked all night and served early in the morning to Nawabs and laborers alike to sustain them throughout the day.",
+      },
+      {
+        question: "Can I make this in an Instant Pot or Pressure Cooker?",
+        answer:
+          "Yes! Follow the steps to sear and bloom spices in the cooker, add 5 cups of water, and pressure cook on High for 40 minutes with a natural release. Then skim the roghan, stir in the flour slurry on Sauté mode, and simmer for 10 minutes.",
+      },
+      {
+        question: "Why is wheat flour added to Nihari?",
+        answer:
+          "Whole wheat flour (atta) slurry gives Nihari its signature velvety body and glossy texture, allowing the aromatic gravy to cling perfectly to naan without separating.",
+      },
+      {
+        question: "Can I use boneless beef instead of bone-in shank?",
+        answer:
+          "You can, but bone-in shank with marrow is what gives Nihari its iconic gelatinous richness and immune-boosting depth. If using boneless beef chuck, try to add at least 1 or 2 soup bones for flavor.",
+      },
+    ],
+    author: {
+      name: "Chef Bodiul Alam",
+      role: "Culinary Director & Royal Mughlai Specialist",
+    },
+    updatedDate: "September 23, 2026",
+    tags: [
+      "Beef Nahari",
+      "بیف نہاری",
+      "গরুর মাংসের নিহারি",
+      "نيهاري اللحم",
+      "Nihari",
+      "Beef Shank Stew",
+      "Bone Marrow Stew",
+      "Royal Mughlai",
+      "Old Delhi Heritage",
+      "Karachi Street Food",
+      "Halal Beef",
+      "Winter Comfort Food",
+      "High Protein",
+    ],
+  },
+  {
+    id: "rec-moroccan-lamb-tagine",
+    slug: "moroccan-lamb-tagine",
+    title: "Authentic Moroccan Lamb Tagine (with Sweet Prunes & Toasted Almonds - طاجين اللحم بالبرقوق)",
+    category: "Beef, Lamb & Mutton",
+    categorySlug: "halal-beef",
+    cuisine: "Moroccan / Maghrebi Royal Heritage (Halal)",
+    description:
+      "Tender slow-braised bone-in lamb shanks simmered in a golden saffron, ginger, and Ras el Hanout broth, crowned with honey-glazed prunes, dried apricots, pearl onions, and toasted almonds over fluffy steamed couscous.",
+    introStory:
+      "Authentic Moroccan Lamb Tagine with Sweet Prunes and Toasted Almonds (طاجين اللحم بالبرقوق والمشمش)—the undisputed jewel of Moroccan royal banquets, Eid celebrations, and warm Maghrebi hospitality—is an enchanting harmony of savory spices and delicate sweet fruitiness. Named after the ancient conical terracotta vessel in which it is traditionally prepared, the conical lid circulates rising steam back down into the dish, ensuring that bone-in lamb shanks and shoulder cuts braise gently until they yield to the touch of a fork. The meat is marinated in an aromatic bath of golden saffron threads, fragrant ground ginger, sweet Ceylon cinnamon, turmeric, garlic, and the celebrated Moroccan spice blend 'Ras el Hanout' ('head of the shop'). As the lamb simmers slowly with sweet grated onions, rich marrow and natural juices mingle into a golden, velvety reduction. In a separate pan, plump dried black prunes and apricots are gently poached in a ladle of the spiced lamb braising broth infused with orange blossom water, cinnamon bark, and pure wildflower honey until they become glossy, jammy, and glistening. Layered over a steaming, fragrant mountain of hand-rolled semolina couscous and adorned with sweet pearl onions, golden raisins, golden-fried slivered almonds, and toasted white sesame seeds, this showstopping centerpiece fills the dining room with an unforgettable riad fragrance.",
+    heroImage: IMAGES.moroccanLambTagine,
+    prepTimeMinutes: 25,
+    cookTimeMinutes: 120,
+    totalTimeMinutes: 145,
+    servings: 6,
+    difficulty: "Medium",
+    calories: 580,
+    rating: 4.99,
+    reviewCount: 412,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified. Prepared exclusively with hand-slaughtered Zabiha Halal lamb shanks or bone-in shoulder cuts, pure virgin olive oil, sweet wild blossom honey, authentic spices, and dried fruits. Completely free of alcohol, wine marinades, or artificial gelatin.",
+    potentialCautionNotes:
+      "Contains tree nuts (blanched toasted almonds) and sesame seeds; can be served on the side for guests with nut allergies. Contains bone-in lamb cuts.",
+    ingredients: [
+      { amount: "3.5", unit: "lbs", name: "Zabiha Halal bone-in lamb shanks or shoulder", notes: "cut into generous pieces with bone and marrow intact" },
+      { amount: "3", unit: "tbsp", name: "Extra virgin olive oil", notes: "cold-pressed Moroccan or Mediterranean" },
+      { amount: "2", unit: "large", name: "Yellow onions", notes: "1 finely grated to melt into the sauce, 1 finely sliced" },
+      { amount: "4", unit: "cloves", name: "Fresh garlic", notes: "finely minced or pressed" },
+      { amount: "1", unit: "pinch", name: "Pure saffron threads (za'afaran)", notes: "approx. 1/2 tsp, steeped in 3 tbsp warm water" },
+      { amount: "1.5", unit: "tbsp", name: "Ras el Hanout spice blend", notes: "authentic Moroccan blend with coriander, cumin, allspice, mace, and cardamom" },
+      { amount: "1.5", unit: "tsp", name: "Ground ginger (skinjbir)", notes: "essential warming Moroccan spice" },
+      { amount: "1", unit: "tsp", name: "Ground Ceylon cinnamon", notes: "sweet aromatic warmth" },
+      { amount: "1", unit: "tsp", name: "Ground turmeric (kharqoum)", notes: "for vibrant royal golden hue" },
+      { amount: "1.5", unit: "tsp", name: "Fine sea salt", notes: "or to taste" },
+      { amount: "1/2", unit: "tsp", name: "Freshly cracked black pepper", notes: "for balanced heat" },
+      { amount: "2", unit: "sticks", name: "Ceylon cinnamon bark", notes: "whole sticks for the braise and prune poaching" },
+      { amount: "2", unit: "whole", name: "Star anise", notes: "optional sweet floral aroma" },
+      { amount: "1", unit: "bundle", name: "Fresh cilantro and flat-leaf parsley", notes: "tied with kitchen string (bouquet garni)" },
+      { amount: "2.5", unit: "cups", name: "Water or Halal lamb bone stock", notes: "for slow braising" },
+      { amount: "1.5", unit: "cups", name: "Dried black prunes (pitted)", notes: "plump and sweet" },
+      { amount: "1/2", unit: "cup", name: "Dried Turkish apricots", notes: "bright orange and plump" },
+      { amount: "1/4", unit: "cup", name: "Golden sultana raisins", notes: "soaked in warm water" },
+      { amount: "8", unit: "whole", name: "Pearl onions", notes: "peeled and lightly caramelized" },
+      { amount: "1/2", unit: "cup", name: "Cooked chickpeas", notes: "tender and hearty" },
+      { amount: "2.5", unit: "tbsp", name: "Pure wildflower honey", notes: "for glazing the stewed prunes and apricots" },
+      { amount: "1", unit: "tsp", name: "Orange blossom water (ma zaher)", notes: "optional delicate floral finish" },
+      { amount: "1/2", unit: "cup", name: "Blanched slivered almonds", notes: "fried in olive oil until golden brown and crunchy" },
+      { amount: "1.5", unit: "tbsp", name: "White sesame seeds", notes: "lightly toasted in a dry skillet" },
+      { amount: "3", unit: "cups", name: "Steamed fine semolina couscous", notes: "steamed with olive oil and butter for serving" },
+    ],
+    substitutions: [
+      {
+        original: "Lamb shanks / shoulder",
+        substitute: "Bone-in beef shank, beef short ribs, or goat shoulder",
+        notes: "Beef shank or goat meat works wonderfully; increase braising time by 20 minutes for beef shank.",
+      },
+      {
+        original: "Ras el Hanout",
+        substitute: "1/2 tsp cumin + 1/2 tsp coriander + 1/4 tsp allspice + 1/4 tsp ginger + pinch cardamom/mace",
+        notes: "A homemade blend closely replicates the aromatic depth of authentic Moroccan spice merchant blends.",
+      },
+      {
+        original: "Orange blossom water",
+        substitute: "A strip of fresh orange peel or 1 tsp fresh orange juice",
+        notes: "Adds the requisite citrus floral top note that cuts through the rich lamb fat.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Marinate the Lamb & Bloom Saffron",
+        instruction:
+          "In a small bowl, crumble the saffron threads between your fingers into 3 tablespoons of warm water; let steep for 10 minutes. In a large bowl, whisk together the saffron infusion, olive oil, grated yellow onion, minced garlic, Ras el Hanout, ground ginger, ground cinnamon, turmeric, sea salt, and black pepper. Rub this fragrant golden paste all over the lamb shanks and meat cuts. Let marinate for at least 30 minutes (or refrigerate overnight for maximum flavor penetration).",
+        tip: "Grated onion is an authentic Moroccan secret: it melts completely into the braising liquid, creating a naturally velvety, thickened sauce without flour or cornstarch.",
+      },
+      {
+        step: 2,
+        title: "Gently Brown the Lamb",
+        instruction:
+          "Heat a traditional clay tagine over a heat diffuser on medium heat (or use a heavy cast-iron Dutch oven). Add 1 tablespoon of olive oil. Add the sliced onions, then arrange the marinated lamb pieces and bones in a single snug layer. Cook gently for 8 to 10 minutes, turning the lamb occasionally, until the meat is lightly browned on all sides and the marinade sizzles with an irresistible spice perfume.",
+      },
+      {
+        step: 3,
+        title: "Slow Braise Under Conical Lid",
+        instruction:
+          "Tuck the tied bouquet of fresh cilantro and parsley, whole cinnamon sticks, and star anise in between the lamb pieces. Pour in 2.5 cups of warm water or stock down the side of the pot (avoiding washing the spices off the lamb). Bring to a gentle simmer. Cover with the conical tagine lid (or Dutch oven lid), lower the heat to the lowest setting, and cook for 1 hour and 45 minutes to 2 hours, turning the meat once halfway through, until the lamb is fork-tender and pulls easily from the bone.",
+        tip: "The tagine's conical lid forces steam to condense and drip back down onto the meat constantly, self-basting the lamb into incomparable tenderness.",
+      },
+      {
+        step: 4,
+        title: "Honey-Poach the Prunes, Apricots & Pearl Onions",
+        instruction:
+          "While the lamb is braising, ladle 1 cup of the savory spiced cooking broth from the tagine into a small saucepan. Add the dried black prunes, dried apricots, golden raisins, pearl onions, and 1 whole cinnamon stick. Bring to a gentle simmer over medium-low heat for 12 to 15 minutes until the fruit plumps up and becomes soft. Stir in 2.5 tablespoons of wildflower honey and 1 teaspoon of orange blossom water. Simmer uncovered for 5 minutes until the sauce reduces to a glossy, thick syrup that coats the back of a spoon.",
+      },
+      {
+        step: 5,
+        title: "Toast the Almonds & Sesame Seeds",
+        instruction:
+          "In a small skillet, heat 1 teaspoon of olive oil or butter over medium-low heat. Add the blanched slivered almonds and toss continuously for 2 to 3 minutes until uniformly golden-crisp and fragrant. Transfer immediately to paper towels. In a separate dry pan, toast the white sesame seeds for 1 minute until fragrant.",
+      },
+      {
+        step: 6,
+        title: "Reduce the Tagine Gravy",
+        instruction:
+          "Remove the conical lid from the tagine. Discard the herb bouquet and cinnamon sticks. If the sauce is too liquid, increase the heat to medium-low and simmer uncovered for 8 to 10 minutes until the onion gravy thickens into a rich, golden, jammy reduction (known as 'daghmira') with glistening amber olive oil around the lamb.",
+      },
+      {
+        step: 7,
+        title: "Assemble, Garnish & Serve Sizzling",
+        instruction:
+          "Fluff freshly steamed couscous and mound it onto the base of the terracotta tagine or a warm ceramic banquet platter. Nest the succulent lamb shanks upright in the center. Spoon the luscious spiced reduction all over the lamb and couscous. Arrange the glossy honeyed prunes, tender apricots, sweet pearl onions, golden raisins, and cooked chickpeas decoratively all around the lamb. Crown the dish with the golden-toasted slivered almonds and a sprinkle of toasted sesame seeds. Serve immediately with warm crusty Moroccan bread (Khobz) and mint tea.",
+      },
+    ],
+    chefNotes: [
+      "The Prune Rule: Never cook dried prunes directly in the main pot with the lamb from the beginning. Doing so turns the delicate golden lamb sauce muddy-black and makes the entire dish excessively sugary. Poaching them separately in reserved broth produces gem-like glossy fruits and maintains sauce perfection.",
+      "The Clay Tagine Diffuser: When cooking on gas or electric stoves with authentic clay or ceramic tagines, always use a metal heat diffuser plate underneath. Sudden direct stovetop heat can crack the terracotta.",
+      "Saffron & Cinnamon Equilibrium: Authentic Moroccan royal cuisine relies on the contrast between warm earthy spices (ginger, turmeric, pepper) and sweet floral aromatics (cinnamon, saffron, orange blossom water). Keep spices balanced so no single note dominates.",
+    ],
+    nutrition: {
+      calories: 580,
+      proteinGrams: 42,
+      carbsGrams: 48,
+      fatGrams: 26,
+      fiberGrams: 6,
+      sodiumMg: 590,
+      servingSizeDescription: "1 generous serving of lamb shank with couscous, prunes, and almonds (approx. 400g)",
+    },
+    storageInstructions:
+      "Store leftover lamb and sauce in an airtight glass container in the refrigerator for up to 4 days. Store couscous in a separate container. Reheat gently in a covered pan over low heat with a few tablespoons of water.",
+    freezingInstructions:
+      "The braised lamb and prune sauce freeze beautifully for up to 3 months without the couscous. Thaw in the refrigerator overnight and reheat on the stovetop; steam fresh couscous when ready to serve.",
+    servingSuggestions: [
+      "Steamed Fine Couscous: Tossed with a knob of butter, pinch of salt, and olive oil to catch every drop of the golden saffron gravy.",
+      "Warm Moroccan Khobz: Crusty, dense flatbread for dipping into the unctuous daghmira sauce.",
+      "Moroccan Mint Green Tea (Atay): Sweet gunpowder green tea infused with fresh spearmint leaves poured from high above into glasses.",
+      "Zaalouk (Roasted Eggplant & Tomato Salad): A smoky, garlicky eggplant salad makes a wonderful contrasting starter.",
+    ],
+    faqs: [
+      {
+        question: "Can I make this tagine without a clay tagine pot?",
+        answer:
+          "Absolutely! A heavy-bottomed Dutch oven, braiser, or deep cast-iron skillet with a tight-fitting lid works wonderfully. The key is maintaining a gentle, sealed slow simmer on low heat so the steam condenses and tenderizes the lamb.",
+      },
+      {
+        question: "Is this dish too sweet because of the prunes and honey?",
+        answer:
+          "Not at all. The honeyed sweetness is balanced by the sharp earthiness of ground ginger, pungent garlic, black pepper, and savory lamb marrow, creating a refined sweet-and-savory complexity (like French duck à l'orange or Persian fesenjan).",
+      },
+      {
+        question: "What is Ras el Hanout?",
+        answer:
+          "Ras el Hanout translates to 'top of the shop' in Arabic. It is a prized master spice blend containing up to a dozen fragrant spices including coriander, cumin, turmeric, ginger, cardamom, allspice, cinnamon, mace, and nutmeg.",
+      },
+      {
+        question: "Which cut of lamb is best for Moroccan tagine?",
+        answer:
+          "Bone-in lamb shank, lamb neck, or bone-in shoulder. These cuts contain abundant connective collagen that melts into gelatin during the long braise, resulting in exceptionally tender, juicy meat and a glossy, rich sauce.",
+      },
+    ],
+    author: {
+      name: "Chef Bodiul Alam",
+      role: "Culinary Director & Moroccan Maghrebi Specialist",
+    },
+    updatedDate: "September 23, 2026",
+    tags: [
+      "Authentic Moroccan Lamb Tagine",
+      "Moroccan Lamb Tagine",
+      "طاجين اللحم بالبرقوق",
+      "Lamb Tagine with Prunes",
+      "Tagine with Sweet Prunes & Toasted Almonds",
+      "Halal Lamb",
+      "Moroccan Heritage",
+      "Maghrebi Cuisine",
+      "Saffron Braised Lamb",
+      "Eid Feast",
+      "Royal Banquet",
+      "High Protein",
+    ],
+  },
+  {
+    id: "rec-bangladeshi-spiced-shrimp-and-green-bean-stir-fry",
+    slug: "bangladeshi-spiced-shrimp-and-green-bean-stir-fry",
+    title: "Bangladeshi Spiced Shrimp and Green Bean Stir-Fry (চিংড়ি বরবটি ভাজি / روبيان مقلي مع الفاصوليا)",
+    category: "Halal Fish & Seafood",
+    categorySlug: "halal-seafood",
+    cuisine: "Bengali / Bangladeshi Coastal & Home Cooking (Halal)",
+    description:
+      "Plump golden turmeric-seared shrimp flash-tossed with crisp green beans, caramelized red onions, garlic, green chilies, and fresh cilantro in aromatic mustard oil.",
+    introStory:
+      "Bangladeshi Spiced Shrimp and Green Bean Stir-Fry (চিংড়ি দিয়ে বরবটি ভাজি / চিংড়ি শিম ভাজি / روبيان مقلي مع الفاصوليا الخضراء)—an essential cornerstone of everyday Bengali and Noakhali home dining—showcases how simple seasonal produce and river-fresh coastal seafood come together into an irresistible, vibrant side dish. In Bengali households, a balanced lunch is incomplete without a fresh vegetable 'bhaji' (dry stir-fry) to accompany steamed hot rice and golden lentil dal. Sweet wild-caught shrimp (chingri) are lightly seasoned with ground turmeric and fine sea salt, then flash-seared in cold-pressed virgin mustard oil just until pink and succulent. Fresh green beans (borboti or tender French beans) are trimmed and sautéed over brisk heat with finely sliced red onions, freshly minced garlic, earthy ground coriander, and roasted cumin. Tossed without a lid to preserve the beans' snappy emerald crunch and radiant color, the shrimp are folded back in with sliced fiery green chilies and a bright shower of freshly chopped cilantro leaves. Glistening with a thin film of spiced mustard oil, each mouthful balances the natural sweetness of the shrimp, the crisp snap of fresh garden beans, and the warming hum of green chilies.",
+    heroImage: IMAGES.bangladeshiSpicedShrimpGreenBeanStirFry,
+    prepTimeMinutes: 15,
+    cookTimeMinutes: 12,
+    totalTimeMinutes: 27,
+    servings: 4,
+    difficulty: "Easy",
+    calories: 220,
+    rating: 4.97,
+    reviewCount: 284,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified. Made with wild-caught, sustainably harvested shrimp/prawns, cold-pressed pure mustard oil, garden-fresh green beans, and pure single-origin ground spices. Naturally dairy-free, gluten-free, and prepared in a strict Halal kitchen.",
+    potentialCautionNotes:
+      "Contains shellfish (shrimp/prawns). Green chilies can be deseeded or halved for a milder heat profile.",
+    ingredients: [
+      { amount: "1", unit: "lb", name: "Fresh wild shrimp / prawns", notes: "peeled, deveined, tails removed, patted thoroughly dry (approx. 450g)" },
+      { amount: "1", unit: "lb", name: "Fresh green beans or yardlong beans (borboti)", notes: "trimmed and cut into 2-inch bite-sized batons" },
+      { amount: "3", unit: "tbsp", name: "Pure cold-pressed mustard oil (shorsher tel)", notes: "divided: 1 tbsp for searing shrimp, 2 tbsp for stir-frying beans" },
+      { amount: "1", unit: "large", name: "Red onion", notes: "very finely sliced" },
+      { amount: "4", unit: "cloves", name: "Fresh garlic", notes: "minced or finely grated" },
+      { amount: "1", unit: "tsp", name: "Ground turmeric", notes: "divided: 1/2 tsp for shrimp, 1/2 tsp for green beans" },
+      { amount: "1", unit: "tsp", name: "Ground coriander", notes: "for light herbal earthiness" },
+      { amount: "1/2", unit: "tsp", name: "Kashmiri red chili powder", notes: "for gentle color and mild warmth" },
+      { amount: "1", unit: "tsp", name: "Roasted cumin powder (bhuna jeera)", notes: "freshly roasted and ground" },
+      { amount: "1", unit: "tsp", name: "Fine sea salt", notes: "divided: 1/2 tsp for shrimp, 1/2 tsp for green beans, or to taste" },
+      { amount: "4", unit: "whole", name: "Fresh green chilies", notes: "sliced diagonally into coins" },
+      { amount: "1/3", unit: "cup", name: "Fresh cilantro leaves", notes: "coarsely chopped for finishing garnish" },
+    ],
+    substitutions: [
+      {
+        original: "Green beans (borboti)",
+        substitute: "Flat snow peas, sugar snap peas, or asparagus spears",
+        notes: "Snap peas provide exceptional sweet crunch; cook for just 3 to 4 minutes.",
+      },
+      {
+        original: "Mustard oil",
+        substitute: "Ghee or neutral vegetable oil",
+        notes: "Ghee gives a rich, nutty profile; mustard oil provides iconic rustic Bengali pungency.",
+      },
+      {
+        original: "Shrimp",
+        substitute: "Diced boneless chicken breast, paneer cubes, or extra-firm tofu",
+        notes: "Paneer or tofu makes this a wonderful vegetarian bhaji.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Season the Shrimp",
+        instruction:
+          "Pat the peeled and deveined shrimp thoroughly dry with paper towels. Place in a shallow bowl and toss with 1/2 teaspoon ground turmeric, 1/2 teaspoon sea salt, and 1/4 teaspoon Kashmiri red chili powder until evenly coated in golden spices.",
+      },
+      {
+        step: 2,
+        title: "Flash-Sear the Shrimp",
+        instruction:
+          "Heat 1 tablespoon of mustard oil in a wide heavy-bottomed skillet or kadai over medium-high heat until it begins to wisp with white smoke. Add the seasoned shrimp in a single layer. Sear undisturbed for 60 seconds, then toss rapidly for another 30 to 45 seconds until they turn opaque pink and curl into loose 'C' shapes. Immediately transfer the shrimp to a clean plate; do not overcook.",
+        tip: "Overcooking shrimp turns them chewy and rubbery. Pulling them out while just cooked keeps them juicy and sweet.",
+      },
+      {
+        step: 3,
+        title: "Caramelize Onions & Aromatics",
+        instruction:
+          "Add the remaining 2 tablespoons of mustard oil to the same skillet. Add the finely sliced red onions and sauté over medium heat for 4 to 5 minutes until soft, translucent, and lightly golden around the edges. Stir in the minced garlic and sauté for 1 minute until fragrant.",
+      },
+      {
+        step: 4,
+        title: "Stir-Fry the Green Beans",
+        instruction:
+          "Add the trimmed green beans, the remaining 1/2 teaspoon turmeric, ground coriander, remaining 1/4 teaspoon red chili powder, and 1/2 teaspoon salt. Toss continuously over medium-high heat for 6 to 8 minutes without covering the skillet, allowing the beans to blister lightly while remaining snappy, tender, and bright emerald green.",
+        tip: "Cooking green beans uncovered is the secret to retaining their radiant green color; covering traps natural acids that turn the beans dull olive green.",
+      },
+      {
+        step: 5,
+        title: "Combine Shrimp & Spices",
+        instruction:
+          "Return the seared shrimp and any accumulated flavorful juices from the plate back into the skillet with the green beans. Sprinkle the roasted cumin powder (bhuna jeera) and add the sliced green chili coins. Toss everything together vigorously over high heat for 1 to 2 minutes so the savory spices coat every shrimp and bean.",
+      },
+      {
+        step: 6,
+        title: "Garnish & Serve",
+        instruction:
+          "Remove the skillet from the heat. Fold in the fresh chopped cilantro leaves, tossing gently to release their fresh herbal fragrance. Transfer to a rustic ceramic serving dish with a silver spoon and serve immediately alongside steaming hot white basmati or Kalijeera rice and yellow masoor dal.",
+      },
+    ],
+    chefNotes: [
+      "The Uncovered Cooking Rule: In Bengali home kitchens, dry vegetable bhajis (stir-fries) are cooked uncovered over brisk heat. Covering steams the vegetables, making them soggy and muting their vibrant garden colors.",
+      "The 'C' vs. 'O' Shrimp Rule: Shrimp are perfectly cooked when they form a gentle 'C' curve. If they curl into a tight closed 'O', they have been overcooked.",
+      "The Roasted Cumin Finish: Never skip the bhuna jeera dusting at the very end; dry-roasting whole cumin seeds and crushing them fresh releases an earthy, smoky aroma that elevates this simple home dish to restaurant quality.",
+    ],
+    nutrition: {
+      calories: 220,
+      proteinGrams: 26,
+      carbsGrams: 9,
+      fatGrams: 9,
+      fiberGrams: 3,
+      sodiumMg: 490,
+      servingSizeDescription: "1 generous plate of spiced shrimp and green bean stir-fry (approx. 200g)",
+    },
+    storageInstructions:
+      "Store leftovers in an airtight glass container in the refrigerator for up to 2 days. Reheat gently in a dry skillet over medium heat for 2 minutes to revive the texture without overcooking the shrimp.",
+    freezingInstructions:
+      "Freezing is not recommended, as green beans lose their snappy crispness and shrimp can become watery upon thawing.",
+    servingSuggestions: [
+      "Steaming White Basmati or Kalijeera Rice: The classic pairing—mix the savory spiced beans and juicy shrimp into hot rice.",
+      "Bengali Masoor Dal: A comforting bowl of yellow red lentil dal tempered with fried garlic and cumin completes the holy trinity of Bengali lunch.",
+      "Crisp Plain Parathas: Roll up the spiced shrimp and green beans inside warm parathas for a quick, wholesome wrap.",
+      "Fresh Sliced Cucumber & Lime: Cool, crisp cucumber slices drizzled with lime juice provide a crisp palate cleanser.",
+    ],
+    faqs: [
+      {
+        question: "Can I use frozen green beans?",
+        answer:
+          "Fresh green beans or yardlong beans (borboti) are strongly recommended for authentic crispness. If using frozen green beans, thaw and pat completely dry with paper towels, then stir-fry over very high heat for just 3 to 4 minutes.",
+      },
+      {
+        question: "Is mustard oil necessary for this recipe?",
+        answer:
+          "Pure cold-pressed mustard oil provides the quintessential rustic aroma and peppery punch of Bengali village cooking. However, pure ghee, olive oil, or sunflower oil can be substituted with delicious results.",
+      },
+      {
+        question: "What size shrimp works best?",
+        answer:
+          "Medium to large peeled shrimp (around 26/30 or 31/40 count) work best so they cook in under 2 minutes and remain juicy alongside the green bean batons.",
+      },
+      {
+        question: "Is this dish spicy?",
+        answer:
+          "It has a mild to moderate warmth from Kashmiri chili and sliced green chilies. You can adjust the spice level easily by reducing the green chilies or deseeding them before adding.",
+      },
+    ],
+    author: {
+      name: "Chef Bodiul Alam",
+      role: "Culinary Director & Bengali Seafood Specialist",
+    },
+    updatedDate: "September 23, 2026",
+    tags: [
+      "Bangladeshi Spiced Shrimp and Green Bean Stir-Fry",
+      "চিংড়ি বরবটি ভাজি",
+      "চিংড়ি শিম ভাজি",
+      "روبيان مقلي مع الفاصوليا",
+      "Chingri Borboti Bhaji",
+      "Shrimp Green Bean Stir-Fry",
+      "Bengali Shrimp Bhaji",
+      "Halal Seafood",
+      "Bengali Home Cooking",
+      "Healthy Weeknight Meal",
+      "Gluten Free",
+      "High Protein",
+    ],
+  },
 ];
 
 export const RECIPES: Recipe[] = enhanceRecipesWithCornerstones(BASE_RECIPES);

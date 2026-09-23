@@ -15,6 +15,276 @@ const RECIPE_EDITORIAL_EXTRAS: Record<
     commonMistakes: string[];
   }
 > = {
+  "bangladeshi-spiced-shrimp-and-green-bean-stir-fry": {
+    whySpecial:
+      "A beloved, vibrant everyday Bengali home-cooked classic (Chingri Borboti Bhaji): tender, sweet peeled tiger shrimp lightly seasoned with golden turmeric and sea salt, flash-seared in mustard oil, and tossed with crisp French green beans or yardlong beans (borboti), caramelized sliced red onions, pungent garlic, roasted cumin, and sliced green chilies. The shrimp remain juicy and snap-tender while the green beans retain their vibrant emerald crunch, coated in an aromatic savory dry-spice glaze.",
+    cookingTips: [
+      "Sear the shrimp quickly for just 60 to 90 seconds until they turn pink and opaque, then transfer to a plate; overcooking shrimp in a stir-fry makes them rubbery.",
+      "Keep the green beans tender-crisp: sauté them over medium-high heat with a pinch of turmeric and salt without covering the pan, which preserves their brilliant emerald green color.",
+      "Use pure cold-pressed mustard oil heated until it lightly smokes for that authentic Bangladeshi rustic village fragrance (deshi shubaash).",
+      "Finish with freshly sliced green chilies and a generous scattering of torn fresh cilantro leaves just before taking off the flame to lock in fresh herbal aroma.",
+    ],
+    commonMistakes: [
+      "Simmering the shrimp with the beans under a tight lid, which steams the shrimp into tough rubber and turns the beans dull olive green.",
+      "Adding water during cooking; an authentic Bengali 'bhaji' is a dry stir-fry reliant on continuous tossing and natural vegetable moisture.",
+      "Not deveining or drying the shrimp thoroughly, which releases excess moisture and makes the stir-fry watery rather than glistening and crisp.",
+    ],
+  },
+  "moroccan-lamb-tagine": {
+    whySpecial:
+      "The peerless summit of royal Moroccan and Maghrebi culinary banquet artistry: bone-in lamb shanks or shoulder cuts slowly braised in a traditional clay conical tagine with golden saffron threads, ras el hanout, Ceylon cinnamon, ground ginger, and sweet grated onions. As the cone-shaped lid condenses and circulates aromatic steam back into the stew, the lamb turns melt-in-the-mouth fork-tender. Plump dried black prunes, apricots, and golden raisins poached in cinnamon and orange blossom honey are arranged around the lamb, crowned with golden-toasted slivered almonds, toasted sesame seeds, and pearl onions over a bed of fragrant steamed couscous.",
+    cookingTips: [
+      "Use bone-in lamb shanks or bone-in shoulder pieces; the bone marrow and gelatin melt into the braising jus, creating an unctuously rich, glossy sauce.",
+      "Infuse the saffron threads in 2 tablespoons of warm water for 10 minutes before adding to the marinade to release their deep floral aroma and brilliant golden color.",
+      "Poach the prunes and apricots separately in a small saucepan with a ladle of the spiced lamb broth, a cinnamon stick, and a tablespoon of honey until plump, glossy, and caramelized; folding them in at the end preserves their luscious shape without clouding the main tagine sauce.",
+      "Toast whole blanched slivered almonds in olive oil or butter until golden brown just before serving; the crunch against the tender lamb and jammy prunes is the signature texture contrast of authentic Moroccan tagine.",
+    ],
+    commonMistakes: [
+      "Boiling the prunes directly in the main pot from the start, which disintegrates the fruit and turns the savory lamb gravy overly dark and sweet.",
+      "Rushing the braise over high heat instead of a gentle, patient low simmer; slow braising is essential to soften lamb shank tendons into gelatin.",
+      "Using artificial food coloring instead of real saffron threads and turmeric, which misses the exquisite floral aromatics.",
+    ],
+  },
+  "beef-nahari": {
+    whySpecial:
+      "The undisputed king of royal Mughal and old-city breakfast stews: thick, gelatinous cuts of beef shank (bong) and marrow-rich cross-cut bones slow-simmered for hours in an aromatic spice infusion of fennel, saunth (dry ginger), mace, nutmeg, and black cardamom. Finished with a toasted wheat flour (atta) slurry to create its signature glossy, velvety gravy that clings to warm naan, topped with a sizzling red chili-ghee roghan float and crowned with fiery green chilies, julienned fresh ginger, and sour lemon wedges.",
+    cookingTips: [
+      "Always use beef shank (bong/shin) with bone marrow; shank has rich intramuscular connective collagen that dissolves during slow braising into a luscious, silky stew with unmatched depth.",
+      "Toast whole fennel seeds, dry ginger, cloves, cinnamon, mace, and cumin before grinding into the specialized 'Nihari Masala' for that authentic old-city royal aroma.",
+      "Lightly toast the whole wheat flour (atta) in a dry pan before whisking with water; this eliminates any raw flour flavor and produces a silky, lump-free gravy.",
+      "Skim off the rich red spiced oil (roghan / tori) before whisking in the flour slurry; ladle the roghan back over each serving bowl so the vibrant chili oil glistens on top.",
+    ],
+    commonMistakes: [
+      "Adding raw untoasted flour directly to the boiling stew, which creates unpleasant doughy lumps instead of a velvety sauce.",
+      "Using quick-cooking lean steak cuts instead of bone-in shank; lean beef turns dry, tough, and lacks the unctuous gelatin of true Nihari.",
+      "Skipping the fresh garnishes—raw julienned ginger, crisp green chilies, and freshly squeezed lemon juice provide an indispensable acidic and aromatic counterpoint to the rich marrow broth.",
+    ],
+  },
+  "authentic-bangladeshi-beef-curry": {
+    whySpecial:
+      "The undisputed centerpiece of Bengali home hospitality and Eid celebratory dining: bone-in and boneless chuck and brisket braised through patient 'koshano' (slow caramelization) with finely sliced onions, ginger-garlic paste, fragrant whole garam masala (black and green cardamom, cinnamon, cloves, bay leaves), and ground roasted cumin in golden mustard oil. As the beef simmers low and slow in its natural juices, the onions melt into a velvety, thick gravy and the spiced fat separates into a shimmering ruby-red float (tori/roghan). Garnished traditionally with fresh sweet orange slices and cooling mint to cut through the rich, savory beef depth.",
+    cookingTips: [
+      "Select a mix of bone-in beef chuck, brisket, and a marrow bone; the collagen from marrow and connective tissue melts during slow braising into an unctuously rich, glossy gravy.",
+      "Practice patient 'koshano': sauté the beef and spices over medium heat for 20 to 25 minutes without adding extra water initially, letting the meat release and cook in its own savory juices until the oil glistens on top.",
+      "Use pure pungent mustard oil heated to its smoking point and tempered with whole black cardamom and bay leaves for the authentic village aroma (deshi shubaash).",
+      "Do not rush with high heat; a gentle 60 to 75-minute simmer on low heat allows muscle fibers to soften until fork-tender and melt-in-the-mouth.",
+    ],
+    commonMistakes: [
+      "Dumping water too early into the pot before the spices and beef have properly caramelized (koshano), which makes the gravy taste raw and diluted.",
+      "Using exclusively lean beef with zero fat or bones, yielding tough, dry meat and a thin, watery sauce.",
+      "Boiling vigorously on high heat instead of a patient, covered slow simmer, which toughens the beef fibers.",
+    ],
+  },
+  "chicken-lo-mein": {
+    whySpecial:
+      "The gold standard of Chinese wok takeout and Asian street-market noodles: springy, chewy egg noodles tossed over roaring wok heat with velveted sliced chicken breast, crisp julienned red bell pepper, shredded green cabbage, carrots, and scallions in an intensely savory, silky dark amber glaze of aged dark soy, light soy sauce, toasted sesame oil, ginger, and garlic with that prized breath-of-the-wok (wok hei) perfume.",
+    cookingTips: [
+      "Velvet the sliced chicken breast with a touch of cornstarch, light soy sauce, and a splash of neutral oil for 15 minutes before cooking; this seals in moisture so the lean breast meat stays tender and succulent.",
+      "Boil the fresh or dried lo mein egg noodles until just al dente (about 1 minute less than package directions); rinse immediately under cold running water and toss with 1 teaspoon of sesame oil so they don't stick or get mushy in the wok.",
+      "Pre-mix all the lo mein sauce ingredients (dark soy, light soy, oyster sauce, sugar, sesame oil, and chicken broth) in a small bowl beforehand; stir-frying happens in seconds and you cannot pause to measure seasonings.",
+      "Use high heat and toss continuously with tongs to coat every noodle strand evenly with the glossy dark amber sauce without breaking the noodles.",
+    ],
+    commonMistakes: [
+      "Overboiling the noodles before stir-frying, causing them to turn into broken, clumpy mush in the wok.",
+      "Using non-Halal Chinese oyster sauce or cooking wine; always verify Halal certification on oyster sauce and substitute Mirin/Shaoxing with a dash of apple cider vinegar and broth.",
+      "Crowding a cold skillet with wet cold noodles, which steams the ingredients instead of creating high-heat wok sizzle.",
+    ],
+  },
+  "fish-egg-curry-ilish": {
+    whySpecial:
+      "The crown jewel of monsoon Bengali and Noakhali culinary heritage: whole, crescent-shaped sacs of fresh silver Hilsa (Ilish) fish roe gently seasoned with golden turmeric and sea salt, lightly seared in pungent mustard oil to set the delicate skin, and simmered in a luscious onion-mustard-cumin gravy with aromatic nigella seeds (kalo jeere) and fiery fresh slit green and red chilies. The roe retains a rich, buttery, melt-in-the-mouth granular texture, drinking in the sharp mustard heat and earthy cumin aromatics.",
+    cookingTips: [
+      "Handle fresh Hilsa fish egg roe sacs with extreme tenderness; keep the thin natural membrane intact when cleaning so the granular eggs do not scatter in the gravy.",
+      "Gently fry the seasoned egg sacs in hot mustard oil on medium-low heat for only 1.5 to 2 minutes per side; you only want the outer membrane to firm up and turn golden, not dry out.",
+      "Always cook with pure cold-pressed pungent mustard oil (shorsher tel); heat it until it reaches its smoking point and cools slightly before adding nigella seeds (kalo jeere) to mellow the raw bitterness while keeping the glorious aroma.",
+      "Add the lightly seared egg sacs into the simmering onion-spice gravy during the final 6 to 8 minutes of gentle braising; cover with a tight lid and let them absorb the flavors without vigorous stirring.",
+    ],
+    commonMistakes: [
+      "Piercing or roughly stirring the fish egg sacs with a sharp spoon, which ruptures the roe and turns the silky gravy gritty.",
+      "Deep-frying the fish roe on high heat for too long, which makes the eggs rubbery, tough, and dry instead of tender and buttery.",
+      "Using refined neutral oils instead of authentic Bengali mustard oil, which strips away the quintessential coastal river pungency.",
+    ],
+  },
+  "fish-biryani": {
+    whySpecial:
+      "The coastal jewel of Mughlai and Bengali celebratory feasts: thick, succulent fillets of firm white-flesh fish gently marinated in Kashmiri chili, turmeric, ginger-garlic paste, and roasted cumin, lightly pan-seared in golden ghee, and layered between fragrant parboiled aged basmati rice infused with saffron milk, golden fried onions (birista), fresh mint, cilantro, and lemon wheels. Sealed and slow-steamed under gentle 'dum' so the delicate fish retains its moist, flaky tenderness without breaking, while the rice absorbs every drop of aromatic marine umami.",
+    cookingTips: [
+      "Select firm-fleshed fish such as cod, sea bass, kingfish (surmai), rohu, or mahi-mahi that hold their shape during layering and dum steaming without flaking apart.",
+      "Quickly sear the marinated fish in ghee for only 1.5 to 2 minutes per side until light golden; do not cook it through completely, as it finishes cooking gently in the aromatic steam of the rice.",
+      "Parboil the aged basmati rice to precisely 70% doneness (grains should have a slight bite in the center); drain thoroughly before layering to prevent soggy or mushy biryani.",
+      "Place a heavy cast-iron tawa underneath the biryani pot during the 15-minute dum steaming to diffuse the direct flame and guarantee the fish and bottom layer never scorch.",
+    ],
+    commonMistakes: [
+      "Stirring vigorously with a large spoon after dum cooking, which shatters the tender fish fillets and breaks the long rice grains; always gently scoop from the edges with a flat saucer or spatula.",
+      "Using delicate, flaky fish like tilapia or thin sole fillets, which disintegrate into the rice during steaming.",
+      "Over-cooking the fish during the initial pan sear, resulting in dry, rubbery seafood instead of moist, melt-in-the-mouth flakes.",
+    ],
+  },
+  "carne-asada-steak-tacos": {
+    whySpecial:
+      "The undisputed holy grail of Mexican taquería street food: thick, juicy cuts of certified Halal flank or skirt steak marinated in freshly squeezed lime and orange juices, crushed garlic, cumin, Mexican oregano, and chipotle, seared over blistering high heat to deeply caramelized smoky char with a pink, tender medium-rare center. Sliced across the grain and piled into warm, lightly blistered tortillas, topped generously with crisp, freshly tossed pico de gallo salsa and shredded cheese.",
+    cookingTips: [
+      "Marinate the flank steak for at least 2 to 4 hours (and up to 8 hours), but avoid marinating past 12 hours as the citrus acidity can start breaking down meat fibers into mush.",
+      "Sear on an intensely hot cast-iron skillet, plancha, or outdoor grill (at least 500°F / 260°C); flank steak needs blazing heat for 3 to 4 minutes per side so you achieve a dark, crackling crust without overcooking the juicy interior.",
+      "Rest the steak for 8 to 10 minutes on a wooden cutting board before slicing; this allows the caramelized meat juices to redistribute throughout the steak instead of running onto the board.",
+      "Always slice strictly across (perpendicular to) the muscle grain into thick ribbons; this shortens the long muscle fibers and guarantees melt-in-your-mouth tenderness in every bite.",
+    ],
+    commonMistakes: [
+      "Slicing with the grain, which results in long, chewy, stringy beef that pulls out of the taco in one awkward bite.",
+      "Crowding the skillet or using low heat, which causes the steak to boil in its own marinade instead of searing with a smoky caramelized crust.",
+      "Skipping the resting period, dumping all the savory juices onto the board and leaving the taco filling dry.",
+    ],
+  },
+  "plain-paratha": {
+    whySpecial:
+      "The undisputed golden crown of South Asian and Bengali morning breakfast: unleavened dough kneaded with a splash of milk and oil, rolled thin, brushed with pure cow ghee, folded into concentric spiral layers (lachha/spiral fold), and dry-roasted on a heavy iron tawa before shallow pan-frying with ghee into mesmerizing concentric golden rings that puff majestically and shatter into paper-thin, flaky, buttery layers.",
+    cookingTips: [
+      "Let the kneaded dough rest for at least 30 minutes covered with a damp cloth; resting relaxes the gluten network so the dough rolls effortlessly without springing back.",
+      "For distinct flaky layers, roll the dough ball into a thin disk, brush generously with melted cow ghee, dust with a whisper of dry flour, cut a radius slit, and roll tightly into a cone, then flatten down from the tip into a spiral coil before the final rolling.",
+      "First dry-toast the rolled paratha on a medium-hot iron tawa for 40 seconds per side until pale opaque spots appear before adding any ghee; this cooks the inner dough layers before frying.",
+      "Once dry-toasted, spoon 1 to 2 teaspoons of pure ghee around the rim and press gently with a flat spatula or clean cloth in circular motions; this puffs the paratha into crisp, blistered golden rings.",
+    ],
+    commonMistakes: [
+      "Frying with ghee right from the beginning without dry-toasting first; this traps raw dough inside and makes the paratha greasy and heavy rather than light and flaky.",
+      "Rolling with too much dry dusting flour, which burns on the hot tawa and leaves a chalky, bitter crust.",
+      "Kneading with ice-cold water; always use lukewarm water or lukewarm milk for a supple, soft dough.",
+    ],
+  },
+  "soy-sauce-deep-fried-crispy-fish": {
+    whySpecial:
+      "The undisputed centerpiece of Asian coastal banquet dining: a fresh whole white-flesh fish scored in deep diamond cross-hatches, dusted lightly in cornstarch, and flash deep-fried in bubbling oil to an electric, crackling golden crunch while the interior remains moist, flaky, and tender. Plated over an aromatic shallow pool of seasoned light soy sauce, simmered with fresh ginger, garlic, cilantro roots, and pure sesame oil, then crowned with fine ginger matchsticks, curled scallions, and red chilies.",
+    cookingTips: [
+      "Pat the cleaned whole fish bone-dry inside and out with paper towels before scoring and frying; surface moisture is the enemy of crackling crispy skin.",
+      "Score deep diagonal diamond incisions on both flanks right down to the backbone; this allows the bubbling oil to crisp the skin deeply and cooks the thick flesh evenly in minutes.",
+      "Maintain the frying oil strictly at 365°F to 375°F (185°C to 190°C); baste the head and exposed top parts with hot ladles of oil for uniform golden blister.",
+      "Pour the warm seasoned soy sauce around the base of the fish on the platter, never over the top; this keeps the prized top skin audibly crunchy throughout the entire meal.",
+    ],
+    commonMistakes: [
+      "Frying a cold, wet fish straight from the refrigerator, which drops the oil temperature and produces a greasy, soggy crust.",
+      "Dumping the soy sauce directly over the crispy fish skin at the table, turning crackling skin soft and limp within minutes.",
+      "Using non-Halal Shaoxing wine; our chef method uses apple cider vinegar, a hint of raw honey, and rich fish broth to build identical savory depth with zero alcohol.",
+    ],
+  },
+  "royal-hyderabadi-mutton-haleem": {
+    whySpecial:
+      "The undisputed GI-tagged royal crown jewel of Hyderabad and the sacred Ramadan Iftar banquet: succulent Halal mutton slow-braised for hours with broken wheat (dalia), four varieties of lentils, pure cow ghee, and Nizami royal potli masala until the bone marrow melts and the meat breaks down into rich, fibrous strands, pounded vigorously with a traditional wooden masher (ghotni) into a velvety, luscious, porridge-like texture topped with glistening ghee, crispy golden birista, roasted whole cashews, plump raisins, fresh mint, and lemon juice.",
+    cookingTips: [
+      "Use bone-in mutton pieces (shoulder, shanks, and marrow bones); the gelatin and marrow rendered from slow-cooking the bones are what give authentic Hyderabadi Haleem its signature stretch, body, and unctuous mouthfeel.",
+      "Soak the broken wheat (dalia) and mixed lentils (chana, masoor, moong, and urad dal) for at least 4 to 6 hours or overnight so they break down effortlessly into a smooth, silky porridge.",
+      "Vigorous pounding or mashing (Ghotna) with a heavy wooden masher is the authentic technique that weaves the tender meat strands into the wheat paste; avoid puréeing in a blender, which turns the texture into baby food paste rather than stringy, luscious haleem.",
+      "Always reserve the aromatic spiced red ghee (roghan) floating on top of the cooked mutton korma before blending; drizzle this hot over the finished dish alongside sizzling ghee, golden fried cashews, and crispy fried onions.",
+    ],
+    commonMistakes: [
+      "Puréeing the entire mixture in a high-speed blender into a completely smooth soup, destroying the quintessential fibrous 'reshaydar' texture of authentic haleem.",
+      "Skimping on pure cow ghee; authentic Nizami haleem relies on quality ghee to carry the fragrant aromas of green cardamom, kabab chini (allspice/cubeb), and mace.",
+      "Using boneless meat without marrow bones, which deprives the stew of natural collagen and gelatin.",
+    ],
+  },
+  "beef-lo-mein": {
+    whySpecial:
+      "The undisputed comfort icon of Cantonese noodle houses: thick, chewy egg noodles luxuriating in a copious, glossy glaze of dark soy, Halal oyster sauce, and toasted sesame oil, tossed with thick, succulent slices of seared Halal flank steak, sweet caramelized red bell peppers, and crisp scallions in a sizzling skillet.",
+    cookingTips: [
+      "Use thick, round fresh egg noodles or lo mein noodles; cook them just until tender with a springy chew, then drain and immediately coat in a few drops of sesame oil to keep them separate.",
+      "Velvet the thick-cut flank steak slices with baking soda, cornstarch, and dark soy sauce; this ensures thick slices stay buttery tender all the way through without tough centers.",
+      "Lo Mein translates to 'stirred or tossed noodles'—unlike crispy chow mein, the noodles should swim in a generous coating of savory umami sauce; never let the skillet run dry.",
+      "Sear the thick beef slices over maximum heat for 2 minutes undisturbed to get that appetizing caramelized dark mahogany crust before tossing with the saucy noodles.",
+    ],
+    commonMistakes: [
+      "Using thin angel hair or vermicelli noodles instead of thick, hearty egg or lo mein noodles that can stand up to the robust beef sauce.",
+      "Drying out the sauce by stir-frying noodles too long; lo mein is about tossing (捞) until glossy and saucy, not frying dry.",
+      "Overcooking the flank steak slices beyond tender-juicy medium.",
+    ],
+  },
+  "homemade-chili-oil": {
+    whySpecial:
+      "The undisputed holy grail of Asian condiments and home pantry essentials: neutral oil slowly infused with star anise, cinnamon, black cardamom, cloves, bay leaves, fresh ginger, and scallions, then carefully poured over a fragrant blend of coarse Sichuan chili flakes, toasted white sesame seeds, sea salt, and a touch of mushroom powder to create a radiant ruby-red elixir that crackles with intoxicating aroma and balanced, mouth-tingling heat.",
+    cookingTips: [
+      "Keep oil temperature strictly between 325°F and 350°F (165°C - 175°C) when pouring over the chili flakes; oil that is too hot will scorch the pepper flakes and turn bitter, while oil that is too cool won't extract the deep crimson color and nutty roasted fragrance.",
+      "Infuse the whole aromatics (cinnamon, star anise, cardamom, bay leaves, ginger, scallions) over low heat for 20 to 25 minutes until the scallions turn golden brown; this extracts sweet spice perfumes without burning.",
+      "Pour the hot oil in two separate stages over the chili flakes: pour half first to awaken the aromatics with gentle sizzle, wait 30 seconds, then pour the remainder.",
+      "Allow the chili oil to steep undisturbed for at least 12 to 24 hours at room temperature; the color deepens into a mesmerizing luminescent ruby red and the flavor blooms exponentially.",
+    ],
+    commonMistakes: [
+      "Pouring boiling oil (above 375°F / 190°C) directly onto chili flakes, which burns them black instantly and ruins the batch with an acrid bitter taste.",
+      "Using olive oil or unrefined oils with low smoke points or strong competing flavors; always use neutral high-smoke-point oil such as canola, peanut, or avocado oil.",
+      "Introducing moisture or wet spoons into the storage jar; always use a completely dry utensil to guarantee a shelf life of months.",
+    ],
+  },
+  "chinese-beef-stir-fry": {
+    whySpecial:
+      "The pinnacle of Chinese banquet wok cookery made 100% Halal: paper-thin ribbons of Halal flank steak velveted with soy sauce and cornstarch to achieve legendary melt-in-your-mouth tenderness, flash-seared over smoking wok fire and tossed with crisp sugar snap peas, sweet yellow and red bell peppers, chewy noodles, and a rich garlic-ginger soy reduction finished with toasted white sesame seeds and scallions.",
+    cookingTips: [
+      "Slice the flank steak across the grain into very thin 1/8-inch ribbons; cutting across the muscle fibers breaks them down into fork-tender strips that never turn chewy.",
+      "Never skip the cornstarch velveting marinade; cornstarch creates a protective barrier that seals in the beef's natural juices during high-heat searing.",
+      "Sear beef in a blazing hot wok in a single flat layer for 90 seconds without moving it; this achieves mouthwatering restaurant caramelization without boiling the beef in liquid.",
+      "Blanch snap peas in boiling water for 45 seconds and shock in cold water before stir-frying; they will emerge with an electric emerald color and crisp-tender crunch.",
+    ],
+    commonMistakes: [
+      "Crowding the beef into a lukewarm skillet, which releases moisture and simmers the meat into grey, tough strips instead of searing with wok-hei char.",
+      "Cutting flank steak with the grain instead of perpendicular to the grain.",
+      "Using non-Halal Shaoxing wine; our chef formula uses aged Halal apple cider vinegar and rich beef bone broth to achieve identical savory depth and complexity with zero alcohol.",
+    ],
+  },
+  "classic-wok-tossed-chicken-noodles-chow-mein": {
+    whySpecial:
+      "The undisputed high-heat sensation of Asian street food and Bengali-Chinese trattorias: springy egg noodles flash-tossed in a smoking wok with velvety soy-marinated chicken strips, crisp matchstick carrots, sweet red and green bell peppers, and shredded cabbage, coated in a glistening savory sauce of dark soy, toasted sesame oil, ginger, and garlic with signature 'wok hei' breath of the wok aroma.",
+    cookingTips: [
+      "Boil noodles 1 minute shy of al dente, drain immediately, rinse thoroughly with ice-cold water to wash away surface starch, and toss with 1 teaspoon of toasted sesame oil to keep them springy and completely separate.",
+      "Velvet the sliced chicken breast with soy sauce, cornstarch, and sesame oil for 15 minutes; the cornstarch forms a protective seal that keeps the lean white meat extraordinarily silky and juicy.",
+      "Preheat the wok or heavy skillet until wisps of smoke rise before adding oil; rapid stir-frying over maximum heat creates 'wok hei' caramelization without turning the vegetables limp or soggy.",
+      "Premix the chow mein sauce in a small bowl beforehand; wok cooking happens in under 4 minutes, so you need everything prepped and within arm's reach.",
+    ],
+    commonMistakes: [
+      "Overcooking the noodles during boiling, causing them to turn into a mushy, gummy clump when stir-fried.",
+      "Overcrowding the wok with raw vegetables, which drops the pan temperature and causes vegetables to stew in their own moisture rather than crisp-char.",
+      "Using non-Halal Chinese sauces; always check oyster sauce, soy sauce, and chili pastes to ensure zero non-halal alcohol or uncertified animal derivatives.",
+    ],
+  },
+  "steak-fajitas": {
+    whySpecial:
+      "The undisputed king of sizzling Tex-Mex street dining: premium Halal flank or skirt steak marinated in fresh lime juice, crushed garlic, cumin, smoked paprika, and jalapeño, flame-seared in a white-hot cast-iron skillet to juicy medium-rare perfection, sliced thinly against the grain and served alongside blistered tri-color bell peppers, caramelized sweet onions, warm charred tortillas, fresh guacamole, and zesty pico de gallo.",
+    cookingTips: [
+      "Always slice the flank steak strictly against the grain (perpendicular to the long muscle fibers) at a 45-degree angle; this cuts the long fibers short, ensuring every single bite is buttery soft and tender.",
+      "Get your cast-iron skillet screaming hot before adding the steak; a rapid 3 to 4 minute sear per side develops deep caramelized crust while preserving a juicy pink medium-rare center (135°F / 57°C).",
+      "Rest the seared steak on a cutting board for a full 8 to 10 minutes before carving so all the internal juices redistribute into the meat instead of leaking onto the board.",
+      "Cook the sliced peppers and onions in the same skillet over high heat using the flavorful beef drippings, keeping them crisp-tender with appetizing blistered black char edges.",
+    ],
+    commonMistakes: [
+      "Over-marinating in high acid; flank steak only needs 1 to 4 hours in lime juice. Marinating overnight can break down muscle fibers into a mushy texture.",
+      "Crowding the skillet with steak and vegetables at the same time; this steams the meat instead of searing it with that iconic steakhouse crust.",
+      "Slicing with the grain instead of across it, which makes flank steak tough and chewy.",
+    ],
+  },
+  "rohu-fish-curry": {
+    whySpecial:
+      "The undisputed soul of riverine Bengali culinary heritage (মাছে ভাতে বাঙালি): sweet, tender steaks of fresh wild Rohu carp (রুই মাছ) marinated in fragrant turmeric and sea salt, pan-fried in pure mustard oil to seal in delicate juices, then gently simmered in a luscious gravy of roasted cumin, fresh ginger, ripe tomatoes, and slit green chilies, finished with a bright squeeze of fresh lemon.",
+    cookingTips: [
+      "Wash the Rohu steaks thoroughly with cold water, coarse salt, and a splash of lemon juice to eliminate any freshwater siltiness before seasoning.",
+      "Rub fish steaks with turmeric and salt 10 minutes prior to frying; fry in smoking mustard oil for just 2 to 3 minutes per side until light golden—never over-fry, or the fish will dry out.",
+      "Bloom whole cumin seeds and fragrant bay leaves in the residual mustard oil before sautéing onions to build the quintessential Bengali aroma.",
+      "Slide the seared fish steaks into the simmering tomato-cumin gravy and gently shake the pan rather than stirring aggressively with a spoon, keeping the tender steaks completely intact.",
+    ],
+    commonMistakes: [
+      "Frying the fish in cold oil, which causes the skin to stick and tear.",
+      "Over-boiling the fish in the gravy, which breaks down the delicate flaky meat.",
+      "Skipping the finishing touch of fresh lemon juice, which cuts the rich spices and enhances the natural sweetness of the carp.",
+    ],
+  },
+  "chicken-marsala": {
+    whySpecial:
+      "The quintessential Italian-American bistro comfort dish reimagined for 100% Halal dining: golden, flour-dredged tender chicken cutlets pan-seared in butter and olive oil, smothered in an intensely savory, caramelized reduction of earthy cremini mushrooms, minced shallots, garlic, rich Halal bone broth, and tangy white grape-balsamic reduction with zero alcohol.",
+    cookingTips: [
+      "Butterfly and pound chicken breasts evenly to 1/4-inch thickness; uniform cutlets sear rapidly and stay juicy without drying out.",
+      "Dredge chicken lightly in seasoned flour and shake off all excess; this creates a delicate golden crust that naturally thickens the pan sauce.",
+      "Do not crowd the mushrooms in the skillet; sautéing them over medium-high heat undisturbed allows them to brown deeply and develop intense umami.",
+      "Craft the zero-alcohol Marsala profile by reducing 100% white grape juice with balsamic vinegar and rich chicken bone broth, finishing with cold butter for a glossy restaurant sheen.",
+    ],
+    commonMistakes: [
+      "Using wine or cooking wine, which contains alcohol and is haram in Islamic dietary law; our scratch-made grape-balsamic broth reduction replicates the identical sweet-savory notes legally and naturally.",
+      "Overcooking thin chicken cutlets; they only need 3 to 4 minutes per side in a smoking hot skillet.",
+      "Salting mushrooms too early, which draws out their water and causes them to steam rather than brown.",
+    ],
+  },
   "saag-paneer": {
     whySpecial:
       "The quintessential jewel of South Asian vegetarian cuisine: fresh spinach leaves and mustard greens blanched in an ice bath to preserve their electric emerald color, pureed with caramelized aromatics, and simmered with pure ghee, garam masala, and golden pan-seared cubes of Halal paneer cheese.",
