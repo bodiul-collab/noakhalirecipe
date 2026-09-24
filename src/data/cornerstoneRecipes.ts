@@ -1,10 +1,10 @@
 import { Recipe } from "../types";
 import { IMAGES } from "./assets";
-import { CORNERSTONE_BLUEPRINTS } from "./productionEngine";
+import { CORNERSTONE_METADATA_MAP } from "./cornerstoneMetadata";
 
-const kacchiBlueprint = CORNERSTONE_BLUEPRINTS.find((b) => b.recipeSlug === "kacchi-biryani")!;
-const kalaBhunaBlueprint = CORNERSTONE_BLUEPRINTS.find((b) => b.recipeSlug === "beef-kala-bhuna")!;
-const rezalaBlueprint = CORNERSTONE_BLUEPRINTS.find((b) => b.recipeSlug === "chicken-rezala")!;
+const kacchiMeta = CORNERSTONE_METADATA_MAP.get("kacchi-biryani")!;
+const kalaBhunaMeta = CORNERSTONE_METADATA_MAP.get("beef-kala-bhuna")!;
+const rezalaMeta = CORNERSTONE_METADATA_MAP.get("chicken-rezala")!;
 
 export const CORNERSTONE_ADDITIONAL_RECIPES: Recipe[] = [
   {
@@ -47,14 +47,12 @@ export const CORNERSTONE_ADDITIONAL_RECIPES: Recipe[] = [
       "Skipping the raw papaya paste; without this natural enzyme, raw meat will remain tough and chewy.",
       "Lifting the lid during dum cooking; breaking the dough seal prematurely releases steam pressure and halts cooking.",
     ],
-    seoTitle: kacchiBlueprint.seoTitle,
-    seoDescription: kacchiBlueprint.seoMetaDescription,
-    relatedRecipeSlugs: kacchiBlueprint.relatedRecipes,
-    relatedGuideSlugs: kacchiBlueprint.relatedGuides,
-    relatedCultureSlug: kacchiBlueprint.relatedCulture,
-    relatedKitchenToolId: kacchiBlueprint.kitchenToolId,
-    videoChapters: kacchiBlueprint.chapters,
-    videoProduction: kacchiBlueprint.productionData,
+    seoTitle: kacchiMeta.seoTitle,
+    seoDescription: kacchiMeta.seoDescription,
+    relatedRecipeSlugs: kacchiMeta.relatedRecipes,
+    relatedGuideSlugs: kacchiMeta.relatedGuides,
+    relatedCultureSlug: kacchiMeta.relatedCulture,
+    relatedKitchenToolId: kacchiMeta.kitchenToolId,
     ingredients: [
       { amount: "3 lbs / 1.4 kg", unit: "bone-in cuts", name: "Halal beef or mutton shank/ribs", notes: "large wedding-style cuts with good marbling" },
       { amount: "4", unit: "tbsp", name: "Raw green papaya paste", notes: "ground with peel intact for natural papain tenderization" },
@@ -190,14 +188,12 @@ export const CORNERSTONE_ADDITIONAL_RECIPES: Recipe[] = [
       "Adding cold water during braising, which contracts the muscle fibers and makes the beef tough and stringy.",
       "Using seed oils instead of cold-pressed mustard oil, losing the sharp regional terroir of Chittagong.",
     ],
-    seoTitle: kalaBhunaBlueprint.seoTitle,
-    seoDescription: kalaBhunaBlueprint.seoMetaDescription,
-    relatedRecipeSlugs: kalaBhunaBlueprint.relatedRecipes,
-    relatedGuideSlugs: kalaBhunaBlueprint.relatedGuides,
-    relatedCultureSlug: kalaBhunaBlueprint.relatedCulture,
-    relatedKitchenToolId: kalaBhunaBlueprint.kitchenToolId,
-    videoChapters: kalaBhunaBlueprint.chapters,
-    videoProduction: kalaBhunaBlueprint.productionData,
+    seoTitle: kalaBhunaMeta.seoTitle,
+    seoDescription: kalaBhunaMeta.seoDescription,
+    relatedRecipeSlugs: kalaBhunaMeta.relatedRecipes,
+    relatedGuideSlugs: kalaBhunaMeta.relatedGuides,
+    relatedCultureSlug: kalaBhunaMeta.relatedCulture,
+    relatedKitchenToolId: kalaBhunaMeta.kitchenToolId,
     ingredients: [
       { amount: "2.5 lbs / 1.1 kg", unit: "cubes", name: "Halal beef chuck or shank", notes: "cut into 1.5-inch pieces with some fat for braising" },
       { amount: "1/2", unit: "cup", name: "Cold-pressed mustard oil", notes: "divided for braising and final baghar tempering" },
@@ -326,14 +322,12 @@ export const CORNERSTONE_ADDITIONAL_RECIPES: Recipe[] = [
       "Pouring cold yogurt directly into hot ghee, which causes the dairy solids to separate and curdle.",
       "Over-reducing the sauce; Rezala should have a fluid, silky pourable consistency that coats the back of a spoon.",
     ],
-    seoTitle: rezalaBlueprint.seoTitle,
-    seoDescription: rezalaBlueprint.seoMetaDescription,
-    relatedRecipeSlugs: rezalaBlueprint.relatedRecipes,
-    relatedGuideSlugs: rezalaBlueprint.relatedGuides,
-    relatedCultureSlug: rezalaBlueprint.relatedCulture,
-    relatedKitchenToolId: rezalaBlueprint.kitchenToolId,
-    videoChapters: rezalaBlueprint.chapters,
-    videoProduction: rezalaBlueprint.productionData,
+    seoTitle: rezalaMeta.seoTitle,
+    seoDescription: rezalaMeta.seoDescription,
+    relatedRecipeSlugs: rezalaMeta.relatedRecipes,
+    relatedGuideSlugs: rezalaMeta.relatedGuides,
+    relatedCultureSlug: rezalaMeta.relatedCulture,
+    relatedKitchenToolId: rezalaMeta.kitchenToolId,
     ingredients: [
       { amount: "2 lbs / 900g", unit: "bone-in cuts", name: "Halal chicken thighs and drumsticks", notes: "scored diagonally for deep flavor penetration" },
       { amount: "1.5", unit: "cups", name: "Plain whole milk yogurt", notes: "whisked until completely smooth and room temperature" },

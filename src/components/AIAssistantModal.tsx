@@ -19,7 +19,7 @@ interface Message {
   id: string;
   role: "user" | "assistant";
   text: string;
-  sources?: Array<{ title: string; url: string; type: "web" | "maps" }>;
+  sources?: Array<{ title: string; url: string; type: "web" }>;
   searchQueries?: string[];
   timestamp: string;
 }

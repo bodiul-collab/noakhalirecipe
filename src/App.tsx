@@ -437,6 +437,19 @@ export default function App() {
     ) {
       const cultureSlug =
         path.replace(/^\/(?:food-)?culture\/?/, "").split("/")[0] || undefined;
+
+      // Handle radhuni guide cross-route access seamlessly
+      if (cultureSlug === "bengali-radhuni-spice-guide" || cultureSlug === "bengali-radhuni-guide") {
+        return (
+          <CookingGuidesView
+            key="guide-bengali-radhuni"
+            initialSlug="bengali-radhuni-guide"
+            onNavigate={navigate}
+            onSelectRecipe={handleSelectRecipe}
+          />
+        );
+      }
+
       return (
         <FoodCultureView
           key={`culture-${cultureSlug || "index"}`}

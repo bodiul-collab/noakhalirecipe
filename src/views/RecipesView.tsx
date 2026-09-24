@@ -37,12 +37,10 @@ import { Recipe, RecipeCollection } from "../types";
 import { openPrintWindow, downloadPrintableHtml } from "../utils/printableRecipeGenerator";
 import { calculatePerServingNutrition } from "../utils/nutritionEstimator";
 import { RecipeRatingCard } from "../components/RecipeRatingCard";
-import { YouTubePlayer } from "../components/YouTubePlayer";
 import {
   RecipeWhySpecialBanner,
-  RecipeVideoMasterclass,
   RecipeCulinaryEcosystem,
-} from "../components/RecipeProductionEngineSection";
+} from "../components/RecipeCulinaryEcosystemSection";
 import { COOKING_GUIDES } from "../data/guides";
 import {
   loadUserRatings,
@@ -170,7 +168,8 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
           (r.slug === "authentic-bangladeshi-beef-curry" && (activeSlug === "bangladeshi-beef-curry" || activeSlug === "bangladeshi-beef" || activeSlug === "bengali-beef-curry" || activeSlug === "gorur-mangsho-curry" || activeSlug === "gorur-mangsho-bhuna-curry" || activeSlug === "gorur-mangsho" || activeSlug === "beef-curry-bangladeshi" || activeSlug === "bengali-beef")) ||
           (r.slug === "beef-nahari" && (activeSlug === "beef-nihari" || activeSlug === "nahari" || activeSlug === "nihari" || activeSlug === "shahi-beef-nihari" || activeSlug === "gorur-nihari" || activeSlug === "pakistani-beef-nihari" || activeSlug === "karachi-beef-nihari" || activeSlug === "delhi-nihari")) ||
           (r.slug === "moroccan-lamb-tagine" && (activeSlug === "lamb-tagine" || activeSlug === "authentic-moroccan-lamb-tagine" || activeSlug === "moroccan-tagine" || activeSlug === "lamb-tagine-prunes" || activeSlug === "tagine-lamb" || activeSlug === "moroccan-lamb-tagine-with-sweet-prunes-toasted-almonds" || activeSlug === "moroccan-lamb-tagine-with-sweet-prunes-and-toasted-almonds")) ||
-          (r.slug === "bangladeshi-spiced-shrimp-and-green-bean-stir-fry" && (activeSlug === "shrimp-green-bean-stir-fry" || activeSlug === "shrimp-and-green-bean-stir-fry" || activeSlug === "bangladeshi-shrimp-stir-fry" || activeSlug === "chingri-borboti-bhaji" || activeSlug === "chingri-shir-bhaji" || activeSlug === "shrimp-green-beans" || activeSlug === "chingri-mach-bhaji" || activeSlug === "chingri-bhaji"))
+          (r.slug === "bangladeshi-spiced-shrimp-and-green-bean-stir-fry" && (activeSlug === "shrimp-green-bean-stir-fry" || activeSlug === "shrimp-and-green-bean-stir-fry" || activeSlug === "bangladeshi-shrimp-stir-fry" || activeSlug === "chingri-borboti-bhaji" || activeSlug === "chingri-shir-bhaji" || activeSlug === "shrimp-green-beans" || activeSlug === "chingri-mach-bhaji" || activeSlug === "chingri-bhaji")) ||
+          (r.slug === "bengali-aloo-dum" && (activeSlug === "aloo-dum" || activeSlug === "alur-dom" || activeSlug === "bengali-alur-dom" || activeSlug === "dum-aloo" || activeSlug === "bengali-dum-aloo" || activeSlug === "luchi-aloo-dum" || activeSlug === "luchi-alur-dom"))
       ) || null
     );
   }, [activeSlug]);
@@ -371,21 +370,6 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
         ratingValue: blendedRating.rating.toString(),
         reviewCount: blendedRating.reviewCount.toString(),
       },
-      ...(currentRecipe.youtubeVideoId
-        ? {
-            video: {
-              "@type": "VideoObject",
-              name: currentRecipe.videoTitle || currentRecipe.title,
-              description: currentRecipe.description,
-              thumbnailUrl: [currentRecipe.heroImage],
-              uploadDate: currentRecipe.updatedDate,
-              contentUrl:
-                currentRecipe.youtubeUrl ||
-                `https://www.youtube.com/watch?v=${currentRecipe.youtubeVideoId}`,
-              embedUrl: `https://www.youtube-nocookie.com/embed/${currentRecipe.youtubeVideoId}`,
-            },
-          }
-        : {}),
     };
 
     const relatedGuides = COOKING_GUIDES.filter(
@@ -711,9 +695,6 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
               recipe={currentRecipe}
               scaledServings={scaledServings}
             />
-
-            {/* WATCH THE FULL RECIPE & PRODUCTION ENGINE MASTERCLASS */}
-            <RecipeVideoMasterclass recipe={currentRecipe} />
 
             {/* PRINT / SAVE / SCALE RECIPE Structured Action Bar */}
             <div className="p-4 bg-white rounded-xl border border-[#E6E1D8] shadow-2xs space-y-3 print:hidden">

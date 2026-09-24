@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Core Hubs -->
+  <url><loc>https://www.noakhalikitchen.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/recipes</loc><priority>0.9</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/guides</loc><priority>0.9</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/culture</loc><priority>0.8</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/pantry</loc><priority>0.8</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/tools</loc><priority>0.8</priority></url>
+
+  <!-- Cornerstone Recipes -->
+  <url><loc>https://www.noakhalikitchen.com/recipes/bengali-beef-tehari</loc><priority>0.9</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/recipes/chicken-biryani</loc><priority>0.9</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/recipes/kacchi-biryani</loc><priority>0.9</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/recipes/bengali-beef-bhuna</loc><priority>0.9</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/recipes/bengali-chicken-roast</loc><priority>0.9</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/recipes/beef-kala-bhuna</loc><priority>0.9</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/recipes/chicken-rezala</loc><priority>0.9</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/recipes/authentic-nihari</loc><priority>0.9</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/recipes/chicken-karahi</loc><priority>0.9</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/recipes/authentic-chicken-shawarma</loc><priority>0.9</priority></url>
+
+  <!-- Editorial Culinary Authority Foundation (Batch 1 Guides & Culture) -->
+  <url><loc>https://www.noakhalikitchen.com/guides/authentic-dhaka-shahi-kacchi-biryani</loc><priority>0.85</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/guides/bengali-beef-bhuna-guide</loc><priority>0.85</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/guides/mustard-oil-bengali-cooking</loc><priority>0.85</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/guides/how-to-make-perfect-beresta</loc><priority>0.85</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/guides/bengali-radhuni-guide</loc><priority>0.85</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/culture/bengali-radhuni-spice-guide</loc><priority>0.85</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/guides/biye-barir-shahi-chicken-roast-guide</loc><priority>0.85</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/guides/chittagong-beef-kala-bhuna-guide</loc><priority>0.85</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/guides/old-dhaka-beef-tehari-vs-biryani</loc><priority>0.85</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/guides/how-to-cook-with-panch-phoron</loc><priority>0.85</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/guides/authentic-royal-beef-nihari-guide</loc><priority>0.85</priority></url>
+
+  <!-- Categories -->
+  <url><loc>https://www.noakhalikitchen.com/category/halal-chicken</loc><priority>0.8</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/category/halal-beef</loc><priority>0.8</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/category/halal-seafood</loc><priority>0.8</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/category/halal-vegetarian</loc><priority>0.8</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/category/halal-rice-curry</loc><priority>0.8</priority></url>
+
+  <!-- Institutional Pages -->
+  <url><loc>https://www.noakhalikitchen.com/about</loc><priority>0.7</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/contact</loc><priority>0.7</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/privacy</loc><priority>0.5</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/terms</loc><priority>0.5</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/affiliate-disclosure</loc><priority>0.5</priority></url>
+</urlset>

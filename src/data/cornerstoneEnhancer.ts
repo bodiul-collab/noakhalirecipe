@@ -1,10 +1,6 @@
 import { Recipe } from "../types";
-import { CORNERSTONE_BLUEPRINTS } from "./productionEngine";
+import { CORNERSTONE_METADATA_MAP } from "./cornerstoneMetadata";
 import { CORNERSTONE_ADDITIONAL_RECIPES } from "./cornerstoneRecipes";
-
-const BLUEPRINT_MAP = new Map(
-  CORNERSTONE_BLUEPRINTS.map((b) => [b.recipeSlug, b])
-);
 
 // Map of cornerstone recipe specific editorial enhancements
 const RECIPE_EDITORIAL_EXTRAS: Record<
@@ -15,6 +11,21 @@ const RECIPE_EDITORIAL_EXTRAS: Record<
     commonMistakes: string[];
   }
 > = {
+  "bengali-aloo-dum": {
+    whySpecial:
+      "The quintessential Bengali festival and Sunday morning breakfast soul food: baby potatoes pricked all over and shallow-fried in golden mustard oil until blistered, then simmered 'dum' style (slow-cooked on low flame in their own steam) in a rich, velvety gravy of grated ginger, juicy tomatoes, whisked yogurt, and freshly ground Bengali bhaja masala (roasted cumin, coriander, dry red chili, and cardamom). Served steaming hot in a traditional iron kadai, crowned with slit green chilies and fresh cilantro alongside puffed, gossamer-thin luchis.",
+    cookingTips: [
+      "Prick the boiled baby potatoes all over with a fork or toothpick before shallow frying in mustard oil with a pinch of turmeric and salt; this forms a crisp golden skin and allows the spiced gravy to penetrate right to the potato's core.",
+      "Always prepare fresh 'Bhaja Masala' (dry-roasted cumin seeds, coriander seeds, dry red chili, and green cardamom ground into an aromatic powder) and dust it over the dish right before turning off the heat.",
+      "Whisk yogurt with a tablespoon of water and lower the heat completely before adding to the skillet; stir continuously so the yogurt integrates smoothly without curdling.",
+      "The 'Dum' process is key: keep the lid sealed tight and allow the potatoes to absorb the rich gravy over the lowest possible flame for 10 to 12 minutes until the oil separates (tori/roghan float).",
+    ],
+    commonMistakes: [
+      "Overboiling the baby potatoes beforehand so they burst and turn mushy when fried; boil until just fork-tender, not collapsing.",
+      "Skipping the initial potato shallow-fry step in mustard oil; frying creates the signature golden wrinkly skin that defines authentic Bengali Alur Dom.",
+      "Using cold yogurt or adding it over high heat, which causes the sauce to separate and look grainy.",
+    ],
+  },
   "bangladeshi-spiced-shrimp-and-green-bean-stir-fry": {
     whySpecial:
       "A beloved, vibrant everyday Bengali home-cooked classic (Chingri Borboti Bhaji): tender, sweet peeled tiger shrimp lightly seasoned with golden turmeric and sea salt, flash-seared in mustard oil, and tossed with crisp French green beans or yardlong beans (borboti), caramelized sliced red onions, pungent garlic, roasted cumin, and sliced green chilies. The shrimp remain juicy and snap-tender while the green beans retain their vibrant emerald crunch, coated in an aromatic savory dry-spice glaze.",
@@ -581,8 +592,8 @@ export function enhanceRecipesWithCornerstones(baseRecipes: Recipe[]): Recipe[] 
   const allRawRecipes = [...CORNERSTONE_ADDITIONAL_RECIPES, ...baseRecipes];
 
   return allRawRecipes.map((recipe) => {
-    const blueprint = BLUEPRINT_MAP.get(recipe.slug);
-    if (!blueprint) {
+    const meta = CORNERSTONE_METADATA_MAP.get(recipe.slug);
+    if (!meta) {
       return recipe;
     }
 
@@ -590,7 +601,7 @@ export function enhanceRecipesWithCornerstones(baseRecipes: Recipe[]): Recipe[] 
 
     return {
       ...recipe,
-      whySpecial: recipe.whySpecial || extras?.whySpecial || blueprint.productionData.hook,
+      whySpecial: recipe.whySpecial || extras?.whySpecial,
       cookingTips: recipe.cookingTips || extras?.cookingTips || [
         "Maintain proper heat control throughout cooking.",
         "Use high-quality Halal ingredients and fresh whole spices.",
@@ -600,14 +611,12 @@ export function enhanceRecipesWithCornerstones(baseRecipes: Recipe[]): Recipe[] 
         "Rushing the cooking time over excessive heat.",
         "Skipping the initial spice blooming phase.",
       ],
-      relatedRecipeSlugs: recipe.relatedRecipeSlugs || blueprint.relatedRecipes,
-      relatedGuideSlugs: recipe.relatedGuideSlugs || blueprint.relatedGuides,
-      relatedCultureSlug: recipe.relatedCultureSlug || blueprint.relatedCulture,
-      relatedKitchenToolId: recipe.relatedKitchenToolId || blueprint.kitchenToolId,
-      seoTitle: recipe.seoTitle || blueprint.seoTitle,
-      seoDescription: recipe.seoDescription || blueprint.seoMetaDescription,
-      videoChapters: recipe.videoChapters || blueprint.chapters,
-      videoProduction: recipe.videoProduction || blueprint.productionData,
+      relatedRecipeSlugs: recipe.relatedRecipeSlugs || meta.relatedRecipes,
+      relatedGuideSlugs: recipe.relatedGuideSlugs || meta.relatedGuides,
+      relatedCultureSlug: recipe.relatedCultureSlug || meta.relatedCulture,
+      relatedKitchenToolId: recipe.relatedKitchenToolId || meta.kitchenToolId,
+      seoTitle: recipe.seoTitle || meta.seoTitle,
+      seoDescription: recipe.seoDescription || meta.seoDescription,
     };
   });
 }

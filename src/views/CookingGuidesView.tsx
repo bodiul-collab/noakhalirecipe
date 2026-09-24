@@ -5,9 +5,11 @@ import {
   Clock,
   ArrowRight,
   ArrowLeft,
-  ChefHat,
-  Sparkles,
+  Wrench,
   HelpCircle,
+  Tag,
+  Share2,
+  Check,
 } from "lucide-react";
 import { COOKING_GUIDES } from "../data/guides";
 import { RECIPES } from "../data/recipes";
@@ -29,6 +31,21 @@ const CATEGORIES = [
   "Kitchen Tips",
 ] as const;
 
+// Helper to render bold markdown syntax (**text**)
+const renderFormattedText = (text: string) => {
+  const parts = text.split(/(\*\*.*?\*\*)/g);
+  return parts.map((part, i) => {
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return (
+        <strong key={i} className="font-bold text-[#242423] dark:text-white">
+          {part.slice(2, -2)}
+        </strong>
+      );
+    }
+    return part;
+  });
+};
+
 export const CookingGuidesView: React.FC<CookingGuidesViewProps> = ({
   initialSlug,
   onNavigate,
@@ -37,13 +54,26 @@ export const CookingGuidesView: React.FC<CookingGuidesViewProps> = ({
   const [activeSlug, setActiveSlug] = useState<string | null>(initialSlug || null);
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [searchQuery, setSearchQuery] = useState<string>("");
+  const [copied, setCopied] = useState<boolean>(false);
 
   useEffect(() => {
     setActiveSlug(initialSlug || null);
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, [initialSlug]);
 
-  const currentGuide = COOKING_GUIDES.find((g) => g.slug === activeSlug);
+  const currentGuide = COOKING_GUIDES.find(
+    (g) =>
+      g.slug === activeSlug ||
+      (activeSlug === "bengali-radhuni-spice-guide" && g.slug === "bengali-radhuni-guide")
+  );
+
+  const handleShare = () => {
+    if (typeof window !== "undefined") {
+      navigator.clipboard.writeText(window.location.href);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }
+  };
 
   // Filter guides
   const filteredGuides = COOKING_GUIDES.filter((guide) => {
@@ -63,12 +93,21 @@ export const CookingGuidesView: React.FC<CookingGuidesViewProps> = ({
       currentGuide.relatedRecipeSlugs?.includes(r.slug)
     );
 
+    const relatedGuides = COOKING_GUIDES.filter(
+      (g) =>
+        g.slug !== currentGuide.slug &&
+        currentGuide.relatedGuideSlugs?.includes(g.slug)
+    );
+
     return (
       <div className="w-full bg-[#FAF9F6] dark:bg-[#141413] py-8 sm:py-12">
-        <div className="max-w-[860px] mx-auto px-4 sm:px-6 space-y-6">
+        <div className="max-w-[880px] mx-auto px-4 sm:px-6 space-y-6">
           {/* Breadcrumbs */}
           <nav className="flex items-center gap-2 text-xs text-[#77736D] dark:text-[#A8A49E]">
-            <button onClick={() => onNavigate("/")} className="hover:text-[#30302F] dark:hover:text-white cursor-pointer">
+            <button
+              onClick={() => onNavigate("/")}
+              className="hover:text-[#30302F] dark:hover:text-white cursor-pointer"
+            >
               Home
             </button>
             <span>/</span>
@@ -82,26 +121,46 @@ export const CookingGuidesView: React.FC<CookingGuidesViewProps> = ({
               Cooking Guides
             </button>
             <span>/</span>
-            <span className="text-[#30302F] dark:text-white font-bold truncate max-w-[220px]">
+            <span className="text-[#30302F] dark:text-white font-bold truncate max-w-[240px]">
               {currentGuide.title}
             </span>
           </nav>
 
-          <button
-            onClick={() => {
-              setActiveSlug(null);
-              onNavigate("/guides");
-            }}
-            className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#77736D] dark:text-[#A8A49E] hover:text-[#30302F] dark:hover:text-white cursor-pointer transition-colors"
-          >
-            <ArrowLeft className="w-3.5 h-3.5" />
-            Back to All Guides
-          </button>
+          <div className="flex items-center justify-between">
+            <button
+              onClick={() => {
+                setActiveSlug(null);
+                onNavigate("/guides");
+              }}
+              className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#77736D] dark:text-[#A8A49E] hover:text-[#30302F] dark:hover:text-white cursor-pointer transition-colors"
+            >
+              <ArrowLeft className="w-3.5 h-3.5" />
+              Back to All Guides
+            </button>
 
-          <article className="bg-white dark:bg-[#1E1E1C] rounded-xl border border-[#E6E1D8] dark:border-[#33322E] shadow-sm p-6 sm:p-10 space-y-6">
+            <button
+              onClick={handleShare}
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#77736D] dark:text-[#A8A49E] hover:text-[#E97520] cursor-pointer transition-colors"
+              title="Share Guide Link"
+            >
+              {copied ? (
+                <>
+                  <Check className="w-3.5 h-3.5 text-green-600" />
+                  <span className="text-green-600">Copied!</span>
+                </>
+              ) : (
+                <>
+                  <Share2 className="w-3.5 h-3.5" />
+                  <span>Share Guide</span>
+                </>
+              )}
+            </button>
+          </div>
+
+          <article className="bg-white dark:bg-[#1E1E1C] rounded-xl border border-[#E6E1D8] dark:border-[#33322E] shadow-sm p-6 sm:p-10 space-y-7">
             {/* Header */}
             <div className="space-y-3">
-              <div className="flex items-center gap-2">
+              <div className="flex flex-wrap items-center gap-2">
                 <span className="text-[11px] font-bold uppercase tracking-widest text-[#E97520] bg-[#FFF9F0] dark:bg-[#2A241A] px-2.5 py-1 rounded border border-[#F8CD78]/40 dark:border-[#E7A52B]/30">
                   {currentGuide.category}
                 </span>
@@ -116,7 +175,9 @@ export const CookingGuidesView: React.FC<CookingGuidesViewProps> = ({
               </h1>
 
               <div className="flex flex-wrap items-center gap-3 pt-2 text-xs text-[#77736D] dark:text-[#A8A49E] border-b border-[#F3F2EE] dark:border-[#2D2D2A] pb-4">
-                <span className="font-bold text-[#30302F] dark:text-white">By {currentGuide.author.name}</span>
+                <span className="font-bold text-[#30302F] dark:text-white">
+                  By {currentGuide.author.name}
+                </span>
                 <span>&bull;</span>
                 <span>{currentGuide.author.role}</span>
                 <span>&bull;</span>
@@ -134,42 +195,182 @@ export const CookingGuidesView: React.FC<CookingGuidesViewProps> = ({
               />
             </div>
 
-            {/* Content Body */}
+            {/* Content Body with Markdown Rendering */}
             <div className="prose prose-stone max-w-none text-xs sm:text-sm leading-relaxed text-[#3F3C38] dark:text-[#EDE8DF] space-y-4">
               {currentGuide.content.split("\n\n").map((paragraph, idx) => {
-                if (paragraph.startsWith("### ")) {
+                const trimmed = paragraph.trim();
+
+                // H3
+                if (trimmed.startsWith("### ")) {
                   return (
                     <h3
                       key={idx}
                       className="text-lg sm:text-xl font-bold text-[#242423] dark:text-white font-serif-editorial mt-6 mb-2 border-b border-[#F3F2EE] dark:border-[#2D2D2A] pb-1.5"
                     >
-                      {paragraph.replace("### ", "")}
+                      {renderFormattedText(trimmed.replace("### ", ""))}
                     </h3>
                   );
                 }
-                if (paragraph.startsWith("1. ") || paragraph.startsWith("2. ")) {
+
+                // H4
+                if (trimmed.startsWith("#### ")) {
+                  return (
+                    <h4
+                      key={idx}
+                      className="text-base sm:text-lg font-bold text-[#30302F] dark:text-white font-heading mt-4 mb-1.5"
+                    >
+                      {renderFormattedText(trimmed.replace("#### ", ""))}
+                    </h4>
+                  );
+                }
+
+                // Markdown Table Parsing
+                if (trimmed.includes("|") && trimmed.includes("\n")) {
+                  const lines = trimmed
+                    .split("\n")
+                    .map((l) => l.trim())
+                    .filter((l) => l.length > 0);
+
+                  if (lines.length >= 2 && lines[0].startsWith("|")) {
+                    const headerCells = lines[0]
+                      .split("|")
+                      .map((c) => c.trim())
+                      .filter((_, i, arr) => i > 0 && i < arr.length - 1);
+
+                    const dataRows = lines
+                      .slice(2)
+                      .map((line) =>
+                        line
+                          .split("|")
+                          .map((c) => c.trim())
+                          .filter((_, i, arr) => i > 0 && i < arr.length - 1)
+                      )
+                      .filter((row) => row.length > 0);
+
+                    return (
+                      <div
+                        key={idx}
+                        className="overflow-x-auto my-5 rounded-lg border border-[#E6E1D8] dark:border-[#33322E]"
+                      >
+                        <table className="w-full text-left text-xs sm:text-sm border-collapse">
+                          <thead className="bg-[#FAF9F6] dark:bg-[#2A2926] border-b border-[#E6E1D8] dark:border-[#33322E]">
+                            <tr>
+                              {headerCells.map((h, hi) => (
+                                <th
+                                  key={hi}
+                                  className="px-4 py-2.5 font-bold text-[#242423] dark:text-white uppercase text-[11px] tracking-wider"
+                                >
+                                  {renderFormattedText(h)}
+                                </th>
+                              ))}
+                            </tr>
+                          </thead>
+                          <tbody className="divide-y divide-[#E6E1D8] dark:divide-[#33322E] bg-white dark:bg-[#1E1E1C]">
+                            {dataRows.map((row, ri) => (
+                              <tr
+                                key={ri}
+                                className="hover:bg-[#FAF9F6]/60 dark:hover:bg-[#252422]/60"
+                              >
+                                {row.map((cell, ci) => (
+                                  <td
+                                    key={ci}
+                                    className="px-4 py-2.5 text-[#3F3C38] dark:text-[#EDE8DF] align-top"
+                                  >
+                                    {renderFormattedText(cell)}
+                                  </td>
+                                ))}
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    );
+                  }
+                }
+
+                // Numbered List
+                if (/^\d+\.\s/.test(trimmed)) {
                   return (
                     <div key={idx} className="space-y-1.5 pl-2 my-2">
-                      {paragraph.split("\n").map((line, i) => (
+                      {trimmed.split("\n").map((line, i) => (
                         <p key={i} className="pl-1">
-                          {line}
+                          {renderFormattedText(line)}
                         </p>
                       ))}
                     </div>
                   );
                 }
-                if (paragraph.startsWith("- ")) {
+
+                // Bullet List
+                if (trimmed.startsWith("- ")) {
                   return (
-                    <ul key={idx} className="list-disc list-inside space-y-1.5 pl-2">
-                      {paragraph.split("\n").map((li, i) => (
-                        <li key={i}>{li.replace("- ", "")}</li>
+                    <ul key={idx} className="list-disc list-inside space-y-1.5 pl-2 my-2">
+                      {trimmed.split("\n").map((li, i) => (
+                        <li key={i}>{renderFormattedText(li.replace("- ", ""))}</li>
                       ))}
                     </ul>
                   );
                 }
-                return <p key={idx}>{paragraph}</p>;
+
+                // Horizontal Rule
+                if (trimmed === "---") {
+                  return (
+                    <hr
+                      key={idx}
+                      className="border-[#E6E1D8] dark:border-[#33322E] my-6"
+                    />
+                  );
+                }
+
+                // Regular Paragraph
+                return <p key={idx}>{renderFormattedText(trimmed)}</p>;
               })}
             </div>
+
+            {/* Structured Troubleshooting Guide */}
+            {currentGuide.troubleshooting && currentGuide.troubleshooting.length > 0 && (
+              <div className="pt-6 border-t border-[#E6E1D8] dark:border-[#33322E] space-y-4">
+                <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-[#242423] dark:text-white font-heading">
+                  <Wrench className="w-4 h-4 text-[#E97520]" />
+                  Culinary Troubleshooting Guide
+                </div>
+                <div className="overflow-x-auto rounded-lg border border-[#E6E1D8] dark:border-[#33322E]">
+                  <table className="w-full text-left text-xs sm:text-sm border-collapse">
+                    <thead className="bg-[#FFF9F0] dark:bg-[#2A241A] border-b border-[#E6E1D8] dark:border-[#33322E]">
+                      <tr>
+                        <th className="px-4 py-3 font-bold text-[#D96B1A] uppercase text-[11px] tracking-wider w-1/4">
+                          Problem
+                        </th>
+                        <th className="px-4 py-3 font-bold text-[#242423] dark:text-white uppercase text-[11px] tracking-wider w-1/3">
+                          Likely Cause
+                        </th>
+                        <th className="px-4 py-3 font-bold text-[#242423] dark:text-white uppercase text-[11px] tracking-wider">
+                          Solution
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-[#E6E1D8] dark:divide-[#33322E] bg-white dark:bg-[#1E1E1C]">
+                      {currentGuide.troubleshooting.map((t, ti) => (
+                        <tr
+                          key={ti}
+                          className="hover:bg-[#FAF9F6]/70 dark:hover:bg-[#252422]/70"
+                        >
+                          <td className="px-4 py-3 font-bold text-[#30302F] dark:text-white align-top">
+                            {t.problem}
+                          </td>
+                          <td className="px-4 py-3 text-[#77736D] dark:text-[#A8A49E] align-top">
+                            {t.cause}
+                          </td>
+                          <td className="px-4 py-3 text-[#3F3C38] dark:text-[#EDE8DF] font-medium align-top">
+                            {t.solution}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            )}
 
             {/* FAQs if present */}
             {currentGuide.faqs && currentGuide.faqs.length > 0 && (
@@ -190,6 +391,53 @@ export const CookingGuidesView: React.FC<CookingGuidesViewProps> = ({
                       <p className="text-xs text-[#77736D] dark:text-[#A8A49E] leading-relaxed">
                         {faq.answer}
                       </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Related Culinary Guides & Techniques */}
+            {relatedGuides.length > 0 && (
+              <div className="pt-6 border-t border-[#E6E1D8] dark:border-[#33322E] space-y-4">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-base font-bold text-[#242423] dark:text-white font-serif-editorial">
+                    Related Culinary Guides & Techniques
+                  </h3>
+                  <span className="text-xs text-[#E97520] font-bold">Kitchen Mastery</span>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                  {relatedGuides.map((g) => (
+                    <div
+                      key={g.id}
+                      onClick={() => {
+                        setActiveSlug(g.slug);
+                        onNavigate(`/guides/${g.slug}`);
+                      }}
+                      className="group p-3 rounded-lg border border-[#E6E1D8] dark:border-[#33322E] hover:border-[#E97520] dark:hover:border-[#E97520] bg-[#FAF9F6] dark:bg-[#242423] transition-all cursor-pointer flex flex-col justify-between"
+                    >
+                      <div className="flex items-center gap-2.5">
+                        <img
+                          src={g.heroImage}
+                          alt={g.title}
+                          referrerPolicy="no-referrer"
+                          className="w-12 h-12 rounded object-cover shrink-0"
+                        />
+                        <div className="min-w-0">
+                          <span className="text-[10px] font-bold uppercase tracking-wider text-[#E97520] block truncate">
+                            {g.category}
+                          </span>
+                          <h4 className="text-xs font-bold text-[#30302F] dark:text-[#EDE8DF] group-hover:text-[#E97520] transition-colors line-clamp-2">
+                            {g.title}
+                          </h4>
+                        </div>
+                      </div>
+                      <div className="mt-2 pt-2 border-t border-[#E6E1D8]/60 dark:border-[#33322E] flex items-center justify-between text-[10px] text-[#77736D] dark:text-[#A8A49E]">
+                        <span>{g.readTimeMinutes} min read</span>
+                        <span className="font-bold text-[#E97520] group-hover:translate-x-0.5 transition-transform inline-flex items-center">
+                          Read <ArrowRight className="w-3 h-3 ml-0.5" />
+                        </span>
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -234,6 +482,24 @@ export const CookingGuidesView: React.FC<CookingGuidesViewProps> = ({
                 </div>
               </div>
             )}
+
+            {/* Tags footer */}
+            {currentGuide.tags && currentGuide.tags.length > 0 && (
+              <div className="pt-4 border-t border-[#E6E1D8] dark:border-[#33322E] flex flex-wrap items-center gap-2">
+                <span className="text-xs font-bold text-[#77736D] dark:text-[#A8A49E] flex items-center gap-1">
+                  <Tag className="w-3.5 h-3.5 text-[#E97520]" />
+                  Tags:
+                </span>
+                {currentGuide.tags.map((tag, idx) => (
+                  <span
+                    key={idx}
+                    className="text-[11px] px-2.5 py-0.5 rounded-full bg-[#FAF9F6] dark:bg-[#252422] border border-[#E6E1D8] dark:border-[#33322E] text-[#55524E] dark:text-[#BBB6AE]"
+                  >
+                    #{tag}
+                  </span>
+                ))}
+              </div>
+            )}
           </article>
         </div>
       </div>
@@ -251,10 +517,10 @@ export const CookingGuidesView: React.FC<CookingGuidesViewProps> = ({
             CULINARY MASTERY &bull; STEP-BY-STEP
           </div>
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#242423] dark:text-[#EDE8DF] font-heading uppercase tracking-wide">
-            Halal Cooking Guides
+            Halal Cooking Guides & Techniques
           </h1>
           <p className="text-sm sm:text-base text-[#77736D] dark:text-[#A8A49E] font-description italic">
-            Practical techniques, spice ratio breakdowns, ingredient substitutions, and essential tips to elevate your everyday cooking with complete confidence.
+            Authoritative culinary guides, spice ratios, food science principles, and chef techniques to elevate your cooking with complete confidence.
           </p>
         </div>
 

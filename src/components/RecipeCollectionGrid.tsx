@@ -250,6 +250,17 @@ const DEFAULT_COLLECTION: CollectionCardItem[] = [
     image: IMAGES.narkelPuliPitha,
   },
   {
+    id: "card-bengali-aloo-dum",
+    slug: "bengali-aloo-dum",
+    title: "Bengali Aloo Dum (বাঙালি আলুর দম / ألو دوم / بنگالی آلو دم)",
+    description:
+      "Golden fried baby potatoes slow-braised in a fragrant tomato-yogurt gravy with panch phoron and roasted bhaja masala, served alongside puffed hot luchis.",
+    heritageTag: "🥔 Timeless Bengali Heritage Dum & Luchi",
+    brandName: "Noakhali Kitchen",
+    halalBadge: "100% Halal Vegetarian",
+    image: IMAGES.bengaliAlooDum,
+  },
+  {
     id: "card-shrimp-green-bean-stir-fry",
     slug: "bangladeshi-spiced-shrimp-and-green-bean-stir-fry",
     title: "Bangladeshi Spiced Shrimp & Green Bean Stir-Fry (চিংড়ি বরবটি ভাজি)",
@@ -299,7 +310,7 @@ const DEFAULT_COLLECTION: CollectionCardItem[] = [
     title: "Chicken Lo Mein (চিকেন লো মেইন)",
     description:
       "Tender egg noodles tossed in a sizzling wok with sliced chicken, bell peppers, carrots, and cabbage in a luscious savory dark soy-garlic glaze.",
-    heritageTag: "🥢 Chinese Wok Takeout & Street Masterclass",
+    heritageTag: "🥢 Chinese Wok Takeout & Street Tradition",
     brandName: "Noakhali Kitchen",
     halalBadge: "100% Halal Chicken",
     image: IMAGES.chickenLoMein,
@@ -332,7 +343,7 @@ const DEFAULT_COLLECTION: CollectionCardItem[] = [
     title: "Carne Asada Steak Tacos (Beef)",
     description:
       "Charred citrus-chili marinated Halal flank steak sliced thick and juicy, piled on warm blistered tortillas with fresh vibrant pico de gallo salsa.",
-    heritageTag: "🌮 Mexican Street Food & Taquería Masterclass",
+    heritageTag: "🌮 Mexican Street Food & Taquería Heritage",
     brandName: "Noakhali Kitchen",
     halalBadge: "100% Halal Beef",
     image: IMAGES.carneAsadaTacos,

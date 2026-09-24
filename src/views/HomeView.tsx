@@ -12,7 +12,6 @@ import {
   Play,
   Compass,
   ShoppingBag,
-  Video,
   X,
 } from "lucide-react";
 import { Hero } from "../components/Hero";
@@ -22,18 +21,14 @@ import { HalalCheck } from "../components/HalalCheck";
 import { AboutSection } from "../components/AboutSection";
 import { AdSlot } from "../components/AdSlot";
 import { NoakhaliLogo } from "../components/NoakhaliLogo";
-import { VideoCard } from "../components/VideoCard";
-import { YouTubeCTA } from "../components/YouTubeCTA";
-import { YouTubePlayer } from "../components/YouTubePlayer";
 import { RECIPES } from "../data/recipes";
 import { CATEGORIES } from "../data/categories";
 import { BLOG_POSTS } from "../data/blog";
-import { COOKING_VIDEOS } from "../data/videos";
 import { COOKING_GUIDES } from "../data/guides";
 import { FOOD_CULTURE_ARTICLES } from "../data/foodCulture";
 import { HALAL_PANTRY_SECTIONS } from "../data/pantry";
 import { IMAGES } from "../data/assets";
-import { Recipe, RecipeCollection, CookingVideo } from "../types";
+import { Recipe, RecipeCollection } from "../types";
 
 interface HomeViewProps {
   onNavigate: (route: string) => void;
@@ -55,7 +50,6 @@ export const HomeView: React.FC<HomeViewProps> = ({
   onOpenCollections,
 }) => {
   const [emailSubscribed, setEmailSubscribed] = useState(false);
-  const [activeVideoModal, setActiveVideoModal] = useState<CookingVideo | null>(null);
 
   const signatureHeritageRecipe =
     RECIPES.find((r) => r.slug === "noakhali-shorshe-ilish") || RECIPES[0];
@@ -287,51 +281,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
         </div>
       </section>
 
-      {/* 8A. Long-Form Video Masterclasses & YouTube Channel */}
-      <section className="py-14 sm:py-18 bg-[#1E1E1D] text-[#F3F2EE] border-b border-[#30302F]">
-        <div className="max-w-[1280px] mx-auto px-4 sm:px-6">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
-            <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E97520]/20 text-[#E97520] text-xs font-bold uppercase tracking-wider mb-2">
-                <Video className="w-3.5 h-3.5" />
-                LONG-FORM COOKING VIDEOS &bull; YOUTUBE MASTERCLASSES
-              </div>
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white font-heading tracking-wide uppercase">
-                Watch Authentic Cooking in Real-Time
-              </h2>
-              <p className="text-xs sm:text-sm text-[#B5B0A6] mt-1 max-w-2xl font-description">
-                Unrushed, educational videos explaining the science of mustard oil, the sensory cues of deep bhuna, and foolproof layering techniques.
-              </p>
-            </div>
-            <button
-              onClick={() => onNavigate("/recipes")}
-              className="text-xs font-bold uppercase tracking-wider text-[#F8CD78] hover:text-white flex items-center gap-1.5 self-start md:self-auto cursor-pointer"
-            >
-              Browse All Videos &rarr;
-            </button>
-          </div>
-
-          {/* Featured Video Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-            {COOKING_VIDEOS.slice(0, 3).map((video) => (
-              <VideoCard
-                key={video.id}
-                video={video}
-                onWatch={(v) => setActiveVideoModal(v)}
-                onOpenRecipe={(recipeSlug) => {
-                  const r = RECIPES.find((item) => item.slug === recipeSlug);
-                  if (r) onSelectRecipe(r);
-                }}
-              />
-            ))}
-          </div>
-
-          {/* YouTube Channel CTA */}
-          <YouTubeCTA />
-        </div>
-      </section>
-
-      {/* 8B. In-Depth Cooking Guides & Culinary Mastery */}
+      {/* In-Depth Cooking Guides & Culinary Mastery */}
       <section className="py-14 sm:py-18 bg-white border-b border-[#E6E1D8]">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
@@ -720,58 +670,6 @@ export const HomeView: React.FC<HomeViewProps> = ({
           </span>
         </div>
       </section>
-
-      {/* Video Player Modal Overlay */}
-      {activeVideoModal && (
-        <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-xs flex items-center justify-center p-4">
-          <div className="bg-white rounded-2xl max-w-3xl w-full overflow-hidden shadow-2xl border border-[#E6E1D8]">
-            <div className="p-4 border-b border-[#E6E1D8] flex items-center justify-between bg-[#FAF9F6]">
-              <div>
-                <span className="text-[11px] font-bold text-[#E97520] uppercase tracking-wider">
-                  {activeVideoModal.category} &bull; {activeVideoModal.duration}
-                </span>
-                <h3 className="text-base font-bold text-[#30302F]">
-                  {activeVideoModal.title}
-                </h3>
-              </div>
-              <button
-                onClick={() => setActiveVideoModal(null)}
-                className="p-1.5 rounded-lg hover:bg-gray-200 text-gray-600 transition-colors cursor-pointer"
-                aria-label="Close video modal"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
-            <div className="p-4 space-y-3">
-              <YouTubePlayer
-                videoId={activeVideoModal.youtubeVideoId}
-                title={activeVideoModal.title}
-                aspectRatio="16:9"
-                autoPlay={true}
-              />
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2">
-                <p className="text-xs text-gray-600 flex-1 leading-relaxed">
-                  {activeVideoModal.description}
-                </p>
-                {activeVideoModal.relatedRecipeSlug && (
-                  <button
-                    onClick={() => {
-                      const r = RECIPES.find((rec) => rec.slug === activeVideoModal.relatedRecipeSlug);
-                      if (r) {
-                        setActiveVideoModal(null);
-                        onSelectRecipe(r);
-                      }
-                    }}
-                    className="px-4 py-2 bg-[#E97520] hover:bg-[#D75D17] text-white text-xs font-bold rounded-lg transition-colors cursor-pointer shrink-0"
-                  >
-                    View Full Recipe &rarr;
-                  </button>
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };

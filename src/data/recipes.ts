@@ -5663,8 +5663,6 @@ const BASE_RECIPES: Recipe[] = [
     isTrending: true,
     isFeatured: true,
     isRegionalHeritage: true,
-    videoDuration: "14:15",
-    videoTitle: "Dhaka Shahi Chicken Roast Masterclass (Biye Bari Style)",
     whySpecial:
       "The quintessential royal centerpiece of Bengali wedding feasts: tender chicken leg quarters gently seared in cow ghee, then braised in a luxurious, glossy, sweet-and-savory emulsion of cashew paste, golden beresta, yogurt, mace, and royal kewra water.",
     cookingTips: [
@@ -5678,80 +5676,6 @@ const BASE_RECIPES: Recipe[] = [
       "Pouring cold yogurt directly into scorching ghee, which breaks the emulsion and causes unappealing curdling.",
       "Omitting ground mace (javitri) and kewra water, which provide the quintessential royal Mughlai aroma.",
     ],
-    videoChapters: [
-      {
-        time: "00:00",
-        title: "The Royal Wedding Banquet Secret",
-      },
-      {
-        time: "01:10",
-        title: "Chicken Scoring & Flavor Penetration",
-      },
-      {
-        time: "02:45",
-        title: "The 90-Second Ghee Sear (No Browning)",
-      },
-      {
-        time: "04:30",
-        title: "Blending Velvet Beresta & Cashew Silk",
-      },
-      {
-        time: "07:15",
-        title: "Tempering Whole Spices & Slow Braising",
-      },
-      {
-        time: "11:20",
-        title: "Green Chilies, Kewra Essence & Royal Rest",
-      },
-      {
-        time: "13:30",
-        title: "Plating with Golden Beresta Garnish",
-      },
-    ],
-    videoProduction: {
-      status: "Ready for YouTube",
-      targetDuration: "14:15",
-      hook: "0:00-0:20: A golden chicken leg quarter coated in a glossy, ivory-caramel gravy drizzled with ghee and garnished with crisp fried onions and golden raisins.",
-      introduction: "0:20-0:50: Explaining how Bengali wedding roast differs from Western roasted chicken: it is lightly seared in ghee then braised in a nutty, aromatic gravy.",
-      ingredientsVisual: "0:50-2:00: Bone-in chicken leg quarters, whipped plain yogurt, cashew-poppy seed paste, golden onion beresta, raisins, mace, nutmeg, and kewra water.",
-      preparationVisual: "2:00-4:00: Making shallow diagonal incisions into the chicken; blending fried onions with yogurt and cashew paste into a luxurious silk sauce.",
-      cookingVisual: "4:00-10:30: Sautéing the chicken in ghee for 90 seconds per side without browning the skin, sliding in the shahi gravy, and gently braising on medium-low heat.",
-      keyTechnique: "Gentle 90-second ghee sear to lock in meat juices followed by a covered slow braise in whipped yogurt-cashew emulsion, never boiling on high flame.",
-      finalDishVisual: "12:00-13:00: Spooning the thick glaze over the chicken pieces as ghee floats like liquid amber to the surface.",
-      servingVisual: "13:00-14:00: Served over a bed of fragrant Kalijira Shahi Polao, alongside chilled Borhani.",
-      ctaOutro: "14:00-15:00: Encouraging viewers to prepare this for festive family dinners, with a link to the onion browning masterclass.",
-      cinematographyNotes: [
-        "Top-down overhead shot of whole spices crackling in golden cow ghee.",
-        "Macro lens capturing the thick textured sauce clinging to the chicken leg piece as a spoon lifts it with rising aromatic steam.",
-        "60fps slow-motion sprinkle of crispy golden beresta.",
-      ],
-      voiceoverSample:
-        "In every Bengali wedding banquet, the grand entrance of the Shahi Chicken Roast alongside piping hot Chinigura polao is pure celebration. The magic lies in the balance: rich pure ghee, sweet caramelized beresta, luscious cashew silk, and that haunting aroma of mace, cardamom, and kewra water.",
-      youtubeOptimizedTitle:
-        "Dhaka Shahi Chicken Roast (বিয়ে বাড়ির আসল রোস্ট) | Authentic Recipe with Beresta & Ghee Gravy",
-      youtubeDescription:
-        "Learn the royal catering secret to tender, fall-apart Dhaka Shahi Chicken Roast with rich, clinging, golden cashew-beresta gravy.",
-      shortsClips: [
-        {
-          title: "The Ghee Searing Secret",
-          focus: "Key Cooking Technique",
-          description: "Why you must sear chicken in pure cow ghee without browning the skin.",
-          targetSeconds: "0:45",
-        },
-        {
-          title: "Velvet Beresta & Cashew Gravy",
-          focus: "Ingredient Preparation",
-          description: "Emulsifying whisked yogurt with soaked cashew paste and fried onions.",
-          targetSeconds: "0:40",
-        },
-        {
-          title: "The Royal Biye Bari Aroma",
-          focus: "Final Dish Reveal",
-          description: "The finish: whole green chilies, golden raisins, and kewra water essence.",
-          targetSeconds: "0:35",
-        },
-      ],
-    },
     relatedCultureSlug: "bangladeshi-eid-food-traditions",
     relatedKitchenToolId: "dekchi-biryani-pot",
     relatedRecipeSlugs: ["bengali-pulao", "dhaka-shahi-borhani", "kacchi-biryani"],
@@ -19209,6 +19133,187 @@ const BASE_RECIPES: Recipe[] = [
       "Healthy Weeknight Meal",
       "Gluten Free",
       "High Protein",
+    ],
+  },
+  {
+    id: "rec-bengali-aloo-dum",
+    slug: "bengali-aloo-dum",
+    title: "Bengali Aloo Dum (বাঙালি আলুর দম / ألو دوم / بنگالی آلو دم)",
+    category: "Halal Vegetarian",
+    categorySlug: "halal-vegetarian",
+    cuisine: "Bengali / Bangladeshi Heritage (Halal Vegetarian)",
+    description:
+      "Golden blistered baby potatoes slow-cooked 'dum' style in a rich, fragrant tomato-yogurt gravy infused with panch phoron, ginger, and freshly ground Bengali bhaja masala, crowned with green chilies and served with fluffy hot luchis.",
+    introStory:
+      "Bengali Aloo Dum (বাঙালি আলুর দম / ألو دوم على الطريقة البنغالية / بنگالی آلو دم)—the crowning culinary triumph of Sunday morning breakfast tables, winter picnics, and joyous Eid and festival feasts across Bengal—is a dish of pure sensory indulgence. In Bengali culture, nothing matches the magic of crisp, golden-puffed white luchis paired with an earthen kadai of steaming, spiced baby potato curry. Tender new baby potatoes (notun aloo) are boiled until just tender, pricked so every drop of flavor reaches their fluffy centers, and then shallow-fried in cold-pressed mustard oil with a pinch of turmeric until their skins blister into a golden crinkled crust. The rich base sauce is crafted by blooming the sacred five-spice blend (panch phoron) along with bay leaves, cinnamon bark, and a pinch of asafoetida (hing) in the remaining mustard oil. Grated ginger, sweet tomato purée, whisked whole milk yogurt, and Kashmiri red chili are slowly caramelized ('koshano') until the oil separates into a shimmering ruby-red float. Sealed tightly to simmer in its own intoxicating steam (the royal 'dum' method), the potatoes absorb the aromatic gravy. Finally, a generous dusting of homemade freshly roasted Bengali 'Bhaja Masala' (toasted cumin, coriander, dry red chili, and green cardamom) is showered over the curry along with fresh slit green chilies and chopped cilantro, producing an unforgettable symphony of smoky, tangy, and subtly sweet flavors.",
+    heroImage: IMAGES.bengaliAlooDum,
+    prepTimeMinutes: 20,
+    cookTimeMinutes: 30,
+    totalTimeMinutes: 50,
+    servings: 5,
+    difficulty: "Medium",
+    calories: 280,
+    rating: 4.98,
+    reviewCount: 395,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified vegetarian. Prepared with fresh whole baby potatoes, cold-pressed virgin mustard oil, pure Halal-certified plain yogurt, whole spices, and fresh herbs. 100% alcohol-free, vegetarian-safe, and naturally wholesome.",
+    potentialCautionNotes:
+      "Puffed luchis are made with wheat flour (gluten). For a gluten-free meal, serve with steamed basmati rice or gluten-free puris.",
+    ingredients: [
+      { amount: "1.5", unit: "lbs", name: "Baby potatoes (notun aloo)", notes: "scrubbed, boiled until 90% tender, peeled, and pricked all over with a fork" },
+      { amount: "4", unit: "tbsp", name: "Pure cold-pressed mustard oil (shorsher tel)", notes: "divided: 2 tbsp for frying potatoes, 2 tbsp for gravy" },
+      { amount: "1/2", unit: "tsp", name: "Panch Phoron (Bengali five-spice)", notes: "equal parts cumin, brown mustard, fenugreek, fennel, and nigella seeds" },
+      { amount: "2", unit: "whole", name: "Indian bay leaves (tejpatta)", notes: "torn" },
+      { amount: "1", unit: "stick", name: "Cinnamon bark (daruchini)", notes: "approx. 2-inch stick" },
+      { amount: "3", unit: "pods", name: "Green cardamom (elachi)", notes: "lightly bruised" },
+      { amount: "3", unit: "whole", name: "Cloves (lobongo)", notes: "whole" },
+      { amount: "1/4", unit: "tsp", name: "Asafoetida (hing)", notes: "for digestive warmth and signature aroma" },
+      { amount: "1.5", unit: "tbsp", name: "Fresh ginger paste", notes: "freshly grated ginger root" },
+      { amount: "1", unit: "cup", name: "Fresh tomato purée", notes: "freshly blended ripe vine tomatoes" },
+      { amount: "1/3", unit: "cup", name: "Plain whole milk yogurt (tok doi)", notes: "whisked until silky smooth with 1 tbsp water" },
+      { amount: "1.5", unit: "tsp", name: "Kashmiri red chili powder", notes: "for rich red color and gentle warmth" },
+      { amount: "1", unit: "tsp", name: "Ground turmeric", notes: "divided: 1/2 tsp for potatoes, 1/2 tsp for gravy" },
+      { amount: "1.5", unit: "tsp", name: "Ground coriander", notes: "earthy background note" },
+      { amount: "1", unit: "tsp", name: "Ground cumin", notes: "freshly ground" },
+      { amount: "1", unit: "tsp", name: "Fine sea salt", notes: "or to taste" },
+      { amount: "1", unit: "tsp", name: "Raw sugar or jaggery", notes: "traditional touch to balance acidity of tomatoes and yogurt" },
+      { amount: "1", unit: "cup", name: "Warm water", notes: "for the simmer" },
+      { amount: "1.5", unit: "tsp", name: "Bengali Bhaja Masala", notes: "dry-roasted cumin, coriander, dry red chili, and cardamom ground to powder" },
+      { amount: "1", unit: "tbsp", name: "Pure cow ghee (deshi ghee)", notes: "for finishing fragrance" },
+      { amount: "4", unit: "whole", name: "Fresh green chilies", notes: "slit lengthwise" },
+      { amount: "1/3", unit: "cup", name: "Fresh cilantro leaves", notes: "finely chopped for garnish" },
+      { amount: "8", unit: "pieces", name: "Puffed Luchis (or Puris)", notes: "freshly deep-fried hot for serving" },
+      { amount: "1", unit: "whole", name: "Fresh lime", notes: "cut into wedges for table garnish" },
+    ],
+    substitutions: [
+      {
+        original: "Baby potatoes",
+        substitute: "Yukon gold or red potatoes cut into 1.5-inch chunks",
+        notes: "Yukon golds have a naturally buttery texture and absorb spices wonderfully.",
+      },
+      {
+        original: "Mustard oil",
+        substitute: "Pure cow ghee or neutral cooking oil",
+        notes: "Mustard oil yields authentic Bengali pungency; ghee provides a rich, festive flavor.",
+      },
+      {
+        original: "Plain yogurt",
+        substitute: "Cashew paste or coconut yogurt",
+        notes: "Cashew paste creates a luxurious, nutty, dairy-free version.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Boil, Peel & Prick the Potatoes",
+        instruction:
+          "Boil baby potatoes in salted water for 12 to 15 minutes until just knife-tender (do not overboil or they will burst). Drain and let cool slightly, then peel the skins. Use a fork or toothpick to prick each potato 4 to 5 times all over. Toss with 1/2 teaspoon turmeric and 1/2 teaspoon salt.",
+        tip: "Pricking the potatoes is the secret to flavor-packed Aloo Dum; it creates microscopic channels for the spiced sauce to seep deep into the core.",
+      },
+      {
+        step: 2,
+        title: "Golden Shallow-Fry the Potatoes",
+        instruction:
+          "Heat 2 tablespoons of mustard oil in a heavy iron kadai or skillet until it wisps with gentle smoke. Add the potatoes and shallow fry over medium-high heat for 5 to 7 minutes, turning frequently, until a crinkled, crisp golden crust develops on all sides. Transfer to a bowl and set aside.",
+      },
+      {
+        step: 3,
+        title: "Bloom Whole Spices (Phoron)",
+        instruction:
+          "Add the remaining 2 tablespoons of mustard oil to the kadai. Lower heat to medium and add the bay leaves, cinnamon stick, bruised green cardamoms, cloves, and panch phoron. When the spices begin to splutter and crackle, add the pinch of asafoetida (hing) and immediately stir.",
+      },
+      {
+        step: 4,
+        title: "Koshano (Slow Caramelization) of the Gravy",
+        instruction:
+          "Add the fresh ginger paste and sauté for 1 minute until fragrant. Pour in the tomato purée, Kashmiri red chili powder, remaining turmeric, ground coriander, cumin, sea salt, and sugar. Sauté ('koshano') over medium heat for 6 to 8 minutes, stirring continuously, until the tomato paste darkens, loses its raw moisture, and glistening red oil separates around the edges.",
+      },
+      {
+        step: 5,
+        title: "Incorporate Whisked Yogurt",
+        instruction:
+          "Lower the flame to the lowest setting. Gradually pour in the whisked yogurt in a steady stream, stirring vigorously to prevent curdling. Continue cooking on low heat for 3 to 4 minutes until the sauce turns smooth, creamy, and fragrant.",
+      },
+      {
+        step: 6,
+        title: "The Dum Simmer (10 to 12 Minutes)",
+        instruction:
+          "Tumble the golden fried potatoes into the kadai. Toss thoroughly to coat every potato in the thick spiced masala. Pour in 1 cup of warm water and slit green chilies. Bring to a bubbling boil, then cover with a tight-fitting lid. Reduce the heat to the lowest setting and let it simmer 'dum' style for 10 to 12 minutes until the potatoes are melt-in-the-mouth tender and the gravy thickens to a clingy, rich consistency.",
+      },
+      {
+        step: 7,
+        title: "Finish with Bhaja Masala, Ghee & Serve",
+        instruction:
+          "Uncover the kadai. Swirl in 1 tablespoon of pure cow ghee and generously dust with 1.5 teaspoons of homemade Bengali Bhaja Masala. Fold in half of the fresh chopped cilantro. Remove from heat and let rest covered for 2 minutes so the bhaja masala perfumes the entire pot. Serve hot in the traditional kadai garnished with extra cilantro, fresh lime wedges, and a platter of piping-hot, puffed golden luchis.",
+      },
+    ],
+    chefNotes: [
+      "The Magic of Bhaja Masala: Authentic Bengali Alur Dom gets its signature smoky, heavenly fragrance from Bhaja Masala. Make it by dry-roasting 1 tsp cumin seeds, 1 tsp coriander seeds, 1 dry red chili, and 2 green cardamoms until aromatic and pulsing into a powder.",
+      "The Perfect Luchi Pairing: Luchis should be rolled thin and slid into hot oil so they instantly balloon into airy spheres. Puncture a steaming luchi and wrap it around a sauce-soaked baby potato for the ultimate bite.",
+      "Panch Phoron Balance: Ensure the fenugreek (methi) in your panch phoron is not excessive, as too much fenugreek can turn the gravy bitter.",
+    ],
+    nutrition: {
+      calories: 280,
+      proteinGrams: 6,
+      carbsGrams: 36,
+      fatGrams: 14,
+      fiberGrams: 5,
+      sodiumMg: 480,
+      servingSizeDescription: "1 bowl of spiced potato curry with rich gravy (approx. 220g)",
+    },
+    storageInstructions:
+      "Aloo Dum tastes even better the next day as the potatoes continue soaking in the spices! Store in an airtight glass container in the refrigerator for up to 4 days. Reheat gently on the stovetop with a splash of hot water.",
+    freezingInstructions:
+      "Freezing cooked whole potatoes can alter their texture and make them grainy; best enjoyed fresh or refrigerated for up to 4 days.",
+    servingSuggestions: [
+      "Puffed Golden Luchis: The iconic Bengali Sunday breakfast and celebration partner.",
+      "Peas Kachori (Koraishutir Kochuri): Fluffy puris stuffed with spiced green pea filling.",
+      "Bengali Basanti Pulao: Fragrant saffron and cashew sweet pulao.",
+      "Crisp Onion & Cucumber Salad: With a squeeze of fresh lime juice.",
+    ],
+    faqs: [
+      {
+        question: "Can I make this without onion and garlic (Niramish style)?",
+        answer:
+          "Yes! This authentic recipe is traditionally prepared completely without onion or garlic (pure 'niramish' satvik style), relying on ginger, tomatoes, hing, yogurt, and bhaja masala for deep, multi-layered flavor.",
+      },
+      {
+        question: "How do I prevent the yogurt from curdling?",
+        answer:
+          "Whisk the yogurt thoroughly until smooth with 1 tablespoon of water. Reduce the heat to the lowest flame before adding, and stir continuously until completely incorporated into the tomato masala.",
+      },
+      {
+        question: "What is the difference between Kashmiri Dum Aloo and Bengali Alur Dom?",
+        answer:
+          "Kashmiri Dum Aloo features deep-fried potatoes simmered in a yogurt and fennel-ginger based thin red sauce without tomatoes. Bengali Alur Dom incorporates ginger, tomatoes, yogurt, panch phoron, and a smoky dry-roasted bhaja masala.",
+      },
+      {
+        question: "Can I use large regular potatoes?",
+        answer:
+          "Yes, if baby potatoes are unavailable, peel large Yukon Gold or Russet potatoes, cut them into 1.5-inch even cubes, prick them with a fork, and proceed with the recipe.",
+      },
+    ],
+    author: {
+      name: "Chef Bodiul Alam",
+      role: "Culinary Director & Bengali Heritage Specialist",
+    },
+    updatedDate: "September 24, 2026",
+    tags: [
+      "Bengali Aloo Dum",
+      "বাঙালি আলুর দম",
+      "ألو دوم",
+      "بنگالی آلو دم",
+      "Alur Dom",
+      "Dum Aloo",
+      "Luchi Aloo Dum",
+      "Halal Vegetarian",
+      "Bengali Heritage",
+      "Sunday Breakfast",
+      "Gluten Free Option",
+      "High Comfort",
     ],
   },
 ];
