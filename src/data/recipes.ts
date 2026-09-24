@@ -19316,6 +19316,1269 @@ const BASE_RECIPES: Recipe[] = [
       "High Comfort",
     ],
   },
+  {
+    id: "rec-ginger-berry-anti-inflammatory-smoothie",
+    slug: "ginger-berry-anti-inflammatory-smoothie",
+    title: "Ginger Berry Anti-Inflammatory Smoothie",
+    category: "Drinks & Beverages",
+    categorySlug: "halal-drinks",
+    cuisine: "Halal Wellness / Plant-Based Heritage",
+    description:
+      "A revitalizing, antioxidant-rich ruby smoothie blending wild blueberries, ripe strawberries, zesty grated ginger, golden turmeric, and chia seeds with chilled coconut water and raw honey.",
+    introStory:
+      "In South Asian and Halal culinary traditions, fresh ginger (আদা / adrak) and golden turmeric (হলুদ / haldi) have been cherished for centuries as restorative natural panaceas. This Ginger Berry Anti-Inflammatory Smoothie pairs the fiery digestive warmth of freshly grated ginger with the deep antioxidant richness of wild berries, tart lemon, and cold-pressed coconut water. Sweetened purely with raw honey and fortified with omega-rich chia seeds, this vibrant ruby-purple elixir soothes digestion, calms inflammation, and refreshes the body after fasting or rigorous mornings—all crafted from 100% wholesome, pure Halal ingredients.",
+    heroImage: IMAGES.gingerBerrySmoothie,
+    prepTimeMinutes: 5,
+    cookTimeMinutes: 0,
+    totalTimeMinutes: 5,
+    servings: 2,
+    difficulty: "Easy",
+    calories: 165,
+    rating: 4.9,
+    reviewCount: 48,
+    isTrending: true,
+    isFeatured: true,
+    halalNotes:
+      "100% Halal certified, vegan-adaptable, and naturally gluten-free. Prepared with unprocessed whole fruits, pure raw honey, organic roots, and natural plant liquids with zero artificial preservatives, alcohol-based flavor carriers, or animal additives.",
+    potentialCautionNotes:
+      "Always wash fresh ginger thoroughly and peel using the edge of a spoon. If using frozen berry blends, verify packaging indicates 100% pure unsweetened fruit without synthetic glaze or preservatives.",
+    ingredients: [
+      { amount: "1.5", unit: "cups", name: "Frozen wild blueberries and blackberries", notes: "rich in anthocyanins and deep antioxidants" },
+      { amount: "1", unit: "cup", name: "Fresh or frozen ripe strawberries", notes: "hulled and halved" },
+      { amount: "1.5", unit: "tbsp", name: "Fresh ginger root", notes: "peeled and finely grated (adjust to taste for desired kick)" },
+      { amount: "1/4", unit: "tsp", name: "Ground turmeric root or fresh grated turmeric", notes: "for natural curcumin anti-inflammatory boost" },
+      { amount: "1", unit: "pinch", name: "Freshly cracked black pepper", notes: "enhances curcumin bio-absorption by up to 2,000%" },
+      { amount: "1.25", unit: "cups", name: "Pure coconut water or unsweetened almond milk", notes: "chilled, for optimal electrolyte hydration" },
+      { amount: "1.5", unit: "tbsp", name: "Pure raw wildflower honey or date syrup", notes: "natural unrefined sweetener" },
+      { amount: "1", unit: "tbsp", name: "Chia seeds or ground flaxseeds", notes: "for heart-healthy plant omega-3s and gentle fiber" },
+      { amount: "1", unit: "tbsp", name: "Freshly squeezed lemon juice", notes: "brightens berry flavor and prevents oxidation" },
+      { amount: "1/2", unit: "cup", name: "Crushed ice", notes: "optional, for extra frosty texture" },
+    ],
+    substitutions: [
+      {
+        original: "Pure raw wildflower honey",
+        substitute: "Pure maple syrup or pitted soft Medjool dates",
+        notes: "Offers a 100% vegan plant-based alternative with rich caramel sweetness.",
+      },
+      {
+        original: "Coconut water",
+        substitute: "Unsweetened oat milk, almond milk, or plain kefir",
+        notes: "Adds creaminess and a velvety smoothie texture while keeping the drink dairy-free or probiotic-rich.",
+      },
+      {
+        original: "Chia seeds",
+        substitute: "Hemp hearts or ground flaxseed",
+        notes: "Provides equivalent plant-based omegas and healthy fats without altering texture.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Prepare the Aromatics & Produce",
+        instruction:
+          "Peel the fresh ginger root using the edge of a spoon and finely grate using a microplane to release its spicy essential oils and juices. Squeeze fresh lemon juice.",
+        tip: "Peeling ginger with a spoon minimizes waste and easily navigates knobby contours.",
+      },
+      {
+        step: 2,
+        title: "Load the Blender",
+        instruction:
+          "Add the liquids first: pour chilled coconut water (or almond milk) and lemon juice into the base of a high-speed blender. Follow with the grated ginger, ground turmeric, pinch of black pepper, chia seeds, and raw honey.",
+        tip: "Adding liquids first prevents frozen fruit from jamming the blender blades.",
+      },
+      {
+        step: 3,
+        title: "Add Frozen Berries & Ice",
+        instruction:
+          "Layer the frozen wild blueberries, blackberries, strawberries, and optional crushed ice on top of the liquid base.",
+      },
+      {
+        step: 4,
+        title: "Blend until Silky Smooth",
+        instruction:
+          "Secure the blender lid and blend on medium speed for 20 seconds, then increase to high speed for 45 to 60 seconds until completely emulsified, thick, and vibrant ruby-magenta with no residual berry skins or ginger fibers.",
+        tip: "If your blender has a tamper, use it to push frozen berries down into the vortex.",
+      },
+      {
+        step: 5,
+        title: "Taste, Pour & Garnish",
+        instruction:
+          "Taste and adjust sweetness or ginger heat if desired. Pour immediately into chilled tall glasses or glass mason jars. Garnish with a sprig of fresh mint, whole fresh blueberries, and a paper-thin slice of fresh ginger.",
+      },
+    ],
+    chefNotes: [
+      "Why the pinch of black pepper? Black pepper contains piperine, an alkaloid that dramatically increases the bioavailability of curcumin (the anti-inflammatory powerhouse in turmeric) by up to 2,000% without altering the sweet berry taste.",
+      "Grate the ginger finely with a microplane or zester before blending. Standard blender blades can sometimes leave stringy fibers from mature ginger root; grating guarantees a silky smooth texture.",
+      "For a thicker smoothie bowl consistency, reduce coconut water to 3/4 cup and top with toasted coconut flakes, sliced bananas, pumpkin seeds, and pomegranate arils.",
+    ],
+    nutrition: {
+      calories: 165,
+      proteinGrams: 3,
+      carbsGrams: 36,
+      fatGrams: 2,
+      fiberGrams: 7,
+      sodiumMg: 65,
+      servingSizeDescription: "1 tall glass (approx. 380ml)",
+    },
+    storageInstructions:
+      "Best enjoyed immediately while ice-cold and freshly blended to preserve maximum vitamin C and active enzyme content. Leftovers can be refrigerated in an airtight glass jar with minimal headspace for up to 24 hours (shake well before drinking as natural separation occurs).",
+    freezingInstructions:
+      "Freeze leftovers into silicone popsicle molds for soothing anti-inflammatory berry ice pops, or pour into ice cube trays to drop into future smoothies and iced teas.",
+    servingSuggestions: [
+      "Serve ice-cold as a revitalizing morning breakfast alongside warm whole-grain toast or plain paratha.",
+      "Ideal as a soothing post-workout restorative beverage or an energizing pre-dawn Suhoor hydration boost during Ramadan.",
+      "Pair with fresh fruit bowls, roasted nuts, or light afternoon savory snacks.",
+    ],
+    faqs: [
+      {
+        question: "Will the ginger make the smoothie too spicy for children?",
+        answer:
+          "At 1.5 tablespoons, this recipe delivers a prominent, warming kick. If preparing for children or spice-sensitive individuals, reduce the grated ginger to 1/2 teaspoon or 1 teaspoon for a gentler, milder warmth.",
+      },
+      {
+        question: "Can I use fresh berries instead of frozen?",
+        answer:
+          "Yes! If using fresh berries, be sure to add 1 cup of crushed ice to the blender to achieve the signature frosty, thick smoothie texture, or freeze the fresh berries for 2 hours beforehand.",
+      },
+      {
+        question: "Can I make this as a post-workout protein shake?",
+        answer:
+          "Absolutely. Add 1 scoop of unflavored or vanilla Halal-certified plant protein powder or collagen peptides along with an extra 1/4 cup of coconut water.",
+      },
+      {
+        question: "Why is this smoothie labeled anti-inflammatory?",
+        answer:
+          "Ginger contains gingerols and shogaols, berries provide potent anthocyanin polyphenols, and turmeric delivers curcumin—all scientifically celebrated natural compounds that help reduce systemic oxidative stress and inflammation.",
+      },
+    ],
+    author: {
+      name: "Chef Bodiul Alam",
+      role: "Culinary Director & Halal Nutrition Specialist",
+    },
+    updatedDate: "September 24, 2026",
+    tags: [
+      "Ginger Berry Smoothie",
+      "Anti-Inflammatory Smoothie",
+      "Halal Drinks",
+      "Plant Based",
+      "Turmeric Ginger",
+      "Wild Blueberries",
+      "Immunity Boost",
+      "Ramadan Suhoor",
+      "Post Workout",
+      "Gluten Free",
+      "Dairy Free",
+      "Antioxidant Rich",
+    ],
+    whySpecial:
+      "A vibrant powerhouse combining potent ancient restorative roots (ginger and golden turmeric) with antioxidant-dense wild berries and hydrating coconut water. 100% natural, refreshing, and deeply revitalizing.",
+    cookingTips: [
+      "Always peel ginger with the back of a spoon to remove paper-thin skin without wasting the aromatic outer root flesh.",
+      "Include a tiny pinch of freshly ground black pepper to maximize turmeric curcumin absorption without altering the fruit taste.",
+      "Use wild blueberries whenever available—they pack nearly double the antioxidant capacity and a richer indigo hue than standard cultivated blueberries.",
+    ],
+    commonMistakes: [
+      "Tossing large chunks of ungrated woody ginger into a standard blender, which leaves stringy fibers in the drink.",
+      "Adding artificial sweetened berry juices instead of pure whole berries and coconut water, which spikes processed sugars.",
+      "Using hot or room-temperature liquid, which dulls the crisp, frosty refreshment of the smoothie.",
+    ],
+    relatedRecipeSlugs: [
+      "royal-mango-lassi",
+      "royal-rooh-afza-sharbat",
+      "mint-limonana-lemonade",
+      "karak-chai-spiced-milk-tea",
+    ],
+    seoTitle: "Ginger Berry Anti-Inflammatory Smoothie Recipe | Noakhali Kitchen",
+    seoDescription:
+      "Revitalizing Ginger Berry Anti-Inflammatory Smoothie packed with wild berries, freshly grated ginger, golden turmeric, and coconut water. 100% Halal and vegan.",
+  },
+  {
+    id: "rec-velvety-blueberry-banana-fruit-sorbet",
+    slug: "velvety-blueberry-banana-fruit-sorbet",
+    title: "Velvety Blueberry Banana Fruit Sorbet (100% Dairy-Free & Rich)",
+    category: "Halal Desserts",
+    categorySlug: "halal-desserts",
+    cuisine: "Halal Plant-Based / Natural Fruit Confectionery",
+    description:
+      "An intensely rich, naturally sweet, velvety fruit sorbet crafted from frozen wild blueberries and ripe bananas, emulsified with a touch of pure agave or date syrup, fresh lemon zest, and real vanilla. 100% dairy-free, vegan, and free from synthetic stabilizers.",
+    introStory:
+      "When ripe, fragrant bananas are sliced and frozen solid, their natural pectin and starches undergo a marvelous transformation: whipped in a food processor or high-power blender, they aerate into a luscious, micro-crystalline soft-serve consistency that rivals the richest dairy ice creams. Layered with wild blueberries picked at peak ripeness, tart fresh lemon juice to amplify anthocyanin fruit notes, and a whisper of pure alcohol-free vanilla bean paste, this sorbet delivers a stunning deep indigo-purple dessert. It is entirely free of artificial additives, dairy fats, or commercial gums, making it a pure, wholesome indulgence for hot summer afternoons, Ramadan dessert platters, and clean Halal living.",
+    heroImage: IMAGES.velvetyBlueberryBananaFruitSorbet,
+    prepTimeMinutes: 10,
+    cookTimeMinutes: 0,
+    totalTimeMinutes: 10,
+    servings: 4,
+    difficulty: "Easy",
+    calories: 130,
+    rating: 4.95,
+    reviewCount: 52,
+    isTrending: true,
+    isFeatured: true,
+    halalNotes:
+      "100% Halal certified, naturally vegan, gluten-free, and dairy-free. Prepared with whole unprocessed frozen fruit, pure citrus, and alcohol-free vanilla bean paste with zero animal enzymes, gelatin, or synthetic emulsifiers.",
+    potentialCautionNotes:
+      "Use overripe bananas with amber freckles for maximum natural sweetness and creamy pectin texture. Ensure all frozen fruits are free from added artificial syrups or preservatives.",
+    ingredients: [
+      { amount: "3", unit: "large", name: "Ripe bananas", notes: "heavily speckled with brown sugar spots, sliced into coins and frozen solid" },
+      { amount: "2.5", unit: "cups", name: "Frozen wild blueberries", notes: "concentrated flavor, deep anthocyanin color, and natural pectin" },
+      { amount: "1.5", unit: "tbsp", name: "Pure maple syrup, raw honey, or blue agave", notes: "natural unrefined sweetener (adjust to taste)" },
+      { amount: "1", unit: "tbsp", name: "Freshly squeezed lemon juice", notes: "sharpens berry brightness and balances fruit sugars" },
+      { amount: "1/2", unit: "tsp", name: "Finely grated fresh lemon zest", notes: "releases aromatic citrus oils that perfume the sorbet" },
+      { amount: "1/2", unit: "tsp", name: "Alcohol-free pure vanilla bean paste or extract", notes: "adds floral warmth and roundness" },
+      { amount: "1", unit: "pinch", name: "Fine sea salt", notes: "balances and magnifies natural berry sweetness" },
+      { amount: "2", unit: "tbsp", name: "Unsweetened almond milk or coconut water", notes: "only as needed to lubricate blender blades" },
+    ],
+    substitutions: [
+      {
+        original: "Bananas",
+        substitute: "Frozen diced mango or ripe frozen avocado + 2 tbsp pure maple syrup",
+        notes: "Delivers similar creamy pectin thickness without banana flavor.",
+      },
+      {
+        original: "Wild blueberries",
+        substitute: "Frozen blackberries, dark sweet cherries, or mixed wild berries",
+        notes: "Produces an equally deep jewel-toned velvety fruit sorbet.",
+      },
+      {
+        original: "Lemon juice",
+        substitute: "Fresh lime juice",
+        notes: "Gives a zesty, tropical edge to the berry base.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Freeze the Fruit Thoroughly",
+        instruction:
+          "Peel ripe, speckled bananas, slice them into 1/2-inch coins, and place on a parchment-lined baking sheet. Freeze solid for at least 6 hours (or overnight) alongside the frozen wild blueberries.",
+        tip: "Freezing banana slices separately on a sheet pan prevents them from clumping into an unblendable rock.",
+      },
+      {
+        step: 2,
+        title: "Initial Pulse & Crumb Breakdown",
+        instruction:
+          "Transfer the frozen banana coins and frozen wild blueberries into a high-powered food processor or heavy-duty blender. Pulse 12 to 15 times until the fruit breaks down into uniform, crumbly purple pebbles.",
+        tip: "Stop and scrape the bowl with a silicone spatula so all large chunks are engaged.",
+      },
+      {
+        step: 3,
+        title: "Add Aromatics & Sweetener",
+        instruction:
+          "Pour in the fresh lemon juice, lemon zest, vanilla bean paste, pinch of sea salt, and maple syrup (or raw honey). If the motor strains, add 1 to 2 tablespoons of chilled coconut water or almond milk.",
+      },
+      {
+        step: 4,
+        title: "Process into Velvety Cream",
+        instruction:
+          "Run the food processor continuously on high speed for 2 to 3 minutes. The mixture will magically transform from crumbly fruit gravel into an ultra-thick, velvety, glossy purple soft-serve sorbet.",
+        tip: "Don't rush this step: continuous blade friction is what shears the fruit cells into micro-smooth crystals.",
+      },
+      {
+        step: 5,
+        title: "Serve Fresh or Chill for Firm Scoops",
+        instruction:
+          "For soft-serve gelato consistency, scoop immediately into chilled bowls. For firm, scoopable ice-cream spheres, transfer into a chilled metal loaf pan, smooth the surface, cover with parchment paper, and freeze for 45 to 60 minutes before scooping.",
+      },
+    ],
+    chefNotes: [
+      "The science of banana nice-cream: Ripe bananas contain high levels of soluble pectin, fructose, and resistant starches. When frozen and sheared at high speed, these starches form a stable colloidal emulsion that traps micro-air bubbles, creating the creamy mouthfeel of dairy ice cream without any cream or churner.",
+      "Always choose bananas that have brown speckles on their yellow skins. Green or pale yellow bananas are high in unripened astringent starch, whereas freckled bananas have converted their starches into luscious natural fructose and velvety pectin.",
+      "Wild lowbush blueberries are smaller and contain significantly more antioxidant skin per pound than large cultivated blueberries, giving this sorbet its iconic, intensely saturated royal purple color.",
+    ],
+    nutrition: {
+      calories: 130,
+      proteinGrams: 2,
+      carbsGrams: 32,
+      fatGrams: 0.5,
+      fiberGrams: 5,
+      sodiumMg: 4,
+      servingSizeDescription: "1 generous bowl (approx. 2 scoops / 180g)",
+    },
+    storageInstructions:
+      "Store leftovers in a freezer-safe glass or stainless steel container with parchment paper pressed directly onto the sorbet surface for up to 2 weeks. Because this sorbet contains zero artificial emulsifiers, it will freeze firm; let it temper on the kitchen counter for 8 to 10 minutes before scooping.",
+    freezingInstructions:
+      "Can be portioned into silicone popsicle molds for quick grab-and-go berry fruit bars, or pre-scooped onto a parchment-lined baking sheet and frozen into solid spheres for effortless party dessert service.",
+    servingSuggestions: [
+      "Serve 2 to 3 scoops in chilled white fluted bowls garnished with fresh wild blueberries, fresh mint sprigs, and edible flowers.",
+      "Serve as a vibrant, palate-cleansing post-curry refresher following rich banquet dishes like Kacchi Biryani or Beef Kala Bhuna.",
+      "Drizzle with warm dark chocolate sauce or fold with toasted coconut flakes and roasted pistachios for an elegant banquet presentation.",
+    ],
+    faqs: [
+      {
+        question: "Can I make this in a standard blender instead of a food processor?",
+        answer:
+          "Yes. If using a standard blender, use the tamper tool continuously to push frozen ingredients down, and add an extra 2 to 3 tablespoons of coconut water or almond milk to help the blades catch without overheating the motor.",
+      },
+      {
+        question: "Does the sorbet taste strongly of banana?",
+        answer:
+          "The intense tart-sweet profile of the wild blueberries and fresh lemon zest largely takes center stage, while the banana provides velvety body, richness, and rounded sweetness rather than an overpowering banana flavor.",
+      },
+      {
+        question: "Is this sorbet suitable for vegans and dairy-free diets?",
+        answer:
+          "Yes! It is 100% dairy-free, vegan (when using maple syrup or agave), gluten-free, nut-free, and contains zero added refined cane sugar.",
+      },
+      {
+        question: "Why did my sorbet freeze rock-hard after a few days?",
+        answer:
+          "Commercial ice creams use corn syrups, chemical antifreeze agents, and emulsifiers to remain soft. Pure fruit naturally freezes solid. Simply rest your container at room temperature for 8 to 10 minutes before scooping and it will immediately return to velvety creaminess.",
+      },
+    ],
+    author: {
+      name: "Chef Bodiul Alam",
+      role: "Culinary Director & Halal Nutrition Specialist",
+    },
+    updatedDate: "September 24, 2026",
+    tags: [
+      "Blueberry Sorbet",
+      "Banana Sorbet",
+      "Dairy Free Dessert",
+      "Halal Desserts",
+      "Vegan Gelato",
+      "Nice Cream",
+      "No Added Sugar",
+      "Fruit Sorbet",
+      "Clean Eating",
+      "Summer Treats",
+      "Gluten Free",
+      "Plant Based",
+    ],
+    whySpecial:
+      "Delivers the rich, dense luxury of artisanal Italian gelato using purely 100% whole fruits, with zero dairy, zero cholesterol, and zero synthetic stabilizers. Stunning jewel-toned violet color with natural sweet-tart radiance.",
+    cookingTips: [
+      "Freeze bananas only when they have developed amber sugar freckles for peak natural sweetness.",
+      "Chill your food processor bowl or blender container in the freezer for 15 minutes before churning for maximum frosty texture.",
+      "A tiny pinch of mineral sea salt sharpens and elevates the natural blueberry and citrus flavors.",
+    ],
+    commonMistakes: [
+      "Adding excess water or liquid, which causes icy crystallization rather than a velvety sorbet.",
+      "Using under-ripe green bananas which produce a starchy, chalky aftertaste.",
+      "Stopping the food processor during the crumb stage before the blade friction creates the glossy emulsion.",
+    ],
+    relatedRecipeSlugs: [
+      "electric-blue-spirulina-superfood-juice",
+      "ginger-berry-anti-inflammatory-smoothie",
+      "royal-mango-lassi",
+      "mango-coconut-burfi",
+    ],
+    seoTitle:
+      "Velvety Blueberry Banana Fruit Sorbet Recipe (Dairy-Free) | Noakhali Kitchen",
+    seoDescription:
+      "Rich and velvety 100% dairy-free Blueberry Banana Fruit Sorbet recipe. Made from whole frozen berries and ripe bananas without refined sugar or dairy.",
+  },
+  {
+    id: "rec-electric-blue-spirulina-superfood-juice",
+    slug: "electric-blue-spirulina-superfood-juice",
+    title: "Electric Blue Spirulina Superfood Juice (Hydrating Ocean Elixir)",
+    category: "Halal Drinks & Beverages",
+    categorySlug: "halal-drinks",
+    cuisine: "Halal Superfood Wellness / Functional Elixir",
+    description:
+      "A vibrant, electric cerulean superfood juice and cellular hydration elixir powered by natural blue spirulina (phycocyanin), cold-pressed coconut water, crisp Persian cucumber, tart Key lime, fresh ginger root, and raw unfiltered wildflower honey. 100% Halal, ultra-hydrating, and rich in natural antioxidants.",
+    introStory:
+      "Gleaming with the mesmerizing, iridescent glow of a tropical ocean lagoon, the Electric Blue Spirulina Superfood Juice is nature's ultimate functional wellness elixir. The showstopping sapphire color is derived entirely from organic blue spirulina—an extract of pure phycocyanin biliprotein harvested from nutrient-dense microalgae. Unlike conventional green spirulina, pure blue spirulina has no marine or grassy aftertaste, allowing the clean, cooling hydration of fresh Persian cucumber juice and potassium-loaded young coconut water to shine through. Brightened by freshly squeezed Key lime juice and warm grated ginger, then rounded with raw unfiltered honey, this refreshing beverage restores intracellular electrolyte balance while delivering powerful anti-inflammatory and cellular antioxidant support. It is an extraordinary alcohol-free signature drink for hot days, Ramadan suhoor or iftar revitalization, athletic recovery, and vibrant mindful living.",
+    heroImage: IMAGES.electricBlueSpirulinaSuperfoodJuice,
+    prepTimeMinutes: 5,
+    cookTimeMinutes: 0,
+    totalTimeMinutes: 5,
+    servings: 2,
+    difficulty: "Easy",
+    calories: 65,
+    rating: 4.96,
+    reviewCount: 48,
+    isTrending: true,
+    isFeatured: true,
+    halalNotes:
+      "100% Halal certified, naturally vegan (with agave/maple), gluten-free, and alcohol-free. Made purely with whole plant superfoods, fresh cold-pressed fruits, raw unpasteurized coconut water, and pure certified phycocyanin microalgae extract completely free of artificial dyes (FD&C Blue No. 1), gelatin finings, or synthetic preservatives.",
+    potentialCautionNotes:
+      "Always source 100% pure blue spirulina (phycocyanin extract) rather than whole green spirulina powder to achieve the electric sapphire hue and pleasant neutral-citrus flavor. Whisk thoroughly with room-temperature water before pouring over ice to avoid clumping.",
+    ingredients: [
+      { amount: "1", unit: "tsp (approx. 2g)", name: "Pure organic blue spirulina powder", notes: "100% phycocyanin extract from Arthrospira platensis, vibrant electric ocean color" },
+      { amount: "2", unit: "cups (480ml)", name: "Tender young coconut water", notes: "chilled, unflavored, packed with natural bioavailable electrolytes and potassium" },
+      { amount: "1", unit: "medium", name: "Crisp Persian cucumber", notes: "cold-pressed or blended and double-strained for crystalline cucumber essence" },
+      { amount: "2.5", unit: "tbsp", name: "Freshly squeezed Key lime or lemon juice", notes: "strained, adds sparkling citrus acidity and stabilizes antioxidants" },
+      { amount: "1/2", unit: "tsp", name: "Freshly grated ginger root juice", notes: "peeled and pressed to extract warming digestive zing" },
+      { amount: "1.5", unit: "tbsp", name: "Raw unfiltered wildflower honey or blue agave nectar", notes: "natural unrefined low-glycemic sweetener (adjust to taste)" },
+      { amount: "1", unit: "cup (240ml)", name: "Sparkling mineral water or filtered cold spring water", notes: "adds a crisp effervescence or smooth mountain chill" },
+      { amount: "1", unit: "pinch", name: "Himalayan pink salt or sea salt", notes: "activates electrolyte cellular absorption and rounds out flavors" },
+      { amount: "1.5", unit: "cups", name: "Artisanal clear ice cubes", notes: "for chilling and serving" },
+      { amount: "2", unit: "sprigs", name: "Fresh organic mint & lime wheels", notes: "for refreshing botanical garnish" },
+    ],
+    substitutions: [
+      {
+        original: "Young coconut water",
+        substitute: "Pure cold-pressed watermelon water or filtered aloe vera juice",
+        notes: "Delivers exceptional hydration with slightly sweeter undertones.",
+      },
+      {
+        original: "Raw wildflower honey",
+        substitute: "Pure blue agave nectar or light maple syrup",
+        notes: "Keeps the recipe 100% plant-based vegan with clean dissolution.",
+      },
+      {
+        original: "Key lime juice",
+        substitute: "Fresh Meyer lemon juice or Japanese Yuzu juice",
+        notes: "Imparts a delicate, fragrant floral citrus note.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Extract Fresh Cucumber & Ginger Essence",
+        instruction:
+          "Pass the washed Persian cucumber and peeled ginger through a cold-press juicer, or blend in a high-speed blender with 2 tablespoons of water and press through a fine-mesh nut milk bag or sieve to yield clear, vibrant green essence.",
+        tip: "Straining out all fibrous pulp ensures your final elixir looks luminous, transparent, and gem-like.",
+      },
+      {
+        step: 2,
+        title: "Dissolve the Blue Spirulina",
+        instruction:
+          "In a small glass or measuring cup, combine 1 teaspoon of blue spirulina powder with 2 tablespoons of room-temperature coconut water. Whisk briskly with a bamboo matcha whisk or mini electric milk frother for 20 seconds until completely dissolved without clumps.",
+        tip: "Dissolving in room-temperature liquid first ensures the delicate microalgae pigments disperse evenly into ice-cold juices.",
+      },
+      {
+        step: 3,
+        title: "Blend the Hydration Base",
+        instruction:
+          "In a glass beverage pitcher or shaker, combine the chilled young coconut water, strained cucumber-ginger essence, freshly squeezed lime juice, raw honey (or agave), and a tiny pinch of Himalayan pink salt. Stir vigorously until the honey is fully incorporated.",
+      },
+      {
+        step: 4,
+        title: "Infuse the Electric Cerulean Hue",
+        instruction:
+          "Pour the whisked blue spirulina concentrate into the citrus-coconut base. Watch the breathtaking oceanic swirls bloom into a deep, electric cerulean blue. Stir gently to harmonize the color.",
+      },
+      {
+        step: 5,
+        title: "Assemble, Effervesce & Garnish",
+        instruction:
+          "Fill two tall glasses to the brim with clear ice cubes and thin lime wheels pressed against the glass. Pour the blue elixir over the ice until three-quarters full, top with a splash of crisp sparkling mineral water, slap a fresh mint sprig between your palms to release aromatic oils, and perch on top.",
+        tip: "Serving with sparkling water creates a delightful effervescent fizz that dances on the tongue.",
+      },
+    ],
+    chefNotes: [
+      "The miracle of phycocyanin: Blue spirulina is derived by gently water-extracting phycocyanin from cyanobacteria (Arthrospira platensis). Unlike whole green spirulina which is dominated by bitter chlorophyll and algae odor, phycocyanin has a delightfully neutral taste, making it an extraordinary natural superfood dye and free-radical scavenger.",
+      "Temperature sensitivity: Phycocyanin is a heat-labile biliprotein. Never expose blue spirulina to temperatures above 50°C (122°F), as heat permanently denatures the protein complex and causes its brilliant electric blue glow to turn dull gray-brown.",
+      "The role of citrus: Citric and ascorbic acids from fresh lime juice mildly lower the drink's pH to around 4.5, stabilizing the phycocyanin chromophores and protecting the luminous sapphire color from rapid oxidation.",
+    ],
+    nutrition: {
+      calories: 65,
+      proteinGrams: 2,
+      carbsGrams: 14,
+      fatGrams: 0,
+      fiberGrams: 1,
+      sodiumMg: 75,
+      servingSizeDescription: "1 tall glass (approx. 12 fl oz / 355ml)",
+    },
+    storageInstructions:
+      "Best consumed within 1 hour of preparation for maximum enzymatic vitality and vivid blue radiance. Leftovers can be sealed in an airtight, UV-shielded amber glass bottle and refrigerated for up to 24 hours. Shake well before serving as microalgae solids naturally settle.",
+    freezingInstructions:
+      "Pour into silicone sphere or cube ice trays and freeze solid. Drop these electric blue cubes into plain lemonade, coconut water, or sparkling water for an evolving color-changing beverage.",
+    servingSuggestions: [
+      "Serve over hand-carved ice in tall highball glasses with a metal or glass straw and a dehydrated lime wheel.",
+      "Present as a showstopping signature mocktail at Halal dinner parties, weddings, or celebratory gatherings.",
+      "Sip immediately following high-intensity workouts or sauna sessions to replenish cellular sodium, potassium, and magnesium.",
+    ],
+    faqs: [
+      {
+        question: "Does blue spirulina taste like seaweed or green spirulina?",
+        answer:
+          "No, not at all. Regular green spirulina has a potent earthy, marine taste because of its high chlorophyll content. Blue spirulina is pure extracted phycocyanin, which is virtually tasteless and odorless, letting the fresh lime, ginger, cucumber, and coconut water flavors shine.",
+      },
+      {
+        question: "How does it get such an intense electric blue color without chemical dye?",
+        answer:
+          "The stunning cerulean shade is 100% natural, produced by phycocyanin—a photosynthetic pigment found inside blue-green microalgae. It is one of nature's rarest and most potent blue compounds, completely free from artificial colorants like FD&C Blue No. 1.",
+      },
+      {
+        question: "Can I drink this during Ramadan?",
+        answer:
+          "Absolutely! It makes an exceptional Suhoor hydration drink because coconut water and cucumber contain deep bioavailable electrolytes (potassium, magnesium) that help retain intracellular hydration throughout the fasting day without insulin spikes.",
+      },
+      {
+        question: "Can children enjoy this superfood juice?",
+        answer:
+          "Yes! Children are fascinated by the magical, all-natural electric blue color, and parents can rest assured knowing it contains zero artificial food dyes, high-fructose corn syrup, or caffeine.",
+      },
+    ],
+    author: {
+      name: "Chef Bodiul Alam",
+      role: "Culinary Director & Halal Nutrition Specialist",
+    },
+    updatedDate: "September 24, 2026",
+    tags: [
+      "Blue Spirulina Juice",
+      "Hydrating Ocean Elixir",
+      "Halal Drinks",
+      "Superfood Juice",
+      "Electrolyte Drink",
+      "Coconut Water",
+      "Cucumber Juice",
+      "Phycocyanin",
+      "Cold Pressed",
+      "Anti-Inflammatory",
+      "Vegan Drink",
+      "Ramadan Suhoor",
+      "Clean Nutrition",
+      "Post Workout",
+    ],
+    whySpecial:
+      "An otherworldly electric blue functional elixir that blends cellular electrolytes with phycocyanin, the planet's premier natural blue antioxidant. Totally clean, 100% Halal, and deeply replenishing.",
+    cookingTips: [
+      "Always pre-whisk the spirulina powder in 2 tablespoons of liquid before pouring into cold ingredients to prevent micro-clumps.",
+      "Use chilled coconut water directly from the refrigerator for the cleanest, crispiest taste.",
+      "Gently roll the mint between your palms before dropping it into the glass to release its natural cooling menthol oils.",
+    ],
+    commonMistakes: [
+      "Substituting standard green spirulina powder, which will turn murky olive green and add an unwanted seaweed taste.",
+      "Mixing with hot or boiling water, which denatures the delicate antioxidant protein and degrades the neon blue hue.",
+      "Leaving exposed to direct sunlight for hours, which causes natural phycocyanin pigment to slowly fade.",
+    ],
+    relatedRecipeSlugs: [
+      "anti-inflammatory-lemon-blueberry-smoothie",
+      "ginger-berry-anti-inflammatory-smoothie",
+      "velvety-blueberry-banana-fruit-sorbet",
+      "royal-rooh-afza-sharbat",
+    ],
+    seoTitle:
+      "Electric Blue Spirulina Superfood Juice Recipe | Noakhali Kitchen",
+    seoDescription:
+      "Revitalizing Electric Blue Spirulina Superfood Juice recipe. Packed with natural phycocyanin, chilled coconut water, cucumber, and lime. 100% Halal and vegan.",
+  },
+  {
+    id: "rec-anti-inflammatory-lemon-blueberry-smoothie",
+    slug: "anti-inflammatory-lemon-blueberry-smoothie",
+    title: "Anti-Inflammatory Lemon-Blueberry Smoothie",
+    category: "Halal Drinks & Beverages",
+    categorySlug: "halal-drinks",
+    cuisine: "Halal Functional Nutrition / Anti-Inflammatory Elixir",
+    description:
+      "A bright, velvety antioxidant powerhouse smoothie blending wild blueberries with zesty fresh lemon juice, Meyer lemon zest, creamy unsweetened almond milk, golden turmeric, pure ginger, and chia seeds. 100% Halal, naturally dairy-free, and crafted to support cellular recovery and immune health.",
+    introStory:
+      "Bursting with a vivid royal violet hue and an intoxicating aroma reminiscent of freshly baked lemon-blueberry shortbread, this Anti-Inflammatory Lemon-Blueberry Smoothie is functional nutrition at its most indulgent. The foundation pairs deeply pigmented wild lowbush blueberries—heralded worldwide for having one of the highest natural anthocyanin and ORAC antioxidant scores—with the bright, alkalizing zing of whole cold-pressed lemon juice and fragrant lemon zest. To amplify its anti-inflammatory power, warm freshly grated ginger and golden turmeric are paired with a micro-pinch of black pepper piperine to enhance curcumin bioavailability by up to 2,000%. Blended with nutrient-dense chia seeds, velvety frozen banana, and silky unsweetened almond milk, this smoothie delivers rich, spoon-coating decadence with zero refined sugar, dairy, or artificial additives. It is the ultimate morning vitality boost, post-workout recharge, or revitalizing suhoor and iftar staple.",
+    heroImage: IMAGES.antiInflammatoryLemonBlueberrySmoothie,
+    prepTimeMinutes: 5,
+    cookTimeMinutes: 0,
+    totalTimeMinutes: 5,
+    servings: 2,
+    difficulty: "Easy",
+    calories: 155,
+    rating: 4.97,
+    reviewCount: 64,
+    isTrending: true,
+    isFeatured: true,
+    halalNotes:
+      "100% Halal certified, naturally vegan, gluten-free, and dairy-free. Prepared exclusively with whole unadulterated fruits, cold-pressed plant milks, pure spices, and unrefined honey or pure maple syrup. Completely free of synthetic dyes, gelatin, or alcohol-extracted flavors.",
+    potentialCautionNotes:
+      "Always zest the lemon before juicing. Use only the bright outer yellow zest layer and avoid the bitter white pith. Use frozen wild blueberries for the frostiest, creamiest milkshake consistency without watering it down with excessive ice cubes.",
+    ingredients: [
+      { amount: "2", unit: "cups (approx. 280g)", name: "Frozen wild blueberries", notes: "rich anthocyanins, deep antioxidant profile, and concentrated berry sweetness" },
+      { amount: "1", unit: "large", name: "Fresh organic lemon (zest and juice)", notes: "1 tsp finely grated zest plus 3 tbsp freshly squeezed juice" },
+      { amount: "1.25", unit: "cups (300ml)", name: "Unsweetened almond milk or oat milk", notes: "chilled, creamy dairy-free base" },
+      { amount: "1/2", unit: "medium", name: "Ripe banana (frozen in coins)", notes: "provides natural pectin and velvety smoothie texture" },
+      { amount: "1", unit: "tbsp", name: "Organic black or white chia seeds", notes: "delivers plant-based omega-3s, soluble fiber, and lasting satiety" },
+      { amount: "1/2", unit: "tsp", name: "Freshly grated ginger root", notes: "warming digestive and anti-inflammatory gingerols" },
+      { amount: "1/4", unit: "tsp", name: "Ground golden turmeric root", notes: "pure curcumin compound for joint and immune support" },
+      { amount: "1", unit: "pinch", name: "Freshly cracked black pepper", notes: "piperine compound magnifies curcumin absorption up to 20-fold" },
+      { amount: "1.5", unit: "tbsp", name: "Raw wildflower honey or pure grade-A maple syrup", notes: "natural unrefined sweetener to balance lemon tartness" },
+      { amount: "1/2", unit: "cup", name: "Crushed ice", notes: "for extra frosty, thick shake consistency" },
+      { amount: "2", unit: "wheels", name: "Fresh lemon slices & plump blueberries", notes: "for rim garnish and presentation" },
+    ],
+    substitutions: [
+      {
+        original: "Frozen banana",
+        substitute: "1/4 ripe Haas avocado + 1 extra tbsp pure maple syrup",
+        notes: "Yields an equally luxurious, keto-friendly low-sugar creaminess without banana flavor.",
+      },
+      {
+        original: "Unsweetened almond milk",
+        substitute: "Creamy oat milk, unsweetened coconut milk, or light kefir",
+        notes: "Gives delicious body and nut-free compatibility.",
+      },
+      {
+        original: "Wild blueberries",
+        substitute: "Frozen dark sweet cherries or mixed blackberries",
+        notes: "Maintains intense dark berry flavonoids and vibrant purple shade.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Zest & Juice the Fresh Lemon",
+        instruction:
+          "Wash and dry the lemon thoroughly. Using a fine microplane, grate 1 teaspoon of the vibrant yellow zest into a small dish. Then roll the lemon firmly on the countertop, slice in half, and squeeze out 3 tablespoons of fresh juice, discarding all seeds.",
+        tip: "Zesting before cutting and juicing is twice as easy and ensures no essential citrus oils are wasted.",
+      },
+      {
+        step: 2,
+        title: "Load Blender with Liquids & Spices",
+        instruction:
+          "Pour the chilled almond milk and freshly squeezed lemon juice into the blender container first. Add the lemon zest, chia seeds, grated ginger, golden turmeric, pinch of black pepper, and raw honey (or maple syrup).",
+        tip: "Placing liquids at the base allows the blender blades to spin smoothly without air pockets.",
+      },
+      {
+        step: 3,
+        title: "Add Frozen Superfoods",
+        instruction:
+          "Add the frozen wild blueberries and frozen banana coins on top. If a frostier consistency is desired, add the half cup of crushed ice.",
+      },
+      {
+        step: 4,
+        title: "High-Speed Emulsification",
+        instruction:
+          "Pulse 5 times to break down the frozen fruit chunks, then blend on high speed for 60 to 75 seconds until the mixture is completely velvety, thick, and uniformly deep violet with no visible chia seed granules.",
+      },
+      {
+        step: 5,
+        title: "Garnish & Serve Frosty",
+        instruction:
+          "Pour into two chilled tall faceted glasses. Perch a fresh lemon wheel on each rim, add a colorful reusable straw, and scatter fresh plump blueberries around the base or float a few on top.",
+        tip: "Enjoy immediately while ice-cold for peak flavor and antioxidant potency.",
+      },
+    ],
+    chefNotes: [
+      "The Anthocyanin & Citrus Synergy: Anthocyanins in blueberries are potent polyphenol antioxidants that exhibit increased bioavailability and chemical stability in slightly acidic environments. The citric and ascorbic acids in fresh lemon juice actively protect these delicate pigments from oxidation during digestion.",
+      "The Piperine Secret: Curcumin (the active anti-inflammatory compound in turmeric) is notoriously difficult for the human gut to absorb on its own. The minute addition of piperine from freshly ground black pepper boosts curcumin absorption by up to 2,000% without altering the smoothie's refreshing sweet-tart flavor.",
+      "Flavor Magic: The essential oils in lemon peel contains d-limonene, an uplifting terpene that gives the smoothie an intoxicating Meyer lemon bakery fragrance when whipped with creamy almond milk and wild berries.",
+    ],
+    nutrition: {
+      calories: 155,
+      proteinGrams: 4,
+      carbsGrams: 28,
+      fatGrams: 4,
+      fiberGrams: 7,
+      sodiumMg: 95,
+      servingSizeDescription: "1 large tumbler (approx. 14 fl oz / 415ml)",
+    },
+    storageInstructions:
+      "Best enjoyed immediately when freshly blended. Leftover smoothie can be stored in an airtight mason jar filled to the brim (to minimize oxygen exposure) in the refrigerator for up to 24 hours. Shake vigorously before serving as chia seeds will naturally thicken the liquid.",
+    freezingInstructions:
+      "Pour leftover smoothie into silicone popsicle molds for dairy-free anti-inflammatory breakfast fruit bars, or freeze in an ice tray to use as flavored ice cubes in future berry shakes.",
+    servingSuggestions: [
+      "Pour into tall crystal glasses with a bright straw and fresh lemon slice for an invigorating morning wake-up elixir.",
+      "Serve in a wide ceramic bowl topped with toasted hemp seeds, unsweetened coconut flakes, and sliced kiwi as a nutrient-packed smoothie bowl.",
+      "Pair with a high-protein Halal breakfast such as scrambled eggs with avocado or warm whole-wheat paratha.",
+    ],
+    faqs: [
+      {
+        question: "Can I taste the black pepper and turmeric in the smoothie?",
+        answer:
+          "No, not at all! The robust tart-sweet balance of wild blueberries, fresh lemon juice, aromatic zest, and honey completely masks the pungent flavor of turmeric and pepper while preserving 100% of their cellular benefits.",
+      },
+      {
+        question: "Why should I choose wild blueberries over cultivated blueberries?",
+        answer:
+          "Wild lowbush blueberries are smaller, denser, and contain nearly double the antioxidant capacity of regular large grocery store blueberries because they have a higher skin-to-pulp ratio.",
+      },
+      {
+        question: "Can I make this smoothie completely banana-free?",
+        answer:
+          "Yes! Replace the frozen banana with 1/4 ripe Haas avocado or 1/3 cup of unsweetened coconut yogurt plus an extra teaspoon of maple syrup for a keto-friendly, low-sugar thick texture.",
+      },
+      {
+        question: "Is this smoothie suitable for Ramadan Suhoor?",
+        answer:
+          "Yes, it is phenomenal for Suhoor. The combination of slow-digesting chia seed fiber, healthy fats, and hydrating electrolytes keeps you full, energised, and hydrated throughout the fasting day.",
+      },
+    ],
+    author: {
+      name: "Chef Bodiul Alam",
+      role: "Culinary Director & Halal Nutrition Specialist",
+    },
+    updatedDate: "September 24, 2026",
+    tags: [
+      "Lemon Blueberry Smoothie",
+      "Anti Inflammatory",
+      "Halal Drinks",
+      "Superfood Smoothie",
+      "Wild Blueberries",
+      "Turmeric Ginger",
+      "Dairy Free Smoothie",
+      "Vegan Smoothie",
+      "Immune Boost",
+      "Chia Seeds",
+      "Antioxidant Rich",
+      "Clean Nutrition",
+      "Breakfast Smoothie",
+    ],
+    whySpecial:
+      "A clinical-grade synergy of anthocyanins, d-limonene, and bio-enhanced curcumin wrapped in the taste of a luscious lemon blueberry tart. Thick, frosty, 100% dairy-free, and Halal.",
+    cookingTips: [
+      "Use only the yellow zest from the lemon skin and never grate into the bitter white pith.",
+      "Pour liquids into the blender first to ensure the chia seeds and frozen berries don't stall the blade.",
+      "Chill your glass in the freezer for 10 minutes prior to serving for a frosty, cafe-style presentation.",
+    ],
+    commonMistakes: [
+      "Using bottled lemon juice concentrate instead of fresh lemon; bottled juice lacks fresh limonene oils and natural enzymes.",
+      "Omitting the lemon zest, which provides the distinctive citrus aroma and essential polyphenol oils.",
+      "Skipping the black pepper, which is vital for activating turmeric's curcumin absorption.",
+    ],
+    relatedRecipeSlugs: [
+      "anti-inflammatory-turmeric-smoothie",
+      "ginger-berry-anti-inflammatory-smoothie",
+      "electric-blue-spirulina-superfood-juice",
+      "velvety-blueberry-banana-fruit-sorbet",
+      "royal-mango-lassi",
+      "vibrant-dragon-fruit-banana-superfood-nice-cream-sorbet",
+    ],
+    seoTitle:
+      "Anti-Inflammatory Lemon-Blueberry Smoothie Recipe | Noakhali Kitchen",
+    seoDescription:
+      "Revitalizing Anti-Inflammatory Lemon-Blueberry Smoothie recipe. Wild blueberries, fresh lemon juice and zest, turmeric, and almond milk. 100% Halal and dairy-free.",
+  },
+  {
+    id: "rec-vibrant-dragon-fruit-banana-superfood-nice-cream-sorbet",
+    slug: "vibrant-dragon-fruit-banana-superfood-nice-cream-sorbet",
+    title: "Vibrant Dragon Fruit & Banana Superfood Nice Cream Sorbet",
+    category: "Halal Desserts",
+    categorySlug: "halal-desserts",
+    cuisine: "Halal Plant-Based / Tropical Superfood Confectionery",
+    description:
+      "A radiant, neon-magenta superfood nice cream sorbet blending antioxidant-rich red pitaya (dragon fruit) and frozen sweet bananas, crowned with velvety banana cream, freshly sliced strawberries, and delicate seeds. 100% dairy-free, vegan, Halal, and made without refined sugars or artificial additives.",
+    introStory:
+      "Stepping into a sanctuary of wholesome decadence, this Vibrant Dragon Fruit & Banana Superfood Nice Cream Sorbet captures both the dazzling aesthetic and rejuvenating power of pure tropical botanicals. The dramatic, electric-fuchsia base owes its jewel tone to red-fleshed pitaya (dragon fruit), packed with betacyanins, dietary fiber, and vitamin C. When blended at sub-zero temperatures with frozen ripe bananas speckled with amber sugars, the fruit's natural pectins whip into an impossibly silky, dense soft-serve that rivals artisanal Italian gelato—without a single drop of dairy, cream, or refined white sugar. Layered into an elegant dessert glass and topped with generous dollops of smooth vanilla-kissed banana cream, juicy red strawberries, and crunchy superfruit seeds, it represents the pinnacle of clean Halal confectionery and vibrant celebratory indulgence.",
+    heroImage: IMAGES.vibrantDragonFruitBananaSuperfoodNiceCreamSorbet,
+    prepTimeMinutes: 10,
+    cookTimeMinutes: 0,
+    totalTimeMinutes: 10,
+    servings: 4,
+    difficulty: "Easy",
+    calories: 135,
+    rating: 4.98,
+    reviewCount: 58,
+    isTrending: true,
+    isFeatured: true,
+    halalNotes:
+      "100% Halal certified, naturally vegan, gluten-free, and dairy-free. Prepared exclusively with whole raw fruits, pure coconut water, alcohol-free vanilla bean paste, and unrefined natural sweeteners. Absolutely free of animal gelatin, pork-derived mono- and diglycerides, synthetic red food dyes (such as carmine / cochineal or Red 40), or synthetic emulsifiers.",
+    potentialCautionNotes:
+      "Ensure you use red or magenta-fleshed dragon fruit (Hylocereus costaricensis) rather than white dragon fruit to achieve the show-stopping electric pink color. Peel bananas before freezing and freeze until rock solid for the signature thick sorbet texture.",
+    ingredients: [
+      { amount: "3", unit: "cups (approx. 400g)", name: "Frozen red/pink dragon fruit (pitaya) chunks", notes: "deep fuchsia pulp rich in betacyanins and antioxidants" },
+      { amount: "3", unit: "large", name: "Ripe bananas", notes: "peeled, sliced into 1/2-inch coins, and frozen solid (heavily speckled for sweetness)" },
+      { amount: "3", unit: "tbsp", name: "Pure coconut water or light coconut milk", notes: "provides electrolyte hydration and gentle blade lubrication" },
+      { amount: "1.5", unit: "tbsp", name: "Freshly squeezed lime juice", notes: "awakens tropical flavors and protects vibrant magenta pigmentation" },
+      { amount: "1.5", unit: "tbsp", name: "Pure grade-A maple syrup or raw blue agave", notes: "subtle floral sweetness (adjust to fruit ripeness)" },
+      { amount: "1/2", unit: "tsp", name: "Alcohol-free pure vanilla bean paste", notes: "imparts warm fragrant Madagascar vanilla notes" },
+      { amount: "1", unit: "pinch", name: "Fine pink Himalayan rock salt", notes: "balances and intensifies fruit sugars" },
+      { amount: "6", unit: "whole", name: "Fresh ripe strawberries", notes: "hulled and thinly sliced for decorative crown and side garnishing" },
+      { amount: "1", unit: "tbsp", name: "Black chia seeds or pitaya seeds", notes: "for contrasting visual texture and omega-3 crunch" },
+      { amount: "4", unit: "sprigs", name: "Fresh organic mint leaves", notes: "for garden-fresh aromatic garnish" },
+    ],
+    substitutions: [
+      {
+        original: "Frozen red dragon fruit",
+        substitute: "Frozen organic pitaya puree smoothie packs or frozen wild raspberries + hibiscus powder",
+        notes: "Provides a similar stunning ruby-fuchsia color and tart-sweet balance.",
+      },
+      {
+        original: "Frozen bananas",
+        substitute: "Frozen sweet mango chunks or frozen coconut cream cubes",
+        notes: "Yields a luscious tropical sorbet texture for those sensitive to banana.",
+      },
+      {
+        original: "Coconut water",
+        substitute: "Fresh almond milk, oat milk, or pure filtered water",
+        notes: "Keeps the nice cream dairy-free while ensuring smooth blade rotation.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Freeze Bananas & Pitaya at Peak Ripeness",
+        instruction:
+          "Ensure your bananas are ripe with amber freckles before peeling, slicing into coins, and freezing on a parchment-lined baking sheet for at least 4 hours. Cut the red dragon fruit into 1-inch cubes and freeze until rock solid.",
+        tip: "Freezing banana coins separately prevents them from clumping into an unblendable frozen brick.",
+      },
+      {
+        step: 2,
+        title: "Whip the Creamy Banana Vanilla Crown Layer",
+        instruction:
+          "In a high-power food processor or heavy-duty blender, place 1 sliced frozen banana, 1 tablespoon of coconut water, 1/4 tsp vanilla bean paste, and a drop of maple syrup. Pulse and blend on medium-high until transformed into a silky, pale ivory soft-serve nice cream. Transfer to a chilled container and place in the freezer while preparing the magenta sorbet.",
+        tip: "Stop and scrape down the sides twice with a silicone spatula to achieve a whipped, micro-crystalline texture.",
+      },
+      {
+        step: 3,
+        title: "Churn the Electric Pink Pitaya Sorbet Base",
+        instruction:
+          "In the same blender or food processor, add the 3 cups of frozen red dragon fruit cubes, the remaining 2 sliced frozen bananas, fresh lime juice, 2 tablespoons of coconut water, remaining maple syrup, and a pinch of pink salt. Process in pulses, then run on high speed for 60 to 90 seconds using the tamper wand until ultra-thick, luscious, and glowing electric pink.",
+        tip: "The splash of lime juice prevents oxidation while cutting through the richness with crisp citrus acidity.",
+      },
+      {
+        step: 4,
+        title: "Artful Glass Layering & Assembly",
+        instruction:
+          "Take chilled clear glass dessert sundae cups or tulip glasses. Spoon the deep pink dragon fruit sorbet into each glass, filling three-quarters of the way and smoothing the top gently with the back of a warm spoon.",
+      },
+      {
+        step: 5,
+        title: "Crown with Banana Scoops, Strawberries & Mint",
+        instruction:
+          "Using a small spring-loaded ice cream scoop dipped in warm water, crown each sorbet glass with two round scoops of the creamy white banana nice cream. Fan out freshly sliced strawberries along the rim, scatter chia seeds across the top, and tuck in a fragrant sprig of garden mint. Serve immediately with long sundae spoons.",
+        tip: "Serve straight away or freeze for 15 minutes before serving for firmer, scoopable gelato spheres.",
+      },
+    ],
+    chefNotes: [
+      "The Betacyanin Pigment Brilliance: Red dragon fruit gets its otherworldly magenta hue from betacyanins, the same water-soluble nitrogenous pigments found in red beets. Betacyanins are extraordinarily potent antioxidants with free-radical scavenging capacity that remains exceptionally stable when kept cold and paired with mild citrus acids like lime or lemon.",
+      "The Food Processor Advantage: While high-performance blenders with tampers work wonderfully, a wide-bowl food processor with sharp S-blades often whips frozen banana nice cream faster without creating air pockets, resulting in a denser, Italian gelato-like mouthfeel.",
+      "Halal Confectionery Purity: Many commercial ice creams and sorbets use gelatin as a stabilizer, non-halal mono- and diglycerides for aeration, or carmine (E120, derived from cochineal insects) for pink food coloring. This recipe relies 100% on whole botanical plants and natural fruit pectins, guaranteeing pristine Halal purity and allergen safety.",
+    ],
+    nutrition: {
+      calories: 135,
+      proteinGrams: 2,
+      carbsGrams: 32,
+      fatGrams: 1,
+      fiberGrams: 5,
+      sodiumMg: 25,
+      servingSizeDescription: "1 large sundae glass (approx. 180g / 6.5 oz)",
+    },
+    storageInstructions:
+      "Best enjoyed immediately after assembling for the contrast of velvety soft-serve textures. Leftover nice cream sorbet can be kept in an airtight freezer-safe glass container with a layer of parchment paper pressed against the surface for up to 2 weeks. Thaw on the kitchen counter for 8-10 minutes before scooping.",
+    freezingInstructions:
+      "Spoon excess sorbet into popsicle molds or silicone popsicle trays with wooden sticks for stunning two-tone dragon fruit banana creamsicles that kids and adults will adore.",
+    servingSuggestions: [
+      "Layer in tall parfait glasses with toasted coconut granola and chia pudding for an artisan tropical breakfast sundae.",
+      "Serve as a refreshing, palate-cleansing post-Iftar or Eid celebration dessert following rich biryanis and kebabs.",
+      "Drizzle with a teaspoon of warm dark chocolate tahini drizzle or passion fruit coulis for extra gourmet contrast.",
+    ],
+    faqs: [
+      {
+        question: "Can I use white dragon fruit instead of pink/red dragon fruit?",
+        answer:
+          "Yes, white dragon fruit tastes slightly milder and will yield an elegant pastel pearly-white sorbet. However, for the signature electric fuchsia pink shown in the recipe photo, red or magenta-fleshed pitaya is essential.",
+      },
+      {
+        question: "Why does my blender struggle to process the frozen fruit?",
+        answer:
+          "Frozen bananas and pitaya are very dense. Allow the frozen fruit chunks to sit at room temperature for 3 to 5 minutes to slightly temper before blending, use the blender tamper actively, or add 1 additional tablespoon of coconut water to help catch the blade.",
+      },
+      {
+        question: "Is this sorbet suitable for diabetics and clean-eating lifestyles?",
+        answer:
+          "Yes! The sweetness comes primarily from whole fruits bound with natural fiber, which slows glucose absorption compared to processed sugars. You can omit the maple syrup entirely as ripe bananas provide generous sweetness.",
+      },
+      {
+        question: "Is carmine or artificial food coloring used to get this vibrant pink shade?",
+        answer:
+          "Never! The striking magenta shade is 100% natural, produced entirely by the betacyanin pigments naturally synthesized by fresh red dragon fruit.",
+      },
+    ],
+    author: {
+      name: "Chef Bodiul Alam",
+      role: "Culinary Director & Halal Nutrition Specialist",
+    },
+    updatedDate: "September 24, 2026",
+    tags: [
+      "Dragon Fruit Sorbet",
+      "Banana Nice Cream",
+      "Halal Desserts",
+      "Superfood Nice Cream",
+      "Pitaya Bowl",
+      "Dairy Free Ice Cream",
+      "Vegan Sorbet",
+      "Plant Based Dessert",
+      "Antioxidant Rich",
+      "No Added Sugar",
+      "Naturally Gluten Free",
+      "Summer Dessert",
+      "Clean Nutrition",
+    ],
+    whySpecial:
+      "An electric-pink superfood sundae pairing betacyanin-dense pitaya with creamy banana nice cream, fanned strawberries, and clean tropical purity. 100% dairy-free, vegan, and Halal.",
+    cookingTips: [
+      "Chill your dessert glasses in the freezer for 15 minutes before assembling so the nice cream sorbet doesn't melt upon contact with the glass.",
+      "Slice strawberries with a sharp paring knife so they fan out cleanly and cling to the edge of the glass.",
+      "For the white banana nice cream layer, use bananas with minimal browning on the pulp to keep the color contrast striking against the magenta base.",
+    ],
+    commonMistakes: [
+      "Adding too much liquid; nice cream should have the consistency of soft-serve gelato, not a drinkable smoothie.",
+      "Using unripened green bananas, which will make the nice cream chalky and starchy rather than sweet and velvety.",
+      "Using white dragon fruit and expecting the neon magenta color—always check the package says 'Red Pitaya' or 'Red Dragon Fruit'.",
+    ],
+    relatedRecipeSlugs: [
+      "anti-inflammatory-turmeric-smoothie",
+      "velvety-blueberry-banana-fruit-sorbet",
+      "anti-inflammatory-lemon-blueberry-smoothie",
+      "electric-blue-spirulina-superfood-juice",
+      "royal-mango-lassi",
+    ],
+    seoTitle:
+      "Vibrant Dragon Fruit & Banana Superfood Nice Cream Sorbet Recipe | Noakhali Kitchen",
+    seoDescription:
+      "Electric-pink Dragon Fruit & Banana Superfood Nice Cream Sorbet recipe. Red pitaya, frozen bananas, strawberries, and vanilla. 100% dairy-free, vegan, and Halal.",
+  },
+  {
+    id: "rec-anti-inflammatory-turmeric-smoothie",
+    slug: "anti-inflammatory-turmeric-smoothie",
+    title: "Anti-inflammatory Turmeric Smoothie",
+    category: "Halal Drinks & Beverages",
+    categorySlug: "halal-drinks",
+    cuisine: "Halal Functional Nutrition / Ayurvedic Anti-Inflammatory Elixir",
+    description:
+      "A radiant, liquid-gold anti-inflammatory powerhouse smoothie blending fresh turmeric root, zesty grated ginger, frozen tropical pineapple chunks, ripe banana, creamy coconut milk, chia seeds, and a vital pinch of black pepper piperine. 100% Halal, naturally vegan, dairy-free, and meticulously crafted for cellular recovery, joint comfort, and immune vitality.",
+    introStory:
+      "Revered across centuries of South Asian Ayurvedic wisdom as 'Haldi Doodh' (golden milk), turmeric has long been celebrated as nature's most formidable anti-inflammatory root. This Anti-inflammatory Turmeric Smoothie reimagines that timeless healing tradition into an intensely refreshing, silky-smooth tropical elixir designed for modern active lifestyles.\n\nAt the heart of this luminous golden smoothie is the synergy of active functional botanicals. Fresh grated turmeric root (or high-potency organic golden turmeric) delivers pure curcumin—a potent polyphenol known for its ability to regulate inflammatory cytokines. To solve curcumin's natural bioavailability hurdle, this recipe pairs it with freshly cracked black pepper; its active compound piperine inhibits hepatic glucuronidation and elevates curcumin absorption into the bloodstream by up to 2,000%. Furthermore, curcumin is lipophilic (fat-soluble), which is why we blend it with full-bodied, unsweetened coconut milk rich in medium-chain triglycerides (MCTs) to serve as a fast-absorbing lipid transport vehicle.\n\nTo elevate this elixir from a medicinal tonic to an utterly addictive tropical treat, we marry the earthy warmth of turmeric and pungent fresh ginger with frozen sweet pineapple chunks. Pineapple is nature's richest source of bromelain, a proteolytic digestive enzyme that acts in synergy with curcumin to reduce systemic swelling and support gut restoration. Blended with creamy frozen banana coins, fiber-dense chia seeds, warm Ceylon cinnamon, and raw wildflower honey, this smoothie pours with a hypnotic golden glow and a marbled halo of coconut cream. It is 100% Halal, free of refined sugars and dairy, and serves as an invigorating post-workout recovery shake, immunity shield, or revitalizing morning ritual.",
+    heroImage: IMAGES.antiInflammatoryTurmericSmoothie,
+    prepTimeMinutes: 5,
+    cookTimeMinutes: 0,
+    totalTimeMinutes: 5,
+    servings: 2,
+    difficulty: "Easy",
+    calories: 185,
+    rating: 4.98,
+    reviewCount: 74,
+    isTrending: true,
+    isFeatured: true,
+    halalNotes:
+      "100% Halal certified, naturally vegan, gluten-free, and dairy-free. Prepared exclusively with whole raw rhizomes, unadulterated tropical fruits, unrefined plant milks, pure spices, and raw wildflower honey or pure grade-A maple syrup. Completely free from artificial dyes, gelatin, synthetic emulsifiers, and alcohol-extracted additives.",
+    potentialCautionNotes:
+      "Curcumin pigments in fresh turmeric root can temporarily stain porous cutting boards, blender lids, and fingers. Wear culinary gloves when peeling or grating fresh turmeric, and rinse your blender pitcher with warm soapy water immediately after pouring. Always include the specified pinch of black pepper—without piperine, the human gut excretes most curcumin unabsorbed.",
+    ingredients: [
+      { amount: "1.5", unit: "tsp", name: "Fresh organic turmeric root", notes: "peeled and finely grated (or 1 level tsp pure organic ground golden turmeric)" },
+      { amount: "1", unit: "tsp", name: "Fresh ginger root", notes: "peeled and finely grated for digestive warmth and gingerols" },
+      { amount: "1.5", unit: "cups (approx. 225g)", name: "Frozen sweet pineapple chunks", notes: "loaded with bromelain enzyme, vitamin C, and tropical sweetness" },
+      { amount: "1", unit: "medium", name: "Ripe banana (frozen in coins)", notes: "delivers natural pectin, creamy body, and potassium" },
+      { amount: "1", unit: "cup (240ml)", name: "Creamy unsweetened coconut milk", notes: "canned light coconut milk or chilled carton beverage; provides essential MCT fats to dissolve curcumin" },
+      { amount: "1/2", unit: "cup (120ml)", name: "Pure coconut water or unsweetened almond milk", notes: "for refreshing hydration and electrolyte balance" },
+      { amount: "1", unit: "tbsp", name: "Organic black or white chia seeds", notes: "delivers plant-based ALA omega-3s, soluble fiber, and lasting satiety" },
+      { amount: "1/8", unit: "tsp", name: "Freshly cracked black pepper", notes: "contains piperine, scientifically proven to boost curcumin absorption up to 20-fold" },
+      { amount: "1/4", unit: "tsp", name: "Ground Ceylon cinnamon", notes: "warm sweet aroma and natural blood sugar regulation" },
+      { amount: "1.5", unit: "tbsp", name: "Raw wildflower honey or pure grade-A maple syrup", notes: "natural unrefined sweetener to balance the ginger-turmeric zest" },
+      { amount: "1/4", unit: "tsp", name: "Pure vanilla bean paste or extract", notes: "alcohol-free, rounds out the tropical creaminess" },
+      { amount: "2", unit: "tbsp", name: "Full-fat coconut cream & toasted coconut flakes", notes: "for marble drizzle, crunch, and visual presentation" },
+    ],
+    substitutions: [
+      {
+        original: "Frozen pineapple chunks",
+        substitute: "Frozen sweet Alphonso mango chunks or yellow peaches",
+        notes: "Maintains intense golden sunburst color and tropical sweetness.",
+      },
+      {
+        original: "Coconut milk",
+        substitute: "Unsweetened oat milk or cashew milk + 1 tsp virgin coconut oil",
+        notes: "Ensures the essential dietary lipid carrier needed for curcumin absorption.",
+      },
+      {
+        original: "Frozen banana",
+        substitute: "1/4 ripe Haas avocado + 1 extra tbsp pure maple syrup",
+        notes: "Creates a low-sugar, keto-friendly velvety texture without banana flavor.",
+      },
+      {
+        original: "Fresh turmeric root",
+        substitute: "High-curcumin organic ground turmeric powder (1 level tsp)",
+        notes: "Convenient pantry staple with identical bioactive anti-inflammatory value.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Prep the Healing Rhizomes & Base Liquids",
+        instruction:
+          "Peel the fresh turmeric root and fresh ginger root with the edge of a small spoon or peeler. Grate finely using a microplane rasp. Pour the chilled coconut milk and coconut water into the blender pitcher first to ensure smooth blade circulation.",
+        tip: "Layering liquids closest to the blender blade creates a high-vortex suction that prevents motor stalling.",
+      },
+      {
+        step: 2,
+        title: "Layer Bioactive Spices & Lipid Enhancers",
+        instruction:
+          "Add the grated turmeric, grated ginger, chia seeds, freshly cracked black pepper, ground Ceylon cinnamon, raw honey (or maple syrup), and vanilla bean paste directly into the liquid base.",
+        tip: "Never omit the black pepper; its piperine compound is clinically proven to elevate curcumin bioavailability by up to 2,000%.",
+      },
+      {
+        step: 3,
+        title: "Add Frozen Tropical Fruit",
+        instruction:
+          "Layer the frozen pineapple chunks and frozen banana coins evenly on top of the spiced liquid base.",
+      },
+      {
+        step: 4,
+        title: "High-Speed Emulsification & Micro-Shear",
+        instruction:
+          "Secure the lid tightly. Pulse 5 times to fracture the frozen fruit chunks, then blend on high speed for 60 to 75 seconds until the mixture transforms into a radiant, glossy, thick liquid-gold smoothie with no visible fibers or sediment.",
+        tip: "If a thicker, frost-rimmed smoothie bowl texture is desired, reduce coconut water by 2 tablespoons.",
+      },
+      {
+        step: 5,
+        title: "Marble Swirl & Artisan Presentation",
+        instruction:
+          "Take two chilled tall glass mason jars or tumblers. Spoon 1 tablespoon of rich coconut cream down the inner walls of each glass to create an artisan marbled effect. Pour the golden smoothie into the glasses. Crown with toasted coconut flakes, a pinch of chia seeds, and a delicate dusting of golden turmeric on top. Serve immediately with a glass straw.",
+      },
+    ],
+    chefNotes: [
+      "The Curcumin-Piperine Synergistic Matrix: Curcumin in turmeric has exceptionally low native oral bioavailability because it is rapidly metabolized by the liver and intestinal wall. Piperine from freshly ground black pepper blocks this glucuronidation process, multiplying serum curcumin concentrations by up to 2,000% without altering the smoothie's sweet tropical flavor profile.",
+      "The Bromelain Enzyme Advantage: Pineapple contains high levels of bromelain, a proteolytic enzyme that dismantles circulating immune complexes and reduces inflammatory cytokines. When paired with curcumin and gingerols, it creates a tri-active anti-inflammatory matrix.",
+      "Dietary Fat as Transport Molecule: Curcumin is highly hydrophobic and lipophilic. The medium-chain triglycerides (MCTs) in creamy coconut milk bind to the curcumin molecules, emulsifying them so they can be absorbed through the lymphatic system rather than being excreted.",
+    ],
+    nutrition: {
+      calories: 185,
+      proteinGrams: 3,
+      carbsGrams: 32,
+      fatGrams: 6,
+      fiberGrams: 5,
+      sodiumMg: 28,
+      servingSizeDescription: "1 large tumbler or mason jar (approx. 14 fl oz / 415ml)",
+    },
+    storageInstructions:
+      "Best consumed fresh within 15 to 20 minutes of blending while cold and micro-emulsified. Leftovers can be sealed in an airtight glass mason jar filled to the brim (to limit oxidation) in the refrigerator for up to 24 hours. Shake well before drinking as chia seeds and coconut cream will naturally thicken.",
+    freezingInstructions:
+      "Pour extra smoothie into silicone popsicle molds for golden antioxidant smoothie pops, or freeze in an ice cube tray to blend into future tropical juices and green smoothies.",
+    servingSuggestions: [
+      "Pour into tall chilled mason jars with a marbled swirl of coconut cream, toasted coconut chips, and a golden reusable straw.",
+      "Pour into a chilled ceramic bowl and arrange sliced bananas, fresh pineapple wedges, hemp seeds, and edible flower petals for an artisan superfood breakfast bowl.",
+      "Enjoy 30 to 45 minutes post-workout or during Ramadan Suhoor for prolonged hydration, reduced muscle soreness, and steady energy.",
+    ],
+    faqs: [
+      {
+        question: "Can I taste the black pepper in the smoothie?",
+        answer:
+          "Not at all! The natural sweetness of ripe pineapple, banana, and honey completely envelops the pepper. It tastes like a vibrant, creamy tropical chai shake with no peppery burn.",
+      },
+      {
+        question: "Can I use ground turmeric instead of fresh root?",
+        answer:
+          "Yes! 1 level teaspoon of organic ground turmeric powder equals approximately 1 tablespoon of freshly grated turmeric root. Both deliver potent active curcumin.",
+      },
+      {
+        question: "Is this smoothie suitable for diabetics?",
+        answer:
+          "Yes, you can easily make it low-glycemic by swapping the banana for 1/4 ripe avocado and using liquid monk fruit or pure stevia instead of honey. The Ceylon cinnamon naturally promotes healthy blood glucose levels.",
+      },
+      {
+        question: "Why should I use coconut milk instead of water?",
+        answer:
+          "Curcumin is fat-soluble. The healthy fatty acids in coconut milk act as essential transport carriers so your digestive system can absorb the curcumin into your bloodstream.",
+      },
+    ],
+    author: {
+      name: "Chef Bodiul Alam",
+      role: "Culinary Director & Halal Nutrition Specialist",
+    },
+    updatedDate: "September 24, 2026",
+    tags: [
+      "Turmeric Smoothie",
+      "Anti-inflammatory Smoothie",
+      "Halal Drinks",
+      "Golden Milk Smoothie",
+      "Vegan Smoothie",
+      "Superfood Elixir",
+      "Pineapple Ginger Smoothie",
+      "Immune Boost",
+      "Clean Nutrition",
+    ],
+    whySpecial:
+      "A liquid-gold wellness elixir engineered with fresh turmeric, ginger, bromelain-rich pineapple, and piperine-boosted curcumin in creamy coconut milk. 100% Halal, vegan, and intensely anti-inflammatory.",
+    cookingTips: [
+      "Rinse your blender pitcher immediately with warm water and soap after blending to avoid temporary golden staining from raw turmeric pigments.",
+      "Use ripe frozen pineapple and banana rather than room-temperature fruit so the smoothie achieves a frosty, milkshake-thick consistency without dilution.",
+      "Never omit the pinch of black pepper; piperine is scientifically proven to boost curcumin absorption by up to 2,000%.",
+    ],
+    commonMistakes: [
+      "Omitting the black pepper or using non-fat liquid without dietary lipids, which leaves the curcumin largely unabsorbed by the digestive system.",
+      "Using unripe green pineapple which adds excessive acidity and a sharp stinging bite rather than lush tropical sweetness.",
+      "Adding ice cubes instead of frozen fruit, which waters down the rich golden creaminess and flavor balance.",
+    ],
+    relatedRecipeSlugs: [
+      "avocado-pineapple-smoothie",
+      "anti-inflammatory-lemon-blueberry-smoothie",
+      "ginger-berry-anti-inflammatory-smoothie",
+      "electric-blue-spirulina-superfood-juice",
+      "velvety-blueberry-banana-fruit-sorbet",
+      "royal-mango-lassi",
+    ],
+    seoTitle:
+      "Anti-inflammatory Turmeric Smoothie Recipe | Noakhali Kitchen",
+    seoDescription:
+      "Velvety Golden Anti-inflammatory Turmeric Smoothie recipe. Fresh turmeric, ginger, frozen pineapple, banana, coconut milk, and piperine. 100% Halal and vegan.",
+  },
+  {
+    id: "rec-avocado-pineapple-smoothie",
+    slug: "avocado-pineapple-smoothie",
+    title: "Avocado Pineapple Smoothie",
+    category: "Halal Drinks & Beverages",
+    categorySlug: "halal-drinks",
+    cuisine: "Tropical Wellness / Halal Functional Nutrition",
+    description:
+      "An ultra-creamy, vibrant emerald tropical smoothie marrying ripe buttery Hass avocado, sweet tangy frozen golden pineapple, baby spinach, hydrating pure coconut water, fresh lime, and raw wildflower honey. 100% Halal, naturally dairy-free, vegan, and loaded with heart-healthy monounsaturated fats, revitalizing bromelain enzymes, and sustained cellular energy.",
+    introStory:
+      "The union of lush Hass avocado and tangy frozen golden pineapple represents one of the culinary world's most decadent yet functional partnerships. While conventional smoothies rely on heavy dairy cream, processed yogurts, or excess frozen bananas for thickness, ripe avocado provides an extraordinarily velvety, custard-like emulsion powered entirely by heart-healthy monounsaturated fatty acids—chiefly oleic acid.\n\nFrom a biochemical nutrition standpoint, this tropical elixir delivers unparalleled functional benefits. Fresh golden pineapple provides an abundance of bromelain, a renowned proteolytic enzyme complex that assists in breaking down proteins, alleviating digestive discomfort, and combating exercise-induced inflammation. When paired with the bioavailable dietary lipids of avocado, fat-soluble vitamins (such as Vitamin A, Vitamin E, and Vitamin K found abundantly in the blended organic baby spinach) enjoy drastically heightened intestinal absorption.\n\nTo balance the rich, buttery mouthfeel of the avocado, we incorporate a crisp splash of freshly squeezed lime juice. Beyond providing a vibrant tropical brightness that cuts through richness, the citric acid and Vitamin C in lime juice act as a natural enzymatic antioxidant barrier, neutralizing polyphenol oxidases and preserving the smoothie’s luminous emerald-green hue. Blended with potassium-rich chilled coconut water, fiber-dense chia seeds, and raw honey (or pure maple syrup), this 100% Halal creation serves as an invigorating breakfast shake, pre-workout energizer, or replenishing afternoon refresher.",
+    heroImage: IMAGES.avocadoPineappleSmoothie,
+    prepTimeMinutes: 5,
+    cookTimeMinutes: 0,
+    totalTimeMinutes: 5,
+    servings: 2,
+    difficulty: "Easy",
+    calories: 210,
+    rating: 4.99,
+    reviewCount: 86,
+    isTrending: true,
+    isFeatured: true,
+    halalNotes:
+      "100% Halal certified, naturally vegan, gluten-free, and dairy-free. Prepared exclusively with fresh unadulterated whole fruits, organic leafy greens, natural cold-pressed juices, pure spices, and raw unpasteurized honey or pure grade-A maple syrup. Free from artificial colors, non-halal emulsifiers, gelatin, and alcohol-extracted preservatives.",
+    potentialCautionNotes:
+      "Choose avocados that yield gently to slight thumb pressure; avoid hard unripened fruit (which will yield a gritty, bitter puree) or overripe bruised fruit with dark brown vascular fibers. Consume promptly or keep airtight under refrigeration with a fresh lime squeeze to maintain peak chlorophyll radiance and antioxidant potency.",
+    ingredients: [
+      { amount: "1", unit: "medium", name: "Ripe Hass avocado", notes: "pitted, peeled, and scooped for rich monounsaturated oleic fats" },
+      { amount: "1.5", unit: "cups (approx. 225g)", name: "Frozen sweet golden pineapple chunks", notes: "provides icy thickness, active bromelain enzyme, and tropical sweetness" },
+      { amount: "1", unit: "cup (240ml)", name: "Pure chilled coconut water", notes: "delivers natural electrolytes, potassium, and light hydration" },
+      { amount: "1/2", unit: "cup (120ml)", name: "Chilled unsweetened coconut milk", notes: "canned light coconut milk or carton beverage for silkiness and healthy MCT lipids" },
+      { amount: "1", unit: "cup packed", name: "Fresh organic baby spinach leaves", notes: "infuses living chlorophyll, folate, and iron without altering the sweet tropical taste" },
+      { amount: "1", unit: "tbsp", name: "Freshly squeezed lime juice", notes: "approx. 1/2 lime; adds citrus zing and prevents enzymatic browning" },
+      { amount: "1.5", unit: "tbsp", name: "Raw wildflower honey or pure grade-A maple syrup", notes: "unrefined natural sweetener to round out tart pineapple" },
+      { amount: "1", unit: "tbsp", name: "Organic chia seeds or raw hemp hearts", notes: "boosts soluble prebiotic fiber and plant-based ALA omega-3s" },
+      { amount: "1/4", unit: "tsp", name: "Pure vanilla bean paste", notes: "alcohol-free; adds an elegant floral dessert note" },
+      { amount: "4", unit: "leaves", name: "Fresh garden mint leaves", notes: "for crisp cooling herbal finish" },
+      { amount: "2", unit: "wedges", name: "Fresh pineapple wedges & lime wheels", notes: "for classic tropical cocktail rim garnish" },
+    ],
+    substitutions: [
+      {
+        original: "Frozen pineapple chunks",
+        substitute: "Frozen sweet Alphonso mango chunks or ripe golden papaya",
+        notes: "Maintains intense tropical sweetness and lush fruit texture.",
+      },
+      {
+        original: "Coconut water",
+        substitute: "Unsweetened almond milk, oat milk, or chilled antioxidant green tea",
+        notes: "Offers a creamier base or subtle herbal tea undertone.",
+      },
+      {
+        original: "Raw wildflower honey",
+        substitute: "Pure grade-A maple syrup or raw agave nectar",
+        notes: "Provides 100% plant-based vegan sweetening.",
+      },
+      {
+        original: "Fresh baby spinach",
+        substitute: "Baby kale leaves (ribs removed) or skip entirely",
+        notes: "Skipping greens produces a delicate pastel-mint custard hue.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Prep Fresh Hass Avocado & Citrus Base",
+        instruction:
+          "Slice the ripe Hass avocado lengthwise around the pit, twist gently to separate halves, remove the pit, and scoop out the buttery green flesh with a spoon. Squeeze the fresh lime juice directly over the avocado flesh to instantly protect against oxidation.",
+        tip: "A perfectly ripe avocado yields slightly to gentle thumb pressure near the stem without feeling mushy.",
+      },
+      {
+        step: 2,
+        title: "Layer Chilled Hydration Liquids",
+        instruction:
+          "Pour the chilled coconut water, unsweetened coconut milk, and fresh lime juice into the base of the blender pitcher first.",
+        tip: "Starting with liquids allows the blender blades to spin freely without cavitation or motor strain.",
+      },
+      {
+        step: 3,
+        title: "Add Bioactive Greens & Natural Aromatics",
+        instruction:
+          "Add the packed fresh baby spinach leaves, raw wildflower honey (or pure maple syrup), chia seeds, vanilla bean paste, and fresh mint leaves directly onto the liquid layer.",
+      },
+      {
+        step: 4,
+        title: "Top with Avocado & Frozen Golden Pineapple",
+        instruction:
+          "Place the scooped avocado flesh and frozen pineapple chunks on top of the greens, weighting down the leafy greens toward the blade.",
+      },
+      {
+        step: 5,
+        title: "High-Speed Micro-Emulsification",
+        instruction:
+          "Secure the blender lid firmly. Pulse 5 times to crush the frozen fruit chunks, then blend on high speed for 60 to 75 seconds until the mixture transforms into a velvety, thick, glossy emerald elixir with absolutely no visible leafy specks.",
+        tip: "If you desire a thicker smoothie bowl consistency, reduce the coconut water to 3/4 cup.",
+      },
+      {
+        step: 6,
+        title: "Garnish & Serve Frosty",
+        instruction:
+          "Pour into two chilled tall ribbed tumblers or hurricane glasses. Slit a golden pineapple wedge and a fresh lime wheel and place them onto the rim of each glass. Crown with a fresh mint sprig and serve immediately with glass or bamboo straws.",
+      },
+    ],
+    chefNotes: [
+      "The Oleic Acid Silk Technique: Unlike dairy milk fats that can feel heavy in the stomach, the monounsaturated oleic fats in ripe Hass avocados naturally suspend and micro-emulsify the water content of pineapple and coconut water, creating a texture remarkably akin to melted gelato.",
+      "Bromelain & Lipid Bioavailability: Carotenoids (lutein and zeaxanthin) and fat-soluble vitamins (A, E, K) in leafy greens and avocado require dietary lipids for micellar incorporation in the small intestine. The healthy lipids in avocado boost carotenoid absorption by up to 400% compared to fat-free green smoothies.",
+      "Citric Acid Enzymatic Inhibition: Polyphenol oxidase enzymes present in avocado cause rapid browning upon air contact. Fresh lime juice lowers the pH below the enzyme's active threshold while adding natural ascorbic acid, preserving the radiant green hue for hours.",
+    ],
+    nutrition: {
+      calories: 210,
+      proteinGrams: 3.5,
+      carbsGrams: 28,
+      fatGrams: 11,
+      fiberGrams: 7,
+      sodiumMg: 35,
+      servingSizeDescription: "1 tall glass (approx. 14 fl oz / 415ml)",
+    },
+    storageInstructions:
+      "Best enjoyed fresh immediately after blending to experience peak frosty micro-emulsion. Remaining smoothie can be stored in an airtight glass mason jar filled right to the rim (minimizing air pocket) in the refrigerator for up to 24 hours. A slight squeeze of extra lime juice on top will preserve its gorgeous green color.",
+    freezingInstructions:
+      "Pour into silicone popsicle molds with a wooden stick for creamy, tropical Halal avocado-pineapple freezer pops. Alternatively, freeze in large silicone ice cube trays and blend with coconut water later for instant 60-second smoothies.",
+    servingSuggestions: [
+      "Serve in chilled tall ribbed glasses garnished with a golden pineapple wedge, lime slice, and a dusting of chia seeds.",
+      "Pour into a coconut bowl and crown with fresh kiwi slices, passion fruit pulp, toasted coconut flakes, and hemp seeds for a luxurious tropical smoothie bowl.",
+      "Perfect as a revitalizing Ramadan Iftar starter, post-gym electrolyte replenisher, or nutrient-dense morning breakfast.",
+    ],
+    faqs: [
+      {
+        question: "Can you taste the avocado in the smoothie?",
+        answer:
+          "The avocado flavor is wonderfully subtle! The ripe frozen pineapple and fresh lime dominate the taste profile with sweet tropical citrus notes, while the avocado simply contributes an unbelievable milkshake-like creaminess without needing heavy cream or ice cream.",
+      },
+      {
+        question: "Can I use fresh pineapple instead of frozen?",
+        answer:
+          "Yes, though using fresh pineapple will produce a thinner beverage. To keep the frosty, velvety milkshake consistency, add 1 cup of clean ice cubes or freeze fresh pineapple chunks on a parchment-lined tray for 2 hours beforehand.",
+      },
+      {
+        question: "Is this smoothie suitable for keto or low-carb diets?",
+        answer:
+          "To lower carbs, reduce pineapple to 3/4 cup, increase avocado to 1 whole fruit, and swap the honey for liquid monk fruit or pure stevia drops.",
+      },
+      {
+        question: "Why add fresh spinach if it's an avocado smoothie?",
+        answer:
+          "Baby spinach adds a boost of iron, chlorophyll, and vitamins without altering the sweet pineapple flavor, giving the smoothie its vibrant, glowing emerald-green appearance.",
+      },
+    ],
+    author: {
+      name: "Chef Bodiul Alam",
+      role: "Culinary Director & Halal Nutrition Specialist",
+    },
+    updatedDate: "September 24, 2026",
+    tags: [
+      "Avocado Pineapple Smoothie",
+      "Avocado Smoothie",
+      "Tropical Smoothie",
+      "Halal Drinks",
+      "Green Smoothie",
+      "Dairy-Free Smoothie",
+      "Vegan Smoothie",
+      "Bromelain Digestive Health",
+      "Heart Healthy Fats",
+      "Clean Nutrition",
+    ],
+    whySpecial:
+      "A velvety tropical masterpiece combining creamy nutrient-dense Hass avocado and sweet frozen golden pineapple with hydrating coconut water and a zing of fresh lime. 100% Halal, dairy-free, and rich in heart-healthy oleic fats and digestive bromelain.",
+    cookingTips: [
+      "Use ripe Hass avocados that yield gently to slight pressure; hard avocados won't blend smoothly and lack the necessary silky monounsaturated fats.",
+      "Layer liquids first and frozen fruit last to avoid air pockets around the blender blade.",
+      "Add a squeeze of fresh lime juice immediately to lock in the vibrant emerald green color and prevent oxidation.",
+    ],
+    commonMistakes: [
+      "Using underripe, rock-hard avocados which results in a watery, fibrous texture and a bitter vegetal aftertaste.",
+      "Skipping the citrus (lime juice), which leads to rapid enzymatic oxidation and a dull brownish discoloration.",
+      "Adding too much extra liquid upfront, resulting in a thin juice instead of a thick, luxurious dessert-like smoothie.",
+    ],
+    relatedRecipeSlugs: [
+      "anti-inflammatory-turmeric-smoothie",
+      "anti-inflammatory-lemon-blueberry-smoothie",
+      "ginger-berry-anti-inflammatory-smoothie",
+      "electric-blue-spirulina-superfood-juice",
+      "royal-mango-lassi",
+      "velvety-blueberry-banana-fruit-sorbet",
+    ],
+    seoTitle:
+      "Avocado Pineapple Smoothie Recipe | Noakhali Kitchen",
+    seoDescription:
+      "Ultra-creamy Avocado Pineapple Smoothie recipe. Ripe Hass avocado, frozen golden pineapple, baby spinach, coconut water, lime, and chia seeds. 100% Halal, vegan & dairy-free.",
+  },
 ];
 
 export const RECIPES: Recipe[] = enhanceRecipesWithCornerstones(BASE_RECIPES);

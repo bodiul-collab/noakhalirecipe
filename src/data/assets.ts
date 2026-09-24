@@ -139,6 +139,13 @@ import beefNihariImg from "../assets/images/beef_nihari_handi_1790173482450.jpg"
 import moroccanLambTagineImg from "../assets/images/moroccan_lamb_tagine_1790173678233.jpg";
 import shrimpGreenBeanStirFryImg from "../assets/images/shrimp_green_bean_stir_fry_1790173863320.jpg";
 import bengaliAlooDumImg from "../assets/images/bengali_aloo_dum_1790174068470.jpg";
+import gingerBerrySmoothieImg from "../assets/images/ginger_berry_smoothie_1790259772824.jpg";
+import blueberryBananaSorbetImg from "../assets/images/blueberry_banana_sorbet_1790260126021.jpg";
+import blueSpirulinaJuiceImg from "../assets/images/blue_spirulina_juice_1790260417062.jpg";
+import lemonBlueberrySmoothieImg from "../assets/images/lemon_blueberry_smoothie_1790260617121.jpg";
+import dragonfruitBananaSorbetImg from "../assets/images/dragonfruit_banana_sorbet_1790260918870.jpg";
+import turmericSmoothieImg from "../assets/images/turmeric_smoothie_1790261102166.jpg";
+import avocadoPineappleSmoothieImg from "../assets/images/avocado_pineapple_smoothie_1790261454054.jpg";
 import noakhaliLogoFullImg from "../assets/images/noakhali_kitchen_logo_1789072776240.jpg";
 import noakhaliLogoIconImg from "../assets/images/noakhali_kitchen_logo_1789072776240.jpg";
 
@@ -397,6 +404,28 @@ export const IMAGES = {
   bengaliAlooDum: bengaliAlooDumImg,
   alooDum: bengaliAlooDumImg,
   alurDom: bengaliAlooDumImg,
+  gingerBerrySmoothie: gingerBerrySmoothieImg,
+  gingerBerryAntiInflammatorySmoothie: gingerBerrySmoothieImg,
+  antiInflammatorySmoothie: gingerBerrySmoothieImg,
+  blueberryBananaSorbet: blueberryBananaSorbetImg,
+  velvetyBlueberryBananaFruitSorbet: blueberryBananaSorbetImg,
+  blueberrySorbet: blueberryBananaSorbetImg,
+  blueSpirulinaJuice: blueSpirulinaJuiceImg,
+  electricBlueSpirulinaSuperfoodJuice: blueSpirulinaJuiceImg,
+  blueSpirulinaElixir: blueSpirulinaJuiceImg,
+  lemonBlueberrySmoothie: lemonBlueberrySmoothieImg,
+  antiInflammatoryLemonBlueberrySmoothie: lemonBlueberrySmoothieImg,
+  lemonBlueberry: lemonBlueberrySmoothieImg,
+  dragonfruitBananaSorbet: dragonfruitBananaSorbetImg,
+  vibrantDragonFruitBananaSuperfoodNiceCreamSorbet: dragonfruitBananaSorbetImg,
+  dragonFruitSorbet: dragonfruitBananaSorbetImg,
+  pitayaSorbet: dragonfruitBananaSorbetImg,
+  turmericSmoothie: turmericSmoothieImg,
+  antiInflammatoryTurmericSmoothie: turmericSmoothieImg,
+  goldenTurmericSmoothie: turmericSmoothieImg,
+  avocadoPineappleSmoothie: avocadoPineappleSmoothieImg,
+  avocadoSmoothie: avocadoPineappleSmoothieImg,
+  pineappleAvocadoSmoothie: avocadoPineappleSmoothieImg,
   logoFull: noakhaliLogoFullImg,
   logoIcon: noakhaliLogoIconImg,
 };
