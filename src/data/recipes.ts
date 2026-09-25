@@ -20567,6 +20567,7 @@ const BASE_RECIPES: Recipe[] = [
       "Adding too much extra liquid upfront, resulting in a thin juice instead of a thick, luxurious dessert-like smoothie.",
     ],
     relatedRecipeSlugs: [
+      "cold-pressed-pina-colada-mocktail",
       "anti-inflammatory-turmeric-smoothie",
       "anti-inflammatory-lemon-blueberry-smoothie",
       "ginger-berry-anti-inflammatory-smoothie",
@@ -20578,6 +20579,962 @@ const BASE_RECIPES: Recipe[] = [
       "Avocado Pineapple Smoothie Recipe | Noakhali Kitchen",
     seoDescription:
       "Ultra-creamy Avocado Pineapple Smoothie recipe. Ripe Hass avocado, frozen golden pineapple, baby spinach, coconut water, lime, and chia seeds. 100% Halal, vegan & dairy-free.",
+  },
+  {
+    id: "rec-cold-pressed-pina-colada-mocktail",
+    slug: "cold-pressed-pina-colada-mocktail",
+    title: "Cold-Pressed Piña Colada Mocktail (Pineapple & Fresh Coconut Milk)",
+    category: "Halal Drinks & Beverages",
+    categorySlug: "halal-drinks",
+    cuisine: "Caribbean Tropical / Halal Artisanal Mocktail",
+    description:
+      "A frosty, artisanal tropical mocktail handcrafted with freshly extracted cold-pressed golden pineapple juice, rich fresh coconut milk, muddled garden mint, tangy lime juice, and a touch of raw organic agave nectar, poured over glistening crushed pebble ice. Crowned with a ripe caramelized pineapple wedge, fragrant mint bouquet, and fresh lime wheel. 100% Halal, alcohol-free, dairy-free, and vegan.",
+    introStory:
+      "The classic Piña Colada is universally celebrated as the quintessential symbol of sun-drenched island tranquility. Yet for mindful and Halal diners, commercial restaurant renditions often fall disappointingly short—frequently laden with artificial syrupy drink mixes, synthetic flavorings, hidden alcohol carriers, or cloying amounts of refined high-fructose corn syrup.\n\nOur Cold-Pressed Piña Colada Mocktail (Pineapple & Fresh Coconut Milk) reclaims this tropical legend into an elevated, 100% Halal gourmet experience. We build this drink around the unadorned purity of raw, cold-pressed golden pineapple juice. Unlike heat-pasteurized or canned juices that lose their lively aromatic terpenes and active bromelain digestive enzymes, cold-pressed pineapple preserves an electric balance of floral acidity and honeyed tropical sweetness.\n\nTo complement the fruit's brightness, we fold in velvety, freshly pressed coconut milk and pure coconut water. The natural medium-chain triglycerides (MCTs) in fresh coconut create a silky, micro-foaming head when shaken vigorously over ice, creating a creamy mouthfeel that mimics a luxurious cocktail without a single droplet of dairy or processed fat. A gentle muddle of garden mint leaves and a crisp squeeze of fresh lime juice cut through the coconut richness, while a whisper of unrefined agave nectar rounds out the tartness.\n\nServed in a tall, frosty hurricane glass overflowing with crushed nugget ice and garnished with a fragrant mint bouquet, citrus wheel, and golden pineapple slice, this virgin tiki creation delivers sheer tropical bliss for Eid celebrations, summer family garden parties, or refreshing post-fasting Ramadan Iftars.",
+    heroImage: IMAGES.pinaColadaMocktail,
+    prepTimeMinutes: 8,
+    cookTimeMinutes: 0,
+    totalTimeMinutes: 8,
+    servings: 2,
+    difficulty: "Easy",
+    calories: 165,
+    rating: 4.99,
+    reviewCount: 94,
+    isTrending: true,
+    isFeatured: true,
+    halalNotes:
+      "100% Halal certified and strictly alcohol-free (zero rum, zero cooking wines, zero alcohol-based extract carriers). Formulated exclusively with whole cold-pressed fruits, raw plant milk, fresh garden herbs, and unrefined natural plant sweeteners. Completely free from animal gelatin, synthetic coloring, and non-halal emulsifiers.",
+    potentialCautionNotes:
+      "Use fresh or cold-pressed unpasteurized 100% pure pineapple juice. Avoid shelf-stable canned 'cream of coconut' (such as Coco Lopez), which contains up to 50 grams of added refined sugar per serving, artificial preservatives, and thickeners. Shake vigorously with large ice cubes before pouring over crushed ice to achieve the signature creamy froth.",
+    ingredients: [
+      { amount: "1.5", unit: "cups (360ml)", name: "Fresh cold-pressed golden pineapple juice", notes: "chilled, unpasteurized and extracted from ripe sweet pineapples" },
+      { amount: "3/4", unit: "cup (180ml)", name: "Fresh rich coconut milk", notes: "pure culinary coconut milk or freshly grated & pressed coconut cream" },
+      { amount: "1/4", unit: "cup (60ml)", name: "Pure chilled coconut water", notes: "adds natural potassium electrolytes and lightens the mouthfeel" },
+      { amount: "2", unit: "tbsp", name: "Freshly squeezed lime juice", notes: "approx. 1 juicy lime; essential to balance rich coconut fats" },
+      { amount: "1.5", unit: "tbsp", name: "Organic raw blue agave nectar or wildflower honey", notes: "adjust depending on the natural sweetness of your pineapple" },
+      { amount: "8 to 10", unit: "leaves", name: "Fresh garden mint leaves", notes: "clapped between hands to awaken refreshing aromatic menthol oils" },
+      { amount: "1/4", unit: "tsp", name: "Alcohol-free pure coconut or vanilla extract", notes: "optional; enhances tropical aromatics" },
+      { amount: "1", unit: "tiny pinch", name: "Flaky sea salt or pink Himalayan salt", notes: "amplifies the sweet pineapple profile and rounds bitterness" },
+      { amount: "3", unit: "cups", name: "Crushed pebble or nugget ice", notes: "for chilling glasses and maintaining frosty tiki presentation" },
+      { amount: "2", unit: "wedges", name: "Fresh golden pineapple slices", notes: "with green rind/fronds intact for striking cocktail rim garnish" },
+      { amount: "2", unit: "wheels", name: "Fresh lime wheels", notes: "for citrus rim garnish" },
+      { amount: "2", unit: "sprigs", name: "Fragrant fresh mint bouquets", notes: "spanked gently to release aromatics before placing on top" },
+    ],
+    substitutions: [
+      {
+        original: "Fresh cold-pressed pineapple juice",
+        substitute: "Fresh whole pineapple chunks blended smoothly and strained through a fine-mesh sieve",
+        notes: "Produces fresh unheated juice with all natural enzymes intact.",
+      },
+      {
+        original: "Fresh coconut milk",
+        substitute: "Canned full-fat coconut milk shaken well, or creamy barista-blend oat milk",
+        notes: "Ensures rich, decadent texture without dairy.",
+      },
+      {
+        original: "Organic raw blue agave nectar",
+        substitute: "Pure grade-A maple syrup, raw unpasteurized honey, or date syrup",
+        notes: "Keeps the drink naturally sweetened and Halal.",
+      },
+      {
+        original: "Fresh lime juice",
+        substitute: "Fresh calamansi or Key lime juice",
+        notes: "Provides an aromatic, floral citrus tartness.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Pack Glasses with Crushed Pebble Ice",
+        instruction:
+          "Take two tall hurricane glasses, highball glasses, or tiki mugs and pack them to the rim with chilled crushed pebble ice. Place the glasses in the freezer to keep them intensely frosty while mixing the drink.",
+        tip: "Using crushed pebble ice rather than standard cubed ice increases surface area, chilling the mocktail rapidly without over-diluting it.",
+      },
+      {
+        step: 2,
+        title: "Awaken Fresh Mint & Aromatics",
+        instruction:
+          "Place the fresh mint leaves into the base of a cocktail shaker or wide pitcher. Add the freshly squeezed lime juice and organic blue agave nectar. Use a wooden muddler to gently press the mint leaves 3 to 4 times to express their natural aromatic oils without pulverizing the leaves.",
+        tip: "Avoid over-muddling into shreds, which releases bitter green chlorophyll tannins.",
+      },
+      {
+        step: 3,
+        title: "Add Cold-Pressed Juices & Coconut Milk",
+        instruction:
+          "Pour the chilled cold-pressed golden pineapple juice, fresh rich coconut milk, chilled pure coconut water, alcohol-free vanilla/coconut extract (if using), and a micro-pinch of pink salt into the shaker.",
+      },
+      {
+        step: 4,
+        title: "Vigorous Ice Shake for Micro-Froth",
+        instruction:
+          "Fill the cocktail shaker with 4 to 5 large solid ice cubes. Secure the lid tightly and shake vigorously with enthusiasm for 15 to 20 seconds until the exterior of the shaker develops a thick frost and the coconut milk emulsifies into a creamy, foamy froth.",
+        tip: "Shaking with large cubes creates velvety micro-foam before pouring onto the pebble ice.",
+      },
+      {
+        step: 5,
+        title: "Double Strain Over Frosty Pebble Ice",
+        instruction:
+          "Retrieve the chilled glasses from the freezer. Using a Hawthorne strainer and a fine-mesh conical sieve (to catch any tiny mint specks), strain the golden creamy mocktail evenly over the crushed pebble ice in both glasses, letting the rich coconut foam crown the top.",
+      },
+      {
+        step: 6,
+        title: "Garnish with Tropical Elegance & Serve",
+        instruction:
+          "Cut a small notch in the fresh pineapple wedges and lime wheels, perching them gracefully onto the rims of the glasses. Gently slap the mint bouquets against the back of your hand to release their intoxicating fragrance, then nestle them into the crushed ice alongside bamboo or glass straws. Serve immediately while frosty!",
+      },
+    ],
+    chefNotes: [
+      "The Science of Cold-Pressed Pineapple: Cold-pressing extracts juice through high-pressure mastication rather than fast-spinning centrifugal blades that generate heat. This preserves the delicate volatile esters responsible for fresh pineapple aroma and protects heat-sensitive bromelain enzymes.",
+      "Natural Lipid Micro-Foaming: The rich medium-chain triglycerides (lauric, caprylic, and capric acids) in fresh coconut milk act as natural surfactants. When shaken rapidly against ice, these fats entrap tiny air micro-bubbles, yielding a creamy velvety foam layer that looks and tastes like a master mixologist's creation.",
+      "The Saline Secret: A microscopic pinch of mineral sea salt enhances sweetness perception on the palate, subduing any astringent vegetal notes in the fresh fruit and rounding out the acidity of the lime juice.",
+    ],
+    nutrition: {
+      calories: 165,
+      proteinGrams: 1.8,
+      carbsGrams: 24,
+      fatGrams: 7.5,
+      fiberGrams: 1.5,
+      sodiumMg: 25,
+      servingSizeDescription: "1 tall glass (approx. 14 fl oz / 415ml with crushed ice)",
+    },
+    storageInstructions:
+      "Best enjoyed immediately when freshly shaken and frosty. If preparing ahead for a party or dinner gathering, mix the cold-pressed pineapple juice, coconut milk, coconut water, lime juice, and agave in a glass pitcher without ice. Store tightly sealed in the refrigerator for up to 24 hours. Shake with ice just before serving.",
+    freezingInstructions:
+      "Freeze any leftover mixture in silicone popsicle molds for decadent, alcohol-free Virgin Piña Colada gourmet paletas, or freeze in ice cube trays and blend in a high-speed blender for a frozen Piña Colada slushy.",
+    servingSuggestions: [
+      "Serve in frosted hurricane or ribbed glassware with reusable glass straws alongside festive Halal barbecues, tandoori grilled skewers, or Caribbean jerk chicken.",
+      "Crown with a splash of sparkling non-alcoholic ginger beer or club soda for an effervescent sparkling Piña Colada twist.",
+      "Ideal centerpiece mocktail for Ramadan Iftar tables, summer beach picnics, and Eid celebrations.",
+    ],
+    faqs: [
+      {
+        question: "Is this Piña Colada mocktail 100% Halal and alcohol-free?",
+        answer:
+          "Yes, completely! Traditional Piña Coladas contain rum and commercial mixes sometimes use alcohol as a flavor solvent. Our recipe contains 0.0% alcohol, using only pure cold-pressed pineapple juice, fresh raw coconut milk, citrus, mint, and natural agave.",
+      },
+      {
+        question: "What is the difference between canned cream of coconut and fresh coconut milk?",
+        answer:
+          "Canned 'cream of coconut' (like Coco Lopez) is heavily sweetened with processed sugar syrups and preservatives, making drinks overly cloying. Using fresh pure culinary coconut milk combined with raw agave allows complete control over sweetness and delivers a far more refined, natural coconut flavor.",
+      },
+      {
+        question: "Can I blend this into a frozen slushy Piña Colada?",
+        answer:
+          "Absolutely! Simply place all the ingredients (including 2 cups of frozen pineapple chunks instead of just juice) into a high-speed blender with 1 cup of ice and blend until smooth, frosty, and thick.",
+      },
+      {
+        question: "Why add fresh mint to a Piña Colada mocktail?",
+        answer:
+          "While traditional coladas don't always feature mint, lightly muddled garden mint provides a crisp, cooling herbal note that elevates the drink from a simple sweet juice to a multi-layered artisanal mocktail.",
+      },
+    ],
+    author: {
+      name: "Chef Bodiul Alam",
+      role: "Culinary Director & Halal Mixology Specialist",
+    },
+    updatedDate: "September 25, 2026",
+    tags: [
+      "Piña Colada Mocktail",
+      "Cold-Pressed Mocktail",
+      "Halal Drinks",
+      "Non-Alcoholic Pina Colada",
+      "Fresh Coconut Milk",
+      "Pineapple Mocktail",
+      "Tropical Drinks",
+      "Halal Mocktails",
+      "Vegan Mocktail",
+      "Dairy-Free Drink",
+      "Summer Mocktail",
+    ],
+    whySpecial:
+      "An artisanal Halal mocktail marrying unpasteurized cold-pressed golden pineapple juice, fresh rich coconut milk, cooling muddled mint, and zesty lime over crushed pebble ice. 100% alcohol-free, dairy-free, and bursting with vibrant tropical sunshine.",
+    cookingTips: [
+      "Always shake vigorously with solid ice cubes before straining over crushed ice to achieve that luscious frothy top layer.",
+      "Gently clap mint between your palms before muddling to awaken its natural menthol oils without bruising it into bitter fragments.",
+      "Opt for sweet golden pineapples (such as MD2 or Honeyglow varieties) for peak natural fructose and vibrant tropical fragrance.",
+    ],
+    commonMistakes: [
+      "Using artificial canned 'cream of coconut' mixes loaded with 50g+ of corn syrup and synthetic stabilizers.",
+      "Omitting the freshly squeezed lime juice, which results in a flat, cloying drink without refreshing citrus balance.",
+      "Pouring room-temperature juices directly onto pebble ice, which melts the ice instantly into a watery beverage.",
+    ],
+    relatedRecipeSlugs: [
+      "laban-ayran",
+      "avocado-pineapple-smoothie",
+      "anti-inflammatory-turmeric-smoothie",
+      "anti-inflammatory-lemon-blueberry-smoothie",
+      "ginger-berry-anti-inflammatory-smoothie",
+      "electric-blue-spirulina-superfood-juice",
+      "royal-mango-lassi",
+      "mint-limonana-lemonade",
+    ],
+    seoTitle:
+      "Cold-Pressed Piña Colada Mocktail Recipe (Pineapple & Fresh Coconut Milk) | Noakhali Kitchen",
+    seoDescription:
+      "Authentic Cold-Pressed Piña Colada Mocktail recipe made with fresh golden pineapple juice, creamy coconut milk, fresh mint, and lime over crushed ice. 100% Halal, alcohol-free & vegan.",
+  },
+  {
+    id: "rec-laban-ayran",
+    slug: "laban-ayran",
+    title: "Laban Ayran (لبن عيران / লাবান আইরান / لبن آیران)",
+    category: "Halal Drinks & Beverages",
+    categorySlug: "halal-drinks",
+    cuisine: "Middle Eastern & Turkish / Mediterranean Halal Beverage",
+    description:
+      "An authentic, frosty, and deeply refreshing Laban Ayran (لبن عيران / লাবান আইরান / لبن آیران) churned from whole-milk cultured yogurt, ice-cold spring water, fine mineral sea salt, and a splash of fresh lemon juice, crowned with a thick head of micro-foam and crushed dried mint. Served traditionally in condensation-beaded hammered copper mugs (maşrapa). 100% Halal, naturally probiotic, gluten-free, and the ultimate digestive accompaniment to grilled kebabs, shawarmas, and Eid feasts.",
+    introStory:
+      "Across the sun-baked plains of Anatolia, the bustling historic alleys of Damascus and Beirut, the souks of Baghdad, and celebratory dinner tables across South Asia, no drink holds a more revered status of daily hospitality than Laban Ayran (لبن عيران / লাবান আইরান / لبن آیران). While Western cultures often treat yogurt exclusively as a sweet morning parfait, the civilizations of the Middle East, Central Asia, and the Mediterranean have long recognized salted, aerated cultured dairy as the supreme elixir of hydration, digestion, and culinary balance.\n\nThe origins of this iconic drink trace back centuries to nomadic Turkic and Arabian tribes. Long before mechanical refrigeration, pastoral herdsmen fermented fresh sheep, goat, and cow milk into thick yogurt to preserve it against desert heat. By churning this concentrated yogurt with cold spring water and unrefined mineral salt in wooden skins (*yayık*), they crafted a thirst-quenching beverage that replenished vital bodily electrolytes lost to grueling sun and labor. In Turkey, it is revered as the national beverage (*Millî İçecek*); across the Levant (Lebanon, Syria, Jordan, Palestine) it is known as *Laban Ayran* (لبن عيران); in Iran and Afghanistan, its close sibling is scented with mint and carbonation as *Doogh* (دوغ / لبن آیران); and across South Asian and Bengali Halal tables, *Laban Ayran* (লাবান আইরান) has captured widespread affection as a lighter, cooling alternative to heavy spiced Borhani.\n\nWhat transforms humble yogurt and water into an unforgettable gastronomic masterpiece is the physics of aeration and serving ritual. In traditional Turkish and Levantine grill-houses (*ocakbaşı* and *mashawi*), Ayran is churned vigorously until milk proteins entrap fine air pockets, producing a dense, velvety cap of snowy foam (*köpük*). It is poured immediately into handcrafted, hammered copper mugs (*maşrapa* / كاسات نحاسية). Pure copper possesses extraordinarily high thermal conductivity; the instant icy Ayran touches the metal, the entire mug turns frosted and biting cold, chilling the drinker's lips with every luxurious, foamy sip.\n\nNutritionally, Laban Ayran is a gut-restoring powerhouse teeming with live probiotic cultures (*Lactobacillus bulgaricus* and *Streptococcus thermophilus*). When paired with rich, smoky Halal dishes—such as charred Adana kebabs, slow-braised lamb shanks, spiced shawarma wraps, or fragrant biryanis—its brisk lactic acidity cleanses the palate of rendered tallow, while natural sodium immediately reactivates digestive enzymes. It is also an indispensable staple for Ramadan Iftar, swiftly restoring hydration and soothing empty stomachs after hours of fasting.",
+    heroImage: IMAGES.labanAyran,
+    prepTimeMinutes: 5,
+    cookTimeMinutes: 0,
+    totalTimeMinutes: 5,
+    servings: 4,
+    difficulty: "Easy",
+    calories: 85,
+    rating: 4.98,
+    reviewCount: 118,
+    isTrending: true,
+    isFeatured: true,
+    halalNotes:
+      "100% Halal certified, alcohol-free, and crafted strictly from pure cultured whole milk, filtered water, natural mineral sea salt, and garden herbs. Free from animal gelatin, synthetic stabilizers, chemical emulsifiers, and artificial flavor enhancers.",
+    potentialCautionNotes:
+      "For the signature dense froth (köpük), use whole-milk cultured plain yogurt rather than fat-free or ultra-processed yogurts. Ensure your water is ice-cold. If using traditional hammered copper mugs, ensure they are lined with food-grade tin (the historical standard for serving acidic dairy).",
+    ingredients: [
+      { amount: "2", unit: "cups (480g)", name: "Whole-milk plain yogurt", notes: "authentic Turkish süzme yoğurt, Levantine laban, or whole-milk Greek yogurt" },
+      { amount: "1.5", unit: "cups (360ml)", name: "Ice-cold filtered spring water", notes: "or chilled sparkling mineral water for 'Soda Ayran'" },
+      { amount: "1", unit: "tsp (5g)", name: "Fine sea salt or Turkish Çankırı rock salt", notes: "adjust to taste; provides essential electrolyte replenishment" },
+      { amount: "1", unit: "tbsp", name: "Freshly squeezed lemon juice", notes: "optional; signature Levantine touch that adds vibrant citrus brightness" },
+      { amount: "1/2", unit: "tsp", name: "Dried crushed spearmint (kuru nane)", notes: "rubbed between palms to release menthol oils" },
+      { amount: "1", unit: "cup", name: "Crushed or cubed ice", notes: "for churning and maintaining frosty temperature" },
+      { amount: "4", unit: "sprigs", name: "Fresh garden mint leaves", notes: "for garnish" },
+      { amount: "4", unit: "slices", name: "Fresh lemon wheels", notes: "for rim garnish" },
+    ],
+    substitutions: [
+      {
+        original: "Whole-milk plain yogurt",
+        substitute: "Plain unsweetened coconut yogurt or cashew yogurt",
+        notes: "Creates a delicious 100% dairy-free and vegan Laban Ayran.",
+      },
+      {
+        original: "Ice-cold spring water",
+        substitute: "Chilled sparkling mineral water (Club Soda or San Pellegrino)",
+        notes: "Produces an effervescent, fizzy 'Soda Ayran' or Persian-style Doogh.",
+      },
+      {
+        original: "Dried spearmint (kuru nane)",
+        substitute: "Fresh finely minced mint leaves, or a pinch of ground sumac",
+        notes: "Provides herbal freshness and a subtle citrus floral tang.",
+      },
+      {
+        original: "Fine sea salt",
+        substitute: "Pink Himalayan salt or black salt (kala namak)",
+        notes: "Adds distinct mineral notes.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Chill Traditional Hammered Copper Mugs",
+        instruction:
+          "Place four traditional hammered copper cups (maşrapa) or heavy glass beer mugs into the freezer for 10 minutes prior to preparation. The rapid thermal conductivity of chilled copper creates a frosty rim that enhances the drinking sensation.",
+        tip: "Copper conducts cold instantly, ensuring your drink stays frost-cold down to the last sip.",
+      },
+      {
+        step: 2,
+        title: "Combine Whole Yogurt & Mineral Salt",
+        instruction:
+          "In a high-powered blender, food processor, or deep churning pitcher, add the whole-milk yogurt, fine sea salt, and optional fresh lemon juice. Whisk or pulse for 10 seconds to loosen the curd into a silky, uniform cream before adding liquid.",
+      },
+      {
+        step: 3,
+        title: "Add Ice & Chilled Water for Aeration Churn",
+        instruction:
+          "Pour in the ice-cold spring water (or sparkling mineral water) and add 1/2 cup of ice cubes. Secure the blender lid and blend on high speed for a full 45 to 60 seconds (or vigorously pump with a manual milk frother/whisk).",
+        tip: "High-speed shearing whips the dairy casein proteins, creating the famous dense cloud of snowy froth (köpük).",
+      },
+      {
+        step: 4,
+        title: "Fold in Aromatic Dried Spearmint",
+        instruction:
+          "Sprinkle the crushed dried spearmint into the frothy mixture. Pulse briefly for 2 to 3 seconds so the green mint flakes speckle the frothy cream without discoloring the ivory white drink.",
+      },
+      {
+        step: 5,
+        title: "High-Pour into Frosty Copper Mugs",
+        instruction:
+          "Retrieve your frosted copper mugs from the freezer. Pour the Laban Ayran from a height of 6 to 8 inches into each cup. This dramatic high pour aerates the stream even further, forming a cascading, billowy white foam head over the rim.",
+        tip: "Pouring from a height naturally concentrates the thickest micro-foam right at the surface.",
+      },
+      {
+        step: 6,
+        title: "Garnish with Garden Mint & Serve Immediately",
+        instruction:
+          "Rest a fresh sprig of garden mint and a thin wheel of fresh lemon across the rim of each copper mug. Serve immediately while the foam is towering, bubbly, and ice-cold alongside your favorite grilled meats or rice feast!",
+      },
+    ],
+    chefNotes: [
+      "The Chemistry of the Foam (Köpük): Ayran froth is stabilized by the milk's casein and whey proteins forming a thin elastic membrane around entrapped air bubbles. Full-fat yogurt contains the optimal balance of lipids and proteins to sustain micro-foam for several minutes.",
+      "The 'Soda Ayran' Secret: In Istanbul and Izmir, modern street vendors often replace half the spring water with highly carbonated mineral water. The dissolved CO2 introduces fine effervescence that magnifies the refreshing, palate-cleansing bite alongside greasy doner kebabs.",
+      "Food Safety with Copper Mugs: Authentic culinary copper drinkware is traditionally tinned on the interior (lined with pure food-grade tin). This prevents the lactic acid in fermented yogurt from reacting with raw unlined copper while retaining the thermal magic of the exterior.",
+    ],
+    nutrition: {
+      calories: 85,
+      proteinGrams: 5.2,
+      carbsGrams: 6.0,
+      fatGrams: 4.8,
+      fiberGrams: 0.2,
+      sodiumMg: 420,
+      servingSizeDescription: "1 traditional copper mug (approx. 10 fl oz / 300ml)",
+    },
+    storageInstructions:
+      "Ayran is best consumed freshly churned when the frothy head is lively and effervescent. Leftover Ayran can be kept in an airtight glass pitcher in the refrigerator for up to 3 days. Before serving again, shake vigorously for 30 seconds to reactivate the froth.",
+    freezingInstructions:
+      "Ayran can be frozen into savory yogurt ice cubes to chill future batches without dilution, or thawed and blended into cold Turkish yayla çorbası (yogurt soup) with cucumber, dill, and garlic.",
+    servingSuggestions: [
+      "Serve in condensation-covered hammered copper mugs alongside sizzling Adana kebabs, charcoal-grilled chicken shish, or slow-roasted lamb shawarma.",
+      "The definitive accompaniment to fragrant biryanis, Kacchi, and beef tehari, cutting through deep ghee richness.",
+      "An essential centerpiece for Ramadan Iftar, providing rapid rehydration and digestive relief after fasting.",
+    ],
+    faqs: [
+      {
+        question: "What is the difference between Ayran, Laban, and Doogh?",
+        answer:
+          "They belong to the same proud culinary family! 'Ayran' is the Turkish name for salted diluted yogurt; 'Laban' (or Laban Ayran) is the Arabic term used throughout the Levant and Gulf; and 'Doogh' is the Persian version, which is frequently carbonated and flavored with dried rose petals and mint.",
+      },
+      {
+        question: "How does Laban Ayran differ from Bengali Borhani?",
+        answer:
+          "While both are savory Halal yogurt drinks, Laban Ayran is clean, simple, and refreshing—focused on pure yogurt, cold water, sea salt, and a hint of mint. Borhani is a complex, rich banquet digestif heavily spiced with mustard seed paste, green chili, roasted cumin, black salt, and coriander.",
+      },
+      {
+        question: "Can I use low-fat or non-fat yogurt?",
+        answer:
+          "You can, but the drink will be noticeably thinner and the signature thick froth (köpük) will dissipate much faster. Whole-milk yogurt delivers that authentic creamy, velvety mouthfeel and stable micro-bubbles.",
+      },
+      {
+        question: "Why is Ayran served in hammered copper mugs?",
+        answer:
+          "Copper has one of the highest thermal conductivities of any metal. It chills instantly upon contact with cold liquids, transferring that intense frosty chill directly to your lips while insulating the beverage in hot Mediterranean weather.",
+      },
+    ],
+    author: {
+      name: "Chef Bodiul Alam",
+      role: "Culinary Director & Halal Heritage Specialist",
+    },
+    updatedDate: "September 25, 2026",
+    tags: [
+      "Laban Ayran",
+      "لبن عيران",
+      "লাবান আইরান",
+      "لبن آیران",
+      "Ayran",
+      "Turkish Ayran",
+      "Laban",
+      "Doogh",
+      "Halal Drinks",
+      "Probiotic Drink",
+      "Yogurt Beverage",
+      "Kebab Drink",
+      "Ramadan Iftar",
+      "Copper Mug Drink",
+    ],
+    whySpecial:
+      "A centuries-old, 100% Halal probiotic beverage celebrated across the Middle East and South Asia. Cultured whole yogurt churned with icy spring water and sea salt into a frothy white cloud, traditionally served in frosty hammered copper mugs for unbeatable hydration.",
+    cookingTips: [
+      "Blend on maximum speed for 45 to 60 seconds with 2 to 3 ice cubes to build a towering, velvety foam head.",
+      "Pour from 6 to 8 inches above the mug to naturally aerate the liquid and concentrate the thickest foam on top.",
+      "Rub dried spearmint between your palms before adding to release its essential aromatic oils.",
+    ],
+    commonMistakes: [
+      "Using sweet or vanilla-flavored yogurt instead of tangy, unsweetened plain cultured yogurt.",
+      "Using lukewarm or tap-temperature water, which destroys the froth and leaves the drink flat and unrefreshing.",
+      "Skipping the salt: salt is what activates the thirst-quenching, electrolyte-replenishing magic of Ayran.",
+    ],
+    relatedRecipeSlugs: [
+      "sobia",
+      "traditional-shahi-borhani",
+      "royal-mango-lassi",
+      "mint-limonana-lemonade",
+      "cold-pressed-pina-colada-mocktail",
+      "karak-chai-spiced-milk-tea",
+      "salty-lassi",
+      "electric-blue-spirulina-superfood-juice",
+    ],
+    seoTitle:
+      "Authentic Laban Ayran Recipe (لبن عيران / লাবান আইরান / لبن آیران) | Noakhali Kitchen",
+    seoDescription:
+      "Traditional frothy Laban Ayran (لبن عيران / লাবান আইরান / لبن آیران) recipe made with cultured yogurt, ice-cold water, sea salt, and mint served in hammered copper mugs. 100% Halal & probiotic.",
+  },
+  {
+    id: "rec-sobia-drink",
+    slug: "sobia",
+    title: "Sobia (مشروب السوبيا / সোবিয়া পানীয় / سوبیا مشروب)",
+    category: "Halal Drinks & Beverages",
+    categorySlug: "halal-drinks",
+    cuisine: "Egyptian & Hijazi Arabian / Middle Eastern Halal Beverage",
+    description:
+      "The legendary iced coconut milk and rice nectar of Egypt and the Hijaz: velvety whole milk infused with rich coconut milk, sweet rice flour or soaked raw barley, pure cane sugar, fragrant vanilla, and a whisper of rosewater or mastic. Blended until ultra-creamy and frothy, then chilled to frosty perfection and served with fresh coconut slices and ice. 100% Halal, naturally cooling, and the quintessential festive beverage of Ramadan Iftar and hot summer celebrations.",
+    introStory:
+      "In the illuminated, festive lanes of Historic Cairo (Khan el-Khalili), the sacred streets of Mecca and Medina in the Hijaz, and Jeddah's historic Al-Balad, sunset during the Holy Month of Ramadan is marked by a familiar, irresistible sight: grand glass urns and plastic pitchers sweating with condensation, filled with an ivory-white, creamy elixir that locals eagerly queue for hours to take home. This is Sobia (مشروب السوبيا / সোবিয়া পানীয় / سوبیا مشروب)—one of the most treasured, nostalgic, and soul-comforting traditional beverages in Arab culinary heritage.\n\nHistorically, Sobia evolved through two celebrated regional lineages. In the Hijazi tradition of Western Saudi Arabia, Sobia is deeply rooted in heritage—dating back over a century with famous master brewers who fermented wholesome barley or whole-grain wheat with water, natural spices like cinnamon and cardamom, and raw cane sugar over three days, creating a gently tangy, enzyme-rich restorative tonic for desert travelers. In Egypt, Sobia blossomed into an indulgent, ultra-creamy coconut-and-rice milk nectar crafted from finely ground sweet rice, coconut milk, whole dairy milk, vanilla, and sweet sugar, occasionally perfumed with natural mastic (*mistika*) or orange blossom water. Today, the Egyptian coconut-milk version has captured the hearts of families across the Arab world, North Africa, and South Asian diasporas who cherish its velvety smoothness, cooling tropical aroma, and instant energy-restoring properties.\n\nWhat makes genuine homemade Sobia so profoundly satisfying is its textural duality: the subtle natural starch from simmered fine rice flour creates a luscious body akin to melted artisanal gelato or liquid coconut custard, while ice-cold whole milk and rich coconut cream keep it refreshing and drinkable. Churned with pure vanilla bean and a touch of rose or floral essence, it coats the palate in luxurious cool creaminess that immediately soothes the dry throat after a long day of fasting.\n\nNutritionally, Sobia delivers wholesome complex carbohydrates, healthy medium-chain triglycerides (MCTs) from real coconut, and essential minerals like calcium, potassium, and magnesium. It provides immediate, gentle replenishment without the jarring acidity of citrus or the heavy tannins of tea. Poured over plenty of ice in a tall, slender highball glass and served alongside freshly cracked raw coconut pieces, Medjool dates, or festive pastries like Konafa and Qatayef, Sobia is genuine Arabian generosity in a glass.",
+    heroImage: IMAGES.sobia,
+    prepTimeMinutes: 10,
+    cookTimeMinutes: 5,
+    totalTimeMinutes: 15,
+    servings: 4,
+    difficulty: "Easy",
+    calories: 195,
+    rating: 4.97,
+    reviewCount: 94,
+    isTrending: true,
+    isFeatured: true,
+    halalNotes:
+      "100% Halal certified, non-alcoholic, and pure. Made strictly with wholesome milk, coconut cream, rice flour, pure cane sugar, and natural botanicals. Free from synthetic alcohol-based extracts, commercial preservatives, artificial coloring, or animal-derived gelatin.",
+    potentialCautionNotes:
+      "Do not boil the finished drink with coconut milk at excessive temperatures, as high heat can break delicate coconut fats. Always chill the cooked rice base thoroughly before blending with cold dairy and ice for the silkiest texture. Consume within 48 hours for peak freshness.",
+    ingredients: [
+      { amount: "2", unit: "cups (480ml)", name: "Whole cow's milk", notes: "cold; or plant-based oat or almond milk" },
+      { amount: "1", unit: "can (400ml)", name: "Full-fat pure coconut milk or coconut cream", notes: "unsweetened, rich in natural coconut fats" },
+      { amount: "3", unit: "tbsp (30g)", name: "Fine white sweet rice flour", notes: "gives Sobia its signature velvety, luxurious body" },
+      { amount: "1", unit: "cup (240ml)", name: "Filtered water", notes: "for gently cooking the rice flour base" },
+      { amount: "1/2", unit: "cup (100g)", name: "Pure granulated cane sugar", notes: "adjust to taste; traditional Sobia is delightfully sweet" },
+      { amount: "1/4", unit: "cup (30g)", name: "Fine powdered milk (Nido)", notes: "secret Egyptian vendor touch that adds rich caramel dairy depth" },
+      { amount: "1", unit: "tsp", name: "Pure vanilla extract or vanilla sugar", notes: "alcohol-free natural vanilla" },
+      { amount: "1/2", unit: "tsp", name: "Culinary rosewater or orange blossom water", notes: "optional; provides exquisite Middle Eastern floral elegance" },
+      { amount: "1.5", unit: "cups", name: "Crushed pebble ice", notes: "for blending and serving extra frosty" },
+      { amount: "2", unit: "tbsp", name: "Fresh raw coconut shreds or flakes", notes: "for garnish" },
+    ],
+    substitutions: [
+      {
+        original: "Whole cow's milk & powdered milk",
+        substitute: "Creamy oat milk or extra coconut milk with coconut milk powder",
+        notes: "Creates a 100% dairy-free and vegan Sobia.",
+      },
+      {
+        original: "Sweet rice flour",
+        substitute: "Fine barley flour (traditional Hijazi style) or cornstarch",
+        notes: "Barley flour yields the historic Saudi Hijazi flavor profile.",
+      },
+      {
+        original: "Granulated sugar",
+        substitute: "Pure raw honey or agave nectar",
+        notes: "Provides a mellow, natural floral sweetness.",
+      },
+      {
+        original: "Rosewater",
+        substitute: "A pinch of ground green cardamom or mastic powder (mistika)",
+        notes: "Gives a resinous, fragrant Old Damascus and Cairo aroma.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Cook the Velvety Rice Starch Base",
+        instruction:
+          "In a small saucepan, whisk together the fine rice flour and 1 cup of filtered water over medium-low heat until completely smooth with no lumps. Cook, stirring constantly with a silicone spatula, for 3 to 4 minutes until it thickens into a glossy, translucent custard-like paste. Remove from heat and allow to cool completely to room temperature (or chill in the refrigerator for 10 minutes).",
+        tip: "Cooking the rice flour first eliminates any raw chalkiness and creates the luxurious creamy mouthfeel Sobia is renowned for.",
+      },
+      {
+        step: 2,
+        title: "Combine Rich Coconut & Dairy Base in Blender",
+        instruction:
+          "Transfer the cooled rice custard into a high-powered blender. Add the chilled whole milk, rich full-fat coconut milk (or cream), granulated cane sugar, powdered milk, and pure vanilla extract.",
+      },
+      {
+        step: 3,
+        title: "Add Aromatic Botanicals & Churn on High Speed",
+        instruction:
+          "Add the optional dash of rosewater or orange blossom water and 1 cup of crushed ice. Secure the lid and blend on high speed for a full 60 seconds until the sugar is completely dissolved, the liquid is frothy white, and tiny velvety bubbles coat the pitcher walls.",
+        tip: "High-speed blending emulsifies the natural coconut oils with the milk proteins for an ultra-stable froth.",
+      },
+      {
+        step: 4,
+        title: "Chill Deeply for Optimal Flavor Infusion",
+        instruction:
+          "Pour the Sobia into a tall glass pitcher and refrigerate for at least 30 minutes before serving. Chilling allows the sweet coconut, milk, and vanilla notes to marry harmoniously into a cohesive nectar.",
+      },
+      {
+        step: 5,
+        title: "Pour Over Ice in Tall Highball Glasses",
+        instruction:
+          "Fill tall highball glasses with crushed pebble ice. Give the chilled Sobia pitcher a brisk stir and pour generously into the glasses, letting the snowy foam crown the top.",
+      },
+      {
+        step: 6,
+        title: "Garnish with Fresh Coconut & Straw",
+        instruction:
+          "Garnish with freshly cracked raw coconut shards, a sprinkle of toasted coconut flakes, or a delicate mint leaf. Insert a bright straw and serve immediately icy cold alongside fresh dates or festive sweets!",
+      },
+    ],
+    chefNotes: [
+      "The Two Traditions of Sobia: In Egypt, Sobia is always an unfermented sweet coconut-and-rice milk drink. In Saudi Arabia's Hijaz region, traditional Sobia is fermented with whole barley and brown bread for 3 days to develop a tangy, cider-like sharpness. This recipe celebrates the beloved, silky Egyptian coconut variety.",
+      "Powdered Milk Secret: Egyptian street vendors universally add 2 to 3 tablespoons of powdered whole milk (such as Nido). The condensed milk solids enhance dairy creaminess without watering down the texture like regular milk.",
+      "Serving Temperature: Sobia must be served frost-cold. Room-temperature Sobia will taste too sweet and heavy; ice transforms it into a crisp, thirst-slaking nectar.",
+    ],
+    nutrition: {
+      calories: 195,
+      proteinGrams: 4.8,
+      carbsGrams: 26.0,
+      fatGrams: 8.5,
+      fiberGrams: 1.2,
+      sodiumMg: 75,
+      servingSizeDescription: "1 tall glass (approx. 10 fl oz / 300ml)",
+    },
+    storageInstructions:
+      "Store freshly prepared Sobia in a sealed glass bottle or pitcher in the refrigerator for up to 3 days. Shake or stir well before pouring, as natural coconut cream may rise to the top over time.",
+    freezingInstructions:
+      "Pour leftover Sobia into popsicle molds to make delicious creamy coconut-milk ice pops (Sobia Paletas), or freeze into ice cubes to blend into smoothies without diluting flavor.",
+    servingSuggestions: [
+      "The undisputed champion of Ramadan Iftar: sip alongside plump Medjool dates and warm lentil soup to break your fast.",
+      "Pair with Middle Eastern sweets like crispy pistachio Konafa, walnut Qatayef, or Egyptian Basbousa.",
+      "An energizing, cooling afternoon mocktail for hot summer days, barbecue picnics, and Eid celebrations.",
+    ],
+    faqs: [
+      {
+        question: "Does authentic Sobia contain alcohol?",
+        answer:
+          "No! Our recipe is 100% Halal and alcohol-free. While traditional Hijazi fermented barley drinks can naturally ferment if left out for many days, this Egyptian style uses sweet cooked rice, coconut milk, and fresh dairy with zero fermentation.",
+      },
+      {
+        question: "Can I make Sobia without cooking rice flour?",
+        answer:
+          "You can use raw coconut milk powder and powdered milk blended with cold milk, but cooking a small batch of rice flour or cornstarch yields that signature velvety, authentic vendor texture that powders alone cannot replicate.",
+      },
+      {
+        question: "How does Sobia differ from a Piña Colada mocktail?",
+        answer:
+          "While both feature luscious coconut milk, a Piña Colada is defined by tart pineapple juice and citrus. Sobia has no pineapple; it is a soothing, sweet dairy and coconut nectar spiced with vanilla, rice cream, and floral rosewater.",
+      },
+      {
+        question: "Can I make it vegan or lactose-free?",
+        answer:
+          "Easily! Replace the cow's milk and powdered milk with rich oat milk, almond milk, or coconut milk powder. The drink remains astonishingly rich and creamy.",
+      },
+    ],
+    author: {
+      name: "Chef Bodiul Alam",
+      role: "Culinary Director & Halal Heritage Specialist",
+    },
+    updatedDate: "September 25, 2026",
+    tags: [
+      "Sobia",
+      "مشروب السوبيا",
+      "সোবিয়া পানীয়",
+      "سوبیا مشروب",
+      "Egyptian Sobia",
+      "Hijazi Sobia",
+      "Coconut Milk Drink",
+      "Ramadan Iftar Drink",
+      "Halal Drinks",
+      "Iced Coconut Beverage",
+      "Middle Eastern Beverage",
+      "Summer Mocktail",
+    ],
+    whySpecial:
+      "The quintessential Ramadan and summer cooler of Cairo and the Hijaz. An exquisite blend of rich coconut milk, sweet rice nectar, whole milk, vanilla, and floral rosewater served extra cold over crushed ice.",
+    cookingTips: [
+      "Whisk the rice flour continuously while heating to prevent scorching or lumps.",
+      "Allow the cooked rice cream to chill completely before blending with cold dairy and ice.",
+      "Serve over pebble or crushed ice in chilled highball glasses for the maximum refreshing bite.",
+    ],
+    commonMistakes: [
+      "Using boiling water with canned coconut milk, which can cause the delicate coconut fats to separate.",
+      "Skipping the vanilla or floral water, which gives Sobia its iconic fragrant Egyptian character.",
+      "Serving at room temperature: Sobia is meant to be consumed frosty cold.",
+    ],
+    relatedRecipeSlugs: [
+      "tamr-hindi",
+      "laban-ayran",
+      "cold-pressed-pina-colada-mocktail",
+      "royal-rooh-afza-sharbat",
+      "royal-mango-lassi",
+      "traditional-shahi-borhani",
+      "mint-limonana-lemonade",
+      "karak-chai-spiced-milk-tea",
+    ],
+    seoTitle:
+      "Authentic Egyptian Sobia Recipe (مشروب السوبيا / সোবিয়া পানীয় / سوبیا مشروب) | Noakhali Kitchen",
+    seoDescription:
+      "Traditional iced Sobia (مشروب السوبيا / সোবিয়া পানীয় / سوبیا مشروب) recipe made with velvety coconut milk, sweet rice cream, vanilla, and rosewater. 100% Halal Ramadan & summer drink.",
+  },
+  {
+    id: "rec-tamr-hindi",
+    slug: "tamr-hindi",
+    title: "Tamr Hindi (مشروب التمر الهندي / তেঁতুলের পানীয় / املی کا شربت)",
+    category: "Halal Drinks & Beverages",
+    categorySlug: "halal-drinks",
+    cuisine: "Middle Eastern & Levantine / Egyptian Halal Beverage",
+    description:
+      "The quintessential sweet, tangy, and deeply revitalizing iced tamarind nectar of Old Damascus, Cairo, and South Asia: natural seedless tamarind pulp steeped in filtered water, sweetened with caramelized cane sugar, scented with Damascus rosewater or orange blossom essence, and brightened with a splash of fresh lime. Served frost-cold over crushed ice with curled lime spirals. 100% Halal, naturally antioxidant-rich, vegan, and the legendary thirst-quenching staple of Ramadan Iftar.",
+    introStory:
+      "Wander through the legendary labyrinth of Damascus’s Souq Al-Hamidiyah or the historic alleys of Cairo’s Bab Zuweila on a golden Ramadan afternoon, and your ears will be greeted by the rhythmic, musical clinking of ornate brass cups (*tâsat*). Strapped to the vendor’s chest with embroidered leather is a magnificent, teardrop-shaped Ottoman brass flagon crowned with fragrant jasmine sprigs and packed with blocks of ice. With theatrical flair, the robed vendor bends gracefully forward, sending a gleaming stream of deep amber-ruby nectar arching into an etched glass without spilling a single drop. This is Tamr Hindi (مشروب التمر الهندي / তেঁতুলের পানীয় / املی کا شربت)—literally 'The Date of India'—the most celebrated sweet-and-sour botanical elixir in the Arab and Islamic world.\n\nTamarind (*Tamarindus indica*) was brought along the ancient spice and maritime trade routes from the Indian subcontinent across the Indian Ocean to Arabia, Persia, and the Levant during the classical Islamic Golden Age. Arab botanists and physicians, including Ibn Sina (Avicenna), christened it *Tamr Hindi* due to the resemblance of its rich, sticky brown pulp to sweet desert dates, praising its extraordinary cooling properties, digestive enzymes, and potency against dehydration under harsh desert sun. Across South Asia, Pakistan, and Bangladesh, it evolved into beloved *Imli ka Sharbat* (املی کا شربت / তেঁতুলের মিষ্টি শরবত)—infused with toasted cumin, black salt (bit laban), and mint as an electrifying summer cooler.\n\nWhat elevates genuine homemade Tamr Hindi from simple juice to an unforgettable culinary experience is the slow, gentle extraction of its tart organic acids (primarily natural tartaric and malic acids). When steeped in warm water and balanced with unrefined cane sugar, the tamarind surrenders its deep mahogany tones, earthy fruity tang, and complex molasses notes. A delicate splash of culinary rosewater (*Maa' Ward*) or orange blossom water (*Maa' Zahr*) softens the bracing sourness into royal Levantine elegance, while fresh lime juice adds a high, crystalline citrus top note.\n\nNutritionally, Tamr Hindi is a hydration and digestive marvel. Naturally caffeine-free, packed with polyphenols, potassium, magnesium, and vitamin C, it stimulates digestive juices and rebalances blood sugar gently after a long day of fasting. Served over crushed ice in tall highball glasses with thin curled ribbons of fresh lime zest, each sip delivers a rush of sweet, tart, and floral refreshment.",
+    heroImage: IMAGES.tamrHindi,
+    prepTimeMinutes: 10,
+    cookTimeMinutes: 15,
+    totalTimeMinutes: 25,
+    servings: 6,
+    difficulty: "Easy",
+    calories: 110,
+    rating: 4.99,
+    reviewCount: 142,
+    isTrending: true,
+    isFeatured: true,
+    halalNotes:
+      "100% Halal certified, vegan, gluten-free, and alcohol-free. Crafted purely from natural tamarind fruit pulp, filtered water, pure cane sugar, fresh lime, and steam-distilled floral waters. Completely free from artificial red/brown colorings, synthetic souring agents, or chemical preservatives.",
+    potentialCautionNotes:
+      "Do not use commercially salted tamarind cooking paste meant for savory curries or Thai pad thai. Look for sweet-sour tamarind compressed pulp blocks (wet tamarind) or whole tamarind pods. Strain thoroughly through a fine-mesh sieve lined with cheesecloth to catch any fibrous threads or stray seed fragments.",
+    ingredients: [
+      { amount: "200", unit: "g (approx. 7 oz)", name: "Natural wet tamarind pulp block", notes: "seedless or seeded natural compressed tamarind; unseasoned and unsalted" },
+      { amount: "6", unit: "cups (1.4L)", name: "Filtered water", notes: "divided into 4 cups for simmering and 2 cups ice-cold for diluting" },
+      { amount: "3/4", unit: "cup (150g)", name: "Pure granulated cane sugar or raw turbinado sugar", notes: "adjust to taste; tamarind requires ample sweetness to balance its vibrant tartness" },
+      { amount: "2", unit: "tbsp", name: "Freshly squeezed lime juice", notes: "enhances bright citrus clarity" },
+      { amount: "1", unit: "tbsp", name: "Damascus culinary rosewater or orange blossom water", notes: "authentic Levantine signature aroma" },
+      { amount: "1/4", unit: "tsp", name: "Roasted ground cumin or pink Himalayan salt", notes: "optional; South Asian Imli Sharbat touch for digestive depth" },
+      { amount: "2", unit: "cups", name: "Crushed or cracked pebble ice", notes: "for chilling and serving" },
+      { amount: "4", unit: "slices", name: "Fresh lime wheels or curls", notes: "slotted onto glass rims for garnish" },
+    ],
+    substitutions: [
+      {
+        original: "Granulated cane sugar",
+        substitute: "Pure raw honey, jaggery (gur), or coconut sugar",
+        notes: "Jaggery adds an authentic South Asian caramel-earthy dimension.",
+      },
+      {
+        original: "Tamarind pulp block",
+        substitute: "100% pure unsweetened tamarind concentrate (liquid)",
+        notes: "Use 4 tablespoons of pure concentrate whisked directly into water without simmering.",
+      },
+      {
+        original: "Rosewater",
+        substitute: "Orange blossom water (Maa' Zahr) or a crushed green cardamom pod",
+        notes: "Gives a sunny Mediterranean floral fragrance.",
+      },
+      {
+        original: "Fine cane sugar",
+        substitute: "Agave nectar or monk fruit sweetener",
+        notes: "Creates a low-glycemic, diabetic-friendly version.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Break Apart & Soften Tamarind Pulp",
+        instruction:
+          "Tear the compressed tamarind block into small 1-inch chunks with your fingers. Place the chunks in a heavy-bottomed stainless steel saucepan.",
+      },
+      {
+        step: 2,
+        title: "Simmer to Extract Rich Amber Fruit Nectar",
+        instruction:
+          "Pour 4 cups of filtered water over the tamarind. Bring to a gentle boil over medium-high heat, then reduce the heat to medium-low. Simmer gently for 12 to 15 minutes, using a wooden spoon or potato masher to break apart the softened pulp and release its deep amber juices.",
+        tip: "Simmering dissolves the dense fruit pectins and softens tartaric acid compounds for effortless straining.",
+      },
+      {
+        step: 3,
+        title: "Dissolve Sweet Cane Sugar in Hot Infusion",
+        instruction:
+          "Stir in the granulated cane sugar while the mixture is hot. Simmer for an additional 2 minutes, stirring continuously until the sugar crystals are completely dissolved into a fragrant, glossy syrup.",
+      },
+      {
+        step: 4,
+        title: "Fine-Strain the Concentrated Nectar",
+        instruction:
+          "Set a fine-mesh sieve lined with cheesecloth or a nut-milk bag over a large glass heatproof bowl or pitcher. Pour the hot tamarind mixture through. Use the back of a ladle to press firmly against the pulp, extracting every drop of rich nectar while catching seeds and fibrous skins. Discard the spent pulp.",
+        tip: "Lining the sieve with cheesecloth guarantees a crystal-clear, jewel-toned drink with zero gritty sediment.",
+      },
+      {
+        step: 5,
+        title: "Infuse Rosewater, Lime & Chill Deeply",
+        instruction:
+          "Stir in the fresh lime juice, the remaining 2 cups of ice-cold filtered water, and the culinary rosewater (or orange blossom water). Whisk well and transfer the pitcher to the refrigerator to chill for at least 1 to 2 hours until biting cold.",
+      },
+      {
+        step: 6,
+        title: "Serve Over Crushed Ice with Lime Curled Rims",
+        instruction:
+          "Fill tall clear highball glasses with crushed pebble ice. Pour the frosty Tamr Hindi over the ice. Slit fresh lime wheels to curl over the rim of each glass and serve immediately with whole fresh tamarind pods nearby!",
+      },
+    ],
+    chefNotes: [
+      "The Secret to Perfect Balance: Tamarind acidity varies naturally by harvest. Always taste your strained concentrate before final chilling. If it bites too sharply, add an extra tablespoon of simple syrup or honey; if too sweet, add another squeeze of fresh lime juice.",
+      "The Ottoman Flagon Tradition: Damascus vendors wear an elaborate insulated copper vessel called a 'Khumra'. The high-pour aeration cools the liquid through evaporation, mimicking the velvety mouthfeel of micro-bubbles.",
+      "South Asian Variation (Imli Sharbat): To turn this Levantine classic into a traditional South Asian Ramadan digestive cooler, stir in 1/4 teaspoon of roasted ground cumin (*bhuna jeera*), a pinch of black salt (*kala namak*), and bruised mint leaves.",
+    ],
+    nutrition: {
+      calories: 110,
+      proteinGrams: 0.8,
+      carbsGrams: 28.0,
+      fatGrams: 0.1,
+      fiberGrams: 1.5,
+      sodiumMg: 15,
+      servingSizeDescription: "1 tall glass (approx. 10 fl oz / 300ml)",
+    },
+    storageInstructions:
+      "Store strained Tamr Hindi in a sealed glass bottle or pitcher in the refrigerator for up to 7 days. Because of tamarind's natural acidity, it keeps exceptionally well without spoiling.",
+    freezingInstructions:
+      "Freeze the concentrated tamarind base into ice cube trays. Pop 2 to 3 cubes into a glass of sparkling water or lemonade for an instant fizzy Tamr Hindi cooler anytime!",
+    servingSuggestions: [
+      "The undisputed classic for Ramadan Iftar: sip chilled alongside dates, Sambusa, and warm lentil soup.",
+      "Pair with rich grilled lamb kebabs, shawarma platters, or spiced biryani where its sweet tartness cuts through rendered fats.",
+      "Serve as an elegant, alcohol-free summer cocktail at outdoor barbecues and Eid celebrations.",
+    ],
+    faqs: [
+      {
+        question: "Is Tamr Hindi the same as Indian Imli Sharbat?",
+        answer:
+          "Yes! 'Tamr Hindi' literally translates to 'Indian Date' in Arabic, referencing tamarind's historical arrival from India. The Middle Eastern version is scented with rosewater or orange blossom, while the South Asian version frequently includes black salt, roasted cumin, and mint.",
+      },
+      {
+        question: "Can I use commercial tamarind paste from a jar?",
+        answer:
+          "Only if the ingredients list strictly reads 'Tamarind and Water'. Avoid pastes containing salt, preservatives, or chili. Whole compressed pulp blocks from Middle Eastern or South Asian grocers always yield the cleanest, sweetest flavor.",
+      },
+      {
+        question: "What are the health benefits of Tamr Hindi?",
+        answer:
+          "Tamarind is naturally loaded with polyphenols, tartaric acid, potassium, and magnesium. It aids digestion, relieves sluggishness after heavy meals, acts as a gentle natural diuretic, and restores electrolytes during hot weather.",
+      },
+      {
+        question: "Can this recipe be carbonated?",
+        answer:
+          "Absolutely! Prepare the strained tamarind base as a concentrated syrup, then top with chilled sparkling club soda or San Pellegrino over ice for an effervescent artisanal tamarind soda.",
+      },
+    ],
+    author: {
+      name: "Chef Bodiul Alam",
+      role: "Culinary Director & Halal Heritage Specialist",
+    },
+    updatedDate: "September 25, 2026",
+    tags: [
+      "Tamr Hindi",
+      "مشروب التمر الهندي",
+      "তেঁতুলের পানীয়",
+      "املی کا شربت",
+      "Tamarind Drink",
+      "Ramadan Iftar Drink",
+      "Middle Eastern Beverage",
+      "Damascus Drinks",
+      "Egyptian Beverages",
+      "Halal Drinks",
+      "Summer Mocktail",
+      "Vegan Beverage",
+      "Imli Sharbat",
+    ],
+    whySpecial:
+      "The iconic sweet, tangy, and floral tamarind elixir of Old Damascus and Cairo. Slow-simmered natural tamarind pulp balanced with cane sugar, rosewater, and fresh lime, poured over crushed ice for the ultimate thirst-quenching Iftar refresher.",
+    cookingTips: [
+      "Use cheesecloth over your mesh strainer to eliminate every bit of fine grit and ensure a crystal-clear ruby drink.",
+      "Chill the concentrated nectar thoroughly before serving over ice to prevent rapid dilution.",
+      "Add the rosewater at the very end of chilling so its delicate floral aromatic oils don't evaporate during simmering.",
+    ],
+    commonMistakes: [
+      "Using savory salted tamarind cooking paste, which ruins the delicate floral balance.",
+      "Boiling the floral water (rosewater/orange blossom), which destroys its subtle volatile perfume.",
+      "Not straining thoroughly, leaving fibrous tamarind strings in the drinking glass.",
+    ],
+    relatedRecipeSlugs: [
+      "fresh-ginger-juice",
+      "sobia",
+      "laban-ayran",
+      "cold-pressed-pina-colada-mocktail",
+      "royal-rooh-afza-sharbat",
+      "royal-mango-lassi",
+      "traditional-shahi-borhani",
+      "mint-limonana-lemonade",
+    ],
+    seoTitle:
+      "Authentic Tamr Hindi Recipe (مشروب التمر الهندي / তেঁতুলের পানীয় / املی کا شربت) | Noakhali Kitchen",
+    seoDescription:
+      "Traditional iced Tamr Hindi (مشروب التمر الهندي / তেঁতুলের পানীয় / املی کا شربت) recipe made with natural tamarind, cane sugar, rosewater, and lime. 100% Halal Ramadan & summer cooler.",
+  },
+  {
+    id: "rec-fresh-ginger-juice",
+    slug: "fresh-ginger-juice",
+    title: "Fresh Ginger Juice (عصير الزنجبيل الطازج / আদার রস / ادرک کا رس)",
+    category: "Halal Drinks & Beverages",
+    categorySlug: "halal-drinks",
+    cuisine: "Middle Eastern & South Asian Herbal Halal Wellness Drink",
+    description:
+      "A potent, golden, and deeply invigorating Fresh Ginger Juice (عصير الزنجبيل الطازج / আদার রস / ادرک کا رس) handcrafted from cold-extracted organic ginger rhizomes, freshly squeezed Lisbon lemon juice, pure raw unfiltered wildflower honey, and filtered spring water. A legendary 100% Halal natural immunity booster and digestive elixir celebrated in Islamic traditional medicine (Tibb Nabawi), Ayurvedic wellness, and contemporary nutrition. Served warm as a soothing winter throat tonic or over crushed ice as an electrifying vitality shot.",
+    introStory:
+      "Across millennia of holistic healing and ancient culinary wisdom, few botanicals have commanded more reverence than pure fresh ginger (*Zingiber officinale*). Celebrated in the Holy Qur'an as an exquisite beverage of Paradise (*'And they will be given to drink there of a cup whose mixture is of Zanjabeel [ginger]'* — Surah Al-Insan 76:17), ginger holds a sacred and honored place in Prophetic Medicine (Tibb Nabawi), Unani healing, and centuries-old South Asian and Middle Eastern household remedies. From royal Ottoman courts in Istanbul to grand Ayurvedic dispensaries in Bengal and the spice apothecaries of Cairo and Isfahan, freshly pressed ginger juice has forever served as the undisputed champion of human vitality.\n\nThe extraordinary potency of fresh ginger juice comes from its dense concentration of bioactive phytochemicals—chiefly **gingerols**, **shogaols**, and **zingiberene**. Unlike dried powdered ginger or heat-damaged commercial ginger ales loaded with high-fructose corn syrup, raw cold-extracted ginger root delivers an immediate, fiery warmth that tingles through the palate, opens respiratory airways, stimulates salivary enzymes, and accelerates cellular micro-circulation. When paired with cold-pressed lemon juice—brimming with bioflavonoids and alkaline-forming ascorbic acid—and pure, unprocessed raw honey with its natural antimicrobial enzymes, this elixir transforms into the ultimate, all-natural immunity fortress.\n\nWhether consumed as an eye-opening 2-ounce morning wellness shot to ignite your metabolic fire, or diluted with warm filtered water as an evening digestive soother after a rich banquet of biryani or roast, fresh ginger juice acts as a natural antioxidant shield. It combats exercise-induced joint inflammation, soothes nausea, calms gastrointestinal bloating, and shields the body against seasonal chills and respiratory fatigue. Prepared fresh in under 10 minutes in your own kitchen using simple pantry ingredients, it is purity and life-giving energy in a glass.",
+    heroImage: IMAGES.freshGingerJuice,
+    prepTimeMinutes: 10,
+    cookTimeMinutes: 0,
+    totalTimeMinutes: 10,
+    servings: 4,
+    difficulty: "Easy",
+    calories: 68,
+    rating: 4.99,
+    reviewCount: 167,
+    isTrending: true,
+    isFeatured: true,
+    halalNotes:
+      "100% Halal certified, alcohol-free, vegetarian, and completely raw and natural. Sourced exclusively from pure organic ginger root, freshly squeezed citrus, pure wildflower honey, and filtered water. Completely devoid of artificial preservatives, high-fructose corn syrups, or synthetic flavorings.",
+    potentialCautionNotes:
+      "Pure fresh ginger juice is extremely fiery and concentrated. If you have a sensitive stomach or gastric reflux, dilute it generously with water or herbal tea rather than taking it as an undiluted straight shot. Wash unpeeled ginger thoroughly with a produce brush to remove all organic soil before blending.",
+    ingredients: [
+      { amount: "200", unit: "g (approx. 7 oz)", name: "Fresh organic ginger root rhizomes", notes: "plump, firm, and unwrinkled; unpeeled if organic (simply scrubbed clean)" },
+      { amount: "2", unit: "whole", name: "Fresh juicy lemons or Lisbon lemons", notes: "freshly squeezed to yield 1/3 cup (80ml) pure lemon juice; plus wheels for garnish" },
+      { amount: "3", unit: "tbsp (60g)", name: "Pure raw unfiltered honey", notes: "unpasteurized wildflower or Sidr honey for superior enzymatic antimicrobial power" },
+      { amount: "2.5", unit: "cups (600ml)", name: "Filtered spring water or coconut water", notes: "divided; room temperature or warm, or chilled for iced presentation" },
+      { amount: "1/8", unit: "tsp", name: "Ground turmeric or fresh turmeric root", notes: "optional; synergistic curcumin booster for peak anti-inflammatory effect" },
+      { amount: "1", unit: "pinch", name: "Freshly ground black pepper or cayenne pepper", notes: "optional; piperine enhances curcumin and gingerol absorption by 2000%" },
+      { amount: "4", unit: "slices", name: "Fresh lemon wheels", notes: "inserted into serving jars or glasses" },
+      { amount: "1", unit: "cup", name: "Pebble ice or ice cubes", notes: "optional; for serving as a frosty afternoon refresher" },
+    ],
+    substitutions: [
+      {
+        original: "Raw wildflower honey",
+        substitute: "Pure maple syrup, date syrup (dibs), or agave nectar",
+        notes: "Creates a 100% vegan fresh ginger juice.",
+      },
+      {
+        original: "Filtered spring water",
+        substitute: "Pure raw coconut water or sparkling mineral water",
+        notes: "Coconut water adds natural potassium and electrolytes; sparkling water yields an artisanal fermented-style ginger fizz.",
+      },
+      {
+        original: "Fresh lemon juice",
+        substitute: "Fresh lime juice or Seville sour orange juice (naranj)",
+        notes: "Provides a sharper, tropical citrus bite.",
+      },
+      {
+        original: "Whole ginger in blender",
+        substitute: "Slow cold-press masticating juicer",
+        notes: "Yields 100% pure undiluted ginger extract without needing extra water to blend.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Scrub & Prep Fresh Ginger Rhizomes",
+        instruction:
+          "Thoroughly scrub the fresh ginger roots under cold running water using a vegetable brush to remove all fine crevices and soil. If using organic ginger, leave the nutrient-dense thin peel intact. Roughly slice the ginger into 1/2-inch coins against the grain to sever tough fibrous strands.",
+        tip: "Leaving the skin on organic ginger retains concentrated antioxidant polyphenols and trace minerals located directly beneath the outer dermal layer.",
+      },
+      {
+        step: 2,
+        title: "Blend with Filtered Water to Pulp",
+        instruction:
+          "Place the sliced ginger coins into a high-powered blender. Add 1 cup of filtered water. Secure the blender lid and blend on high speed for 60 to 90 seconds until the ginger is pulverized into a golden, fibrous, frothy slurry.",
+      },
+      {
+        step: 3,
+        title: "Cold-Press Strain Through Nut Milk Bag or Fine Mesh",
+        instruction:
+          "Position a fine-mesh strainer lined with a cheesecloth or nut-milk bag over a large glass bowl or measuring pitcher. Pour the ginger slurry into the bag. Twist the top tightly and firmly squeeze with your hands, pressing out every drop of radiant golden ginger nectar. Compost or discard the dry, fibrous pulp.",
+        tip: "A dedicated nut-milk bag yields far more potent extract than standard metal wire sieves, capturing 99% of liquid with zero sediment.",
+      },
+      {
+        step: 4,
+        title: "Whisk with Raw Honey, Lemon Juice & Turmeric",
+        instruction:
+          "Pour the freshly extracted ginger juice into a glass serving pitcher or jar. Add the remaining 1.5 cups of filtered water (warm or cold according to preference), freshly squeezed lemon juice, and pure raw honey. If desired, whisk in the optional pinch of ground turmeric and black pepper. Stir vigorously with a wooden honey dipper until the honey is completely dissolved into a luminous, amber-golden tonic.",
+      },
+      {
+        step: 5,
+        title: "Garnish with Fresh Lemon Slices & Honey Dripper",
+        instruction:
+          "Drop a fresh, round lemon slice directly into the glass jar or serving glasses. Rest a wooden honey dipper inside the jar for an authentic rustic wellness presentation.",
+      },
+      {
+        step: 6,
+        title: "Serve Fresh as a Daily Tonic or Frosty Cooler",
+        instruction:
+          "Serve either at room temperature / warmed as a soothing respiratory defense tonic, or poured over ice cubes as a zesty, electrifying mid-afternoon energy booster. Savor in small, mindful sips!",
+      },
+    ],
+    chefNotes: [
+      "The Qur'anic & Prophetic Medicine Tradition (Tibb Nabawi): Ginger (*Zanjabeel*) has been honored across Islamic history as a blessed warming digestive and cardiac tonic. Classical Islamic physicians recommended fresh ginger steeped with mountain honey to ignite sluggish digestion and clear phlegm from the chest.",
+      "The Chemistry of Gingerol & Shogaol: Fresh raw ginger contains gingerol, which has an invigorating, bright, citrus-spicy pungency. When heated or dried, gingerol transforms into shogaol, which is twice as spicy and exceptionally warming. Preparing it cold preserves the crisp, vibrant bioactive gingerol.",
+      "Customizable Concentration: For a daily morning immunity shooter, prepare with only 1/2 cup of water and drink 2 oz undiluted. For a refreshing all-day beverage, dilute with up to 4 cups of filtered water or coconut water.",
+    ],
+    nutrition: {
+      calories: 68,
+      proteinGrams: 0.6,
+      carbsGrams: 17.5,
+      fatGrams: 0.2,
+      fiberGrams: 0.8,
+      sodiumMg: 6,
+      servingSizeDescription: "1 glass jar (approx. 8 fl oz / 240ml)",
+    },
+    storageInstructions:
+      "Fresh ginger juice keeps remarkably well in an airtight glass bottle or Mason jar in the refrigerator for up to 5 days. Shake well before each pour, as natural ginger starches settle to the bottom over time.",
+    freezingInstructions:
+      "Pour undiluted fresh ginger juice into silicone ice cube trays and freeze solid. Pop 1 ginger cube into hot water for instant immunity ginger tea, or blend directly into morning smoothies.",
+    servingSuggestions: [
+      "Take a 2-ounce shot first thing in the morning on an empty stomach to fire up digestion and boost natural energy.",
+      "Serve warm with an extra swirl of raw honey as an evening throat and chest defense tonic during cold weather.",
+      "Top with chilled club soda or seltzer over ice for a pure, non-alcoholic, naturally carbonated artisanal ginger beer.",
+      "The definitive digestive accompaniment following rich curries, biryanis, and heavy banquet feasts.",
+    ],
+    faqs: [
+      {
+        question: "Why is fresh ginger juice considered a great immunity booster?",
+        answer:
+          "Fresh ginger root is rich in gingerols and sesquiterpenes, which exhibit powerful natural anti-inflammatory, antiviral, and antioxidant properties. Combined with the high vitamin C of fresh lemon and the antibacterial enzymes of raw honey, it provides comprehensive cellular and immune support.",
+      },
+      {
+        question: "Do I need to peel the ginger before blending?",
+        answer:
+          "If using certified organic ginger, peeling is unnecessary! Simply scrub the root thoroughly with a vegetable brush. The peel contains high concentrations of polyphenols and fiber, all of which are extracted when strained through a nut-milk bag.",
+      },
+      {
+        question: "Can I use a slow cold-press juicer instead of a blender?",
+        answer:
+          "Yes! A masticating cold-press juicer works exceptionally well for ginger root. You will obtain a pure, unfiltered ginger essence that you can dilute with water, lemon, and honey directly without cheesecloth straining.",
+      },
+      {
+        question: "How much ginger juice should I drink each day?",
+        answer:
+          "1 to 2 glasses (or one 2-ounce concentrated shot) daily is optimal for wellness and digestion. It provides robust vitality without overwhelming the digestive tract.",
+      },
+    ],
+    author: {
+      name: "Chef Bodiul Alam",
+      role: "Culinary Director & Halal Heritage Specialist",
+    },
+    updatedDate: "September 25, 2026",
+    tags: [
+      "Ginger Juice",
+      "Fresh Ginger Juice",
+      "عصير الزنجبيل الطازج",
+      "আদার রস",
+      "ادرک کا رس",
+      "Immunity Booster",
+      "Wellness Tonic",
+      "Halal Drinks",
+      "Prophetic Medicine",
+      "Tibb Nabawi",
+      "Anti-Inflammatory Drink",
+      "Raw Honey Lemon Ginger",
+      "Digestive Elixir",
+    ],
+    whySpecial:
+      "A revered 100% Halal wellness elixir and potent immunity booster. Freshly pressed raw ginger root balanced with Lisbon lemon juice and raw wildflower honey, delivering an invigorating burst of gingerol antioxidants and digestive warmth.",
+    cookingTips: [
+      "Use fresh, firm ginger roots with glossy skin; older wrinkled roots are drier and less flavorful.",
+      "Squeeze using a nut-milk bag for maximum yield and silky, pulp-free clarity.",
+      "Always dissolve raw honey in room-temperature or warm water—never boiling water—to preserve its live probiotic enzymes.",
+    ],
+    commonMistakes: [
+      "Using boiling water, which denatures delicate vitamin C in the lemon juice and active enzymes in raw honey.",
+      "Using pre-packaged commercial ginger purée with vinegar or sulfur dioxide preservatives.",
+      "Drinking large quantities undiluted on an empty stomach if you are prone to acid reflux.",
+    ],
+    relatedRecipeSlugs: [
+      "ginger-berry-anti-inflammatory-smoothie",
+      "anti-inflammatory-turmeric-smoothie",
+      "tamr-hindi",
+      "sobia",
+      "laban-ayran",
+      "mint-limonana-lemonade",
+      "karak-chai-spiced-milk-tea",
+    ],
+    seoTitle:
+      "Fresh Ginger Juice Recipe (عصير الزنجبيل الطازج / আদার রস / ادرک کا رس) Immunity Booster | Noakhali Kitchen",
+    seoDescription:
+      "Handcrafted Fresh Ginger Juice (عصير الزنجبيل الطازج / আদার রস / ادرک کا رس) immunity booster made with raw organic ginger root, fresh lemon, and pure wildflower honey. 100% Halal & anti-inflammatory.",
   },
 ];
 

@@ -247,11 +247,16 @@ export const CATEGORIES: CategoryHub[] = [
     id: "cat-drinks",
     slug: "halal-drinks",
     title: "Halal Drinks & Beverages",
-    shortDescription: "Refreshing Borhani, velvety mango lassi, royal Rooh Afza sharbat, Karak chai, and mint lemonades.",
+    shortDescription: "Immunity-boosting fresh Ginger Juice, sweet-tangy Tamr Hindi, Sobia coconut milk, frothy Laban Ayran, Borhani, mango lassi, Rooh Afza, and herbal teas.",
     fullDescription:
-      "Discover revitalizing, traditional, and celebratory 100% Halal drinks from across the Islamic world. From the iconic spiced yogurt Borhani served at royal weddings and Eid feasts, to luscious Alphonso mango lassi, aromatic rose-infused Rooh Afza sharbat with bloomed basil seeds, spiced Gulf Karak chai, and chilled Levantine mint limonana. Prepared with wholesome fresh herbs, real fruit, pure honey, and certified alcohol-free flavors.",
+      "Discover revitalizing, traditional, and celebratory 100% Halal drinks from across the Islamic world. From potent cold-pressed Fresh Ginger Juice (عصير الزنجبيل الطازج / আদার রস) immunity booster with raw honey and lemon, to Damascus sweet-tart Tamr Hindi (مشروب التمر الهندي), Egyptian Sobia (مشروب السوبيا) coconut milk elixir, frothy Laban Ayran (لبن عيران) in chilled copper mugs, royal spiced Borhani, and Alphonso mango lassi. Prepared with wholesome fresh herbs, real fruit, pure honey, and certified alcohol-free flavors.",
     image: IMAGES.halalDrinks,
     featuredRecipeSlugs: [
+      "fresh-ginger-juice",
+      "tamr-hindi",
+      "sobia",
+      "laban-ayran",
+      "cold-pressed-pina-colada-mocktail",
       "avocado-pineapple-smoothie",
       "anti-inflammatory-turmeric-smoothie",
       "anti-inflammatory-lemon-blueberry-smoothie",

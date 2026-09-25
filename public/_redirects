@@ -1,0 +1,7 @@
+# Permanent 301 Redirects for Noakhali Kitchen
+/culture/bengali-radhuni-spice-guide  /guides/bengali-radhuni-guide  301
+/culture/bengali-radhuni-spice-guide/  /guides/bengali-radhuni-guide  301
+/food-culture/bengali-radhuni-spice-guide  /guides/bengali-radhuni-guide  301
+/food-culture/bengali-radhuni-spice-guide/  /guides/bengali-radhuni-guide  301
+/directory/*  /recipes  301
+/directory  /recipes  301

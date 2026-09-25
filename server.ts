@@ -8,7 +8,7 @@ import { createServer as createViteServer } from "vite";
 dotenv.config();
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
 
 app.use(express.json());
 
@@ -33,6 +33,19 @@ app.get("/api/health", (_req, res) => {
 app.get(["/directory", "/directory/*"], (_req, res) => {
   res.redirect(301, "/recipes");
 });
+
+// Legacy duplicate Radhuni guide permanent 301 redirect (SEO canonical consolidation)
+app.get(
+  [
+    "/culture/bengali-radhuni-spice-guide",
+    "/culture/bengali-radhuni-spice-guide/",
+    "/food-culture/bengali-radhuni-spice-guide",
+    "/food-culture/bengali-radhuni-spice-guide/",
+  ],
+  (_req, res) => {
+    res.redirect(301, "/guides/bengali-radhuni-guide");
+  }
+);
 
 // Initialize Gemini Client
 function getGeminiClient(): GoogleGenAI | null {
@@ -160,6 +173,11 @@ app.get("/sitemap.xml", (_req, res) => {
   <url><loc>https://www.noakhalikitchen.com/tools</loc><priority>0.8</priority></url>
 
   <!-- Cornerstone Recipes -->
+  <url><loc>https://www.noakhalikitchen.com/recipes/fresh-ginger-juice</loc><priority>0.9</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/recipes/tamr-hindi</loc><priority>0.9</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/recipes/sobia</loc><priority>0.9</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/recipes/laban-ayran</loc><priority>0.9</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/recipes/cold-pressed-pina-colada-mocktail</loc><priority>0.9</priority></url>
   <url><loc>https://www.noakhalikitchen.com/recipes/avocado-pineapple-smoothie</loc><priority>0.9</priority></url>
   <url><loc>https://www.noakhalikitchen.com/recipes/anti-inflammatory-turmeric-smoothie</loc><priority>0.9</priority></url>
   <url><loc>https://www.noakhalikitchen.com/recipes/vibrant-dragon-fruit-banana-superfood-nice-cream-sorbet</loc><priority>0.9</priority></url>
@@ -184,7 +202,6 @@ app.get("/sitemap.xml", (_req, res) => {
   <url><loc>https://www.noakhalikitchen.com/guides/mustard-oil-bengali-cooking</loc><priority>0.85</priority></url>
   <url><loc>https://www.noakhalikitchen.com/guides/how-to-make-perfect-beresta</loc><priority>0.85</priority></url>
   <url><loc>https://www.noakhalikitchen.com/guides/bengali-radhuni-guide</loc><priority>0.85</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/culture/bengali-radhuni-spice-guide</loc><priority>0.85</priority></url>
   <url><loc>https://www.noakhalikitchen.com/guides/biye-barir-shahi-chicken-roast-guide</loc><priority>0.85</priority></url>
   <url><loc>https://www.noakhalikitchen.com/guides/chittagong-beef-kala-bhuna-guide</loc><priority>0.85</priority></url>
   <url><loc>https://www.noakhalikitchen.com/guides/old-dhaka-beef-tehari-vs-biryani</loc><priority>0.85</priority></url>

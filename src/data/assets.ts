@@ -146,6 +146,11 @@ import lemonBlueberrySmoothieImg from "../assets/images/lemon_blueberry_smoothie
 import dragonfruitBananaSorbetImg from "../assets/images/dragonfruit_banana_sorbet_1790260918870.jpg";
 import turmericSmoothieImg from "../assets/images/turmeric_smoothie_1790261102166.jpg";
 import avocadoPineappleSmoothieImg from "../assets/images/avocado_pineapple_smoothie_1790261454054.jpg";
+import pinaColadaMocktailImg from "../assets/images/pina_colada_mocktail_1790261680857.jpg";
+import labanAyranImg from "../assets/images/laban_ayran_1790342687699.jpg";
+import sobiaDrinkImg from "../assets/images/sobia_drink_1790342873513.jpg";
+import tamrHindiImg from "../assets/images/tamr_hindi_1790343230625.jpg";
+import freshGingerJuiceImg from "../assets/images/fresh_ginger_juice_1790343413545.jpg";
 import noakhaliLogoFullImg from "../assets/images/noakhali_kitchen_logo_1789072776240.jpg";
 import noakhaliLogoIconImg from "../assets/images/noakhali_kitchen_logo_1789072776240.jpg";
 
@@ -426,6 +431,23 @@ export const IMAGES = {
   avocadoPineappleSmoothie: avocadoPineappleSmoothieImg,
   avocadoSmoothie: avocadoPineappleSmoothieImg,
   pineappleAvocadoSmoothie: avocadoPineappleSmoothieImg,
+  pinaColadaMocktail: pinaColadaMocktailImg,
+  coldPressedPinaColadaMocktail: pinaColadaMocktailImg,
+  coldPressedPinaColadaMocktailPineappleFreshCoconutMilk: pinaColadaMocktailImg,
+  pinaColada: pinaColadaMocktailImg,
+  labanAyran: labanAyranImg,
+  traditionalFrothyLabanAyran: labanAyranImg,
+  ayran: labanAyranImg,
+  laban: labanAyranImg,
+  sobia: sobiaDrinkImg,
+  sobiaDrink: sobiaDrinkImg,
+  traditionalSobia: sobiaDrinkImg,
+  tamrHindi: tamrHindiImg,
+  tamarindDrink: tamrHindiImg,
+  imliSharbat: tamrHindiImg,
+  freshGingerJuice: freshGingerJuiceImg,
+  gingerJuice: freshGingerJuiceImg,
+  immunityGingerJuice: freshGingerJuiceImg,
   logoFull: noakhaliLogoFullImg,
   logoIcon: noakhaliLogoIconImg,
 };

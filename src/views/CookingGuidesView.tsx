@@ -61,11 +61,42 @@ export const CookingGuidesView: React.FC<CookingGuidesViewProps> = ({
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, [initialSlug]);
 
-  const currentGuide = COOKING_GUIDES.find(
-    (g) =>
-      g.slug === activeSlug ||
-      (activeSlug === "bengali-radhuni-spice-guide" && g.slug === "bengali-radhuni-guide")
-  );
+  // Handle redirect if accessed with legacy slug
+  useEffect(() => {
+    if (activeSlug === "bengali-radhuni-spice-guide") {
+      try {
+        window.history.replaceState({}, "", "/guides/bengali-radhuni-guide");
+      } catch {}
+      setActiveSlug("bengali-radhuni-guide");
+      onNavigate("/guides/bengali-radhuni-guide");
+    }
+  }, [activeSlug, onNavigate]);
+
+  const currentGuide = COOKING_GUIDES.find((g) => g.slug === activeSlug);
+
+  // Set canonical tag dynamically for SEO
+  useEffect(() => {
+    let canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.setAttribute("rel", "canonical");
+      document.head.appendChild(canonical);
+    }
+    const originalHref = canonical.getAttribute("href") || "https://www.noakhalikitchen.com/";
+    if (currentGuide) {
+      canonical.setAttribute(
+        "href",
+        `https://www.noakhalikitchen.com/guides/${currentGuide.slug}`
+      );
+    } else {
+      canonical.setAttribute("href", "https://www.noakhalikitchen.com/guides");
+    }
+    return () => {
+      if (canonical) {
+        canonical.setAttribute("href", originalHref);
+      }
+    };
+  }, [currentGuide]);
 
   const handleShare = () => {
     if (typeof window !== "undefined") {
@@ -99,8 +130,68 @@ export const CookingGuidesView: React.FC<CookingGuidesViewProps> = ({
         currentGuide.relatedGuideSlugs?.includes(g.slug)
     );
 
+    const jsonLdData = {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "@id": `https://www.noakhalikitchen.com/guides/${currentGuide.slug}#article`,
+          headline: currentGuide.title,
+          description: currentGuide.excerpt,
+          url: `https://www.noakhalikitchen.com/guides/${currentGuide.slug}`,
+          mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": `https://www.noakhalikitchen.com/guides/${currentGuide.slug}`,
+          },
+          author: {
+            "@type": "Person",
+            name: currentGuide.author.name,
+            jobTitle: currentGuide.author.role,
+          },
+          publisher: {
+            "@type": "Organization",
+            name: "Noakhali Kitchen",
+            url: "https://www.noakhalikitchen.com/",
+          },
+          image: currentGuide.heroImage,
+          datePublished: currentGuide.publishedDate,
+          dateModified: currentGuide.updatedDate,
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": `https://www.noakhalikitchen.com/guides/${currentGuide.slug}#breadcrumb`,
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: "https://www.noakhalikitchen.com/",
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Cooking Guides",
+              item: "https://www.noakhalikitchen.com/guides",
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: currentGuide.title,
+              item: `https://www.noakhalikitchen.com/guides/${currentGuide.slug}`,
+            },
+          ],
+        },
+      ],
+    };
+
     return (
       <div className="w-full bg-[#FAF9F6] dark:bg-[#141413] py-8 sm:py-12">
+        {/* Inject Article & Breadcrumbs Schema with canonical URL */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }}
+        />
+
         <div className="max-w-[880px] mx-auto px-4 sm:px-6 space-y-6">
           {/* Breadcrumbs */}
           <nav className="flex items-center gap-2 text-xs text-[#77736D] dark:text-[#A8A49E]">

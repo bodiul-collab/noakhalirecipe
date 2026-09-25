@@ -40,6 +40,17 @@ const extractRecipeSlug = (r: string) => {
   return null;
 };
 
+// Permanent redirect handler for legacy /culture/bengali-radhuni-spice-guide
+const RadhuniRedirect: React.FC<{ onRedirect: (to: string) => void }> = ({ onRedirect }) => {
+  useEffect(() => {
+    try {
+      window.history.replaceState({}, "", "/guides/bengali-radhuni-guide");
+    } catch {}
+    onRedirect("/guides/bengali-radhuni-guide");
+  }, [onRedirect]);
+  return null;
+};
+
 export default function App() {
   const [currentRoute, setCurrentRoute] = useState<string>(() => {
     if (typeof window !== "undefined" && window.location.pathname) {
@@ -49,6 +60,17 @@ export default function App() {
           window.history.replaceState({}, "", "/recipes");
         } catch {}
         return "/recipes";
+      }
+      if (
+        p === "/culture/bengali-radhuni-spice-guide" ||
+        p === "/food-culture/bengali-radhuni-spice-guide" ||
+        p === "/culture/bengali-radhuni-guide" ||
+        p === "/food-culture/bengali-radhuni-guide"
+      ) {
+        try {
+          window.history.replaceState({}, "", "/guides/bengali-radhuni-guide");
+        } catch {}
+        return "/guides/bengali-radhuni-guide";
       }
       return p || "/";
     }
@@ -144,7 +166,18 @@ export default function App() {
   // Sync route with browser history
   useEffect(() => {
     const handlePopState = () => {
-      const path = (window.location.pathname || "/").replace(/\/+$/, "") || "/";
+      let path = (window.location.pathname || "/").replace(/\/+$/, "") || "/";
+      if (
+        path === "/culture/bengali-radhuni-spice-guide" ||
+        path === "/food-culture/bengali-radhuni-spice-guide" ||
+        path === "/culture/bengali-radhuni-guide" ||
+        path === "/food-culture/bengali-radhuni-guide"
+      ) {
+        try {
+          window.history.replaceState({}, "", "/guides/bengali-radhuni-guide");
+        } catch {}
+        path = "/guides/bengali-radhuni-guide";
+      }
       setCurrentRoute(path);
       const slug = extractRecipeSlug(path);
       setSelectedRecipeSlug(slug);
@@ -166,6 +199,16 @@ export default function App() {
     // Redirect /directory to /recipes
     if (route.startsWith("/directory")) {
       route = "/recipes";
+    }
+
+    // Permanent 301 redirect legacy /culture/bengali-radhuni-spice-guide to canonical /guides/bengali-radhuni-guide
+    if (
+      route === "/culture/bengali-radhuni-spice-guide" ||
+      route === "/food-culture/bengali-radhuni-spice-guide" ||
+      route === "/culture/bengali-radhuni-guide" ||
+      route === "/food-culture/bengali-radhuni-guide"
+    ) {
+      route = "/guides/bengali-radhuni-guide";
     }
 
     setCurrentRoute(route);
@@ -438,16 +481,9 @@ export default function App() {
       const cultureSlug =
         path.replace(/^\/(?:food-)?culture\/?/, "").split("/")[0] || undefined;
 
-      // Handle radhuni guide cross-route access seamlessly
+      // Permanent redirect legacy duplicate radhuni culture route to primary guide URL
       if (cultureSlug === "bengali-radhuni-spice-guide" || cultureSlug === "bengali-radhuni-guide") {
-        return (
-          <CookingGuidesView
-            key="guide-bengali-radhuni"
-            initialSlug="bengali-radhuni-guide"
-            onNavigate={navigate}
-            onSelectRecipe={handleSelectRecipe}
-          />
-        );
+        return <RadhuniRedirect onRedirect={navigate} />;
       }
 
       return (
