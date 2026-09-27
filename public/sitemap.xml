@@ -31,8 +31,20 @@
   <url><loc>https://www.noakhalikitchen.com/recipes/authentic-nihari</loc><priority>0.9</priority></url>
   <url><loc>https://www.noakhalikitchen.com/recipes/chicken-karahi</loc><priority>0.9</priority></url>
   <url><loc>https://www.noakhalikitchen.com/recipes/authentic-chicken-shawarma</loc><priority>0.9</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/recipes/bengali-style-australian-pie</loc><priority>0.9</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/recipes/puri-poori</loc><priority>0.9</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/recipes/authentic-beef-shatkora</loc><priority>0.9</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/recipes/beef-shami-kabab</loc><priority>0.9</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/recipes/veggie-burger</loc><priority>0.9</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/recipes/australian-beef-pie</loc><priority>0.9</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/recipes/butter-salmon-curry</loc><priority>0.9</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/recipes/beef-burger</loc><priority>0.9</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/recipes/coconut-cloud-smoothie</loc><priority>0.9</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/recipes/earth-smoothie</loc><priority>0.9</priority></url>
 
-  <!-- Editorial Culinary Authority Foundation (Batch 1 Guides & Culture) -->
+  <!-- Editorial Culinary Authority Foundation (Batch 1 & 2 Guides) -->
+  <url><loc>https://www.noakhalikitchen.com/guides/authentic-bengali-beef-nihari-guide</loc><priority>0.85</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/guides/bengali-panch-phoron-guide</loc><priority>0.85</priority></url>
   <url><loc>https://www.noakhalikitchen.com/guides/authentic-dhaka-shahi-kacchi-biryani</loc><priority>0.85</priority></url>
   <url><loc>https://www.noakhalikitchen.com/guides/bengali-beef-bhuna-guide</loc><priority>0.85</priority></url>
   <url><loc>https://www.noakhalikitchen.com/guides/mustard-oil-bengali-cooking</loc><priority>0.85</priority></url>

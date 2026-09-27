@@ -75,7 +75,8 @@ export interface CookingGuide {
     | "Ingredient Guides"
     | "Ingredient Substitutions"
     | "Beginner Cooking"
-    | "Kitchen Tips";
+    | "Kitchen Tips"
+    | "Guides";
   excerpt: string;
   content: string;
   heroImage: string;
@@ -98,6 +99,8 @@ export interface CookingGuide {
     question: string;
     answer: string;
   }>;
+  seoTitle?: string;
+  seoDescription?: string;
 }
 
 export interface FoodCultureArticle {

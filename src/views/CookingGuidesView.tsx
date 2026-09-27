@@ -23,26 +23,69 @@ interface CookingGuidesViewProps {
 
 const CATEGORIES = [
   "All",
-  "Cooking Techniques",
+  "Guides",
   "Spice Guides",
+  "Cooking Techniques",
   "Ingredient Guides",
   "Ingredient Substitutions",
   "Beginner Cooking",
   "Kitchen Tips",
 ] as const;
 
-// Helper to render bold markdown syntax (**text**)
-const renderFormattedText = (text: string) => {
-  const parts = text.split(/(\*\*.*?\*\*)/g);
-  return parts.map((part, i) => {
-    if (part.startsWith("**") && part.endsWith("**")) {
+// Helper to render bold (**text**), italic (*text*), and markdown links ([label](url))
+const renderFormattedText = (text: string, onNavigate?: (route: string) => void) => {
+  // First split by markdown links [label](url)
+  const linkRegex = /(\[[^\]]+\]\([^)]+\))/g;
+  const linkParts = text.split(linkRegex);
+
+  return linkParts.map((linkPart, li) => {
+    const linkMatch = linkPart.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (linkMatch) {
+      const label = linkMatch[1];
+      const href = linkMatch[2];
+      const isInternal = href.startsWith("/");
+
       return (
-        <strong key={i} className="font-bold text-[#242423] dark:text-white">
-          {part.slice(2, -2)}
-        </strong>
+        <a
+          key={`link-${li}`}
+          href={href}
+          onClick={(e) => {
+            if (isInternal && onNavigate) {
+              e.preventDefault();
+              onNavigate(href);
+            }
+          }}
+          className="text-[#E97520] hover:text-[#C85D10] underline font-medium cursor-pointer transition-colors"
+        >
+          {label}
+        </a>
       );
     }
-    return part;
+
+    // Split by **bold**
+    const boldParts = linkPart.split(/(\*\*.*?\*\*)/g);
+    return boldParts.map((bPart, bi) => {
+      if (bPart.startsWith("**") && bPart.endsWith("**")) {
+        return (
+          <strong key={`b-${li}-${bi}`} className="font-bold text-[#242423] dark:text-white">
+            {bPart.slice(2, -2)}
+          </strong>
+        );
+      }
+
+      // Split by *italic*
+      const italicParts = bPart.split(/(\*.*?\*)/g);
+      return italicParts.map((iPart, ii) => {
+        if (iPart.startsWith("*") && iPart.endsWith("*") && !iPart.startsWith("**")) {
+          return (
+            <em key={`i-${li}-${bi}-${ii}`} className="italic">
+              {iPart.slice(1, -1)}
+            </em>
+          );
+        }
+        return iPart;
+      });
+    });
   });
 };
 
@@ -74,7 +117,7 @@ export const CookingGuidesView: React.FC<CookingGuidesViewProps> = ({
 
   const currentGuide = COOKING_GUIDES.find((g) => g.slug === activeSlug);
 
-  // Set canonical tag dynamically for SEO
+  // Set canonical, title, and meta tags dynamically for SEO
   useEffect(() => {
     let canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
     if (!canonical) {
@@ -83,17 +126,36 @@ export const CookingGuidesView: React.FC<CookingGuidesViewProps> = ({
       document.head.appendChild(canonical);
     }
     const originalHref = canonical.getAttribute("href") || "https://www.noakhalikitchen.com/";
+    const originalTitle = document.title;
+    let metaDesc = document.querySelector<HTMLMetaElement>('meta[name="description"]');
+    const originalDesc = metaDesc ? metaDesc.getAttribute("content") || "" : "";
+    let ogTitle = document.querySelector<HTMLMetaElement>('meta[property="og:title"]');
+    let ogDesc = document.querySelector<HTMLMetaElement>('meta[property="og:description"]');
+    let ogUrl = document.querySelector<HTMLMetaElement>('meta[property="og:url"]');
+
     if (currentGuide) {
+      const pageTitle = currentGuide.seoTitle || `${currentGuide.title} | Noakhali Kitchen`;
+      document.title = pageTitle;
+      const desc = currentGuide.seoDescription || currentGuide.excerpt;
+      if (metaDesc) metaDesc.setAttribute("content", desc);
+      if (ogTitle) ogTitle.setAttribute("content", pageTitle);
+      if (ogDesc) ogDesc.setAttribute("content", desc);
+      if (ogUrl) ogUrl.setAttribute("content", `https://www.noakhalikitchen.com/guides/${currentGuide.slug}`);
       canonical.setAttribute(
         "href",
         `https://www.noakhalikitchen.com/guides/${currentGuide.slug}`
       );
     } else {
+      document.title = "Cooking Guides & Techniques | Noakhali Kitchen";
       canonical.setAttribute("href", "https://www.noakhalikitchen.com/guides");
     }
     return () => {
       if (canonical) {
         canonical.setAttribute("href", originalHref);
+      }
+      document.title = originalTitle;
+      if (metaDesc && originalDesc) {
+        metaDesc.setAttribute("content", originalDesc);
       }
     };
   }, [currentGuide]);
@@ -351,7 +413,7 @@ export const CookingGuidesView: React.FC<CookingGuidesViewProps> = ({
                                   key={hi}
                                   className="px-4 py-2.5 font-bold text-[#242423] dark:text-white uppercase text-[11px] tracking-wider"
                                 >
-                                  {renderFormattedText(h)}
+                                  {renderFormattedText(h, onNavigate)}
                                 </th>
                               ))}
                             </tr>
@@ -367,7 +429,7 @@ export const CookingGuidesView: React.FC<CookingGuidesViewProps> = ({
                                     key={ci}
                                     className="px-4 py-2.5 text-[#3F3C38] dark:text-[#EDE8DF] align-top"
                                   >
-                                    {renderFormattedText(cell)}
+                                    {renderFormattedText(cell, onNavigate)}
                                   </td>
                                 ))}
                               </tr>
@@ -385,7 +447,7 @@ export const CookingGuidesView: React.FC<CookingGuidesViewProps> = ({
                     <div key={idx} className="space-y-1.5 pl-2 my-2">
                       {trimmed.split("\n").map((line, i) => (
                         <p key={i} className="pl-1">
-                          {renderFormattedText(line)}
+                          {renderFormattedText(line, onNavigate)}
                         </p>
                       ))}
                     </div>
@@ -397,7 +459,7 @@ export const CookingGuidesView: React.FC<CookingGuidesViewProps> = ({
                   return (
                     <ul key={idx} className="list-disc list-inside space-y-1.5 pl-2 my-2">
                       {trimmed.split("\n").map((li, i) => (
-                        <li key={i}>{renderFormattedText(li.replace("- ", ""))}</li>
+                        <li key={i}>{renderFormattedText(li.replace("- ", ""), onNavigate)}</li>
                       ))}
                     </ul>
                   );
@@ -413,8 +475,29 @@ export const CookingGuidesView: React.FC<CookingGuidesViewProps> = ({
                   );
                 }
 
+                // Blockquote / Editorial Callout Box
+                if (trimmed.startsWith("> ") || trimmed.startsWith(">")) {
+                  const quoteLines = trimmed
+                    .split("\n")
+                    .map((l) => l.replace(/^>\s*/, ""))
+                    .join("\n");
+
+                  return (
+                    <div
+                      key={idx}
+                      className="my-5 p-5 sm:p-6 rounded-xl bg-[#FFF9F0] dark:bg-[#252018] border-l-4 border-[#E97520] border-y border-r border-[#F8CD78]/40 dark:border-[#E7A52B]/30 shadow-xs space-y-2"
+                    >
+                      {quoteLines.split("\n\n").map((qPara, qi) => (
+                        <p key={qi} className="text-xs sm:text-sm leading-relaxed text-[#3F3C38] dark:text-[#EDE8DF]">
+                          {renderFormattedText(qPara, onNavigate)}
+                        </p>
+                      ))}
+                    </div>
+                  );
+                }
+
                 // Regular Paragraph
-                return <p key={idx}>{renderFormattedText(trimmed)}</p>;
+                return <p key={idx}>{renderFormattedText(trimmed, onNavigate)}</p>;
               })}
             </div>
 

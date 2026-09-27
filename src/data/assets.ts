@@ -151,6 +151,18 @@ import labanAyranImg from "../assets/images/laban_ayran_1790342687699.jpg";
 import sobiaDrinkImg from "../assets/images/sobia_drink_1790342873513.jpg";
 import tamrHindiImg from "../assets/images/tamr_hindi_1790343230625.jpg";
 import freshGingerJuiceImg from "../assets/images/fresh_ginger_juice_1790343413545.jpg";
+import panchPhoronBlendImg from "../assets/images/panch_phoron_blend_1790344633868.jpg";
+import bengaliBeefNihariImg from "../assets/images/bengali_beef_nihari_1790345142297.jpg";
+import bengaliAussiePieImg from "../assets/images/bengali_aussie_pie_1790448248977.jpg";
+import crispyPuffyPuriImg from "../assets/images/crispy_puffy_puri_1790448522929.jpg";
+import sylhetiBeefShatkoraImg from "../assets/images/sylheti_beef_shatkora_1790517085481.jpg";
+import beefShamiKababImg from "../assets/images/beef_shami_kabab_1790517307881.jpg";
+import gourmetVeggieBurgerImg from "../assets/images/gourmet_veggie_burger_1790517548557.jpg";
+import australianBeefPieImg from "../assets/images/australian_beef_pie_1790517738258.jpg";
+import butterSalmonCurryImg from "../assets/images/butter_salmon_curry_1790517951110.jpg";
+import gourmetBeefBurgerImg from "../assets/images/gourmet_beef_burger_1790518498516.jpg";
+import coconutCloudSmoothieImg from "../assets/images/coconut_cloud_smoothie_1790518695566.jpg";
+import earthSmoothieImg from "../assets/images/earth_smoothie_1790518870616.jpg";
 import noakhaliLogoFullImg from "../assets/images/noakhali_kitchen_logo_1789072776240.jpg";
 import noakhaliLogoIconImg from "../assets/images/noakhali_kitchen_logo_1789072776240.jpg";
 
@@ -448,6 +460,44 @@ export const IMAGES = {
   freshGingerJuice: freshGingerJuiceImg,
   gingerJuice: freshGingerJuiceImg,
   immunityGingerJuice: freshGingerJuiceImg,
+  panchPhoron: panchPhoronBlendImg,
+  panchPhoronBlend: panchPhoronBlendImg,
+  panchPhoronGuide: panchPhoronBlendImg,
+  bengaliBeefNihari: bengaliBeefNihariImg,
+  nihariGuide: bengaliBeefNihariImg,
+  bengaliAussiePie: bengaliAussiePieImg,
+  aussiePie: bengaliAussiePieImg,
+  bengaliStyleAustralianPie: bengaliAussiePieImg,
+  puriPoori: crispyPuffyPuriImg,
+  puri: crispyPuffyPuriImg,
+  poori: crispyPuffyPuriImg,
+  crispyPuri: crispyPuffyPuriImg,
+  luchiPuri: crispyPuffyPuriImg,
+  sylhetiBeefShatkora: sylhetiBeefShatkoraImg,
+  beefShatkora: sylhetiBeefShatkoraImg,
+  shatkoraBeef: sylhetiBeefShatkoraImg,
+  authenticBeefShatkora: sylhetiBeefShatkoraImg,
+  beefShamiKabab: beefShamiKababImg,
+  shamiKabab: beefShamiKababImg,
+  beefShami: beefShamiKababImg,
+  shamiKebab: beefShamiKababImg,
+  veggieBurger: gourmetVeggieBurgerImg,
+  gourmetVeggieBurger: gourmetVeggieBurgerImg,
+  greenVeggieBurger: gourmetVeggieBurgerImg,
+  australianBeefPie: australianBeefPieImg,
+  beefPie: australianBeefPieImg,
+  aussieBeefPie: australianBeefPieImg,
+  butterSalmonCurry: butterSalmonCurryImg,
+  butterSalmon: butterSalmonCurryImg,
+  salmonMakhani: butterSalmonCurryImg,
+  beefBurger: gourmetBeefBurgerImg,
+  gourmetBeefBurger: gourmetBeefBurgerImg,
+  doubleBeefBurger: gourmetBeefBurgerImg,
+  coconutCloudSmoothie: coconutCloudSmoothieImg,
+  blueCoconutCloudSmoothie: coconutCloudSmoothieImg,
+  erewhonCloudSmoothie: coconutCloudSmoothieImg,
+  earthSmoothie: earthSmoothieImg,
+  earthDaySmoothie: earthSmoothieImg,
   logoFull: noakhaliLogoFullImg,
   logoIcon: noakhaliLogoIconImg,
 };

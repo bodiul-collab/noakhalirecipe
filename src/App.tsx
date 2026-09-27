@@ -35,7 +35,81 @@ const isRecipeDetailRoute = (r: string) => {
 
 const extractRecipeSlug = (r: string) => {
   if (isRecipeDetailRoute(r)) {
-    return r.replace(/^\/recipes?\//, "").split("/")[0].split("?")[0].split("#")[0] || null;
+    const raw = r.replace(/^\/recipes?\//, "").split("/")[0].split("?")[0].split("#")[0] || null;
+    if (raw === "puri" || raw === "poori" || raw === "puri-recipe" || raw === "poori-recipe") {
+      return "puri-poori";
+    }
+    if (
+      raw === "beef-shatkora" ||
+      raw === "shatkora-beef" ||
+      raw === "sylheti-beef-shatkora" ||
+      raw === "shatkora" ||
+      raw === "satkara-beef" ||
+      raw === "beef-satkara"
+    ) {
+      return "authentic-beef-shatkora";
+    }
+    if (
+      raw === "shami-kabab" ||
+      raw === "shami-kebab" ||
+      raw === "beef-shami" ||
+      raw === "beef-shami-kebab" ||
+      raw === "shami"
+    ) {
+      return "beef-shami-kabab";
+    }
+    if (
+      raw === "veggie-smash-burger" ||
+      raw === "green-veggie-burger" ||
+      raw === "veggie-burger-recipe" ||
+      raw === "vegetarian-burger"
+    ) {
+      return "veggie-burger";
+    }
+    if (
+      raw === "beef-pie" ||
+      raw === "aussie-beef-pie" ||
+      raw === "australian-meat-pie" ||
+      raw === "aussie-meat-pie" ||
+      raw === "australian-beef-meat-pie"
+    ) {
+      return "australian-beef-pie";
+    }
+    if (
+      raw === "butter-salmon" ||
+      raw === "salmon-makhani" ||
+      raw === "salmon-butter-curry" ||
+      raw === "butter-salmon-makhani"
+    ) {
+      return "butter-salmon-curry";
+    }
+    if (
+      raw === "smash-burger" ||
+      raw === "double-beef-burger" ||
+      raw === "beef-smash-burger" ||
+      raw === "double-cheeseburger" ||
+      raw === "gourmet-beef-burger"
+    ) {
+      return "beef-burger";
+    }
+    if (
+      raw === "blue-coconut-cloud-smoothie" ||
+      raw === "erewhon-cloud-smoothie" ||
+      raw === "blue-cloud-smoothie" ||
+      raw === "cloud-smoothie" ||
+      raw === "erewhon-smoothie"
+    ) {
+      return "coconut-cloud-smoothie";
+    }
+    if (
+      raw === "earth-day-smoothie" ||
+      raw === "matcha-earth-smoothie" ||
+      raw === "planet-earth-smoothie" ||
+      raw === "earth-day"
+    ) {
+      return "earth-smoothie";
+    }
+    return raw;
   }
   return null;
 };
