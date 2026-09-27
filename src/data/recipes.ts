@@ -23652,6 +23652,226 @@ const BASE_RECIPES: Recipe[] = [
     seoDescription:
       "Celebrate Earth Day with the stunning Earth Smoothie: celery, cucumber, banana, matcha, and spirulina swirled to look like planet Earth. Wholesome & 100% Halal.",
   },
+  {
+    id: "rec-old-dhaka-haji-biryani",
+    slug: "old-dhaka-haji-biryani",
+    title: "Old Dhaka Haji Biryani (পুরান ঢাকার হাজি বিরিয়ানি / پرانے ڈھاکا کی حاجی بریانی / حاجي برياني في دكا القديمة)",
+    category: "Halal Rice & Curry",
+    categorySlug: "halal-rice-curry",
+    cuisine: "Old Dhaka Heritage / Authentic Bangladeshi Culinary Icon",
+    description:
+      "The undisputed crown jewel of Old Dhaka street food culture since 1939. Succulent, tender bite-sized morsels of bone-in mutton braised in cold-pressed mustard oil, ghee, and warming aromatic spices, tossed with fragrant short-grain Chinigura rice, and served piping hot in traditional rustic paper-lined bamboo baskets garnished with upright green chilies and fragrant lime wedges.",
+    introStory:
+      "Walk through the historic, sensory-rich alleyways of Nazira Bazar in Old Dhaka (**পুরান ঢাকা**) at any hour of the evening, and a tantalizing, unmistakable aroma commands the night air: sharp cold-pressed mustard oil, rendered mutton marrow, crushed green cardamoms, and steaming fragrant short-grain **Chinigura rice**. This is the legendary kingdom of **Haji Biryani** (পুরান ঢাকার ঐতিহ্যবাহী হাজি বিরিয়ানি / پرانے ڈھاکا کی حاجی بریانی / حاجي برياني في دكا القديمة), founded in 1939 by Haji Mohammad Hossain and lovingly preserved across generations as Bangladesh's most celebrated heritage rice delicacy.\n\nUnlike royal Nawabi Kacchi Biryani—which utilizes long-grain basmati and heavy saffron—authentic Old Dhaka Haji Biryani represents a distinct culinary evolution born from local Bengali soil. Its genius lies in four foundational pillars:\n\n1. **Aromatic Chinigura Rice:** Instead of basmati, Haji Biryani exclusively employs indigenous, petite-grained Chinigura (or Kalijira) rice. The fine, tender grains boast an intensely floral natural fragrance that eagerly absorbs savory meat broths without becoming gummy or mushy.\n\n2. **The Mustard Oil & Mutton Fat Emulsion:** While most Mughal-derived biryanis rely strictly on ghee, Haji Biryani's unmistakable signature is **cold-pressed mustard oil (*kachi ghani sorishar tel*)** combined with pure cow ghee and natural rendered mutton tallow. The mustard oil cuts cleanly through the rich goat fat, delivering an earthy pungency and velvety mouthfeel that coats every single rice grain in a glistening glaze.\n\n3. **Pale Ivory Aromatic Profile:** True Haji Biryani contains zero red chili powder, turmeric, or heavy food coloring. The rice maintains its pale, shimmering off-white and grayish-ivory hue, drawing its warmth strictly from freshly crushed white pepper, nutmeg (*jaiphal*), mace (*javitri*), green cardamom, cinnamon, and whole green chilies.\n\n4. **The Iconic Bamboo Basket Presentation:** Traditionally served hot inside rustic, handmade **woven bamboo baskets (*jhuri / thonga*)** lined with food-grade paper or dried sal leaves, each portion is spiked with fresh, upright **raw green chilies (*kancha morich*)** and crowned with thick, aromatic wedges of **Kagoji Lebu** (fragrant Bengali paper lime). Diners squeeze the tart lime over the steaming rice and take intermittent crunchy bites of fresh chili between mouthfuls of meltingly tender goat meat, creating an electrifying symphony of rich, spicy, and citrusy flavors.",
+    heroImage: IMAGES.oldDhakaHajiBiryani,
+    prepTimeMinutes: 30,
+    cookTimeMinutes: 60,
+    totalTimeMinutes: 90,
+    servings: 6,
+    difficulty: "Medium",
+    calories: 720,
+    rating: 4.99,
+    reviewCount: 384,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified. Prepared exclusively with young zabiha goat meat (khashi), 100% cold-pressed mustard oil, pure dairy cow ghee, natural whole spices, and organic aromatic Chinigura rice. Completely free from artificial preservatives, MSG, synthetic food colorings, or alcohol extracts.",
+    potentialCautionNotes:
+      "Chinigura rice cooks significantly faster than long-grain basmati! Watch your water ratio and steam timing closely: use a 1:1.75 liquid-to-rice ratio to prevent the delicate grains from over-softening.",
+    ingredients: [
+      { amount: "2", unit: "lbs / 900g", name: "Young bone-in goat meat (mutton / khashi)", notes: "cut into small, bite-sized 1-inch pieces (traditional Haji cut) with marrow bones" },
+      { amount: "3", unit: "cups / 600g", name: "Aromatic Chinigura or Kalijira rice", notes: "washed gently, soaked for 20 minutes, and thoroughly drained" },
+      { amount: "1/2", unit: "cup", name: "Cold-pressed mustard oil (Kachi Ghani)", notes: "the non-negotiable hallmark of authentic Old Dhaka Haji Biryani" },
+      { amount: "1/4", unit: "cup", name: "Pure cow ghee", notes: "for rich buttery gloss and aroma" },
+      { amount: "1.5", unit: "cups", name: "Thinly sliced red onions", notes: "fried to golden perfection" },
+      { amount: "2", unit: "tbsp", name: "Fresh ginger paste", notes: "freshly ground" },
+      { amount: "2", unit: "tbsp", name: "Fresh garlic paste", notes: "freshly ground" },
+      { amount: "1/2", unit: "cup", name: "Plain tart yogurt (tok doi)", notes: "whisked smooth" },
+      { amount: "1", unit: "tsp", name: "Ground white pepper", notes: "provides clean, sharp heat without staining the pale rice" },
+      { amount: "1/2", unit: "tsp", name: "Freshly grated nutmeg (jaiphal)", notes: "essential Old Dhaka festive spice" },
+      { amount: "1/2", unit: "tsp", name: "Freshly ground mace (javitri)", notes: "delicate floral perfume" },
+      { amount: "1", unit: "tsp", name: "Ground roasted cumin powder", notes: "dry-roasted and finely powdered" },
+      { amount: "1", unit: "tsp", name: "Ground coriander powder", notes: "freshly ground" },
+      { amount: "6", unit: "pods", name: "Green cardamom", notes: "lightly crushed" },
+      { amount: "2", unit: "sticks", name: "Cinnamon bark (2 inches each)", notes: "cracked" },
+      { amount: "5", unit: "whole", name: "Cloves (long)", notes: "whole" },
+      { amount: "2", unit: "leaves", name: "Bay leaves (tej pata)", notes: "torn" },
+      { amount: "12-15", unit: "whole", name: "Fresh green chilies (kancha morich)", notes: "half slit for cooking, remainder kept whole with stems for upright garnish" },
+      { amount: "1.5", unit: "tbsp", name: "Kosher salt or sea salt", notes: "divided (for meat and rice)" },
+      { amount: "4.75", unit: "cups", name: "Boiling water or light mutton bone stock", notes: "measured precisely for Chinigura rice absorption" },
+      { amount: "2", unit: "whole", name: "Fragrant Bengali lime (Kagoji Lebu)", notes: "cut into thick wedges for serving" },
+      { amount: "1", unit: "tsp", name: "Kewra water (screwpine essence)", notes: "optional classic touch for final dum" },
+    ],
+    substitutions: [
+      {
+        original: "Young bone-in goat meat (khashi)",
+        substitute: "Bone-in lamb shoulder or tender beef shank cubes",
+        notes: "Lamb shoulder provides rich fat content and tender texture closely mirroring traditional Old Dhaka goat meat.",
+      },
+      {
+        original: "Chinigura or Kalijira rice",
+        substitute: "Jeera samba rice, Gobindobhog rice, or short-grain aromatic rice",
+        notes: "If Bengali Chinigura is unavailable, Gobindobhog or Jeerasar offers a similar small-grain aromatic bite. Avoid long basmati to maintain authenticity.",
+      },
+      {
+        original: "Mustard oil",
+        substitute: "All ghee or refined peanut oil mixed with 2 tbsp mustard oil",
+        notes: "Cold-pressed mustard oil is the true soul of Haji Biryani, but blending with ghee softens the pungency for newcomers.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Marinate the Small-Cut Mutton",
+        instruction:
+          "In a large mixing bowl, combine the small bite-sized mutton pieces with whisked plain yogurt, ginger paste, garlic paste, ground white pepper, grated nutmeg, ground mace, ground roasted cumin, ground coriander, and 1 tablespoon of salt. Massage thoroughly into the meat and allow to marinate for at least 30 to 45 minutes at room temperature (or up to 4 hours refrigerated).",
+        tip: "Cutting the goat meat into small 1-inch morsels ensures the marrow juices and spices penetrate deep into every fiber.",
+      },
+      {
+        step: 2,
+        title: "Bloom Whole Spices in Mustard Oil & Ghee",
+        instruction:
+          "In a heavy, thick-bottomed Dutch oven or traditional handi, heat the 1/2 cup of cold-pressed mustard oil and 2 tablespoons of ghee over medium-high heat until faint wisps of smoke appear (to temper the raw pungency of the mustard oil). Reduce heat to medium, then add the crushed green cardamoms, cinnamon sticks, cloves, and torn bay leaves. Let them sizzle and bloom for 30 seconds until intensely fragrant.",
+      },
+      {
+        step: 3,
+        title: "Braise the Mutton to Melting Tenderness",
+        instruction:
+          "Add the sliced red onions to the aromatic oil and sauté for 8 to 10 minutes until soft and light golden. Add the marinated mutton along with all its yogurt juices and 6 slit green chilies. Sear the meat over medium-high heat for 10 minutes, stirring frequently until the juices release and begin to reduce into a glistening, fragrant masala fond.",
+      },
+      {
+        step: 4,
+        title: "Slow-Simmer the Meat in Its Own Juices",
+        instruction:
+          "Pour in 1/2 cup of hot water, cover tightly with a lid, reduce heat to low, and simmer for 35 to 40 minutes, stirring occasionally, until the goat meat is fork-tender and the mustard oil and rendered tallow separate into a rich, shimmering sauce. There should be about 1 cup of thick savory meat gravy remaining in the pot.",
+      },
+      {
+        step: 5,
+        title: "Toast the Fragrant Chinigura Rice",
+        instruction:
+          "Gently slide the washed and drained Chinigura rice into the simmering meat and gravy. Add the remaining 2 tablespoons of ghee. Gently stir-fry the rice grains with the meat and spiced oil over medium heat for 3 to 4 minutes until the grains become translucent and emit an intoxicating toasted aroma. Be gentle so as not to break the delicate small grains.",
+      },
+      {
+        step: 6,
+        title: "Add Boiling Liquid & Bring to a Rolling Simmer",
+        instruction:
+          "Pour in 4.75 cups of boiling water (or light bone broth) and add the remaining 1/2 tablespoon of salt. Stir gently once, increase heat to high, and bring to a rapid rolling boil. Cook uncovered for 4 to 5 minutes until 80% of the surface liquid is absorbed and deep steam craters form across the top of the rice.",
+      },
+      {
+        step: 7,
+        title: "Tuck Whole Green Chilies & Seal for Dum",
+        instruction:
+          "Scatter a few drops of kewra water over the top. Tuck 6 to 8 whole fresh green chilies deep into the steaming rice. Tightly cover the pot with heavy aluminum foil, then press the heavy lid firmly on top to create an airtight steam seal. Place the pot over a hot cast-iron tawa (heat diffuser) on the lowest possible flame for 20 minutes.",
+        tip: "Sealing tightly allows the steam pressure (dum) to cook the delicate Chinigura rice to fluffy perfection without scorching the bottom.",
+      },
+      {
+        step: 8,
+        title: "Rest, Fluff & Assemble in Traditional Bamboo Baskets",
+        instruction:
+          "Turn off the heat and let the sealed handi rest undisturbed for 10 minutes. Unseal the pot and gently fluff the biryani using a flat wide rice paddle, distributing the succulent mutton morsels and glistening ivory rice evenly. Line traditional small woven bamboo baskets with food-grade paper. Heap the steaming biryani generously into the baskets, plant 2 fresh upright green chilies into each mound, nestle juicy wedges of fragrant Kagoji Lebu on top, and serve immediately alongside chilled spiced Borhani.",
+      },
+    ],
+    chefNotes: [
+      "The Mustard Oil Tempering: Cold-pressed mustard oil has an assertive aroma when raw. Heating it until just smoking before blooming spices mellows its pungency into a deep, nutty, savory foundation that is essential to the authentic Haji profile.",
+      "Chinigura vs. Basmati: Never substitute long-grain Basmati for true Haji Biryani! Basmati remains separate and dry; Chinigura rice has a gentle stickiness and higher amylopectin content that clings to the luscious mutton fat and mustard oil glaze.",
+      "The Green Chili & Lime Ritual: In Old Dhaka street stalls, the green chilies are not chopped into the rice—they are left whole so diners can regulate their own spice level by nibbling the raw chili between bites of rich rice, balanced with a squeeze of fresh Kagoji Lebu.",
+      "Small Meat Cuts: Commercial mutton curries use large 100g chunks, but Haji Biryani strictly requires small 20-30g bone-in cubes so every spoonful of rice delivers tender meat.",
+    ],
+    nutrition: {
+      calories: 720,
+      proteinGrams: 38,
+      carbsGrams: 68,
+      fatGrams: 32,
+      fiberGrams: 3,
+      sodiumMg: 890,
+      servingSizeDescription: "1 generous paper-lined bamboo basket portion (approx. 450g)",
+    },
+    storageInstructions:
+      "Store leftover biryani in an airtight glass container in the refrigerator for up to 3 days. Reheat gently by sprinkling with 1 tablespoon of water and steaming in a covered skillet over medium-low heat to restore the glossy moisture of the Chinigura rice.",
+    freezingInstructions:
+      "Freeze fully cooled biryani in airtight freezer containers for up to 1 month. Thaw in the refrigerator overnight and reheat with a splash of water and a dab of ghee in a covered pot.",
+    servingSuggestions: [
+      "Serve piping hot in traditional woven bamboo baskets with fresh Kagoji lime wedges and crunchy green chilies.",
+      "Pair with a chilled glass of authentic Bengali yogurt-mustard drink ([Royal Borhani](/recipes/borhani)) to aid digestion of the rich mutton fat.",
+      "Accompany with fresh sliced red onions, crisp cucumber spears, and sweet whole dates.",
+      "Follow with a traditional Bengali heritage dessert such as creamy rice payesh ([Kheer Shahi Rice Payesh](/recipes/kheer-shahi-rice-kheer-payesh)) or sweet syrup-soaked [Bengali Roshogolla](/recipes/bengali-roshogolla).",
+    ],
+    faqs: [
+      {
+        question: "Why does Haji Biryani look pale compared to other biryanis?",
+        answer:
+          "Haji Biryani strictly avoids red chili powder, turmeric, and orange food coloring. Its pale ivory and grayish appearance is authentic to Old Dhaka tradition, drawing its warmth and flavor from white pepper, green chilies, nutmeg, mace, and whole spices.",
+      },
+      {
+        question: "Why is Haji Biryani traditionally cooked in mustard oil?",
+        answer:
+          "Haji Mohammad Hossain pioneered using pure cold-pressed mustard oil in 1939 to cut through the heavy richness of mutton fat, creating a lighter, highly digestible, and uniquely aromatic biryani that sets it apart from heavy ghee-laden Nawabi dishes.",
+      },
+      {
+        question: "Can I use beef instead of mutton/goat?",
+        answer:
+          "Yes! While the flagship recipe at Nazira Bazar is made with goat meat (khashi), beef tehari and beef biryani prepared using the same mustard-oil Chinigura rice method are equally beloved across Old Dhaka.",
+      },
+      {
+        question: "Why is it served in a bamboo basket?",
+        answer:
+          "Serving in paper-lined bamboo baskets (*jhuri*) is the iconic visual trademark of Haji Biryani since the 1930s. The woven bamboo allows excess moisture to evaporate so the rice never becomes soggy, keeping every grain fluffy and aromatic.",
+      },
+      {
+        question: "What is Chinigura rice?",
+        answer:
+          "Chinigura is an indigenous, heritage small-grain white aromatic rice cultivated in northern Bangladesh (Dinajpur region). It has an intensely sweet, floral fragrance similar to jasmine or pandan, with a tender delicate texture ideal for festive Bengali pulaos and biryanis.",
+      },
+    ],
+    author: {
+      name: "Chef Bodiul Alam",
+      role: "Culinary Director & Halal Heritage Specialist",
+    },
+    updatedDate: "September 27, 2026",
+    tags: [
+      "Old Dhaka Haji Biryani",
+      "Haji Biryani",
+      "পুরান ঢাকার হাজি বিরিয়ানি",
+      "پرانے ڈھاکا کی حاجی بریانی",
+      "حاجي برياني في دكا القديمة",
+      "Mutton Biryani",
+      "Chinigura Rice",
+      "Mustard Oil Biryani",
+      "Bengali Street Food",
+      "Old Dhaka Heritage",
+      "Halal Rice",
+    ],
+    whySpecial:
+      "The legendary 1939 Old Dhaka institution in your own kitchen. Tender bone-in mutton simmered in cold-pressed mustard oil and aromatic spices, tossed with sweet Chinigura rice, and served in iconic paper-lined bamboo baskets with green chilies and Kagoji lime.",
+    cookingTips: [
+      "Use small 1-inch cuts of bone-in mutton so the meat cooks quickly and releases rich marrow juices directly into the gravy.",
+      "Gently toast the Chinigura rice in the meat gravy for 3 minutes before adding boiling liquid to seal each grain with aromatic oil.",
+      "Always serve with fresh Kagoji lime wedges; the vibrant citrus juice cuts the rich mutton fat and elevates the entire flavor profile.",
+    ],
+    commonMistakes: [
+      "Using long-grain basmati instead of Chinigura rice, which loses the authentic Old Dhaka texture and fragrance.",
+      "Adding red chili powder or turmeric, which alters the signature pale ivory color and traditional flavor profile.",
+      "Skipping the mustard oil or substituting it completely with neutral oil, which removes the soul of Haji Biryani.",
+    ],
+    relatedRecipeSlugs: [
+      "bengali-beef-tehari",
+      "kacchi-biryani",
+      "bengali-chicken-biryani",
+      "bengali-khichuri-bhuna",
+      "bengali-pulao",
+    ],
+    relatedGuideSlugs: [
+      "authentic-dhaka-shahi-kacchi-biryani",
+      "old-dhaka-beef-tehari-vs-biryani-guide",
+      "mustard-oil-bengali-cooking",
+      "how-to-make-perfect-beresta",
+    ],
+    seoTitle:
+      "Old Dhaka Haji Biryani Recipe (পুরান ঢাকার হাজি বিরিয়ানি) | Noakhali Kitchen",
+    seoDescription:
+      "Authentic Old Dhaka Haji Biryani recipe: tender bone-in mutton braised in mustard oil, sweet Chinigura rice, upright green chilies, and fragrant lime. 100% Halal.",
+  },
 ];
 
 export const RECIPES: Recipe[] = enhanceRecipesWithCornerstones(BASE_RECIPES);

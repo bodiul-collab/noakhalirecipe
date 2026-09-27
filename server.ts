@@ -138,6 +138,20 @@ Your mission:
   }
 });
 
+// Contact and Feedback Form Submission Endpoint
+app.post("/api/contact", (req, res) => {
+  const { name, email, subject, message } = req.body || {};
+  if (!name || !email || !message) {
+    res.status(400).json({ error: "Name, email, and message are required." });
+    return;
+  }
+  console.log(`[Contact & Feedback Submission] From: ${name} <${email}> | Subject: ${subject} | Length: ${message.length} chars`);
+  res.json({
+    success: true,
+    message: `Thank you for contacting Noakhali Kitchen, ${name}! Your feedback has been received. Our editorial team will review your message and respond to ${email} within 24–48 hours.`,
+  });
+});
+
 // Ads.txt route
 app.get("/ads.txt", (_req, res) => {
   res.type("text/plain");
@@ -205,6 +219,7 @@ app.get("/sitemap.xml", (_req, res) => {
   <url><loc>https://www.noakhalikitchen.com/recipes/beef-burger</loc><priority>0.9</priority></url>
   <url><loc>https://www.noakhalikitchen.com/recipes/coconut-cloud-smoothie</loc><priority>0.9</priority></url>
   <url><loc>https://www.noakhalikitchen.com/recipes/earth-smoothie</loc><priority>0.9</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/recipes/old-dhaka-haji-biryani</loc><priority>0.95</priority></url>
 
   <!-- Editorial Culinary Authority Foundation (Batch 1 & 2 Guides) -->
   <url><loc>https://www.noakhalikitchen.com/guides/authentic-bengali-beef-nihari-guide</loc><priority>0.85</priority></url>

@@ -163,6 +163,7 @@ import butterSalmonCurryImg from "../assets/images/butter_salmon_curry_179051795
 import gourmetBeefBurgerImg from "../assets/images/gourmet_beef_burger_1790518498516.jpg";
 import coconutCloudSmoothieImg from "../assets/images/coconut_cloud_smoothie_1790518695566.jpg";
 import earthSmoothieImg from "../assets/images/earth_smoothie_1790518870616.jpg";
+import oldDhakaHajiBiryaniImg from "../assets/images/old_dhaka_haji_biryani_1790540388252.jpg";
 import noakhaliLogoFullImg from "../assets/images/noakhali_kitchen_logo_1789072776240.jpg";
 import noakhaliLogoIconImg from "../assets/images/noakhali_kitchen_logo_1789072776240.jpg";
 
@@ -498,6 +499,9 @@ export const IMAGES = {
   erewhonCloudSmoothie: coconutCloudSmoothieImg,
   earthSmoothie: earthSmoothieImg,
   earthDaySmoothie: earthSmoothieImg,
+  oldDhakaHajiBiryani: oldDhakaHajiBiryaniImg,
+  hajiBiryani: oldDhakaHajiBiryaniImg,
+  haziBiryani: oldDhakaHajiBiryaniImg,
   logoFull: noakhaliLogoFullImg,
   logoIcon: noakhaliLogoIconImg,
 };

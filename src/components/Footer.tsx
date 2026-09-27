@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Utensils, Send, CheckCircle2, ShieldCheck } from "lucide-react";
+import { Utensils, Send, CheckCircle2, ShieldCheck, Mail, Copy, Check } from "lucide-react";
 import { NoakhaliLogo } from "./NoakhaliLogo";
 
 interface FooterProps {
@@ -9,6 +9,33 @@ interface FooterProps {
 export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
+  const [emailCopied, setEmailCopied] = useState(false);
+
+  const contactEmail = "support@noakhalikitchen.com";
+
+  const handleCopyEmail = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(contactEmail);
+      } else {
+        const textarea = document.createElement("textarea");
+        textarea.value = contactEmail;
+        textarea.style.position = "fixed";
+        textarea.style.opacity = "0";
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textarea);
+      }
+      setEmailCopied(true);
+      setTimeout(() => setEmailCopied(false), 2500);
+    } catch {
+      setEmailCopied(true);
+      setTimeout(() => setEmailCopied(false), 2500);
+    }
+  };
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
@@ -155,10 +182,38 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               <li>
                 <button
                   onClick={() => onNavigate("/contact")}
-                  className="hover:text-[#E7A52B] transition-colors"
+                  className="hover:text-[#E7A52B] transition-colors cursor-pointer text-left"
                 >
                   Contact &amp; Feedback
                 </button>
+              </li>
+              <li>
+                <div className="flex items-center gap-1.5">
+                  <a
+                    href={`mailto:${contactEmail}?subject=Noakhali%20Kitchen%20Recipe%20Feedback`}
+                    className="hover:text-[#E7A52B] transition-colors inline-flex items-center gap-1.5"
+                    title="Send an email to support@noakhalikitchen.com"
+                  >
+                    <Mail className="w-3.5 h-3.5 text-[#E7A52B]" />
+                    <span>{contactEmail}</span>
+                  </a>
+                  <button
+                    onClick={handleCopyEmail}
+                    className="p-1 text-[#8A857E] hover:text-[#E7A52B] transition-colors cursor-pointer rounded"
+                    title="Copy email address"
+                  >
+                    {emailCopied ? (
+                      <Check className="w-3 h-3 text-[#2D7A52]" />
+                    ) : (
+                      <Copy className="w-3 h-3" />
+                    )}
+                  </button>
+                </div>
+                {emailCopied && (
+                  <span className="text-[10px] text-[#2D7A52] block font-semibold">
+                    Copied to clipboard!
+                  </span>
+                )}
               </li>
               <li>
                 <button
@@ -273,12 +328,27 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               Terms
             </button>
             <span>&bull;</span>
-            <button
-              onClick={() => onNavigate("/contact")}
-              className="hover:text-white transition-colors"
-            >
-              support@noakhalikitchen.com
-            </button>
+            <div className="flex items-center gap-1.5">
+              <a
+                href={`mailto:${contactEmail}?subject=Noakhali%20Kitchen%20Inquiry%20%26%20Feedback`}
+                className="hover:text-[#E7A52B] transition-colors inline-flex items-center gap-1 text-white"
+                title="Send email to support@noakhalikitchen.com"
+              >
+                <Mail className="w-3 h-3 text-[#E7A52B]" />
+                <span>{contactEmail}</span>
+              </a>
+              <button
+                onClick={handleCopyEmail}
+                className="text-[#8A857E] hover:text-[#E7A52B] transition-colors cursor-pointer p-0.5"
+                title="Copy email address"
+              >
+                {emailCopied ? (
+                  <Check className="w-3 h-3 text-[#2D7A52]" />
+                ) : (
+                  <Copy className="w-3 h-3" />
+                )}
+              </button>
+            </div>
           </div>
         </div>
       </div>

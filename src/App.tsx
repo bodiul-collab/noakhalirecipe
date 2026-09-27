@@ -109,6 +109,16 @@ const extractRecipeSlug = (r: string) => {
     ) {
       return "earth-smoothie";
     }
+    if (
+      raw === "haji-biryani" ||
+      raw === "hazi-biryani" ||
+      raw === "dhaka-haji-biryani" ||
+      raw === "old-dhaka-biryani" ||
+      raw === "puran-dhaka-haji-biryani" ||
+      raw === "puran-dhaka-biryani"
+    ) {
+      return "old-dhaka-haji-biryani";
+    }
     return raw;
   }
   return null;
@@ -635,9 +645,19 @@ export default function App() {
       return <AboutView onNavigate={navigate} />;
     }
 
-    // Contact Page
-    if (path === "/contact" || path.startsWith("/contact/")) {
-      return <ContactView />;
+    // Contact & Feedback Page
+    if (
+      path === "/contact" ||
+      path.startsWith("/contact/") ||
+      path === "/feedback" ||
+      path.startsWith("/feedback/") ||
+      path === "/contact-us" ||
+      path.startsWith("/contact-us/") ||
+      path === "/contact-and-feedback" ||
+      path === "/support" ||
+      path.startsWith("/support/")
+    ) {
+      return <ContactView onNavigate={navigate} />;
     }
 
     // Legal Pages

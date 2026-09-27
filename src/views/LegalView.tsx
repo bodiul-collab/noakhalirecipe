@@ -75,7 +75,13 @@ export const LegalView: React.FC<LegalViewProps> = ({ initialTab = "privacy" }) 
                 3. Your Rights &amp; Data Security
               </h2>
               <p>
-                We never sell, trade, or distribute your email address to unauthorized parties. You may unsubscribe from our newsletter at any time via the link in each email or by contacting support@noakhalikitchen.com.
+                We never sell, trade, or distribute your email address to unauthorized parties. You may unsubscribe from our newsletter at any time via the link in each email or by contacting{" "}
+                <a
+                  href="mailto:support@noakhalikitchen.com?subject=Privacy%20and%20Data%20Inquiry"
+                  className="text-[#E97520] hover:underline font-semibold"
+                >
+                  support@noakhalikitchen.com
+                </a>.
               </p>
             </div>
           )}

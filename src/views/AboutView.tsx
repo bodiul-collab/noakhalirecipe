@@ -1,5 +1,5 @@
 import React from "react";
-import { ShieldCheck, Heart, Users, Utensils } from "lucide-react";
+import { ShieldCheck, Heart, Users, Utensils, Mail, ArrowRight } from "lucide-react";
 import { IMAGES } from "../data/assets";
 import { AboutSection } from "../components/AboutSection";
 
@@ -120,6 +120,37 @@ export const AboutView: React.FC<{ onNavigate: (route: string) => void }> = ({
                 Food science specialist analyzing ingredient supply chains, enzyme manufacturing, and commercial food labeling standards for Muslim consumers.
               </p>
             </div>
+          </div>
+        </div>
+
+        {/* Contact & Feedback Invitation */}
+        <div className="bg-[#242423] text-white rounded-2xl p-6 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-md border border-[#3A3835]">
+          <div className="space-y-2 text-center md:text-left">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#E7A52B]">
+              WE VALUE YOUR CULINARY FEEDBACK
+            </span>
+            <h3 className="text-2xl sm:text-3xl font-bold font-serif-editorial">
+              Have a Recipe Question or Suggestion?
+            </h3>
+            <p className="text-xs sm:text-sm text-[#C5C0B7] max-w-lg leading-relaxed">
+              Whether you cooked a recipe, need an ingredient substitute, or want to suggest a regional heritage dish, our editorial team is here for you.
+            </p>
+          </div>
+          <div className="flex flex-wrap items-center gap-3 shrink-0">
+            <a
+              href="mailto:support@noakhalikitchen.com?subject=Noakhali%20Kitchen%20Recipe%20Feedback"
+              className="px-5 py-3 rounded-lg text-xs font-bold bg-[#33312E] hover:bg-[#3D3A36] text-[#E6E1D8] border border-[#524E48] transition-all flex items-center gap-2"
+            >
+              <Mail className="w-4 h-4 text-[#E7A52B]" />
+              <span>support@noakhalikitchen.com</span>
+            </a>
+            <button
+              onClick={() => onNavigate("/contact")}
+              className="px-5 py-3 rounded-lg text-xs font-bold bg-[#E97520] hover:bg-[#D75D17] text-white transition-all flex items-center gap-2 cursor-pointer shadow-xs"
+            >
+              <span>Contact &amp; Feedback Form</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
           </div>
         </div>
       </div>
