@@ -3,6 +3,7 @@ import {
   Mail,
   Send,
   CheckCircle2,
+  AlertCircle,
   Copy,
   Check,
   ExternalLink,
@@ -26,9 +27,11 @@ export const ContactView: React.FC<ContactViewProps> = ({ onNavigate }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [copied, setCopied] = useState(false);
-  const [serverMessage, setServerMessage] = useState<string | null>(null);
+  const [successMessage, setSuccessMessage] = useState<string | null>(null);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const contactEmail = "support@noakhalikitchen.com";
+  const web3FormsAccessKey = "fa330ffe-3dee-46a9-834a-f312bd21b10b";
 
   const handleCopyEmail = async () => {
     try {
@@ -47,7 +50,6 @@ export const ContactView: React.FC<ContactViewProps> = ({ onNavigate }) => {
       setCopied(true);
       setTimeout(() => setCopied(false), 3000);
     } catch {
-      // Fallback
       setCopied(true);
       setTimeout(() => setCopied(false), 3000);
     }
@@ -83,28 +85,44 @@ export const ContactView: React.FC<ContactViewProps> = ({ onNavigate }) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setServerMessage(null);
+    setErrorMessage(null);
+    setSuccessMessage(null);
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
         body: JSON.stringify({
+          access_key: web3FormsAccessKey,
           name,
           email,
-          subject: getSubjectText(subject),
           message,
+          subject: `[Noakhali Kitchen] ${getSubjectText(subject)} from ${name}`,
+          from_name: "Noakhali Kitchen Contact Form",
         }),
       });
 
-      if (response.ok) {
-        const data = await response.json();
-        setServerMessage(data.message || null);
+      const data = await response.json();
+
+      if (response.status === 200 && data.success) {
+        setSuccessMessage(
+          data.message || "Form submitted successfully. We have received your email!"
+        );
+        setSubmitted(true);
+      } else {
+        setErrorMessage(
+          data.message ||
+            `Submission failed with status code ${response.status}. Please verify your fields or contact support directly.`
+        );
       }
-      setSubmitted(true);
-    } catch {
-      // Graceful offline fallback
-      setSubmitted(true);
+    } catch (err: any) {
+      setErrorMessage(
+        err?.message ||
+          `Network connection error. Please verify your internet connection or email us directly at ${contactEmail}.`
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -211,24 +229,31 @@ export const ContactView: React.FC<ContactViewProps> = ({ onNavigate }) => {
                 </div>
                 <div className="space-y-2">
                   <h3 className="text-2xl font-bold text-[#242423] font-serif-editorial">
-                    Message Received!
+                    Message Sent Successfully!
                   </h3>
+                  {successMessage && (
+                    <div className="p-3 bg-[#EBF7F0] border border-[#2D7A52]/30 rounded-lg max-w-md mx-auto text-xs font-semibold text-[#2D7A52]">
+                      {successMessage}
+                    </div>
+                  )}
                   <p className="text-sm text-[#55514B] max-w-md mx-auto leading-relaxed">
-                    {serverMessage ||
-                      `Thank you for reaching out, ${name || "friend"}! Your message has been routed to our culinary editorial team. We will review and reply to ${email || "your email"} within 24–48 hours.`}
+                    Thank you for reaching out, <strong>{name || "friend"}</strong>! Your message has been transmitted to our kitchen inbox (<strong>{contactEmail}</strong>). We will review and reply to <strong>{email || "your email"}</strong> within 24–48 hours.
                   </p>
                 </div>
 
                 <div className="p-4 bg-[#FAF9F6] border border-[#E6E1D8] rounded-xl max-w-md mx-auto text-left text-xs space-y-2">
-                  <span className="font-bold text-[#30302F] block">Quick Summary:</span>
+                  <span className="font-bold text-[#30302F] block">Submission Summary:</span>
                   <div className="text-[#55514B]">
                     <strong>Topic:</strong> {getSubjectText(subject)}
                   </div>
                   {email && (
                     <div className="text-[#55514B]">
-                      <strong>Confirmation sent to:</strong> {email}
+                      <strong>Sender:</strong> {email}
                     </div>
                   )}
+                  <div className="text-[#55514B]">
+                    <strong>Destination:</strong> {contactEmail} (Web3Forms API)
+                  </div>
                 </div>
 
                 <div className="pt-4 flex flex-wrap items-center justify-center gap-3">
@@ -236,6 +261,8 @@ export const ContactView: React.FC<ContactViewProps> = ({ onNavigate }) => {
                     type="button"
                     onClick={() => {
                       setSubmitted(false);
+                      setSuccessMessage(null);
+                      setErrorMessage(null);
                       setMessage("");
                     }}
                     className="px-5 py-2.5 text-xs font-bold border border-[#E6E1D8] hover:border-[#30302F] text-[#30302F] rounded-lg transition-colors cursor-pointer"
@@ -263,13 +290,21 @@ export const ContactView: React.FC<ContactViewProps> = ({ onNavigate }) => {
                 </div>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-5 text-xs">
+              <form
+                action="https://api.web3forms.com/submit"
+                method="POST"
+                onSubmit={handleSubmit}
+                className="space-y-5 text-xs"
+              >
+                {/* Hidden access_key field as specified by Web3Forms */}
+                <input type="hidden" name="access_key" value={web3FormsAccessKey} />
+
                 <div>
                   <h3 className="text-lg font-bold text-[#242423] font-serif-editorial mb-1">
                     Send a Message to the Kitchen
                   </h3>
                   <p className="text-xs text-[#77736D]">
-                    Fill out the form below or email us directly at{" "}
+                    This form securely delivers your email to{" "}
                     <a
                       href={`mailto:${contactEmail}`}
                       className="text-[#E97520] font-semibold hover:underline"
@@ -280,6 +315,17 @@ export const ContactView: React.FC<ContactViewProps> = ({ onNavigate }) => {
                   </p>
                 </div>
 
+                {/* Real API Error Message Banner */}
+                {errorMessage && (
+                  <div className="p-4 rounded-xl bg-[#FDF2F2] border border-[#F87171] text-[#991B1B] text-xs flex items-start gap-3">
+                    <AlertCircle className="w-5 h-5 shrink-0 text-[#DC2626] mt-0.5" />
+                    <div className="space-y-1">
+                      <span className="font-bold block">Submission Error from API</span>
+                      <p className="leading-relaxed">{errorMessage}</p>
+                    </div>
+                  </div>
+                )}
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-[#30302F] font-bold mb-1.5">
@@ -287,6 +333,7 @@ export const ContactView: React.FC<ContactViewProps> = ({ onNavigate }) => {
                     </label>
                     <input
                       type="text"
+                      name="name"
                       required
                       value={name}
                       onChange={(e) => setName(e.target.value)}
@@ -301,6 +348,7 @@ export const ContactView: React.FC<ContactViewProps> = ({ onNavigate }) => {
                     </label>
                     <input
                       type="email"
+                      name="email"
                       required
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
@@ -315,6 +363,7 @@ export const ContactView: React.FC<ContactViewProps> = ({ onNavigate }) => {
                     Subject / Topic <span className="text-[#E97520]">*</span>
                   </label>
                   <select
+                    name="subject"
                     value={subject}
                     onChange={(e) => setSubject(e.target.value)}
                     className="w-full px-3.5 py-2.5 bg-[#FAF9F6] border border-[#E6E1D8] rounded-lg focus:outline-none focus:border-[#E97520] focus:bg-white transition-all text-xs cursor-pointer"
@@ -334,6 +383,7 @@ export const ContactView: React.FC<ContactViewProps> = ({ onNavigate }) => {
                   </label>
                   <textarea
                     rows={6}
+                    name="message"
                     required
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
@@ -353,7 +403,7 @@ export const ContactView: React.FC<ContactViewProps> = ({ onNavigate }) => {
                     ) : (
                       <Send className="w-3.5 h-3.5" />
                     )}
-                    <span>{isSubmitting ? "Sending..." : "Send Message"}</span>
+                    <span>{isSubmitting ? "Sending via Web3Forms..." : "Submit"}</span>
                   </button>
 
                   <a
