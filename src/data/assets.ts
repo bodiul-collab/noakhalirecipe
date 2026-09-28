@@ -164,6 +164,9 @@ import gourmetBeefBurgerImg from "../assets/images/gourmet_beef_burger_179051849
 import coconutCloudSmoothieImg from "../assets/images/coconut_cloud_smoothie_1790518695566.jpg";
 import earthSmoothieImg from "../assets/images/earth_smoothie_1790518870616.jpg";
 import oldDhakaHajiBiryaniImg from "../assets/images/old_dhaka_haji_biryani_1790540388252.jpg";
+import boiledRiceImg from "../assets/images/boiled_rice_1790601579088.jpg";
+import bengaliBeefPastaImg from "../assets/images/bengali_beef_pasta_1790601875509.jpg";
+import sujiHalwaImg from "../assets/images/suji_halwa_halva_1790602141459.jpg";
 import noakhaliLogoFullImg from "../assets/images/noakhali_kitchen_logo_1789072776240.jpg";
 import noakhaliLogoIconImg from "../assets/images/noakhali_kitchen_logo_1789072776240.jpg";
 
@@ -358,9 +361,13 @@ export const IMAGES = {
   periPeriChicken: periPeriChickenImg,
   halalPeriPeriChicken: periPeriChickenImg,
   piriPiriChicken: periPeriChickenImg,
-  easyBasmatiRice: easyBasmatiRiceImg,
-  basmatiRice: easyBasmatiRiceImg,
-  perfectBasmatiRice: easyBasmatiRiceImg,
+  boiledRice: boiledRiceImg,
+  boiledRiceRecipe: boiledRiceImg,
+  steamedRice: boiledRiceImg,
+  whiteRice: boiledRiceImg,
+  easyBasmatiRice: boiledRiceImg,
+  basmatiRice: boiledRiceImg,
+  perfectBasmatiRice: boiledRiceImg,
   saagPaneer: saagPaneerImg,
   palakPaneer: saagPaneerImg,
   halalSaagPaneer: saagPaneerImg,
@@ -502,6 +509,18 @@ export const IMAGES = {
   oldDhakaHajiBiryani: oldDhakaHajiBiryaniImg,
   hajiBiryani: oldDhakaHajiBiryaniImg,
   haziBiryani: oldDhakaHajiBiryaniImg,
+  bengaliBeefPasta: bengaliBeefPastaImg,
+  beefPasta: bengaliBeefPastaImg,
+  halalBeefPasta: bengaliBeefPastaImg,
+  bengaliKeemaPasta: bengaliBeefPastaImg,
+  keemaPasta: bengaliBeefPastaImg,
+  sujiHalwa: sujiHalwaImg,
+  sujiHalva: sujiHalwaImg,
+  soojiHalwa: sujiHalwaImg,
+  halwaSuji: sujiHalwaImg,
+  sheera: sujiHalwaImg,
+  ravaKesari: sujiHalwaImg,
+  semolinaHalwa: sujiHalwaImg,
   logoFull: noakhaliLogoFullImg,
   logoIcon: noakhaliLogoIconImg,
 };

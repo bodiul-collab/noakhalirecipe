@@ -311,14 +311,61 @@ const RECIPE_EDITORIAL_EXTRAS: Record<
       "Forgetting to check the paneer label for Halal-friendly microbial or vegetarian rennet.",
     ],
   },
-  "easy-basmati-rice-cooking": {
+  "boiled-rice": {
     whySpecial:
-      "The definitive guide to restaurant-fluffy, fragrant basmati rice: aged extra-long Himalayan grains washed of excess starch, soaked for optimal elongation, and cooked using the foolproof absorption method with a hint of ghee and whole aromatics for tender, separated grains that never clump or turn mushy.",
+      "The definitive guide to restaurant-fluffy, fragrant boiled rice (ابلے ہوئے چاول / সিদ্ধ চাল / أرز مسلوق): grains washed of excess surface starch, soaked for optimal grain elongation, and cooked using the foolproof absorption method with a hint of ghee, sea salt, cracked black pepper, and fresh parsley garnish so every grain stays completely separate and tender.",
     cookingTips: [
       "Rinse the grains gently under cold water in a fine mesh sieve until the water runs completely crystal clear; this washes away excess surface amylose that causes clumping.",
       "Always soak basmati rice for 25 to 30 minutes in room temperature water before cooking; this allows the grains to absorb water to the core so they expand lengthwise without fracturing.",
       "The golden ratio: for soaked basmati rice, use exactly 1.5 cups of boiling water or broth per 1 cup of dry rice.",
       "Keep the lid tightly sealed on low heat for 12 minutes, then let it rest off the heat undisturbed for 10 minutes before fluffing with a wide fork or paddle.",
+      "Finish with freshly cracked black pepper and finely chopped parsley or coriander over the top for vibrant culinary presentation as shown in the bowl.",
+    ],
+    commonMistakes: [
+      "Skipping the 30-minute pre-soak, which leads to unevenly cooked grains that snap in the middle.",
+      "Stirring the rice with a spoon while it is simmering; stirring breaks the delicate starch chains and makes the rice sticky and gummy.",
+      "Taking off the lid prematurely, which releases essential steam and ruins the absorption ratio.",
+    ],
+  },
+  "bengali-beef-pasta": {
+    whySpecial:
+      "The definitive comfort fusion of Italian pasta craftsmanship and vibrant Bengali flavors: ridged rigatoni tossed in a robustly spiced keema ragù with ginger, garlic, sweet caramelized onions, and fragrant Shahi garam masala, served straight from a sizzling stainless skillet.",
+    cookingTips: [
+      "Always cook the pasta 1 minute shy of al dente in generously salted water so it finishes cooking in the bubbling skillet ragù without losing bite.",
+      "Ladle out 1 cup of hot starchy cooking water right before draining; the starches bind the olive oil and tomato juices into a velvety emulsion that glazes the ridges.",
+      "Fry the tomato paste directly on the hot pan surface for 1 to 2 minutes to caramelize its sugars and banish any raw canned acidity.",
+      "Fold in the Shahi garam masala and fresh parsley right at the end to keep the delicate floral aromatics alive.",
+    ],
+    commonMistakes: [
+      "Rinsing the boiled pasta with cold tap water, which washes away the crucial starch coating that makes sauce adhere.",
+      "Skipping browning the ground beef thoroughly; deep browning triggers the Maillard reaction essential for rich savory flavor.",
+      "Using smooth pasta rather than ridged (rigate) shapes; ridged tubular pasta traps the minced beef inside and outside each piece.",
+    ],
+  },
+  "suji-halwa-halva": {
+    whySpecial:
+      "The golden standard of South Asian sweetmaking: coarse semolina slow-roasted in pure deshi cow ghee until nutty and amber-gold, simmered in cardamom saffron syrup, and served in an engraved copper bowl with roasted cashews, whole almonds, and emerald pistachios.",
+    cookingTips: [
+      "Always roast the semolina slowly on medium-low flame for a full 10 to 12 minutes until it turns warm amber-gold and releases an irresistible toasted shortbread fragrance.",
+      "Keep the cardamom sugar syrup piping hot before adding; pouring cold syrup causes semolina grains to clump and fracture.",
+      "Add whole cashews, almonds, and pistachios for rich crunch and authentic halwai visual contrast as shown in the copper bowl.",
+      "Cover and steam (dum) for 5 minutes off the heat after cooking to let the trapped steam fully plump the semolina granules.",
+    ],
+    commonMistakes: [
+      "Rushing the roasting step over high heat, which scorches the outside of the semolina grains while leaving the interior raw and chalky.",
+      "Skimping on pure cow ghee; ghee is not just cooking fat here, it is the primary flavor carrier and keeps the halwa luscious and separate.",
+      "Boiling the sugar syrup into a thick thread before adding; a fluid hot infusion is required so the dry roasted semolina can drink in the moisture.",
+    ],
+  },
+  "easy-basmati-rice-cooking": {
+    whySpecial:
+      "The definitive guide to restaurant-fluffy, fragrant boiled rice (ابلے ہوئے چاول / সিদ্ধ চাল / أرز مسلوق): grains washed of excess surface starch, soaked for optimal grain elongation, and cooked using the foolproof absorption method with a hint of ghee, sea salt, cracked black pepper, and fresh parsley garnish so every grain stays completely separate and tender.",
+    cookingTips: [
+      "Rinse the grains gently under cold water in a fine mesh sieve until the water runs completely crystal clear; this washes away excess surface amylose that causes clumping.",
+      "Always soak basmati rice for 25 to 30 minutes in room temperature water before cooking; this allows the grains to absorb water to the core so they expand lengthwise without fracturing.",
+      "The golden ratio: for soaked basmati rice, use exactly 1.5 cups of boiling water or broth per 1 cup of dry rice.",
+      "Keep the lid tightly sealed on low heat for 12 minutes, then let it rest off the heat undisturbed for 10 minutes before fluffing with a wide fork or paddle.",
+      "Finish with freshly cracked black pepper and finely chopped parsley or coriander over the top for vibrant culinary presentation as shown in the bowl.",
     ],
     commonMistakes: [
       "Skipping the 30-minute pre-soak, which leads to unevenly cooked grains that snap in the middle.",

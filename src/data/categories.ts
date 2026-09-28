@@ -36,7 +36,7 @@ export const CATEGORIES: CategoryHub[] = [
     fullDescription:
       "From melt-in-your-mouth slow-braised Bengali beef bhuna to Dhaka-style beef tehari and rich bone marrow curries, our Halal beef collection celebrates deep caramelized flavors and patient cooking techniques.",
     image: IMAGES.beefBhuna,
-    featuredRecipeSlugs: ["moroccan-lamb-tagine", "beef-nahari", "authentic-bangladeshi-beef-curry", "carne-asada-steak-tacos", "royal-hyderabadi-mutton-haleem", "beef-lo-mein", "chinese-beef-stir-fry", "steak-fajitas", "keema-paratha", "corned-beef-reuben-sandwich", "rogan-josh", "lamb-curry", "kacchi-biryani", "beef-kala-bhuna", "bengali-texas-beef-bbq", "pakistani-aloo-keema", "bangladeshi-beef-noodles", "bihari-boti-kebabs", "seekh-kebab", "haleem", "authentic-nihari", "bengali-beef-tehari", "bengali-beef-bhuna", "birria-tacos-beef-quesabirria-consome", "kofta-tagine-with-eggs-middle-eastern-flavors", "chittagong-mezbani-beef-curry", "kibbeh-lebanese-fried-bulgur-stuffed-shells", "classic-baked-beef-lasagna-bolognese", "patlican-kebabi-turkish-eggplant-kebab", "turkish-lamb-chops-kuzu-pirzola", "turkish-izgara-kofte-kebab", "adana-kebab-hand-minced-lamb", "yogurt-kebab-yogurtlu-kebap"],
+    featuredRecipeSlugs: ["bengali-beef-pasta", "moroccan-lamb-tagine", "beef-nahari", "authentic-bangladeshi-beef-curry", "carne-asada-steak-tacos", "royal-hyderabadi-mutton-haleem", "beef-lo-mein", "chinese-beef-stir-fry", "steak-fajitas", "keema-paratha", "corned-beef-reuben-sandwich", "rogan-josh", "lamb-curry", "kacchi-biryani", "beef-kala-bhuna", "bengali-texas-beef-bbq", "pakistani-aloo-keema", "bangladeshi-beef-noodles", "bihari-boti-kebabs", "seekh-kebab", "haleem", "authentic-nihari", "bengali-beef-tehari", "bengali-beef-bhuna", "birria-tacos-beef-quesabirria-consome", "kofta-tagine-with-eggs-middle-eastern-flavors", "chittagong-mezbani-beef-curry", "kibbeh-lebanese-fried-bulgur-stuffed-shells", "classic-baked-beef-lasagna-bolognese", "patlican-kebabi-turkish-eggplant-kebab", "turkish-lamb-chops-kuzu-pirzola", "turkish-izgara-kofte-kebab", "adana-kebab-hand-minced-lamb", "yogurt-kebab-yogurtlu-kebap"],
     faqs: [
       {
         question: "Which beef cuts are best for Bengali bhuna?",
@@ -131,7 +131,7 @@ export const CATEGORIES: CategoryHub[] = [
     fullDescription:
       "The staple combination that anchors Bengali and South Asian hospitality. Learn the fine art of blooming whole spices in pure ghee, parboiling basmati rice, and creating layered gravies that bring families together.",
     image: IMAGES.chickenRoast,
-    featuredRecipeSlugs: ["bengali-aloo-dum", "bangladeshi-spiced-shrimp-and-green-bean-stir-fry", "moroccan-lamb-tagine", "beef-nahari", "authentic-bangladeshi-beef-curry", "fish-egg-curry-ilish", "fish-biryani", "easy-basmati-rice-cooking", "rogan-josh", "lamb-curry", "pakistani-aloo-keema", "bengali-chicken-biryani", "chicken-tikka-masala", "chicken-karahi", "haleem", "chicken-biryani", "bengali-pulao", "bengali-khichuri-bhuna", "bengali-chicken-roast", "bengali-beef-tehari", "bengali-fish-curry-macher-jhol", "bengali-chicken-curry-murgir-jhol", "authentic-arabian-chicken-mandi", "chicken-machboos-majboos-kabsa", "pillowy-restaurant-style-garlic-butter-naan", "halal-chicken-biryani", "vegetable-bhuna-khichuri"],
+    featuredRecipeSlugs: ["boiled-rice", "bengali-aloo-dum", "bangladeshi-spiced-shrimp-and-green-bean-stir-fry", "moroccan-lamb-tagine", "beef-nahari", "authentic-bangladeshi-beef-curry", "fish-egg-curry-ilish", "fish-biryani", "easy-basmati-rice-cooking", "rogan-josh", "lamb-curry", "pakistani-aloo-keema", "bengali-chicken-biryani", "chicken-tikka-masala", "chicken-karahi", "haleem", "chicken-biryani", "bengali-pulao", "bengali-khichuri-bhuna", "bengali-chicken-roast", "bengali-beef-tehari", "bengali-fish-curry-macher-jhol", "bengali-chicken-curry-murgir-jhol", "authentic-arabian-chicken-mandi", "chicken-machboos-majboos-kabsa", "pillowy-restaurant-style-garlic-butter-naan", "halal-chicken-biryani", "vegetable-bhuna-khichuri"],
     faqs: [
       {
         question: "What rice variety gives the most authentic aroma?",
@@ -170,7 +170,7 @@ export const CATEGORIES: CategoryHub[] = [
     fullDescription:
       "Celebrate sweet milestones with luxurious Eid desserts perfumed with green cardamom, saffron threads, pistachios, and thickened whole milk. All made without non-halal gelatin or alcohol-based vanilla extracts.",
     image: IMAGES.gulabJamun,
-    featuredRecipeSlugs: ["vibrant-dragon-fruit-banana-superfood-nice-cream-sorbet", "velvety-blueberry-banana-fruit-sorbet", "narkel-puli-pitha", "traditional-teler-pitha-gur-pitha", "traditional-vapa-pitha-steamed-coconut-jaggery", "milk-powder-burfi-quick-mawa-fudge", "shahi-besan-laddu", "basbousa-semolina-cake", "mango-coconut-burfi", "crispy-saffron-jalebi", "shahi-gulab-jamun", "kheer-shahi-rice-kheer-payesh", "royal-gajar-ka-halwa", "bengali-roshogolla"],
+    featuredRecipeSlugs: ["suji-halwa-halva", "vibrant-dragon-fruit-banana-superfood-nice-cream-sorbet", "velvety-blueberry-banana-fruit-sorbet", "narkel-puli-pitha", "traditional-teler-pitha-gur-pitha", "traditional-vapa-pitha-steamed-coconut-jaggery", "milk-powder-burfi-quick-mawa-fudge", "shahi-besan-laddu", "basbousa-semolina-cake", "mango-coconut-burfi", "crispy-saffron-jalebi", "shahi-gulab-jamun", "kheer-shahi-rice-kheer-payesh", "royal-gajar-ka-halwa", "bengali-roshogolla"],
     faqs: [
       {
         question: "Is vanilla extract Halal?",
@@ -210,6 +210,7 @@ export const CATEGORIES: CategoryHub[] = [
       "Save hours during busy workweeks, university semesters, and family routines with smart Halal batch-cooking strategies. From spiced sheet-pan chicken shawarma bowls with golden turmeric rice to Moroccan harissa beef meatballs and slow-simmered stews, our meal prep guides ensure healthy, flavorful, 100% Halal lunches and dinners every single day.",
     image: IMAGES.mealPrep,
     featuredRecipeSlugs: [
+      "boiled-rice",
       "easy-basmati-rice-cooking",
       "bengali-texas-chicken-bbq",
       "bengali-texas-beef-bbq",

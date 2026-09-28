@@ -471,14 +471,14 @@ const DEFAULT_COLLECTION: CollectionCardItem[] = [
   },
   {
     id: "card-easy-basmati-rice",
-    slug: "easy-basmati-rice-cooking",
-    title: "Easy Fluffy Basmati Rice (সহজে বাসমতী চাল রান্না)",
+    slug: "boiled-rice",
+    title: "Boiled Rice (ابلے ہوئے چاول / সিদ্ধ চাল / أرز مسلوق)",
     description:
-      "Foolproof technique for fragrance-rich, non-sticky, distinct extra-long grain basmati rice with gentle soaking, steam-absorption & fresh herb finish.",
-    heritageTag: "🍚 Royal Grain & Everyday Halal Essential",
+      "Foolproof technique for fluffy, aromatic, non-sticky boiled rice with tender separate grains, cracked black pepper & fresh herb finish.",
+    heritageTag: "🍚 Essential Halal Grain Staple",
     brandName: "Noakhali Kitchen",
-    halalBadge: "100% Halal Certified",
-    image: IMAGES.easyBasmatiRice,
+    halalBadge: "100% Halal Verified",
+    image: IMAGES.boiledRice,
   },
   {
     id: "card-peri-peri-chicken",
@@ -644,6 +644,28 @@ const DEFAULT_COLLECTION: CollectionCardItem[] = [
     brandName: "Noakhali Kitchen",
     halalBadge: "100% Halal Certified",
     image: IMAGES.chickenTikkaMasala,
+  },
+  {
+    id: "card-bengali-beef-pasta",
+    slug: "bengali-beef-pasta",
+    title: "Bengali Beef Pasta (বাঙালি বিফ পাস্তা / معكرونة لحم)",
+    description:
+      "Comforting skillet rigatoni pasta coated in a savory spiced minced beef keema ragù with ginger, garlic, tomatoes, and Shahi garam masala.",
+    heritageTag: "🍝 Bengali-Italian Comfort Fusion",
+    brandName: "Noakhali Kitchen",
+    halalBadge: "100% Halal Certified",
+    image: IMAGES.bengaliBeefPasta,
+  },
+  {
+    id: "card-suji-halwa",
+    slug: "suji-halwa-halva",
+    title: "Suji Halwa Halva (سوجی کا حلوہ / সুজির হালুয়া)",
+    description:
+      "Glistening coarse semolina slow-roasted in pure cow ghee with green cardamom, roasted cashews, whole almonds & emerald pistachios.",
+    heritageTag: "🍯 Royal South Asian Halwai Sweet",
+    brandName: "Noakhali Kitchen",
+    halalBadge: "100% Halal Sweet",
+    image: IMAGES.sujiHalwa,
   },
 ];
 

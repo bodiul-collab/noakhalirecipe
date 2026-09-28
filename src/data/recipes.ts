@@ -15593,15 +15593,15 @@ const BASE_RECIPES: Recipe[] = [
   {
     id: "rec-easy-basmati-rice",
     slug: "easy-basmati-rice-cooking",
-    title: "Easy Basmati Rice Cooking (সহজে বাসমতী চাল রান্না)",
+    title: "Boiled Rice (ابلے ہوئے چاول / সিদ্ধ চাল / أرز مسلوق)",
     category: "Rice & Curry",
     categorySlug: "halal-rice-curry",
-    cuisine: "South Asian / Middle Eastern / Bengali",
+    cuisine: "South Asian / Middle Eastern / Bengali / Global Halal",
     description:
-      "Master the foolproof absorption technique for cooking fluffy, aromatic, non-sticky extra-long grain basmati rice with individual separated grains, gentle ghee aroma, and fresh herb garnish.",
+      "Master the foolproof technique for cooking fluffy, aromatic, non-sticky boiled rice (ابلے ہوئے چاول / সিদ্ধ চাল / أرز مسلوق) with perfectly separated grains, tender texture, cracked black pepper, and fresh herb garnish.",
     introStory:
-      "Basmati rice—etymologically rooted in the Sanskrit word 'Vasmati' meaning 'fragrant' or 'perfumed' (সহজে বাসমতী চাল রান্না / طريقة سهلة لطهي أرز البسمتي)—is the indisputable crowning jewel of South Asian, Middle Eastern, and Persian royal dining. Yet home cooks frequently struggle with either broken, mushy clumping or undercooked, brittle grains. The secret to restaurant-grade, cloud-fluffy basmati rice with elongated, needle-sharp separate grains lies in three non-negotiable culinary principles: gently washing away surface amylose starch until the water is completely clear, allowing the dried grains to soak for 25 to 30 minutes so moisture reaches the core without fracturing, and applying the precise 1:1.5 water-to-soaked-rice steam absorption ratio. Simmered with a hint of pure cow ghee, whole green cardamom, and bay leaf, this foundational Halal recipe produces tender, feather-light grains that elevate any curry, roast, or grilled kebab into an unforgettable feast.",
-    heroImage: IMAGES.easyBasmatiRice,
+      "Boiled rice—celebrated across global culinary cultures as 'ابلے ہوئے چاول' (Ublay Hue Chawal) in Urdu, 'সিদ্ধ চাল' (Siddha Chal) in Bengali, and 'أرز مسلوق' (Aruz Maslooq) in Arabic—is the quintessential heart of everyday Halal home cooking. Whether served as a comforting canvas for rich slow-cooked curries (Bhuna, Rezala, Nihari), golden lentil dal, or grilled kebabs, the difference between mediocre mushy rice and sublime, restaurant-fluffy boiled rice comes down to technique. By thoroughly washing away cloudy surface starch, gently hydrating the grains, and controlling the simmer, each grain emerges light, tender, and distinctly separate. Lightly seasoned with fine sea salt, cracked black pepper, and finished with a scattering of freshly chopped parsley or cilantro as captured in our kitchen bowl, this foolproof recipe delivers comforting perfection every single time.",
+    heroImage: IMAGES.boiledRice,
     prepTimeMinutes: 10,
     cookTimeMinutes: 15,
     totalTimeMinutes: 25,
@@ -15609,21 +15609,19 @@ const BASE_RECIPES: Recipe[] = [
     difficulty: "Easy",
     calories: 205,
     rating: 4.98,
-    reviewCount: 184,
+    reviewCount: 196,
     isTrending: true,
     isFeatured: true,
     halalNotes:
-      "100% naturally Halal, vegetarian, vegan-adaptable, and gluten-free staple cooked with pure unadulterated cow ghee or cold-pressed olive oil and whole natural spices.",
+      "100% naturally Halal, vegetarian, vegan, and gluten-free staple cooked with wholesome natural grains, pure water, sea salt, and fresh herbs.",
     ingredients: [
-      { amount: "2", unit: "cups", name: "Aged extra-long grain Basmati rice", notes: "approx. 400g (look for aged 1121 or Himalayan basmati)" },
-      { amount: "3", unit: "cups", name: "Water or light Halal broth", notes: "720ml, boiling hot (exact 1:1.5 ratio for pre-soaked rice)" },
-      { amount: "1", unit: "tbsp", name: "Pure cow ghee or extra virgin olive oil", notes: "coats the grains to prevent sticking and imparts rich aroma" },
-      { amount: "1", unit: "tsp", name: "Fine sea salt", notes: "essential for seasoning the rice throughout" },
-      { amount: "2", unit: "pods", name: "Green cardamom", notes: "lightly crushed (optional for subtle royal aroma)" },
-      { amount: "1", unit: "small", name: "Cinnamon stick", notes: "about 1.5 inches (optional)" },
-      { amount: "1", unit: "leaf", name: "Bay leaf (tejpatta)", notes: "bruised (optional)" },
-      { amount: "1/2", unit: "tsp", name: "Fresh lemon juice", notes: "adds shine and helps keep grains dazzling white (optional)" },
-      { amount: "2", unit: "tbsp", name: "Fresh cilantro or flat-leaf parsley", notes: "finely chopped for finishing garnish" },
+      { amount: "2", unit: "cups", name: "Extra-long grain Basmati or aromatic white rice", notes: "approx. 400g, aged grain preferred" },
+      { amount: "3", unit: "cups", name: "Water (for absorption) or 8 cups (for open boil & drain)", notes: "freshly boiled hot water" },
+      { amount: "1", unit: "tbsp", name: "Pure cow ghee or extra virgin olive oil", notes: "coats the grains for delicate sheen and separation" },
+      { amount: "1", unit: "tsp", name: "Fine sea salt", notes: "enhances natural grain sweetness" },
+      { amount: "1/4", unit: "tsp", name: "Freshly cracked black pepper", notes: "for light savory warmth as shown in photo" },
+      { amount: "2", unit: "tbsp", name: "Fresh flat-leaf parsley or cilantro", notes: "finely minced for vibrant green garnish" },
+      { amount: "1/2", unit: "tsp", name: "Fresh lemon juice", notes: "keeps the rice grains bright and pearly white (optional)" },
     ],
     substitutions: [
       {
@@ -23871,6 +23869,404 @@ const BASE_RECIPES: Recipe[] = [
       "Old Dhaka Haji Biryani Recipe (পুরান ঢাকার হাজি বিরিয়ানি) | Noakhali Kitchen",
     seoDescription:
       "Authentic Old Dhaka Haji Biryani recipe: tender bone-in mutton braised in mustard oil, sweet Chinigura rice, upright green chilies, and fragrant lime. 100% Halal.",
+  },
+  {
+    id: "rec-bengali-beef-pasta",
+    slug: "bengali-beef-pasta",
+    title: "Bengali Beef Pasta (বঙালি স্টাইল বিফ পাস্তা / بنگالی بیف پاستا / معكرونة لحم بقري بنغالية)",
+    category: "Beef",
+    categorySlug: "halal-beef",
+    cuisine: "Bengali / Italian-South Asian Fusion / Halal Comfort",
+    description:
+      "A comforting skillet pasta loaded with spiced minced Halal beef (keema ragù), rich roasted tomatoes, fragrant garlic and ginger, warm Bengali garam masala, al dente ridged rigatoni, and a shower of fresh green herbs.",
+    introStory:
+      "Across modern Bengali households, diaspora kitchens, and Dhaka cafes, 'Bengali Beef Pasta'—revered as 'বাঙালি স্টাইল বিফ পাস্তা' in Bengali, 'بنگالی بیف پاستا' in Urdu, and 'معكرونة لحم بقري بنغالية' in Arabic—is an iconic comfort food fusion. Combining the hearty, soul-warming richness of slow-simmered spiced minced beef (keema bhuna) with Italian bronze-cut rigatoni or penne, this dish marries the best of two culinary worlds. Ground lean Zabiha Halal beef is gently browned with caramelized sweet red onions, finely minced ginger, garlic, and fresh green chilies. It is then braised in crushed plum tomatoes infused with roasted cumin, coriander, turmeric, and fragrant Shahi garam masala until the sauce clings luxuriously to every noodle ridge. Finished with freshly cracked black pepper, finely chopped scallions, and flat-leaf parsley as showcased in our bubbling skillet pan, this 30-minute weeknight dinner delivers explosive flavor and pure family comfort.",
+    heroImage: IMAGES.bengaliBeefPasta,
+    prepTimeMinutes: 15,
+    cookTimeMinutes: 20,
+    totalTimeMinutes: 35,
+    servings: 4,
+    difficulty: "Easy",
+    calories: 520,
+    rating: 4.97,
+    reviewCount: 168,
+    isTrending: true,
+    isFeatured: true,
+    halalNotes:
+      "100% certified Halal, prepared with hand-slaughtered ground beef, zero wine or alcohol reductions, pure extra virgin olive oil, and verified natural tomato and spice bases.",
+    ingredients: [
+      { amount: "1", unit: "lb (450g)", name: "Lean ground Halal beef (85/15 or 90/10)", notes: "freshly minced Zabiha beef for optimal texture and flavor" },
+      { amount: "12", unit: "oz (340g)", name: "Rigatoni or Penne Rigate pasta", notes: "tubular bronze-die pasta with ridges to capture the spiced meat sauce" },
+      { amount: "1", unit: "cup", name: "Reserved starchy pasta cooking water", notes: "scooped out before draining; essential for emulsifying the sauce" },
+      { amount: "2", unit: "tbsp", name: "Extra virgin olive oil or pure cow ghee", notes: "for sautéing the aromatics" },
+      { amount: "1", unit: "large", name: "Red or yellow onion", notes: "finely diced (approx. 1.5 cups)" },
+      { amount: "1.5", unit: "tbsp", name: "Fresh garlic", notes: "finely minced (approx. 5 cloves)" },
+      { amount: "1", unit: "tbsp", name: "Fresh ginger", notes: "freshly grated" },
+      { amount: "2", unit: "medium", name: "Green bird's eye chilies", notes: "finely sliced (adjust to heat preference)" },
+      { amount: "1", unit: "can (14 oz / 400g)", name: "Crushed San Marzano tomatoes or tomato passata", notes: "sweet, rich tomato base" },
+      { amount: "2", unit: "tbsp", name: "Tomato paste", notes: "concentrated double-strength paste for deep savory umami" },
+      { amount: "1", unit: "tsp", name: "Ground cumin", notes: "freshly roasted" },
+      { amount: "1", unit: "tsp", name: "Ground coriander", notes: "fragrant and earthy" },
+      { amount: "1/2", unit: "tsp", name: "Turmeric powder", notes: "golden warmth" },
+      { amount: "1", unit: "tsp", name: "Kashmiri red chili powder or paprika", notes: "for rich vibrant color and gentle warmth" },
+      { amount: "1", unit: "tsp", name: "Shahi garam masala powder", notes: "cardamom, cinnamon, mace, and clove blend" },
+      { amount: "1", unit: "tsp", name: "Fine sea salt", notes: "divided, plus salt for the pasta water" },
+      { amount: "1/2", unit: "tsp", name: "Freshly cracked black pepper", notes: "coarsely ground" },
+      { amount: "1/3", unit: "cup", name: "Fresh flat-leaf parsley and cilantro", notes: "finely chopped, divided for sauce and finishing garnish" },
+      { amount: "2", unit: "stalks", name: "Fresh green scallions / spring onions", notes: "thinly sliced for fresh herbal pop" },
+    ],
+    substitutions: [
+      {
+        original: "Ground Halal beef",
+        substitute: "Ground Halal lamb, ground chicken thigh, or textured vegetable protein (soy keema)",
+        notes: "Ground lamb gives an even richer, Mughlai-style keema profile.",
+      },
+      {
+        original: "Rigatoni pasta",
+        substitute: "Penne rigate, cavatappi, fusilli, or gluten-free brown rice tubular pasta",
+        notes: "Any tubular or ridged pasta shape captures the beef morsels perfectly inside its cavity.",
+      },
+      {
+        original: "Shahi garam masala",
+        substitute: "Traditional Bengali gorom moshla (cinnamon, cardamom, cloves)",
+        notes: "Add at the very end of cooking to preserve the delicate sweet floral aroma.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Boil the Pasta to Perfect Al Dente",
+        instruction:
+          "Bring a large pot of water to a rolling boil and season generously with salt (approx. 1.5 tablespoons). Add the rigatoni or penne and cook, stirring occasionally, until just shy of al dente (about 10 to 11 minutes, or 1 minute less than package instructions). Right before draining, carefully ladle out and reserve 1 full cup of hot starchy pasta cooking water. Drain the pasta and set aside; do not rinse with cold water.",
+        tip: "Reserving the starchy pasta water is the secret to getting the spiced tomato beef sauce to cling silkily to the pasta tubes.",
+      },
+      {
+        step: 2,
+        title: "Sauté the Aromatics",
+        instruction:
+          "While the pasta boils, place a large deep stainless steel skillet or Dutch oven over medium heat. Add the olive oil (or pure ghee). Once shimmering, add the finely diced onion and sauté for 4 to 5 minutes until soft, translucent, and lightly golden around the edges. Stir in the minced garlic, grated ginger, and sliced green chilies, cooking for 1 minute until fragrant.",
+      },
+      {
+        step: 3,
+        title: "Brown the Minced Halal Beef (Keema)",
+        instruction:
+          "Increase the heat to medium-high and add the ground beef to the skillet. Use a wooden spatula to break up the beef into small, uniform morsels. Sauté vigorously for 5 to 6 minutes until all pink color is gone and the meat is nicely browned, allowing any rendered juices to cook down and caramelize.",
+      },
+      {
+        step: 4,
+        title: "Bloom the Bengali Spices & Tomato Paste",
+        instruction:
+          "Push the beef slightly to the sides of the pan to create a clearing in the center. Add the tomato paste and fry it directly on the hot pan surface for 1 to 2 minutes until it turns a deep brick-red. Sprinkle in the ground cumin, coriander, turmeric, Kashmiri chili powder, sea salt, and black pepper. Stir everything together with the beef for 1 minute so the hot oil blooms the aromatics.",
+      },
+      {
+        step: 5,
+        title: "Simmer the Rich Tomato-Beef Ragù",
+        instruction:
+          "Pour in the crushed tomatoes and 1/2 cup of the reserved hot starchy pasta water. Bring the mixture to a brisk simmer, then reduce heat to medium-low. Cover partially with a lid and let the sauce simmer for 8 to 10 minutes, stirring occasionally, until the sauce thickens, darkens, and the flavors marry into a savory, glossy ragù. Stir in the Shahi garam masala and half of the chopped fresh parsley.",
+      },
+      {
+        step: 6,
+        title: "Toss Pasta into the Skillet Ragù",
+        instruction:
+          "Add the drained rigatoni directly into the bubbling skillet with the spiced beef sauce. Toss and fold vigorously over low heat for 1 to 2 minutes. The ridges of the rigatoni will trap the seasoned ground meat and savory tomato glaze. If the sauce feels slightly dry, splash in 2 to 4 tablespoons of the remaining reserved pasta water until the noodles glisten with a luscious, saucy coating.",
+      },
+      {
+        step: 7,
+        title: "Garnish & Serve Family-Style",
+        instruction:
+          "Remove the skillet from heat. Scatter the remaining freshly chopped flat-leaf parsley and crisp sliced scallions over top, along with an extra grind of black pepper. Serve piping hot directly from the rustic skillet pan with a large serving spoon, or ladle into wide shallow pasta bowls alongside garlic toast and a crisp cucumber salad.",
+      },
+    ],
+    chefNotes: [
+      "Rigatoni Ridges (Rigate): Always use pasta with ridges (rigate). The wide hollow tubes and external ridges act like scoops, catching every bit of spiced minced beef and tomato so each forkful is balanced.",
+      "Starch Water Emulsion: Never skip the pasta cooking water. The starches suspended in the water bind the natural beef fats, olive oil, and tomato juices into a velvety emulsion that coats the pasta rather than sliding off to the pan bottom.",
+      "Garam Masala Timing: Always add the Shahi garam masala at the very end of simmering. Adding it too early causes the volatile aromatic oils of cardamom and cinnamon to dissipate during cooking.",
+      "Green Chili Customization: For authentic Dhaka cafe heat, use 2 fresh bird's eye chilies. For a milder family-friendly dish that toddlers can enjoy, deseed the chili or use sweet bell pepper.",
+    ],
+    nutrition: {
+      calories: 520,
+      proteinGrams: 36,
+      carbsGrams: 58,
+      fatGrams: 16,
+      fiberGrams: 5,
+      sodiumMg: 710,
+      servingSizeDescription: "1 generous bowl (approx. 380g)",
+    },
+    storageInstructions:
+      "Store leftover Bengali beef pasta in an airtight glass container in the refrigerator for up to 4 days. Reheat gently in a skillet over medium-low heat with 2 tablespoons of water or broth to restore the glossy sauce texture, or microwave covered for 2 minutes.",
+    freezingInstructions:
+      "Freeze the cooked spiced beef ragù sauce separately for up to 3 months. If freezing the assembled pasta, portion into freezer-safe containers for up to 1 month and reheat thoroughly in a covered skillet.",
+    servingSuggestions: [
+      "Serve piping hot directly from the skillet with warm Halal garlic bread or crusty sourdough.",
+      "Pair with a crisp garden salad tossed with lemon-olive oil dressing or a fresh Bengali cucumber and tomato salad (shosha-tomator shalaad).",
+      "Garnish with freshly shaved Halal-certified parmesan cheese or mild white cheddar if desired.",
+      "Accompany with a refreshing chilled glass of [Cold-Pressed Piña Colada Mocktail](/recipes/cold-pressed-pina-colada-mocktail) or [Fresh Ginger Juice](/recipes/fresh-ginger-juice).",
+    ],
+    faqs: [
+      {
+        question: "What makes Bengali Beef Pasta different from classic Italian Bolognese?",
+        answer:
+          "While Italian Bolognese uses a gentle soffritto of celery, carrot, and onion simmered with milk and wine, Bengali Beef Pasta infuses the meat sauce with ginger, garlic, green chilies, cumin, coriander, and warm Shahi garam masala. The result is a vibrant, boldly spiced, and naturally alcohol-free Halal ragù with deep South Asian warmth.",
+      },
+      {
+        question: "Can I make this dish ahead of time for meal prep?",
+        answer:
+          "Yes! In fact, the flavors of the spiced beef ragù deepen and become even more flavorful the next day as the meat absorbs the roasted spices and tomato sauce. Cook the pasta slightly firm so it does not become soft when reheated.",
+      },
+      {
+        question: "What type of beef is best for this recipe?",
+        answer:
+          "Ground chuck (85/15) or lean ground beef (90/10) works best. The modest fat content provides rich flavor and natural moisture without making the pasta heavy or greasy.",
+      },
+      {
+        question: "Is this recipe kid-friendly?",
+        answer:
+          "Extremely! Minced beef pasta is a universal favorite for young children. If your children are sensitive to spicy food, simply omit the green chilies and use mild sweet paprika instead of red chili powder.",
+      },
+    ],
+    author: {
+      name: "Chef Bodiul Alam",
+      role: "Culinary Director & Halal Heritage Specialist",
+    },
+    updatedDate: "September 28, 2026",
+    tags: [
+      "Bengali Beef Pasta",
+      "Beef Pasta",
+      "বাঙালি স্টাইল বিফ পাস্তা",
+      "بنگالی بیف پاستا",
+      "معكرونة لحم بقري بنغالية",
+      "Keema Pasta",
+      "Halal Pasta",
+      "Rigatoni Bolognese",
+      "South Asian Fusion",
+      "Weeknight Dinners",
+      "Halal Beef",
+    ],
+    whySpecial:
+      "The ultimate comfort fusion: tender bronze-cut rigatoni tossed in a robustly spiced Bengali minced beef ragù with fresh ginger, garlic, sweet caramelized onions, and Shahi garam masala. Ready in 35 minutes directly in a rustic skillet.",
+    cookingTips: [
+      "Always use bronze-cut pasta with ridges so the savory minced beef sauce clings to the noodles rather than pooling in the pan.",
+      "Reserve 1 cup of starchy pasta water right before draining; splashing it into the sauce creates an irresistible, glossy restaurant-grade emulsion.",
+      "Fry the tomato paste directly in the hot pan oil for 1 to 2 minutes to caramelize its natural sugars and eliminate raw acidity.",
+      "Sprinkle the Shahi garam masala and fresh parsley right at the end to keep the herbal aromas bright and fresh.",
+    ],
+    commonMistakes: [
+      "Overcooking the pasta in boiling water before combining with the sauce; cook it 1 minute shy of al dente so it finishes cooking in the skillet.",
+      "Rinsing the boiled pasta with cold water, which washes away the natural starches that make the beef sauce stick.",
+      "Skipping the browning step for the ground beef; searing the meat until deeply browned creates the essential Maillard reaction that builds rich depth.",
+    ],
+    relatedRecipeSlugs: [
+      "classic-baked-beef-lasagna-bolognese",
+      "buttermilk-chicken-alfredo-spinach-pasta",
+      "spinach-sun-dried-tomato-pasta",
+      "bangladeshi-beef-noodles",
+      "bengali-beef-bhuna",
+    ],
+    relatedGuideSlugs: [
+      "mustard-oil-bengali-cooking",
+      "essential-bengali-spices-guide",
+      "how-to-make-perfect-beresta",
+    ],
+    seoTitle:
+      "Bengali Beef Pasta Recipe (বাঙালি স্টাইল বিف পাস্তা) | Noakhali Kitchen",
+    seoDescription:
+      "Authentic Bengali Beef Pasta recipe: al dente rigatoni coated in a spiced minced beef keema ragù with ginger, garlic, tomatoes, and garam masala. 100% Halal comfort.",
+  },
+  {
+    id: "rec-suji-halwa-halva",
+    slug: "suji-halwa-halva",
+    title: "Suji Halwa Halva (সوجی کا حلوہ / সুজির হালুয়া / حلاوة السوجي)",
+    category: "Desserts",
+    categorySlug: "halal-desserts",
+    cuisine: "South Asian / Bengali / Pakistani / Middle Eastern",
+    description:
+      "A fragrant, melt-in-the-mouth semolina halwa slow-roasted in pure cow ghee until deeply golden and nutty, simmered in cardamom-scented syrup, and heaped in an engraved copper bowl with roasted cashews, almonds, and vibrant green pistachios.",
+    introStory:
+      "Suji Halwa (also lovingly known as Suji Halva, Sooji Halwa, Sheera, and Rava Kesari)—celebrated across millions of households as 'سوجی کا حلوہ' in Urdu, 'সুজির হালুয়া' in Bengali, and 'حلاوة السوجي' in Arabic—is the quintessential golden sweet of South Asian celebration, Friday breakfasts, Shab-e-Barat, and festive Eid tables. Few aromas in the culinary world match the intoxicating perfume of coarse golden semolina slowly toasting in pure bubbling cow ghee alongside green cardamom pods, sweet cloves, and cinnamon bark. The secret to achieving the coveted 'danedar' (granular, non-sticky) texture showcased in our engraved copper bowl lies in the sacred 1:1:3 ratio: one part semolina, one part pure ghee, and three parts hot aromatic cardamom sugar syrup. As the boiling saffron syrup meets the nutty, ghee-roasted grains, the semolina swells instantly into a rich, glistening, spoon-tender confection. Adorned with toasted golden cashews, slivered almonds, and crunchy emerald pistachios, each warm spoonful melts effortlessly on the tongue, pairing exquisitely with hot balloon-puffed pooris ([Puri Poori](/recipes/crispy-puffy-puri)) or steaming cups of Karak Chai.",
+    heroImage: IMAGES.sujiHalwa,
+    prepTimeMinutes: 10,
+    cookTimeMinutes: 20,
+    totalTimeMinutes: 30,
+    servings: 6,
+    difficulty: "Easy",
+    calories: 340,
+    rating: 4.99,
+    reviewCount: 242,
+    isTrending: true,
+    isFeatured: true,
+    halalNotes:
+      "100% naturally Halal, vegetarian, and pure sweet crafted with artisanal cow ghee, unbleached semolina, whole spices, and raw nuts. Zero gelatin, alcohol extracts, or synthetic additives.",
+    ingredients: [
+      { amount: "1", unit: "cup (180g)", name: "Coarse semolina (suji / sooji / rava)", notes: "coarse grain preferred for superior danedar texture" },
+      { amount: "1/2 to 3/4", unit: "cup (120-160ml)", name: "Pure cow ghee (deshi ghee)", notes: "essential for authentic nutty aroma and glossy sheen" },
+      { amount: "1", unit: "cup (200g)", name: "Granulated sugar or raw cane jaggery", notes: "adjust to 3/4 cup for mild sweetness" },
+      { amount: "3", unit: "cups (720ml)", name: "Water (or 2 cups water + 1 cup warm whole milk)", notes: "pre-heated with aromatics into hot syrup" },
+      { amount: "5", unit: "pods", name: "Green cardamom (elaichi)", notes: "lightly crushed to expose black seeds" },
+      { amount: "1", unit: "pinch", name: "Saffron threads (kesar)", notes: "soaked in 1 tbsp warm milk (optional for golden glow)" },
+      { amount: "1/4", unit: "cup", name: "Raw whole cashews", notes: "lightly toasted in ghee until golden" },
+      { amount: "1/4", unit: "cup", name: "Raw whole almonds", notes: "sliced or whole, lightly toasted" },
+      { amount: "2", unit: "tbsp", name: "Bright green pistachios", notes: "slivered for finishing crown garnish" },
+      { amount: "1", unit: "tbsp", name: "Golden raisins (kishmish)", notes: "plumped in ghee (optional)" },
+      { amount: "1/2", unit: "tsp", name: "Rose water or kewra water", notes: "a few delicate drops for royal Mughlai aroma (optional)" },
+    ],
+    substitutions: [
+      {
+        original: "Pure cow ghee",
+        substitute: "Refined coconut oil or vegan butter",
+        notes: "Creates a wonderful dairy-free and vegan halwa with coconut undertones.",
+      },
+      {
+        original: "Granulated white sugar",
+        substitute: "Gur / jaggery syrup or brown sugar",
+        notes: "Gives a rich caramel-brown hue and earthy molasses undertones classic to Bengali village style.",
+      },
+      {
+        original: "Coarse semolina",
+        substitute: "Fine semolina or cream of wheat",
+        notes: "Cooks slightly faster; produces a smoother, silkier sheera consistency.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Prepare the Hot Cardamom Sugar Syrup",
+        instruction:
+          "In a medium saucepan, combine 3 cups of water (or water and whole milk combination), 1 cup of sugar, crushed cardamom pods, and saffron threads. Bring to a gentle boil over medium heat, stirring until the sugar dissolves completely into a clear, fragrant syrup. Lower the heat to keep the syrup hot while you roast the semolina. Do not boil into a thick string syrup; it must remain a fluid, hot infusion.",
+        tip: "Pouring HOT syrup into hot roasted suji prevents grain shock and guarantees soft, lump-free grain expansion.",
+      },
+      {
+        step: 2,
+        title: "Fry the Golden Nuts & Dry Fruits",
+        instruction:
+          "In a heavy-bottomed kadai, brass pan, or Dutch oven, heat 1 tablespoon of the ghee over medium-low heat. Add the whole cashews and almonds. Sauté gently for 1 to 2 minutes until light golden and fragrant. Toss in the golden raisins during the final 30 seconds until they puff into plump spheres. Immediately transfer the toasted nuts to a small bowl, leaving the aromatic ghee in the pan.",
+      },
+      {
+        step: 3,
+        title: "Slow-Roast the Semolina (The Bhunai Secret)",
+        instruction:
+          "Pour the remaining ghee into the hot pan over medium-low heat. Add the 1 cup of coarse semolina (suji). Stir continuously with a flat wooden spatula. Roast patiently for 10 to 12 minutes over medium-low flame. The semolina will foam slightly, absorb the ghee, release a heavenly nutty aroma reminiscent of toasted shortbread, and deepen from pale cream to a gorgeous warm amber-gold as seen in the photo. Do not rush this step over high heat, or the grains will scorch without developing depth.",
+      },
+      {
+        step: 4,
+        title: "Gradually Add the Boiling Syrup (Watch the Steam!)",
+        instruction:
+          "Reduce the flame to the lowest setting. Carefully and gradually pour the hot cardamom syrup into the roasted semolina in a steady stream while stirring vigorously. Be cautious as the mixture will sizzle, bubble vigorously, and release clouds of fragrant steam. Stir continuously to ensure no lumps form.",
+      },
+      {
+        step: 5,
+        title: "Simmer Until Glistening & Halwa Leaves the Pan Sides",
+        instruction:
+          "Continue stirring over medium-low heat as the semolina rapidly absorbs the hot syrup and swells into soft, pillowy grains (approx. 3 to 4 minutes). Add half of the toasted cashews and almonds into the mixture along with a few drops of rose or kewra water. Continue cooking until the halwa thickens, glistens with a translucent ghee sheen, and completely pulls away from the sides and bottom of the pan without sticking.",
+      },
+      {
+        step: 6,
+        title: "Cover & Steam (Dum Rest)",
+        instruction:
+          "Turn off the heat. Drizzle 1 teaspoon of fresh melted ghee over the surface for extra gloss. Cover the pan tightly with a lid and let the halwa rest undisturbed for 5 minutes off the heat. This brief resting period allows trapped steam to finish hydrating every semolina grain into melt-in-your-mouth perfection.",
+      },
+      {
+        step: 7,
+        title: "Mound in Traditional Copper Bowl & Garnish",
+        instruction:
+          "Uncover and gently fluff the warm halwa with a flat spoon. Heap into a dramatic golden mound inside an ornate engraved copper or brass bowl. Crown the peak and slopes generously with the remaining roasted cashews, whole golden almonds, and a vibrant shower of emerald green slivered pistachios as pictured. Serve warm!",
+      },
+    ],
+    chefNotes: [
+      "The Sacred 1:1:3 Ratio: For foolproof halwa, use equal volumes of suji and sugar, balanced with 3 times the volume of liquid (water or water-milk). Adjust the ghee between 1/2 and 3/4 cup depending on personal preference for richness.",
+      "The Ghee Sheen Test: Authentic halwai-style halwa is properly cooked when tiny beads of clear ghee begin to separate and shimmer along the edges of the pan (*ghee chhorna*). This indicates full starch gelatinization and ensures the halwa stays moist for hours.",
+      "Color Control: The final color of your halwa depends entirely on the semolina roast. Roasting to a deep amber produces the rich caramel depth seen in traditional Pakistani and Punjabi Halwa Puri stalls, while a lighter roast produces delicate Bengali or South Indian sheera.",
+      "Serving with Puri: For the ultimate traditional weekend breakfast, serve warm Suji Halwa scooped alongside piping-hot, crispy balloon-puffed pooris ([Puri Poori](/recipes/crispy-puffy-puri)) and spicy potato curry ([Aloo Tarkari](/recipes/bengali-aloo-dum)).",
+    ],
+    nutrition: {
+      calories: 340,
+      proteinGrams: 5,
+      carbsGrams: 48,
+      fatGrams: 15,
+      fiberGrams: 2,
+      sodiumMg: 15,
+      servingSizeDescription: "1 generous dessert scoop (approx. 130g)",
+    },
+    storageInstructions:
+      "Store leftover Suji Halwa in an airtight glass container in the refrigerator for up to 5 days. To reheat, microwave for 30 to 45 seconds or warm in a small pan with 1 teaspoon of water or ghee to restore its glossy, fresh-cooked softness.",
+    freezingInstructions:
+      "Freeze cooled halwa in airtight freezer containers for up to 2 months. Thaw in the refrigerator overnight and reheat gently in a covered saucepan over low flame with a splash of warm milk.",
+    servingSuggestions: [
+      "Heap into traditional copper or brass bowls garnished with whole cashews, almonds, and pistachios for celebratory family feasts.",
+      "Serve hot alongside crispy [Puri Poori](/recipes/crispy-puffy-puri) and spiced potato curry for an authentic Halwa Puri Chana breakfast.",
+      "Pair with a piping hot clay cup of [Karak Chai](/recipes/karak-chai-spiced-milk-tea) or royal cardamom tea.",
+      "Serve as an auspicious sweet offering on Shab-e-Barat, Eid mornings, Milad, or housewarming gatherings.",
+    ],
+    faqs: [
+      {
+        question: "Why did my suji halwa turn sticky or gluey instead of granular (danedar)?",
+        answer:
+          "Stickiness usually occurs if too little ghee was used, if the semolina was under-roasted, or if cold water was poured into hot suji. Thoroughly toasting the grains in adequate ghee coats each granule in fat, and using boiling hot syrup ensures each grain expands separately without forming a pasty glue.",
+      },
+      {
+        question: "Can I make this halwa with milk instead of water?",
+        answer:
+          "Yes! Replacing 1 cup of water with 1 cup of whole milk creates a richer, creamier halwa known as 'Doodh Suji Halwa' or 'Sheera'. For longer room-temperature shelf life, an all-water syrup is preferred.",
+      },
+      {
+        question: "What is the difference between Suji Halwa, Sheera, and Rava Kesari?",
+        answer:
+          "All three share semolina, ghee, and sugar as their foundation. Suji Halwa (North India, Pakistan, Bangladesh) is roasted to a deeper golden amber with green cardamom; Marathi Sheera is often lighter and includes banana slices or milk; while South Indian Rava Kesari is flavored with saffron or camphor and tinted bright orange-yellow.",
+      },
+      {
+        question: "Can I cut this halwa into diamond burfi slices?",
+        answer:
+          "Yes! If you cook the halwa for 2 extra minutes until very thick, pour it immediately onto a greased flat thali tray, press flat with nuts on top, and allow it to cool completely for 1 hour. Cut into diamond or square shapes (known as Suji Katli or Mohan Bhog).",
+      },
+    ],
+    author: {
+      name: "Chef Bodiul Alam",
+      role: "Culinary Director & Halal Heritage Specialist",
+    },
+    updatedDate: "September 28, 2026",
+    tags: [
+      "Suji Halwa",
+      "Suji Halva",
+      "سوجی کا حلوہ",
+      "সুজির হালুয়া",
+      "حلاوة السوجي",
+      "Sooji Halwa",
+      "Halwa Puri",
+      "Semolina Halwa",
+      "Sheera",
+      "Rava Kesari",
+      "Halal Desserts",
+      "Eid Sweets",
+      "Deshi Sweets",
+    ],
+    whySpecial:
+      "The undisputed golden standard of South Asian sweetmaking: coarse semolina slow-roasted in pure deshi cow ghee until nutty and amber-gold, simmered in cardamom saffron syrup, and served in an engraved copper bowl with roasted cashews, whole almonds, and emerald pistachios.",
+    cookingTips: [
+      "Always roast the semolina slowly on medium-low flame for a full 10 to 12 minutes until it turns warm amber-gold and releases an irresistible toasted shortbread fragrance.",
+      "Keep the cardamom sugar syrup piping hot before adding; pouring cold syrup causes semolina grains to clump and fracture.",
+      "Add whole cashews, almonds, and pistachios for rich crunch and authentic halwai visual contrast as shown in the copper bowl.",
+      "Cover and steam (dum) for 5 minutes off the heat after cooking to let the trapped steam fully plump the semolina granules.",
+    ],
+    commonMistakes: [
+      "Rushing the roasting step over high heat, which scorches the outside of the semolina grains while leaving the interior raw and chalky.",
+      "Skimping on pure cow ghee; ghee is not just cooking fat here, it is the primary flavor carrier and keeps the halwa luscious and separate.",
+      "Boiling the sugar syrup into a thick thread before adding; a fluid hot infusion is required so the dry roasted semolina can drink in the moisture.",
+    ],
+    relatedRecipeSlugs: [
+      "crispy-puffy-puri",
+      "bengali-aloo-dum",
+      "plain-paratha",
+      "kheer-shahi-rice-kheer-payesh",
+      "shahi-besan-laddu-gram-flour-mithai",
+      "karak-chai-spiced-milk-tea",
+    ],
+    relatedGuideSlugs: [
+      "essential-bengali-spices-guide",
+      "authentic-bengali-beef-nihari-guide",
+    ],
+    seoTitle:
+      "Suji Halwa Halva Recipe (سوجی کا حلوہ / সুজির হালুয়া) | Noakhali Kitchen",
+    seoDescription:
+      "Authentic Suji Halwa recipe: coarse semolina roasted in pure cow ghee, cardamom syrup, whole cashews, almonds, and pistachios. 100% Halal traditional sweet.",
   },
 ];
 
