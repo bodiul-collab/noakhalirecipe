@@ -141,6 +141,17 @@ export interface KitchenToolItem {
   badge?: string;
 }
 
+export interface AffiliateProductItem {
+  id: string;
+  name: string;
+  category: "Cookware" | "Kitchen Tools" | "Spices & Pantry" | "Storage & Organization";
+  description: string;
+  bestFor: string;
+  affiliateUrl: string | null;
+  image?: string;
+  disclosureRequired?: boolean;
+}
+
 export interface HalalPantrySection {
   id: string;
   slug: string;

@@ -57,7 +57,7 @@ export const CATEGORIES: CategoryHub[] = [
     fullDescription:
       "Fresh river fish and coastal seafood hold an esteemed place in regional Halal heritage dining. Our collection features revered silver Hilsa (Ilish) in golden mustard gravy, tender tiger prawns in coconut cream, and crisp pan-fried seasonal catch seasoned with five-spice panch phoron.",
     image: IMAGES.shorsheIlish,
-    featuredRecipeSlugs: ["bangladeshi-spiced-shrimp-and-green-bean-stir-fry", "fish-egg-curry-ilish", "fish-biryani", "soy-sauce-deep-fried-crispy-fish", "rohu-fish-curry", "shrimp-tandoori", "bengali-fish-curry-macher-jhol", "noakhali-shorshe-ilish", "chingri-malai-curry", "loitta-shutki-bhuna-dried-fermented-fish", "crispy-golden-salmon-patties-dish", "tuna-fish-kebab-fritters", "green-goddess-wild-salmon-asparagus-bowl", "tom-yum-soup-goong-gai"],
+    featuredRecipeSlugs: ["fish-morich-khola", "bangladeshi-spiced-shrimp-and-green-bean-stir-fry", "fish-egg-curry-ilish", "fish-biryani", "soy-sauce-deep-fried-crispy-fish", "rohu-fish-curry", "shrimp-tandoori", "bengali-fish-curry-macher-jhol", "noakhali-shorshe-ilish", "chingri-malai-curry", "loitta-shutki-bhuna-dried-fermented-fish", "crispy-golden-salmon-patties-dish", "tuna-fish-kebab-fritters", "green-goddess-wild-salmon-asparagus-bowl", "tom-yum-soup-goong-gai"],
     faqs: [
       {
         question: "Are all types of fish and seafood Halal?",
@@ -253,6 +253,7 @@ export const CATEGORIES: CategoryHub[] = [
       "Discover revitalizing, traditional, and celebratory 100% Halal drinks from across the Islamic world. From potent cold-pressed Fresh Ginger Juice (عصير الزنجبيل الطازج / আদার রস) immunity booster with raw honey and lemon, to Damascus sweet-tart Tamr Hindi (مشروب التمر الهندي), Egyptian Sobia (مشروب السوبيا) coconut milk elixir, frothy Laban Ayran (لبن عيران) in chilled copper mugs, royal spiced Borhani, and Alphonso mango lassi. Prepared with wholesome fresh herbs, real fruit, pure honey, and certified alcohol-free flavors.",
     image: IMAGES.halalDrinks,
     featuredRecipeSlugs: [
+      "cucumber-lime-lemon-juice",
       "fresh-ginger-juice",
       "tamr-hindi",
       "sobia",

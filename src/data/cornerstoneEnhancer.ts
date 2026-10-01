@@ -357,6 +357,36 @@ const RECIPE_EDITORIAL_EXTRAS: Record<
       "Boiling the sugar syrup into a thick thread before adding; a fluid hot infusion is required so the dry roasted semolina can drink in the moisture.",
     ],
   },
+  "cucumber-lime-lemon-juice": {
+    whySpecial:
+      "A low-calorie way to boost daily hydration while adding essential vitamins and antioxidants: cold-pressed Persian cucumbers, tart Key lime, zesty lemon, and fresh garden mint over ice, garnished with a vibrant skewer of crisp cucumber rounds and juicy citrus wheels.",
+    cookingTips: [
+      "Use thin-skinned Persian mini cucumbers and blend with the skin intact for maximum chlorophyll, silica, and crisp hydration.",
+      "A tiny pinch of pink Himalayan salt restores electrolytes and balances the brisk citrus acidity without making the beverage salty.",
+      "Thread alternating cucumber rounds and lime wheels on a bamboo skewer for a stunning garden-party visual presentation.",
+      "Serve ice-cold immediately after blending to capture the frothy aerated top foam and active vitamin C.",
+    ],
+    commonMistakes: [
+      "Using waxy, thick-skinned field cucumbers without peeling or tasting the ends for bitterness.",
+      "Adding too much heavy sugar syrup, which overpowers the clean, refreshing vegetal brightness.",
+      "Leaving the juice out at room temperature, which causes rapid oxidation of delicate nutrients.",
+    ],
+  },
+  "fish-morich-khola": {
+    whySpecial:
+      "The authentic regional pride of Noakhali: small freshwater fish (kachki, mola, batashi) seasoned with fiery sun-dried red chili paste, crushed garlic, and pungent cold-pressed mustard oil, slow-baked on banana leaves until sizzling and crispy-edged, presented as a majestic ring around a steaming dome of white rice with lemon wedges and raw onion rings.",
+    cookingTips: [
+      "Rub the sliced onions, garlic, salt, and chili paste firmly by hand with mustard oil until the onions soften and weep juices before folding in the delicate small fish.",
+      "Uncover the skillet during the final 5 to 7 minutes of cooking so steam escapes and the bottom layer develops its signature savory caramelized crust.",
+      "Pass the banana leaves over an open flame for a few seconds to make them pliable and prevent tearing during pan lining.",
+      "Always serve with fresh lemon wedges and purple onion rings to provide bright acid and crisp bite that cuts the mustard oil richness.",
+    ],
+    commonMistakes: [
+      "Stirring the fish roughly with a ladle during cooking, which tears and mushes the small river fish.",
+      "Substituting mustard oil with neutral canola or olive oil; mustard oil's pungent aroma is the essential soul of authentic Morich Khola.",
+      "Cooking over scorching high heat from the beginning, which burns the chili paste before the onions have time to caramelize and cook through.",
+    ],
+  },
   "easy-basmati-rice-cooking": {
     whySpecial:
       "The definitive guide to restaurant-fluffy, fragrant boiled rice (ابلے ہوئے چاول / সিদ্ধ চাল / أرز مسلوق): grains washed of excess surface starch, soaked for optimal grain elongation, and cooked using the foolproof absorption method with a hint of ghee, sea salt, cracked black pepper, and fresh parsley garnish so every grain stays completely separate and tender.",

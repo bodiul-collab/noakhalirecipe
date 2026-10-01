@@ -167,6 +167,8 @@ import oldDhakaHajiBiryaniImg from "../assets/images/old_dhaka_haji_biryani_1790
 import boiledRiceImg from "../assets/images/boiled_rice_1790601579088.jpg";
 import bengaliBeefPastaImg from "../assets/images/bengali_beef_pasta_1790601875509.jpg";
 import sujiHalwaImg from "../assets/images/suji_halwa_halva_1790602141459.jpg";
+import cucumberLimeLemonJuiceImg from "../assets/images/cucumber_lime_lemon_juice_1790861472246.jpg";
+import fishMorichKholaImg from "../assets/images/fish_morich_khola_1790862749468.jpg";
 import noakhaliLogoFullImg from "../assets/images/noakhali_kitchen_logo_1789072776240.jpg";
 import noakhaliLogoIconImg from "../assets/images/noakhali_kitchen_logo_1789072776240.jpg";
 
@@ -521,6 +523,16 @@ export const IMAGES = {
   sheera: sujiHalwaImg,
   ravaKesari: sujiHalwaImg,
   semolinaHalwa: sujiHalwaImg,
+  cucumberLimeLemonJuice: cucumberLimeLemonJuiceImg,
+  cucumberLimeJuice: cucumberLimeLemonJuiceImg,
+  cucumberLemonJuice: cucumberLimeLemonJuiceImg,
+  cucumberJuice: cucumberLimeLemonJuiceImg,
+  hydratingCucumberJuice: cucumberLimeLemonJuiceImg,
+  fishMorichKhola: fishMorichKholaImg,
+  morichKhola: fishMorichKholaImg,
+  noakhaliMorichKhola: fishMorichKholaImg,
+  machMorichKhola: fishMorichKholaImg,
+  bengaliFishMorichKhola: fishMorichKholaImg,
   logoFull: noakhaliLogoFullImg,
   logoIcon: noakhaliLogoIconImg,
 };

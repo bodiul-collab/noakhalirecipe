@@ -195,7 +195,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   onClick={() => onNavigate("/tools")}
                   className="hover:text-[#E7A52B] transition-colors"
                 >
-                  Recipe Scaler &amp; Unit Converter
+                  Kitchen Tools &amp; Pantry Hub
                 </button>
               </li>
               <li>

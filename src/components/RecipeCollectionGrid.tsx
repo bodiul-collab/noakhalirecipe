@@ -667,6 +667,28 @@ const DEFAULT_COLLECTION: CollectionCardItem[] = [
     halalBadge: "100% Halal Sweet",
     image: IMAGES.sujiHalwa,
   },
+  {
+    id: "card-cucumber-lime-lemon-juice",
+    slug: "cucumber-lime-lemon-juice",
+    title: "Cucumber Lime Lemon Juice (শসা লেবু ও লাইম জুস)",
+    description:
+      "Low-calorie way to boost daily hydration while adding essential vitamins and antioxidants with crisp Persian cucumber, tart lime & lemon.",
+    heritageTag: "🥒 100% Halal Hydration & Antioxidant Elixir",
+    brandName: "Noakhali Kitchen",
+    halalBadge: "100% Natural Raw Juice",
+    image: IMAGES.cucumberLimeLemonJuice,
+  },
+  {
+    id: "card-fish-morich-khola",
+    slug: "fish-morich-khola",
+    title: "Fish Morich Khola (মাছ মরিচ খোলা / مچھلی مورچ کھولا)",
+    description:
+      "Signature Noakhali small river fish caramelized in fiery red chili, garlic & cold-pressed mustard oil, circling steamed rice with lemon wedges.",
+    heritageTag: "🐟 Noakhali Regional Estuary Signature",
+    brandName: "Noakhali Kitchen",
+    halalBadge: "100% Halal Seafood",
+    image: IMAGES.fishMorichKhola,
+  },
 ];
 
 interface SingleCollectionCardProps {

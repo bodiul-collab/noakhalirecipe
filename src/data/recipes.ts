@@ -24268,6 +24268,477 @@ const BASE_RECIPES: Recipe[] = [
     seoDescription:
       "Authentic Suji Halwa recipe: coarse semolina roasted in pure cow ghee, cardamom syrup, whole cashews, almonds, and pistachios. 100% Halal traditional sweet.",
   },
+  {
+    id: "rec-cucumber-lime-lemon-juice",
+    slug: "cucumber-lime-lemon-juice",
+    title: "Cucumber Lime Lemon Juice (শসা লেবু ও লাইম জুস / عصير الخيار والليمون / کھیرے لیموں کا رس)",
+    category: "Drinks",
+    categorySlug: "halal-drinks",
+    cuisine: "Hydration & Wellness / Mediterranean / South Asian / Halal Drinks",
+    description:
+      "A revitalizing, ultra-crisp, low-calorie way to boost daily hydration while adding essential vitamins and antioxidants. Cold-pressed Persian cucumber, tart Key lime, zesty lemon, and fresh mint poured over ice with skewered cucumber rounds and juicy citrus wheels.",
+    introStory:
+      "When soaring summer temperatures, demanding gym workouts, or long fasting hours during Ramadan call for deep, cellular replenishment, nothing revives the body and spirit quite like fresh **Cucumber Lime Lemon Juice** (revered in Bengali as 'শসা লেবু ও লাইম জুস', in Arabic as 'عصير الخيار والليمون واللايم', and in Urdu as 'کھیرے لیموں کا جوس'). Made with crisp garden-fresh Persian cucumbers, freshly squeezed tart green lime juice, vibrant sun-ripened yellow lemon, cooling wild mint, and a touch of raw honey or pure agave, this refreshing drink is the ultimate **low-calorie way to boost daily hydration while adding essential vitamins and antioxidants**.\n\nCucumbers are over 95% water by weight and naturally loaded with silica, potassium, magnesium, and anti-inflammatory caffeic acid. When married with vitamin C-dense fresh lime and lemon, the citrus not only elevates the clean garden flavor into a bright thirst-quencher, but also enhances iron absorption and stimulates digestive vitality. Poured into a chilled tall highball glass topped with a frothy, aerated foam head and crowned with a decorative skewer of crunchy cucumber rounds and juicy lime slices as showcased in our sunlit garden table, every single sip delivers pure, rejuvenating wellness—100% Halal, naturally vegan, and exquisitely crisp.",
+    heroImage: IMAGES.cucumberLimeLemonJuice,
+    prepTimeMinutes: 10,
+    cookTimeMinutes: 0,
+    totalTimeMinutes: 10,
+    servings: 2,
+    difficulty: "Easy",
+    calories: 45,
+    rating: 4.98,
+    reviewCount: 184,
+    isTrending: true,
+    isFeatured: true,
+    halalNotes:
+      "100% naturally Halal, raw, and pure hydration elixir. Sourced from organic fresh produce, raw unpasteurized honey or organic pure maple/agave, and natural spring water. Free from synthetic additives, preservatives, or alcohol flavor carriers.",
+    ingredients: [
+      { amount: "2", unit: "large (approx. 400g)", name: "English or Persian cucumbers", notes: "washed, skin-on for vibrant emerald green color and natural silica" },
+      { amount: "2", unit: "medium", name: "Fresh green limes", notes: "freshly squeezed (yields approx. 3 tbsp juice)" },
+      { amount: "1", unit: "medium", name: "Fresh yellow lemon", notes: "freshly squeezed (yields approx. 2 tbsp juice)" },
+      { amount: "1.5", unit: "cups (360ml)", name: "Chilled pure filtered spring water or coconut water", notes: "ice-cold for peak crisp hydration" },
+      { amount: "1 to 2", unit: "tbsp", name: "Raw wildflower honey or pure agave nectar", notes: "adjust to desired sweetness (or keep unsweetened for keto/diabetic)" },
+      { amount: "6 to 8", unit: "leaves", name: "Fresh spearmint or garden mint", notes: "lightly bruised to release cooling menthol oils" },
+      { amount: "1", unit: "pinch", name: "Himalayan pink salt or sea salt", notes: "restores essential electrolyte minerals (sodium, trace potassium)" },
+      { amount: "1", unit: "cup", name: "Crushed or cubed ice", notes: "for chilling in tall glasses" },
+      { amount: "1", unit: "garnish skewer", name: "Thin sliced cucumber rounds & fresh lime wheels", notes: "threaded onto a bamboo skewer as featured in the glass" },
+    ],
+    substitutions: [
+      {
+        original: "English or Persian cucumbers",
+        substitute: "Crisp garden slicing cucumbers (peeled and deseeded) or Kirby pickling cucumbers",
+        notes: "Peel thick-skinned waxy cucumbers to prevent any bitter edge.",
+      },
+      {
+        original: "Raw wildflower honey",
+        substitute: "Pure blue agave nectar, maple syrup, or monkfruit sweetener",
+        notes: "Agave keeps the beverage 100% plant-based and vegan, dissolving instantly in cold liquids.",
+      },
+      {
+        original: "Filtered spring water",
+        substitute: "Raw coconut water or sparkling mineral water",
+        notes: "Coconut water turns this into a high-potassium natural isotonic sports drink.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Wash & Prep Fresh Produce",
+        instruction:
+          "Thoroughly rinse the Persian cucumbers, limes, lemons, and fresh mint leaves under cold running water. Trim the bitter stem tips off the cucumbers. Slice 4 to 5 thin rounds of cucumber and 1 lime wheel, setting them aside on a plate for the cocktail garnish skewer. Cut the remaining cucumbers into rough chunks.",
+        tip: "Keeping the tender dark skin on Persian cucumbers provides the signature luminous pastel green color and retains concentrated antioxidants.",
+      },
+      {
+        step: 2,
+        title: "Blend the Cucumber, Citrus & Aromatics",
+        instruction:
+          "Add the chopped cucumber chunks, freshly squeezed lime juice, freshly squeezed lemon juice, chilled spring water, fresh mint leaves, honey (or agave), and a pinch of pink salt into a high-speed blender. Blend on high speed for 45 to 60 seconds until completely liquefied, pale green, and topped with a creamy natural froth.",
+      },
+      {
+        step: 3,
+        title: "Strain for Silky-Smooth Nectar (Optional)",
+        instruction:
+          "For a light, silky juice consistency, pour the blended mixture through a fine-mesh stainless steel strainer or nut-milk sieve into a pitcher, gently pressing the pulp with the back of a ladle. (Alternatively, if you prefer maximum dietary fiber, enjoy the un-strained whole fruit smoothie juice!).",
+      },
+      {
+        step: 4,
+        title: "Thread the Signature Skewer Garnish",
+        instruction:
+          "Take a sleek bamboo cocktail skewer. Thread alternating slices of crisp mini cucumber rounds and a folded or flat wheel of juicy fresh lime onto the stick, mirroring the vibrant outdoor presentation.",
+      },
+      {
+        step: 5,
+        title: "Assemble & Serve Ice-Cold",
+        instruction:
+          "Fill tall highball glasses halfway with fresh ice cubes. Pour the chilled cucumber lime lemon juice over the ice, letting the natural frothy head rise to the brim. Perch the threaded cucumber-lime bamboo skewer upright inside the glass, slip in a glass or reusable straw, and serve immediately in the sunny fresh air!",
+      },
+    ],
+    chefNotes: [
+      "Optimal Hydration Science: Cucumbers contain over 95% pure cellular water along with trace electrolytes. Paired with Himalayan pink salt and citrus potassium, this elixir rehydrates cells faster than plain tap water without adding refined sugars.",
+      "Preventing Bitterness: Always taste a tiny slice of your cucumber near the stem end before juicing. If using standard field cucumbers with waxy skins or large seeds, peel them first. Persian (mini) cucumbers have thin sweet skins and tiny seeds, making them the gold standard for juicing.",
+      "The Electrolyte Pinch: That single tiny pinch of pink Himalayan salt won't make the drink taste salty; instead, it cuts the natural vegetal bitterness of the cucumber skin, amplifies the tart citrus notes, and provides bioavailable electrolytes.",
+      "Sparkling Version: For a celebratory summer mocktail, blend the cucumber and citrus with only 1/2 cup of water, strain, and top the glasses with ice and chilled sparkling mineral water or club soda.",
+    ],
+    nutrition: {
+      calories: 45,
+      proteinGrams: 1,
+      carbsGrams: 11,
+      fatGrams: 0,
+      fiberGrams: 2,
+      sodiumMg: 45,
+      servingSizeDescription: "1 tall chilled glass (approx. 350ml)",
+    },
+    storageInstructions:
+      "Best enjoyed immediately when freshly blended to preserve volatile vitamin C and enzymes. Can be stored in a sealed glass mason jar in the refrigerator for up to 24 hours (shake well before drinking as natural juice separation is normal).",
+    freezingInstructions:
+      "Pour into silicone popsicle molds or ice cube trays and freeze for up to 2 months. Drop the frozen cucumber-lime cubes into sparkling water or green iced tea for instant revitalization.",
+    servingSuggestions: [
+      "Serve as a refreshing detoxifying morning wellness drink or afternoon post-workout hydration boost.",
+      "Pair with rich grilled Halal meats such as [Authentic Chicken Shawarma](/recipes/authentic-chicken-shawarma) or [Bihari Boti Kebabs](/recipes/bihari-boti-kebabs) to cleanse the palate.",
+      "Serve as an elegant alcohol-free welcome drink for summer garden parties, BBQ gatherings, and sunset Ramadan Iftar tables.",
+      "Accompany with fresh Mediterranean dips like creamy [Authentic Hummus](/recipes/hummus) or smoky [Baba Ganoush](/recipes/authentic-lebanese-baba-ganoush) with warm pita.",
+    ],
+    faqs: [
+      {
+        question: "Why is Cucumber Lime Lemon Juice such a powerful hydrator?",
+        answer:
+          "Cucumbers are 95% cellular water bound with essential minerals like silica, potassium, and magnesium. Combining cucumber with alkalizing citrus juice and a tiny pinch of salt creates a natural isotonic electrolyte drink that replenishes lost fluids and electrolytes faster than plain water while providing potent doses of antioxidants (vitamin C, flavonoids, and lignans) at only 45 calories per glass.",
+      },
+      {
+        question: "Can I make this without a juicer?",
+        answer:
+          "Yes! A regular kitchen blender works beautifully. Blend the chopped cucumbers with the liquid and citrus juice, then pour through a common mesh sieve to remove excess pulp. It takes less than 5 minutes and cleans up in seconds.",
+      },
+      {
+        question: "Is this juice suitable for weight loss and fasting (intermittent fasting / Ramadan)?",
+        answer:
+          "Absolutely. At only 45 calories per serving (or under 20 calories if prepared without honey), it provides deep hydration, curbs appetite, soothes digestion, and provides lasting energy without spiking blood sugar.",
+      },
+      {
+        question: "Do I need to peel the cucumbers before juicing?",
+        answer:
+          "If using thin-skinned English or Persian mini cucumbers, do not peel! The peel holds the vast majority of the cucumber's chlorophyll, dietary fiber, vitamin K, and antioxidant compounds. For thick, waxy supermarket cucumbers, peel partially to prevent bitterness.",
+      },
+    ],
+    author: {
+      name: "Chef Bodiul Alam",
+      role: "Culinary Director & Halal Heritage Specialist",
+    },
+    updatedDate: "October 1, 2026",
+    tags: [
+      "Cucumber Lime Lemon Juice",
+      "Cucumber Juice",
+      "Hydration Drink",
+      "Low Calorie Drink",
+      "Detox Juice",
+      "Halal Drinks",
+      "Summer Cooler",
+      "Antioxidant Boost",
+      "Vegan Beverage",
+      "Ramadan Iftar Drink",
+      "শসা লেবু ও লাইম জুস",
+      "عصير الخيار والليمون",
+    ],
+    whySpecial:
+      "A low-calorie way to boost daily hydration while adding essential vitamins and antioxidants. Crisp cold-pressed Persian cucumbers, tart Key lime, zesty lemon, and fresh mint poured over ice with a threaded cucumber-lime skewer in a tall sunlit glass.",
+    cookingTips: [
+      "Use thin-skinned Persian mini cucumbers and leave the skin on for maximum emerald hue, antioxidants, and crisp fragrance.",
+      "Add a tiny pinch of Himalayan pink salt to amplify the natural citrus sweetness and restore essential cellular electrolytes.",
+      "Thread alternating cucumber rounds and lime wheels on a bamboo skewer for a stunning restaurant-grade visual presentation.",
+      "Pour over plenty of ice immediately after blending to capture the frothy aerated top foam.",
+    ],
+    commonMistakes: [
+      "Using bitter waxy cucumbers without peeling or testing the ends first.",
+      "Letting the juice sit exposed at room temperature for hours, which oxidizes the delicate vitamin C and dulls the vibrant green color.",
+      "Over-sweetening with heavy syrups; keep the sweetener light to preserve the crisp, clean vegetal refreshment.",
+    ],
+    relatedRecipeSlugs: [
+      "fresh-ginger-juice",
+      "mint-limonana-lemonade",
+      "cold-pressed-pina-colada-mocktail",
+      "electric-blue-spirulina-superfood-juice",
+      "tamr-hindi",
+      "laban-ayran",
+    ],
+    relatedGuideSlugs: [
+      "essential-bengali-spices-guide",
+      "authentic-bengali-beef-nihari-guide",
+    ],
+    seoTitle:
+      "Cucumber Lime Lemon Juice Recipe | Low-Calorie Hydration & Antioxidants",
+    seoDescription:
+      "Delicious Cucumber Lime Lemon Juice recipe: low-calorie way to boost daily hydration while adding essential vitamins and antioxidants. 100% Halal and vegan.",
+  },
+  {
+    id: "rec-fish-morich-khola",
+    slug: "fish-morich-khola",
+    title: "Fish Morich Khola (মাছ মরিচ খোলা / مچھلی مورچ کھولا / فيش موريتش خولا)",
+    category: "Seafood",
+    categorySlug: "halal-seafood",
+    cuisine: "Noakhali Heritage / Authentic Bangladeshi / Halal Seafood",
+    description:
+      "The iconic regional heirloom specialty of Noakhali, Bangladesh: small tender river fish (keshki, mola, or batashi) tossed in an intensely flavorful red chili, garlic, and cold-pressed mustard oil paste, slowly pan-braised and crisped flat until sizzling and caramelized at the edges, encircling a dome of steaming white rice with lemon wedges, raw green chilies, and onion rings.",
+    introStory:
+      "In the coastal delta and riverine heartlands of Noakhali, Bangladesh, 'Morich Khola' (মাছ মরিচ খোলা) stands as the pinnacle of regional culinary identity. The word 'Khola' refers to an unglazed clay griddle or earthen pan, while 'Morich' refers to the sun-dried red chillies pounded by hand on the sheel pata (flat granite grinding stone). Traditionally prepared with small freshwater fish—such as kachki, mola, batashi, or sweet river prawns—the fish are delicately cleaned and tossed raw with generous heaps of freshly crushed garlic, thinly sliced red onions, freshly ground red chilli paste, turmeric, and pungent cold-pressed mustard oil (Kachi Ghani). The mixture is tightly sealed inside banana leaves (kola pata) or arranged in a wide heavy skillet and cooked over gentle heat until the edges turn caramelized and crisp while the interior remains intensely juicy and spiced. When unsealed and served around a central mound of steaming white boiled rice, with crispy purple onion rings and fresh lemon wedges, it is celebrated as an unforgettable culinary heritage feast.",
+    heroImage: IMAGES.fishMorichKhola,
+    prepTimeMinutes: 20,
+    cookTimeMinutes: 25,
+    totalTimeMinutes: 45,
+    servings: 4,
+    difficulty: "Medium",
+    calories: 340,
+    rating: 4.98,
+    reviewCount: 384,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified. Prepared with fresh wild-caught small freshwater fish, all-natural ground spices, fresh aromatics, and pure cold-pressed mustard oil. Contains zero alcohol, animal rennet, or questionable additives.",
+    potentialCautionNotes:
+      "Naturally fiery due to the traditional use of ground red chillies and mustard oil. Adjust the quantity of chilli paste to personal heat tolerance.",
+    ingredients: [
+      {
+        amount: "500",
+        unit: "g",
+        name: "Small Bengali river fish (Kachki / Mola / Batashi / Keski / smelts)",
+        notes: "Cleaned thoroughly in cold water with salt and drained completely",
+      },
+      {
+        amount: "2",
+        unit: "cups (250g)",
+        name: "Red onions",
+        notes: "Very thinly sliced for optimal melting and sweet caramelization",
+      },
+      {
+        amount: "2",
+        unit: "tbsp",
+        name: "Dry red chili paste (Morich Bata)",
+        notes: "Sun-dried whole red chilies soaked in warm water and ground to a smooth paste",
+      },
+      {
+        amount: "2",
+        unit: "tbsp (30g)",
+        name: "Fresh garlic paste (Roshun Bata)",
+        notes: "Freshly crushed for robust pungency",
+      },
+      {
+        amount: "1",
+        unit: "tsp (5g)",
+        name: "Fresh ginger paste (Ada Bata)",
+        notes: "Adds aromatic warmth and balances the river fish",
+      },
+      {
+        amount: "1",
+        unit: "tsp",
+        name: "Turmeric powder (Halud gura)",
+        notes: "For vibrant golden-amber color and earthiness",
+      },
+      {
+        amount: "0.5",
+        unit: "tsp",
+        name: "Roasted cumin powder (Bhuna Jeera)",
+        notes: "Dry-roasted whole cumin ground fresh",
+      },
+      {
+        amount: "0.5",
+        unit: "tsp",
+        name: "Coriander powder (Dhone gura)",
+        notes: "Adds subtle citrus-herbal depth",
+      },
+      {
+        amount: "5",
+        unit: "tbsp (75ml)",
+        name: "Pure cold-pressed mustard oil (Kachi Ghani Shorsher Tel)",
+        notes: "Essential for signature Noakhali pungency and sizzling crust",
+      },
+      {
+        amount: "6-8",
+        unit: "pieces",
+        name: "Fresh green chillies (Kacha Morich)",
+        notes: "Slit lengthwise down the middle",
+      },
+      {
+        amount: "1.25",
+        unit: "tsp",
+        name: "Fine sea salt",
+        notes: "Adjust to taste",
+      },
+      {
+        amount: "2-3",
+        unit: "large pieces",
+        name: "Fresh banana leaves (Kola Pata)",
+        notes: "Wiped clean and lightly softened over low gas flame (or heavy parchment paper in skillet)",
+      },
+      {
+        amount: "3",
+        unit: "cups",
+        name: "Steamed fluffy Basmati or Chinigura white rice",
+        notes: "Piping hot, molded into a central serving dome",
+      },
+      {
+        amount: "1",
+        unit: "piece",
+        name: "Roasted whole dry red chili",
+        notes: "Toasted in a dry skillet until fragrant and crisp for central rice garnish",
+      },
+      {
+        amount: "1",
+        unit: "sprig",
+        name: "Fresh coriander leaf (Dhonipata)",
+        notes: "For rice crown garnish",
+      },
+      {
+        amount: "1",
+        unit: "medium",
+        name: "Red onion rings",
+        notes: "Sliced into thin concentric rings for fresh crisp contrast",
+      },
+      {
+        amount: "2-3",
+        unit: "wedges",
+        name: "Fresh lemon / lime wedges",
+        notes: "To squeeze over fish at the table",
+      },
+    ],
+    substitutions: [
+      {
+        original: "Small river fish (Kachki / Mola / Batashi)",
+        substitute: "Small smelts, whitebait, anchovies, or small peeled river shrimp (chingri)",
+        notes: "Clean and dry completely with paper towels so the spices adhere.",
+      },
+      {
+        original: "Fresh banana leaves (Kola Pata)",
+        substitute: "Heavy unbleached parchment paper placed inside a cast-iron skillet or griddle",
+        notes: "Lightly brush the parchment with mustard oil to replicate the gentle baking effect.",
+      },
+      {
+        original: "Whole dry red chili paste",
+        substitute: "1 tbsp hot Kashmiri chili powder mixed with 1 tsp cayenne pepper and 2 tbsp warm water",
+        notes: "Yields vibrant fiery crimson color with customizable heat.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Clean and Prepare Small River Fish",
+        instruction:
+          "Wash the small river fish (kachki or mola) very gently in cold water with 1/2 teaspoon of salt. Drain thoroughly in a fine-mesh colander for 10 minutes, then gently pat dry with paper towels. Handle delicately so the tender fish remain intact.",
+        tip: "Avoid washing small fish aggressively or soaking them in water, which causes waterlogging and breaks their delicate bellies.",
+      },
+      {
+        step: 2,
+        title: "Hand-Rub the Signature Morich Khola Spice Base (Hathe Makha)",
+        instruction:
+          "In a wide stainless steel mixing bowl, combine the thinly sliced red onions, crushed garlic paste, ginger paste, soaked red chili paste, turmeric powder, roasted cumin powder, coriander powder, fine sea salt, and 4 tablespoons of pure cold-pressed mustard oil. Using clean hands, knead and rub the onions firmly for 2 to 3 minutes until they soften, release their sweet juices, and form a glistening, glossy red masala paste.",
+        tip: "The traditional Noakhali technique requires rubbing the onions and spices first by hand (hathe makha) before adding the fish, ensuring deep flavor penetration without bruising the fish.",
+      },
+      {
+        step: 3,
+        title: "Fold Fish & Green Chillies Gently",
+        instruction:
+          "Gently add the drained small river fish and slit green chillies into the bowl. Using light, folding motions with your fingertips, coat every fish evenly with the spicy onion-chili marinade. Let stand at room temperature for 10 minutes to absorb the aromatics.",
+        tip: "Do not use a metal spoon; fold gently with fingertips from the bottom upward.",
+      },
+      {
+        step: 4,
+        title: "Prepare the Banana Leaf Skillet (Khola)",
+        instruction:
+          "Pass the fresh banana leaf pieces quickly over an open low flame for 3 to 5 seconds on each side until pliable, glossy, and fragrant. Line the base of a wide heavy-bottomed cast-iron skillet or tawa with two overlapping layers of softened banana leaves (or oiled parchment paper). Brush the surface lightly with 1 tablespoon of mustard oil.",
+        tip: "Flame-softening breaks the plant fibers so the leaf bends smoothly without splitting, while releasing natural aromatic tea-like tannins into the fish.",
+      },
+      {
+        step: 5,
+        title: "Slow-Cook & Caramelize to Perfection",
+        instruction:
+          "Spread the marinated fish and onion mixture evenly over the banana leaves in a flat, circular layer roughly 1 inch thick. Cover the skillet tightly with an inverted plate or lid. Place over medium-low heat and cook undisturbed for 12 to 15 minutes as steam builds up and the onions melt. Remove the lid and continue cooking over medium heat for an additional 7 to 10 minutes until the excess moisture evaporates, the sizzling mustard oil separates, and the bottom edges develop a rich, deeply caramelized reddish-brown crust.",
+        tip: "Listen for the sound transition: when the gentle boiling sound shifts to a crisp sizzle, the bottom layer has caramelized into its signature 'khola' crust.",
+      },
+      {
+        step: 6,
+        title: "Plate the Iconic Wreath with Steamed Rice",
+        instruction:
+          "Pack piping hot boiled Basmati or Chinigura rice into a small greased bowl and unmold it into a perfect dome in the exact center of a large white serving plate. Arrange the sizzling, caramelized Morich Khola fish in a neat, continuous circular ring encircling the rice dome. Top the rice with a toasted dry red chili and a sprig of fresh coriander. Frame the plate with thin purple onion rings, vibrant green chillies, and fresh lemon wedges as shown in the presentation. Serve immediately while piping hot!",
+        tip: "Squeeze fresh lemon juice over the fish right before eating with steaming rice; the citrus juice cuts through the mustard pungency and lifts every spice note.",
+      },
+    ],
+    chefNotes: [
+      "Noakhali Culinary Heritage: In Noakhali dialect, this dish is colloquially revered as 'মাছ মরিচ খোলা'. It represents centuries of riverside home cooking where small river catches were preserved and celebrated through fiery chili heat and high-grade cold-pressed mustard oil.",
+      "The Role of Cold-Pressed Mustard Oil: Pure Kachi Ghani mustard oil is non-negotiable. Its natural allyl isothiocyanate compound reacts with the garlic and caramelizing onions to create the distinctive pungent, savory backbone unique to Eastern Bengal cuisine.",
+      "Fish Selection: Kachki (Corica soborna), Mola (Amblypharyngodon mola), or Batashi (Pseudeutropius atherinoides) are the gold standards. If unavailable in your region, fresh smelts, whitebait, or small river prawns yield extraordinary results with identical cooking times.",
+      "Table Etiquette: Morich Khola is eaten by hand with steaming hot rice. Take a small portion of the fiery fish, mix it with rice, squeeze a drop of fresh lemon juice, and take a bite of raw purple onion ring for textural crunch and heat relief.",
+    ],
+    nutrition: {
+      calories: 340,
+      proteinGrams: 28,
+      carbsGrams: 9,
+      fatGrams: 18,
+      fiberGrams: 3,
+      sodiumMg: 520,
+      servingSizeDescription: "1 generous serving of Morich Khola fish (approx. 150g) plus garnishes",
+    },
+    storageInstructions:
+      "Morich Khola keeps exceptionally well due to the protective mustard oil and cooked chili paste. Store leftovers in an airtight glass container in the refrigerator for up to 3 days. Reheat gently in a dry skillet with a few drops of mustard oil until sizzling.",
+    freezingInstructions:
+      "Not recommended for freezing once cooked, as small delicate river fish lose their tender flakiness upon thawing. Fresh marinated fish can be frozen raw wrapped in banana leaves for up to 1 month.",
+    servingSuggestions: [
+      "Serve piping hot as the centerpiece with fluffy [Steamed Boiled Rice](/recipes/boiled-rice) or aromatic Chinigura rice.",
+      "Pair with a cooling bowl of [Laban Ayran](/recipes/laban-ayran) or chilled [Cucumber Lime Lemon Juice](/recipes/cucumber-lime-lemon-juice) to balance the fiery chili heat.",
+      "Accompany with light yellow lentil soup (Plaing Masoor Dal) and crispy bhortas for a traditional Noakhali lunch spread.",
+      "Serve with fresh lime wedges, extra raw green chillies, and thinly sliced red onion rings for authentic tableside customization.",
+    ],
+    faqs: [
+      {
+        question: "What is the historical origin of Noakhali Morich Khola?",
+        answer:
+          "Morich Khola originated in the coastal delta district of Noakhali, Bangladesh. The name comes from 'Morich' (hot sun-dried red chillies) and 'Khola' (earthen griddle / clay pan). Coastal fisherwomen seasoned small estuary catches with homemade sheel-pata chili paste, garlic, and raw mustard oil, wrapping them in wild banana leaves to bake over low coals. Today it is renowned as Noakhali's most iconic heritage dish.",
+      },
+      {
+        question: "Is Fish Morich Khola extremely spicy?",
+        answer:
+          "Traditionally, Morich Khola is a bold, fiery dish celebrated for its punchy heat. However, because you prepare the chili paste from scratch, you can easily control the heat level. Using Kashmiri or Degi dried chillies yields the signature vibrant red hue with moderate, comfortable warmth.",
+      },
+      {
+        question: "Can I make Morich Khola in an ordinary non-stick pan without banana leaves?",
+        answer:
+          "Yes! While banana leaves impart an authentic smoky, herbal aroma and prevent burning, you can prepare it in a heavy cast-iron skillet, ceramic pan, or non-stick tawa. Line the pan with unbleached parchment paper brushed with mustard oil for easy cleanup and authentic slow caramelization.",
+      },
+      {
+        question: "What fish is best for Morich Khola?",
+        answer:
+          "Small sweet-water river fish like Kachki (Ganges river sprat), Mola carplet, Batashi, or small Keski are ideal because their tender bones are edible and provide high dietary calcium. Small freshwater prawns or smelts are also widely used.",
+      },
+    ],
+    author: {
+      name: "Chef Bodiul Alam",
+      role: "Culinary Director & Halal Heritage Specialist",
+    },
+    updatedDate: "October 1, 2026",
+    tags: [
+      "Fish Morich Khola",
+      "Morich Khola",
+      "মাছ মরিচ খোলা",
+      "মরিচ খোলা",
+      "مچھلی مورچ کھولا",
+      "فيش موريتش خولا",
+      "Noakhali Food",
+      "Noakhali Heritage",
+      "Bangladeshi Cuisine",
+      "Halal Seafood",
+      "Spicy Fish",
+      "Kachki Mach",
+      "Mola Mach",
+      "Banana Leaf Fish",
+      "Deshi Recipe",
+    ],
+    whySpecial:
+      "The undisputed signature culinary soul of Noakhali: small freshwater fish marinated in hand-rubbed red chili paste, garlic, and raw mustard oil, caramelized flat on a banana leaf until sizzling and crispy-edged, presented in a dramatic ring around a central dome of steaming rice.",
+    cookingTips: [
+      "Knead the sliced onions, garlic, salt, and chili paste firmly by hand with mustard oil until the onions soften and weep juices before folding in the delicate fish.",
+      "Uncover the skillet during the final 5 to 7 minutes of cooking so steam escapes and the bottom layer develops its signature savory caramelized crust.",
+      "Pass the banana leaves over an open flame for a few seconds to make them pliable and prevent tearing during pan lining.",
+      "Always serve with fresh lemon wedges and purple onion rings to provide bright acid and crisp bite that cuts the mustard oil richness.",
+    ],
+    commonMistakes: [
+      "Stirring the fish roughly with a ladle during cooking, which tears and mushes the small river fish.",
+      "Substituting mustard oil with neutral canola or olive oil; mustard oil's pungent aroma is the essential soul of authentic Morich Khola.",
+      "Cooking over scorching high heat from the beginning, which burns the chili paste before the onions have time to caramelize and cook through.",
+    ],
+    relatedRecipeSlugs: [
+      "boiled-rice",
+      "shorshe-ilish",
+      "chingri-malai-curry",
+      "rohu-fish-curry",
+      "bengali-khichuri-bhuna",
+    ],
+    relatedGuideSlugs: [
+      "mustard-oil-bengali-cooking",
+      "essential-bengali-spices-guide",
+    ],
+    seoTitle:
+      "Fish Morich Khola Recipe (মাছ মরিচ খোলা / Noakhali Heritage) | Noakhali Kitchen",
+    seoDescription:
+      "Authentic Noakhali Fish Morich Khola recipe: small river fish braised with fiery red chilies, garlic, and cold-pressed mustard oil. 100% Halal traditional delicacy.",
+  },
 ];
 
 export const RECIPES: Recipe[] = enhanceRecipesWithCornerstones(BASE_RECIPES);

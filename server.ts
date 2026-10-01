@@ -224,6 +224,8 @@ app.get("/sitemap.xml", (_req, res) => {
   <url><loc>https://www.noakhalikitchen.com/recipes/easy-basmati-rice-cooking</loc><priority>0.9</priority></url>
   <url><loc>https://www.noakhalikitchen.com/recipes/bengali-beef-pasta</loc><priority>0.95</priority></url>
   <url><loc>https://www.noakhalikitchen.com/recipes/suji-halwa-halva</loc><priority>0.95</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/recipes/cucumber-lime-lemon-juice</loc><priority>0.95</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/recipes/fish-morich-khola</loc><priority>0.95</priority></url>
 
   <!-- Editorial Culinary Authority Foundation (Batch 1 & 2 Guides) -->
   <url><loc>https://www.noakhalikitchen.com/guides/authentic-bengali-beef-nihari-guide</loc><priority>0.85</priority></url>
@@ -248,6 +250,7 @@ app.get("/sitemap.xml", (_req, res) => {
   <url><loc>https://www.noakhalikitchen.com/category/halal-rice-curry</loc><priority>0.8</priority></url>
 
   <!-- Institutional Pages -->
+  <url><loc>https://www.noakhalikitchen.com/tools</loc><priority>0.85</priority></url>
   <url><loc>https://www.noakhalikitchen.com/about</loc><priority>0.7</priority></url>
   <url><loc>https://www.noakhalikitchen.com/contact</loc><priority>0.7</priority></url>
   <url><loc>https://www.noakhalikitchen.com/privacy</loc><priority>0.5</priority></url>

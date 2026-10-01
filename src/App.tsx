@@ -633,9 +633,11 @@ export default function App() {
 
       return (
         <ToolsView
+          key={path}
           initialTab={initialTab}
           onSelectRecipe={handleSelectRecipe}
           onOpenAssistant={() => setAssistantOpen(true)}
+          onNavigate={navigate}
         />
       );
     }

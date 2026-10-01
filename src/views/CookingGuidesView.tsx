@@ -657,6 +657,26 @@ export const CookingGuidesView: React.FC<CookingGuidesViewProps> = ({
               </div>
             )}
 
+            {/* Recommended Tools & Equipment Callout Banner */}
+            <div className="p-4 sm:p-5 rounded-xl bg-[#FFF9F0] dark:bg-[#2A2318] border border-[#F8CD78]/60 dark:border-[#E97520]/30 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <div className="space-y-1">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-[#E97520] block">
+                  RECOMMENDED COOKWARE &amp; TOOLS
+                </span>
+                <p className="text-xs sm:text-sm text-[#30302F] dark:text-[#EDE8DF] font-medium">
+                  Looking for the right dekchi pot, cast-iron kadai, or spice grinder for this recipe?
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => onNavigate("/tools")}
+                className="inline-flex items-center gap-1.5 py-2 px-3.5 bg-[#E97520] hover:bg-[#d36615] text-white text-xs font-bold rounded-lg transition-colors shadow-xs shrink-0 cursor-pointer"
+              >
+                <span>Kitchen Tools &amp; Pantry Hub</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </button>
+            </div>
+
             {/* Tags footer */}
             {currentGuide.tags && currentGuide.tags.length > 0 && (
               <div className="pt-4 border-t border-[#E6E1D8] dark:border-[#33322E] flex flex-wrap items-center gap-2">

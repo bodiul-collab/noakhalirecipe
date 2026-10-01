@@ -23,6 +23,7 @@ import {
   RotateCw,
   X,
   Scale,
+  CookingPot,
 } from "lucide-react";
 import { RecipeCard } from "../components/RecipeCard";
 import { HalalCheck } from "../components/HalalCheck";
@@ -171,7 +172,9 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
           (r.slug === "bangladeshi-spiced-shrimp-and-green-bean-stir-fry" && (activeSlug === "shrimp-green-bean-stir-fry" || activeSlug === "shrimp-and-green-bean-stir-fry" || activeSlug === "bangladeshi-shrimp-stir-fry" || activeSlug === "chingri-borboti-bhaji" || activeSlug === "chingri-shir-bhaji" || activeSlug === "shrimp-green-beans" || activeSlug === "chingri-mach-bhaji" || activeSlug === "chingri-bhaji")) ||
           (r.slug === "bengali-aloo-dum" && (activeSlug === "aloo-dum" || activeSlug === "alur-dom" || activeSlug === "bengali-alur-dom" || activeSlug === "dum-aloo" || activeSlug === "bengali-dum-aloo" || activeSlug === "luchi-aloo-dum" || activeSlug === "luchi-alur-dom")) ||
           (r.slug === "bengali-beef-pasta" && (activeSlug === "beef-pasta" || activeSlug === "halal-beef-pasta" || activeSlug === "bengali-pasta" || activeSlug === "bengali-keema-pasta" || activeSlug === "keema-pasta" || activeSlug === "deshi-beef-pasta" || activeSlug === "rigatoni-beef-pasta")) ||
-          (r.slug === "suji-halwa-halva" && (activeSlug === "suji-halwa" || activeSlug === "suji-halva" || activeSlug === "sooji-halwa" || activeSlug === "halwa-puri" || activeSlug === "sheera" || activeSlug === "rava-kesari" || activeSlug === "semolina-halwa" || activeSlug === "halva" || activeSlug === "sujir-halwa"))
+          (r.slug === "suji-halwa-halva" && (activeSlug === "suji-halwa" || activeSlug === "suji-halva" || activeSlug === "sooji-halwa" || activeSlug === "halwa-puri" || activeSlug === "sheera" || activeSlug === "rava-kesari" || activeSlug === "semolina-halwa" || activeSlug === "halva" || activeSlug === "sujir-halwa")) ||
+          (r.slug === "cucumber-lime-lemon-juice" && (activeSlug === "cucumber-lime-lemon-juice" || activeSlug === "cucumber-lime-juice" || activeSlug === "cucumber-lemon-juice" || activeSlug === "cucumber-juice" || activeSlug === "cucumber-lime" || activeSlug === "hydrating-cucumber-juice" || activeSlug === "detox-cucumber-juice")) ||
+          (r.slug === "fish-morich-khola" && (activeSlug === "morich-khola" || activeSlug === "mach-morich-khola" || activeSlug === "noakhali-morich-khola" || activeSlug === "marich-khola" || activeSlug === "fish-morich" || activeSlug === "morich-khola-fish" || activeSlug === "kachki-morich-khola" || activeSlug === "mola-morich-khola"))
       ) || null
     );
   }, [activeSlug]);
@@ -833,18 +836,29 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
               </div>
 
               {/* Kitchen Converter Quick Link */}
-              <div className="flex items-center justify-between text-xs bg-[#FAF9F6] border border-[#E6E1D8] px-3 py-2 rounded-lg print:hidden">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs bg-[#FAF9F6] border border-[#E6E1D8] px-3.5 py-2.5 rounded-lg print:hidden">
                 <span className="text-[#77736D]">
-                  Need metric/imperial conversions for flour, ghee, or spices?
+                  Need metric/imperial conversions or looking for cookware and tools for this dish?
                 </span>
-                <button
-                  type="button"
-                  onClick={() => onNavigate("/converter")}
-                  className="text-[#E97520] hover:text-[#D75D17] font-bold flex items-center gap-1.5 cursor-pointer ml-2 shrink-0 transition-colors"
-                >
-                  <Scale className="w-3.5 h-3.5" />
-                  <span>Interactive Kitchen Converter</span>
-                </button>
+                <div className="flex items-center gap-3 shrink-0">
+                  <button
+                    type="button"
+                    onClick={() => onNavigate("/converter")}
+                    className="text-[#E97520] hover:text-[#D75D17] font-bold flex items-center gap-1.5 cursor-pointer transition-colors"
+                  >
+                    <Scale className="w-3.5 h-3.5" />
+                    <span>Unit Converter</span>
+                  </button>
+                  <span className="text-[#E6E1D8]">&bull;</span>
+                  <button
+                    type="button"
+                    onClick={() => onNavigate("/tools")}
+                    className="text-[#30302F] hover:text-[#E97520] font-bold flex items-center gap-1.5 cursor-pointer transition-colors"
+                  >
+                    <CookingPot className="w-3.5 h-3.5" />
+                    <span>Kitchen Tools &amp; Pantry</span>
+                  </button>
+                </div>
               </div>
 
               {/* Ingredient List */}
