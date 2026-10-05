@@ -156,6 +156,15 @@ export default function App() {
         } catch {}
         return "/guides/bengali-radhuni-guide";
       }
+      if (
+        p === "/guides/biye-barir-shahi-chicken-roast-guide" ||
+        p === "/guides/biye-barir-shahi-chicken-roast"
+      ) {
+        try {
+          window.history.replaceState({}, "", "/guides/bengali-shahi-chicken-roast-guide");
+        } catch {}
+        return "/guides/bengali-shahi-chicken-roast-guide";
+      }
       return p || "/";
     }
     return "/";
@@ -293,6 +302,13 @@ export default function App() {
       route === "/food-culture/bengali-radhuni-guide"
     ) {
       route = "/guides/bengali-radhuni-guide";
+    }
+
+    if (
+      route === "/guides/biye-barir-shahi-chicken-roast-guide" ||
+      route === "/guides/biye-barir-shahi-chicken-roast"
+    ) {
+      route = "/guides/bengali-shahi-chicken-roast-guide";
     }
 
     setCurrentRoute(route);

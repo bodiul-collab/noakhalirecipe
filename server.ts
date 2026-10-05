@@ -47,6 +47,19 @@ app.get(
   }
 );
 
+// Legacy Biye Barir Chicken Roast guide permanent 301 redirect to canonical guide
+app.get(
+  [
+    "/guides/biye-barir-shahi-chicken-roast-guide",
+    "/guides/biye-barir-shahi-chicken-roast-guide/",
+    "/guides/biye-barir-shahi-chicken-roast",
+    "/guides/biye-barir-shahi-chicken-roast/",
+  ],
+  (_req, res) => {
+    res.redirect(301, "/guides/bengali-shahi-chicken-roast-guide");
+  }
+);
+
 // Initialize Gemini Client
 function getGeminiClient(): GoogleGenAI | null {
   const apiKey = process.env.GEMINI_API_KEY;
@@ -235,7 +248,7 @@ app.get("/sitemap.xml", (_req, res) => {
   <url><loc>https://www.noakhalikitchen.com/guides/mustard-oil-bengali-cooking</loc><priority>0.85</priority></url>
   <url><loc>https://www.noakhalikitchen.com/guides/how-to-make-perfect-beresta</loc><priority>0.85</priority></url>
   <url><loc>https://www.noakhalikitchen.com/guides/bengali-radhuni-guide</loc><priority>0.85</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/guides/biye-barir-shahi-chicken-roast-guide</loc><priority>0.85</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/guides/bengali-shahi-chicken-roast-guide</loc><priority>0.85</priority></url>
   <url><loc>https://www.noakhalikitchen.com/guides/chittagong-beef-kala-bhuna-guide</loc><priority>0.85</priority></url>
   <url><loc>https://www.noakhalikitchen.com/guides/old-dhaka-beef-tehari-vs-biryani</loc><priority>0.85</priority></url>
   <url><loc>https://www.noakhalikitchen.com/guides/how-to-cook-with-panch-phoron</loc><priority>0.85</priority></url>

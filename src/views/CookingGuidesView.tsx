@@ -24,6 +24,7 @@ interface CookingGuidesViewProps {
 const CATEGORIES = [
   "All",
   "Guides",
+  "Traditional Bengali Cooking",
   "Spice Guides",
   "Cooking Techniques",
   "Ingredient Guides",
@@ -112,6 +113,15 @@ export const CookingGuidesView: React.FC<CookingGuidesViewProps> = ({
       } catch {}
       setActiveSlug("bengali-radhuni-guide");
       onNavigate("/guides/bengali-radhuni-guide");
+    } else if (
+      activeSlug === "biye-barir-shahi-chicken-roast-guide" ||
+      activeSlug === "biye-barir-shahi-chicken-roast"
+    ) {
+      try {
+        window.history.replaceState({}, "", "/guides/bengali-shahi-chicken-roast-guide");
+      } catch {}
+      setActiveSlug("bengali-shahi-chicken-roast-guide");
+      onNavigate("/guides/bengali-shahi-chicken-roast-guide");
     }
   }, [activeSlug, onNavigate]);
 

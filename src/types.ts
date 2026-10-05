@@ -71,6 +71,7 @@ export interface CookingGuide {
   title: string;
   category:
     | "Cooking Techniques"
+    | "Traditional Bengali Cooking"
     | "Spice Guides"
     | "Ingredient Guides"
     | "Ingredient Substitutions"

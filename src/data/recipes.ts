@@ -23057,7 +23057,7 @@ const BASE_RECIPES: Recipe[] = [
       "bengali-panch-phoron-guide",
       "mustard-oil-bengali-cooking",
       "how-to-make-perfect-beresta",
-      "biye-barir-shahi-chicken-roast-guide",
+      "bengali-shahi-chicken-roast-guide",
     ],
     seoTitle:
       "Authentic Butter Salmon Curry Recipe (বাটার স্যালমন কারি / بٹر سالمن کری) | Noakhali Kitchen",

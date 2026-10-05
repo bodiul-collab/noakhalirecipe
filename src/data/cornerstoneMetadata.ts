@@ -71,7 +71,7 @@ export const CORNERSTONE_METADATA_LIST: CornerstoneCulinaryMetadata[] = [
     seoDescription:
       "Authentic Bengali wedding-style Shahi Chicken Roast (বিয়ে বাড়ির রোস্ট): tender chicken leg quarters, sweet-savory fried onion gravy, mace, kewra, and ghee.",
     relatedGuides: [
-      "biye-barir-shahi-chicken-roast-guide",
+      "bengali-shahi-chicken-roast-guide",
       "how-to-make-perfect-beresta",
       "how-to-balance-whole-spices",
     ],
@@ -99,7 +99,7 @@ export const CORNERSTONE_METADATA_LIST: CornerstoneCulinaryMetadata[] = [
     seoDescription:
       "Authentic Kolkata and Dhaka style Shahi Chicken Rezala (চিকেন রেজালা): bone-in chicken simmered in a silky white yogurt, cashew, and poppy seed gravy.",
     relatedGuides: [
-      "biye-barir-shahi-chicken-roast-guide",
+      "bengali-shahi-chicken-roast-guide",
       "how-to-make-perfect-beresta",
       "how-to-balance-whole-spices",
     ],
