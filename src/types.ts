@@ -191,6 +191,7 @@ export interface RecipeNutrition {
   proteinGrams: number; // Protein (g) per serving
   carbsGrams: number; // Carbohydrates (g) per serving
   fatGrams: number; // Total Fat (g) per serving
+  saturatedFatGrams?: number; // Saturated Fat (g) per serving
   fiberGrams: number; // Fiber (g) per serving
   sodiumMg: number; // Sodium (mg) per serving
   servingSizeDescription?: string; // e.g. "1 bowl (approx. 380g)"

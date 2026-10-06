@@ -89,6 +89,8 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <header
+      id="main-navigation-menu-bar"
+      style={{ position: "sticky", top: 0, zIndex: 50 }}
       className={`w-full z-50 sticky top-0 transition-all duration-200 print:hidden ${
         isScrolled
           ? "bg-white/98 dark:bg-[#1C1C1A]/98 backdrop-blur-md shadow-md border-b border-[#E6E1D8] dark:border-[#30302F]"

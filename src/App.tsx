@@ -119,6 +119,24 @@ const extractRecipeSlug = (r: string) => {
     ) {
       return "old-dhaka-haji-biryani";
     }
+    if (
+      raw === "vindaloo" ||
+      raw === "vindaloo-chicken" ||
+      raw === "halal-chicken-vindaloo" ||
+      raw === "goan-chicken-vindaloo"
+    ) {
+      return "chicken-vindaloo";
+    }
+    if (
+      raw === "lamb-vindaloo" ||
+      raw === "halal-lamb-vindaloo" ||
+      raw === "vindaloo-lamb" ||
+      raw === "mutton-vindaloo" ||
+      raw === "goan-lamb-vindaloo" ||
+      raw === "gosht-vindaloo"
+    ) {
+      return "lamb-vindaloo";
+    }
     return raw;
   }
   return null;
@@ -703,7 +721,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen w-full overflow-x-clip flex flex-col bg-[#FAF9F6] dark:bg-[#141413] text-[#30302F] dark:text-[#EDE8DF] selection:bg-[#F8CD78] selection:text-[#30302F] pb-16 lg:pb-0 transition-colors duration-200">
+    <div className="min-h-screen w-full flex flex-col bg-[#FAF9F6] dark:bg-[#141413] text-[#30302F] dark:text-[#EDE8DF] selection:bg-[#F8CD78] selection:text-[#30302F] pb-16 lg:pb-0 transition-colors duration-200">
       {/* 1 & 2. Top Header with utility bar and primary navigation */}
       <Header
         currentRoute={currentRoute}

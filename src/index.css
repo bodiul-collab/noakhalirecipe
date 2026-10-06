@@ -23,16 +23,17 @@
 
 @layer base {
   html, body {
-    overflow-x: clip;
     max-width: 100vw;
   }
 
   /* Frozen Sticky Navigation Menu Bar */
-  header.sticky {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    z-index: 50;
+  header,
+  header.sticky,
+  #main-navigation-menu-bar {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 50 !important;
   }
 
   body {

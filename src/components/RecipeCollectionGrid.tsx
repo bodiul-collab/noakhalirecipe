@@ -162,6 +162,28 @@ const DEFAULT_COLLECTION: CollectionCardItem[] = [
     image: IMAGES.chickenKarahi,
   },
   {
+    id: "card-chicken-vindaloo",
+    slug: "chicken-vindaloo",
+    title: "Chicken Vindaloo (چکن ونڈالو / চিকেন ভিনডালু / دجاج فيندالو)",
+    description:
+      "Succulent bone-in Halal chicken braised in a ruby garlic-vinegar chili paste with slow-caramelized onions & whole spices.",
+    heritageTag: "🌶️ Iconic Heritage Braise",
+    brandName: "Noakhali Kitchen",
+    halalBadge: "100% Halal Dish",
+    image: IMAGES.chickenVindaloo,
+  },
+  {
+    id: "card-lamb-vindaloo",
+    slug: "lamb-vindaloo",
+    title: "Lamb Vindaloo (لیمب ونڈالو / ল্যাম্ব ভিনডালু / لحم الضأن فيندالو)",
+    description:
+      "Tender Halal lamb cubes slow-braised in an artisanal garlic-vinegar chili paste with caramelized onions & whole spices.",
+    heritageTag: "🌶️ Royal Heritage Braise",
+    brandName: "Noakhali Kitchen",
+    halalBadge: "100% Halal Dish",
+    image: IMAGES.lambVindaloo,
+  },
+  {
     id: "card-seekh-kebab",
     slug: "seekh-kebab",
     title: "Seekh Kebab (শিখ কাবাব)",
