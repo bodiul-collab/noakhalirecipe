@@ -1,24 +1,18 @@
 import { AffiliateProductItem } from "../types";
 
 export const AFFILIATE_PRODUCTS: AffiliateProductItem[] = [
-  // COOKWARE FOR BENGALI & HALAL COOKING
+  // =========================================================================
+  // CATEGORY A — COOKWARE
+  // =========================================================================
   {
-    id: "prod-heavy-dekchi",
-    name: "Heavy-Bottomed Dekchi",
+    id: "prod-dekchi-biryani-pot",
+    name: "Heavy-Bottomed Biryani / Dekchi Pot",
     category: "Cookware",
     description:
-      "A traditional wide-bellied, narrow-rimmed cooking pot engineered with an extra-thick base for even thermal distribution during slow-steam 'dum' cooking.",
-    bestFor: "Biryani • Beef Tehari • Layered Rice Dishes • Pulao",
-    affiliateUrl: null, // Safe placeholder: will display "Product link coming soon"
-    disclosureRequired: true,
-  },
-  {
-    id: "prod-dutch-oven",
-    name: "Enameled Dutch Oven / Heavy Braising Pot",
-    category: "Cookware",
-    description:
-      "A heavy-cast braising vessel with tight-fitting lid that retains intense, steady heat and captures condensation for prolonged low-temperature stewing.",
-    bestFor: "Beef Nihari • Slow-Cooked Bhuna • Bone-In Curries • Stews",
+      "A wide-bellied, heavy-gauge cooking pot engineered with an extra-thick thermal base for controlled heat conduction during slow steam dum cooking.",
+    whyItMatters:
+      "Heavy-bottomed cookware distributes heat more evenly and helps prevent rice and meat from scorching during long dum cooking.",
+    bestFor: "Dhaka Shahi Kacchi Biryani • Chicken Biryani • Beef Tehari • Dum cooking",
     affiliateUrl: null,
     disclosureRequired: true,
   },
@@ -27,274 +21,182 @@ export const AFFILIATE_PRODUCTS: AffiliateProductItem[] = [
     name: "Pre-Seasoned Cast-Iron Kadai",
     category: "Cookware",
     description:
-      "Deep, curved wok-style cookware that holds exceptional searing heat without temperature drops, essential for high-heat caramelization and reducing thick gravies.",
-    bestFor: "Beef Bhuna • Chicken Karahi • High-Heat Searing • Stir-Frying",
+      "A deep, curved traditional wok-style vessel with outstanding thermal mass that holds intense searing heat without temperature drops.",
+    whyItMatters:
+      "Excellent heat retention for searing, browning and controlled bhunai/koshano.",
+    bestFor: "Beef Bhuna • Kala Bhuna • Chicken Karahi • Shahi Chicken Roast",
     affiliateUrl: null,
     disclosureRequired: true,
   },
   {
-    id: "prod-stainless-pot",
-    name: "Tri-Ply Stainless-Steel Cooking Pot",
+    id: "prod-dutch-oven-braiser",
+    name: "Heavy-Bottomed Braising Pot / Dutch Oven",
     category: "Cookware",
     description:
-      "Versatile, non-reactive everyday cooking pot with an aluminum core encapsulated between durable stainless steel for uniform boiling and simmer control.",
-    bestFor: "Everyday Curries • Steamed Rice • Dal Soups • Stocks",
+      "A thick-walled cast-iron or heavy-clad braiser with a tight-fitting moisture-lock lid, designed for hours of uninterrupted gentle simmering.",
+    whyItMatters:
+      "Maintains steady heat during long braising and reduction.",
+    bestFor: "Beef Nihari • Beef Bhuna • Slow-cooked curries",
+    affiliateUrl: null,
+    disclosureRequired: true,
+  },
+  {
+    id: "prod-tri-ply-stainless-pot",
+    name: "Tri-Ply Stainless Steel Cooking Pot",
+    category: "Cookware",
+    description:
+      "A versatile, non-reactive multi-layer cooking vessel with an aluminum core encapsulated in surgical-grade stainless steel for responsive heat control.",
+    whyItMatters:
+      "Useful multipurpose cookware for controlled stovetop cooking.",
+    bestFor: "Everyday Bengali curries • Chicken dishes • Sauces • Rice preparation",
     affiliateUrl: null,
     disclosureRequired: true,
   },
 
-  // KITCHEN TOOLS THAT MAKE COOKING EASIER
+  // =========================================================================
+  // CATEGORY B — PRECISION COOKING TOOLS
+  // =========================================================================
   {
-    id: "prod-digital-scale",
+    id: "prod-digital-kitchen-scale",
     name: "Digital Kitchen Scale",
-    category: "Kitchen Tools",
+    category: "Precision Cooking Tools",
     description:
-      "Precise gram-level measurements are especially useful when reproducing traditional family recipes, delicate baking, and balanced spice blends consistently.",
-    bestFor: "Biryani • Nihari • Hand-Mixed Spice Blends • Baking",
+      "A compact, high-precision electronic scale with single-gram and tare functionality for accurate meat, rice, and spice measurements.",
+    whyItMatters:
+      "Particularly valuable because Noakhali Kitchen recipes provide metric measurements.",
+    bestFor: "Recipe accuracy • Meat measurement • Rice measurement • Consistent recipe reproduction",
     affiliateUrl: null,
     disclosureRequired: true,
   },
   {
-    id: "prod-measuring-spoons",
+    id: "prod-stainless-measuring-spoons",
     name: "Stainless Steel Measuring Spoon Set",
-    category: "Kitchen Tools",
+    category: "Precision Cooking Tools",
     description:
-      "Heavy-duty, narrow-profile spoons that slip easily into slender spice jars to measure exact whole and ground spice portions.",
-    bestFor: "Panch Phoron • Garam Masala • Seasoning Precision • Baking",
+      "Heavy-duty, narrow-profile spoons with etched metric markings that slide effortlessly into slender spice jars without spilling.",
+    whyItMatters:
+      "Useful for reproducing precise spice ratios.",
+    bestFor: "Whole spices • Ground spices • Salt • Baking/cooking measurements",
     affiliateUrl: null,
     disclosureRequired: true,
   },
   {
-    id: "prod-spice-grinder",
-    name: "Electric Spice & Seed Grinder",
-    category: "Kitchen Tools",
+    id: "prod-instant-read-thermometer",
+    name: "Instant-Read Kitchen Thermometer",
+    category: "Precision Cooking Tools",
     description:
-      "High-speed stainless steel blades pulverize tough whole spices like cinnamon bark, black cardamom, and cumin seeds into velvety, aromatic homemade powders in seconds.",
-    bestFor: "Garam Masala • Roasted Cumin (Bhuna Jeera) • Radhuni Blends",
+      "An ultra-fast digital probe thermometer that provides calibrated readings within 2 to 3 seconds for safe internal temperatures and frying oils.",
+    whyItMatters:
+      "Helps cooks understand temperature rather than relying only on visual cues.",
+    bestFor: "Meat doneness • Oil temperature • Frying • Controlled cooking",
     affiliateUrl: null,
     disclosureRequired: true,
   },
   {
-    id: "prod-mortar-pestle",
+    id: "prod-fine-mesh-strainer",
+    name: "Fine-Mesh Stainless Steel Strainer",
+    category: "Precision Cooking Tools",
+    description:
+      "A reinforced wire-mesh culinary strainer that separates bone fragments, whole aromatics, and sediment for crystal-clear broths and silky gravies.",
+    whyItMatters:
+      "Essential for filtering whole spice infusions, clarifying bone broths, and ensuring smooth gravies in slow-cooked dishes.",
+    bestFor: "Filtering spice-infused liquids • Smooth sauces • Nihari preparation • Removing spice particles",
+    affiliateUrl: null,
+    disclosureRequired: true,
+  },
+
+  // =========================================================================
+  // CATEGORY C — SPICE PREPARATION
+  // =========================================================================
+  {
+    id: "prod-granite-mortar-pestle",
     name: "Granite Mortar & Pestle",
-    category: "Kitchen Tools",
+    category: "Spice Preparation",
     description:
-      "Heavy stone crushes fiber, releasing volatile essential oils and creating authentic artisanal textures for pastes, pestos, and coarse finishing seasonings.",
-    bestFor: "Ginger-Garlic Paste • Mustard Seed Bata • Crushed Whole Peppercorn",
+      "A heavy solid granite mortar and pestle that crushes whole botanical seeds and aromatic fibers to release natural essential oils.",
+    whyItMatters:
+      "Connects directly to traditional Bengali spice preparation.",
+    bestFor: "Whole spices • Ginger • Garlic • Bengali spice pastes • Panch Phoron preparation",
     affiliateUrl: null,
     disclosureRequired: true,
   },
   {
-    id: "prod-fine-strainer",
-    name: "Stainless Steel Fine-Mesh Strainer",
-    category: "Kitchen Tools",
+    id: "prod-electric-spice-grinder",
+    name: "Electric Spice Grinder",
+    category: "Spice Preparation",
     description:
-      "Sturdy fine mesh effectively strains bone broths, delicate sugar syrups, and flour or washes small-grain Chinigura and Basmati rice without losing grains.",
-    bestFor: "Nihari Broth Clarification • Rice Washing • Tea & Chai Straining",
-    affiliateUrl: null,
-    disclosureRequired: true,
-  },
-  {
-    id: "prod-wooden-utensils",
-    name: "Hardwood Cooking Utensils Set",
-    category: "Kitchen Tools",
-    description:
-      "Gentle on enamel and non-stick coatings, heat-resistant wooden spatulas and flat paddles provide the leverage needed for prolonged onion caramelization and bhunai.",
-    bestFor: "Koshano / Bhunai • Rice Fluffing • Gentle Sauce Stirring",
-    affiliateUrl: null,
-    disclosureRequired: true,
-  },
-  {
-    id: "prod-thermometer",
-    name: "Digital Instant-Read Meat Thermometer",
-    category: "Kitchen Tools",
-    description:
-      "Ultra-fast precision probe takes the guesswork out of meat doneness, poultry safety, and oil temperatures for golden, non-greasy pooris.",
-    bestFor: "Halal Roasts • Kebabs • Poori Frying Oil (375°F) • Braised Meats",
-    affiliateUrl: null,
-    disclosureRequired: true,
-  },
-  {
-    id: "prod-kitchen-tongs",
-    name: "Heavy-Duty Locking Kitchen Tongs",
-    category: "Kitchen Tools",
-    description:
-      "Scalloped silicone or steel heads grip hot meat shanks, charred flatbreads, and searing steaks safely over open flame and bubbling saucepans.",
-    bestFor: "Tandoori Skewers • Turning Parathas • Lifting Meat Shanks",
+      "A high-speed motor with stainless steel blades designed to quickly grind tough cinnamon bark, cardamom pods, and roasted cumin into fine powders.",
+    whyItMatters:
+      "Position this as a convenience tool, not a replacement for every traditional grinding technique.",
+    bestFor: "Dry whole spices • Custom spice blends • Cumin • Coriander • Garam masala",
     affiliateUrl: null,
     disclosureRequired: true,
   },
 
-  // BENGALI PANTRY ESSENTIALS
+  // =========================================================================
+  // CATEGORY D — PREPARATION TOOLS
+  // =========================================================================
   {
-    id: "prod-panch-phoron",
-    name: "Bengali Five-Spice (Panch Phoron)",
-    category: "Spices & Pantry",
+    id: "prod-hardwood-cooking-spatula",
+    name: "Hardwood Cooking Spatula",
+    category: "Preparation Tools",
     description:
-      "An equal-part unground blend of fenugreek, nigella, cumin, black mustard, and fennel seeds that releases an anise-like, savory perfume when bloomed in hot oil.",
-    bestFor: "Dal Tempering • Tarkari • Vegetable Bhaji • Fish Curries",
+      "A smooth-edged flat spatula crafted from dense natural hardwood, designed for prolonged stirring and scraping fond without scratching cookware.",
+    whyItMatters:
+      "Gentle on heavy cookware while providing the leverage and heat tolerance needed to scrape fond and stir thick gravies without scratching.",
+    bestFor: "Bhunai • Koshano • Scraping the bottom of heavy cookware • Stirring thick gravies",
     affiliateUrl: null,
     disclosureRequired: true,
   },
   {
-    id: "prod-radhuni",
-    name: "Wild Celery Seed (Radhuni / Trachyspermum roxburghianum)",
-    category: "Spices & Pantry",
+    id: "prod-stainless-kitchen-tongs",
+    name: "Stainless Steel Kitchen Tongs",
+    category: "Preparation Tools",
     description:
-      "The rare, signature botanical of Bengali culinary heritage. Pungent and complex with notes reminiscent of celery, fenugreek, and parsley root.",
-    bestFor: "Authentic Shukto • Bengali Macher Jhol • Signature Regional Dal",
+      "Locking stainless steel tongs with scalloped silicone or steel tips for safely maneuvering hot poultry quarters and bone-in beef cuts.",
+    whyItMatters:
+      "Provides secure handling when turning large cuts of poultry or meat during searing without tearing the delicate skin.",
+    bestFor: "Handling chicken pieces • Turning meat • Browning • Serving",
     affiliateUrl: null,
     disclosureRequired: true,
   },
   {
-    id: "prod-whole-cumin",
-    name: "Whole Cumin Seeds (Jeera)",
-    category: "Spices & Pantry",
+    id: "prod-stainless-mixing-bowls",
+    name: "Stainless Steel Mixing Bowls",
+    category: "Preparation Tools",
     description:
-      "Earthy, warm seeds that form the foundation of countless tempering oils (phoron) and dry-roasted finishing powders across South Asia.",
-    bestFor: "Tarka • Bhuna Jeera Powder • Aloo Dum • Meat Gravies",
-    affiliateUrl: null,
-    disclosureRequired: true,
-  },
-  {
-    id: "prod-kalo-jeera",
-    name: "Nigella / Black Seed (Kalo Jeera)",
-    category: "Spices & Pantry",
-    description:
-      "Delicate teardrop-shaped black seeds delivering subtle herbaceous onion-oregano undertones and a gentle peppery crunch.",
-    bestFor: "Bhorta Seasoning • Bengali Fish Jhol • Naan & Flatbreads",
-    affiliateUrl: null,
-    disclosureRequired: true,
-  },
-  {
-    id: "prod-fennel-seeds",
-    name: "Whole Sweet Fennel Seeds (Mouri / Saunf)",
-    category: "Spices & Pantry",
-    description:
-      "Cooling, naturally sweet licorice-scented seeds essential to Bengali panch phoron blends and Mughlai meat marinades.",
-    bestFor: "Panch Phoron • Shahi Korma Marinades • Digestive Refreshers",
-    affiliateUrl: null,
-    disclosureRequired: true,
-  },
-  {
-    id: "prod-mustard-seeds",
-    name: "Whole Brown & Yellow Mustard Seeds (Shorshe)",
-    category: "Spices & Pantry",
-    description:
-      "Pungent seeds that produce gentle nutty warmth when bloomed whole, or explosive wasabi-like sharpness when ground fresh with water and salt.",
-    bestFor: "Shorshe Ilish • Fish Curries • Tempering • Pickling",
-    affiliateUrl: null,
-    disclosureRequired: true,
-  },
-  {
-    id: "prod-coriander-seeds",
-    name: "Whole Coriander Seeds (Dhone)",
-    category: "Spices & Pantry",
-    description:
-      "Light, citrusy, and floral seed clusters that provide volume, aroma, and delicate herbal depth to braising pastes and marinades.",
-    bestFor: "Beef Bhuna Gravy • Kadai Masala • Roasted Spice Powders",
-    affiliateUrl: null,
-    disclosureRequired: true,
-  },
-  {
-    id: "prod-black-pepper",
-    name: "Whole Tellicherry Black Peppercorns (Gol Morich)",
-    category: "Spices & Pantry",
-    description:
-      "Plump, fully ripened sun-dried berries with high piperine content, delivering sharp, clean heat and woody, resinous fragrance.",
-    bestFor: "Beef Nihari Pot • Shahi Rezala • Garam Masala • Seasoning",
-    affiliateUrl: null,
-    disclosureRequired: true,
-  },
-  {
-    id: "prod-green-cardamom",
-    name: "Whole Green Cardamom Pods (Choto Elaichi)",
-    category: "Spices & Pantry",
-    description:
-      "The 'Queen of Spices,' packed with aromatic black seeds that infuse layered rice, curries, and milk sweets with sweet floral citrus-eucalyptus perfume.",
-    bestFor: "Biryani Dum • Shahi Chicken Roast • Kheer & Halwa • Chai",
-    affiliateUrl: null,
-    disclosureRequired: true,
-  },
-  {
-    id: "prod-cinnamon-bark",
-    name: "Ceylon Cinnamon Bark & Cassia (Darchini)",
-    category: "Spices & Pantry",
-    description:
-      "Warm, sweet, woody bark that infuses hot oil and simmering bone broths with comforting woody sweetness without overpowering.",
-    bestFor: "Whole Spice Tempering • Meat Stews • Biryani • Desserts",
-    affiliateUrl: null,
-    disclosureRequired: true,
-  },
-  {
-    id: "prod-whole-cloves",
-    name: "Whole Cloves (Lobongo)",
-    category: "Spices & Pantry",
-    description:
-      "Intensely aromatic dried flower buds packed with sweet, numbing eugenol oils that anchor royal Mughlai and Bengali meat gravies.",
-    bestFor: "Pulao • Beef Tehari • Shahi Rezala • Chai Blends",
-    affiliateUrl: null,
-    disclosureRequired: true,
-  },
-  {
-    id: "prod-mustard-oil",
-    name: "Cold-Pressed Pure Mustard Oil (Kachi Ghani Shorsher Tel)",
-    category: "Spices & Pantry",
-    description:
-      "The undisputed golden soul of Bengali culinary tradition. Pungent, nutty, and vibrant with allyl isothiocyanate that cuts heavy meat richness.",
-    bestFor: "Haji Biryani • Old Dhaka Beef Tehari • Shorshe Ilish • Bhortas",
+      "A nesting set of deep, non-reactive stainless steel prep bowls with flat bases for stable whisking of yogurt marinades and resting fried onions.",
+    whyItMatters:
+      "Non-reactive, durable prep vessels ideal for acidic yogurt marinades, resting fried onions, and mixing spice pastes.",
+    bestFor: "Marination • Yogurt mixtures • Spice preparation • Beresta preparation",
     affiliateUrl: null,
     disclosureRequired: true,
   },
 
-  // STORAGE & ORGANIZATION
+  // =========================================================================
+  // CATEGORY E — PANTRY / STORAGE
+  // =========================================================================
   {
-    id: "prod-airtight-spice-jars",
-    name: "Airtight Glass Spice Jars with Bamboo Lids",
-    category: "Storage & Organization",
+    id: "prod-airtight-glass-spice-jars",
+    name: "Airtight Glass Spice Jars",
+    category: "Pantry & Storage",
     description:
-      "Silicone-sealed glass canisters shield delicate whole and ground spices from moisture, air exposure, and kitchen humidity, preserving volatile aromatic oils.",
-    bestFor: "Whole Spices • Ground Masalas • Panch Phoron Storage",
+      "Thick glass jars equipped with airtight silicone sealing rings to shield delicate whole and ground spices from kitchen humidity and oxygen.",
+    whyItMatters:
+      "Protects sensitive botanical oils and aroma compounds from kitchen humidity and ambient oxidation.",
+    bestFor: "Panch Phoron • Radhuni • Cumin • Nigella • Fennel • Mustard seeds • Cardamom • Cinnamon",
     affiliateUrl: null,
     disclosureRequired: true,
   },
   {
-    id: "prod-glass-pantry-containers",
-    name: "Modular Glass Pantry Storage Containers",
-    category: "Storage & Organization",
+    id: "prod-glass-pantry-storage-containers",
+    name: "Glass Pantry Storage Containers",
+    category: "Pantry & Storage",
     description:
-      "Heavy borosilicate glass modular bins keep heirloom Chinigura rice, basmati grains, red lentils, and semolina pest-free and clearly visible.",
-    bestFor: "Chinigura Rice • Basmati Rice • Masoor Dal • Semolina (Suji)",
-    affiliateUrl: null,
-    disclosureRequired: true,
-  },
-  {
-    id: "prod-oil-dispenser",
-    name: "Drip-Free Glass Oil Pouring Bottles",
-    category: "Storage & Organization",
-    description:
-      "Dark amber or UV-resistant glass bottles equipped with weighted pour spouts regulate accurate oil flow and protect cold-pressed oils from light degradation.",
-    bestFor: "Mustard Oil • Extra Virgin Olive Oil • Liquid Cow Ghee",
-    affiliateUrl: null,
-    disclosureRequired: true,
-  },
-  {
-    id: "prod-spice-organizer",
-    name: "Tiered Drawer / Countertop Spice Rack Organizer",
-    category: "Storage & Organization",
-    description:
-      "Step-tiered or expandable racks display labels clearly at a glance, eliminating clutter during high-heat cooking when rapid spice access is critical.",
-    bestFor: "Quick Spice Access • Countertop Organization • Pantry Drawers",
-    affiliateUrl: null,
-    disclosureRequired: true,
-  },
-  {
-    id: "prod-measuring-containers",
-    name: "Liquid & Dry Ingredient Measuring Jugs",
-    category: "Storage & Organization",
-    description:
-      "Clear, heat-safe tempered glass measuring beakers with embossed imperial and metric volume scales for accurate water-to-rice ratios.",
-    bestFor: "Stock Measuring • Rice Absorption Ratios • Marinade Prep",
+      "Stackable borosilicate glass containers with sealed locking lids to keep grains, lentils, and flours pest-free, visible, and pantry-fresh.",
+    whyItMatters:
+      "Heavy-duty, pest-resistant storage that preserves the freshness of heirloom Chinigura rice and dry staples.",
+    bestFor: "Rice • Flour • Whole spices • Lentils • Pantry organization",
     affiliateUrl: null,
     disclosureRequired: true,
   },

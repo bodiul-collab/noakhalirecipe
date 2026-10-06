@@ -145,8 +145,17 @@ export interface KitchenToolItem {
 export interface AffiliateProductItem {
   id: string;
   name: string;
-  category: "Cookware" | "Kitchen Tools" | "Spices & Pantry" | "Storage & Organization";
+  category:
+    | "Cookware"
+    | "Precision Cooking Tools"
+    | "Spice Preparation"
+    | "Preparation Tools"
+    | "Pantry & Storage"
+    | "Kitchen Tools"
+    | "Spices & Pantry"
+    | "Storage & Organization";
   description: string;
+  whyItMatters?: string;
   bestFor: string;
   affiliateUrl: string | null;
   image?: string;

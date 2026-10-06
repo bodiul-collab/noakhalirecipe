@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NoakhaliLogo } from "./NoakhaliLogo";
 import {
   Bookmark,
@@ -51,6 +51,16 @@ export const Header: React.FC<HeaderProps> = ({
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [categoryDropdownOpen, setCategoryDropdownOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 8);
+    };
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Complete, clean primary navigation links
   const navLinks = [
@@ -78,7 +88,13 @@ export const Header: React.FC<HeaderProps> = ({
   ];
 
   return (
-    <header className="w-full bg-white z-50 sticky top-0 shadow-[0_1px_4px_rgba(0,0,0,0.05)] print:hidden">
+    <header
+      className={`w-full z-50 sticky top-0 transition-all duration-200 print:hidden ${
+        isScrolled
+          ? "bg-white/98 dark:bg-[#1C1C1A]/98 backdrop-blur-md shadow-md border-b border-[#E6E1D8] dark:border-[#30302F]"
+          : "bg-white dark:bg-[#1C1C1A] shadow-[0_1px_4px_rgba(0,0,0,0.05)] border-b border-[#E6E1D8]/80 dark:border-[#30302F]"
+      }`}
+    >
       {/* Top Thin Utility Bar */}
       <div className="w-full bg-[#242423] text-[#E6E1D8] text-xs font-sans border-b border-[#30302F]">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 h-8 flex items-center justify-between">
@@ -125,7 +141,7 @@ export const Header: React.FC<HeaderProps> = ({
         </button>
 
         {/* Decongested Desktop Navigation (Clean, Spacious, Uncrowded) */}
-        <nav className="hidden lg:flex items-center gap-5 xl:gap-7 text-sm font-medium text-[#3F3C38]">
+        <nav className="hidden lg:flex items-center gap-5 xl:gap-7 text-sm font-medium text-[#3F3C38] dark:text-[#EDE8DF]">
           {navLinks.map((link) => {
             const isActive =
               link.route === "/"
@@ -151,7 +167,7 @@ export const Header: React.FC<HeaderProps> = ({
                       className={`transition-colors cursor-pointer py-1 ${
                         isActive
                           ? "text-[#E97520] font-semibold"
-                          : "text-[#3F3C38] hover:text-[#E97520]"
+                          : "text-[#3F3C38] dark:text-[#EDE8DF] hover:text-[#E97520] dark:hover:text-[#F8CD78]"
                       }`}
                     >
                       <span>{link.label}</span>
@@ -178,9 +194,9 @@ export const Header: React.FC<HeaderProps> = ({
 
                   {/* Elegant Category Dropdown Sheet */}
                   {categoryDropdownOpen && (
-                    <div className="absolute top-[calc(100%-6px)] left-1/2 -translate-x-1/2 w-80 bg-white border border-[#E6E1D8] shadow-xl rounded-xl p-3 z-50 animate-in fade-in-50 duration-150">
-                      <div className="flex items-center justify-between px-2 pb-2 mb-1 border-b border-[#F3F2EE]">
-                        <span className="text-[11px] font-bold uppercase tracking-wider text-[#8A857E]">
+                    <div className="absolute top-[calc(100%-6px)] left-1/2 -translate-x-1/2 w-80 bg-white dark:bg-[#242423] border border-[#E6E1D8] dark:border-[#33322E] shadow-xl rounded-xl p-3 z-50 animate-in fade-in-50 duration-150">
+                      <div className="flex items-center justify-between px-2 pb-2 mb-1 border-b border-[#F3F2EE] dark:border-[#33322E]">
+                        <span className="text-[11px] font-bold uppercase tracking-wider text-[#8A857E] dark:text-[#A8A49E]">
                           Explore Recipes by Category
                         </span>
                         <button
@@ -202,13 +218,13 @@ export const Header: React.FC<HeaderProps> = ({
                               setCategoryDropdownOpen(false);
                               onNavigate(sub.route);
                             }}
-                            className="w-full text-left px-2.5 py-1.5 rounded-md hover:bg-[#FFF9F0] hover:text-[#E97520] transition-colors group/item flex items-center justify-between cursor-pointer"
+                            className="w-full text-left px-2.5 py-1.5 rounded-md hover:bg-[#FFF9F0] dark:hover:bg-[#302B24] hover:text-[#E97520] transition-colors group/item flex items-center justify-between cursor-pointer"
                           >
                             <div>
-                              <div className="text-xs font-semibold text-[#30302F] group-hover/item:text-[#E97520]">
+                              <div className="text-xs font-semibold text-[#30302F] dark:text-[#EDE8DF] group-hover/item:text-[#E97520]">
                                 {sub.label}
                               </div>
-                              <div className="text-[10px] text-[#8A857E]">
+                              <div className="text-[10px] text-[#8A857E] dark:text-[#A8A49E]">
                                 {sub.desc}
                               </div>
                             </div>
@@ -217,13 +233,13 @@ export const Header: React.FC<HeaderProps> = ({
                         ))}
                       </div>
 
-                      <div className="border-t border-[#F3F2EE] mt-2 pt-2 px-1">
+                      <div className="border-t border-[#F3F2EE] dark:border-[#33322E] mt-2 pt-2 px-1">
                         <button
                           onClick={() => {
                             setCategoryDropdownOpen(false);
                             onNavigate("/category");
                           }}
-                          className="w-full text-center py-1.5 text-xs font-bold text-[#E97520] bg-[#FFF9F0] hover:bg-[#F8CD78]/30 rounded-md transition-colors flex items-center justify-center gap-1 cursor-pointer"
+                          className="w-full text-center py-1.5 text-xs font-bold text-[#E97520] bg-[#FFF9F0] dark:bg-[#302B24] hover:bg-[#F8CD78]/30 rounded-md transition-colors flex items-center justify-center gap-1 cursor-pointer"
                         >
                           <span>Browse All Categories Hub</span>
                           <ArrowRight className="w-3 h-3" />
@@ -242,7 +258,7 @@ export const Header: React.FC<HeaderProps> = ({
                 className={`transition-colors cursor-pointer py-1 relative ${
                   isActive
                     ? "text-[#E97520] font-semibold"
-                    : "text-[#3F3C38] hover:text-[#E97520]"
+                    : "text-[#3F3C38] dark:text-[#EDE8DF] hover:text-[#E97520] dark:hover:text-[#F8CD78]"
                 }`}
               >
                 <span>{link.label}</span>

@@ -703,7 +703,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen w-full overflow-x-hidden flex flex-col bg-[#FAF9F6] dark:bg-[#141413] text-[#30302F] dark:text-[#EDE8DF] selection:bg-[#F8CD78] selection:text-[#30302F] pb-16 lg:pb-0 transition-colors duration-200">
+    <div className="min-h-screen w-full overflow-x-clip flex flex-col bg-[#FAF9F6] dark:bg-[#141413] text-[#30302F] dark:text-[#EDE8DF] selection:bg-[#F8CD78] selection:text-[#30302F] pb-16 lg:pb-0 transition-colors duration-200">
       {/* 1 & 2. Top Header with utility bar and primary navigation */}
       <Header
         currentRoute={currentRoute}

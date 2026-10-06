@@ -132,9 +132,10 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
 
   // Filter products by category
   const cookwareProducts = AFFILIATE_PRODUCTS.filter((p) => p.category === "Cookware");
-  const toolProducts = AFFILIATE_PRODUCTS.filter((p) => p.category === "Kitchen Tools");
-  const pantryProducts = AFFILIATE_PRODUCTS.filter((p) => p.category === "Spices & Pantry");
-  const storageProducts = AFFILIATE_PRODUCTS.filter((p) => p.category === "Storage & Organization");
+  const precisionProducts = AFFILIATE_PRODUCTS.filter((p) => p.category === "Precision Cooking Tools");
+  const spicePrepProducts = AFFILIATE_PRODUCTS.filter((p) => p.category === "Spice Preparation");
+  const prepToolProducts = AFFILIATE_PRODUCTS.filter((p) => p.category === "Preparation Tools");
+  const storageProducts = AFFILIATE_PRODUCTS.filter((p) => p.category === "Pantry & Storage");
 
   // Equipment category filter (within Equipment Guide tab)
   const [equipmentCategory, setEquipmentCategory] = useState<string>("All");
@@ -282,13 +283,14 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
         {/* SECTION B: QUICK CATEGORY NAVIGATION (CARD-STYLE) */}
         <nav
           aria-label="Category Navigation"
-          className="grid grid-cols-2 sm:grid-cols-5 gap-3 max-w-4xl mx-auto"
+          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 max-w-5xl mx-auto"
         >
           {[
-            { id: "section-cookware", label: "Cookware", icon: CookingPot, desc: "Dekchis & Kadais" },
-            { id: "section-kitchen-tools", label: "Kitchen Tools", icon: Scale, desc: "Scales & Spoons" },
-            { id: "section-spices-pantry", label: "Spices & Pantry", icon: Sparkles, desc: "Bengali Staples" },
-            { id: "section-storage", label: "Storage", icon: PackageCheck, desc: "Jars & Containers" },
+            { id: "section-cookware", label: "Cookware", icon: CookingPot, desc: "Pots & Kadais" },
+            { id: "section-precision-tools", label: "Precision Tools", icon: Scale, desc: "Scales & Spoons" },
+            { id: "section-spice-prep", label: "Spice Prep", icon: Sparkles, desc: "Mortars & Grinders" },
+            { id: "section-prep-tools", label: "Prep Tools", icon: Utensils, desc: "Spatulas & Bowls" },
+            { id: "section-storage", label: "Pantry & Storage", icon: PackageCheck, desc: "Jars & Containers" },
             { id: "section-recipe-picks", label: "Recipe Picks", icon: BookOpen, desc: "Matched to Dishes" },
           ].map((cat) => {
             const Icon = cat.icon;
@@ -364,11 +366,11 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
         {/* PRIMARY EDITORIAL HUB VIEW */}
         {activeTab === "hub" && (
           <div className="space-y-16">
-            {/* SECTION C: COOKWARE FOR BENGALI & HALAL COOKING */}
+            {/* SECTION C: CATEGORY A — COOKWARE */}
             <section id="section-cookware" className="space-y-6 scroll-mt-20">
               <div className="border-b border-[#E6E1D8] pb-4">
                 <span className="text-[11px] font-bold uppercase tracking-widest text-[#E97520] block">
-                  CATEGORY 01
+                  CATEGORY A &bull; COOKWARE
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-bold text-[#242423] font-serif-editorial mt-1">
                   Cookware for Bengali &amp; Halal Cooking
@@ -385,86 +387,95 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
               </div>
             </section>
 
-            {/* SECTION D: KITCHEN TOOLS */}
-            <section id="section-kitchen-tools" className="space-y-6 scroll-mt-20">
+            {/* SECTION D: CATEGORY B — PRECISION COOKING TOOLS */}
+            <section id="section-precision-tools" className="space-y-6 scroll-mt-20">
               <div className="border-b border-[#E6E1D8] pb-4">
                 <span className="text-[11px] font-bold uppercase tracking-widest text-[#E97520] block">
-                  CATEGORY 02
+                  CATEGORY B &bull; PRECISION COOKING TOOLS
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-bold text-[#242423] font-serif-editorial mt-1">
-                  Tools That Make Cooking Easier
+                  Precision Cooking Tools
                 </h2>
                 <p className="text-sm text-[#77736D] mt-2 max-w-3xl leading-relaxed">
-                  Precision tools, durable grinding stones, and ergonomic kitchen implements that bring consistency, safety, and joy to daily Halal meal preparation.
+                  Accurate gram measurements, calibrated temperatures, and fine filtration that bring consistency, safety, and repeatable excellence to complex recipes.
                 </p>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-                {toolProducts.map((product) => (
+                {precisionProducts.map((product) => (
                   <ProductCard key={product.id} product={product} />
                 ))}
               </div>
             </section>
 
-            {/* SECTION E: SPICES & PANTRY */}
-            <section id="section-spices-pantry" className="space-y-6 scroll-mt-20">
-              <div className="border-b border-[#E6E1D8] pb-4">
-                <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
-                  <div>
-                    <span className="text-[11px] font-bold uppercase tracking-widest text-[#E97520] block">
-                      CATEGORY 03
-                    </span>
-                    <h2 className="text-2xl sm:text-3xl font-bold text-[#242423] font-serif-editorial mt-1">
-                      Bengali Pantry Essentials
-                    </h2>
-                    <p className="text-sm text-[#77736D] mt-2 max-w-3xl leading-relaxed">
-                      Hand-selected foundational spices and cold-pressed botanical oils that define the aromatic soul of authentic Eastern Bengal cooking.
-                    </p>
-                  </div>
-                </div>
-
-                {/* Important certification guidance banner */}
-                <div className="mt-4 p-3 bg-[#FAF9F6] border border-[#E6E1D8] rounded-lg text-xs text-[#57534E] flex items-center gap-2">
-                  <ShieldCheck className="w-4 h-4 text-[#2D7A52] shrink-0" />
-                  <span>
-                    <strong>Certification Notice:</strong> Check the package labeling and manufacturer information for current certification and ingredients.
-                  </span>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-                {pantryProducts.map((product) => (
-                  <ProductCard key={product.id} product={product} />
-                ))}
-              </div>
-            </section>
-
-            {/* SECTION F: STORAGE & ORGANIZATION */}
-            <section id="section-storage" className="space-y-6 scroll-mt-20">
+            {/* SECTION E: CATEGORY C — SPICE PREPARATION */}
+            <section id="section-spice-prep" className="space-y-6 scroll-mt-20">
               <div className="border-b border-[#E6E1D8] pb-4">
                 <span className="text-[11px] font-bold uppercase tracking-widest text-[#E97520] block">
-                  CATEGORY 04
+                  CATEGORY C &bull; SPICE PREPARATION
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-bold text-[#242423] font-serif-editorial mt-1">
-                  Keep Your Pantry Organized
+                  Spice Preparation
                 </h2>
                 <p className="text-sm text-[#77736D] mt-2 max-w-3xl leading-relaxed">
-                  Protecting volatile essential oils from sunlight, air exposure, and kitchen moisture is crucial for preserving the pungent fragrance of raw spices and rice grains.
+                  Connect directly to traditional Bengali spice pastes and fragrant homemade masala blends with purpose-built grinding and crushing equipment.
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-3xl">
+                {spicePrepProducts.map((product) => (
+                  <ProductCard key={product.id} product={product} />
+                ))}
+              </div>
+            </section>
+
+            {/* SECTION F: CATEGORY D — PREPARATION TOOLS */}
+            <section id="section-prep-tools" className="space-y-6 scroll-mt-20">
+              <div className="border-b border-[#E6E1D8] pb-4">
+                <span className="text-[11px] font-bold uppercase tracking-widest text-[#E97520] block">
+                  CATEGORY D &bull; PREPARATION TOOLS
+                </span>
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#242423] font-serif-editorial mt-1">
+                  Preparation Tools
+                </h2>
+                <p className="text-sm text-[#77736D] mt-2 max-w-3xl leading-relaxed">
+                  Ergonomic spatulas for prolonged koshano, locking tongs for searing hot poultry, and non-reactive bowls for yogurt-marinated meats.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+                {prepToolProducts.map((product) => (
+                  <ProductCard key={product.id} product={product} />
+                ))}
+              </div>
+            </section>
+
+            {/* SECTION G: CATEGORY E — PANTRY / STORAGE */}
+            <section id="section-storage" className="space-y-6 scroll-mt-20">
+              <div className="border-b border-[#E6E1D8] pb-4">
+                <span className="text-[11px] font-bold uppercase tracking-widest text-[#E97520] block">
+                  CATEGORY E &bull; PANTRY &amp; STORAGE
+                </span>
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#242423] font-serif-editorial mt-1">
+                  Pantry &amp; Storage Essentials
+                </h2>
+                <p className="text-sm text-[#77736D] mt-2 max-w-3xl leading-relaxed">
+                  Protect delicate whole spices, rare aromatics like Radhuni, and heirloom rice grains from humidity, air, and ambient kitchen moisture.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-3xl">
                 {storageProducts.map((product) => (
                   <ProductCard key={product.id} product={product} />
                 ))}
               </div>
             </section>
 
-            {/* SECTION G: RECIPE-SPECIFIC PICKS (KEY SECTION) */}
+            {/* SECTION H: RECIPE-SPECIFIC PICKS (KEY SECTION) */}
             <section id="section-recipe-picks" className="space-y-6 scroll-mt-20">
               <div className="border-b border-[#E6E1D8] pb-4">
                 <span className="text-[11px] font-bold uppercase tracking-widest text-[#E97520] block">
-                  CATEGORY 05 &bull; THE CULINARY CONNECTION
+                  THE CULINARY CONNECTION &bull; MATCHED RECIPES
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-bold text-[#242423] font-serif-editorial mt-1">
                   Tools Matched to Our Recipes
@@ -474,7 +485,7 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {/* 1. DHAKA SHAHI KACCHI BIRYANI */}
                 <div className="p-6 rounded-xl border border-[#E6E1D8] bg-white hover:border-[#E97520]/50 transition-all shadow-xs flex flex-col justify-between space-y-4">
                   <div className="space-y-3">
@@ -493,10 +504,10 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
                         Recommended tools:
                       </span>
                       <ul className="text-xs text-[#57534E] space-y-1.5 list-disc list-inside">
-                        <li>Heavy-bottomed biryani pot</li>
-                        <li>Digital kitchen scale</li>
-                        <li>Spice grinder</li>
-                        <li>Measuring spoons</li>
+                        <li>Heavy-Bottomed Biryani / Dekchi Pot</li>
+                        <li>Digital Kitchen Scale</li>
+                        <li>Measuring Spoons</li>
+                        <li>Instant-Read Thermometer</li>
                       </ul>
                     </div>
                   </div>
@@ -538,10 +549,10 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
                         Recommended tools:
                       </span>
                       <ul className="text-xs text-[#57534E] space-y-1.5 list-disc list-inside">
-                        <li>Heavy braising pot</li>
-                        <li>Fine-mesh strainer</li>
-                        <li>Spice grinder</li>
-                        <li>Measuring spoons</li>
+                        <li>Heavy-Bottomed Braising Pot</li>
+                        <li>Fine-Mesh Strainer</li>
+                        <li>Spice Grinder</li>
+                        <li>Measuring Spoons</li>
                       </ul>
                     </div>
                   </div>
@@ -575,7 +586,7 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
                       Bengali Beef Bhuna
                     </h3>
                     <p className="text-xs text-[#77736D] leading-relaxed">
-                      The slow frying of spices and meat in their own rendered juices ('koshano') requires high thermal mass so the pan never cools when liquids are introduced.
+                      The slow frying of spices and meat in their own rendered juices ('koshano') requires high thermal mass so the pan never cools when aromatics are introduced.
                     </p>
 
                     <div className="pt-2">
@@ -583,10 +594,9 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
                         Recommended tools:
                       </span>
                       <ul className="text-xs text-[#57534E] space-y-1.5 list-disc list-inside">
-                        <li>Cast-iron kadai</li>
-                        <li>Wooden spatula</li>
-                        <li>Spice grinder</li>
-                        <li>Heavy-bottomed pan</li>
+                        <li>Cast-Iron Kadai</li>
+                        <li>Hardwood Spatula</li>
+                        <li>Spice Grinder</li>
                       </ul>
                     </div>
                   </div>
@@ -610,7 +620,52 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
                   </div>
                 </div>
 
-                {/* 4. PANCH PHORON COOKING */}
+                {/* 4. BENGALI SHAHI CHICKEN ROAST */}
+                <div className="p-6 rounded-xl border border-[#E6E1D8] bg-white hover:border-[#E97520]/50 transition-all shadow-xs flex flex-col justify-between space-y-4">
+                  <div className="space-y-3">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#D97706] bg-[#FEF3C7] px-2.5 py-1 rounded">
+                      ROYAL BIYE BARI FEAST
+                    </span>
+                    <h3 className="text-xl font-bold text-[#242423] font-serif-editorial">
+                      Bengali Shahi Chicken Roast
+                    </h3>
+                    <p className="text-xs text-[#77736D] leading-relaxed">
+                      Quartered chicken seared in fragrant beresta oil and simmered in a velvety yogurt, nut, and warm spice gravy with controlled reduction.
+                    </p>
+
+                    <div className="pt-2">
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-[#30302F] block mb-2">
+                        Recommended tools:
+                      </span>
+                      <ul className="text-xs text-[#57534E] space-y-1.5 list-disc list-inside">
+                        <li>Cast-Iron Kadai</li>
+                        <li>Digital Kitchen Scale</li>
+                        <li>Measuring Spoons</li>
+                        <li>Stainless Steel Mixing Bowls</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="pt-4 border-t border-[#E6E1D8] flex items-center justify-between">
+                    <button
+                      type="button"
+                      onClick={() => navigateToRecipe("bengali-chicken-roast")}
+                      className="inline-flex items-center gap-1.5 text-xs font-bold text-[#E97520] hover:text-[#d36615] transition-colors cursor-pointer"
+                    >
+                      <span>Explore the Recipe</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => onNavigate("/guides/bengali-shahi-chicken-roast-guide")}
+                      className="text-xs text-[#77736D] hover:text-[#30302F] underline cursor-pointer"
+                    >
+                      Read Chicken Roast Guide →
+                    </button>
+                  </div>
+                </div>
+
+                {/* 5. PANCH PHORON COOKING */}
                 <div className="p-6 rounded-xl border border-[#E6E1D8] bg-white hover:border-[#E97520]/50 transition-all shadow-xs flex flex-col justify-between space-y-4">
                   <div className="space-y-3">
                     <span className="text-[10px] font-bold uppercase tracking-wider text-[#2D7A52] bg-[#EBF5F0] px-2.5 py-1 rounded">
@@ -628,10 +683,9 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
                         Recommended tools:
                       </span>
                       <ul className="text-xs text-[#57534E] space-y-1.5 list-disc list-inside">
-                        <li>Heavy-bottomed skillet</li>
-                        <li>Spice storage jars</li>
-                        <li>Measuring spoons</li>
-                        <li>Mortar &amp; pestle</li>
+                        <li>Mortar &amp; Pestle</li>
+                        <li>Spice Grinder</li>
+                        <li>Airtight Spice Jars</li>
                       </ul>
                     </div>
                   </div>
@@ -639,18 +693,62 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
                   <div className="pt-4 border-t border-[#E6E1D8] flex items-center justify-between">
                     <button
                       type="button"
-                      onClick={() => onNavigate("/guides/bengali-panch-phoron-guide")}
+                      onClick={() => navigateToRecipe("bengali-khichuri-bhuna")}
                       className="inline-flex items-center gap-1.5 text-xs font-bold text-[#E97520] hover:text-[#d36615] transition-colors cursor-pointer"
                     >
-                      <span>Read the Panch Phoron Guide</span>
+                      <span>Try with Khichuri</span>
                       <ArrowRight className="w-3.5 h-3.5" />
                     </button>
                     <button
                       type="button"
-                      onClick={() => navigateToRecipe("bengali-khichuri-bhuna")}
+                      onClick={() => onNavigate("/guides/bengali-panch-phoron-guide")}
                       className="text-xs text-[#77736D] hover:text-[#30302F] underline cursor-pointer"
                     >
-                      Try with Khichuri →
+                      Read Panch Phoron Guide →
+                    </button>
+                  </div>
+                </div>
+
+                {/* 6. RADHUNI & RARE BENGALI SPICES */}
+                <div className="p-6 rounded-xl border border-[#E6E1D8] bg-white hover:border-[#E97520]/50 transition-all shadow-xs flex flex-col justify-between space-y-4">
+                  <div className="space-y-3">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#7C3AED] bg-[#F5F3FF] px-2.5 py-1 rounded">
+                      HERITAGE BOTANICALS
+                    </span>
+                    <h3 className="text-xl font-bold text-[#242423] font-serif-editorial">
+                      Radhuni &amp; Rare Botanicals
+                    </h3>
+                    <p className="text-xs text-[#77736D] leading-relaxed">
+                      Preserving delicate essential oils in wild celery seed and crushing fresh pastes for signature Shukto and Macher Jhol preparations.
+                    </p>
+
+                    <div className="pt-2">
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-[#30302F] block mb-2">
+                        Recommended tools:
+                      </span>
+                      <ul className="text-xs text-[#57534E] space-y-1.5 list-disc list-inside">
+                        <li>Airtight Spice Jars</li>
+                        <li>Mortar &amp; Pestle</li>
+                        <li>Measuring Spoons</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="pt-4 border-t border-[#E6E1D8] flex items-center justify-between">
+                    <button
+                      type="button"
+                      onClick={() => navigateToRecipe("bengali-fish-curry-macher-jhol")}
+                      className="inline-flex items-center gap-1.5 text-xs font-bold text-[#E97520] hover:text-[#d36615] transition-colors cursor-pointer"
+                    >
+                      <span>Explore Macher Jhol</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => onNavigate("/guides/bengali-radhuni-guide")}
+                      className="text-xs text-[#77736D] hover:text-[#30302F] underline cursor-pointer"
+                    >
+                      Read Radhuni Guide →
                     </button>
                   </div>
                 </div>
@@ -816,6 +914,11 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
                     title: "Authentic Bengali Beef Nihari Guide",
                     path: "/guides/authentic-bengali-beef-nihari-guide",
                     badge: "Slow Braising",
+                  },
+                  {
+                    title: "Bengali Shahi Chicken Roast Biye Bari Guide",
+                    path: "/guides/bengali-shahi-chicken-roast-guide",
+                    badge: "Festive Poultry Roast",
                   },
                 ].map((guide) => (
                   <button
@@ -1362,15 +1465,21 @@ const ProductCard: React.FC<{ product: AffiliateProductItem }> = ({ product }) =
           {product.name}
         </h3>
 
-        <div className="text-xs text-[#57534E] leading-relaxed">
-          <strong className="text-[#30302F] font-semibold block mb-0.5">Why it is useful:</strong>
+        <p className="text-xs text-[#57534E] leading-relaxed">
           {product.description}
-        </div>
+        </p>
 
         <div className="pt-2 text-xs text-[#3F3C38] leading-relaxed border-t border-[#F3F2EE]">
-          <strong className="text-[#30302F] font-semibold">Best used for: </strong>
+          <strong className="text-[#30302F] font-semibold">BEST FOR: </strong>
           <span className="text-[#57534E]">{product.bestFor}</span>
         </div>
+
+        {product.whyItMatters && (
+          <div className="pt-2 text-xs text-[#57534E] leading-relaxed border-t border-[#F3F2EE]">
+            <strong className="text-[#30302F] font-semibold block mb-0.5">WHY:</strong>
+            <p className="text-[#57534E]">{product.whyItMatters}</p>
+          </div>
+        )}
       </div>
 
       <div className="pt-3 border-t border-[#E6E1D8]/60">
@@ -1381,7 +1490,7 @@ const ProductCard: React.FC<{ product: AffiliateProductItem }> = ({ product }) =
             rel="noopener noreferrer"
             className="w-full inline-flex items-center justify-center gap-1.5 py-2 px-3 bg-[#E97520] hover:bg-[#d36615] text-white text-xs font-bold rounded-lg transition-colors shadow-xs cursor-pointer"
           >
-            <span>View Product</span>
+            <span>View product</span>
             <ExternalLink className="w-3.5 h-3.5" />
           </a>
         ) : (
