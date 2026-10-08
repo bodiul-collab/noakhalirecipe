@@ -184,6 +184,28 @@ const DEFAULT_COLLECTION: CollectionCardItem[] = [
     image: IMAGES.lambVindaloo,
   },
   {
+    id: "card-kholaja-pitha",
+    slug: "kholaja-pitha",
+    title: "Kholaja Pitha (খোলাজা পিঠা / کھولاجا پٹھا / خولاغا بيثا)",
+    description:
+      "Noakhali's iconic thousand-hole lace crepe whisked with fresh duck eggs & rice flour on a smoking clay khola.",
+    heritageTag: "👑 Signature Noakhali Heritage",
+    brandName: "Noakhali Kitchen",
+    halalBadge: "100% Halal Dish",
+    image: IMAGES.kholajaPitha,
+  },
+  {
+    id: "card-duck-curry-with-coconut-milk",
+    slug: "duck-curry-with-coconut-milk",
+    title: "Duck Curry with Coconut Milk (নারকেলের দুধে হাঁসের মাংসের কারি)",
+    description:
+      "Succulent bone-in Halal duck simmered with cracked black pepper, curry leaves & tomatoes in silky spiced coconut milk.",
+    heritageTag: "🥥 Coastal Coconut Braise",
+    brandName: "Noakhali Kitchen",
+    halalBadge: "100% Halal Dish",
+    image: IMAGES.duckCurryWithCoconutMilk,
+  },
+  {
     id: "card-seekh-kebab",
     slug: "seekh-kebab",
     title: "Seekh Kebab (শিখ কাবাব)",

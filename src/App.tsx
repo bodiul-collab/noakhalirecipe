@@ -137,6 +137,27 @@ const extractRecipeSlug = (r: string) => {
     ) {
       return "lamb-vindaloo";
     }
+    if (
+      raw === "kholaja-pitha" ||
+      raw === "khola-ja-pitha" ||
+      raw === "kholajapitha" ||
+      raw === "noakhali-kholaja-pitha" ||
+      raw === "chittagong-kholaja-pitha" ||
+      raw === "bengali-kholaja-pitha"
+    ) {
+      return "kholaja-pitha";
+    }
+    if (
+      raw === "duck-curry-with-coconut-milk" ||
+      raw === "duck-curry-coconut-milk" ||
+      raw === "coconut-duck-curry" ||
+      raw === "haser-mangsho-narkel-dudh" ||
+      raw === "duck-curry" ||
+      raw === "tharavu-curry" ||
+      raw === "halal-duck-curry"
+    ) {
+      return "duck-curry-with-coconut-milk";
+    }
     return raw;
   }
   return null;

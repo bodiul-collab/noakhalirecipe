@@ -25424,6 +25424,551 @@ const BASE_RECIPES: Recipe[] = [
     seoDescription:
       "Fiery, tangy, and deeply aromatic authentic Lamb Vindaloo (لیمب ونڈالو / ল্যাম্ব ভিনডালু / لحم الضأن فيندالو): tender slow-braised Halal lamb in a crimson garlic-vinegar paste.",
   },
+  {
+    id: "rec-kholaja-pitha",
+    slug: "kholaja-pitha",
+    title: "Kholaja Pitha (খোলাজা পিঠা / کھولاجا پٹھا / خولاغا بيثا)",
+    category: "Halal Snacks",
+    categorySlug: "halal-snacks",
+    cuisine: "Noakhali Heritage & Greater Chittagong Regional Cuisine (নোয়াখালীর ঐতিহ্যবাহী খোলাজা পিঠা)",
+    description:
+      "Authentic Noakhali Kholaja Pitha (খোলাজা পিঠা / کھولاجا پٹھا / خولاغا بيثا): the legendary paper-thin Bengali lace crepe with thousands of delicate micro-perforations, traditionally whisked from aromatic soaked rice flour and fresh farm eggs, then flash-baked in seconds on a fiery earthen terracotta khola. Ultra-soft, subtly fragrant, and heavenly when savored piping hot with spicy duck curry, rich beef bhuna, or pungent shutki bhorta.",
+    introStory:
+      "In the coastal delta of Greater Noakhali (নোয়াখালী, ফেনী ও লক্ষ্মীপুর), no culinary creation evokes as much cultural reverence, morning joy, and winter nostalgia as the iconic Kholaja Pitha (খোলাজা পিঠা / کھولاجا پٹھا / خولاغا بيثا). Celebrated affectionately across Bangladesh as the 'Thousand-Hole Crepe' (হাজার ছিদ্রযুক্ত খোলাজা পিঠা) or 'Noakhali Lace Pancake', this peerless delicacy represents centuries of ancestral rural mastery.\n\nThe name originates from the porous unglazed terracotta earthen pan called the 'khola' (মাটির খোলা). In village homes, earthen kholas are gently cured over woodsmoke until seasoned to a glass-smooth patina. To make authentic Kholaja Pitha, freshly milled aromatic Atap rice flour is whisked with water, salt, and farm-fresh eggs (traditionally duck eggs, whose rich yolks lend a glorious golden hue and tender crumb) into a gossamer-thin, watery batter. When poured onto the sizzling earthen curve and covered with a clay lid, steam rushes through the batter, creating an explosion of thousands of fine lace-like holes in just 60 to 90 seconds.\n\nUnlike thick Western pancakes or heavy griddle flatbreads, authentic Kholaja Pitha is featherlight, incredibly soft, and naturally gluten-free. In Noakhali tradition, it is the ultimate celebratory winter breakfast and evening tea staple, customarily dipped into fiery Mustard Duck Bhuna (হাঁসের মাংসের ঝোল), slow-simmered beef curry, spicy Loitta Shutki Bhorta, or sweet date palm jaggery (khejur gur).",
+    heroImage: IMAGES.kholajaPitha,
+    prepTimeMinutes: 15,
+    cookTimeMinutes: 20,
+    totalTimeMinutes: 35,
+    servings: 6,
+    difficulty: "Medium",
+    calories: 120,
+    rating: 4.99,
+    reviewCount: 218,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified and wholesome natural ingredients. Made purely with aromatic single-origin rice flour, fresh free-range or duck eggs, filtered lukewarm water, and pure mineral salt. Zero artificial leavening agents, zero synthetic food colors, zero animal shortening, and zero non-halal preservatives.",
+    potentialCautionNotes:
+      "Do not make the batter thick; if the batter resembles standard Western pancake mix, the pitha will turn dense and rubbery without its signature microscopic perforations (হাজার ছিদ্র). The batter must be thin, runny, and pourable, like heavy cream. Also, ensure the earthen khola or cast-iron skillet is thoroughly preheated and wiped with an oiled cloth before pouring each crepe.",
+    ingredients: [
+      {
+        amount: "2",
+        unit: "cups",
+        name: "Fine Atap rice flour (আতপ চালের গুঁড়া)",
+        notes: "aromatic raw rice flour, freshly milled or premium fine dry rice flour",
+      },
+      {
+        amount: "2",
+        unit: "large",
+        name: "Fresh duck eggs (হাঁসের ডিম)",
+        notes: "or 2 organic extra-large chicken eggs at room temperature; duck eggs give the traditional golden hue and silky lace texture",
+      },
+      {
+        amount: "1.75 to 2",
+        unit: "cups",
+        name: "Lukewarm water (হালকা গরম পানি)",
+        notes: "adjust quantity to achieve a thin, watery, milk-like pourable batter",
+      },
+      {
+        amount: "1",
+        unit: "tsp",
+        name: "Pure mineral sea salt (লবণ)",
+        notes: "dissolved into the water for even seasoning",
+      },
+      {
+        amount: "1",
+        unit: "tbsp",
+        name: "Pure cold-pressed mustard oil or cow ghee",
+        notes: "for lightly seasoning the earthen khola with a cotton cloth; never pour excess oil into the pan",
+      },
+      {
+        amount: "To serve",
+        unit: "as desired",
+        name: "Spicy duck curry or beef bhuna",
+        notes: "traditional Noakhali pairing for breakfast or dinner feasts",
+      },
+      {
+        amount: "To serve",
+        unit: "as desired",
+        name: "Loitta shutki bhorta or date palm jaggery (খেজুরের গুড়)",
+        notes: "for the quintessential savory or sweet accompaniment",
+      },
+    ],
+    substitutions: [
+      {
+        original: "Atap rice flour",
+        substitute: "Soaked aromatic Chinigura or Kalijira raw rice ground finely with water in a blender",
+        notes: "Freshly ground wet rice batter makes exceptionally soft and fragrant pithas.",
+      },
+      {
+        original: "Duck eggs",
+        substitute: "Free-range chicken eggs",
+        notes: "Chicken eggs work wonderfully; use eggs at room temperature and whisk thoroughly before combining.",
+      },
+      {
+        original: "Clay earthen khola (মাটির খোলা)",
+        substitute: "Heavy seasoned cast-iron skillet, concave tawa, or crepe pan with a tight-fitting dome lid",
+        notes: "Cast-iron retains heat evenly and mimics the earthen clay surface when well preheated.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Sift Rice Flour & Dissolve Salt",
+        instruction:
+          "Sift the fine Atap rice flour into a large, wide mixing bowl to remove any coarse granules. Dissolve the salt thoroughly in 1.75 cups of lukewarm water in a separate measuring pitcher.",
+        tip: "Lukewarm water activates the natural starches of the rice flour, allowing it to hydrate smoothly without clumping.",
+      },
+      {
+        step: 2,
+        title: "Whisk Duck Eggs Until Frothy",
+        instruction:
+          "In a separate bowl, crack the 2 duck eggs (or chicken eggs) and beat them vigorously with a wire whisk or fork for 2 minutes until light, homogenous, and slightly foamy.",
+        tip: "Thoroughly aerating the eggs helps create the microscopic steam bubbles that form the thousands of delicate holes.",
+      },
+      {
+        step: 3,
+        title: "Combine Into Thin Silky Batter",
+        instruction:
+          "Gradually pour the salted lukewarm water into the rice flour while whisking continuously with your hand or a whisk to form a lump-free base. Slowly fold in the whisked duck eggs until fully integrated. The final batter must be very thin and runny—similar to buttermilk or light cream. If too thick, add 2 to 3 tablespoons of extra lukewarm water.",
+        tip: "Test consistency by dipping a ladle: the batter should coat the back very lightly and run off immediately in a fluid stream.",
+      },
+      {
+        step: 4,
+        title: "Rest the Batter",
+        instruction:
+          "Let the batter rest on the counter covered for 15 to 20 minutes. This allows the dry rice flour particles to absorb moisture evenly. Give the batter a thorough stir before cooking, as rice flour naturally settles at the bottom.",
+        tip: "Always stir the batter from the bottom with your ladle right before scooping every single pitha.",
+      },
+      {
+        step: 5,
+        title: "Preheat & Season the Earthen Khola",
+        instruction:
+          "Place your clay earthen khola (or heavy cast-iron pan) over medium-high heat for 5 to 7 minutes until uniformly hot. Dip a clean piece of cotton cloth or folded paper towel lightly into mustard oil or ghee, and gently wipe the entire concave surface of the pan. The pan should not have pooled oil, only a sheer microscopic sheen.",
+        tip: "Too much oil prevents the batter from clinging and spreading into fine lace; the surface must be virtually dry and smoky hot.",
+      },
+      {
+        step: 6,
+        title: "Pour & Swirl the Pitha",
+        instruction:
+          "Stir the batter from the bottom, scoop about 1/3 cup of batter with a round ladle, and pour it into the center of the piping-hot khola. Immediately tilt and swirl the khola in a smooth circular motion with both hands (or quickly spread with the back of the ladle) so the batter spreads into a thin, round 7-to-8-inch circle.",
+        tip: "Work quickly! As soon as the batter contacts the hot surface, you will see thousands of tiny steam bubbles erupt instantly across the entire disc.",
+      },
+      {
+        step: 7,
+        title: "Cover with Lid & Flash Steam",
+        instruction:
+          "Instantly cover the khola with a deep earthen lid (or metal dome lid). Let it cook undisturbed on medium heat for 60 to 90 seconds. The trapped steam inside cooks the top surface completely while the bottom releases easily from the clay.",
+        tip: "Never flip a Kholaja Pitha; it is cooked entirely from the bottom heat and the concentrated captured steam inside the dome.",
+      },
+      {
+        step: 8,
+        title: "Lift, Fold & Serve Hot",
+        instruction:
+          "Remove the lid. The edges of the pitha will naturally curl up slightly and release from the khola, while the entire surface shows thousands of perforated holes. Using a thin wooden or silicone spatula, gently lift the pitha out onto a bamboo kulla or serving plate. Fold in half or into quarters, and repeat with the remaining batter.",
+        tip: "Stack cooked pithas loosely or serve immediately while the lace remains tender and warm.",
+      },
+    ],
+    chefNotes: [
+      "The Duck Egg Secret: While chicken eggs work in a pinch, traditional Noakhali grandmothers insist on duck eggs (হাঁসের ডিম). Duck eggs have higher yolk fat and richer albumin, providing both the characteristic golden yellow glow and that signature cloud-like softness.",
+      "The Earthen Pan Mastery: If using an authentic clay khola for the first time, cure it beforehand by rubbing it with mustard oil and heating it over low flame twice before cooking your first batch.",
+      "Moisture Control: If the pitha cracks or tears when lifting, the batter is slightly too thick or the pan was too cool. Add 2 tablespoons of warm water and ensure the pan is smoking hot before pouring.",
+      "Never Add Turmeric: The natural yolk provides all the delicate sunny tint; never add turmeric powder, which alters the clean toasted-rice fragrance.",
+    ],
+    nutrition: {
+      calories: 120,
+      proteinGrams: 4,
+      carbsGrams: 22,
+      fatGrams: 2.5,
+      fiberGrams: 0.5,
+      sodiumMg: 180,
+    },
+    storageInstructions:
+      "Kholaja Pitha is at its absolute pinnacle served piping hot within 5 minutes of leaving the earthen khola. Leftovers can be kept in an airtight container or wrapped in a cotton towel in the refrigerator for up to 24 hours. Reheat for 15 seconds in a microwave or on a dry covered skillet over low flame.",
+    freezingInstructions:
+      "Freezing is not recommended as the delicate rice and egg lace will lose its signature airy texture upon thawing.",
+    servingSuggestions: [
+      "Pair with fiery Noakhali Duck Curry (হাঁসের মাংসের ঝোল) cooked with whole garlic bulbs and roasted spices.",
+      "Serve alongside rich slow-cooked Beef Kala Bhuna or Beef Bhuna for a weekend breakfast feast.",
+      "Drizzle with warm authentic Date Palm Molasses (খাঁটি খেজুরের গুড়) for a comforting sweet winter treat.",
+      "Accompany with spicy Loitta Shutki Bhorta and a steaming cup of freshly brewed milk tea.",
+    ],
+    faqs: [
+      {
+        question: "Why is Kholaja Pitha called the 'Thousand-Hole Pitha'?",
+        answer:
+          "Because the watery rice and egg batter produces an explosion of steam bubbles the instant it touches the sizzling terracotta clay khola, puncturing thousands of tiny micro-perforations (হাজার ছিদ্রযুক্ত জালিকা) that make it extraordinarily light, airy, and absorbent for rich curries.",
+      },
+      {
+        question: "Can I make Kholaja Pitha without an earthen clay khola?",
+        answer:
+          "Yes! A heavy well-seasoned cast-iron skillet, non-stick crepe pan, or concave roti tawa with a tight dome lid produces wonderful results at home.",
+      },
+      {
+        question: "Do I need to flip the pitha while cooking?",
+        answer:
+          "No, Kholaja Pitha is never flipped. The intense trapped steam under the dome lid thoroughly cooks the top within 60 to 90 seconds while keeping it silky soft.",
+      },
+      {
+        question: "Is Kholaja Pitha gluten-free and Halal?",
+        answer:
+          "Yes, it is 100% Halal and naturally gluten-free, prepared exclusively with pure rice flour, farm eggs, water, and salt.",
+      },
+    ],
+    author: {
+      name: "Noakhali Kitchen Culinary Team",
+      role: "Heritage South Asian & Halal Cuisine Specialists",
+    },
+    updatedDate: "2026-10-06",
+    tags: [
+      "Kholaja Pitha",
+      "খোলাজা পিঠা",
+      "খোলজা পিঠা",
+      "کھولاجا پٹھا",
+      "خولاغا بيثا",
+      "Noakhali Special",
+      "Bengali Pitha",
+      "Rice Crepe",
+      "Jalidar Pitha",
+      "Halal Breakfast",
+      "Winter Pitha",
+      "Bangladeshi Heritage",
+      "Duck Egg Pitha",
+    ],
+    whySpecial:
+      "The undisputed crowning glory of Noakhali heritage cooking: a paper-thin, thousand-hole lace rice crepe flash-baked on a red clay khola, pairing effortlessly with rich winter curries and sweet date palm jaggery.",
+    cookingTips: [
+      "Maintain a thin, milk-like batter consistency; thick batter will result in dense, rubbery crepes.",
+      "Wipe the hot earthen or cast-iron pan with a cloth lightly dampened in mustard oil or ghee—never pour loose oil.",
+      "Always cover tightly with a dome lid so trapped steam bakes the top in 60 to 90 seconds without needing to flip.",
+      "Stir the batter from the bottom before pouring each pitha as rice flour naturally settles.",
+    ],
+    commonMistakes: [
+      "Using boiling water instead of lukewarm water, which pre-cooks and gums up the rice flour starches.",
+      "Pouring into a lukewarm pan; the khola must be smoking hot to instantly trigger the thousands of steam holes.",
+      "Over-oiling the pan, which causes the batter to slide around instead of gripping and bubbling into lace.",
+    ],
+    relatedRecipeSlugs: [
+      "traditional-vapa-pitha-steamed-coconut-jaggery",
+      "narkel-puli-pitha",
+      "traditional-teler-pitha-gur-pitha",
+      "bengali-beef-bhuna",
+      "loitta-shutki-bhuna",
+    ],
+    relatedGuideSlugs: [
+      "mustard-oil-bengali-cooking",
+      "essential-bengali-spices-guide",
+    ],
+    seoTitle:
+      "Authentic Kholaja Pitha Recipe (খোলাজা পিঠা / کھولاجা پٹھا) | Noakhali Kitchen",
+    seoDescription:
+      "Authentic Noakhali Kholaja Pitha (খোলাজা পিঠা / کھولاجা پٹھا / خولاغا بيثا): signature soft thousand-hole lace rice crepe whisked with duck eggs & flash-baked in clay khola.",
+  },
+  {
+    id: "rec-duck-curry-with-coconut-milk",
+    slug: "duck-curry-with-coconut-milk",
+    title:
+      "Duck Curry with Coconut Milk (নারকেলের দুধে হাঁসের মাংসের কারি / كاري البط بحليب جوز الهند / ناریل کے دودھ والی بطخ کی کری)",
+    category: "Halal Chicken & Poultry",
+    categorySlug: "halal-chicken",
+    cuisine:
+      "Coastal South Asian & Bengali Heritage (নারকেল দুধে হাঁসের মাংস / Coastal Estuary Delicacy)",
+    description:
+      "Luxurious, slow-braised Duck Curry with Coconut Milk (নারকেলের দুধে হাঁসের মাংসের কারি / كاري البط بحليب جوز الهند / ناریل کے دودھ والی بطخ کی کری): succulent bone-in Halal duck joints browned in golden mustard oil or ghee, simmered gently with fresh cracked black peppercorns, crushed ginger, garlic, fragrant green chilies, and ripe tomatoes in a luscious, silky broth of freshly pressed first and second coconut milk, finished with crisp crackling curry leaves and toasted whole mustard seeds.",
+    introStory:
+      "Across the palm-fringed coastal deltas of South Asia—from the fertile estuaries of Greater Noakhali and coastal Bengal to the spice backwaters of Kerala—duck curry slow-cooked in fresh coconut milk represents the pinnacle of festive cold-weather and harvest celebrations. Duck meat (হাঁসের মাংস), with its distinctive depth, robust flavor profile, and succulent layer of natural fat, requires an assertive yet balancing sauce. Fresh coconut milk provides the ultimate culinary counterpoint: its gentle natural sweetness, silky fat, and cooling creaminess mellow the gaminess of the duck while magnifying the fragrant heat of whole black peppercorns, cracked mustard seeds, and fresh curry leaves.\n\nIn our 100% Halal culinary kitchen, this Duck Curry with Coconut Milk is crafted using time-honored artisanal methods. We select tender, humanely raised bone-in Halal duck legs and breasts, searing them gently so the skin renders its savory juices into the spices. A golden base of sliced shallots, pungent garlic, smashed fresh ginger, and slit bird's eye green chilies is bloomed in coconut oil or mustard oil. Thin 'second extract' coconut milk is introduced first to slowly braise the duck until fork-tender and aromatic. In the final flourish, ripe tomato wedges and thick, velvety 'first extract' coconut cream are gently stirred in, crowned by a sizzling tarka of spluttering black mustard seeds and fresh curry leaves. Steaming hot off the stove, this curry is legendary when ladled generously over Noakhali's thousand-hole Kholaja Pitha, fragrant Kalijira pulao, warm appams, or pillowy parathas.",
+    heroImage: IMAGES.duckCurryWithCoconutMilk,
+    prepTimeMinutes: 25,
+    cookTimeMinutes: 55,
+    totalTimeMinutes: 80,
+    servings: 5,
+    difficulty: "Medium",
+    calories: 485,
+    rating: 4.98,
+    reviewCount: 187,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified. Sourced exclusively from ethically raised, hand-slaughtered Halal duck with skin on or trimmed to preference. Prepared with 100% pure unsweetened coconut milk, natural whole spices, fresh curry leaves, and zero synthetic food coloring, MSG, or non-halal wine bases.",
+    potentialCautionNotes:
+      "Duck meat has higher natural fat and firm muscle fibers compared to chicken. To ensure melt-in-your-mouth tenderness, simmer low and slow in the thin coconut milk base before adding the thick coconut cream. Never boil the thick coconut milk on vigorous high heat, as high heat can cause coconut fats to separate and curdle. Always simmer gently on low flame.",
+    ingredients: [
+      {
+        amount: "2.5",
+        unit: "lbs",
+        name: "Halal duck meat (হাঁসের মাংস)",
+        notes: "bone-in curry cut pieces, legs, and thighs; cleaned and pat dry",
+      },
+      {
+        amount: "1.5",
+        unit: "cups",
+        name: "Thin coconut milk (পাতলা নারকেলের দুধ / second extract)",
+        notes: "used for braising and tenderizing the duck meat over gentle flame",
+      },
+      {
+        amount: "1",
+        unit: "cup",
+        name: "Thick coconut cream (ঘন নারকেলের দুধ / first extract)",
+        notes: "stirred in at the very end for velvety richness and silky sheen",
+      },
+      {
+        amount: "2",
+        unit: "medium",
+        name: "Ripe tomatoes (টমেটো)",
+        notes: "cut into juicy wedges; added towards the end to maintain structure",
+      },
+      {
+        amount: "1.5",
+        unit: "cups",
+        name: "Shallots or red onions (কুচানো পেঁয়াজ)",
+        notes: "finely sliced for sweet aromatic body",
+      },
+      {
+        amount: "2",
+        unit: "tbsp",
+        name: "Fresh ginger paste or julienned ginger (আদা বাটা)",
+        notes: "smashed or finely pounded fresh root ginger",
+      },
+      {
+        amount: "2",
+        unit: "tbsp",
+        name: "Fresh garlic paste (রসুন বাটা)",
+        notes: "freshly crushed garlic cloves",
+      },
+      {
+        amount: "5 to 6",
+        unit: "whole",
+        name: "Fresh green chilies (কাঁচা মরিচ)",
+        notes: "slit lengthwise for clean herbal heat",
+      },
+      {
+        amount: "3",
+        unit: "sprigs",
+        name: "Fresh curry leaves (কারিপাতা)",
+        notes: "divided: some for the curry braise, remaining for sizzling finishing tarka",
+      },
+      {
+        amount: "1",
+        unit: "tbsp",
+        name: "Whole black peppercorns (কালো গোলমরিচ)",
+        notes: "coarsely cracked; signature spice that cuts duck richness",
+      },
+      {
+        amount: "1",
+        unit: "tsp",
+        name: "Whole black mustard seeds (কালো সরিষার দানা)",
+        notes: "popped in hot oil for temper and nutty aroma",
+      },
+      {
+        amount: "1",
+        unit: "tsp",
+        name: "Ground turmeric (হলুদ গুঁড়া)",
+        notes: "for bright golden color and earthy warmth",
+      },
+      {
+        amount: "1.5",
+        unit: "tbsp",
+        name: "Coriander powder (ধনিয়া গুঁড়া)",
+        notes: "freshly roasted and ground",
+      },
+      {
+        amount: "1",
+        unit: "tsp",
+        name: "Fennel seed powder (মৌরি গুঁড়া)",
+        notes: "essential coastal sweet spice aroma",
+      },
+      {
+        amount: "1",
+        unit: "tsp",
+        name: "Garam masala powder (গরম মসলা গুঁড়া)",
+        notes: "green cardamom, cinnamon, and cloves blend",
+      },
+      {
+        amount: "2",
+        unit: "tbsp",
+        name: "Cold-pressed coconut oil or mustard oil (তেল)",
+        notes: "for searing and blooming the aromatics",
+      },
+      {
+        amount: "1.5",
+        unit: "tsp",
+        name: "Pure mineral sea salt (লবণ)",
+        notes: "or to taste",
+      },
+    ],
+    substitutions: [
+      {
+        original: "Duck meat",
+        substitute: "Country rooster, organic chicken (deshi murgi), or tender lamb shoulder chunks",
+        notes: "Country chicken pairs extraordinarily well with coconut milk; reduce simmer time to 35 minutes.",
+      },
+      {
+        original: "Fresh grated coconut milk",
+        substitute: "Full-fat canned coconut milk",
+        notes: "Dilute 1 cup canned coconut milk with 1/2 cup water for the thin braise; use undiluted for the final cream addition.",
+      },
+      {
+        original: "Fresh curry leaves",
+        substitute: "Fresh bay leaves (tejpatta) plus lime zest",
+        notes: "Bay leaves provide woodsy sweetness; add a microplane grating of fresh lime peel for citrus aroma.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Marinate the Duck",
+        instruction:
+          "In a mixing bowl, combine cleaned duck pieces with ground turmeric, 1 teaspoon salt, 1 tablespoon crushed black pepper, and half of the ginger and garlic pastes. Massage thoroughly into the meat and allow to marinate for 20 minutes at room temperature.",
+        tip: "Black pepper and turmeric naturally tenderize duck meat and eliminate any gamey aromas.",
+      },
+      {
+        step: 2,
+        title: "Sear & Render Duck Fat",
+        instruction:
+          "Heat 1 tablespoon of oil in a heavy-bottomed Dutch oven or earthen pot over medium-high heat. Add the marinated duck pieces in a single layer and sear for 5 to 7 minutes, turning once, until the skin is lightly golden and rendered. Transfer duck to a warm plate, leaving the rendered oil in the pot.",
+        tip: "Searing caramelizes the surface sugars and locks in rich meat juices without making the curry oily.",
+      },
+      {
+        step: 3,
+        title: "Bloom Aromatics & Spices",
+        instruction:
+          "In the same pot with rendered flavorful oil, add sliced shallots, slit green chilies, and 1 sprig of curry leaves. Sauté over medium heat for 6 to 8 minutes until the shallots turn soft and golden brown. Add the remaining ginger-garlic paste and sauté for 1 minute until fragrant. Stir in coriander powder, fennel powder, garam masala, and remaining cracked black pepper.",
+        tip: "Cook spices on low heat for 30 seconds until the oil separates to avoid burning dry ground spices.",
+      },
+      {
+        step: 4,
+        title: "Braise in Thin Coconut Milk",
+        instruction:
+          "Return the seared duck pieces and any resting juices back to the pot. Pour in 1.5 cups of thin coconut milk and stir well to deglaze any browned bits stuck to the bottom. Bring to a gentle boil.",
+        tip: "Thin coconut milk acts as an enzymatic poaching broth, infusing rich coconut essence deep into the meat fibers.",
+      },
+      {
+        step: 5,
+        title: "Slow Simmer Until Fork-Tender",
+        instruction:
+          "Cover the pot tightly with a lid, reduce heat to low, and gently simmer for 40 to 45 minutes, stirring occasionally, until the duck meat is thoroughly tender and yields easily when pierced with a fork.",
+        tip: "Keep heat gentle; boiling vigorously can toughen the duck fibers.",
+      },
+      {
+        step: 6,
+        title: "Add Fresh Tomato Wedges",
+        instruction:
+          "Uncover the pot. Gently fold in the ripe tomato wedges into the simmering curry. Simmer uncovered for 5 minutes until the tomatoes soften and release their mild sweet acidity without losing their shape.",
+        tip: "Tomatoes introduce gentle tartness that cuts through the rich coconut fat.",
+      },
+      {
+        step: 7,
+        title: "Finish with Thick Coconut Cream",
+        instruction:
+          "Lower the heat to the gentlest simmer. Pour in the 1 cup of thick coconut cream. Stir gently in a circular motion until the gravy turns silky, creamy, and uniform. Simmer on low for just 3 to 4 minutes without letting it come to a rolling boil.",
+        tip: "Never boil thick coconut milk on high flame; keeping the heat gentle ensures the sauce remains smooth and velvety.",
+      },
+      {
+        step: 8,
+        title: "Crackling Curry Leaf Tarka & Rest",
+        instruction:
+          "In a small tempering pan, heat 1 tablespoon of coconut oil. Add whole black mustard seeds and let them splutter vigorously. Toss in the remaining fresh curry leaves until crisp and fragrant (about 10 seconds). Pour the sizzling tarka directly over the duck curry. Cover the pot and let it rest for 15 minutes before serving.",
+        tip: "Resting allows the spiced oil to settle into a gorgeous golden crown over the ivory gravy.",
+      },
+    ],
+    chefNotes: [
+      "The Two-Stage Coconut Milk Technique: Using thin coconut milk first to cook the meat and adding rich coconut cream at the end is the ancient coastal secret to prevent curdling and achieve restaurant-grade velvety gravy.",
+      "Whole Duck Selection: In Bengal, wild ducks or winter farm ducks (পুকুরের পাতিহাঁস বা রাজহাঁস) are chosen during late autumn and winter when the meat is plump and extraordinarily flavorful.",
+      "Black Pepper Harmony: Freshly cracked coarse black peppercorns provide the distinct warming heat that makes coastal duck curry world-renowned.",
+      "Pairing with Kholaja Pitha: In Noakhali tradition, this luscious coconut gravy is soaked into the thousands of tiny micro-holes of hot Kholaja Pitha for the ultimate morning feast.",
+    ],
+    nutrition: {
+      calories: 485,
+      proteinGrams: 38,
+      carbsGrams: 12,
+      fatGrams: 32,
+      saturatedFatGrams: 18,
+      fiberGrams: 3,
+      sodiumMg: 640,
+    },
+    storageInstructions:
+      "Store cooled curry in a tightly sealed glass container in the refrigerator for up to 3 days. Reheat gently in a saucepan over medium-low heat with a splash of warm water or coconut milk.",
+    freezingInstructions:
+      "Can be frozen for up to 1 month. Thaw overnight in the refrigerator and warm gently on the stovetop. Stir constantly on low heat to preserve emulsion.",
+    servingSuggestions: [
+      "Serve piping hot with fresh Noakhali Kholaja Pitha (খোলাজা পিঠা) for an unforgettable traditional breakfast or feast.",
+      "Pair with steaming hot fragrant Basmati or Kalijira Jasmine rice and crispy papadums.",
+      "Accompany with lacy fermented rice Appams or Kerala flaky layered Parottas.",
+      "Serve alongside red onion salad, green mango pickle, and chilled Laban Ayran.",
+    ],
+    faqs: [
+      {
+        question: "Why is duck curry traditionally prepared with coconut milk?",
+        answer:
+          "Duck has a rich, gamey, deeply savory meat that pairs exceptionally well with the sweet creaminess and mild fat of fresh coconut milk. The coconut milk naturally softens the intensity of the duck while carrying whole spices effortlessly.",
+      },
+      {
+        question: "How do I prevent coconut milk from separating or curdling?",
+        answer:
+          "Always use the two-stage method: cook the meat first in thin coconut milk, and add the rich thick coconut cream only at the end over very low heat. Never boil thick coconut milk on vigorous high heat.",
+      },
+      {
+        question: "Can I make this recipe with chicken instead of duck?",
+        answer:
+          "Yes! Bone-in chicken legs, thighs, or country rooster (deshi murgi) work beautifully. Reduce the simmering time in Step 5 from 40 minutes to approximately 20-25 minutes.",
+      },
+      {
+        question: "What is the best bread or grain to serve with this curry?",
+        answer:
+          "Noakhali's signature Kholaja Pitha is the most famous pairing because its thousands of tiny lace holes absorb the silky coconut gravy instantly. Steamed Kalijira rice, Kerala parottas, and lacy appams are also stellar matches.",
+      },
+    ],
+    author: {
+      name: "Noakhali Kitchen Culinary Team",
+      role: "Heritage South Asian & Halal Cuisine Specialists",
+    },
+    updatedDate: "2026-10-07",
+    tags: [
+      "Duck Curry with Coconut Milk",
+      "নারকেলের দুধে হাঁসের মাংসের কারি",
+      "كاري البط بحليب جوز الهند",
+      "ناریل کے دودھ والی بطخ کی کری",
+      "Duck Curry",
+      "Coconut Duck Curry",
+      "Halal Duck",
+      "Haser Mangsho",
+      "Noakhali Special",
+      "Coastal Curry",
+      "Tharavu Curry",
+      "Curry Leaves",
+      "Dinner Feast",
+    ],
+    whySpecial:
+      "A coastal culinary masterpiece: succulent Halal duck simmered with freshly crushed black peppercorns, curry leaves, and tomatoes in a dual-stage silky coconut milk braise, designed to soak into hot lace Kholaja Pitha.",
+    cookingTips: [
+      "Use two stages of coconut milk: thin coconut milk to braise and tenderize, thick coconut cream to finish with glossy velvet.",
+      "Sear the duck first to render excess fat and caramelize exterior flavor.",
+      "Add tomato wedges in the last 10 minutes so they remain plump and juicy.",
+      "Finish with a smoking tarka of crackled black mustard seeds and fresh curry leaves.",
+    ],
+    commonMistakes: [
+      "Boiling thick coconut cream on high heat, which causes separation and curdling.",
+      "Discarding rendered duck fat entirely; a tablespoon of rendered duck fat adds incomparable flavor to the onions.",
+      "Skipping the resting period; 15 minutes off heat allows spices and coconut fats to meld harmoniously.",
+    ],
+    relatedRecipeSlugs: [
+      "kholaja-pitha",
+      "bengali-chicken-curry-murgir-jhol",
+      "chingri-malai-curry",
+      "lamb-curry",
+      "bengali-beef-bhuna",
+    ],
+    relatedGuideSlugs: [
+      "mustard-oil-bengali-cooking",
+      "essential-bengali-spices-guide",
+    ],
+    seoTitle:
+      "Authentic Duck Curry with Coconut Milk (নারকেলের দুধে হাঁসের মাংস) | Noakhali Kitchen",
+    seoDescription:
+      "Authentic Duck Curry with Coconut Milk (নারকেলের দুধে হাঁসের মাংসের কারি / كاري البط بحليب جوز الهند): tender slow-braised Halal duck in rich spiced coconut cream with curry leaves.",
+  },
 ];
 
 export const RECIPES: Recipe[] = enhanceRecipesWithCornerstones(BASE_RECIPES);

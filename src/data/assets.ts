@@ -171,10 +171,18 @@ import cucumberLimeLemonJuiceImg from "../assets/images/cucumber_lime_lemon_juic
 import fishMorichKholaImg from "../assets/images/fish_morich_khola_1790862749468.jpg";
 import chickenVindalooImg from "../assets/images/chicken_vindaloo_1791309554309.jpg";
 import lambVindalooImg from "../assets/images/lamb_vindaloo_1791311814544.jpg";
+import kholajaPithaImg from "../assets/images/kholaja_pitha_1791418807943.jpg";
+import duckCoconutCurryImg from "../assets/images/duck_coconut_curry_1791419453922.jpg";
 import noakhaliLogoFullImg from "../assets/images/noakhali_kitchen_logo_1789072776240.jpg";
 import noakhaliLogoIconImg from "../assets/images/noakhali_kitchen_logo_1789072776240.jpg";
 
 export const IMAGES = {
+  duckCoconutCurry: duckCoconutCurryImg,
+  duckCurryWithCoconutMilk: duckCoconutCurryImg,
+  duckCurry: duckCoconutCurryImg,
+  kholajaPitha: kholajaPithaImg,
+  noakhaliKholajaPitha: kholajaPithaImg,
+  kholajapitha: kholajaPithaImg,
   lambVindaloo: lambVindalooImg,
   halalLambVindaloo: lambVindalooImg,
   muttonVindaloo: lambVindalooImg,

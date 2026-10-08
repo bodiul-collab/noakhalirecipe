@@ -120,6 +120,19 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
       RECIPES.find(
         (r) =>
           r.slug === activeSlug ||
+          (r.slug === "duck-curry-with-coconut-milk" &&
+            (activeSlug === "duck-curry-coconut-milk" ||
+              activeSlug === "coconut-duck-curry" ||
+              activeSlug === "haser-mangsho-narkel-dudh" ||
+              activeSlug === "duck-curry" ||
+              activeSlug === "tharavu-curry" ||
+              activeSlug === "halal-duck-curry")) ||
+          (r.slug === "kholaja-pitha" &&
+            (activeSlug === "khola-ja-pitha" ||
+              activeSlug === "kholajapitha" ||
+              activeSlug === "noakhali-kholaja-pitha" ||
+              activeSlug === "chittagong-kholaja-pitha" ||
+              activeSlug === "bengali-kholaja-pitha")) ||
           (r.slug === "lamb-vindaloo" &&
             (activeSlug === "halal-lamb-vindaloo" ||
               activeSlug === "vindaloo-lamb" ||

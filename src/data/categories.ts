@@ -10,7 +10,7 @@ export const CATEGORIES: CategoryHub[] = [
     fullDescription:
       "Explore comforting Halal poultry recipes from across Bengal, South Asia, and the Mediterranean. Every recipe utilizes hand-slaughtered or certified Halal chicken cuts, cooked with authentic aromatics, rich natural stocks, and balanced spices.",
     image: IMAGES.heroBiryani,
-    featuredRecipeSlugs: ["chicken-vindaloo", "chicken-lo-mein", "classic-wok-tossed-chicken-noodles-chow-mein", "chicken-marsala", "peri-peri-chicken", "chicken-jalfrezi", "chicken-bhuna-masala-curry-bengali-style", "chicken-rezala", "bengali-texas-chicken-bbq", "bengali-chicken-biryani", "chicken-tikka-masala", "buttermilk-chicken-alfredo-spinach-pasta", "authentic-chicken-shawarma", "chicken-karahi", "chicken-biryani", "bengali-chicken-roast", "bengali-chicken-curry-murgir-jhol", "authentic-lahori-chicken-chargha", "authentic-restaurant-style-butter-chicken-murgh-makhani", "creamy-fettuccine-chicken-alfredo", "authentic-arabian-chicken-mandi", "chicken-machboos-majboos-kabsa", "classic-deli-halal-chicken-salad", "tom-zaab-chicken-soup-tom-zaab-gai", "thai-chicken-red-curry-gaeng-phed-gai", "halal-chicken-biryani", "chicken-satay-satay-gai", "chicken-massaman-curry"],
+    featuredRecipeSlugs: ["duck-curry-with-coconut-milk", "chicken-vindaloo", "chicken-lo-mein", "classic-wok-tossed-chicken-noodles-chow-mein", "chicken-marsala", "peri-peri-chicken", "chicken-jalfrezi", "chicken-bhuna-masala-curry-bengali-style", "chicken-rezala", "bengali-texas-chicken-bbq", "bengali-chicken-biryani", "chicken-tikka-masala", "buttermilk-chicken-alfredo-spinach-pasta", "authentic-chicken-shawarma", "chicken-karahi", "chicken-biryani", "bengali-chicken-roast", "bengali-chicken-curry-murgir-jhol", "authentic-lahori-chicken-chargha", "authentic-restaurant-style-butter-chicken-murgh-makhani", "creamy-fettuccine-chicken-alfredo", "authentic-arabian-chicken-mandi", "chicken-machboos-majboos-kabsa", "classic-deli-halal-chicken-salad", "tom-zaab-chicken-soup-tom-zaab-gai", "thai-chicken-red-curry-gaeng-phed-gai", "halal-chicken-biryani", "chicken-satay-satay-gai", "chicken-massaman-curry"],
     faqs: [
       {
         question: "How do I verify chicken is Halal when shopping?",
@@ -131,7 +131,7 @@ export const CATEGORIES: CategoryHub[] = [
     fullDescription:
       "The staple combination that anchors Bengali and South Asian hospitality. Learn the fine art of blooming whole spices in pure ghee, parboiling basmati rice, and creating layered gravies that bring families together.",
     image: IMAGES.chickenRoast,
-    featuredRecipeSlugs: ["lamb-vindaloo", "chicken-vindaloo", "boiled-rice", "bengali-aloo-dum", "bangladeshi-spiced-shrimp-and-green-bean-stir-fry", "moroccan-lamb-tagine", "beef-nahari", "authentic-bangladeshi-beef-curry", "fish-egg-curry-ilish", "fish-biryani", "easy-basmati-rice-cooking", "rogan-josh", "lamb-curry", "pakistani-aloo-keema", "bengali-chicken-biryani", "chicken-tikka-masala", "chicken-karahi", "haleem", "chicken-biryani", "bengali-pulao", "bengali-khichuri-bhuna", "bengali-chicken-roast", "bengali-beef-tehari", "bengali-fish-curry-macher-jhol", "bengali-chicken-curry-murgir-jhol", "authentic-arabian-chicken-mandi", "chicken-machboos-majboos-kabsa", "pillowy-restaurant-style-garlic-butter-naan", "halal-chicken-biryani", "vegetable-bhuna-khichuri"],
+    featuredRecipeSlugs: ["duck-curry-with-coconut-milk", "lamb-vindaloo", "chicken-vindaloo", "boiled-rice", "bengali-aloo-dum", "bangladeshi-spiced-shrimp-and-green-bean-stir-fry", "moroccan-lamb-tagine", "beef-nahari", "authentic-bangladeshi-beef-curry", "fish-egg-curry-ilish", "fish-biryani", "easy-basmati-rice-cooking", "rogan-josh", "lamb-curry", "pakistani-aloo-keema", "bengali-chicken-biryani", "chicken-tikka-masala", "chicken-karahi", "haleem", "chicken-biryani", "bengali-pulao", "bengali-khichuri-bhuna", "bengali-chicken-roast", "bengali-beef-tehari", "bengali-fish-curry-macher-jhol", "bengali-chicken-curry-murgir-jhol", "authentic-arabian-chicken-mandi", "chicken-machboos-majboos-kabsa", "pillowy-restaurant-style-garlic-butter-naan", "halal-chicken-biryani", "vegetable-bhuna-khichuri"],
     faqs: [
       {
         question: "What rice variety gives the most authentic aroma?",
@@ -151,7 +151,7 @@ export const CATEGORIES: CategoryHub[] = [
     fullDescription:
       "Snack time in Muslim households is a lively affair of spiced pastry triangles, hot fried fritters, and sweet chutneys served alongside cardamom milk tea (chai).",
     image: IMAGES.streetFood,
-    featuredRecipeSlugs: ["plain-paratha", "keema-paratha", "corned-beef-reuben-sandwich", "shrimp-tandoori", "bengali-mango-chutney", "dal-piyaju-pakora", "chicken-patty", "egg-roll", "black-chana", "hummus", "crispy-falafel", "authentic-lebanese-baba-ganoush", "tuna-fish-kebab-fritters", "birria-tacos-beef-quesabirria-consome", "kibbeh-lebanese-fried-bulgur-stuffed-shells", "traditional-teler-pitha-gur-pitha", "crispy-halal-samosas"],
+    featuredRecipeSlugs: ["kholaja-pitha", "plain-paratha", "keema-paratha", "corned-beef-reuben-sandwich", "shrimp-tandoori", "bengali-mango-chutney", "dal-piyaju-pakora", "chicken-patty", "egg-roll", "black-chana", "hummus", "crispy-falafel", "authentic-lebanese-baba-ganoush", "tuna-fish-kebab-fritters", "birria-tacos-beef-quesabirria-consome", "kibbeh-lebanese-fried-bulgur-stuffed-shells", "traditional-teler-pitha-gur-pitha", "crispy-halal-samosas"],
     faqs: [
       {
         question: "Can samosas be prepared in advance?",
@@ -170,7 +170,7 @@ export const CATEGORIES: CategoryHub[] = [
     fullDescription:
       "Celebrate sweet milestones with luxurious Eid desserts perfumed with green cardamom, saffron threads, pistachios, and thickened whole milk. All made without non-halal gelatin or alcohol-based vanilla extracts.",
     image: IMAGES.gulabJamun,
-    featuredRecipeSlugs: ["suji-halwa-halva", "vibrant-dragon-fruit-banana-superfood-nice-cream-sorbet", "velvety-blueberry-banana-fruit-sorbet", "narkel-puli-pitha", "traditional-teler-pitha-gur-pitha", "traditional-vapa-pitha-steamed-coconut-jaggery", "milk-powder-burfi-quick-mawa-fudge", "shahi-besan-laddu", "basbousa-semolina-cake", "mango-coconut-burfi", "crispy-saffron-jalebi", "shahi-gulab-jamun", "kheer-shahi-rice-kheer-payesh", "royal-gajar-ka-halwa", "bengali-roshogolla"],
+    featuredRecipeSlugs: ["kholaja-pitha", "suji-halwa-halva", "vibrant-dragon-fruit-banana-superfood-nice-cream-sorbet", "velvety-blueberry-banana-fruit-sorbet", "narkel-puli-pitha", "traditional-teler-pitha-gur-pitha", "traditional-vapa-pitha-steamed-coconut-jaggery", "milk-powder-burfi-quick-mawa-fudge", "shahi-besan-laddu", "basbousa-semolina-cake", "mango-coconut-burfi", "crispy-saffron-jalebi", "shahi-gulab-jamun", "kheer-shahi-rice-kheer-payesh", "royal-gajar-ka-halwa", "bengali-roshogolla"],
     faqs: [
       {
         question: "Is vanilla extract Halal?",
