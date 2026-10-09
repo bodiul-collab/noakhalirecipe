@@ -206,6 +206,28 @@ const DEFAULT_COLLECTION: CollectionCardItem[] = [
     image: IMAGES.duckCurryWithCoconutMilk,
   },
   {
+    id: "card-tomato-bhorta",
+    slug: "tomato-bhorta",
+    title: "Tomato Bhorta (Charred Smashed Tomato / টমেটো ভর্তা / بهورتا الطماطم)",
+    description:
+      "Fire-roasted blistered tomatoes coarsely smashed with golden caramelized onions, charred dry red chilies, fresh coriander & pungent mustard oil.",
+    heritageTag: "🔥 Smoky Charred Mash",
+    brandName: "Noakhali Kitchen",
+    halalBadge: "100% Halal Vegetarian",
+    image: IMAGES.tomatoBhorta,
+  },
+  {
+    id: "card-dal-bhorta",
+    slug: "dal-bhorta",
+    title: "Dal Bhorta (Masoor Dal Bhorta / ডাল ভর্তা / دال بهورتا / دال بھرتہ)",
+    description:
+      "Comforting spiced red lentil mash worked with caramelized onions, crispy roasted red chilies, fresh cilantro & pungent mustard oil.",
+    heritageTag: "✨ Bengali Comfort Classic",
+    brandName: "Noakhali Kitchen",
+    halalBadge: "100% Halal Vegetarian",
+    image: IMAGES.dalBhorta,
+  },
+  {
     id: "card-seekh-kebab",
     slug: "seekh-kebab",
     title: "Seekh Kebab (শিখ কাবাব)",

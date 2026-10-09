@@ -173,10 +173,18 @@ import chickenVindalooImg from "../assets/images/chicken_vindaloo_1791309554309.
 import lambVindalooImg from "../assets/images/lamb_vindaloo_1791311814544.jpg";
 import kholajaPithaImg from "../assets/images/kholaja_pitha_1791418807943.jpg";
 import duckCoconutCurryImg from "../assets/images/duck_coconut_curry_1791419453922.jpg";
+import tomatoBhortaImg from "../assets/images/tomato_bhorta_1791555693431.jpg";
+import dalBhortaImg from "../assets/images/dal_bhorta_1791556611047.jpg";
 import noakhaliLogoFullImg from "../assets/images/noakhali_kitchen_logo_1789072776240.jpg";
 import noakhaliLogoIconImg from "../assets/images/noakhali_kitchen_logo_1789072776240.jpg";
 
 export const IMAGES = {
+  dalBhorta: dalBhortaImg,
+  masoorDalBhorta: dalBhortaImg,
+  dalVorta: dalBhortaImg,
+  tomatoBhorta: tomatoBhortaImg,
+  charredTomatoBhorta: tomatoBhortaImg,
+  tomatoVorta: tomatoBhortaImg,
   duckCoconutCurry: duckCoconutCurryImg,
   duckCurryWithCoconutMilk: duckCoconutCurryImg,
   duckCurry: duckCoconutCurryImg,

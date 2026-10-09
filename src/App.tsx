@@ -158,6 +158,27 @@ const extractRecipeSlug = (r: string) => {
     ) {
       return "duck-curry-with-coconut-milk";
     }
+    if (
+      raw === "tomato-bhorta" ||
+      raw === "tomato-vorta" ||
+      raw === "charred-smashed-tomato" ||
+      raw === "charred-tomato-bhorta" ||
+      raw === "tomato-bhorta-charred-smashed-tomato" ||
+      raw === "bengali-tomato-bhorta"
+    ) {
+      return "tomato-bhorta";
+    }
+    if (
+      raw === "dal-bhorta" ||
+      raw === "dal-vorta" ||
+      raw === "masoor-dal-bhorta" ||
+      raw === "masoor-dal-vorta" ||
+      raw === "bengali-dal-bhorta" ||
+      raw === "daal-bhorta" ||
+      raw === "dhal-bhorta"
+    ) {
+      return "dal-bhorta";
+    }
     return raw;
   }
   return null;

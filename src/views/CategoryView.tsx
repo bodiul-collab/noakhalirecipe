@@ -47,11 +47,19 @@ export const CategoryView: React.FC<CategoryViewProps> = ({
 
   // If viewing a specific category
   if (activeCategory) {
+    const featuredOrder = activeCategory.featuredRecipeSlugs || [];
     const categoryRecipes = RECIPES.filter(
       (r) =>
         r.categorySlug === activeCategory.slug ||
-        Boolean(activeCategory.featuredRecipeSlugs?.includes(r.slug))
-    );
+        Boolean(featuredOrder.includes(r.slug))
+    ).sort((a, b) => {
+      const aIndex = featuredOrder.indexOf(a.slug);
+      const bIndex = featuredOrder.indexOf(b.slug);
+      if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
+      if (aIndex !== -1) return -1;
+      if (bIndex !== -1) return 1;
+      return 0;
+    });
 
     return (
       <div className="w-full bg-[#FAF9F6] py-10 sm:py-14">

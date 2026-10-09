@@ -25969,6 +25969,471 @@ const BASE_RECIPES: Recipe[] = [
     seoDescription:
       "Authentic Duck Curry with Coconut Milk (নারকেলের দুধে হাঁসের মাংসের কারি / كاري البط بحليب جوز الهند): tender slow-braised Halal duck in rich spiced coconut cream with curry leaves.",
   },
+  {
+    id: "rec-tomato-bhorta",
+    slug: "tomato-bhorta",
+    title:
+      "Tomato Bhorta (Charred Smashed Tomato / টমেটো ভর্তা / بهورتا الطماطم / ٹماٹر کا بھرتہ)",
+    category: "Halal Vegetarian",
+    categorySlug: "halal-vegetarian",
+    cuisine:
+      "Authentic Bengali Heritage / Noakhali Comfort (ভর্তা ঐতিহ্য / Fire-Roasted Charred Mash)",
+    description:
+      "Authentic Bengali Tomato Bhorta (টমেটো ভর্তা / بهورتا الطماطم / ٹماٹر کا بھرتہ): fire-roasted, blistered ripe tomatoes coarsely smashed with golden caramelized onions, whole toasted dry red chilies, fiery green chilies, fragrant fresh cilantro, and pungently aromatic cold-pressed mustard oil. The ultimate smoky, tangy, umami-packed comfort side dish.",
+    introStory:
+      "In the heart of Bengali culinary heritage, no meal is truly complete without the rustic, comforting magic of a 'Bhorta' (ভর্তা)—the revered art of mashing fire-roasted vegetables, fish, or lentils with pungent mustard oil, chilies, and aromatics. Among all bhortas, Tomato Bhorta (টমেটো ভর্তা / Charred Smashed Tomato / بهورتا الطماطم / ٹماٹر کا بھرتہ) holds a sacred place on everyday lunch tables, festive feasts, and monsoon spreads across Greater Noakhali, Dhaka, and Bengal.\n\nThe secret to an unforgettable Tomato Bhorta lies in the flame. Plump, ripe red tomatoes are roasted over an open burner or smoking cast-iron tawa until their skin blisters, cracks, and takes on an intoxicating char. As the sweet juices concentrate inside, whole dry red chilies are pan-roasted in cold-pressed mustard oil until crisp and burgundy. On the prep board, the crispy chilies are crushed with coarse sea salt and worked vigorously into thinly sliced onions, releasing sweet allium juices.\n\nWhen the charred tomatoes are crushed into this spiced base with fiery green chilies, heaps of fresh coriander leaves, and an unapologetic final drizzle of raw, pungent mustard oil (খাটি সরিষার তেল), a symphony of flavors is born: sweet, intensely smoky, mouth-wateringly tangy, and piercingly spicy. Ladled onto a steaming mound of hot Kalijira rice alongside yellow masoor dal or paired with crispy Kholaja Pitha, this dish is pure gastronomic soul food.",
+    heroImage: IMAGES.tomatoBhorta,
+    prepTimeMinutes: 10,
+    cookTimeMinutes: 15,
+    totalTimeMinutes: 25,
+    servings: 4,
+    difficulty: "Easy",
+    calories: 95,
+    rating: 4.98,
+    reviewCount: 164,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified, naturally plant-based, vegan, and gluten-free. Crafted with single-origin cold-pressed mustard oil, fresh garden vegetables, and zero animal by-products, MSG, or chemical stabilizers.",
+    potentialCautionNotes:
+      "Pure Bengali mustard oil possesses a signature wasabi-like horseradish kick (ঝাঁঝ). For authentic heritage taste, reserve a teaspoon of raw oil to drizzle right before serving. Adjust dry red chilies to match your heat preference.",
+    ingredients: [
+      {
+        amount: "4",
+        unit: "large",
+        name: "Ripe red tomatoes (পাকা টমেটো)",
+        notes: "Roma or firm vine-ripened tomatoes; washed and dried for fire-charring",
+      },
+      {
+        amount: "2",
+        unit: "tbsp",
+        name: "Cold-pressed mustard oil (খাটি সরিষার তেল)",
+        notes: "divided: 1 tbsp for sautéing chilies/onions, 1 tbsp raw for finishing",
+      },
+      {
+        amount: "3 to 4",
+        unit: "pieces",
+        name: "Dry red chilies (শুকনা মরিচ)",
+        notes: "pan-roasted until brittle, fragrant, and deep dark mahogany",
+      },
+      {
+        amount: "1",
+        unit: "medium",
+        name: "Red or yellow onion (পেঁয়াজ কুচি)",
+        notes: "finely sliced; half lightly caramelized in oil, half kept raw for texture",
+      },
+      {
+        amount: "3",
+        unit: "cloves",
+        name: "Fresh garlic (রসুন)",
+        notes: "lightly crushed and charred alongside tomatoes or minced and sautéed",
+      },
+      {
+        amount: "2",
+        unit: "pieces",
+        name: "Fresh green chilies (কাঁচা মরিচ)",
+        notes: "finely chopped for fresh grassy heat",
+      },
+      {
+        amount: "1/4",
+        unit: "cup",
+        name: "Fresh coriander / cilantro (ধনেপাতা কুচি)",
+        notes: "freshly chopped tender stems and leaves",
+      },
+      {
+        amount: "3/4",
+        unit: "tsp",
+        name: "Sea salt or Himalayan pink salt (লবণ)",
+        notes: "used to crush the roasted dry chilies into a savory paste",
+      },
+      {
+        amount: "1",
+        unit: "tsp",
+        name: "Fresh lime or lemon juice (কাঁচা লেবুর রস)",
+        notes: "optional squeeze to elevate tangy sweetness",
+      },
+    ],
+    substitutions: [
+      {
+        original: "Cold-pressed mustard oil",
+        substitute: "Extra virgin olive oil with 1/4 tsp wasabi or toasted sesame oil",
+        notes: "Mustard oil is iconic to Bengali cuisine, but extra virgin olive oil provides a mild fruity alternative.",
+      },
+      {
+        original: "Dry red chilies",
+        substitute: "Toasted red pepper flakes or smoked paprika",
+        notes: "Gives gentle smoky heat if whole South Asian red chilies are unavailable.",
+      },
+      {
+        original: "Roma tomatoes",
+        substitute: "Campari or vine-ripened heirloom tomatoes",
+        notes: "Any high-acid, sweet red tomato with good flesh-to-seed ratio chars wonderfully.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Char the Tomatoes & Garlic",
+        instruction:
+          "Place whole ripe tomatoes and garlic cloves directly over an open flame on a wire rack or onto a dry smoking cast-iron tawa. Roast on medium-high heat, turning occasionally with tongs for 10-12 minutes until skins are deeply blistered, charred in spots, and tomato flesh feels soft and yielding.",
+        tip: "Do not peel off all the charred black skin; leaving small flecks imparts the legendary campfire smokiness (পোড়া স্বাদ).",
+      },
+      {
+        step: 2,
+        title: "Toast Chilies & Caramelize Onions",
+        instruction:
+          "Heat 1 tablespoon of mustard oil in a small pan over medium flame. Add whole dry red chilies and roast until darkened and crisp (about 1-2 minutes). Remove chilies and set aside. In the same infused oil, sauté half of the sliced onions and charred garlic until soft, golden, and lightly sweet (about 3-4 minutes). Reserve the remaining sliced onions raw.",
+      },
+      {
+        step: 3,
+        title: "Crush Aromatics (The Bengali Bhorta Rub)",
+        instruction:
+          "On a wide mixing plate, place the crisp roasted red chilies and salt. Crush and crumble the brittle chilies into flakes using your fingertips. Add the raw sliced onions, sautéed golden onions, and chopped green chilies. Work the mixture with your fingers for 30 seconds until the onions soften and absorb the chili oil.",
+        tip: "Wear kitchen gloves if sensitive to chili capsicum oils.",
+      },
+      {
+        step: 4,
+        title: "Coarsely Smash the Tomatoes",
+        instruction:
+          "Add the warm charred tomatoes to the aromatic onion-chili base. Discard the core stem, then coarsely smash the tomatoes using your hands, a fork, or a flat wooden spoon, letting the luscious juices marry with the spices into a chunky, textured mash.",
+      },
+      {
+        step: 5,
+        title: "Garnish with Herbs & Raw Mustard Oil Finish",
+        instruction:
+          "Fold in the fresh chopped cilantro and an optional squeeze of lime juice. Drizzle the remaining 1 tablespoon of raw cold-pressed mustard oil over top. Gently mix once, taste, and adjust salt to your preference. Serve immediately at room temperature.",
+      },
+    ],
+    chefNotes: [
+      "Never use an electric food processor for authentic Bengali bhorta; blending whips excess air into the dish and renders it watery rather than delightfully rustic and chunky.",
+      "The combination of half sautéed caramelized onions and half crisp raw onions creates an incredible contrast of sweetness and fresh crunch.",
+      "Cold-pressed mustard oil (খাটি সরিষার তেল) is non-negotiable for true Noakhali and Bengali flavor profile.",
+    ],
+    nutrition: {
+      calories: 95,
+      proteinGrams: 2,
+      carbsGrams: 8,
+      fatGrams: 7,
+      fiberGrams: 2,
+      sodiumMg: 420,
+      servingSizeDescription: "1/4 cup (approx. 90g)",
+    },
+    storageInstructions:
+      "Store leftover Tomato Bhorta in an airtight glass container in the refrigerator for up to 2 days. Allow it to come to room temperature before serving, as cold fats dull the aromatic mustard oil.",
+    freezingInstructions:
+      "Freezing is not recommended. Tomatoes lose their texture and separate into excess water upon thawing.",
+    servingSuggestions: [
+      "Serve hot alongside fragrant steamed Kalijira rice or warm Basmati rice with a pat of pure cow ghee.",
+      "The quintessential companion to yellow Masoor Dal (মুসুর ডাল) and crispy fried fish.",
+      "Scoop onto warm Kholaja Pitha, crispy Parathas, or luchi for an extraordinary heritage breakfast.",
+      "Pair with bhuna khichuri on rainy monsoon afternoons.",
+    ],
+    faqs: [
+      {
+        question: "Why are the tomatoes charred over flame instead of boiled?",
+        answer:
+          "Fire-charring blisters the skins and caramelizes the tomato sugars, creating an irresistible smoky depth (পোড়া ফ্লেভার) that boiling simply cannot replicate.",
+      },
+      {
+        question: "Can I make this Tomato Bhorta without mustard oil?",
+        answer:
+          "While extra virgin olive oil works as a mild substitute, raw cold-pressed mustard oil provides the quintessential sharp, pungent aroma that defines true Bengali bhorta culture.",
+      },
+      {
+        question: "Can I roast the tomatoes in an oven or air fryer?",
+        answer:
+          "Yes! Broil the tomatoes on high (450°F / 230°C) or air fry at 400°F (200°C) for 12-15 minutes until blistered and browned on all sides.",
+      },
+    ],
+    author: {
+      name: "Noakhali Kitchen Culinary Team",
+      role: "Heritage South Asian & Halal Cuisine Specialists",
+    },
+    updatedDate: "2026-10-09",
+    tags: [
+      "Tomato Bhorta",
+      "টমেটো ভর্তা",
+      "بهورتا الطماطم",
+      "ٹماٹر کا بھرتہ",
+      "Charred Smashed Tomato",
+      "Tomato Vorta",
+      "Bengali Bhorta",
+      "Noakhali Special",
+      "Halal Vegetarian",
+      "Vegan",
+      "Mustard Oil",
+      "Smoky Tomato Mash",
+      "Side Dish",
+    ],
+    whySpecial:
+      "A rustic masterpiece of Bengali soul food: fire-blistered ripe tomatoes coarsely crushed with golden caramelized onions, roasted dry chilies, fresh cilantro, and potent cold-pressed mustard oil.",
+    cookingTips: [
+      "Roast tomatoes on high heat so the skin blackens while the interior stays juicy and concentrated.",
+      "Crush the roasted chilies with salt first; the friction easily pulverizes the chili flakes.",
+      "Always finish with a splash of raw cold-pressed mustard oil right before serving for authentic pungency.",
+    ],
+    commonMistakes: [
+      "Puréeing the mixture in a blender, which turns it into soup rather than a coarse textured mash.",
+      "Discarding all charred skin; keep the delicate blackened flecks for maximum smokiness.",
+      "Omitting salt when crushing dry chilies, which makes the chilies difficult to break down evenly.",
+    ],
+    relatedRecipeSlugs: [
+      "dal-bhorta",
+      "masoor-dal-red-lentil-dal",
+      "boiled-rice",
+      "kholaja-pitha",
+      "bengali-khichuri-bhuna",
+      "duck-curry-with-coconut-milk",
+    ],
+    relatedGuideSlugs: [
+      "mustard-oil-bengali-cooking",
+      "essential-bengali-spices-guide",
+    ],
+    seoTitle:
+      "Authentic Tomato Bhorta Recipe (টমেটো ভর্তা / Charred Smashed Tomato) | Noakhali Kitchen",
+    seoDescription:
+      "Authentic Bengali Tomato Bhorta (টমেটো ভর্তা / بهورتا الطماطم / ٹماٹر کا بھرتہ): fire-charred juicy tomatoes smashed with caramelized onions, roasted dry chilies, cilantro & pungent mustard oil.",
+  },
+  {
+    id: "rec-dal-bhorta",
+    slug: "dal-bhorta",
+    title:
+      "Dal Bhorta (Masoor Dal Bhorta / ডাল ভর্তা / دال بهورتا / دال بھرتہ)",
+    category: "Halal Vegetarian",
+    categorySlug: "halal-vegetarian",
+    cuisine:
+      "Authentic Bengali Heritage / Noakhali Comfort (ভর্তা ঐতিহ্য / Spiced Red Lentil Mash)",
+    description:
+      "Authentic Bengali Dal Bhorta (ডাল ভর্তা / Masoor Dal Bhorta / دال بهورتا / دال بھرتہ): creamy cooked red lentils reduced dry and hand-smashed with golden browned onions, pan-roasted crispy dry red chilies, fresh green chilies, fragrant chopped cilantro, and raw pungent cold-pressed mustard oil. The quintessential comfort staple of every Bengali home.",
+    introStory:
+      "In Bengali home cooking, there is no culinary embrace warmer, simpler, or more deeply comforting than a bowl of freshly mashed Dal Bhorta (ডাল ভর্তা / دال بهورتا / دال بھرتہ). Anchoring every quintessential lunch spread across Greater Noakhali, Dhaka, and Bengal, this humble red lentil mash elevates basic pantry ingredients into sheer soul food.\n\nThe art of perfect Dal Bhorta lies in cooking the red lentils (masoor dal / মুসুর ডাল) with just enough water, a touch of turmeric, salt, and crushed garlic until all moisture completely evaporates and the lentils form a thick, velvety paste (শুকনা ডাল সিদ্ধ). While the dal cools, South Asian dry red chilies are pan-roasted in cold-pressed mustard oil until brittle and fragrant. These crispy chilies are then vigorously crushed with sea salt and worked into golden fried onions and finely sliced raw red onions to extract their sweet, savory allium juices.\n\nFinally, the thick lentil paste is folded into the spiced onion-chili base with fresh chopped green chilies, heaps of fresh coriander, and an unapologetic generous drizzle of fiery, pungent raw mustard oil (খাটি সরিষার তেল). Served alongside steaming hot Kalijira rice, crispy fried eggplant (begun bhaja), yellow dal, or scooped with warm Kholaja Pitha, Dal Bhorta is pure gastronomic bliss.",
+    heroImage: IMAGES.dalBhorta,
+    prepTimeMinutes: 10,
+    cookTimeMinutes: 20,
+    totalTimeMinutes: 30,
+    servings: 4,
+    difficulty: "Easy",
+    calories: 135,
+    rating: 4.99,
+    reviewCount: 182,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified, naturally plant-based, vegan, and gluten-free. Crafted with wholesome red lentils, single-origin cold-pressed mustard oil, and fresh aromatics. Zero animal derivatives, alcohol, or artificial additives.",
+    potentialCautionNotes:
+      "Authentic Bengali cold-pressed mustard oil carries a signature spicy horseradish punch (ঝাঁঝ). Adjust the quantity of roasted red chilies and green chilies to match your desired spice heat level.",
+    ingredients: [
+      {
+        amount: "1",
+        unit: "cup",
+        name: "Red lentils / Masoor dal (মুসুর ডাল)",
+        notes: "rinsed thoroughly and drained",
+      },
+      {
+        amount: "2",
+        unit: "cups",
+        name: "Water",
+        notes: "for simmering lentils until completely dry and thick",
+      },
+      {
+        amount: "1/4",
+        unit: "tsp",
+        name: "Turmeric powder (হলুদ গুঁড়া)",
+        notes: "for radiant golden color and earthy warmth",
+      },
+      {
+        amount: "4",
+        unit: "cloves",
+        name: "Fresh garlic (রসুন)",
+        notes: "peeled and lightly crushed; simmered with lentils",
+      },
+      {
+        amount: "2",
+        unit: "tbsp",
+        name: "Pure cold-pressed mustard oil (খাটি সরিষার তেল)",
+        notes: "divided: 1 tbsp for sautéing onions & chilies, 1 tbsp raw for finishing",
+      },
+      {
+        amount: "4",
+        unit: "pieces",
+        name: "Dry red chilies (শুকনা মরিচ)",
+        notes: "pan-roasted until brittle, fragrant, and deep dark mahogany",
+      },
+      {
+        amount: "1",
+        unit: "large",
+        name: "Red onion (পেঁয়াজ কুচি)",
+        notes: "finely sliced; half fried to golden beresta, half raw for crisp bite",
+      },
+      {
+        amount: "2",
+        unit: "pieces",
+        name: "Fresh green chilies (কাঁচা মরিচ)",
+        notes: "finely chopped for fresh grassy heat",
+      },
+      {
+        amount: "1/3",
+        unit: "cup",
+        name: "Fresh coriander / cilantro (ধনেপাতা কুচি)",
+        notes: "freshly chopped leaves and tender stems",
+      },
+      {
+        amount: "1",
+        unit: "tsp",
+        name: "Sea salt or pink salt (লবণ)",
+        notes: "divided: 1/2 tsp while boiling dal, 1/2 tsp to crush roasted chilies",
+      },
+      {
+        amount: "1",
+        unit: "tsp",
+        name: "Fresh lime or lemon juice (কাঁচা লেবুর রস)",
+        notes: "optional squeeze to heighten savory tang",
+      },
+    ],
+    substitutions: [
+      {
+        original: "Red lentils (Masoor Dal)",
+        substitute: "Yellow moong dal or chana dal",
+        notes: "Cook until completely soft and thick; moong dal provides a nutty aroma.",
+      },
+      {
+        original: "Cold-pressed mustard oil",
+        substitute: "Pure cow ghee or extra virgin olive oil",
+        notes: "Ghee provides luxurious richness, while olive oil is mild and fruity.",
+      },
+      {
+        original: "Dry red chilies",
+        substitute: "Crushed red chili flakes or roasted cayenne",
+        notes: "Provides gentle heat if whole dried South Asian chilies are unavailable.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Cook the Lentils Dry (ডাল সিদ্ধ)",
+        instruction:
+          "In a saucepan, combine rinsed red lentils, 2 cups water, turmeric powder, crushed garlic cloves, and 1/2 tsp salt. Bring to a boil over medium-high heat, skimming off any foam. Reduce to medium-low and simmer uncovered for 15-18 minutes until the lentils are completely tender and all water has evaporated into a thick, dry paste. Stir frequently towards the end so it does not catch on the bottom. Remove from heat and let cool slightly.",
+        tip: "The cooked dal must be thick and moldable like soft dough, not soupy.",
+      },
+      {
+        step: 2,
+        title: "Roast Chilies & Caramelize Onions",
+        instruction:
+          "Heat 1 tablespoon of mustard oil in a small pan over medium flame. Add whole dry red chilies and roast until darkened, brittle, and fragrant (about 1-2 minutes). Transfer chilies to a prep board. In the same hot oil, sauté half of the sliced onions until golden brown and sweet (about 3-4 minutes). Set aside with the pan oil.",
+      },
+      {
+        step: 3,
+        title: "Crush the Aromatics (The Bengali Bhorta Rub)",
+        instruction:
+          "On a wide mixing plate, place the roasted red chilies and remaining 1/2 tsp salt. Crush and crumble the brittle chilies with your fingers into coarse flakes. Add the golden sautéed onions, remaining raw sliced onions, and chopped green chilies. Work the aromatics vigorously with your fingers for 30-45 seconds until onions soften and release savory allium juices.",
+        tip: "Wear kitchen gloves if your skin is sensitive to spicy chili capsicum.",
+      },
+      {
+        step: 4,
+        title: "Hand-Mash Lentils with Spices",
+        instruction:
+          "Add the warm thick cooked lentils onto the spiced onion-chili base. Using your fingers or the back of a wooden spoon, mash and knead the lentils thoroughly until the aromatics, caramelized onions, and chili flakes are evenly incorporated.",
+      },
+      {
+        step: 5,
+        title: "Finish with Cilantro & Raw Mustard Oil",
+        instruction:
+          "Fold in the fresh chopped cilantro and an optional squeeze of lime juice. Pour the remaining 1 tablespoon of raw cold-pressed mustard oil over top. Gently mix once, taste, and adjust salt to your preference. Shape into a rustic artisanal mound on a terracotta platter and serve immediately.",
+      },
+    ],
+    chefNotes: [
+      "Cooking the dal dry (শুকনা ডাল) is the single most important technique: if any water remains, continue cooking over low heat while stirring constantly until fully reduced.",
+      "The combination of half sautéed caramelized onions and half raw crisp onions gives the signature balance of sweetness and fresh crunch.",
+      "Never omit the raw mustard oil drizzle at the end; heating destroys its pungent volatile oils, but raw oil delivers the legendary Bengali village aroma (সরিষার ঝাঁঝ).",
+    ],
+    nutrition: {
+      calories: 135,
+      proteinGrams: 7,
+      carbsGrams: 18,
+      fatGrams: 4,
+      fiberGrams: 5,
+      sodiumMg: 380,
+      servingSizeDescription: "1/3 cup (approx. 100g)",
+    },
+    storageInstructions:
+      "Store leftover Dal Bhorta in an airtight container in the refrigerator for up to 3 days. Reheat gently in a dry skillet with a splash of water, and finish with a drop of raw mustard oil.",
+    freezingInstructions:
+      "Freezing is not recommended as thawed lentils lose their velvety texture and become watery.",
+    servingSuggestions: [
+      "The quintessential Bengali soul food: served warm with steaming Kalijira or Basmati rice and a pat of pure cow ghee.",
+      "Pair side-by-side with Tomato Bhorta (টমেটো ভর্তা), fried eggplant (Begun Bhaja), and crispy fried fish.",
+      "Scoop with warm Kholaja Pitha, layered plain parathas, or puffed luchis for an extraordinary weekend brunch.",
+      "Enjoy alongside Bengali Khichuri Bhuna on rainy afternoons.",
+    ],
+    faqs: [
+      {
+        question: "What makes Dal Bhorta different from regular Dal soup?",
+        answer:
+          "Regular Dal (like Masoor Dal) is a liquid lentil stew tempered with aromatics. Dal Bhorta is cooked until all liquid evaporates into a dense paste, then mashed by hand with raw mustard oil, roasted crispy chilies, and onions.",
+      },
+      {
+        question: "Can I use yellow lentils instead of red lentils?",
+        answer:
+          "Yes! Yellow split moong dal (মুগ ডাল) dry-roasted before boiling makes an exquisite nutty variation of bhorta.",
+      },
+      {
+        question: "Why is raw mustard oil added at the very end?",
+        answer:
+          "Raw cold-pressed mustard oil contains pungent volatile allyl isothiocyanates that evaporate when cooked. Adding it raw at the end imparts the signature pungent aroma iconic to authentic Bengali culinary heritage.",
+      },
+    ],
+    author: {
+      name: "Noakhali Kitchen Culinary Team",
+      role: "Heritage South Asian & Halal Cuisine Specialists",
+    },
+    updatedDate: "2026-10-09",
+    tags: [
+      "Dal Bhorta",
+      "ডাল ভর্তা",
+      "دال بهورتا",
+      "دال بھرتہ",
+      "Masoor Dal Bhorta",
+      "Lentil Mash",
+      "Bengali Bhorta",
+      "Noakhali Comfort",
+      "Halal Vegetarian",
+      "Vegan",
+      "Plant Based",
+      "Mustard Oil",
+      "High Protein Side",
+    ],
+    whySpecial:
+      "The quintessential Bengali comfort food: velvety red lentils cooked dry and hand-worked with crispy roasted dry chilies, golden beresta onions, fresh cilantro, and pungent cold-pressed mustard oil.",
+    cookingTips: [
+      "Ensure all cooking water evaporates so the mashed dal is thick and moldable.",
+      "Combine both fried and raw onions for the perfect sweet and crunchy contrast.",
+      "Drizzle raw cold-pressed mustard oil right before eating to preserve its signature pungent aroma.",
+    ],
+    commonMistakes: [
+      "Leaving too much water in the cooked lentils, making the bhorta soupy.",
+      "Using an electric blender, which homogenizes the mixture and loses the artisanal coarse hand-mashed texture.",
+      "Skipping raw mustard oil at the end, which removes the quintessential Bengali flavor signature.",
+    ],
+    relatedRecipeSlugs: [
+      "tomato-bhorta",
+      "masoor-dal-red-lentil-dal",
+      "boiled-rice",
+      "kholaja-pitha",
+      "duck-curry-with-coconut-milk",
+      "bengali-khichuri-bhuna",
+    ],
+    relatedGuideSlugs: [
+      "mustard-oil-bengali-cooking",
+      "how-to-make-perfect-beresta",
+      "essential-bengali-spices-guide",
+    ],
+    seoTitle:
+      "Authentic Dal Bhorta Recipe (ডাল ভর্তা / Masoor Dal Bhorta) | Noakhali Kitchen",
+    seoDescription:
+      "Authentic Bengali Dal Bhorta (ডাল ভর্তা / دال بهورتا / دال بھرتہ): creamy spiced red lentils mashed with caramelized onions, crispy roasted chilies, cilantro & pungent mustard oil.",
+  },
 ];
 
 export const RECIPES: Recipe[] = enhanceRecipesWithCornerstones(BASE_RECIPES);

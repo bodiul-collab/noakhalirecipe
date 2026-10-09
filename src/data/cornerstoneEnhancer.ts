@@ -666,7 +666,9 @@ const RECIPE_EDITORIAL_EXTRAS: Record<
 
 export function enhanceRecipesWithCornerstones(baseRecipes: Recipe[]): Recipe[] {
   // Prepend additional cornerstone recipes (Kacchi Biryani, Beef Kala Bhuna, Chicken Rezala)
-  const allRawRecipes = [...CORNERSTONE_ADDITIONAL_RECIPES, ...baseRecipes];
+  const allRawRecipes = [...CORNERSTONE_ADDITIONAL_RECIPES, ...baseRecipes].filter(
+    (recipe): recipe is Recipe => Boolean(recipe && recipe.slug)
+  );
 
   return allRawRecipes.map((recipe) => {
     const meta = CORNERSTONE_METADATA_MAP.get(recipe.slug);
