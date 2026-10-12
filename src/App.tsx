@@ -179,6 +179,50 @@ const extractRecipeSlug = (r: string) => {
     ) {
       return "dal-bhorta";
     }
+    if (
+      raw === "patishapta-pitha" ||
+      raw === "patishapta" ||
+      raw === "patishaptapitha" ||
+      raw === "pati-shapta" ||
+      raw === "bengali-patishapta" ||
+      raw === "kheer-patishapta" ||
+      raw === "kheersha-patishapta"
+    ) {
+      return "patishapta-pitha";
+    }
+    if (
+      raw === "panta-bhat-with-bhorta" ||
+      raw === "panta-bhat" ||
+      raw === "pantabhat" ||
+      raw === "panta-ilish" ||
+      raw === "panta-bhat-bhorta" ||
+      raw === "panta-ilish-bhorta" ||
+      raw === "boishakhi-panta-ilish" ||
+      raw === "bengali-panta-bhat"
+    ) {
+      return "panta-bhat-with-bhorta";
+    }
+    if (
+      raw === "pabda-fish-curry-bengali-style" ||
+      raw === "pabda-fish-curry" ||
+      raw === "pabda-macher-jhol" ||
+      raw === "pabda-mach" ||
+      raw === "bengali-pabda-fish-curry" ||
+      raw === "pabda-jhol"
+    ) {
+      return "pabda-fish-curry-bengali-style";
+    }
+    if (
+      raw === "morog-polao" ||
+      raw === "morog-pulao" ||
+      raw === "murgh-pulao" ||
+      raw === "dhakaiya-morog-polao" ||
+      raw === "bengali-morog-polao" ||
+      raw === "chicken-polao" ||
+      raw === "chicken-pulao"
+    ) {
+      return "morog-polao";
+    }
     return raw;
   }
   return null;

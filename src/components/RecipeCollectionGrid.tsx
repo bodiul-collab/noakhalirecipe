@@ -228,6 +228,28 @@ const DEFAULT_COLLECTION: CollectionCardItem[] = [
     image: IMAGES.dalBhorta,
   },
   {
+    id: "card-patishapta-pitha",
+    slug: "patishapta-pitha",
+    title: "Patishapta Pitha (পাটিসাপ্টা পিঠা / پتیشپتا پیٹھا / باتيشابتا بيثا)",
+    description:
+      "Delicate golden rice-flour crepes rolled with a luscious reduced-milk kheer-sha / mawa filling, saffron, and slivered pistachios.",
+    heritageTag: "👑 Royal Winter Pitha",
+    brandName: "Noakhali Kitchen",
+    halalBadge: "100% Halal Sweet",
+    image: IMAGES.patishaptaPitha,
+  },
+  {
+    id: "card-panta-bhat-with-bhorta",
+    slug: "panta-bhat-with-bhorta",
+    title: "Panta Bhat with Bhorta (ভর্তা দিয়ে পান্তা ভাত / بانتا بهات مع بهورتا)",
+    description:
+      "Traditional Bengali fermented rice feast served with crispy fried Ilish hilsa steak, savory dal bhorta, golden diced aloo bhaji, roasted chilies & onions.",
+    heritageTag: "🌾 Pohela Boishakh Heritage",
+    brandName: "Noakhali Kitchen",
+    halalBadge: "100% Halal Feast",
+    image: IMAGES.pantaBhatBhorta,
+  },
+  {
     id: "card-seekh-kebab",
     slug: "seekh-kebab",
     title: "Seekh Kebab (শিখ কাবাব)",

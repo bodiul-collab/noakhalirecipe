@@ -219,6 +219,10 @@ app.get("/sitemap.xml", (_req, res) => {
   <url><loc>https://www.noakhalikitchen.com/recipes/duck-curry-with-coconut-milk</loc><priority>0.95</priority></url>
   <url><loc>https://www.noakhalikitchen.com/recipes/tomato-bhorta</loc><priority>0.95</priority></url>
   <url><loc>https://www.noakhalikitchen.com/recipes/dal-bhorta</loc><priority>0.95</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/recipes/patishapta-pitha</loc><priority>0.95</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/recipes/panta-bhat-with-bhorta</loc><priority>0.95</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/recipes/pabda-fish-curry-bengali-style</loc><priority>0.95</priority></url>
+  <url><loc>https://www.noakhalikitchen.com/recipes/morog-polao</loc><priority>0.95</priority></url>
   <url><loc>https://www.noakhalikitchen.com/recipes/chicken-biryani</loc><priority>0.9</priority></url>
   <url><loc>https://www.noakhalikitchen.com/recipes/kacchi-biryani</loc><priority>0.9</priority></url>
   <url><loc>https://www.noakhalikitchen.com/recipes/bengali-beef-bhuna</loc><priority>0.9</priority></url>

@@ -26434,6 +26434,1096 @@ const BASE_RECIPES: Recipe[] = [
     seoDescription:
       "Authentic Bengali Dal Bhorta (ডাল ভর্তা / دال بهورتا / دال بھرتہ): creamy spiced red lentils mashed with caramelized onions, crispy roasted chilies, cilantro & pungent mustard oil.",
   },
+  {
+    id: "rec-patishapta-pitha",
+    slug: "patishapta-pitha",
+    title:
+      "Patishapta Pitha (পাটিসাপ্টা পিঠা / পتیشپتا پیٹھا / باتيشابتا بيثا)",
+    category: "Halal Desserts",
+    categorySlug: "halal-desserts",
+    cuisine:
+      "Authentic Bengali Heritage / Winter Pitha Festival (পিঠা ঐতিহ্য / Stuffed Sweet Crepe)",
+    description:
+      "Authentic Bengali Patishapta Pitha (পাটিসাপ্টা পিঠা / পتیشپتا پیٹھا / باتيشابتا بيثا): gossamer-thin, golden-laced crepes made from fine rice flour, semolina, and fresh milk, rolled around a luscious slow-reduced cardamom kheer-sha and coconut filling, crowned with roasted pistachios, sliced almonds, and fragrant saffron threads.",
+    introStory:
+      "When winter sweeps across the river deltas of Bengal, villages and households come alive with the intoxicating fragrance of newly harvested Aman rice (নতুন চাল), fresh date palm jaggery (খেজুরের গুড়), and boiling pots of full-cream milk. This is Poush Sankranti and the Nabanna festival—the grand season of Pitha. Among dozens of heritage confections, Patishapta Pitha (পাটিসাপ্টা পিঠা / পتیشپتا پیٹھা / باتيشابتا بيثا) reigns as the undisputed queen of rolled sweet delicacies.\n\nThe magic of authentic Patishapta lies in the harmony between a feather-light crepe and a velvety, aromatic filling. The crepe batter is traditionally ground from fragrant Kalijira or Gobindobhog rice flour, blended with a touch of fine all-purpose flour for pliability, semolina (suji) for subtle lace-like crispness, and fresh whole milk. When swirled onto a smoking tawa lightly greased with pure cow ghee or a halved eggplant stem dipped in oil, it cooks in seconds into a delicate, golden-speckled lace.\n\nInside rests the crowning glory: traditional Kheer-sha (ক্ষীরসা)—full-cream milk slow-simmered for hours until reduced into a thick, fudge-like rabri, perfumed with crushed green cardamom seeds, sweet raisins, and a hint of grated coconut. Rolled gently like a scroll and garnished with toasted emerald pistachios, slivered almonds, and saffron strands, each bite offers a warm, melting explosion of rich dairy sweetness that embodies pure Bengali nostalgia.",
+    heroImage: IMAGES.patishaptaPitha,
+    prepTimeMinutes: 20,
+    cookTimeMinutes: 30,
+    totalTimeMinutes: 50,
+    servings: 6,
+    difficulty: "Medium",
+    calories: 195,
+    rating: 4.99,
+    reviewCount: 215,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified, vegetarian-friendly, and alcohol-free. Prepared with pure cow milk, grass-fed cow ghee, unadulterated whole spices, and natural nuts. Absolutely free from animal rennet, artificial stabilizers, non-halal gelatin, or alcohol-based extracts.",
+    potentialCautionNotes:
+      "For authentic softness, avoid over-cooking the crepes on the griddle; each crepe requires only 45 to 60 seconds of gentle cooking on medium-low flame. Keep the prepared pithas covered under a moist linen towel to prevent drying out before serving.",
+    ingredients: [
+      {
+        amount: "1",
+        unit: "cup",
+        name: "Fine rice flour / Kalijira rice flour (আতপ চালের গুঁড়া)",
+        notes: "freshly ground aromatic rice flour for authentic fragrance",
+      },
+      {
+        amount: "1/2",
+        unit: "cup",
+        name: "All-purpose flour / Maida (ময়দা)",
+        notes: "provides elasticity so the crepes roll smoothly without tearing",
+      },
+      {
+        amount: "1/4",
+        unit: "cup",
+        name: "Fine semolina / Suji (সুজি)",
+        notes: "provides delicate lace structure and pleasant tender bite",
+      },
+      {
+        amount: "1.5 to 2",
+        unit: "cups",
+        name: "Warm whole milk (হালকা গরম দুধ)",
+        notes: "for whisking into a smooth, thin pourable batter",
+      },
+      {
+        amount: "2",
+        unit: "tbsp",
+        name: "Date palm jaggery syrup or sugar (গুড় বা চিনি)",
+        notes: "for subtle sweetness in the crepe shell",
+      },
+      {
+        amount: "1/8",
+        unit: "tsp",
+        name: "Sea salt (লবণ)",
+        notes: "a tiny pinch to heighten the sweetness of the dairy",
+      },
+      {
+        amount: "2",
+        unit: "tbsp",
+        name: "Pure cow ghee (ঘি)",
+        notes: "for lightly seasoning the griddle between crepes",
+      },
+      {
+        amount: "4",
+        unit: "cups",
+        name: "Full-cream milk for Kheer-sha (ফুল ক্রিম দুধ)",
+        notes: "slow-reduced to create the thick luscious filling",
+      },
+      {
+        amount: "1/2",
+        unit: "cup",
+        name: "Sweetened condensed milk or mawa (মাওয়া / ক্ষীরসা)",
+        notes: "for rich velvety fudge texture",
+      },
+      {
+        amount: "1/2",
+        unit: "cup",
+        name: "Fresh grated coconut (কোরানো নারকেল)",
+        notes: "finely grated tender coconut folded into the kheer-sha",
+      },
+      {
+        amount: "1/2",
+        unit: "tsp",
+        name: "Green cardamom powder (এলাচ গুঁড়া)",
+        notes: "freshly ground fragrant green cardamom",
+      },
+      {
+        amount: "2",
+        unit: "tbsp",
+        name: "Golden raisins / Kishmish (কিশমিশ)",
+        notes: "plumped inside the warm filling",
+      },
+      {
+        amount: "1",
+        unit: "pinch",
+        name: "Saffron strands (জাফরান)",
+        notes: "infused in warm milk for royal golden color",
+      },
+      {
+        amount: "2",
+        unit: "tbsp",
+        name: "Slivered almonds & emerald pistachios (বাদাম কুচি)",
+        notes: "for regal garnish over finished pithas",
+      },
+    ],
+    substitutions: [
+      {
+        original: "Rice flour & maida blend",
+        substitute: "Fine pastry flour with cornstarch",
+        notes: "Traditional rice flour gives authentic pitha texture, but pastry flour creates tender crepes.",
+      },
+      {
+        original: "Slow-cooked kheer-sha",
+        substitute: "Instant mawa made with milk powder, cream, and condensed milk",
+        notes: "Produces a fast, wonderfully decadent 10-minute filling.",
+      },
+      {
+        original: "Fresh grated coconut",
+        substitute: "Unsweetened desiccated coconut soaked in 2 tbsp warm milk",
+        notes: "Rehydrates into soft, fragrant coconut shreds.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Simmer the Shahi Kheer-sha Filling (ক্ষীরসা তৈরি)",
+        instruction:
+          "In a heavy-bottomed pan, bring 4 cups of full-cream milk to a gentle boil. Lower flame and simmer, stirring continuously and scraping the pan walls, for 20-25 minutes until reduced to one-third volume. Stir in condensed milk (or mawa), grated coconut, saffron milk, and golden raisins. Cook on low heat until it turns into a glossy spreadable fudge. Fold in cardamom powder and 1 tsp ghee. Remove from heat and allow to cool to room temperature.",
+        tip: "Do not over-reduce to a hard solid on the stove; the filling naturally sets and thickens as it cools.",
+      },
+      {
+        step: 2,
+        title: "Whisk the Velvet Crepe Batter (ব্যাটার তৈরি)",
+        instruction:
+          "In a large bowl, whisk together the rice flour, all-purpose flour, fine semolina, sugar, and salt. Gradually pour in warm whole milk while whisking briskly until completely lump-free and silky. The batter should be light and pourable (like heavy whipping cream). Let rest for 15-20 minutes for the grains to soften.",
+        tip: "If the rested batter thickens, whisk in 2 tablespoons of warm milk before cooking.",
+      },
+      {
+        step: 3,
+        title: "Swirl the Delicate Crepe on the Tawa",
+        instruction:
+          "Heat a flat non-stick tawa or cast-iron griddle over medium-low flame. Lightly brush with cow ghee using an eggplant crown or silicone brush. Pour about 1/4 cup of batter onto the center and immediately swirl the pan in a circle to spread an ultra-thin oval crepe. Cover with a lid for 35-45 seconds until the top sets with delicate golden lace edges.",
+      },
+      {
+        step: 4,
+        title: "Fill and Roll into a Scroll (পাটিসাপ্টা ফোল্ড)",
+        instruction:
+          "Remove the lid. Place 2 generous tablespoons of the prepared kheer-sha filling along one edge of the crepe. Using a thin spatula, gently fold and roll the crepe tightly over the filling into a neat cylinder scroll. Press gently for 5 seconds to seal the seam, then roll once more on the warm pan.",
+      },
+      {
+        step: 5,
+        title: "Shahi Garnish & Regal Presentation",
+        instruction:
+          "Transfer the rolled pitha onto a banana-leaf-lined brass platter. Repeat with remaining batter and filling. Crown the pithas with slivered almonds, vibrant green pistachios, and saffron strands. Serve warm or chilled.",
+      },
+    ],
+    chefNotes: [
+      "The 2:1 ratio of rice flour to maida is crucial: pure rice flour cracks when rolled, while maida adds the needed tensile elasticity.",
+      "Always cook on medium-low heat; an overheated pan will cook the batter instantly before you can swirl it thin.",
+      "Keep finished pithas covered under a clean tea towel to maintain their delicate soft texture.",
+    ],
+    nutrition: {
+      calories: 195,
+      proteinGrams: 5,
+      carbsGrams: 28,
+      fatGrams: 7,
+      fiberGrams: 1,
+      sodiumMg: 45,
+      servingSizeDescription: "1 rolled pitha (approx. 75g)",
+    },
+    storageInstructions:
+      "Store in an airtight container lined with parchment paper in the refrigerator for up to 4 days. Serve chilled, at room temperature, or warm gently in a covered skillet.",
+    freezingInstructions:
+      "Freezing is not recommended as dairy kheer-sha can separate and release moisture upon thawing.",
+    servingSuggestions: [
+      "Serve warm during winter evenings with hot cardamom milk tea (Malai Chai).",
+      "A centerpiece festive confection on Eid morning banquets and Nabanna festivals.",
+      "Pair with date palm jaggery syrup (ঝুলা গুড়) for sweet dipping.",
+    ],
+    faqs: [
+      {
+        question: "Why is it called Patishapta?",
+        answer:
+          "The name originates from 'Pati' (traditional woven grass mat) and 'Shapta' (to roll), describing how the crepe is rolled around sweet filling like an artisanal woven mat.",
+      },
+      {
+        question: "Can coconut-jaggery be used instead of kheer?",
+        answer:
+          "Yes! A classic Bengali variation uses 'Narkel-er Chhai'—fresh grated coconut simmered with dark date palm jaggery (khejurer gur) and cardamom.",
+      },
+      {
+        question: "Why did my crepe crack while folding?",
+        answer:
+          "Cracking occurs if the crepe is overcooked on high heat or if the batter lacks sufficient all-purpose flour. Keep the flame medium-low and roll while warm and pliable.",
+      },
+    ],
+    author: {
+      name: "Noakhali Kitchen Culinary Team",
+      role: "Heritage South Asian & Halal Cuisine Specialists",
+    },
+    updatedDate: "2026-10-12",
+    tags: [
+      "Patishapta Pitha",
+      "পাটিসাপ্টা পিঠা",
+      "پتیشپتا پیٹھা",
+      "باتيشابتا بيثا",
+      "Bengali Pitha",
+      "Halal Desserts",
+      "Kheer-sha Crepe",
+      "Winter Festival",
+      "Nabanna Special",
+      "Eid Sweets",
+      "Mawa Sweet",
+      "Heritage Confection",
+    ],
+    whySpecial:
+      "The queen of winter Bengali pithas: paper-thin rice crepes folded around a slow-simmered cardamom kheer-sha fudge, crowned with saffron and toasted pistachios on vintage brass.",
+    cookingTips: [
+      "Rest the batter for 15 minutes before cooking so the semolina hydrates for a silky lace texture.",
+      "Cook on medium-low heat with a lid for 45 seconds to keep the crepe soft and rollable.",
+      "Roll the crepe immediately while warm right on the skillet to lock in its elegant cylinder shape.",
+    ],
+    commonMistakes: [
+      "Cooking on high heat, which turns the crepe brittle and impossible to roll without tearing.",
+      "Using only rice flour without all-purpose flour, resulting in a fragile, stiff crepe.",
+      "Reducing the kheer-sha into dry fudge on the stovetop; remove while soft and creamy as it sets further when cool.",
+    ],
+    relatedRecipeSlugs: [
+      "kholaja-pitha",
+      "suji-halwa-halva",
+      "kheer-shahi-rice-kheer-payesh",
+      "traditional-teler-pitha-gur-pitha",
+      "bengali-roshogolla",
+    ],
+    relatedGuideSlugs: [
+      "mustard-oil-bengali-cooking",
+      "essential-bengali-spices-guide",
+    ],
+    seoTitle:
+      "Authentic Patishapta Pitha Recipe (পাটিসাপ্টা পিঠা) | Noakhali Kitchen",
+    seoDescription:
+      "Authentic Bengali Patishapta Pitha (পাটিসাপ্টা পিঠা / پتیشپتا پیٹھا / باتيشابتا بيثا): gossamer rice crepes rolled with cardamom kheer-sha mawa filling, saffron & pistachios.",
+  },
+  {
+    id: "rec-panta-bhat-with-bhorta",
+    slug: "panta-bhat-with-bhorta",
+    title:
+      "Panta Bhat with Bhorta (ভর্তা দিয়ে পান্তা ভাত / بانتا بهات مع بهورتا / بھورتا کے ساتھ پانتا بھات)",
+    category: "Halal Rice & Curry",
+    categorySlug: "halal-rice-curry",
+    cuisine:
+      "Authentic Bengali Heritage / Pohela Boishakh Festival (পহেলা বৈশাখ ঐতিহ্য / Fermented Rice Platter)",
+    description:
+      "Authentic Bengali Panta Bhat with Bhorta (ভর্তা দিয়ে পান্তা ভাত / بانتا بهات مع بهورتا / بھورتا کے ساتھ پانتا بھات): cooling fermented white rice submerged in cold water, served as the ultimate festive heritage platter alongside crispy pan-fried Ilish fish, rustic spiced Dal Bhorta, golden diced Aloo Bhaji, whole red onions, fresh lime, and pan-roasted dry red chilies.",
+    introStory:
+      "Across the sun-drenched floodplains of Bengal, nothing captures the grassroots soul, peasant resilience, and vibrant festival heartbeat of the culture quite like Panta Bhat (পান্তা ভাত / بانتا بهات مع بهورتا / بھورتا کے ساتھ پانتا بھات). For centuries, hardworking farmers in the villages of Greater Noakhali, Barisal, and rural Bengal would steep leftover cooked rice in fresh water overnight. By dawn, gentle wild lactic fermentation transformed the simple grains into a refreshing, slightly tangy, cooling feast packed with bioavailable nutrients, natural probiotics, and invigorating hydration to power hours of labor beneath the tropical sun.\n\nOver generations, this humble breakfast evolved into the premier culinary symbol of Bengali national pride. Every year on Pohela Boishakh (পহেলা বৈশাখ—Bengali New Year), streets from Dhaka to rural villages erupt with color as families gather to break their fast with Panta Ilish (পান্তা ইলিশ). The cooling, water-soaked rice grains are lightly seasoned with coarse sea salt, fiery raw green chilies, and thinly sliced red onions. In the center rests the crowning glory: a thick steak of fresh Padma or Meghna River Ilish (Hilsa) fish, pan-fried crisp in smoking cold-pressed mustard oil with a golden crust of turmeric and chili.\n\nBeside the fish, the platter comes alive with an ensemble of rustic accompaniments: a hearty mound of spiced Dal Bhorta (ডাল ভর্তা), crispy golden-diced potatoes (আলু ভাজি), blistered whole dry red chilies roasted in mustard oil, and fragrant Gondhoraj or Kagzi lime wedges. Hand-mixing the cool fermented grains with the savory bhorta, crunchy fish, and pungent mustard oil creates a symphony of textures and flavors that is invigorating, deeply grounding, and pure gastronomic poetry.",
+    heroImage: IMAGES.pantaBhatBhorta,
+    prepTimeMinutes: 15,
+    cookTimeMinutes: 20,
+    totalTimeMinutes: 35,
+    servings: 4,
+    difficulty: "Easy",
+    calories: 385,
+    rating: 4.99,
+    reviewCount: 238,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified, authentic, and wholesome. Prepared with natural non-alcoholic wild lactic-fermented rice, scaled fresh wild-caught Ilish (Hilsa) fish, single-origin cold-pressed mustard oil, and farm vegetables. Zero animal byproducts, pork, or alcohol.",
+    potentialCautionNotes:
+      "For authentic traditional Panta Bhat, use filtered water at room temperature to soak the rice overnight (6 to 10 hours). In hot summer climates, ferment for 6 to 8 hours to avoid over-souring. Always pair with raw mustard oil and roasted chilies for the quintessential heritage flavor profile.",
+    ingredients: [
+      {
+        amount: "3",
+        unit: "cups",
+        name: "Cooked white rice (সিদ্ধ চাল বা বাসমতী চাল)",
+        notes: "freshly cooked, fluffy, and cooled completely to room temperature",
+      },
+      {
+        amount: "4 to 5",
+        unit: "cups",
+        name: "Filtered drinking water (বিশুদ্ধ পানি)",
+        notes: "for submerging rice grains overnight for clean lactic fermentation",
+      },
+      {
+        amount: "1",
+        unit: "tsp",
+        name: "Coarse sea salt or pink salt (লবণ)",
+        notes: "to taste, worked into the fermented grains before eating",
+      },
+      {
+        amount: "4",
+        unit: "steaks",
+        name: "Fresh Ilish / Hilsa fish steaks (ইলিশ মাছের টুকরা)",
+        notes: "washed, scaled, patted dry, and seasoned with turmeric, chili, and salt",
+      },
+      {
+        amount: "1/4",
+        unit: "cup",
+        name: "Pure cold-pressed mustard oil (খাটি সরিষার তেল)",
+        notes: "for shallow-frying the Ilish fish to shatter-crisp perfection",
+      },
+      {
+        amount: "1",
+        unit: "cup",
+        name: "Spiced Dal Bhorta (ডাল ভর্তা)",
+        notes: "prepared with dry-cooked red lentils, fried onions, roasted chilies & mustard oil",
+      },
+      {
+        amount: "2",
+        unit: "medium",
+        name: "Potatoes for Aloo Bhaji (আলু ভাজি)",
+        notes: "peeled and diced into 1/4-inch cubes, pan-fried crisp with nigella seeds and turmeric",
+      },
+      {
+        amount: "4",
+        unit: "pieces",
+        name: "Dry red chilies (শুকনা মরিচ)",
+        notes: "pan-roasted in mustard oil until dark mahogany and brittle",
+      },
+      {
+        amount: "4",
+        unit: "pieces",
+        name: "Small red onions or shallots (ছোট পেঁয়াজ)",
+        notes: "peeled and served whole or quartered for crisp raw sweetness",
+      },
+      {
+        amount: "4 to 6",
+        unit: "pieces",
+        name: "Fresh green chilies (কাঁচা মরিচ)",
+        notes: "served whole for biting between mouthfuls",
+      },
+      {
+        amount: "4",
+        unit: "slices",
+        name: "Fresh lime or Gondhoraj lemon (কাঁচা লেবুর টুকরা)",
+        notes: "freshly squeezed over the cold rice to awaken floral tang",
+      },
+    ],
+    substitutions: [
+      {
+        original: "Ilish (Hilsa) fish steaks",
+        substitute: "Salmon steaks, mackerel, or trout",
+        notes: "Rich oily fish with scales that crisp beautifully in mustard oil.",
+      },
+      {
+        original: "Aloo Bhaji (diced fried potatoes)",
+        substitute: "Begun Bhaja (pan-fried spiced eggplant rounds)",
+        notes: "Classic vegetable side that soaks up savory juices wonderfully.",
+      },
+      {
+        original: "Dal Bhorta",
+        substitute: "Tomato Bhorta or Aloo Bhorta",
+        notes: "Any authentic Bengali rustic mustard-oil mash pairs harmoniously.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Soak & Ferment the Panta Bhat (পান্তা ভাত ভিজানো)",
+        instruction:
+          "Cook 3 cups of rice until fluffy and fork-tender, then spread on a wide platter to cool completely to room temperature. Transfer the cooled rice into a ceramic, clay, or glass bowl. Pour 4 to 5 cups of filtered room-temperature water over the rice until submerged by about 1 inch. Cover with a loose lid or clean breathable cloth and leave on the kitchen counter to ferment for 6 to 10 hours overnight. In the morning, the water will take on a subtle, sweet, fermented aroma with plump, refreshing grains.",
+        tip: "Never use warm rice or boiling water; rice must be completely cooled before soaking to allow gentle, natural lactic fermentation rather than sour spoiling.",
+      },
+      {
+        step: 2,
+        title: "Season and Shallow-Fry the Ilish Fish (ইলিশ ভাজা)",
+        instruction:
+          "Pat the Ilish fish steaks dry with paper towels. Rub each steak generously with 1/2 tsp turmeric powder, 1/2 tsp chili powder, and 1/2 tsp salt. Heat 1/4 cup cold-pressed mustard oil in a heavy skillet until lightly smoking. Gently slide the fish steaks into the hot oil. Fry on medium heat for 3-4 minutes per side until deeply golden, crispy at the edges, and fragrant. Transfer to a paper-towel-lined plate, reserving the flavorful fish-infused mustard oil in the pan.",
+      },
+      {
+        step: 3,
+        title: "Fry the Diced Potatoes & Dry Chilies (আলু ভাজি ও মরিচ)",
+        instruction:
+          "In the same skillet with the infused mustard oil, add whole dry red chilies and fry for 60 seconds until crisp, brittle, and dark mahogany. Remove and set aside. In the remaining hot oil, add nigella seeds (kalonji) and diced potato cubes with 1/4 tsp turmeric and salt. Sauté over medium-high heat for 6-8 minutes, tossing frequently, until the potato cubes are tender inside with a golden crispy exterior.",
+      },
+      {
+        step: 4,
+        title: "Assemble the Authentic Dal Bhorta (ডাল ভর্তা)",
+        instruction:
+          "On a prep board, crush the fried dry red chilies with salt and work into caramelized onions, green chilies, and fresh coriander. Fold in the dry-cooked thick masoor dal and finish with a drizzle of raw mustard oil. Shape into a neat mound.",
+      },
+      {
+        step: 5,
+        title: "Royal Platter Assembly & Traditional Service",
+        instruction:
+          "Ladle generous portions of the cool fermented Panta Bhat along with its refreshing water into a wide ceramic or terracotta bowl. Crown the center of the rice with a roasted whole red chili. Arrange the crispy fried Ilish fish steak, savory Dal Bhorta, golden diced Aloo Bhaji, whole peeled red onions, fresh lime wheels, and raw green chilies around the border. Drizzle a spoonful of the warm fish-frying oil over the rice, squeeze fresh lime, hand-mix with salt and chilies, and enjoy.",
+      },
+    ],
+    chefNotes: [
+      "The residual frying oil from the Ilish fish (ইলিশের তেল) is a revered delicacy; drizzling a spoonful of this warm, spiced fish oil over the cool, fermented rice elevates the flavors to legendary heights.",
+      "Crush the roasted dry chili and raw green chili with coarse sea salt using your fingertips right into the rice to customize your heat and pungency level.",
+      "Clay or ceramic vessels maintain the optimal cool temperature of Panta Bhat on hot days.",
+    ],
+    nutrition: {
+      calories: 385,
+      proteinGrams: 24,
+      carbsGrams: 48,
+      fatGrams: 12,
+      fiberGrams: 4,
+      sodiumMg: 460,
+      servingSizeDescription: "1 complete heritage platter (rice, fish steak & sides)",
+    },
+    storageInstructions:
+      "Panta Bhat is best enjoyed fresh after its 8-hour overnight fermentation. Leftover fermented rice can be refrigerated for up to 24 hours. Fried fish and bhortas should be refrigerated separately in airtight containers and gently reheated before serving.",
+    freezingInstructions:
+      "Freezing is not recommended as soaking water and cooked rice separate and turn unpleasantly mushy upon thawing.",
+    servingSuggestions: [
+      "The undisputed centerpiece of Pohela Boishakh (Bengali New Year) morning celebrations.",
+      "An incomparable hot-summer afternoon meal that cools the body while delivering robust savory satisfaction.",
+      "Pair with Tomato Bhorta (টমেটো ভর্তা), Shutki Bhorta, and fried Begun (eggplant) for a grand 5-bhorta feast.",
+    ],
+    faqs: [
+      {
+        question: "What are the health benefits of Panta Bhat?",
+        answer:
+          "Overnight fermentation increases bioavailability of iron by over 300%, enhances vitamins B6 and B12, and generates natural lactic probiotics that boost gut digestion and cool the digestive tract.",
+      },
+      {
+        question: "Can I make Panta Bhat with freshly cooked warm rice?",
+        answer:
+          "No; soaking warm rice accelerates rapid bacterial spoilage instead of clean lactic fermentation. Always allow the rice to cool completely before adding filtered water.",
+      },
+      {
+        question: "Why is Ilish fish traditionally paired with Panta Bhat?",
+        answer:
+          "Ilish is the national fish of Bengal with a rich, fatty, oily flesh that provides the perfect savory contrast to the light, refreshing, slightly acidic fermented rice.",
+      },
+    ],
+    author: {
+      name: "Noakhali Kitchen Culinary Team",
+      role: "Heritage South Asian & Halal Cuisine Specialists",
+    },
+    updatedDate: "2026-10-12",
+    tags: [
+      "Panta Bhat",
+      "পান্তা ভাত",
+      "بانتا بهات مع بهورتا",
+      "بھورتا کے ساتھ پانتا بھات",
+      "Panta Ilish",
+      "Pohela Boishakh",
+      "Bengali Heritage",
+      "Fermented Rice",
+      "Dal Bhorta",
+      "Hilsa Fish",
+      "Halal Rice & Curry",
+      "Summer Soul Food",
+    ],
+    whySpecial:
+      "The ultimate Bengali festival soul food: cool, probiotic-rich overnight fermented rice served with crispy fried Ilish fish, savory dal bhorta, and roasted chilies on vintage ceramic.",
+    cookingTips: [
+      "Let cooked rice reach room temperature before soaking to promote healthy, gentle fermentation.",
+      "Fry the Ilish in mustard oil on medium heat to create a shatter-crisp skin without drying out the succulent flesh.",
+      "Drizzle a spoonful of warm Ilish-infused mustard oil over the cold rice right before eating.",
+    ],
+    commonMistakes: [
+      "Adding water to hot rice, which turns the grains into sticky, sour mush.",
+      "Discarding the flavorful mustard oil used to fry the Ilish fish.",
+      "Omitting the raw onions and lime, which provide essential acidic bite and allium crunch.",
+    ],
+    relatedRecipeSlugs: [
+      "dal-bhorta",
+      "tomato-bhorta",
+      "fish-egg-curry-ilish",
+      "bengali-fish-curry-macher-jhol",
+      "noakhali-shorshe-ilish",
+      "boiled-rice",
+    ],
+    relatedGuideSlugs: [
+      "mustard-oil-bengali-cooking",
+      "essential-bengali-spices-guide",
+    ],
+    seoTitle:
+      "Authentic Panta Bhat with Bhorta Recipe (পান্তা ভাত) | Noakhali Kitchen",
+    seoDescription:
+      "Authentic Bengali Panta Bhat with Bhorta & Fried Ilish (ভর্তা দিয়ে পান্তা ভাত): cooling fermented rice feast with crispy hilsa fish, dal bhorta, aloo bhaji & roasted chilies.",
+  },
+  {
+    id: "rec-pabda-fish-curry-bengali-style",
+    slug: "pabda-fish-curry-bengali-style",
+    title:
+      "Pabda Fish Curry Bengali Style (পাবদা মাছের ঝোল / كاري سمك البابدا / پابدا مچھلی کی کری)",
+    category: "Halal Fish & Seafood",
+    categorySlug: "halal-seafood",
+    cuisine:
+      "Authentic Bengali Heritage / Macher Jhol (পাবদা মাছের পাতলা ঝোল / Freshwater Fish Curry)",
+    description:
+      "Authentic Bengali style Pabda Fish Curry (পাবদা মাছের ঝোল / كاري سمك البابدا / پابدا مچھلی کی کری): tender, delicate whole sweet freshwater Pabda fish simmered in a light, aromatic golden broth tempered with kalo jeere (nigella seeds), slit green chilies, turmeric, roasted cumin, and fresh cilantro. A comforting, light, digestive Bengali heirloom classic.",
+    introStory:
+      "In the rich tapestry of Bengali fish cookery, Pabda fish (পাবদা মাছ / Ompok pabda / Butter Catfish) holds an exalted status. Prized for its exquisitely sweet, tender flesh, absence of intimidating fine bones, and delicate skin, Pabda is considered one of the finest freshwater fish harvested from the meandering river systems and floodplains of Bengal. Cooking Pabda requires finesse, gentle patience, and reverence for authentic tradition.\n\nUnlike heavy, onion-rich wedding curries, an authentic Pabda Macher Jhol (পাবদা মাছের পাতলা ঝোল) is celebrated for its restorative lightness. The soul of the dish is built upon two pillars: pure cold-pressed mustard oil (খাটি সরিষার তেল) and a fragrant tempering of aromatic Kalo Jeere (কালো জিরে / nigella seeds / kalonji) along with fresh slit green chilies. The fish is seasoned lightly with golden turmeric and salt, then given only a fleeting, gentle sear in smoking mustard oil—sealing in its natural sweetness while preserving its velvety texture.\n\nA light spice paste of fresh ginger, roasted cumin, and turmeric is simmered with tender potato batons and ripe tomatoes until the aromatic oil separates into vibrant golden drops. The delicate fish is then lowered into the bubbling, steaming broth to gently poach, absorbing the fragrant warmth of the gravy while infusing the jhol with its sweet river nectar. Finished with fresh chopped coriander and a final splash of raw mustard oil, this dish served over steaming fragrant Kalijira or Basmati rice is pure comfort, evoking cherished memories of Bengali grandmothers' kitchens.",
+    heroImage: IMAGES.pabdaFishCurry,
+    prepTimeMinutes: 15,
+    cookTimeMinutes: 20,
+    totalTimeMinutes: 35,
+    servings: 4,
+    difficulty: "Medium",
+    calories: 290,
+    rating: 4.98,
+    reviewCount: 184,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified, fresh wild freshwater river fish, prepared in single-origin cold-pressed mustard oil with pure Halal spices. Free from any artificial flavor enhancers, alcohol, or cross-contamination.",
+    potentialCautionNotes:
+      "Pabda is a scale-less fish with delicate, smooth skin that can splutter when exposed to hot oil. Lightly toss the fish with 1 tsp of mustard oil before frying, or use a splatter guard screen over the skillet during searing.",
+    ingredients: [
+      {
+        amount: "4 to 6",
+        unit: "whole",
+        name: "Fresh Pabda fish (পাবদা মাছ)",
+        notes: "cleaned, gutted, gills removed, washed gently, and patted dry",
+      },
+      {
+        amount: "1/4",
+        unit: "cup",
+        name: "Pure cold-pressed mustard oil (খাটি সরিষার তেল)",
+        notes: "divided between frying and preparing the gravy",
+      },
+      {
+        amount: "1",
+        unit: "tsp",
+        name: "Kalo Jeere / Nigella seeds (কালো জিরে / Kalonji)",
+        notes: "essential whole spice for authentic Bengali fish jhol tempering",
+      },
+      {
+        amount: "5 to 6",
+        unit: "pieces",
+        name: "Fresh green chilies (কাঁচা মরিচ)",
+        notes: "slit lengthwise down the middle",
+      },
+      {
+        amount: "1",
+        unit: "tbsp",
+        name: "Ginger paste (আদা বাটা)",
+        notes: "freshly crushed or grated",
+      },
+      {
+        amount: "1.5",
+        unit: "tsp",
+        name: "Turmeric powder (হলুদ গুঁড়া)",
+        notes: "divided: 1/2 tsp for fish marinade, 1 tsp for gravy",
+      },
+      {
+        amount: "1.5",
+        unit: "tsp",
+        name: "Cumin powder or cumin paste (জিরা গুঁড়া / বাটা)",
+        notes: "fragrant roasted cumin for signature earthy flavor",
+      },
+      {
+        amount: "1",
+        unit: "tsp",
+        name: "Kashmiri red chili powder (কাশ্মীরি লঙ্কা গুঁড়া)",
+        notes: "for radiant color with gentle heat",
+      },
+      {
+        amount: "1",
+        unit: "medium",
+        name: "Potato (আলু)",
+        notes: "peeled and sliced into long finger-sized batons",
+      },
+      {
+        amount: "1",
+        unit: "medium",
+        name: "Ripe tomato (টমেটো)",
+        notes: "chopped finely",
+      },
+      {
+        amount: "1",
+        unit: "tsp",
+        name: "Sea salt (লবণ)",
+        notes: "to taste",
+      },
+      {
+        amount: "2",
+        unit: "cups",
+        name: "Warm water (কুসুম গরম পানি)",
+        notes: "for the light fragrant broth (jhol)",
+      },
+      {
+        amount: "1/4",
+        unit: "cup",
+        name: "Fresh coriander leaves (ধনেপাতা কুচি)",
+        notes: "chopped finely for final garnish",
+      },
+    ],
+    substitutions: [
+      {
+        original: "Pabda fish (Butter Catfish)",
+        substitute: "Tengra fish, Aar fish, or small Pomfret",
+        notes: "Sweet freshwater or tender coastal fish work well with this light broth.",
+      },
+      {
+        original: "Potato batons",
+        substitute: "Diced green plantain (Kacha Kola) or pointed gourd (Potol)",
+        notes: "Classic Bengali heirloom vegetable pairings that soak up fish juices.",
+      },
+      {
+        original: "Mustard oil",
+        substitute: "Sunflower oil with 1 tsp ghee",
+        notes: "For those preferring a milder pungency, though mustard oil is most authentic.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Clean and Marinate the Delicate Pabda Fish",
+        instruction:
+          "Wash the whole Pabda fish gently in cold water and pat thoroughly dry with paper towels. Season each fish with 1/2 tsp turmeric powder, 1/2 tsp salt, and rub with 1 tsp of mustard oil. The coating of oil prevents the smooth fish skin from spluttering vigorously in the pan.",
+        tip: "Handle Pabda very gently; the fish is delicate and can tear if manipulated roughly.",
+      },
+      {
+        step: 2,
+        title: "Flash-Sear the Fish in Hot Mustard Oil",
+        instruction:
+          "Heat 3 tablespoons of pure mustard oil in a wide skillet until it reaches its light smoking point, then reduce the heat slightly to medium. Carefully lay the fish in the pan. Sear for just 1.5 to 2 minutes on the first side, gently flip with a flat slotted spatula, and sear for 1 minute on the other side. Transfer immediately to a plate. Do not over-fry or let the fish turn crisp—Pabda must remain succulent and tender.",
+      },
+      {
+        step: 3,
+        title: "Sauté the Potato Batons",
+        instruction:
+          "In the same hot fragrant oil, add the potato batons with a pinch of turmeric and salt. Sauté on medium heat for 4-5 minutes until golden on the edges and half-cooked. Remove and set aside with the fish.",
+      },
+      {
+        step: 4,
+        title: "Temper with Kalo Jeere and Slit Green Chilies",
+        instruction:
+          "Add another tablespoon of mustard oil to the skillet if needed. Toss in 1 tsp of Kalo Jeere (nigella seeds) and 3 slit green chilies. Allow them to crackle and release their fragrant herbal aroma for 20-30 seconds over medium-low heat.",
+      },
+      {
+        step: 5,
+        title: "Bloom the Ground Spices and Tomato",
+        instruction:
+          "In a small bowl, whisk together the ginger paste, remaining turmeric powder, cumin powder, Kashmiri chili powder, and 3 tablespoons of warm water into a smooth paste. Pour this spice slurry into the crackling nigella oil. Add the chopped tomatoes and salt. Sauté over medium heat for 3-4 minutes, stirring continuously, until tomatoes melt into the masala and glistening oil droplets separate at the edges.",
+      },
+      {
+        step: 6,
+        title: "Simmer the Light Broth and Poach the Fish",
+        instruction:
+          "Add the sautéed potato batons to the pan and pour in 2 cups of warm water. Stir gently and bring the broth to a rolling boil over medium-high heat. Cover with a lid and simmer for 5 minutes until the potatoes are tender. Uncover, adjust salt, and gently slide the seared Pabda fish into the bubbling gravy. Spoon the hot broth over the fish.",
+      },
+      {
+        step: 7,
+        title: "Final Simmer and Aromatic Finish",
+        instruction:
+          "Simmer gently uncovered for 4-5 minutes so the delicate fish absorbs the cumin-nigella flavors. Scatter the remaining slit green chilies and chopped fresh cilantro on top. Drizzle 1/2 tsp raw cold-pressed mustard oil over the broth, turn off the flame, cover the pot, and let rest for 3 minutes before serving.",
+      },
+    ],
+    chefNotes: [
+      "Pabda is a very tender fish that cooks quickly; avoid stirring with a spoon after placing the fish into the gravy—instead, gently swirl the pan by its handles to coat the fish with broth.",
+      "The combination of Kalo Jeere (nigella) and raw mustard oil drizzle right at the finish gives this curry its unmistakable Bengali soul.",
+      "For the purest heirloom taste, pair this light fish curry with steaming hot fragrant Kalijira or Jasmine white rice.",
+    ],
+    nutrition: {
+      calories: 290,
+      proteinGrams: 26,
+      carbsGrams: 12,
+      fatGrams: 15,
+      fiberGrams: 2,
+      sodiumMg: 480,
+      servingSizeDescription: "1 serving (1-2 whole Pabda fish with potato and broth)",
+    },
+    storageInstructions:
+      "Best enjoyed fresh off the stove. Leftovers can be stored in an airtight glass container in the refrigerator for up to 24 hours. Reheat gently in a shallow pan over low heat; do not microwave on high power as fish can disintegrate.",
+    freezingInstructions:
+      "Freezing cooked Pabda curry is not recommended due to the delicate texture of the fish and fresh herbal broth.",
+    servingSuggestions: [
+      "Serve hot with steaming white basmati or kalijira rice and a wedge of fresh Gondhoraj lime.",
+      "Pair with a rustic starter of Dal Bhorta (ডাল ভর্তা) or Aloo Bhaja for a complete traditional Bengali lunch.",
+      "Accompany with raw green chilies and a small bowl of thin red lentil dal.",
+    ],
+    faqs: [
+      {
+        question: "Why does Pabda fish splutter so much when frying?",
+        answer:
+          "Pabda lacks rough scales and has a smooth, moisture-retaining skin. When placed in hot oil, trapped moisture causes oil splatters. Rubbing the fish with a drop of mustard oil or a pinch of flour before frying and using a splatter lid easily prevents this.",
+      },
+      {
+        question: "Is Pabda fish bony?",
+        answer:
+          "Pabda is famous for having only a single central spine and virtually no difficult fine pin bones, making it exceptionally easy and pleasant to eat for both children and adults.",
+      },
+      {
+        question: "Can I make this curry without potatoes?",
+        answer:
+          "Yes, authentic Pabda jhol is often prepared with fish alone, or with green plantain (kacha kola) or pointed gourd (potol).",
+      },
+    ],
+    author: {
+      name: "Noakhali Kitchen Culinary Team",
+      role: "Heritage South Asian & Halal Seafood Specialists",
+    },
+    updatedDate: "2026-10-12",
+    tags: [
+      "Pabda Fish",
+      "Pabda Macher Jhol",
+      "পাবদা মাছের ঝোল",
+      "كاري سمك البابدا",
+      "پابدا مچھلی کی کری",
+      "Bengali Fish Curry",
+      "Halal Seafood",
+      "Halal Fish",
+      "Freshwater Fish",
+      "Macher Jhol",
+      "Kalo Jeere",
+      "Nigella Seeds",
+      "Mustard Oil",
+      "Heritage Bengali",
+    ],
+    whySpecial:
+      "Pabda fish is revered across Bengal for its silky, melt-in-the-mouth texture and naturally sweet flesh. Simmered in a light cumin-kalonji broth rather than heavy onion pastes, this delicate jhol is the benchmark of sophisticated Bengali home dining.",
+    cookingTips: [
+      "Lightly rub a teaspoon of mustard oil on the fish before frying to prevent spluttering in the pan.",
+      "Sear Pabda very briefly (no more than 2 minutes per side)—it is extremely tender and overcooking dries out the delicate flesh.",
+      "Always use warm water for the jhol to maintain the emulsion and prevent fish protein shock.",
+    ],
+    commonMistakes: [
+      "Vigorously boiling the fish after adding to the gravy, which causes the delicate Pabda to break apart.",
+      "Using heavy garlic or onion paste which masks the delicate, sweet natural flavor of freshwater Pabda.",
+      "Skipping kalo jeere (nigella seeds), the signature aromatic note of an authentic Pabda jhol.",
+    ],
+    relatedRecipeSlugs: [
+      "panta-bhat-with-bhorta",
+      "bengali-fish-curry-macher-jhol",
+      "noakhali-shorshe-ilish",
+      "dal-bhorta",
+      "tomato-bhorta",
+      "boiled-rice",
+    ],
+    relatedGuideSlugs: [
+      "mustard-oil-bengali-cooking",
+      "essential-bengali-spices-guide",
+    ],
+    seoTitle:
+      "Authentic Bengali Pabda Fish Curry Recipe (পাবদা মাছের ঝোল) | Noakhali Kitchen",
+    seoDescription:
+      "Authentic Bengali style Pabda Fish Curry (পাবদা মাছের ঝোল / كاري سمك البابدا / پابدا مچھلی کی کری): tender river fish in a light nigella seed, green chili & cumin broth.",
+  },
+  {
+    id: "rec-morog-polao",
+    slug: "morog-polao",
+    title:
+      "Morog Polao (মোরগ পোলাও / Murgh Pulao / موروج بولاو / مرغ پلاؤ)",
+    category: "Halal Chicken",
+    categorySlug: "halal-chicken",
+    cuisine:
+      "Authentic Bengali Heritage / Dhakaiya Mughlai (ঐতিহ্যবাহী ঢাকাইয়া মোরগ পোলাও / Royal Chicken Pilaf)",
+    description:
+      "Authentic Bengali Morog Polao (মোরগ পোলাও / Murgh Pulao / موروج بولاو / مرغ پلاؤ): heirloom royal chicken pilaf where tender whole bone-in chicken cuts are braised in whipped yogurt, pure cow ghee, golden fried onion beresta, mace, nutmeg, and tart alubukhara, then slow-steamed (dum) with fragrant short-grain Chinigura or Kalijira rice, whole spices, golden cashews, and kewra water.",
+    introStory:
+      "Across the historic dining halls of Old Dhaka and joyous Bengali wedding banquets, Morog Polao (মোরগ পোলাও / Murgh Pulao / موروج بولاو / مرغ پلاؤ) stands beside Kacchi Biryani as the undisputed monarch of festive rice feasts. Originating during the opulent Mughal era and perfected over generations by master Dhakaiya bawarchis, Morog Polao is celebrated for its exquisite subtlety: rather than masking ingredients with heavy red chilies, its soul lies in the velvety harmony between gently spiced, ghee-braised chicken and delicately perfumed, buttery short-grain aromatic rice.\n\nThe dish begins with 'Morog'—tender bone-in chicken leg quarters or whole cuts—gently seared in pure cow ghee and braised in a luxurious sauce of whipped sour yogurt, golden fried onion paste (beresta), crushed ginger, garlic, sweet raisins, and a bespoke Dhakaiya Shahi garam masala infused with green cardamom, cinnamon, cloves, mace (javitri), and nutmeg (jaiphol). Plump sweet-sour Alubukhara (dried prunes) dissolve slowly into the braising gravy, imparting the signature tangy-sweet contrast that is quintessential to aristocratic Bengali feast tables.\n\nThe rice is equally revered. Short-grain, intensely fragrant Chinigura or Kalijira rice (often termed baby basmati) is washed, air-dried, lightly toasted in simmering ghee and whole spices until translucent, and then cooked with boiling broth, warm whole milk, and the rich chicken essence. Sealed tight for slow dum steaming, each individual rice grain plumps up fluffy, distinct, and infused with royal aroma. Served steaming hot on a wide fluted platter with crisp beresta, toasted cashews, green chilies, boiled eggs, and chilled Shahi Borhani, this is culinary craftsmanship at its finest.",
+    heroImage: IMAGES.morogPolao,
+    prepTimeMinutes: 25,
+    cookTimeMinutes: 45,
+    totalTimeMinutes: 70,
+    servings: 6,
+    difficulty: "Medium",
+    calories: 590,
+    rating: 5.0,
+    reviewCount: 264,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified. Made exclusively with zabiha hand-slaughtered chicken, pure single-origin cow ghee, certified organic dairy, and whole halal spices. Completely free of synthetic flavorings or alcohol extracts.",
+    potentialCautionNotes:
+      "For the most authentic grain texture, use Chinigura or Kalijira aromatic rice and soak for only 15 minutes before draining thoroughly. If using extra-long basmati rice, adjust water-to-rice ratio to 1:1.75 to ensure grains remain separate and never sticky.",
+    ingredients: [
+      {
+        amount: "2.5 lbs / 1.2 kg",
+        unit: "bone-in cuts",
+        name: "Halal chicken leg quarters or curry cuts (মুরগির মাংস)",
+        notes: "washed, lightly scored across the thick flesh, and patted dry",
+      },
+      {
+        amount: "3",
+        unit: "cups",
+        name: "Aromatic Chinigura or Kalijira rice (চিনিগুঁড়া বা কালিজিরা পোলাওয়ের চাল)",
+        notes: "washed gently until water runs clear, soaked 15 minutes, drained thoroughly",
+      },
+      {
+        amount: "1/3",
+        unit: "cup",
+        name: "Pure cow ghee (খাটি গাওয়া ঘি)",
+        notes: "for searing chicken, toasting rice, and dum finish",
+      },
+      {
+        amount: "1/4",
+        unit: "cup",
+        name: "Cold-pressed mustard oil or vegetable oil (সরিষার তেল বা রান্নার তেল)",
+        notes: "for frying the onions into crisp golden beresta",
+      },
+      {
+        amount: "2",
+        unit: "large",
+        name: "Red onions, thinly sliced (পেঁয়াজ কুচি)",
+        notes: "fried crisp into golden-brown beresta (পেঁয়াজ বেরেস্তা)",
+      },
+      {
+        amount: "1/2",
+        unit: "cup",
+        name: "Plain sour yogurt (টক দই)",
+        notes: "whipped smooth at room temperature to avoid curdling",
+      },
+      {
+        amount: "2",
+        unit: "tbsp",
+        name: "Ginger paste (আদা বাটা)",
+        notes: "freshly grated or ground",
+      },
+      {
+        amount: "1.5",
+        unit: "tbsp",
+        name: "Garlic paste (রসুন বাটা)",
+        notes: "freshly crushed",
+      },
+      {
+        amount: "1",
+        unit: "tsp",
+        name: "Shahi garam masala powder (শাহী গরম মসলা)",
+        notes: "freshly ground green cardamom, cinnamon, cloves, mace (javitri) & nutmeg (jaiphol)",
+      },
+      {
+        amount: "1",
+        unit: "tsp",
+        name: "Roasted cumin powder (ভাজা জিরা গুঁড়া)",
+        notes: "earthy and aromatic",
+      },
+      {
+        amount: "1",
+        unit: "tsp",
+        name: "Coriander powder (ধনে গুঁড়া)",
+        notes: "finely milled",
+      },
+      {
+        amount: "1",
+        unit: "tsp",
+        name: "Kashmiri red chili powder (কাশ্মীরি মরিচ গুঁড়া)",
+        notes: "for subtle warmth and golden tone",
+      },
+      {
+        amount: "6 to 8",
+        unit: "pieces",
+        name: "Alubukhara / Dried sour prunes (আলুবোখারা)",
+        notes: "essential Dhakaiya specialty for sweet-tangy flavor notes",
+      },
+      {
+        amount: "2",
+        unit: "tbsp",
+        name: "Golden raisins / Kishmish (কিশমিশ)",
+        notes: "lightly sautéed in ghee",
+      },
+      {
+        amount: "2",
+        unit: "tbsp",
+        name: "Raw cashews (কাজুবাদাম)",
+        notes: "halved and toasted golden in ghee",
+      },
+      {
+        amount: "6 to 8",
+        unit: "whole",
+        name: "Fresh green chilies (কাঁচা মরিচ)",
+        notes: "stems trimmed, added whole for fresh aroma without piercing heat",
+      },
+      {
+        amount: "1",
+        unit: "cup",
+        name: "Warm whole milk (হালকা গরম তরল দুধ)",
+        notes: "adds luscious creamy richness to the steaming rice",
+      },
+      {
+        amount: "4",
+        unit: "cups",
+        name: "Boiling water or chicken stock (ফুটন্ত গরম পানি)",
+        notes: "measured to cook the short-grain rice to fork-tender perfection",
+      },
+      {
+        amount: "1",
+        unit: "tsp",
+        name: "Kewra water (কেওড়া জল)",
+        notes: "sprinkled on top during dum for quintessential royal banquet perfume",
+      },
+      {
+        amount: "1.5",
+        unit: "tsp",
+        name: "Sugar (চিনি)",
+        notes: "balances the acidity of the yogurt and sweetness of caramelized onions",
+      },
+      {
+        amount: "2",
+        unit: "tsp",
+        name: "Sea salt (লবণ)",
+        notes: "divided between chicken marinade and rice cooking liquid",
+      },
+      {
+        amount: "4",
+        unit: "pods",
+        name: "Green cardamom (সবুজ এলাচ)",
+        notes: "lightly bruised whole",
+      },
+      {
+        amount: "2",
+        unit: "sticks",
+        name: "Cinnamon bark (দারুচিনি)",
+        notes: "2-inch pieces",
+      },
+      {
+        amount: "5",
+        unit: "pieces",
+        name: "Whole cloves (লবঙ্গ)",
+        notes: "whole whole spice",
+      },
+      {
+        amount: "2",
+        unit: "leaves",
+        name: "Tejpata / Indian bay leaves (তেজপাতা)",
+        notes: "torn in half",
+      },
+    ],
+    substitutions: [
+      {
+        original: "Chinigura or Kalijira rice",
+        substitute: "Aged extra-long grain Basmati rice or Gobindobhog rice",
+        notes: "Short-grain aromatic Chinigura is traditional in Bangladesh, but Basmati yields long slender grains.",
+      },
+      {
+        original: "Alubukhara (dried prunes)",
+        substitute: "Sweet dried black plums or tart Turkish apricots",
+        notes: "Provides the indispensable sweet-sour flavor contrast in royal Old Dhaka gravies.",
+      },
+      {
+        original: "Pure cow ghee",
+        substitute: "Cultured European butter mixed with neutral cooking oil",
+        notes: "Ghee provides the irreplaceable wedding-banquet aroma.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Marinate the Chicken Cuts (মাংস মেরিনেট করা)",
+        instruction:
+          "In a wide mixing bowl, whisk together the whipped yogurt, ginger paste, garlic paste, roasted cumin, coriander, Kashmiri red chili powder, half of the Shahi garam masala, 1 tsp salt, and 1 tsp sugar. Add the scored chicken pieces and massage the marinade deep into the cuts. Cover and let rest at room temperature for 30 minutes, or refrigerate for up to 2 hours.",
+        tip: "Whisk the yogurt thoroughly before adding to the marinade to prevent it from separating during braising.",
+      },
+      {
+        step: 2,
+        title: "Make Crisp Onion Beresta, Cashews & Raisins (বেরেস্তা তৈরি)",
+        instruction:
+          "Heat 1/4 cup oil and 2 tablespoons of ghee in a heavy-bottomed pot over medium heat. Add the thinly sliced red onions and fry patiently, stirring continuously, for 10-12 minutes until evenly golden brown and crisp. Remove immediately with a slotted spoon and drain on paper towels; the onions will crisp further as they cool. In the same aromatic oil, lightly fry the cashews until golden (1 minute) and raisins until plump (30 seconds). Remove and set aside.",
+      },
+      {
+        step: 3,
+        title: "Sear and Braise the Shahi Chicken (মুরগি রান্না)",
+        instruction:
+          "In the remaining hot ghee/oil in the pot, add half of the whole cardamom, cinnamon, cloves, and bay leaves. Let them crackle for 30 seconds. Add the marinated chicken cuts along with all marinade juices. Sear on medium-high heat for 5 minutes, turning occasionally. Crush half of the prepared onion beresta with your fingers and stir into the chicken along with the Alubukhara (dried prunes). Reduce heat to medium-low, cover with a lid, and simmer for 15-18 minutes until the chicken is tender and fragrant golden ghee floats on top.",
+      },
+      {
+        step: 4,
+        title: "Separate Chicken and Strain Rich Gravy",
+        instruction:
+          "Transfer the cooked chicken pieces and plump Alubukhara prunes to a bowl. Measure the remaining rich liquid and oil in the pot (usually about 1 to 1.5 cups). This flavor-packed chicken essence will be used directly to cook the rice.",
+      },
+      {
+        step: 5,
+        title: "Toast the Aromatic Chinigura Rice (চাল ভাজা)",
+        instruction:
+          "In the same heavy pot (or a dedicated biryani handi), melt 2 tablespoons of fresh ghee. Add the remaining whole cardamom, cinnamon sticks, cloves, and bay leaves. Add the washed and thoroughly drained Chinigura rice. Sauté gently on medium-low heat for 3-4 minutes, stirring constantly with a wooden spoon, until the rice grains turn glossy, translucent, and produce a gentle crackling sound.",
+        tip: "Toasting the rice grains in ghee coats each grain in fat, preventing them from turning mushy or sticking together during cooking.",
+      },
+      {
+        step: 6,
+        title: "Simmer Rice with Chicken Broth and Milk (পোলাও রান্না)",
+        instruction:
+          "Pour in the measured chicken gravy, 4 cups of boiling water, 1 cup of warm whole milk, and 1 tsp salt. Gently stir to combine and bring to a vigorous rolling boil over medium-high heat. Let boil uncovered for 4-5 minutes until the bubbling liquid reduces and reaches the same level as the rice grains, creating small steam craters across the surface.",
+      },
+      {
+        step: 7,
+        title: "Layer Chicken and Slow Dum Steam (দমে বসানো)",
+        instruction:
+          "Quickly reduce heat to the lowest possible setting. Nestle the cooked chicken pieces and Alubukhara prunes deep into the rice. Scatter the fried cashews, raisins, whole green chilies, and half of the remaining beresta on top. Sprinkle the remaining 1/2 tsp Shahi garam masala, 1 tsp kewra water, and drizzle 2 tablespoons of melted ghee across the crown. Cover immediately with a tight-fitting lid (optionally sealing the rim with foil or wheat dough). Place a heavy flat tawa beneath the pot and let cook on low dum for 20 minutes.",
+      },
+      {
+        step: 8,
+        title: "Rest, Fluff and Royal Platter Service (পরিবেশন)",
+        instruction:
+          "Turn off the heat and allow the pot to rest unopened for 10 minutes to allow the trapped steam and aromas to settle into the grains. Remove the lid and gently fluff the rice from the outer edges toward the center using a flat spatula—never stir vigorously. Spoon the fragrant rice and tender chicken onto a wide fluted serving platter. Garnish with remaining crispy beresta, fresh coriander leaves, lemon wedges, and cherry tomato halves. Serve alongside chilled Shahi Borhani and fresh cucumber raita.",
+      },
+    ],
+    chefNotes: [
+      "Authentic Old Dhaka Morog Polao is distinct from spicy biryani: it celebrates mild, aromatic elegance with hints of mace, nutmeg, milk, and sweet Alubukhara prunes.",
+      "The milk is essential: it imparts a delicate ivory richness to the rice and keeps the grains moist during dum.",
+      "Never pierce the green chilies; adding them whole infuses a fresh, herbal chili aroma into the steaming rice without releasing fiery capsicum heat.",
+    ],
+    nutrition: {
+      calories: 590,
+      proteinGrams: 38,
+      carbsGrams: 64,
+      fatGrams: 20,
+      fiberGrams: 3,
+      sodiumMg: 620,
+      servingSizeDescription: "1 generous festive serving (rice, chicken cut & garnishes)",
+    },
+    storageInstructions:
+      "Leftover Morog Polao can be stored in an airtight container in the refrigerator for up to 3 days. Reheat gently in a covered skillet with 2 tablespoons of water or milk on low flame, or microwave with a damp paper towel on top to restore fluffiness.",
+    freezingInstructions:
+      "Can be frozen in portioned freezer-safe containers for up to 1 month. Thaw in the refrigerator overnight before gently steaming or microwaving.",
+    servingSuggestions: [
+      "The undisputed crown jewel of Bengali Eid morning dinners and wedding receptions.",
+      "Pair with chilled Shahi Borhani (ঐতিহ্যবাহী বোরহানী), Tikka kebabs, and crisp salad.",
+      "Serve with hard-boiled eggs tossed in a pinch of turmeric and fried golden in ghee.",
+    ],
+    faqs: [
+      {
+        question: "What is the difference between Morog Polao and Chicken Biryani?",
+        answer:
+          "Biryani features heavy layers of bold red chili spices, potatoes, and fried onions, whereas Morog Polao is a Dhakaiya Mughal aristocrat dish featuring delicately spiced chicken braised in yogurt, ghee, and milk, cooked with short-grain Chinigura or Kalijira rice, perfumed with mace, nutmeg, and sweet-tart Alubukhara prunes.",
+      },
+      {
+        question: "Can I use Basmati rice instead of Chinigura rice?",
+        answer:
+          "Yes! While short-grain Chinigura or Kalijira rice is the traditional Bengali choice due to its captivating natural fragrance, aged long-grain basmati works wonderfully. Just maintain a liquid-to-rice ratio of 1.75 to 1.",
+      },
+      {
+        question: "Why are Alubukhara (dried prunes) used in Morog Polao?",
+        answer:
+          "Alubukhara prunes are a signature of Old Dhaka Mughlai cuisine. Their sweet-tart fruitiness cuts through the decadence of the ghee and whole milk, creating a balanced and addictive flavor profile.",
+      },
+    ],
+    author: {
+      name: "Noakhali Kitchen Culinary Team",
+      role: "Heritage South Asian & Royal Mughlai Specialists",
+    },
+    updatedDate: "2026-10-12",
+    tags: [
+      "Morog Polao",
+      "মোরগ পোলাও",
+      "Murgh Pulao",
+      "موروج بولاو",
+      "مرغ پلاؤ",
+      "Chicken Polao",
+      "Dhakaiya Morog Polao",
+      "Bengali Chicken Pulao",
+      "Halal Chicken",
+      "Halal Rice & Curry",
+      "Ramadan & Eid",
+      "Chinigura Rice",
+      "Alubukhara",
+      "Shahi Feast",
+      "Old Dhaka Heritage",
+    ],
+    whySpecial:
+      "Dhakaiya Morog Polao strikes an exquisite balance between delicate fragrant Chinigura rice and rich, ghee-braised chicken with sweet Alubukhara and mace-nutmeg aromatics—milder and more aromatic than fiery biryani, making it the beloved centerpiece of Bengali celebrations.",
+    cookingTips: [
+      "Lightly sauté the raw Chinigura rice in ghee before adding liquid; this toasts the starch exterior and ensures every single grain remains separate without clumping.",
+      "Do not skip Alubukhara (dried prunes)—their gentle sweet-tangy burst cut through the rich ghee and milk braise.",
+      "Use a heavy flat griddle (tawa) beneath the pot during dum to distribute heat evenly and prevent scorching.",
+    ],
+    commonMistakes: [
+      "Over-soaking short-grain Chinigura rice; soaking longer than 15 minutes weakens the grain and causes it to break during dum.",
+      "Adding raw cold milk to boiling rice, which can curdle; always warm the milk and water before pouring into the pot.",
+      "Stirring vigorously from the center after dum, which breaks the tender rice grains and tears the chicken cuts.",
+    ],
+    relatedRecipeSlugs: [
+      "kacchi-biryani",
+      "bengali-chicken-roast",
+      "traditional-shahi-borhani",
+      "bengali-pulao",
+      "dhaka-shahi-chicken-roast",
+      "chicken-rezala",
+    ],
+    relatedGuideSlugs: [
+      "how-to-make-perfect-beresta",
+      "essential-bengali-spices-guide",
+    ],
+    seoTitle:
+      "Authentic Bengali Morog Polao Recipe (মোরগ পোলাও) | Noakhali Kitchen",
+    seoDescription:
+      "Authentic Dhakaiya Morog Polao (মোরগ পোলাও / Murgh Pulao / موروج بولاو / مرغ پلاؤ): fragrant Chinigura rice dum-cooked with tender chicken in ghee, yogurt, beresta & alubukhara.",
+  },
 ];
 
 export const RECIPES: Recipe[] = enhanceRecipesWithCornerstones(BASE_RECIPES);

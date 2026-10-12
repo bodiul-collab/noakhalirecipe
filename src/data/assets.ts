@@ -175,10 +175,25 @@ import kholajaPithaImg from "../assets/images/kholaja_pitha_1791418807943.jpg";
 import duckCoconutCurryImg from "../assets/images/duck_coconut_curry_1791419453922.jpg";
 import tomatoBhortaImg from "../assets/images/tomato_bhorta_1791555693431.jpg";
 import dalBhortaImg from "../assets/images/dal_bhorta_1791556611047.jpg";
+import patishaptaPithaImg from "../assets/images/patishapta_pitha_1791811116940.jpg";
+import pantaBhatBhortaImg from "../assets/images/panta_bhat_bhorta_1791811627049.jpg";
+import pabdaFishCurryImg from "../assets/images/pabda_fish_curry_1791811952519.jpg";
+import morogPolaoImg from "../assets/images/morog_polao_1791812310949.jpg";
 import noakhaliLogoFullImg from "../assets/images/noakhali_kitchen_logo_1789072776240.jpg";
 import noakhaliLogoIconImg from "../assets/images/noakhali_kitchen_logo_1789072776240.jpg";
 
 export const IMAGES = {
+  morogPolao: morogPolaoImg,
+  bengaliMorogPolao: morogPolaoImg,
+  murghPulao: morogPolaoImg,
+  pabdaFishCurry: pabdaFishCurryImg,
+  pabdaMacherJhol: pabdaFishCurryImg,
+  pabdaFish: pabdaFishCurryImg,
+  pantaBhatBhorta: pantaBhatBhortaImg,
+  pantaBhat: pantaBhatBhortaImg,
+  pantaIlish: pantaBhatBhortaImg,
+  patishaptaPitha: patishaptaPithaImg,
+  patishapta: patishaptaPithaImg,
   dalBhorta: dalBhortaImg,
   masoorDalBhorta: dalBhortaImg,
   dalVorta: dalBhortaImg,
