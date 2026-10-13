@@ -13,7 +13,7 @@ export const AFFILIATE_PRODUCTS: AffiliateProductItem[] = [
     whyItMatters:
       "Heavy-bottomed cookware distributes heat more evenly and helps prevent rice and meat from scorching during long dum cooking.",
     bestFor: "Dhaka Shahi Kacchi Biryani • Chicken Biryani • Beef Tehari • Dum cooking",
-    affiliateUrl: null,
+    affiliateUrl: "https://link.amazon/B0dJQFe7y",
     disclosureRequired: true,
   },
   {
@@ -25,7 +25,7 @@ export const AFFILIATE_PRODUCTS: AffiliateProductItem[] = [
     whyItMatters:
       "Excellent heat retention for searing, browning and controlled bhunai/koshano.",
     bestFor: "Beef Bhuna • Kala Bhuna • Chicken Karahi • Shahi Chicken Roast",
-    affiliateUrl: null,
+    affiliateUrl: "https://link.amazon/B0eXqql3i",
     disclosureRequired: true,
   },
   {
@@ -37,7 +37,7 @@ export const AFFILIATE_PRODUCTS: AffiliateProductItem[] = [
     whyItMatters:
       "Maintains steady heat during long braising and reduction.",
     bestFor: "Beef Nihari • Beef Bhuna • Slow-cooked curries",
-    affiliateUrl: null,
+    affiliateUrl: "https://link.amazon/B02PDZRqZ",
     disclosureRequired: true,
   },
   {

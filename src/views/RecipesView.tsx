@@ -24,6 +24,7 @@ import {
   X,
   Scale,
   CookingPot,
+  ShoppingBag,
 } from "lucide-react";
 import { RecipeCard } from "../components/RecipeCard";
 import { HalalCheck } from "../components/HalalCheck";
@@ -42,6 +43,8 @@ import {
   RecipeWhySpecialBanner,
   RecipeCulinaryEcosystem,
 } from "../components/RecipeCulinaryEcosystemSection";
+import { RecipeAffiliateSection } from "../components/RecipeAffiliateSection";
+import { getRecipeAffiliateLinks } from "../data/recipeAffiliateLinks";
 import { COOKING_GUIDES } from "../data/guides";
 import {
   loadUserRatings,
@@ -456,6 +459,11 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
         Boolean(g.tags && currentRecipe.tags && currentRecipe.tags.some((t) => g.tags!.includes(t)))
     ).slice(0, 3);
 
+    const recipeAffiliateLinks =
+      (currentRecipe.affiliateLinks && currentRecipe.affiliateLinks.length > 0
+        ? currentRecipe.affiliateLinks
+        : getRecipeAffiliateLinks(currentRecipe.slug)) || [];
+
     return (
       <div className="w-full bg-[#FAF9F6] py-8 sm:py-12">
         {/* Inject Recipe Schema */}
@@ -832,15 +840,27 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
                   className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#FAF9F6] border border-[#E6E1D8] text-[#30302F] hover:bg-[#F3F2EE] text-xs font-bold transition-all cursor-pointer"
                 >
                   <Scale className="w-3.5 h-3.5 text-[#77736D]" />
-                  Jump to Ingredients Checklist
+                  Jump to Ingredients
                 </button>
+
+                {recipeAffiliateLinks.length > 0 && (
+                  <button
+                    onClick={() => {
+                      document.getElementById("recommended-ingredients-gear")?.scrollIntoView({ behavior: "smooth" });
+                    }}
+                    className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#FFF9F0] border border-[#F8CD78] text-[#D75D17] hover:bg-[#F8CD78]/30 text-xs font-bold transition-all cursor-pointer"
+                  >
+                    <ShoppingBag className="w-3.5 h-3.5 text-[#E97520]" />
+                    Cookware &amp; Spices ({recipeAffiliateLinks.length})
+                  </button>
+                )}
 
                 <button
                   onClick={() => onNavigate("/tools")}
-                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#FFF9F0] border border-[#F8CD78]/70 text-[#D75D17] hover:bg-[#F8CD78]/30 text-xs font-bold transition-all cursor-pointer ml-auto"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#FAF9F6] border border-[#E6E1D8] text-[#77736D] hover:text-[#30302F] hover:bg-[#F3F2EE] text-xs font-bold transition-all cursor-pointer ml-auto"
                 >
                   <Sparkles className="w-3.5 h-3.5 text-[#E97520]" />
-                  Kitchen Tools &amp; Converter
+                  Kitchen Tools
                 </button>
               </div>
             </div>
@@ -993,6 +1013,14 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
                   ))}
                 </div>
               </div>
+            )}
+
+            {/* Recommended Cookware, Spices & Gear with Direct Amazon Links */}
+            {recipeAffiliateLinks.length > 0 && (
+              <RecipeAffiliateSection
+                recipeTitle={currentRecipe.title}
+                links={recipeAffiliateLinks}
+              />
             )}
 
             {/* Step-by-Step Instructions */}

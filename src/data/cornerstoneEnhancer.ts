@@ -1,6 +1,7 @@
 import { Recipe } from "../types";
 import { CORNERSTONE_METADATA_MAP } from "./cornerstoneMetadata";
 import { CORNERSTONE_ADDITIONAL_RECIPES } from "./cornerstoneRecipes";
+import { getRecipeAffiliateLinks } from "./recipeAffiliateLinks";
 
 // Map of cornerstone recipe specific editorial enhancements
 const RECIPE_EDITORIAL_EXTRAS: Record<
@@ -671,15 +672,22 @@ export function enhanceRecipesWithCornerstones(baseRecipes: Recipe[]): Recipe[] 
   );
 
   return allRawRecipes.map((recipe) => {
+    const affiliateLinks = recipe.affiliateLinks || getRecipeAffiliateLinks(recipe.slug);
     const meta = CORNERSTONE_METADATA_MAP.get(recipe.slug);
     if (!meta) {
-      return recipe;
+      return {
+        ...recipe,
+        affiliateLinks: affiliateLinks.length > 0 ? affiliateLinks : recipe.affiliateLinks,
+        ctaLinks: affiliateLinks.length > 0 ? affiliateLinks : recipe.ctaLinks,
+      };
     }
 
     const extras = RECIPE_EDITORIAL_EXTRAS[recipe.slug];
 
     return {
       ...recipe,
+      affiliateLinks: affiliateLinks.length > 0 ? affiliateLinks : recipe.affiliateLinks,
+      ctaLinks: affiliateLinks.length > 0 ? affiliateLinks : recipe.ctaLinks,
       whySpecial: recipe.whySpecial || extras?.whySpecial,
       cookingTips: recipe.cookingTips || extras?.cookingTips || [
         "Maintain proper heat control throughout cooking.",

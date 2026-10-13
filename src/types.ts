@@ -61,6 +61,18 @@ export interface Recipe {
   relatedGuideSlugs?: string[];
   relatedCultureSlug?: string;
   relatedKitchenToolId?: string;
+  affiliateLinks?: Array<{
+    title: string;
+    url: string;
+    badge?: string;
+    description?: string;
+  }>;
+  ctaLinks?: Array<{
+    title: string;
+    url: string;
+    badge?: string;
+    description?: string;
+  }>;
   seoTitle?: string;
   seoDescription?: string;
 }
