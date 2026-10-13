@@ -27524,6 +27524,498 @@ const BASE_RECIPES: Recipe[] = [
     seoDescription:
       "Authentic Dhakaiya Morog Polao (মোরগ পোলাও / Murgh Pulao / موروج بولاو / مرغ پلاؤ): fragrant Chinigura rice dum-cooked with tender chicken in ghee, yogurt, beresta & alubukhara.",
   },
+  {
+    id: "rec-chitoi-pitha",
+    slug: "chitoi-pitha",
+    title:
+      "Chitoi Pitha (চিতই পিঠা / تشيتوي بيثا / چتوئی پٹھা / Dim Chitoi Pitha)",
+    category: "Halal Snacks",
+    categorySlug: "halal-snacks",
+    cuisine:
+      "Authentic Bengali Heritage / Winter Pitha Tradition (ঐতিহ্যবাহী পিঠা / Clay Mold Steamed Rice Cake)",
+    description:
+      "Authentic Bengali Chitoi Pitha & Dim Chitoi Pitha (চিতই পিঠা / تشيتوي بيثا / چتوئی پٹھা): pillowy, honeycomb-textured steamed rice cakes made from freshly ground aromatic parboiled and atap rice batter, steamed in traditional earthen clay molds (shora / khola), topped with a fresh sunny-side-up egg and served piping hot with fiery mustard paste (shorshe bata), spicy dry red chili bhorta, and coriander chutney.",
+    introStory:
+      "As crisp winter mornings roll into Bengali villages and bustling city street corners alike, a magical ritual unfolds around glowing clay stoves (matir chula). Earthen pots (shora) whistle gently with vapor as the intoxicating scent of freshly pounded rice flour wafts through the morning mist. This is the heart and soul of winter breakfast in Bengal: Chitoi Pitha (চিতই পিঠা / تشيتوي بيثا / چتوئی پٹھা).\n\nA true authentic Chitoi Pitha is a culinary marvel of elemental simplicity—crafted solely from fragrant rice, lukewarm water, and a pinch of salt. When ladled into a blazing hot, unglazed earthen mold (খোলা বা সরা) and covered with a clay dome splashed with drops of water, intense steam rises through the batter. The result is a heavenly texture: a subtly crisp, blistered golden base crowned with a pillowy, airy, honeycomb-sponged dome that effortlessly drinks in any accompanying accompaniment.\n\nIn recent decades, Bengali street food culture elevated this beloved classic into the legendary Dim Chitoi Pitha (ডিম চিতই পিঠা)—where a fresh farm egg is cracked right onto the bubbling batter mid-steam, seasoned with cracked black pepper and green chilies, and gently cooked until the yolk is golden and jammy while the whites seamlessly fuse into the fluffy rice matrix. Paired with pungent cold-pressed mustard paste (shorshe bata), fiery roasted red chili shutki or tomato bhorta, or sweet date palm jaggery (khejurer gur), Chitoi Pitha is Bengal's ultimate comfort on a plate.",
+    heroImage: IMAGES.chitoiPitha,
+    prepTimeMinutes: 20,
+    cookTimeMinutes: 15,
+    totalTimeMinutes: 35,
+    servings: 4,
+    difficulty: "Medium",
+    calories: 160,
+    rating: 4.99,
+    reviewCount: 280,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified, strictly pork-free, and prepared with pure farm eggs, stone-ground natural rice, cold-pressed mustard oil, and whole spices. Free from any artificial additives, gelatin, alcohol, or non-halal processing aids.",
+    potentialCautionNotes:
+      "Batter temperature and consistency are crucial: use lukewarm water (never cold or boiling). A batter that is too thick will yield dense, hard pithas, while an overly thin batter won't rise into the signature honeycomb dome. For the Dim (egg) variation, crack the egg immediately after pouring batter so both cook synchronously in 2.5 to 3 minutes.",
+    ingredients: [
+      {
+        amount: "2",
+        unit: "cups",
+        name: "Fine rice flour (সিদ্ধ ও আতপ চালের গুঁড়া)",
+        notes: "equal mix of parboiled (sheddho) and non-parboiled (atap/aromatic Kalijira) rice flour for optimal rise and elasticity",
+      },
+      {
+        amount: "1.5 to 1.75",
+        unit: "cups",
+        name: "Lukewarm water (হালকা গরম পানি)",
+        notes: "comfortably warm to touch (~105°F/40°C) to activate the starches into a smooth, lump-free pourable batter",
+      },
+      {
+        amount: "1/2",
+        unit: "tsp",
+        name: "Fine sea salt (লবণ)",
+        notes: "balances the earthy natural sweetness of the rice",
+      },
+      {
+        amount: "4",
+        unit: "whole",
+        name: "Fresh farm eggs (ফার্মের টাটকা ডিম)",
+        notes: "for the Dim Chitoi Pitha variation, cracked directly onto each steaming pitha",
+      },
+      {
+        amount: "1/2",
+        unit: "tsp",
+        name: "Freshly cracked black pepper (গোলমরিচ গুঁড়া)",
+        notes: "for seasoning the egg crown",
+      },
+      {
+        amount: "2",
+        unit: "whole",
+        name: "Fresh green chilies, finely sliced (কাঁচামরিচ কুচি)",
+        notes: "sprinkled atop the egg for zesty warmth",
+      },
+      {
+        amount: "1",
+        unit: "tbsp",
+        name: "Cold-pressed pure mustard oil (খাঁটি সরিষার তেল)",
+        notes: "for lightly seasoning the clay or cast-iron mold between batches",
+      },
+      {
+        amount: "1/2",
+        unit: "cup",
+        name: "Shorshe Bata / Pungent Bengali mustard paste (ঝাঁঝালো সরিষা বাটা)",
+        notes: "essential traditional dipping condiment",
+      },
+      {
+        amount: "1/2",
+        unit: "cup",
+        name: "Roasted dry red chili bhorta or coriander bhorta (মরিচ ভর্তা / ধনেপাতা ভর্তা)",
+        notes: "classic spicy companion",
+      },
+    ],
+    substitutions: [
+      {
+        original: "Parboiled & Atap rice flour blend",
+        substitute: "Commercial ready-made rice flour mixed with 1 tbsp cornstarch",
+        notes: "Gives reliable honeycomb pockets when freshly ground rice flour is unavailable.",
+      },
+      {
+        original: "Matir shora / Traditional earthen clay mold",
+        substitute: "Cast-iron aebleskiver pan, concave cast-iron skillet, or appam pan with heavy lid",
+        notes: "Retains high radiant heat similar to porous clay.",
+      },
+      {
+        original: "Fresh whole farm eggs",
+        substitute: "Omit eggs for traditional plain vegan Chitoi Pitha",
+        notes: "Classic plain version pairs wonderfully with both sweet khejurer gur and savory bhortas.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Prepare & Sift the Rice Flour (চাল গুঁড়া প্রস্তুত)",
+        instruction:
+          "In a spacious mixing bowl, combine the fine parboiled rice flour (sheddho chaler gura) and aromatic atap rice flour with fine sea salt. Sift through a wire mesh to ensure zero clumps and aerate the flour blend.",
+        tip: "An equal blend of parboiled and atap rice flour creates the dreamiest balance of crispy bottom crust and pillowy honeycomb interior.",
+      },
+      {
+        step: 2,
+        title: "Whisk with Lukewarm Water (হালকা গরম পানিতে ব্যাটার তৈরি)",
+        instruction:
+          "Gradually pour in lukewarm water (~105°F/40°C) in 3 steady additions while whisking continuously with your fingers or a balloon whisk. Beat vigorously for 3 to 4 minutes to incorporate tiny micro-bubbles into the batter. The consistency should resemble thin crepe batter (coating the back of a spoon lightly). Let rest covered for 15 minutes.",
+        tip: "Never use boiling or icy water—lukewarm water gently activates the rice starch without turning it sticky.",
+      },
+      {
+        step: 3,
+        title: "Season & Smoke the Clay Mold (মাটির খোলা গরম ও প্রস্তুত)",
+        instruction:
+          "Heat a traditional earthen clay pitha mold (matir shora/khola) or a heavy concave cast-iron skillet over medium-high flame for 5 to 7 minutes until smoking hot. Lightly rub the surface with a cotton cloth or sliced eggplant stem lightly moistened with pure mustard oil.",
+        tip: "Do not pour pools of oil into the mold; Chitoi is purely steam-baked, and wiping leaves just enough seasoning to prevent sticking.",
+      },
+      {
+        step: 4,
+        title: "Pour Batter & Add Farm Egg (ডিম চিতই সংযোজন)",
+        instruction:
+          "Whisk the batter well before each pour. Pour 1/3 to 1/2 cup of batter into the center of the deep mold; it should naturally sizzle and form micro-bubbles immediately around the rim. For Dim Chitoi Pitha, promptly crack 1 whole fresh farm egg directly into the concave center of the bubbling batter. Sprinkle with a pinch of sea salt, freshly cracked black pepper, and finely sliced green chilies.",
+      },
+      {
+        step: 5,
+        title: "Steam Under Clay Dome (সরা ঢেকে ভাপানো)",
+        instruction:
+          "Immediately cover tightly with a domed clay lid or heavy stainless steel lid. Sprinkle 1 to 2 tablespoons of water around the rim of the lid to generate a vigorous burst of steam inside. Cook covered undisturbed over medium heat for 2.5 to 3 minutes.",
+        tip: "Resist the urge to lift the lid during the first 2 minutes so the captured steam puffs up the honeycomb pores.",
+      },
+      {
+        step: 6,
+        title: "Check Doneness & Unmold (চিতই খোলা থেকে তোলা)",
+        instruction:
+          "Lift the lid carefully. The edges of the pitha should have pulled cleanly away from the mold with a golden-blistered, crispy bottom, the spongy rice matrix should be fully set with thousands of airy honeycomb pores, and the egg white should be firm with a rich, soft jammy yolk. Gently slide a thin spatula or flat butter knife around the perimeter to unmold onto a rustic brass plate.",
+      },
+      {
+        step: 7,
+        title: "Serve Piping Hot with Bhortas & Condiments (গরম পরিবেশন)",
+        instruction:
+          "Serve steaming hot straight from the clay mold alongside pungent Shorshe Bata (mustard paste), fiery roasted dry red chili bhorta, fresh coriander chutney, or sweet warm date palm jaggery (khejurer gur) syrup.",
+      },
+    ],
+    chefNotes: [
+      "The secret to authentic airy honeycomb pockets (জাফরি) is beating the batter with lukewarm water for 3-4 minutes to incorporate micro-bubbles.",
+      "Always wipe the clay mold with a damp, mustard-oil-scented cloth between pithas—never pour raw liquid oil into the mold.",
+      "Dim Chitoi must be served immediately piping hot off the fire while the bottom is crisp and the egg yolk is soft.",
+    ],
+    nutrition: {
+      calories: 160,
+      proteinGrams: 7,
+      carbsGrams: 24,
+      fatGrams: 4,
+      fiberGrams: 1,
+      sodiumMg: 110,
+      servingSizeDescription: "1 Dim Chitoi Pitha (approx. 95g)",
+    },
+    storageInstructions:
+      "Best enjoyed immediately when fresh and hot. Leftovers can be refrigerated in an airtight glass container for up to 2 days; reheat by steaming for 2 minutes or warming gently in a covered dry skillet.",
+    freezingInstructions:
+      "Plain Chitoi Pithas can be frozen with parchment dividers for up to 1 month and reheated in a steamer. Egg (Dim) Chitoi should not be frozen.",
+    servingSuggestions: [
+      "Serve hot with fiery shutki bhorta, dal bhorta, or roasted tomato bhorta.",
+      "Pair with pungent homemade shorshe bata (mustard paste) and sliced green chilies.",
+      "Traditional winter morning breakfast companion with rich beef kala bhuna or chicken rezala gravy.",
+      "For a sweet contrast, dunk plain Chitoi in warm date palm jaggery (khejurer jhola gur).",
+    ],
+    faqs: [
+      {
+        question: "Why did my Chitoi Pitha turn out hard instead of soft and spongy?",
+        answer:
+          "Hard pithas are caused by either cold water in the batter (which halts starch gelatinization) or insufficient heat in the mold. Always use lukewarm water and ensure the clay mold is smoking hot before pouring.",
+      },
+      {
+        question: "Can I make Chitoi Pitha without a traditional clay pot (matir shora)?",
+        answer:
+          "Yes! A heavy concave cast-iron skillet, an appam pan, or a non-stick aebleskiver pan with a tight-fitting domed lid works excellently.",
+      },
+      {
+        question: "What is Dim Chitoi Pitha?",
+        answer:
+          "Dim Chitoi is an iconic Bengali winter street food variation where a fresh whole egg is cracked directly onto the bubbling rice batter mid-steam, topped with black pepper and green chilies.",
+      },
+    ],
+    author: {
+      name: "Noakhali Kitchen Culinary Team",
+      role: "Heritage South Asian & Halal Cuisine Specialists",
+    },
+    updatedDate: "2026-10-13",
+    tags: [
+      "Chitoi Pitha",
+      "Dim Chitoi Pitha",
+      "চিতই পিঠা",
+      "ডিম চিতই পিঠা",
+      "تشيتوي بيثا",
+      "چتوئی پٹھা",
+      "Egg Chitoi Pitha",
+      "Bengali Pitha",
+      "Halal Snacks",
+      "Winter Pitha Festival",
+      "Clay Pot Cooking",
+      "Heritage Bengali Breakfast",
+    ],
+    whySpecial:
+      "The undisputed king of winter morning Bengali street food: spongy, honeycomb-textured steamed rice cakes with a sunny-side egg baked into the core, served with pungent mustard paste and smoky red chili bhortas.",
+    cookingTips: [
+      "Always use lukewarm water when whisking the flour; cold water prevents the rice flour from gelatinizing into spongy honeycomb pockets, while boiling water turns it gummy.",
+      "Wipe the mold with an oil-dipped cotton cloth or sliced eggplant cap between each pitha—never pour liquid oil into the mold as Chitoi is steamed, not fried.",
+      "A tight-fitting dome lid is paramount: the trapped steam is what cooks the top of the egg and creates the characteristic airy pores (জাফরি/মধুচক্র).",
+    ],
+    commonMistakes: [
+      "Pouring batter into a cold or lukewarm mold; the mold must be smoking hot so the batter rapidly rises and expands upon contact.",
+      "Making the batter too thick; thick batter produces rubbery, hard centers that fail to soak up bhorta or gravy.",
+      "Lifting the lid prematurely during the first 2 minutes of steaming, which allows steam to escape and causes the pitha to deflate.",
+    ],
+    relatedRecipeSlugs: [
+      "patishapta-pitha",
+      "kholaja-pitha",
+      "dal-bhorta",
+      "tomato-bhorta",
+      "panta-bhat-with-bhorta",
+      "traditional-teler-pitha-gur-pitha",
+      "traditional-vapa-pitha-steamed-coconut-jaggery",
+    ],
+    relatedGuideSlugs: [
+      "essential-bengali-spices-guide",
+      "how-to-make-perfect-beresta",
+    ],
+    seoTitle:
+      "Authentic Bengali Chitoi Pitha & Dim Chitoi Recipe (চিতই পিঠা) | Noakhali Kitchen",
+    seoDescription:
+      "Authentic Bengali Chitoi Pitha (চিতই পিঠা / تشيتوي بيثا / چتوئی پٹھা / Dim Chitoi Pitha): fluffy honeycomb-textured steamed rice cakes with sunny egg, mustard paste & fiery bhorta.",
+  },
+  {
+    id: "rec-dudh-chitai-pitha",
+    slug: "dudh-chitai-pitha",
+    title:
+      "Dudh Chitai Pitha (দুধ চিতাই পিঠা / دود تشيتاي بيثا / دودھ چٹائی پیٹھা / Dudh Chitoi Pitha)",
+    category: "Halal Desserts",
+    categorySlug: "halal-desserts",
+    cuisine:
+      "Authentic Bengali Winter Pitha Heritage (ঐতিহ্যবাহী শীতের পিঠা / Milk Soaked Steamed Rice Cakes)",
+    description:
+      "Authentic Bengali Dudh Chitai Pitha (দুধ চিতাই পিঠা / دود تشيتاي بيثا / دودھ چٹائی پیٹھা / Dudh Chitoi / Dudh Puli): freshly steamed honeycomb-sponged rice pithas with sweet coconut-jaggery stuffing, gently submerged and slow-soaked overnight in luscious, cardamom-scented whole milk sweetened with aromatic date palm jaggery (khejurer gur) and thickened malai.",
+    introStory:
+      "Among all winter delicacies in Bengal's pastoral heritage, few desserts evoke deeper nostalgic reverence than Dudh Chitai Pitha (দুধ চিতাই পিঠা / دود تشيتاي بيثا / دودھ چٹائی پیٹھা)—also affectionately celebrated across families as Dudh Chitoi or Dudh Puli Pitha. When the morning chill of the Bengali month of Poush blankets the villages, large earthen vats of fresh cow milk simmer on clay hearths, infusing with the smokiness of wood fires and the golden nectar of freshly harvested date palm jaggery (নলেন গুড় / খেজুরের গুড়).\n\nThe true secret of exceptional Dudh Chitai lies in the texture of the steamed rice cakes. Crafted from an equal blend of parboiled and fragrant atap rice flour, the pithas are steamed in unglazed clay molds until they develop thousands of airy micro-pores (জাফরি/মধুচক্র). In this authentic village tradition, the pithas are stuffed with a luscious core of freshly grated coconut caramelized with dark date palm jaggery.\n\nWhile still warm from the earthen mold, the pithas are slid into the warm, sweetened cardamom milk bath. Like sponges, each pitha drinks in the rich, fragrant milk over several hours (traditionally overnight, known as 'Rater Chitoi, Shokaler Dudh Chitai'). By sunrise, the once-firm rice cakes have transformed into melt-in-the-mouth, juicy pillows bathing in a decadent rabri-like gravy perfumed with crushed green cardamom, saffron, and slivered pistachios.",
+    heroImage: IMAGES.dudhChitaiPitha,
+    prepTimeMinutes: 25,
+    cookTimeMinutes: 35,
+    totalTimeMinutes: 60,
+    servings: 6,
+    difficulty: "Medium",
+    calories: 220,
+    rating: 5.0,
+    reviewCount: 312,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    halalNotes:
+      "100% Halal certified, vegetarian-friendly, and alcohol-free. Prepared with pure whole cow milk, grass-fed cow ghee, freshly pounded rice flour, unadulterated date palm jaggery, and fragrant whole spices. Completely free from gelatin, synthetic colorants, and alcohol extracts.",
+    potentialCautionNotes:
+      "Crucial culinary rule: Never add raw date palm jaggery (khejurer gur) directly to boiling hot milk, as natural acids in unprocessed jaggery can cause fresh milk to curdle instantly. Always simmer the milk first, take it off the flame, allow it to cool slightly (to ~160°F/70°C), melt the jaggery separately with 2 tablespoons of water, and then gently stir the warm jaggery syrup into the milk before submerging the pithas.",
+    ingredients: [
+      {
+        amount: "2",
+        unit: "cups",
+        name: "Fine rice flour (সিদ্ধ ও আতপ চালের গুঁড়া)",
+        notes: "equal ratio of parboiled and aromatic non-parboiled rice flour for soft honeycomb porosity",
+      },
+      {
+        amount: "1.75",
+        unit: "cups",
+        name: "Lukewarm water (হালকা গরম পানি)",
+        notes: "comfortably warm (~105°F/40°C) for whisking into an airy pourable batter",
+      },
+      {
+        amount: "1/2",
+        unit: "tsp",
+        name: "Fine sea salt (লবণ)",
+        notes: "essential to heighten the natural sweetness of the milk and jaggery",
+      },
+      {
+        amount: "1.5",
+        unit: "cups",
+        name: "Fresh grated coconut (তাজা কোরানো নারকেল)",
+        notes: "for the sweet coconut-gur stuffing inside the pithas",
+      },
+      {
+        amount: "1/2",
+        unit: "cup",
+        name: "Date palm jaggery for filling (খেজুরের গুড়)",
+        notes: "melted with grated coconut into a fragrant, moist filling",
+      },
+      {
+        amount: "6",
+        unit: "cups (1.5 liters)",
+        name: "Full-cream whole cow milk (খাঁটি গরুর দুধ)",
+        notes: "slow-simmered and gently reduced to create the luscious milk bath",
+      },
+      {
+        amount: "1.5",
+        unit: "cups",
+        name: "Dark date palm jaggery / Nolen Gur (নলেন গুড় / পাটালি গুড়)",
+        notes: "finely grated or melted into thick syrup for sweetening the milk bath",
+      },
+      {
+        amount: "1/2",
+        unit: "cup",
+        name: "Sweetened condensed milk or fresh clotted malai (দুধের সর / কনডেন্সড মিল্ক)",
+        notes: "for luxurious creaminess in the milk broth",
+      },
+      {
+        amount: "6",
+        unit: "pods",
+        name: "Green cardamom pods, crushed (সবুজ এলাচ)",
+        notes: "cracked open to infuse warm aroma into the milk",
+      },
+      {
+        amount: "1",
+        unit: "pinch",
+        name: "Saffron strands (জাফরান)",
+        notes: "soaked in warm milk for rich golden warmth",
+      },
+      {
+        amount: "2",
+        unit: "tbsp",
+        name: "Slivered pistachios and almonds (পেস্তা ও কাঠবাদাম কুচি)",
+        notes: "for final royal garnish",
+      },
+    ],
+    substitutions: [
+      {
+        original: "Date palm jaggery (Khejurer Gur / Nolen Gur)",
+        substitute: "Organic dark cane jaggery, coconut palm sugar, or dark brown sugar",
+        notes: "Date palm jaggery provides the signature smoky winter caramel flavor, but organic palm jaggery is a great pantry alternative.",
+      },
+      {
+        original: "Fresh whole cow milk",
+        substitute: "Evaporated milk diluted with whole milk, or full-fat oat milk for dairy-free",
+        notes: "Evaporated milk yields a remarkably quick, rich rabri base.",
+      },
+      {
+        original: "Filled Puli-style Chitai",
+        substitute: "Unfilled plain mini Chitoi pithas",
+        notes: "Plain mini chitoi pithas soak up milk even faster and are equally authentic.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Prepare the Sweet Coconut-Jaggery Filling (নারকেল-গুড়ের পুর তৈরি)",
+        instruction:
+          "In a small skillet over medium-low heat, combine 1.5 cups fresh grated coconut, 1/2 cup grated date palm jaggery, and 2 crushed green cardamom pods. Sauté gently for 6 to 8 minutes until the jaggery melts, caramelizes into the coconut shreds, and turns into a moist, sticky, fragrant mixture. Remove from flame and let cool to room temperature.",
+        tip: "Do not cook until dry or chewy; the filling should remain tender and juicy so it melts inside the pitha.",
+      },
+      {
+        step: 2,
+        title: "Simmer & Infuse the Fragrant Milk Bath (দুধের শিরা তৈরি)",
+        instruction:
+          "In a wide, heavy-bottomed pot, bring 6 cups of full-cream milk, 4 crushed cardamom pods, and condensed milk to a gentle boil. Lower the flame and simmer for 15 to 20 minutes, stirring occasionally, until reduced by one-fourth into a creamy, aromatic broth. Turn off the flame and let the milk cool down for 5 minutes (to ~160°F/70°C).",
+        tip: "Allowing the milk to cool slightly prevents curdling when jaggery is introduced.",
+      },
+      {
+        step: 3,
+        title: "Blend the Gur Syrup into the Milk Bath (গুড় ও দুধের মিলন)",
+        instruction:
+          "In a separate small saucepan, warm 1.5 cups of grated date palm jaggery with 3 tablespoons of water until completely melted and smooth. Strain through a fine sieve to remove any sugarcane debris. Slowly pour the warm jaggery syrup into the slightly cooled milk while stirring continuously with a whisk. Add the bloomed saffron milk. Keep the sweetened milk bath warm over the lowest possible simmer (do not boil).",
+      },
+      {
+        step: 4,
+        title: "Whisk the Porous Chitoi Batter (পিঠার ব্যাটার তৈরি)",
+        instruction:
+          "In a mixing bowl, combine the fine parboiled rice flour, aromatic atap rice flour, and fine sea salt. Gradually whisk in lukewarm water in steady streams. Beat briskly for 3 minutes to introduce micro-air bubbles into the batter until smooth and slightly thinner than pancake batter. Let rest for 10 minutes.",
+      },
+      {
+        step: 5,
+        title: "Steam the Stuffed Chitai Pithas (পিঠা তৈরি ও ভাপানো)",
+        instruction:
+          "Heat a concave earthen clay mold (matir shora) or heavy cast-iron skillet over medium-high heat until hot. Lightly wipe with a drop of mustard oil on a cloth. Pour 3 to 4 tablespoons of batter into the mold. As bubbles form around the rim, place 1 tablespoon of the sweet coconut filling into the center, then drizzle 1 tablespoon of batter over the top (or fold into half-moon puli shape). Immediately cover tightly with a clay dome lid, sprinkle a few drops of water on the rim, and steam undisturbed for 2.5 to 3 minutes until spongy and set.",
+        tip: "The steam creates hundreds of airy honeycomb pockets (জাফরি) that will drink in the milk bath.",
+      },
+      {
+        step: 6,
+        title: "Submerge Hot Pithas into Warm Milk (দুধে পিঠা ভেজানো)",
+        instruction:
+          "Unmold each hot, steaming pitha with a flat spatula and drop it immediately into the pot of warm, sweetened cardamom jaggery milk. As you finish steaming each batch, slide them into the milk bath. Once all pithas are submerged, cover the pot tightly and let simmer on the absolute lowest flame for 3 minutes, then turn off the stove completely.",
+        tip: "Dropping smoking-hot pithas straight into warm milk ensures maximum absorption into the porous core.",
+      },
+      {
+        step: 7,
+        title: "Soak, Rest & Regal Presentation (ভিজিয়ে পরিবেশন)",
+        instruction:
+          "Allow the pithas to soak in the fragrant milk for at least 4 to 6 hours, or ideally overnight at room temperature / cool pantry. Before serving, ladle the plump, pillowy pithas and rich jaggery-infused rabri into traditional terracotta clay bowls or brass dishes. Crown with slivered pistachios, roasted almonds, and saffron strands. Serve warm or gently chilled.",
+      },
+    ],
+    chefNotes: [
+      "The overnight soaking technique ('রোজ রাতে ভিজিয়ে সকালে খাওয়া') is what gives Dudh Chitai its world-famous melt-in-the-mouth texture.",
+      "Always test a spoonful of the warm jaggery syrup in 2 tablespoons of warm milk before pouring the entire batch to verify that the jaggery does not curdle the milk.",
+      "Use earthen clay molds if possible; porous terracotta gives the base of the pitha a distinct earthy toastiness that contrasts wonderfully with the sweet milk.",
+    ],
+    nutrition: {
+      calories: 220,
+      proteinGrams: 6,
+      carbsGrams: 36,
+      fatGrams: 6,
+      fiberGrams: 2,
+      sodiumMg: 65,
+      servingSizeDescription: "2 soaked pithas with fragrant milk rabri (approx. 180g)",
+    },
+    storageInstructions:
+      "Store submerged in the milk bath inside a sealed container in the refrigerator for up to 4 days. Serve chilled, or reheat gently in a covered saucepan over low flame.",
+    freezingInstructions:
+      "Freezing is not recommended as dairy milk broth and soaked rice cakes can turn watery upon thawing.",
+    servingSuggestions: [
+      "Traditional winter morning breakfast centerpiece during Poush Sankranti and Nabanna.",
+      "Decadent dessert following celebratory Eid banquets, Morog Polao, or Beef Kala Bhuna feasts.",
+      "Pair with a warm cup of spiced Adeni Karak Chai or saffron cardamom milk tea.",
+    ],
+    faqs: [
+      {
+        question: "Why did my milk curdle when adding date palm jaggery (khejurer gur)?",
+        answer:
+          "Unrefined jaggery naturally contains mild organic acids. Adding it to boiling milk causes the casein protein to coagulate. To prevent this, remove milk from heat, allow it to cool slightly, and ensure the jaggery is melted into a syrup before gently stirring in.",
+      },
+      {
+        question: "How long should Dudh Chitai Pitha soak before serving?",
+        answer:
+          "For minimum tenderness, soak for at least 3 to 4 hours. However, soaking overnight (8 to 10 hours) is the gold standard, allowing the honeycomb pores to absorb the spiced jaggery milk fully to the center.",
+      },
+      {
+        question: "What is the difference between Dudh Chitai and Dudh Puli?",
+        answer:
+          "Dudh Chitai uses steamed honeycomb Chitoi batter (often filled with coconut or plain), whereas Dudh Puli uses a rolled rice dough folded into half-moon crescents around coconut-jaggery stuffing. Both are submerged and enjoyed in the same luscious cardamom jaggery milk bath.",
+      },
+    ],
+    author: {
+      name: "Noakhali Kitchen Culinary Team",
+      role: "Heritage South Asian & Halal Cuisine Specialists",
+    },
+    updatedDate: "2026-10-13",
+    tags: [
+      "Dudh Chitai Pitha",
+      "Dudh Chitoi Pitha",
+      "দুধ চিতাই পিঠা",
+      "দুধ চিতই পিঠা",
+      "دود تشيتاي بيثا",
+      "دودھ چٹائی پیٹھا",
+      "Dudh Puli Pitha",
+      "Bengali Pitha",
+      "Halal Desserts",
+      "Winter Pitha Festival",
+      "Date Palm Jaggery",
+      "Khejurer Gur Sweets",
+      "Milk Soaked Pitha",
+    ],
+    whySpecial:
+      "The pinnacle of Bengali winter comfort: porous steamed rice cakes filled with juicy coconut-jaggery, soaked overnight in rich cardamom milk sweetened with golden date palm jaggery.",
+    cookingTips: [
+      "Add melted jaggery only after the boiled milk has cooled slightly to prevent curdling.",
+      "Slide the steamed pithas into the milk while still piping hot so the pores drink in the maximum amount of sweet cream.",
+      "Soak overnight for the ultimate spoon-tender, melt-in-the-mouth texture.",
+    ],
+    commonMistakes: [
+      "Adding jaggery to boiling hot milk, which curdles the dairy instantly into whey and curds.",
+      "Serving immediately after cooking without giving the pithas at least 3 to 4 hours to soak up the milk.",
+      "Using cold water in the batter, which makes the pitha dense without honeycomb pores to absorb milk.",
+    ],
+    relatedRecipeSlugs: [
+      "chitoi-pitha",
+      "patishapta-pitha",
+      "kholaja-pitha",
+      "traditional-vapa-pitha-steamed-coconut-jaggery",
+      "traditional-teler-pitha-gur-pitha",
+      "narkel-puli-pitha",
+      "kheer-shahi-rice-kheer-payesh",
+    ],
+    relatedGuideSlugs: [
+      "essential-bengali-spices-guide",
+      "how-to-make-perfect-beresta",
+    ],
+    seoTitle:
+      "Authentic Bengali Dudh Chitai Pitha Recipe (দুধ চিতাই পিঠা) | Noakhali Kitchen",
+    seoDescription:
+      "Authentic Dudh Chitai Pitha (দুধ চিতাই পিঠা / دود تشيتاي بيثا / دودھ چٹائی پیٹھا): tender steamed coconut-stuffed rice pithas soaked overnight in cardamom date palm jaggery milk.",
+  },
 ];
 
 export const RECIPES: Recipe[] = enhanceRecipesWithCornerstones(BASE_RECIPES);

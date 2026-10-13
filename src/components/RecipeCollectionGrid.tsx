@@ -228,6 +228,28 @@ const DEFAULT_COLLECTION: CollectionCardItem[] = [
     image: IMAGES.dalBhorta,
   },
   {
+    id: "card-dudh-chitai-pitha",
+    slug: "dudh-chitai-pitha",
+    title: "Dudh Chitai Pitha (দুধ চিতাই পিঠা / دود تشيتاي بيثا / دودھ چٹائی پیٹھا)",
+    description:
+      "Tender steamed coconut-filled rice pithas soaked overnight in cardamom milk sweetened with golden date palm jaggery & slivered pistachios.",
+    heritageTag: "🍯 Winter Jaggery Royal Sweet",
+    brandName: "Noakhali Kitchen",
+    halalBadge: "100% Halal Sweet",
+    image: IMAGES.dudhChitaiPitha,
+  },
+  {
+    id: "card-chitoi-pitha",
+    slug: "chitoi-pitha",
+    title: "Chitoi Pitha (চিতই পিঠা / تشيتوي بيثا / چتوئی پیٹھا / Dim Chitoi)",
+    description:
+      "Steamed honeycomb rice cake pitha with a sunny-side egg, served piping hot with pungent mustard paste and fiery roasted chili bhorta.",
+    heritageTag: "🍳 Winter Pitha Classic",
+    brandName: "Noakhali Kitchen",
+    halalBadge: "100% Halal Snack",
+    image: IMAGES.chitoiPitha,
+  },
+  {
     id: "card-patishapta-pitha",
     slug: "patishapta-pitha",
     title: "Patishapta Pitha (পাটিসাপ্টা পিঠা / پتیشپتا پیٹھا / باتيشابتا بيثا)",

@@ -151,7 +151,7 @@ export const CATEGORIES: CategoryHub[] = [
     fullDescription:
       "Snack time in Muslim households is a lively affair of spiced pastry triangles, hot fried fritters, and sweet chutneys served alongside cardamom milk tea (chai).",
     image: IMAGES.streetFood,
-    featuredRecipeSlugs: ["patishapta-pitha", "kholaja-pitha", "plain-paratha", "keema-paratha", "corned-beef-reuben-sandwich", "shrimp-tandoori", "bengali-mango-chutney", "dal-piyaju-pakora", "chicken-patty", "egg-roll", "black-chana", "hummus", "crispy-falafel", "authentic-lebanese-baba-ganoush", "tuna-fish-kebab-fritters", "birria-tacos-beef-quesabirria-consome", "kibbeh-lebanese-fried-bulgur-stuffed-shells", "traditional-teler-pitha-gur-pitha", "crispy-halal-samosas"],
+    featuredRecipeSlugs: ["chitoi-pitha", "patishapta-pitha", "kholaja-pitha", "plain-paratha", "keema-paratha", "corned-beef-reuben-sandwich", "shrimp-tandoori", "bengali-mango-chutney", "dal-piyaju-pakora", "chicken-patty", "egg-roll", "black-chana", "hummus", "crispy-falafel", "authentic-lebanese-baba-ganoush", "tuna-fish-kebab-fritters", "birria-tacos-beef-quesabirria-consome", "kibbeh-lebanese-fried-bulgur-stuffed-shells", "traditional-teler-pitha-gur-pitha", "crispy-halal-samosas"],
     faqs: [
       {
         question: "Can samosas be prepared in advance?",
@@ -170,7 +170,7 @@ export const CATEGORIES: CategoryHub[] = [
     fullDescription:
       "Celebrate sweet milestones with luxurious Eid desserts perfumed with green cardamom, saffron threads, pistachios, and thickened whole milk. All made without non-halal gelatin or alcohol-based vanilla extracts.",
     image: IMAGES.gulabJamun,
-    featuredRecipeSlugs: ["patishapta-pitha", "kholaja-pitha", "suji-halwa-halva", "vibrant-dragon-fruit-banana-superfood-nice-cream-sorbet", "velvety-blueberry-banana-fruit-sorbet", "narkel-puli-pitha", "traditional-teler-pitha-gur-pitha", "traditional-vapa-pitha-steamed-coconut-jaggery", "milk-powder-burfi-quick-mawa-fudge", "shahi-besan-laddu", "basbousa-semolina-cake", "mango-coconut-burfi", "crispy-saffron-jalebi", "shahi-gulab-jamun", "kheer-shahi-rice-kheer-payesh", "royal-gajar-ka-halwa", "bengali-roshogolla"],
+    featuredRecipeSlugs: ["dudh-chitai-pitha", "chitoi-pitha", "patishapta-pitha", "kholaja-pitha", "suji-halwa-halva", "vibrant-dragon-fruit-banana-superfood-nice-cream-sorbet", "velvety-blueberry-banana-fruit-sorbet", "narkel-puli-pitha", "traditional-teler-pitha-gur-pitha", "traditional-vapa-pitha-steamed-coconut-jaggery", "milk-powder-burfi-quick-mawa-fudge", "shahi-besan-laddu", "basbousa-semolina-cake", "mango-coconut-burfi", "crispy-saffron-jalebi", "shahi-gulab-jamun", "kheer-shahi-rice-kheer-payesh", "royal-gajar-ka-halwa", "bengali-roshogolla"],
     faqs: [
       {
         question: "Is vanilla extract Halal?",
@@ -305,6 +305,8 @@ export const CATEGORIES: CategoryHub[] = [
       "From the sacred evening tranquility of sunset Iftar tables laden with spiced black chana (ছোলা ভুনা), crispy onion piyaju, and cooling Rooh Afza sharbat, to royal Eid morning banquets featuring Shahi beef roast, fragrant pulao, and creamy kheer, our Ramadan & Eid collection honors authentic culinary heritage, spiritual mindfulness, and joyful family gatherings.",
     image: IMAGES.blackChana,
     featuredRecipeSlugs: [
+      "dudh-chitai-pitha",
+      "chitoi-pitha",
       "morog-polao",
       "patishapta-pitha",
       "royal-hyderabadi-mutton-haleem",

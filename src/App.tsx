@@ -180,6 +180,32 @@ const extractRecipeSlug = (r: string) => {
       return "dal-bhorta";
     }
     if (
+      raw === "dudh-chitai-pitha" ||
+      raw === "dudh-chitai" ||
+      raw === "dudh-chitoi" ||
+      raw === "dudh-chitoi-pitha" ||
+      raw === "dudhchitaipitha" ||
+      raw === "dudhchitoipitha" ||
+      raw === "dudh-chita" ||
+      raw === "dudh-chita-pitha" ||
+      raw === "doodh-chitoi" ||
+      raw === "bengali-dudh-chitoi"
+    ) {
+      return "dudh-chitai-pitha";
+    }
+    if (
+      raw === "chitoi-pitha" ||
+      raw === "chitoi" ||
+      raw === "chitoipitha" ||
+      raw === "dim-chitoi" ||
+      raw === "dim-chitoi-pitha" ||
+      raw === "dimchitoi" ||
+      raw === "egg-chitoi-pitha" ||
+      raw === "bengali-chitoi-pitha"
+    ) {
+      return "chitoi-pitha";
+    }
+    if (
       raw === "patishapta-pitha" ||
       raw === "patishapta" ||
       raw === "patishaptapitha" ||

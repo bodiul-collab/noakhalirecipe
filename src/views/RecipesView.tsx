@@ -128,6 +128,24 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
               activeSlug === "panta-ilish-bhorta" ||
               activeSlug === "boishakhi-panta-ilish" ||
               activeSlug === "bengali-panta-bhat")) ||
+          (r.slug === "dudh-chitai-pitha" &&
+            (activeSlug === "dudh-chitai" ||
+              activeSlug === "dudh-chitoi" ||
+              activeSlug === "dudh-chitoi-pitha" ||
+              activeSlug === "dudhchitaipitha" ||
+              activeSlug === "dudhchitoipitha" ||
+              activeSlug === "dudh-chita" ||
+              activeSlug === "dudh-chita-pitha" ||
+              activeSlug === "doodh-chitoi" ||
+              activeSlug === "bengali-dudh-chitoi")) ||
+          (r.slug === "chitoi-pitha" &&
+            (activeSlug === "chitoi" ||
+              activeSlug === "chitoipitha" ||
+              activeSlug === "dim-chitoi" ||
+              activeSlug === "dim-chitoi-pitha" ||
+              activeSlug === "dimchitoi" ||
+              activeSlug === "egg-chitoi-pitha" ||
+              activeSlug === "bengali-chitoi-pitha")) ||
           (r.slug === "patishapta-pitha" &&
             (activeSlug === "patishapta" ||
               activeSlug === "patishaptapitha" ||
