@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Utensils, Send, CheckCircle2, ShieldCheck, Mail, Copy, Check, AlertCircle } from "lucide-react";
+import { Utensils, Send, CheckCircle2, ShieldCheck, Mail, Copy, Check, AlertCircle, Youtube } from "lucide-react";
 import { NoakhaliLogo } from "./NoakhaliLogo";
 
 interface FooterProps {
@@ -108,6 +108,19 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <div className="flex items-center gap-2 text-[11px] text-[#E7A52B] pt-1">
               <ShieldCheck className="w-3.5 h-3.5" />
               <span>Strictly 100% Pork-Free Recipes</span>
+            </div>
+
+            <div className="pt-2">
+              <a
+                href="https://youtube.com/@noakhalikitchen-d6r?si=YuWX6F5eY9gDY7IR"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#FF0000]/15 hover:bg-[#FF0000]/25 text-[#FF6B6B] hover:text-white border border-[#FF0000]/30 transition-all text-xs font-semibold group shadow-xs"
+                title="Watch Noakhali Kitchen on YouTube"
+              >
+                <Youtube className="w-4 h-4 text-[#FF0000] group-hover:scale-110 transition-transform" />
+                <span>Watch on YouTube</span>
+              </a>
             </div>
           </div>
 
@@ -260,6 +273,18 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 )}
               </li>
               <li>
+                <a
+                  href="https://youtube.com/@noakhalikitchen-d6r?si=YuWX6F5eY9gDY7IR"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#E7A52B] transition-colors inline-flex items-center gap-1.5"
+                  title="Visit Noakhali Kitchen on YouTube"
+                >
+                  <Youtube className="w-3.5 h-3.5 text-[#FF0000]" />
+                  <span>YouTube Channel</span>
+                </a>
+              </li>
+              <li>
                 <button
                   onClick={() => onNavigate("/privacy")}
                   className="hover:text-[#E7A52B] transition-colors"
@@ -398,6 +423,17 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             >
               Terms
             </button>
+            <span>&bull;</span>
+            <a
+              href="https://youtube.com/@noakhalikitchen-d6r?si=YuWX6F5eY9gDY7IR"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#FF4D4D] transition-colors inline-flex items-center gap-1.5 text-white"
+              title="Noakhali Kitchen on YouTube"
+            >
+              <Youtube className="w-3.5 h-3.5 text-[#FF0000]" />
+              <span>YouTube</span>
+            </a>
             <span>&bull;</span>
             <div className="flex items-center gap-1.5">
               <a
