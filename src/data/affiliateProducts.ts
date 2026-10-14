@@ -13,7 +13,7 @@ export const AFFILIATE_PRODUCTS: AffiliateProductItem[] = [
     whyItMatters:
       "Heavy-bottomed cookware distributes heat more evenly and helps prevent rice and meat from scorching during long dum cooking.",
     bestFor: "Dhaka Shahi Kacchi Biryani • Chicken Biryani • Beef Tehari • Dum cooking",
-    affiliateUrl: null,
+    affiliateUrl: "https://link.amazon/B0fI01Fxf",
     disclosureRequired: true,
   },
   {
@@ -25,7 +25,7 @@ export const AFFILIATE_PRODUCTS: AffiliateProductItem[] = [
     whyItMatters:
       "Excellent heat retention for searing, browning and controlled bhunai/koshano.",
     bestFor: "Beef Bhuna • Kala Bhuna • Chicken Karahi • Shahi Chicken Roast",
-    affiliateUrl: null,
+    affiliateUrl: "https://link.amazon/B0byLqy5Q",
     disclosureRequired: true,
   },
   {
@@ -37,7 +37,7 @@ export const AFFILIATE_PRODUCTS: AffiliateProductItem[] = [
     whyItMatters:
       "Maintains steady heat during long braising and reduction.",
     bestFor: "Beef Nihari • Beef Bhuna • Slow-cooked curries",
-    affiliateUrl: null,
+    affiliateUrl: "https://link.amazon/B0eburf6j",
     disclosureRequired: true,
   },
   {
@@ -65,7 +65,7 @@ export const AFFILIATE_PRODUCTS: AffiliateProductItem[] = [
     whyItMatters:
       "Particularly valuable because Noakhali Kitchen recipes provide metric measurements.",
     bestFor: "Recipe accuracy • Meat measurement • Rice measurement • Consistent recipe reproduction",
-    affiliateUrl: null,
+    affiliateUrl: "https://link.amazon/B08M6d1oa",
     disclosureRequired: true,
   },
   {
@@ -117,7 +117,7 @@ export const AFFILIATE_PRODUCTS: AffiliateProductItem[] = [
     whyItMatters:
       "Connects directly to traditional Bengali spice preparation.",
     bestFor: "Whole spices • Ginger • Garlic • Bengali spice pastes • Panch Phoron preparation",
-    affiliateUrl: null,
+    affiliateUrl: "https://link.amazon/B0a7aHfVZ",
     disclosureRequired: true,
   },
   {

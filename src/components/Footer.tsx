@@ -392,7 +392,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         <div className="pt-8 border-t border-[#242423] space-y-3 text-[11px] text-[#8A857E] leading-relaxed">
           <p>
             <strong className="text-[#E6E1D8]">Amazon Affiliate Disclosure:</strong> As an
-            Amazon Associate, Noakhali Kitchen may earn from qualifying purchases. Some links on
+            Amazon Associate I earn from qualifying purchases. Some links on
             this website may be affiliate links; if you purchase through one of these links, we
             may earn a small commission at no additional cost to you. We only recommend kitchen
             tools, ingredients, and cookware that we thoroughly trust and use.

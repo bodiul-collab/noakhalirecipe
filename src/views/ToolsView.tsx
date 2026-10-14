@@ -328,7 +328,7 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
               Affiliate Disclosure:
             </strong>
             <p>
-              Some links on Noakhali Kitchen may be affiliate links. If you purchase through one of these links, we may earn a small commission at no additional cost to you. Our recommendations are based on relevance and usefulness to the recipes and cooking techniques featured on this site.
+              As an Amazon Associate I earn from qualifying purchases. Some links on Noakhali Kitchen are affiliate links; if you purchase through one of these links, we may earn a small commission at no additional cost to you. Our recommendations are based strictly on relevance, culinary testing, and practical utility for the recipes and cooking techniques featured on this site.
             </p>
           </div>
         </section>
@@ -504,8 +504,16 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
                         Recommended tools:
                       </span>
                       <ul className="text-xs text-[#57534E] space-y-1.5 list-disc list-inside">
-                        <li>Heavy-Bottomed Biryani / Dekchi Pot</li>
-                        <li>Digital Kitchen Scale</li>
+                        <li>
+                          <a href="#prod-dekchi-biryani-pot" className="hover:text-[#E97520] hover:underline font-medium">
+                            Heavy-Bottomed Biryani / Dekchi Pot
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#prod-digital-kitchen-scale" className="hover:text-[#E97520] hover:underline font-medium">
+                            Digital Kitchen Scale
+                          </a>
+                        </li>
                         <li>Measuring Spoons</li>
                         <li>Instant-Read Thermometer</li>
                       </ul>
@@ -549,7 +557,11 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
                         Recommended tools:
                       </span>
                       <ul className="text-xs text-[#57534E] space-y-1.5 list-disc list-inside">
-                        <li>Heavy-Bottomed Braising Pot</li>
+                        <li>
+                          <a href="#prod-dutch-oven-braiser" className="hover:text-[#E97520] hover:underline font-medium">
+                            Heavy-Bottomed Braising Pot
+                          </a>
+                        </li>
                         <li>Fine-Mesh Strainer</li>
                         <li>Spice Grinder</li>
                         <li>Measuring Spoons</li>
@@ -594,7 +606,11 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
                         Recommended tools:
                       </span>
                       <ul className="text-xs text-[#57534E] space-y-1.5 list-disc list-inside">
-                        <li>Cast-Iron Kadai</li>
+                        <li>
+                          <a href="#prod-cast-iron-kadai" className="hover:text-[#E97520] hover:underline font-medium">
+                            Cast-Iron Kadai
+                          </a>
+                        </li>
                         <li>Hardwood Spatula</li>
                         <li>Spice Grinder</li>
                       </ul>
@@ -638,8 +654,16 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
                         Recommended tools:
                       </span>
                       <ul className="text-xs text-[#57534E] space-y-1.5 list-disc list-inside">
-                        <li>Cast-Iron Kadai</li>
-                        <li>Digital Kitchen Scale</li>
+                        <li>
+                          <a href="#prod-cast-iron-kadai" className="hover:text-[#E97520] hover:underline font-medium">
+                            Cast-Iron Kadai
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#prod-digital-kitchen-scale" className="hover:text-[#E97520] hover:underline font-medium">
+                            Digital Kitchen Scale
+                          </a>
+                        </li>
                         <li>Measuring Spoons</li>
                         <li>Stainless Steel Mixing Bowls</li>
                       </ul>
@@ -683,7 +707,11 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
                         Recommended tools:
                       </span>
                       <ul className="text-xs text-[#57534E] space-y-1.5 list-disc list-inside">
-                        <li>Mortar &amp; Pestle</li>
+                        <li>
+                          <a href="#prod-granite-mortar-pestle" className="hover:text-[#E97520] hover:underline font-medium">
+                            Mortar &amp; Pestle
+                          </a>
+                        </li>
                         <li>Spice Grinder</li>
                         <li>Airtight Spice Jars</li>
                       </ul>
@@ -728,7 +756,11 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
                       </span>
                       <ul className="text-xs text-[#57534E] space-y-1.5 list-disc list-inside">
                         <li>Airtight Spice Jars</li>
-                        <li>Mortar &amp; Pestle</li>
+                        <li>
+                          <a href="#prod-granite-mortar-pestle" className="hover:text-[#E97520] hover:underline font-medium">
+                            Mortar &amp; Pestle
+                          </a>
+                        </li>
                         <li>Measuring Spoons</li>
                       </ul>
                     </div>
@@ -857,7 +889,7 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
                 </h3>
               </div>
               <p className="text-xs sm:text-sm text-[#57534E] leading-relaxed">
-                <strong>Affiliate Disclosure:</strong> Some links on Noakhali Kitchen may be affiliate links. If you purchase through one of these links, we may earn a small commission at no additional cost to you. Our recommendations are based on relevance and usefulness to the recipes and cooking techniques featured on this site.
+                <strong>Affiliate Disclosure:</strong> As an Amazon Associate I earn from qualifying purchases. Some links on Noakhali Kitchen are affiliate links. If you purchase through one of these links, we may earn a small commission at no additional cost to you. Our recommendations are based on practical relevance and usefulness to the recipes and cooking techniques featured on this site.
               </p>
               <p className="text-xs text-[#77736D] leading-relaxed">
                 Our culinary testing focuses exclusively on practical utility: how pots handle dum steam trapping, how stones release whole seed aromatics, and how heavy steel distributes prolonged searing heat without scorching delicate spices.
@@ -1450,7 +1482,10 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
 // Reusable Editorial Product Card component
 const ProductCard: React.FC<{ product: AffiliateProductItem }> = ({ product }) => {
   return (
-    <article className="p-5 rounded-xl border border-[#E6E1D8] bg-white hover:border-[#E97520]/50 hover:shadow-sm transition-all flex flex-col justify-between space-y-4">
+    <article
+      id={product.id}
+      className="p-5 rounded-xl border border-[#E6E1D8] bg-white hover:border-[#E97520]/50 hover:shadow-sm transition-all flex flex-col justify-between space-y-4 scroll-mt-24"
+    >
       <div className="space-y-2.5">
         <div className="flex items-center justify-between gap-2">
           <span className="text-[10px] font-bold uppercase tracking-wider text-[#E97520] bg-[#FAF9F6] px-2 py-0.5 rounded border border-[#E6E1D8]">

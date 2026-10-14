@@ -128,7 +128,7 @@ export const LegalView: React.FC<LegalViewProps> = ({ initialTab = "privacy" }) 
               </p>
 
               <div className="p-4 bg-[#FAF9F6] rounded-lg border border-[#E6E1D8] font-medium text-[#30302F]">
-                "As an Amazon Associate, Noakhali Kitchen may earn from qualifying purchases."
+                "As an Amazon Associate I earn from qualifying purchases."
               </div>
 
               <h2 className="text-base font-bold text-[#30302F] pt-2">
