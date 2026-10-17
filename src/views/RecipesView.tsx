@@ -51,6 +51,7 @@ import {
   calculateBlendedRating,
   UserRecipeRating,
 } from "../utils/ratingsStorage";
+import { updatePageSeo, toAbsoluteUrl } from "../utils/seoHead";
 
 interface RecipesViewProps {
   initialSlug?: string;
@@ -247,10 +248,38 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
           (r.slug === "bengali-beef-pasta" && (activeSlug === "beef-pasta" || activeSlug === "halal-beef-pasta" || activeSlug === "bengali-pasta" || activeSlug === "bengali-keema-pasta" || activeSlug === "keema-pasta" || activeSlug === "deshi-beef-pasta" || activeSlug === "rigatoni-beef-pasta")) ||
           (r.slug === "suji-halwa-halva" && (activeSlug === "suji-halwa" || activeSlug === "suji-halva" || activeSlug === "sooji-halwa" || activeSlug === "halwa-puri" || activeSlug === "sheera" || activeSlug === "rava-kesari" || activeSlug === "semolina-halwa" || activeSlug === "halva" || activeSlug === "sujir-halwa")) ||
           (r.slug === "cucumber-lime-lemon-juice" && (activeSlug === "cucumber-lime-lemon-juice" || activeSlug === "cucumber-lime-juice" || activeSlug === "cucumber-lemon-juice" || activeSlug === "cucumber-juice" || activeSlug === "cucumber-lime" || activeSlug === "hydrating-cucumber-juice" || activeSlug === "detox-cucumber-juice")) ||
-          (r.slug === "fish-morich-khola" && (activeSlug === "morich-khola" || activeSlug === "mach-morich-khola" || activeSlug === "noakhali-morich-khola" || activeSlug === "marich-khola" || activeSlug === "fish-morich" || activeSlug === "morich-khola-fish" || activeSlug === "kachki-morich-khola" || activeSlug === "mola-morich-khola"))
+          (r.slug === "fish-morich-khola" && (activeSlug === "morich-khola" || activeSlug === "mach-morich-khola" || activeSlug === "noakhali-morich-khola" || activeSlug === "marich-khola" || activeSlug === "fish-morich" || activeSlug === "morich-khola-fish" || activeSlug === "kachki-morich-khola" || activeSlug === "mola-morich-khola")) ||
+          (r.slug === "loitta-shutki-bhuna-dried-fermented-fish" && (activeSlug === "loitta-shutki-bhuna" || activeSlug === "loitta-shutki" || activeSlug === "shutki-bhuna"))
       ) || null
     );
   }, [activeSlug]);
+
+  // Synchronize document title, meta description, canonical URL, and OpenGraph/Twitter tags
+  useEffect(() => {
+    if (currentRecipe) {
+      const pageTitle = currentRecipe.seoTitle || `${currentRecipe.title} Recipe | Noakhali Kitchen`;
+      const desc = currentRecipe.seoDescription || currentRecipe.description;
+      const canonical = `https://www.noakhalikitchen.com/recipes/${currentRecipe.slug}`;
+      const cleanup = updatePageSeo({
+        title: pageTitle,
+        description: desc,
+        canonicalUrl: canonical,
+        ogType: "article",
+        imageUrl: currentRecipe.heroImage,
+        authorName: currentRecipe.author.name,
+      });
+      return cleanup;
+    } else {
+      const cleanup = updatePageSeo({
+        title: "Authentic Halal Recipes & Regional Culinary Index | Noakhali Kitchen",
+        description:
+          "Explore authentic, tested 100% Halal recipes—from royal biryanis and slow-braised curries to refreshing drinks and homemade sweets from Noakhali Kitchen.",
+        canonicalUrl: "https://www.noakhalikitchen.com/recipes",
+        ogType: "website",
+      });
+      return cleanup;
+    }
+  }, [currentRecipe]);
 
   // Custom User Ratings state persisted in localStorage
   const [userRatings, setUserRatings] = useState<Record<string, UserRecipeRating>>(() => {
@@ -409,45 +438,100 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
     const scaledServings = Math.round(currentRecipe.servings * servingMultiplier);
     const perServingNutrition = calculatePerServingNutrition(currentRecipe, scaledServings);
 
-    // Schema JSON-LD structured data for Google Rich Snippets
+    const canonicalRecipeUrl = `https://www.noakhalikitchen.com/recipes/${currentRecipe.slug}`;
+    const categoryUrl = `https://www.noakhalikitchen.com/category/${currentRecipe.categorySlug}`;
+    const absHeroImage = toAbsoluteUrl(currentRecipe.heroImage);
+
+    // Schema JSON-LD structured data for Google Rich Snippets (Recipe + Breadcrumbs)
     const jsonLdData = {
-      "@context": "https://schema.org/",
-      "@type": "Recipe",
-      name: currentRecipe.title,
-      image: [currentRecipe.heroImage],
-      author: {
-        "@type": "Person",
-        name: currentRecipe.author.name,
-      },
-      datePublished: currentRecipe.updatedDate,
-      description: currentRecipe.description,
-      prepTime: `PT${currentRecipe.prepTimeMinutes}M`,
-      cookTime: `PT${currentRecipe.cookTimeMinutes}M`,
-      totalTime: `PT${currentRecipe.totalTimeMinutes}M`,
-      keywords: currentRecipe.tags.join(", "),
-      recipeYield: `${scaledServings} servings`,
-      recipeCategory: currentRecipe.category,
-      recipeCuisine: currentRecipe.cuisine,
-      nutrition: {
-        "@type": "NutritionInformation",
-        calories: `${perServingNutrition.calories} calories`,
-        proteinContent: `${perServingNutrition.proteinGrams} g`,
-        carbohydrateContent: `${perServingNutrition.carbsGrams} g`,
-        fatContent: `${perServingNutrition.fatGrams} g`,
-      },
-      recipeIngredient: currentRecipe.ingredients.map(
-        (i) => `${i.amount} ${i.unit || ""} ${i.name} ${i.notes ? `(${i.notes})` : ""}`.trim()
-      ),
-      recipeInstructions: currentRecipe.instructions.map((inst) => ({
-        "@type": "HowToStep",
-        name: inst.title,
-        text: inst.instruction,
-      })),
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: blendedRating.rating.toString(),
-        reviewCount: blendedRating.reviewCount.toString(),
-      },
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Recipe",
+          "@id": `${canonicalRecipeUrl}#recipe`,
+          name: currentRecipe.title,
+          headline: currentRecipe.seoTitle || currentRecipe.title,
+          description: currentRecipe.seoDescription || currentRecipe.description,
+          image: [absHeroImage],
+          author: {
+            "@type": "Person",
+            name: currentRecipe.author.name,
+            jobTitle: currentRecipe.author.role,
+          },
+          publisher: {
+            "@type": "Organization",
+            name: "Noakhali Kitchen",
+            url: "https://www.noakhalikitchen.com/",
+            logo: {
+              "@type": "ImageObject",
+              url: "https://www.noakhalikitchen.com/icon.svg",
+            },
+          },
+          mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": canonicalRecipeUrl,
+          },
+          datePublished: currentRecipe.updatedDate,
+          dateModified: currentRecipe.updatedDate,
+          prepTime: `PT${currentRecipe.prepTimeMinutes}M`,
+          cookTime: `PT${currentRecipe.cookTimeMinutes}M`,
+          totalTime: `PT${currentRecipe.totalTimeMinutes}M`,
+          keywords: currentRecipe.tags.join(", "),
+          recipeYield: `${scaledServings} servings`,
+          recipeCategory: currentRecipe.category,
+          recipeCuisine: currentRecipe.cuisine,
+          nutrition: {
+            "@type": "NutritionInformation",
+            calories: `${perServingNutrition.calories} calories`,
+            proteinContent: `${perServingNutrition.proteinGrams} g`,
+            carbohydrateContent: `${perServingNutrition.carbsGrams} g`,
+            fatContent: `${perServingNutrition.fatGrams} g`,
+          },
+          recipeIngredient: currentRecipe.ingredients.map(
+            (i) => `${i.amount} ${i.unit || ""} ${i.name} ${i.notes ? `(${i.notes})` : ""}`.trim()
+          ),
+          recipeInstructions: currentRecipe.instructions.map((inst) => ({
+            "@type": "HowToStep",
+            name: inst.title,
+            text: inst.instruction,
+          })),
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: blendedRating.rating.toString(),
+            reviewCount: blendedRating.reviewCount.toString(),
+          },
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": `${canonicalRecipeUrl}#breadcrumb`,
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: "https://www.noakhalikitchen.com/",
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Recipes",
+              item: "https://www.noakhalikitchen.com/recipes",
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: currentRecipe.category,
+              item: categoryUrl,
+            },
+            {
+              "@type": "ListItem",
+              position: 4,
+              name: currentRecipe.title,
+              item: canonicalRecipeUrl,
+            },
+          ],
+        },
+      ],
     };
 
     const relatedGuides = COOKING_GUIDES.filter(
@@ -459,7 +543,7 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
 
     return (
       <div className="w-full bg-[#FAF9F6] py-8 sm:py-12">
-        {/* Inject Recipe Schema */}
+        {/* Inject Recipe & Breadcrumb Schema */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }}
@@ -467,14 +551,14 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
 
         <div className="max-w-[1000px] mx-auto px-4 sm:px-6">
           {/* Breadcrumbs */}
-          <nav className="flex items-center gap-2 text-xs text-[#77736D] mb-6 print:hidden">
+          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-[#77736D] mb-6 print:hidden">
             <button
               onClick={() => onNavigate("/")}
               className="hover:text-[#30302F] cursor-pointer"
             >
               Home
             </button>
-            <span>/</span>
+            <span aria-hidden="true">/</span>
             <button
               onClick={() => {
                 setActiveSlug(null);
@@ -484,15 +568,15 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
             >
               Recipes
             </button>
-            <span>/</span>
+            <span aria-hidden="true">/</span>
             <button
               onClick={() => onNavigate(`/category/${currentRecipe.categorySlug}`)}
               className="hover:text-[#E97520] cursor-pointer"
             >
               {currentRecipe.category}
             </button>
-            <span>/</span>
-            <span className="text-[#30302F] font-bold truncate max-w-[200px]">
+            <span aria-hidden="true">/</span>
+            <span className="text-[#30302F] font-bold truncate max-w-[200px]" aria-current="page">
               {currentRecipe.title}
             </span>
           </nav>
@@ -529,11 +613,11 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
             <div className="hidden print:block pb-4 mb-2 border-b-2 border-[#242423]">
               <div className="flex items-center justify-between">
                 <div>
-                  <h1 className="text-2xl font-bold font-serif-editorial text-[#242423]">
+                  <div className="text-2xl font-bold font-serif-editorial text-[#242423]">
                     Noakhali Kitchen
-                  </h1>
+                  </div>
                   <p className="text-xs text-[#77736D]">
-                    Authentic Halal Recipes &bull; https://noakhalikitchen.com/recipes/{currentRecipe.slug}
+                    Authentic Halal Recipes &bull; https://www.noakhalikitchen.com/recipes/{currentRecipe.slug}
                   </p>
                 </div>
                 <div className="text-right">
@@ -1292,8 +1376,33 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
   }
 
   // Recipe Index Catalog View
+  const indexBreadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": "https://www.noakhalikitchen.com/recipes#breadcrumb",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.noakhalikitchen.com/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Recipes",
+        item: "https://www.noakhalikitchen.com/recipes",
+      },
+    ],
+  };
+
   return (
     <div className="w-full bg-[#FAF9F6] py-10 sm:py-14">
+      {/* Inject Breadcrumbs Schema for Index */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(indexBreadcrumbJsonLd) }}
+      />
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6">
         {/* Title & Introduction */}
         <div className="text-center max-w-2xl mx-auto mb-10 space-y-2">

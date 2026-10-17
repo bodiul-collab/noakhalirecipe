@@ -11,8 +11,8 @@ export const AFFILIATE_PRODUCTS: AffiliateProductItem[] = [
     description:
       "A wide-bellied, heavy-gauge cooking pot engineered with an extra-thick thermal base for controlled heat conduction during slow steam dum cooking.",
     whyItMatters:
-      "Heavy-bottomed cookware distributes heat more evenly and helps prevent rice and meat from scorching during long dum cooking.",
-    bestFor: "Dhaka Shahi Kacchi Biryani • Chicken Biryani • Beef Tehari • Dum cooking",
+      "Heavy-bottomed cookware distributes heat evenly and helps prevent rice and meat from scorching during prolonged dum cooking. Essential for layered Dhaka Shahi Kacchi Biryani and Old Dhaka Beef Tehari where uniform bottom heat allows tender meat and fragrant rice to steam simultaneously.",
+    bestFor: "Dhaka Shahi Kacchi Biryani • Beef Tehari • Mutton Tehari • Slow Dum Cooking",
     affiliateUrl: "https://link.amazon/B0fI01Fxf",
     disclosureRequired: true,
   },
@@ -21,10 +21,10 @@ export const AFFILIATE_PRODUCTS: AffiliateProductItem[] = [
     name: "Pre-Seasoned Cast-Iron Kadai",
     category: "Cookware",
     description:
-      "A deep, curved traditional wok-style vessel with outstanding thermal mass that holds intense searing heat without temperature drops.",
+      "A deep, curved traditional wok-style vessel with outstanding thermal mass that holds intense searing heat without dropping temperature when ingredients are added.",
     whyItMatters:
-      "Excellent heat retention for searing, browning and controlled bhunai/koshano.",
-    bestFor: "Beef Bhuna • Kala Bhuna • Chicken Karahi • Shahi Chicken Roast",
+      "Excellent heat retention for deep searing, browning, and the rigorous 'koshano' phase of Bengali Beef Bhuna and Kala Bhuna. Also allows quartered chicken to brown crisp in beresta oil for Shahi Chicken Roast without boiling in its own released moisture.",
+    bestFor: "Bengali Beef Bhuna • Shahi Chicken Roast • Kala Bhuna • Chicken Karahi",
     affiliateUrl: "https://link.amazon/B0byLqy5Q",
     disclosureRequired: true,
   },
@@ -33,10 +33,10 @@ export const AFFILIATE_PRODUCTS: AffiliateProductItem[] = [
     name: "Heavy-Bottomed Braising Pot / Dutch Oven",
     category: "Cookware",
     description:
-      "A thick-walled cast-iron or heavy-clad braiser with a tight-fitting moisture-lock lid, designed for hours of uninterrupted gentle simmering.",
+      "A thick-walled cast-iron braiser with a tight-fitting moisture-lock lid, designed for hours of uninterrupted gentle stovetop or oven simmering.",
     whyItMatters:
-      "Maintains steady heat during long braising and reduction.",
-    bestFor: "Beef Nihari • Beef Bhuna • Slow-cooked curries",
+      "Maintains steady, low heat during prolonged braising. Ideal for Bengali Beef Nihari and bone-in shanks, allowing connective tissues and rich bone marrow to break down into silky collagen without reducing too quickly or drying out the sauce.",
+    bestFor: "Bengali Beef Nihari • Slow-Simmered Shanks • Haleem • Long Braises",
     affiliateUrl: "https://link.amazon/B0eburf6j",
     disclosureRequired: true,
   },
@@ -61,10 +61,10 @@ export const AFFILIATE_PRODUCTS: AffiliateProductItem[] = [
     name: "Digital Kitchen Scale",
     category: "Precision Cooking Tools",
     description:
-      "A compact, high-precision electronic scale with single-gram and tare functionality for accurate meat, rice, and spice measurements.",
+      "A compact, high-precision electronic scale with single-gram resolution and tare functionality for exact meat, rice, and spice weight measurements.",
     whyItMatters:
-      "Particularly valuable because Noakhali Kitchen recipes provide metric measurements.",
-    bestFor: "Recipe accuracy • Meat measurement • Rice measurement • Consistent recipe reproduction",
+      "Critical for replicating authentic Bengali dishes where the rice-to-water ratio and spice blends are calibrated by weight in grams rather than imprecise volumetric cups. Eliminates guesswork in Kacchi Biryani and delicate Shahi gravies.",
+    bestFor: "Metric Recipe Accuracy • Basmati & Chinigura Rice Ratios • Spice Blends • Meat Portions",
     affiliateUrl: "https://link.amazon/B08M6d1oa",
     disclosureRequired: true,
   },
@@ -113,10 +113,10 @@ export const AFFILIATE_PRODUCTS: AffiliateProductItem[] = [
     name: "Granite Mortar & Pestle",
     category: "Spice Preparation",
     description:
-      "A heavy solid granite mortar and pestle that crushes whole botanical seeds and aromatic fibers to release natural essential oils.",
+      "A heavy solid granite mortar and pestle that crushes and shears whole botanical seeds and aromatic fibers to release natural essential oils.",
     whyItMatters:
-      "Connects directly to traditional Bengali spice preparation.",
-    bestFor: "Whole spices • Ginger • Garlic • Bengali spice pastes • Panch Phoron preparation",
+      "Traditional Bengali cooking relies on bruising whole spices rather than cutting them with high-speed blades. Crushing panch phoron, coriander seeds, fresh ginger, and garlic releases fragrant volatile oils for maximum aromatic depth in curries, dal, and shukto.",
+    bestFor: "Whole Spices • Panch Phoron • Fresh Ginger-Garlic Paste • Radhuni • Heritage Botanicals",
     affiliateUrl: "https://link.amazon/B0a7aHfVZ",
     disclosureRequired: true,
   },

@@ -23861,7 +23861,7 @@ const BASE_RECIPES: Recipe[] = [
     ],
     relatedGuideSlugs: [
       "authentic-dhaka-shahi-kacchi-biryani",
-      "old-dhaka-beef-tehari-vs-biryani-guide",
+      "old-dhaka-beef-tehari-vs-biryani",
       "mustard-oil-bengali-cooking",
       "how-to-make-perfect-beresta",
     ],
@@ -24064,7 +24064,7 @@ const BASE_RECIPES: Recipe[] = [
     ],
     relatedGuideSlugs: [
       "mustard-oil-bengali-cooking",
-      "essential-bengali-spices-guide",
+      "how-to-build-a-bangladeshi-spice-base",
       "how-to-make-perfect-beresta",
     ],
     seoTitle:
@@ -24260,7 +24260,7 @@ const BASE_RECIPES: Recipe[] = [
       "karak-chai-spiced-milk-tea",
     ],
     relatedGuideSlugs: [
-      "essential-bengali-spices-guide",
+      "how-to-build-a-bangladeshi-spice-base",
       "authentic-bengali-beef-nihari-guide",
     ],
     seoTitle:
@@ -24441,7 +24441,7 @@ const BASE_RECIPES: Recipe[] = [
       "laban-ayran",
     ],
     relatedGuideSlugs: [
-      "essential-bengali-spices-guide",
+      "how-to-build-a-bangladeshi-spice-base",
       "authentic-bengali-beef-nihari-guide",
     ],
     seoTitle:
@@ -24732,7 +24732,7 @@ const BASE_RECIPES: Recipe[] = [
     ],
     relatedGuideSlugs: [
       "mustard-oil-bengali-cooking",
-      "essential-bengali-spices-guide",
+      "how-to-build-a-bangladeshi-spice-base",
     ],
     seoTitle:
       "Fish Morich Khola Recipe (মাছ মরিচ খোলা / Noakhali Heritage) | Noakhali Kitchen",
@@ -25072,7 +25072,7 @@ const BASE_RECIPES: Recipe[] = [
     ],
     relatedGuideSlugs: [
       "mustard-oil-bengali-cooking",
-      "essential-bengali-spices-guide",
+      "how-to-build-a-bangladeshi-spice-base",
     ],
     seoTitle:
       "Authentic Chicken Vindaloo Recipe (چکن ونڈالو / চিকেন ভিনডালু) | Noakhali Kitchen",
@@ -25417,7 +25417,7 @@ const BASE_RECIPES: Recipe[] = [
     ],
     relatedGuideSlugs: [
       "mustard-oil-bengali-cooking",
-      "essential-bengali-spices-guide",
+      "how-to-build-a-bangladeshi-spice-base",
     ],
     seoTitle:
       "Authentic Lamb Vindaloo Recipe (لیمب ونڈالو / ল্যাম্ব ভিনডালু) | Noakhali Kitchen",
@@ -25654,11 +25654,11 @@ const BASE_RECIPES: Recipe[] = [
       "narkel-puli-pitha",
       "traditional-teler-pitha-gur-pitha",
       "bengali-beef-bhuna",
-      "loitta-shutki-bhuna",
+      "loitta-shutki-bhuna-dried-fermented-fish",
     ],
     relatedGuideSlugs: [
       "mustard-oil-bengali-cooking",
-      "essential-bengali-spices-guide",
+      "how-to-build-a-bangladeshi-spice-base",
     ],
     seoTitle:
       "Authentic Kholaja Pitha Recipe (খোলাজা পিঠা / کھولاجা پٹھا) | Noakhali Kitchen",
@@ -25962,7 +25962,7 @@ const BASE_RECIPES: Recipe[] = [
     ],
     relatedGuideSlugs: [
       "mustard-oil-bengali-cooking",
-      "essential-bengali-spices-guide",
+      "how-to-build-a-bangladeshi-spice-base",
     ],
     seoTitle:
       "Authentic Duck Curry with Coconut Milk (নারকেলের দুধে হাঁসের মাংস) | Noakhali Kitchen",
@@ -26188,7 +26188,7 @@ const BASE_RECIPES: Recipe[] = [
     ],
     relatedGuideSlugs: [
       "mustard-oil-bengali-cooking",
-      "essential-bengali-spices-guide",
+      "how-to-build-a-bangladeshi-spice-base",
     ],
     seoTitle:
       "Authentic Tomato Bhorta Recipe (টমেটো ভর্তা / Charred Smashed Tomato) | Noakhali Kitchen",
@@ -26427,7 +26427,7 @@ const BASE_RECIPES: Recipe[] = [
     relatedGuideSlugs: [
       "mustard-oil-bengali-cooking",
       "how-to-make-perfect-beresta",
-      "essential-bengali-spices-guide",
+      "how-to-build-a-bangladeshi-spice-base",
     ],
     seoTitle:
       "Authentic Dal Bhorta Recipe (ডাল ভর্তা / Masoor Dal Bhorta) | Noakhali Kitchen",
@@ -26680,7 +26680,7 @@ const BASE_RECIPES: Recipe[] = [
     ],
     relatedGuideSlugs: [
       "mustard-oil-bengali-cooking",
-      "essential-bengali-spices-guide",
+      "how-to-build-a-bangladeshi-spice-base",
     ],
     seoTitle:
       "Authentic Patishapta Pitha Recipe (পাটিসাপ্টা পিঠা) | Noakhali Kitchen",
@@ -26915,7 +26915,7 @@ const BASE_RECIPES: Recipe[] = [
     ],
     relatedGuideSlugs: [
       "mustard-oil-bengali-cooking",
-      "essential-bengali-spices-guide",
+      "how-to-build-a-bangladeshi-spice-base",
     ],
     seoTitle:
       "Authentic Panta Bhat with Bhorta Recipe (পান্তা ভাত) | Noakhali Kitchen",
@@ -27176,7 +27176,7 @@ const BASE_RECIPES: Recipe[] = [
     ],
     relatedGuideSlugs: [
       "mustard-oil-bengali-cooking",
-      "essential-bengali-spices-guide",
+      "how-to-build-a-bangladeshi-spice-base",
     ],
     seoTitle:
       "Authentic Bengali Pabda Fish Curry Recipe (পাবদা মাছের ঝোল) | Noakhali Kitchen",
@@ -27517,7 +27517,7 @@ const BASE_RECIPES: Recipe[] = [
     ],
     relatedGuideSlugs: [
       "how-to-make-perfect-beresta",
-      "essential-bengali-spices-guide",
+      "how-to-build-a-bangladeshi-spice-base",
     ],
     seoTitle:
       "Authentic Bengali Morog Polao Recipe (মোরগ পোলাও) | Noakhali Kitchen",
@@ -27756,7 +27756,7 @@ const BASE_RECIPES: Recipe[] = [
       "traditional-vapa-pitha-steamed-coconut-jaggery",
     ],
     relatedGuideSlugs: [
-      "essential-bengali-spices-guide",
+      "how-to-build-a-bangladeshi-spice-base",
       "how-to-make-perfect-beresta",
     ],
     seoTitle:
@@ -28008,7 +28008,7 @@ const BASE_RECIPES: Recipe[] = [
       "kheer-shahi-rice-kheer-payesh",
     ],
     relatedGuideSlugs: [
-      "essential-bengali-spices-guide",
+      "how-to-build-a-bangladeshi-spice-base",
       "how-to-make-perfect-beresta",
     ],
     seoTitle:

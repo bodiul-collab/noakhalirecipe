@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Utensils, Send, CheckCircle2, ShieldCheck, Mail, Copy, Check, AlertCircle, Youtube } from "lucide-react";
+import { Utensils, Send, CheckCircle2, ShieldCheck, Mail, Copy, Check, AlertCircle, Youtube, Facebook } from "lucide-react";
 import { NoakhaliLogo } from "./NoakhaliLogo";
 
 interface FooterProps {
@@ -110,7 +110,17 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               <span>Strictly 100% Pork-Free Recipes</span>
             </div>
 
-            <div className="pt-2">
+            <div className="flex flex-wrap items-center gap-2 pt-2">
+              <a
+                href="https://www.facebook.com/profile.php?id=61594626825993"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#1877F2]/15 hover:bg-[#1877F2]/25 text-[#70A5F9] hover:text-white border border-[#1877F2]/30 transition-all text-xs font-semibold group shadow-xs"
+                title="Follow Noakhali Kitchen on Facebook"
+              >
+                <Facebook className="w-4 h-4 text-[#1877F2] group-hover:scale-110 transition-transform" />
+                <span>Facebook</span>
+              </a>
               <a
                 href="https://youtube.com/@noakhalikitchen-d6r?si=YuWX6F5eY9gDY7IR"
                 target="_blank"
@@ -119,7 +129,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 title="Watch Noakhali Kitchen on YouTube"
               >
                 <Youtube className="w-4 h-4 text-[#FF0000] group-hover:scale-110 transition-transform" />
-                <span>Watch on YouTube</span>
+                <span>YouTube</span>
               </a>
             </div>
           </div>
@@ -274,6 +284,18 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               </li>
               <li>
                 <a
+                  href="https://www.facebook.com/profile.php?id=61594626825993"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#E7A52B] transition-colors inline-flex items-center gap-1.5"
+                  title="Follow Noakhali Kitchen on Facebook"
+                >
+                  <Facebook className="w-3.5 h-3.5 text-[#1877F2]" />
+                  <span>Facebook Page</span>
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://youtube.com/@noakhalikitchen-d6r?si=YuWX6F5eY9gDY7IR"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -423,6 +445,17 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             >
               Terms
             </button>
+            <span>&bull;</span>
+            <a
+              href="https://www.facebook.com/profile.php?id=61594626825993"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#70A5F9] transition-colors inline-flex items-center gap-1.5 text-white"
+              title="Noakhali Kitchen on Facebook"
+            >
+              <Facebook className="w-3.5 h-3.5 text-[#1877F2]" />
+              <span>Facebook</span>
+            </a>
             <span>&bull;</span>
             <a
               href="https://youtube.com/@noakhalikitchen-d6r?si=YuWX6F5eY9gDY7IR"

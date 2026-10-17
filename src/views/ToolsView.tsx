@@ -486,17 +486,17 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {/* 1. DHAKA SHAHI KACCHI BIRYANI */}
+                {/* 1. DHAKA SHAHI KACCHI BIRYANI & BEEF TEHARI */}
                 <div className="p-6 rounded-xl border border-[#E6E1D8] bg-white hover:border-[#E97520]/50 transition-all shadow-xs flex flex-col justify-between space-y-4">
                   <div className="space-y-3">
                     <span className="text-[10px] font-bold uppercase tracking-wider text-[#E97520] bg-[#FAF9F6] px-2.5 py-1 rounded border border-[#E6E1D8]">
                       FESTIVE RICE MASTERPIECE
                     </span>
                     <h3 className="text-xl font-bold text-[#242423] font-serif-editorial">
-                      Dhaka Shahi Kacchi Biryani
+                      Dhaka Shahi Kacchi Biryani &amp; Beef Tehari
                     </h3>
                     <p className="text-xs text-[#77736D] leading-relaxed">
-                      Cooking raw bone-in mutton simultaneously with parboiled Basmati or Chinigura rice under tightly sealed steam pressure requires superior heat distribution.
+                      Cooking raw marinated mutton or beef simultaneously with parboiled Chinigura or Basmati rice under tightly sealed steam pressure requires superior heat distribution. A heavy dekchi pot prevents scorching the base layer during slow dum steaming.
                     </p>
 
                     <div className="pt-2">
@@ -520,22 +520,35 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
                     </div>
                   </div>
 
-                  <div className="pt-4 border-t border-[#E6E1D8] flex items-center justify-between">
-                    <button
-                      type="button"
-                      onClick={() => navigateToRecipe("kacchi-biryani")}
-                      className="inline-flex items-center gap-1.5 text-xs font-bold text-[#E97520] hover:text-[#d36615] transition-colors cursor-pointer"
-                    >
-                      <span>Explore the Recipe</span>
-                      <ArrowRight className="w-3.5 h-3.5" />
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => onNavigate("/guides/authentic-dhaka-shahi-kacchi-biryani")}
-                      className="text-xs text-[#77736D] hover:text-[#30302F] underline cursor-pointer"
-                    >
-                      Read Technique Guide →
-                    </button>
+                  <div className="pt-4 border-t border-[#E6E1D8] space-y-2.5">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <button
+                        type="button"
+                        onClick={() => navigateToRecipe("kacchi-biryani")}
+                        className="inline-flex items-center gap-1.5 text-xs font-bold text-[#E97520] hover:text-[#d36615] transition-colors cursor-pointer"
+                      >
+                        <span>Kacchi Biryani</span>
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </button>
+                      <span className="text-[#D6D1C7]">&bull;</span>
+                      <button
+                        type="button"
+                        onClick={() => navigateToRecipe("bengali-beef-tehari")}
+                        className="inline-flex items-center gap-1.5 text-xs font-bold text-[#E97520] hover:text-[#d36615] transition-colors cursor-pointer"
+                      >
+                        <span>Beef Tehari</span>
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </button>
+                    </div>
+                    <div>
+                      <button
+                        type="button"
+                        onClick={() => onNavigate("/guides/authentic-dhaka-shahi-kacchi-biryani")}
+                        className="text-xs text-[#77736D] hover:text-[#30302F] underline cursor-pointer"
+                      >
+                        Read Dum Technique Guide →
+                      </button>
+                    </div>
                   </div>
                 </div>
 
@@ -549,7 +562,7 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
                       Bengali Beef Nihari
                     </h3>
                     <p className="text-xs text-[#77736D] leading-relaxed">
-                      Extracting rich bone marrow collagen across 6 to 8 hours of gentle stewing demands exceptional moisture retention and gentle simmering control.
+                      Extracting rich bone marrow collagen across 6 to 8 hours of gentle stewing demands exceptional moisture retention and steady low-heat simmering without scorching the meat or reducing liquid too fast.
                     </p>
 
                     <div className="pt-2">
@@ -559,7 +572,7 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
                       <ul className="text-xs text-[#57534E] space-y-1.5 list-disc list-inside">
                         <li>
                           <a href="#prod-dutch-oven-braiser" className="hover:text-[#E97520] hover:underline font-medium">
-                            Heavy-Bottomed Braising Pot
+                            Heavy-Bottomed Braising Pot / Dutch Oven
                           </a>
                         </li>
                         <li>Fine-Mesh Strainer</li>
@@ -598,7 +611,7 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
                       Bengali Beef Bhuna
                     </h3>
                     <p className="text-xs text-[#77736D] leading-relaxed">
-                      The slow frying of spices and meat in their own rendered juices ('koshano') requires high thermal mass so the pan never cools when aromatics are introduced.
+                      The slow frying of spices and meat in their own rendered juices ('koshano') requires high thermal mass so the pan never cools when aromatics are introduced, ensuring deep mahogany caramelization.
                     </p>
 
                     <div className="pt-2">
@@ -608,7 +621,7 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
                       <ul className="text-xs text-[#57534E] space-y-1.5 list-disc list-inside">
                         <li>
                           <a href="#prod-cast-iron-kadai" className="hover:text-[#E97520] hover:underline font-medium">
-                            Cast-Iron Kadai
+                            Pre-Seasoned Cast-Iron Kadai
                           </a>
                         </li>
                         <li>Hardwood Spatula</li>
@@ -646,7 +659,7 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
                       Bengali Shahi Chicken Roast
                     </h3>
                     <p className="text-xs text-[#77736D] leading-relaxed">
-                      Quartered chicken seared in fragrant beresta oil and simmered in a velvety yogurt, nut, and warm spice gravy with controlled reduction.
+                      Quartered chicken seared in fragrant beresta oil and simmered in a velvety yogurt, nut, and warm spice gravy. Cast iron maintains searing heat to form golden skins without releasing watery juices.
                     </p>
 
                     <div className="pt-2">
@@ -656,7 +669,7 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
                       <ul className="text-xs text-[#57534E] space-y-1.5 list-disc list-inside">
                         <li>
                           <a href="#prod-cast-iron-kadai" className="hover:text-[#E97520] hover:underline font-medium">
-                            Cast-Iron Kadai
+                            Pre-Seasoned Cast-Iron Kadai
                           </a>
                         </li>
                         <li>
@@ -689,17 +702,17 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
                   </div>
                 </div>
 
-                {/* 5. PANCH PHORON COOKING */}
+                {/* 5. PANCH PHORON COOKING & WHOLE SPICES */}
                 <div className="p-6 rounded-xl border border-[#E6E1D8] bg-white hover:border-[#E97520]/50 transition-all shadow-xs flex flex-col justify-between space-y-4">
                   <div className="space-y-3">
                     <span className="text-[10px] font-bold uppercase tracking-wider text-[#2D7A52] bg-[#EBF5F0] px-2.5 py-1 rounded">
-                      AROMATIC TEMPERING
+                      AROMATIC WHOLE SPICE PREPARATION
                     </span>
                     <h3 className="text-xl font-bold text-[#242423] font-serif-editorial">
-                      Panch Phoron Cooking
+                      Panch Phoron &amp; Whole Spices
                     </h3>
                     <p className="text-xs text-[#77736D] leading-relaxed">
-                      Sputtering whole seeds in smoking mustard oil requires instantaneous temperature monitoring to release fragrance without burning fenugreek into bitterness.
+                      Bruising whole Bengali seeds releases aromatic essential oils from seed coats without pulverizing bitter compounds. Coarse granite crushing provides superior flavor extraction in hot mustard oil.
                     </p>
 
                     <div className="pt-2">
@@ -709,7 +722,7 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
                       <ul className="text-xs text-[#57534E] space-y-1.5 list-disc list-inside">
                         <li>
                           <a href="#prod-granite-mortar-pestle" className="hover:text-[#E97520] hover:underline font-medium">
-                            Mortar &amp; Pestle
+                            Granite Mortar &amp; Pestle
                           </a>
                         </li>
                         <li>Spice Grinder</li>
@@ -737,17 +750,17 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
                   </div>
                 </div>
 
-                {/* 6. RADHUNI & RARE BENGALI SPICES */}
+                {/* 6. RADHUNI & PRECISION SPICE MEASUREMENT */}
                 <div className="p-6 rounded-xl border border-[#E6E1D8] bg-white hover:border-[#E97520]/50 transition-all shadow-xs flex flex-col justify-between space-y-4">
                   <div className="space-y-3">
                     <span className="text-[10px] font-bold uppercase tracking-wider text-[#7C3AED] bg-[#F5F3FF] px-2.5 py-1 rounded">
-                      HERITAGE BOTANICALS
+                      HERITAGE BOTANICALS &amp; PRECISION
                     </span>
                     <h3 className="text-xl font-bold text-[#242423] font-serif-editorial">
-                      Radhuni &amp; Rare Botanicals
+                      Radhuni &amp; Metric Spice Accuracy
                     </h3>
                     <p className="text-xs text-[#77736D] leading-relaxed">
-                      Preserving delicate essential oils in wild celery seed and crushing fresh pastes for signature Shukto and Macher Jhol preparations.
+                      Pungent botanicals like wild celery seed (radhuni) and mace require single-gram scale accuracy to balance gravies without overwhelming delicate fish and vegetable flavors.
                     </p>
 
                     <div className="pt-2">
@@ -755,12 +768,17 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
                         Recommended tools:
                       </span>
                       <ul className="text-xs text-[#57534E] space-y-1.5 list-disc list-inside">
-                        <li>Airtight Spice Jars</li>
                         <li>
                           <a href="#prod-granite-mortar-pestle" className="hover:text-[#E97520] hover:underline font-medium">
-                            Mortar &amp; Pestle
+                            Granite Mortar &amp; Pestle
                           </a>
                         </li>
+                        <li>
+                          <a href="#prod-digital-kitchen-scale" className="hover:text-[#E97520] hover:underline font-medium">
+                            Digital Kitchen Scale
+                          </a>
+                        </li>
+                        <li>Airtight Spice Jars</li>
                         <li>Measuring Spoons</li>
                       </ul>
                     </div>
@@ -1486,7 +1504,7 @@ const ProductCard: React.FC<{ product: AffiliateProductItem }> = ({ product }) =
       id={product.id}
       className="p-5 rounded-xl border border-[#E6E1D8] bg-white hover:border-[#E97520]/50 hover:shadow-sm transition-all flex flex-col justify-between space-y-4 scroll-mt-24"
     >
-      <div className="space-y-2.5">
+      <div className="space-y-3">
         <div className="flex items-center justify-between gap-2">
           <span className="text-[10px] font-bold uppercase tracking-wider text-[#E97520] bg-[#FAF9F6] px-2 py-0.5 rounded border border-[#E6E1D8]">
             {product.category}
@@ -1510,8 +1528,10 @@ const ProductCard: React.FC<{ product: AffiliateProductItem }> = ({ product }) =
         </div>
 
         {product.whyItMatters && (
-          <div className="pt-2 text-xs text-[#57534E] leading-relaxed border-t border-[#F3F2EE]">
-            <strong className="text-[#30302F] font-semibold block mb-0.5">WHY:</strong>
+          <div className="p-3 rounded-lg bg-[#FAF9F6] border border-[#F0EFEA] text-xs text-[#57534E] leading-relaxed space-y-1">
+            <strong className="text-[#30302F] font-semibold block text-[11px] uppercase tracking-wider">
+              WHY IT MATTERS:
+            </strong>
             <p className="text-[#57534E]">{product.whyItMatters}</p>
           </div>
         )}
@@ -1523,13 +1543,14 @@ const ProductCard: React.FC<{ product: AffiliateProductItem }> = ({ product }) =
             href={product.affiliateUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full inline-flex items-center justify-center gap-1.5 py-2 px-3 bg-[#E97520] hover:bg-[#d36615] text-white text-xs font-bold rounded-lg transition-colors shadow-xs cursor-pointer"
+            aria-label={`View ${product.name} on Amazon (opens in new tab)`}
+            className="w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-3 bg-[#E97520] hover:bg-[#d36615] text-white text-xs font-bold rounded-lg transition-colors shadow-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-[#E97520] focus:ring-offset-2"
           >
             <span>View product</span>
-            <ExternalLink className="w-3.5 h-3.5" />
+            <ExternalLink className="w-3.5 h-3.5 shrink-0" aria-hidden="true" />
           </a>
         ) : (
-          <div className="w-full py-2 px-3 bg-[#FAF9F6] border border-[#E6E1D8] text-[#8A857E] text-[11px] font-medium text-center rounded-lg">
+          <div className="w-full py-2.5 px-3 bg-[#FAF9F6] border border-[#E6E1D8] text-[#8A857E] text-[11px] font-medium text-center rounded-lg">
             Affiliate link coming soon
           </div>
         )}

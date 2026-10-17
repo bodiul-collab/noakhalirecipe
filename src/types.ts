@@ -1,3 +1,61 @@
+export interface RecipeIngredient {
+  amount: string;
+  unit?: string;
+  name: string;
+  notes?: string;
+}
+
+export interface RecipeInstruction {
+  step?: number;
+  title: string;
+  instruction: string;
+  tip?: string;
+}
+
+export interface RecipeNutrition {
+  calories: number;
+  proteinGrams: number;
+  carbsGrams: number;
+  fatGrams: number;
+  saturatedFatGrams?: number;
+  fiberGrams?: number;
+  sodiumMg?: number;
+  servingSizeDescription?: string;
+  perServing?: {
+    calories?: number;
+    proteinGrams?: number;
+    carbsGrams?: number;
+    fatGrams?: number;
+    fiberGrams?: number;
+    sodiumMg?: number;
+  };
+  totalRecipe?: {
+    calories?: number;
+    proteinGrams?: number;
+    carbsGrams?: number;
+    fatGrams?: number;
+    fiberGrams?: number;
+    sodiumMg?: number;
+  };
+}
+
+export interface RecipeAuthor {
+  name: string;
+  role: string;
+  avatar?: string;
+}
+
+export interface RecipeFAQ {
+  question: string;
+  answer: string;
+}
+
+export interface RecipeIngredientSubstitute {
+  original: string;
+  substitute: string;
+  notes: string;
+}
+
 export interface Recipe {
   id: string;
   slug: string;
@@ -6,93 +64,74 @@ export interface Recipe {
   categorySlug: string;
   cuisine: string;
   description: string;
-  introStory: string;
+  introStory?: string;
   heroImage: string;
   prepTimeMinutes: number;
   cookTimeMinutes: number;
   totalTimeMinutes: number;
   servings: number;
-  difficulty: "Easy" | "Medium" | "Advanced";
+  difficulty: "Easy" | "Medium" | "Advanced" | "Expert";
   calories: number;
   rating: number;
   reviewCount: number;
   isTrending?: boolean;
   isFeatured?: boolean;
   isRegionalHeritage?: boolean;
-  halalNotes: string;
-  potentialCautionNotes?: string;
-  ingredients: Array<{
-    amount: string;
-    unit?: string;
-    name: string;
-    notes?: string;
-  }>;
-  substitutions: Array<{
-    original: string;
-    substitute: string;
-    notes: string;
-  }>;
-  instructions: Array<{
-    step: number;
-    title: string;
-    instruction: string;
-    tip?: string;
-  }>;
-  chefNotes: string[];
-  nutrition: RecipeNutrition;
-  storageInstructions: string;
-  freezingInstructions: string;
-  servingSuggestions: string[];
-  faqs: Array<{
-    question: string;
-    answer: string;
-  }>;
-  author: {
-    name: string;
-    role: string;
-    avatar?: string;
-  };
-  updatedDate: string;
-  tags: string[];
   whySpecial?: string;
+  halalNotes?: string;
+  potentialCautionNotes?: string;
   cookingTips?: string[];
   commonMistakes?: string[];
-  relatedRecipeSlugs?: string[];
-  relatedGuideSlugs?: string[];
-  relatedCultureSlug?: string;
-  relatedKitchenToolId?: string;
-  affiliateLinks?: Array<{
-    title: string;
-    url: string;
-    badge?: string;
-    description?: string;
-  }>;
-  ctaLinks?: Array<{
-    title: string;
-    url: string;
-    badge?: string;
-    description?: string;
-  }>;
   seoTitle?: string;
   seoDescription?: string;
+  kitchenToolId?: string;
+  relatedKitchenToolId?: string;
+  relatedRecipes?: string[];
+  relatedGuides?: string[];
+  relatedGuideSlugs?: string[];
+  relatedRecipeSlugs?: string[];
+  relatedCulture?: string;
+  relatedCultureSlug?: string;
+  ingredients: RecipeIngredient[];
+  ingredientSubstitutes?: RecipeIngredientSubstitute[];
+  substitutions?: RecipeIngredientSubstitute[];
+  instructions: RecipeInstruction[];
+  chefNotes?: string[];
+  nutrition: RecipeNutrition;
+  storageInstructions?: string;
+  freezingInstructions?: string;
+  servingSuggestions?: string[];
+  faqs?: RecipeFAQ[];
+  author: RecipeAuthor;
+  updatedDate: string;
+  tags: string[];
+}
+
+export interface RecipeCollection {
+  id: string;
+  name: string;
+  description: string;
+  recipeIds: string[];
+  color: string;
+  icon: string;
+  createdAt: number;
+}
+
+export interface UserRecipeRating {
+  recipeId: string;
+  rating: number;
+  reviewText?: string;
+  ratedAt: string;
+  updatedAt?: string;
 }
 
 export interface CookingGuide {
   id: string;
   slug: string;
   title: string;
-  category:
-    | "Cooking Techniques"
-    | "Traditional Bengali Cooking"
-    | "Spice Guides"
-    | "Ingredient Guides"
-    | "Ingredient Substitutions"
-    | "Beginner Cooking"
-    | "Kitchen Tips"
-    | "Guides";
+  category: string;
   excerpt: string;
   content: string;
-  heroImage: string;
   author: {
     name: string;
     role: string;
@@ -100,32 +139,30 @@ export interface CookingGuide {
   publishedDate: string;
   updatedDate: string;
   readTimeMinutes: number;
-  tags?: string[];
   relatedRecipeSlugs: string[];
   relatedGuideSlugs?: string[];
+  tags?: string[];
+  heroImage?: string;
+  seoTitle?: string;
+  seoDescription?: string;
   troubleshooting?: Array<{
-    problem: string;
-    cause: string;
-    solution: string;
+    problem?: string;
+    issue?: string;
+    cause?: string;
+    fix?: string;
+    solution?: string;
   }>;
   faqs?: Array<{
     question: string;
     answer: string;
   }>;
-  seoTitle?: string;
-  seoDescription?: string;
 }
 
 export interface FoodCultureArticle {
   id: string;
   slug: string;
   title: string;
-  category:
-    | "Bangladeshi Food Culture"
-    | "Regional Foods"
-    | "Halal Food Traditions"
-    | "Ramadan & Eid Food Culture"
-    | "South Asian Food Stories";
+  category: string;
   excerpt: string;
   content: string;
   heroImage: string;
@@ -136,42 +173,41 @@ export interface FoodCultureArticle {
   publishedDate: string;
   updatedDate: string;
   readTimeMinutes: number;
-  relatedRecipeSlugs: string[];
-  faqs?: Array<{
-    question: string;
-    answer: string;
-  }>;
+  relatedRecipeSlugs?: string[];
 }
 
 export interface KitchenToolItem {
   id: string;
   title: string;
-  category: "Useful Kitchen Equipment" | "Recipe-Specific Tools" | "Kitchen Essentials";
+  category: string;
   description: string;
   recommendedUse: string;
   practicalTips: string[];
   relatedRecipeSlugs: string[];
   badge?: string;
+  affiliateUrl?: string;
 }
+
+export type KitchenEquipmentItem = KitchenToolItem;
 
 export interface AffiliateProductItem {
   id: string;
   name: string;
-  category:
-    | "Cookware"
-    | "Precision Cooking Tools"
-    | "Spice Preparation"
-    | "Preparation Tools"
-    | "Pantry & Storage"
-    | "Kitchen Tools"
-    | "Spices & Pantry"
-    | "Storage & Organization";
+  category: string;
   description: string;
-  whyItMatters?: string;
+  whyItMatters: string;
   bestFor: string;
-  affiliateUrl: string | null;
-  image?: string;
-  disclosureRequired?: boolean;
+  affiliateUrl: string;
+  disclosureRequired: boolean;
+}
+
+export type AffiliateProduct = AffiliateProductItem;
+
+export interface PantryStapleItem {
+  name: string;
+  bengaliOrRegionalName?: string;
+  purpose: string;
+  halalVerificationNotes: string;
 }
 
 export interface HalalPantrySection {
@@ -181,35 +217,10 @@ export interface HalalPantrySection {
   subtitle: string;
   description: string;
   verificationGuidance: string;
-  keyStaples: Array<{
-    name: string;
-    bengaliOrRegionalName?: string;
-    purpose: string;
-    halalVerificationNotes: string;
-  }>;
+  keyStaples: PantryStapleItem[];
 }
 
-export interface KeyNutritionalInfo {
-  calories: number;
-  proteinGrams: number;
-  fatGrams: number;
-  carbsGrams: number;
-  fiberGrams?: number;
-  sodiumMg?: number;
-}
-
-export interface RecipeNutrition {
-  calories: number; // Calories (kcal) per serving
-  proteinGrams: number; // Protein (g) per serving
-  carbsGrams: number; // Carbohydrates (g) per serving
-  fatGrams: number; // Total Fat (g) per serving
-  saturatedFatGrams?: number; // Saturated Fat (g) per serving
-  fiberGrams: number; // Fiber (g) per serving
-  sodiumMg: number; // Sodium (mg) per serving
-  servingSizeDescription?: string; // e.g. "1 bowl (approx. 380g)"
-  perServing?: KeyNutritionalInfo; // Explicit per-serving key macro breakdown
-  totalRecipe?: KeyNutritionalInfo; // Total whole recipe values
-}
+export type PantryItem = PantryStapleItem;
 
 export interface CategoryHub {
   id: string;
@@ -219,50 +230,45 @@ export interface CategoryHub {
   fullDescription: string;
   image: string;
   featuredRecipeSlugs: string[];
-  faqs: Array<{
-    question: string;
-    answer: string;
-  }>;
-  halalPointers: string[];
-}
-
-export interface BlogPost {
-  id: string;
-  slug: string;
-  title: string;
-  category: "Halal Guides" | "Food Culture" | "Kitchen Skills" | "Meal Planning" | "Pantry Essentials";
-  excerpt: string;
-  content: string;
-  heroImage: string;
-  author: {
-    name: string;
-    role: string;
-  };
-  publishedDate: string;
-  updatedDate: string;
-  readTimeMinutes: number;
-  relatedRecipeSlugs: string[];
   faqs?: Array<{
     question: string;
     answer: string;
   }>;
+  halalPointers?: string[];
 }
+
+export type RecipeCategory = CategoryHub;
 
 export interface ECodeItem {
   code: string;
   name: string;
-  status: "Halal" | "Mushbooh (Doubtful)" | "Haram" | "Check Source";
+  status: "Halal" | "Haram" | "Mushbooh (Doubtful)" | "Check Source";
   source: string;
   description: string;
   verificationAdvice: string;
 }
 
-export interface RecipeCollection {
+export type HalalECode = ECodeItem;
+
+export interface BlogPost {
   id: string;
-  name: string;
-  description?: string;
-  recipeIds: string[];
-  createdAt: number;
-  color?: string;
-  icon?: string;
+  slug: string;
+  title: string;
+  category: string;
+  excerpt: string;
+  content: string;
+  heroImage?: string;
+  author?: {
+    name: string;
+    role: string;
+  };
+  publishedDate?: string;
+  updatedDate?: string;
+  readTimeMinutes?: number;
+  relatedRecipeSlugs?: string[];
+  tags?: string[];
+  faqs?: Array<{
+    question: string;
+    answer: string;
+  }>;
 }

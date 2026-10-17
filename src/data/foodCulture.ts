@@ -3,28 +3,31 @@ import { IMAGES } from "./assets";
 
 export const FOOD_CULTURE_ARTICLES: FoodCultureArticle[] = [
   {
-    id: "culture-noakhali-heritage",
+    id: "culture-coastal-noakhali",
     slug: "heritage-of-noakhali-coastal-cooking",
-    title: "The Coastal Heritage of Noakhali: Coconut, Mustard & River Catch",
+    title: "The Heritage of Coastal Noakhali Cooking: Fire, Fermentation & Coconut",
     category: "Bangladeshi Food Culture",
     excerpt:
-      "A deep culinary exploration into Noakhali's historic coastal foodways, where fresh grating coconuts, pungent mustard paste, and fresh river Hilsa converge.",
-    content: `Situated on the fertile delta where the mighty Meghna River empties into the Bay of Bengal, the historic district of Noakhali has developed a distinctive regional food philosophy. While central Bengal relies heavily on mustard oil and onion pastes, Noakhali cooking marries the coastal sweetness of freshly grated coconut with the fiery bite of green chilies and pungent mustard.
+      "Explore the unique coastal gastronomy of Noakhali: fiery Morich Khola, silky coconut-milk gravies, and sun-dried shutki traditions.",
+    content: `Nestled along the dynamic estuary of the Meghna River and the Bay of Bengal, Noakhali occupies a distinct place in Bengali culinary geography. The brackish waters, fertile delta soil, and abundant coconut groves have shaped a bold, unhurried, and fiery flavor profile.
 
-### The Sacred Silver Hilsa
-In Noakhali households, the silver Hilsa (Tenualosa ilisha) is revered as both a culinary masterpiece and a cultural emblem. During monsoon migrations, whole fish are brought fresh from river estuaries and cooked simply with freshly ground mustard seeds (shorshe bata), nigella seeds (kalo jeere), and green chili slits in cold-pressed mustard oil.
+### The Pungent Terroir of Noakhali
+Unlike the sweeter, dairy-rich preparations of western Bengal, authentic Noakhali cooking celebrates three culinary pillars:
+1. **Fiery Chili Pastes (Morich Khola):** Fresh small river fish braised with copious amounts of ground red chilies, crushed garlic, and cold-pressed mustard oil inside clay vessels or banana leaves.
+2. **Fresh Coconut & Milk Integration:** Freshly grated coconut and rich pressed coconut milk temper fiery gravies, notably in celebratory duck curries and winter pithas.
+3. **Sun-Dried River Fish (Shutki):** Preserving seasonal glut through artisanal drying, resulting in concentrated umami stews simmered with garlic, onions, and mustard oil.
 
-### The Sweet and Savory Coconut Balance
-In dishes like Chingri Malai Curry and regional mutton braises, freshly squeezed thick coconut milk (narkeler doodh) mellows intense spices into a velvety, fragrant sauce, illustrating the coastal maritime geography of the region.`,
+### Communal Hospitality
+In Noakhali homes, feasts are governed by deep-seated hospitality (mehmandari), where multi-course meals transition from bitter starter bhortas and fiery river fish to soothing jhol and festive coconut sweets.`,
     heroImage: IMAGES.shorsheIlish,
     author: {
       name: "Chef Tariq Rahman",
       role: "Culinary Director",
     },
-    publishedDate: "September 8, 2026",
-    updatedDate: "September 11, 2026",
+    publishedDate: "September 1, 2026",
+    updatedDate: "September 5, 2026",
     readTimeMinutes: 7,
-    relatedRecipeSlugs: ["noakhali-shorshe-ilish", "chingri-malai-curry"],
+    relatedRecipeSlugs: ["fish-morich-khola", "duck-curry-with-coconut-milk", "loitta-shutki-bhuna-dried-fermented-fish"],
   },
   {
     id: "culture-ramadan-eid-dawat",
@@ -48,7 +51,7 @@ On Eid morning, before departure for communal prayer (Salat al-Eid), it is custo
     publishedDate: "August 30, 2026",
     updatedDate: "September 2, 2026",
     readTimeMinutes: 8,
-    relatedRecipeSlugs: ["shahi-chicken-roast", "traditional-shahi-borhani", "halal-chicken-biryani"],
+    relatedRecipeSlugs: ["bengali-chicken-roast", "borhani", "chicken-biryani"],
   },
   {
     id: "culture-mezban-feasts",
@@ -96,7 +99,7 @@ A truly Tayyib culinary philosophy encompasses:
     publishedDate: "August 12, 2026",
     updatedDate: "August 20, 2026",
     readTimeMinutes: 6,
-    relatedRecipeSlugs: ["halal-chicken-biryani", "vegetable-bhuna-khichuri"],
+    relatedRecipeSlugs: ["chicken-biryani", "vegetable-bhuna-khichuri"],
   },
   {
     id: "culture-role-of-rice",

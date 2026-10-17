@@ -14,7 +14,7 @@ export const KITCHEN_EQUIPMENT: KitchenToolItem[] = [
       "Seal the rim with wheat flour dough or heavy double-foil before placing the lid on.",
       "Place a flat cast iron tawa underneath the pot for diffuse indirect flame during the final 20-minute dum stage.",
     ],
-    relatedRecipeSlugs: ["bengali-chicken-biryani", "halal-chicken-biryani", "vegetable-bhuna-khichuri"],
+    relatedRecipeSlugs: ["bengali-chicken-biryani", "chicken-biryani", "vegetable-bhuna-khichuri"],
     badge: "Heritage Essential",
   },
   {
@@ -45,7 +45,7 @@ export const KITCHEN_EQUIPMENT: KitchenToolItem[] = [
       "Season regularly with a thin coat of mustard oil baked on high heat.",
       "Never soak cast iron in soapy water for extended periods; dry thoroughly over a warm burner after washing.",
     ],
-    relatedRecipeSlugs: ["bengali-beef-bhuna", "chittagong-mezbani-beef-curry", "shahi-chicken-roast"],
+    relatedRecipeSlugs: ["bengali-beef-bhuna", "chittagong-mezbani-beef-curry", "bengali-chicken-roast"],
     badge: "Daily Workhorse",
   },
   {
@@ -60,7 +60,7 @@ export const KITCHEN_EQUIPMENT: KitchenToolItem[] = [
       "Natural hardwood ghutnis do not scratch non-stick or enameled cookware.",
       "Roll the handle between both open palms for 30 seconds for effortless, smooth texture.",
     ],
-    relatedRecipeSlugs: ["traditional-shahi-borhani", "vegetable-bhuna-khichuri"],
+    relatedRecipeSlugs: ["borhani", "vegetable-bhuna-khichuri"],
     badge: "Classic Utility",
   },
   {
@@ -75,7 +75,7 @@ export const KITCHEN_EQUIPMENT: KitchenToolItem[] = [
       "Always use the 'Tare' function to zero out bowls before adding dry or liquid ingredients.",
       "Measure delicate spices like saffron, green cardamom, and fenugreek in grams for consistent outcomes.",
     ],
-    relatedRecipeSlugs: ["halal-chicken-biryani", "shahi-chicken-roast"],
+    relatedRecipeSlugs: ["chicken-biryani", "bengali-chicken-roast"],
     badge: "Precision",
   },
   {
@@ -90,7 +90,7 @@ export const KITCHEN_EQUIPMENT: KitchenToolItem[] = [
       "Use stainless steel to prevent acidic tamarind or lemon juices from reacting with the metal.",
       "Doubles as a stove splatter screen when blooming whole spices in hot oil.",
     ],
-    relatedRecipeSlugs: ["noakhali-shorshe-ilish", "traditional-shahi-borhani"],
+    relatedRecipeSlugs: ["noakhali-shorshe-ilish", "borhani"],
     badge: "Multi-Purpose",
   },
 ];

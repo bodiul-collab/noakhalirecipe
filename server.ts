@@ -1,5 +1,6 @@
 import express from "express";
 import path from "path";
+import fs from "fs";
 import dotenv from "dotenv";
 import { exec } from "child_process";
 import { GoogleGenAI } from "@google/genai";
@@ -57,6 +58,28 @@ app.get(
   ],
   (_req, res) => {
     res.redirect(301, "/guides/bengali-shahi-chicken-roast-guide");
+  }
+);
+
+// Tehari vs Biryani guide alias 301 redirect
+app.get(
+  [
+    "/guides/old-dhaka-beef-tehari-vs-biryani-guide",
+    "/guides/old-dhaka-beef-tehari-vs-biryani-guide/",
+  ],
+  (_req, res) => {
+    res.redirect(301, "/guides/old-dhaka-beef-tehari-vs-biryani");
+  }
+);
+
+// Legacy Essential Bengali Spices guide alias 301 redirect to foundation guide
+app.get(
+  [
+    "/guides/essential-bengali-spices-guide",
+    "/guides/essential-bengali-spices-guide/",
+  ],
+  (_req, res) => {
+    res.redirect(301, "/guides/how-to-build-a-bangladeshi-spice-base");
   }
 );
 
@@ -186,103 +209,18 @@ Sitemap: https://www.noakhalikitchen.com/sitemap.xml
 `);
 });
 
-// Sitemap.xml route
+// Sitemap.xml route - serves the authoritative sitemap generated from datasets
 app.get("/sitemap.xml", (_req, res) => {
   res.type("application/xml");
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Core Hubs -->
-  <url><loc>https://www.noakhalikitchen.com/</loc><priority>1.0</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes</loc><priority>0.9</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/guides</loc><priority>0.9</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/culture</loc><priority>0.8</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/pantry</loc><priority>0.8</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/tools</loc><priority>0.8</priority></url>
+  const sitemapDist = path.join(process.cwd(), "dist", "sitemap.xml");
+  const sitemapPublic = path.join(process.cwd(), "public", "sitemap.xml");
+  const sitemapPath = fs.existsSync(sitemapDist) ? sitemapDist : sitemapPublic;
 
-  <!-- Cornerstone Recipes -->
-  <url><loc>https://www.noakhalikitchen.com/recipes/fresh-ginger-juice</loc><priority>0.9</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/tamr-hindi</loc><priority>0.9</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/sobia</loc><priority>0.9</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/laban-ayran</loc><priority>0.9</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/cold-pressed-pina-colada-mocktail</loc><priority>0.9</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/avocado-pineapple-smoothie</loc><priority>0.9</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/anti-inflammatory-turmeric-smoothie</loc><priority>0.9</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/vibrant-dragon-fruit-banana-superfood-nice-cream-sorbet</loc><priority>0.9</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/anti-inflammatory-lemon-blueberry-smoothie</loc><priority>0.9</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/electric-blue-spirulina-superfood-juice</loc><priority>0.9</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/velvety-blueberry-banana-fruit-sorbet</loc><priority>0.9</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/ginger-berry-anti-inflammatory-smoothie</loc><priority>0.9</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/bengali-beef-tehari</loc><priority>0.9</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/chicken-vindaloo</loc><priority>0.95</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/lamb-vindaloo</loc><priority>0.95</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/kholaja-pitha</loc><priority>0.95</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/duck-curry-with-coconut-milk</loc><priority>0.95</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/tomato-bhorta</loc><priority>0.95</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/dal-bhorta</loc><priority>0.95</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/patishapta-pitha</loc><priority>0.95</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/chitoi-pitha</loc><priority>0.95</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/dudh-chitai-pitha</loc><priority>0.95</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/panta-bhat-with-bhorta</loc><priority>0.95</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/pabda-fish-curry-bengali-style</loc><priority>0.95</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/morog-polao</loc><priority>0.95</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/chicken-biryani</loc><priority>0.9</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/kacchi-biryani</loc><priority>0.9</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/bengali-beef-bhuna</loc><priority>0.9</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/bengali-chicken-roast</loc><priority>0.9</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/beef-kala-bhuna</loc><priority>0.9</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/chicken-rezala</loc><priority>0.9</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/authentic-nihari</loc><priority>0.9</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/chicken-karahi</loc><priority>0.9</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/authentic-chicken-shawarma</loc><priority>0.9</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/bengali-style-australian-pie</loc><priority>0.9</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/puri-poori</loc><priority>0.9</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/authentic-beef-shatkora</loc><priority>0.9</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/beef-shami-kabab</loc><priority>0.9</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/veggie-burger</loc><priority>0.9</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/australian-beef-pie</loc><priority>0.9</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/butter-salmon-curry</loc><priority>0.9</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/beef-burger</loc><priority>0.9</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/coconut-cloud-smoothie</loc><priority>0.9</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/earth-smoothie</loc><priority>0.9</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/old-dhaka-haji-biryani</loc><priority>0.95</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/boiled-rice</loc><priority>0.9</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/easy-basmati-rice-cooking</loc><priority>0.9</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/bengali-beef-pasta</loc><priority>0.95</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/suji-halwa-halva</loc><priority>0.95</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/cucumber-lime-lemon-juice</loc><priority>0.95</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/recipes/fish-morich-khola</loc><priority>0.95</priority></url>
-
-  <!-- Editorial Culinary Authority Foundation (Batch 1 & 2 Guides) -->
-  <url><loc>https://www.noakhalikitchen.com/guides/authentic-bengali-beef-nihari-guide</loc><priority>0.85</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/guides/bengali-panch-phoron-guide</loc><priority>0.85</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/guides/authentic-dhaka-shahi-kacchi-biryani</loc><priority>0.85</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/guides/bengali-beef-bhuna-guide</loc><priority>0.85</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/guides/mustard-oil-bengali-cooking</loc><priority>0.85</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/guides/how-to-make-perfect-beresta</loc><priority>0.85</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/guides/bengali-radhuni-guide</loc><priority>0.85</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/guides/bengali-shahi-chicken-roast-guide</loc><priority>0.85</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/guides/chittagong-beef-kala-bhuna-guide</loc><priority>0.85</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/guides/old-dhaka-beef-tehari-vs-biryani</loc><priority>0.85</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/guides/how-to-cook-with-panch-phoron</loc><priority>0.85</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/guides/authentic-royal-beef-nihari-guide</loc><priority>0.85</priority></url>
-
-  <!-- Categories -->
-  <url><loc>https://www.noakhalikitchen.com/category/halal-drinks</loc><priority>0.8</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/category/halal-chicken</loc><priority>0.8</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/category/halal-beef</loc><priority>0.8</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/category/halal-seafood</loc><priority>0.8</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/category/halal-vegetarian</loc><priority>0.8</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/category/halal-rice-curry</loc><priority>0.8</priority></url>
-
-  <!-- Institutional Pages -->
-  <url><loc>https://www.noakhalikitchen.com/tools</loc><priority>0.85</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/about</loc><priority>0.7</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/contact</loc><priority>0.7</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/privacy</loc><priority>0.5</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/terms</loc><priority>0.5</priority></url>
-  <url><loc>https://www.noakhalikitchen.com/affiliate-disclosure</loc><priority>0.5</priority></url>
-</urlset>`;
-  res.send(sitemap);
+  if (fs.existsSync(sitemapPath)) {
+    res.sendFile(sitemapPath);
+  } else {
+    res.status(404).send("Sitemap not found");
+  }
 });
 
 // Export and Download Project ZIP endpoint

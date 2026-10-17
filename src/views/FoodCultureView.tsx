@@ -11,6 +11,7 @@ import {
 import { FOOD_CULTURE_ARTICLES } from "../data/foodCulture";
 import { RECIPES } from "../data/recipes";
 import { FoodCultureArticle, Recipe } from "../types";
+import { updatePageSeo, toAbsoluteUrl } from "../utils/seoHead";
 
 interface FoodCultureViewProps {
   initialSlug?: string;
@@ -43,6 +44,33 @@ export const FoodCultureView: React.FC<FoodCultureViewProps> = ({
 
   const currentArticle = FOOD_CULTURE_ARTICLES.find((a) => a.slug === activeSlug);
 
+  // Synchronize document title, meta description, canonical URL, and OpenGraph/Twitter tags
+  useEffect(() => {
+    if (currentArticle) {
+      const pageTitle = `${currentArticle.title} | Food Culture | Noakhali Kitchen`;
+      const desc = currentArticle.excerpt;
+      const canonical = `https://www.noakhalikitchen.com/culture/${currentArticle.slug}`;
+      const cleanup = updatePageSeo({
+        title: pageTitle,
+        description: desc,
+        canonicalUrl: canonical,
+        ogType: "article",
+        imageUrl: currentArticle.heroImage,
+        authorName: currentArticle.author.name,
+      });
+      return cleanup;
+    } else {
+      const cleanup = updatePageSeo({
+        title: "Bengali & Halal Food Culture Stories | Noakhali Kitchen",
+        description:
+          "Explore regional Bengali culinary heritage, culinary anthropology, festive food culture, and sacred Halal cooking traditions.",
+        canonicalUrl: "https://www.noakhalikitchen.com/culture",
+        ogType: "website",
+      });
+      return cleanup;
+    }
+  }, [currentArticle]);
+
   const filteredArticles = FOOD_CULTURE_ARTICLES.filter((article) => {
     const matchesCategory =
       selectedCategory === "All" || article.category === selectedCategory;
@@ -60,15 +88,82 @@ export const FoodCultureView: React.FC<FoodCultureViewProps> = ({
       currentArticle.relatedRecipeSlugs?.includes(r.slug)
     );
 
+    const canonicalArticleUrl = `https://www.noakhalikitchen.com/culture/${currentArticle.slug}`;
+    const absHeroImage = toAbsoluteUrl(currentArticle.heroImage);
+
+    const jsonLdData = {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "@id": `${canonicalArticleUrl}#article`,
+          headline: currentArticle.title,
+          description: currentArticle.excerpt,
+          url: canonicalArticleUrl,
+          mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": canonicalArticleUrl,
+          },
+          author: {
+            "@type": "Person",
+            name: currentArticle.author.name,
+            jobTitle: currentArticle.author.role,
+          },
+          publisher: {
+            "@type": "Organization",
+            name: "Noakhali Kitchen",
+            url: "https://www.noakhalikitchen.com/",
+            logo: {
+              "@type": "ImageObject",
+              url: "https://www.noakhalikitchen.com/icon.svg",
+            },
+          },
+          image: absHeroImage,
+          datePublished: currentArticle.publishedDate,
+          dateModified: currentArticle.updatedDate,
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": `${canonicalArticleUrl}#breadcrumb`,
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: "https://www.noakhalikitchen.com/",
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Food Culture",
+              item: "https://www.noakhalikitchen.com/culture",
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: currentArticle.title,
+              item: canonicalArticleUrl,
+            },
+          ],
+        },
+      ],
+    };
+
     return (
       <div className="w-full bg-[#FAF9F6] dark:bg-[#141413] py-8 sm:py-12">
+        {/* Inject Article & Breadcrumbs Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }}
+        />
+
         <div className="max-w-[860px] mx-auto px-4 sm:px-6 space-y-6">
           {/* Breadcrumbs */}
-          <nav className="flex items-center gap-2 text-xs text-[#77736D] dark:text-[#A8A49E]">
+          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-[#77736D] dark:text-[#A8A49E]">
             <button onClick={() => onNavigate("/")} className="hover:text-[#30302F] dark:hover:text-white cursor-pointer">
               Home
             </button>
-            <span>/</span>
+            <span aria-hidden="true">/</span>
             <button
               onClick={() => {
                 setActiveSlug(null);
@@ -78,8 +173,8 @@ export const FoodCultureView: React.FC<FoodCultureViewProps> = ({
             >
               Food Culture
             </button>
-            <span>/</span>
-            <span className="text-[#30302F] dark:text-white font-bold truncate max-w-[220px]">
+            <span aria-hidden="true">/</span>
+            <span className="text-[#30302F] dark:text-white font-bold truncate max-w-[220px]" aria-current="page">
               {currentArticle.title}
             </span>
           </nav>
@@ -204,8 +299,33 @@ export const FoodCultureView: React.FC<FoodCultureViewProps> = ({
   }
 
   // Food Culture Index View
+  const indexBreadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": "https://www.noakhalikitchen.com/culture#breadcrumb",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.noakhalikitchen.com/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Food Culture",
+        item: "https://www.noakhalikitchen.com/culture",
+      },
+    ],
+  };
+
   return (
     <div className="w-full bg-[#FAF9F6] dark:bg-[#141413] py-10 sm:py-14">
+      {/* Inject Breadcrumbs Schema for Culture Index */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(indexBreadcrumbJsonLd) }}
+      />
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 space-y-8">
         {/* Header Banner */}
         <div className="text-center max-w-3xl mx-auto space-y-3">

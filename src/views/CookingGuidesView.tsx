@@ -711,8 +711,33 @@ export const CookingGuidesView: React.FC<CookingGuidesViewProps> = ({
   }
 
   // Guide Index View
+  const guideIndexBreadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": "https://www.noakhalikitchen.com/guides#breadcrumb",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.noakhalikitchen.com/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Cooking Guides",
+        item: "https://www.noakhalikitchen.com/guides",
+      },
+    ],
+  };
+
   return (
     <div className="w-full bg-[#FAF9F6] dark:bg-[#141413] py-10 sm:py-14">
+      {/* Inject Breadcrumbs Schema for Guides Index */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(guideIndexBreadcrumbJsonLd) }}
+      />
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 space-y-8">
         {/* Header Banner */}
         <div className="text-center max-w-3xl mx-auto space-y-3">

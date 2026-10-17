@@ -5,6 +5,7 @@ import { HalalCheck } from "../components/HalalCheck";
 import { CATEGORIES } from "../data/categories";
 import { RECIPES } from "../data/recipes";
 import { Recipe, CategoryHub, RecipeCollection } from "../types";
+import { updatePageSeo } from "../utils/seoHead";
 
 interface CategoryViewProps {
   initialCategorySlug?: string;
@@ -35,6 +36,31 @@ export const CategoryView: React.FC<CategoryViewProps> = ({
 
   const activeCategory = CATEGORIES.find((c) => c.slug === activeSlug);
 
+  // Synchronize document title, meta description, and canonical URL
+  useEffect(() => {
+    if (activeCategory) {
+      const pageTitle = `${activeCategory.title} | Halal Recipe Collection | Noakhali Kitchen`;
+      const desc = activeCategory.shortDescription || activeCategory.fullDescription;
+      const canonical = `https://www.noakhalikitchen.com/category/${activeCategory.slug}`;
+      const cleanup = updatePageSeo({
+        title: pageTitle,
+        description: desc,
+        canonicalUrl: canonical,
+        ogType: "website",
+      });
+      return cleanup;
+    } else {
+      const cleanup = updatePageSeo({
+        title: "Halal Recipe Categories & Culinary Hubs | Noakhali Kitchen",
+        description:
+          "Browse Halal recipes categorized by protein and culinary style: chicken, beef, seafood, drinks, vegetarian dishes, and meal prep.",
+        canonicalUrl: "https://www.noakhalikitchen.com/category",
+        ogType: "website",
+      });
+      return cleanup;
+    }
+  }, [activeCategory]);
+
   const handleSelectCategory = (slug: string) => {
     setActiveSlug(slug);
     onNavigate(`/category/${slug}`);
@@ -61,23 +87,54 @@ export const CategoryView: React.FC<CategoryViewProps> = ({
       return 0;
     });
 
+    const categoryBreadcrumbJsonLd = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "@id": `https://www.noakhalikitchen.com/category/${activeCategory.slug}#breadcrumb`,
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://www.noakhalikitchen.com/",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Categories",
+          item: "https://www.noakhalikitchen.com/category",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: activeCategory.title,
+          item: `https://www.noakhalikitchen.com/category/${activeCategory.slug}`,
+        },
+      ],
+    };
+
     return (
       <div className="w-full bg-[#FAF9F6] py-10 sm:py-14">
+        {/* Inject Category Hub Breadcrumbs Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(categoryBreadcrumbJsonLd) }}
+        />
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 space-y-10">
           {/* Breadcrumbs */}
-          <nav className="flex items-center gap-2 text-xs text-[#77736D]">
+          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-[#77736D]">
             <button onClick={() => onNavigate("/")} className="hover:text-[#30302F] cursor-pointer">
               Home
             </button>
-            <span>/</span>
+            <span aria-hidden="true">/</span>
             <button
               onClick={handleBackToAllCategories}
               className="hover:text-[#30302F] cursor-pointer"
             >
               Categories
             </button>
-            <span>/</span>
-            <span className="text-[#30302F] font-bold">{activeCategory.title}</span>
+            <span aria-hidden="true">/</span>
+            <span className="text-[#30302F] font-bold" aria-current="page">{activeCategory.title}</span>
           </nav>
 
           <button
@@ -235,8 +292,33 @@ export const CategoryView: React.FC<CategoryViewProps> = ({
   }
 
   // All Categories View
+  const indexBreadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": "https://www.noakhalikitchen.com/category#breadcrumb",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.noakhalikitchen.com/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Categories",
+        item: "https://www.noakhalikitchen.com/category",
+      },
+    ],
+  };
+
   return (
     <div className="w-full bg-[#FAF9F6] py-10 sm:py-14">
+      {/* Inject Breadcrumbs Schema for Categories Index */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(indexBreadcrumbJsonLd) }}
+      />
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 space-y-10">
         <div className="text-center max-w-2xl mx-auto space-y-2">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E97520]">

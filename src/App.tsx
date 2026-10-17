@@ -295,6 +295,18 @@ export default function App() {
         } catch {}
         return "/guides/bengali-shahi-chicken-roast-guide";
       }
+      if (p === "/guides/old-dhaka-beef-tehari-vs-biryani-guide") {
+        try {
+          window.history.replaceState({}, "", "/guides/old-dhaka-beef-tehari-vs-biryani");
+        } catch {}
+        return "/guides/old-dhaka-beef-tehari-vs-biryani";
+      }
+      if (p === "/guides/essential-bengali-spices-guide") {
+        try {
+          window.history.replaceState({}, "", "/guides/how-to-build-a-bangladeshi-spice-base");
+        } catch {}
+        return "/guides/how-to-build-a-bangladeshi-spice-base";
+      }
       return p || "/";
     }
     return "/";
@@ -401,6 +413,27 @@ export default function App() {
         } catch {}
         path = "/guides/bengali-radhuni-guide";
       }
+      if (
+        path === "/guides/biye-barir-shahi-chicken-roast-guide" ||
+        path === "/guides/biye-barir-shahi-chicken-roast"
+      ) {
+        try {
+          window.history.replaceState({}, "", "/guides/bengali-shahi-chicken-roast-guide");
+        } catch {}
+        path = "/guides/bengali-shahi-chicken-roast-guide";
+      }
+      if (path === "/guides/old-dhaka-beef-tehari-vs-biryani-guide") {
+        try {
+          window.history.replaceState({}, "", "/guides/old-dhaka-beef-tehari-vs-biryani");
+        } catch {}
+        path = "/guides/old-dhaka-beef-tehari-vs-biryani";
+      }
+      if (path === "/guides/essential-bengali-spices-guide") {
+        try {
+          window.history.replaceState({}, "", "/guides/how-to-build-a-bangladeshi-spice-base");
+        } catch {}
+        path = "/guides/how-to-build-a-bangladeshi-spice-base";
+      }
       setCurrentRoute(path);
       const slug = extractRecipeSlug(path);
       setSelectedRecipeSlug(slug);
@@ -439,6 +472,14 @@ export default function App() {
       route === "/guides/biye-barir-shahi-chicken-roast"
     ) {
       route = "/guides/bengali-shahi-chicken-roast-guide";
+    }
+
+    if (route === "/guides/old-dhaka-beef-tehari-vs-biryani-guide") {
+      route = "/guides/old-dhaka-beef-tehari-vs-biryani";
+    }
+
+    if (route === "/guides/essential-bengali-spices-guide") {
+      route = "/guides/how-to-build-a-bangladeshi-spice-base";
     }
 
     setCurrentRoute(route);

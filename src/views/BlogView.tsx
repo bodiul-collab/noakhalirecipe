@@ -3,6 +3,7 @@ import { ArrowLeft, Clock, Calendar, User, ArrowRight, Share2, BookOpen } from "
 import { BLOG_POSTS } from "../data/blog";
 import { RECIPES } from "../data/recipes";
 import { BlogPost, Recipe } from "../types";
+import { updatePageSeo } from "../utils/seoHead";
 
 interface BlogViewProps {
   initialSlug?: string;
@@ -23,6 +24,38 @@ export const BlogView: React.FC<BlogViewProps> = ({
   }, [initialSlug]);
 
   const currentPost = BLOG_POSTS.find((p) => p.slug === activeSlug);
+
+  // Synchronize document title, meta description, and canonical URL
+  React.useEffect(() => {
+    if (currentPost) {
+      const pageTitle = `${currentPost.title} | Halal Culinary Journal | Noakhali Kitchen`;
+      const desc = currentPost.excerpt;
+      const canonical = `https://www.noakhalikitchen.com/blog/${currentPost.slug}`;
+      const cleanup = updatePageSeo({
+        title: pageTitle,
+        description: desc,
+        canonicalUrl: canonical,
+        ogType: "article",
+        imageUrl: currentPost.heroImage,
+        authorName: currentPost.author?.name,
+        publishedTime: currentPost.publishedDate,
+        modifiedTime: currentPost.updatedDate,
+      });
+      return cleanup;
+    } else {
+      const pageTitle = "Editorial Journal: Halal Food Guides & Culture | Noakhali Kitchen";
+      const desc =
+        "Thoroughly researched guides on pantry essentials, food additives, weeknight dinner prep, and regional culinary traditions.";
+      const canonical = "https://www.noakhalikitchen.com/blog";
+      const cleanup = updatePageSeo({
+        title: pageTitle,
+        description: desc,
+        canonicalUrl: canonical,
+        ogType: "website",
+      });
+      return cleanup;
+    }
+  }, [currentPost]);
 
   // If viewing a single post
   if (currentPost) {

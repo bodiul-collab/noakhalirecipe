@@ -1,13 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import {
   Sparkles,
   X,
   Send,
-  Search,
-  ExternalLink,
   Loader2,
-  BookOpen,
+  ExternalLink,
+  ChefHat,
+  Compass,
+  Search,
+  MessageSquare,
+  RotateCcw,
 } from "lucide-react";
+
+interface GroundingSource {
+  title: string;
+  url: string;
+  type: "web";
+}
+
+interface Message {
+  role: "user" | "assistant";
+  content: string;
+  sources?: GroundingSource[];
+  timestamp: string;
+}
 
 interface AIAssistantModalProps {
   isOpen: boolean;
@@ -15,208 +31,246 @@ interface AIAssistantModalProps {
   onNavigateToRecipe?: (slug: string) => void;
 }
 
-interface Message {
-  id: string;
-  role: "user" | "assistant";
-  text: string;
-  sources?: Array<{ title: string; url: string; type: "web" }>;
-  searchQueries?: string[];
-  timestamp: string;
-}
+const QUICK_PROMPTS = [
+  "How do I balance whole spices in beef bhuna?",
+  "Substitute for raw papaya in Kacchi Biryani?",
+  "How to tell if mustard oil is properly smoked?",
+  "What is the difference between Radhuni and Ajwain?",
+];
 
 export const AIAssistantModal: React.FC<AIAssistantModalProps> = ({
   isOpen,
   onClose,
+  onNavigateToRecipe,
 }) => {
+  const [inputQuery, setInputQuery] = useState("");
   const [messages, setMessages] = useState<Message[]>([
     {
-      id: "welcome-msg",
       role: "assistant",
-      text: "Salam and welcome to Noakhali Kitchen! I'm your dedicated Halal culinary & kitchen assistant. Ask me about authentic recipes, Halal ingredient verification (gelatin, enzymes, E-codes), cooking techniques, or spice substitutions with live Google Search grounding.",
-      timestamp: "Just now",
+      content:
+        "Assalamu Alaikum! I am your Noakhali Kitchen Culinary Assistant. Ask me anything about authentic Halal cooking, regional Bengali heritage, traditional spice blending, or ingredient verification.",
+      timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
     },
   ]);
-  const [input, setInput] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+      setTimeout(() => {
+        messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isOpen]);
+
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages, isLoading]);
 
   if (!isOpen) return null;
 
-  const handleSend = async (queryText?: string) => {
-    const textToSend = queryText || input;
-    if (!textToSend.trim() || loading) return;
+  const handleSend = async (queryToSend?: string) => {
+    const query = (queryToSend || inputQuery).trim();
+    if (!query || isLoading) return;
 
     const userMessage: Message = {
-      id: `user-${Date.now()}`,
       role: "user",
-      text: textToSend,
+      content: query,
       timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
     };
 
     setMessages((prev) => [...prev, userMessage]);
-    setInput("");
-    setLoading(true);
+    setInputQuery("");
+    setIsLoading(true);
 
     try {
       const response = await fetch("/api/assistant", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          query: textToSend,
-          mode: "search",
+          query,
+          mode: "general",
+          conversationHistory: messages.map((m) => ({
+            role: m.role,
+            content: m.content,
+          })),
         }),
       });
 
-      const data = await response.json();
+      if (!response.ok) {
+        throw new Error(`Server responded with ${response.status}`);
+      }
 
+      const data = await response.json();
       const assistantMessage: Message = {
-        id: `assistant-${Date.now()}`,
         role: "assistant",
-        text: data.text || "I found culinary information for your request.",
+        content: data.text || "I am glad to help. Please let me know if you have more questions!",
         sources: data.groundingSources || [],
-        searchQueries: data.searchQueries || [],
         timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
       };
 
       setMessages((prev) => [...prev, assistantMessage]);
-    } catch (err) {
-      console.error(err);
-      setMessages((prev) => [
-        ...prev,
-        {
-          id: `assistant-err-${Date.now()}`,
-          role: "assistant",
-          text: "I experienced a temporary connection issue. You can still explore our verified recipe index, culinary guides, and kitchen tools directly on the site!",
-          timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
-        },
-      ]);
+    } catch (err: any) {
+      console.error("AI Assistant request failed:", err);
+      const errorMessage: Message = {
+        role: "assistant",
+        content:
+          "I apologize, but I encountered a momentary connection issue. Our kitchen knowledge base is always available. Please feel free to try your question again or explore our curated recipe catalog!",
+        timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
+      };
+      setMessages((prev) => [...prev, errorMessage]);
     } finally {
-      setLoading(false);
+      setIsLoading(false);
     }
   };
 
-  const quickPrompts = [
-    "Is vanilla extract Halal or does it contain alcohol?",
-    "What is a good Halal substitute for mirin or cooking wine?",
-    "What can I substitute for non-halal gelatin in baking?",
-    "How do I make tender beef bhuna without burning spices?",
-    "What is the authentic ratio for Bengali Panch Phoron spice blend?",
-  ];
+  const handleClearChat = () => {
+    setMessages([
+      {
+        role: "assistant",
+        content:
+          "Conversation reset. How may I assist your culinary journey today?",
+        timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
+      },
+    ]);
+  };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/60 backdrop-blur-xs animate-in fade-in duration-200 print:hidden">
-      <div className="w-full max-w-2xl bg-white rounded-xl shadow-2xl border border-[#E6E1D8] flex flex-col h-[85vh] max-h-[720px] overflow-hidden">
-        {/* Modal Header */}
-        <div className="px-5 py-4 bg-[#30302F] text-white flex items-center justify-between border-b border-[#242423]">
-          <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-full bg-[#E97520] flex items-center justify-center text-white">
-              <Sparkles className="w-4 h-4" />
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/60 backdrop-blur-xs animate-in fade-in duration-200">
+      <div
+        className="w-full max-w-2xl bg-white dark:bg-[#1E1E1C] rounded-2xl shadow-2xl border border-[#E6E1D8] dark:border-[#33322E] flex flex-col h-[85vh] max-h-[720px] overflow-hidden"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Noakhali Kitchen AI Culinary Assistant"
+      >
+        {/* Header */}
+        <div className="px-5 py-4 bg-[#FAF9F6] dark:bg-[#181816] border-b border-[#E6E1D8] dark:border-[#33322E] flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="w-9 h-9 rounded-full bg-[#E97520]/10 border border-[#F8CD78]/50 flex items-center justify-center text-[#E97520]">
+              <Sparkles className="w-5 h-5" />
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <h3 className="text-sm font-bold tracking-wide">Noakhali Kitchen Assistant</h3>
-                <span className="text-[10px] bg-[#2D7A52] text-white font-semibold uppercase px-1.5 py-0.5 rounded">
-                  Culinary AI
+                <h3 className="font-bold text-sm sm:text-base text-[#242423] dark:text-[#EDE8DF] font-heading">
+                  AI Culinary Assistant
+                </h3>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-[#2D7A52] bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 px-2 py-0.5 rounded-full">
+                  100% Halal Grounded
                 </span>
               </div>
-              <p className="text-[11px] text-[#E6E1D8]">
-                Google Search Grounded &bull; Halal Cooking &amp; Ingredients
+              <p className="text-xs text-[#77736D] dark:text-[#A8A49E]">
+                Powered by Gemini with live culinary web grounding
               </p>
             </div>
           </div>
 
-          <button
-            onClick={onClose}
-            className="p-1.5 text-[#E6E1D8] hover:text-white rounded-lg hover:bg-white/10 transition-colors"
-            aria-label="Close Assistant"
-          >
-            <X className="w-5 h-5" />
-          </button>
-        </div>
-
-        {/* Informational Sub-Bar */}
-        <div className="px-4 py-2 bg-[#FFF9F0] border-b border-[#F8CD78]/40 flex items-center justify-between text-xs">
-          <div className="flex items-center gap-1.5 text-[#3F3C38]">
-            <BookOpen className="w-3.5 h-3.5 text-[#E97520]" />
-            <span className="font-medium">Culinary Knowledge Base:</span>
-            <span className="text-[#77736D]">
-              Authentic Bengali, South Asian &amp; Global Halal Cooking
-            </span>
+          <div className="flex items-center gap-1.5">
+            <button
+              onClick={handleClearChat}
+              title="Reset conversation"
+              className="p-2 text-[#77736D] hover:text-[#30302F] dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors cursor-pointer"
+            >
+              <RotateCcw className="w-4 h-4" />
+            </button>
+            <button
+              onClick={onClose}
+              title="Close modal"
+              className="p-2 text-[#77736D] hover:text-[#30302F] dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors cursor-pointer"
+            >
+              <X className="w-5 h-5" />
+            </button>
           </div>
         </div>
 
-        {/* Chat Messages Container */}
-        <div className="flex-1 overflow-y-auto p-4 sm:p-5 space-y-4 bg-[#FAF9F6]">
-          {messages.map((msg) => (
-            <div
-              key={msg.id}
-              className={`flex flex-col ${
-                msg.role === "user" ? "items-end" : "items-start"
-              }`}
-            >
+        {/* Message Stream */}
+        <div className="flex-1 overflow-y-auto p-4 sm:p-5 space-y-4 text-sm bg-white dark:bg-[#1E1E1C]">
+          {messages.map((msg, index) => {
+            const isUser = msg.role === "user";
+            return (
               <div
-                className={`max-w-[85%] rounded-xl p-3.5 sm:p-4 text-xs sm:text-sm leading-relaxed ${
-                  msg.role === "user"
-                    ? "bg-[#30302F] text-white rounded-br-none"
-                    : "bg-white border border-[#E6E1D8] text-[#30302F] rounded-bl-none shadow-2xs"
-                }`}
+                key={index}
+                className={`flex gap-3 ${isUser ? "justify-end" : "justify-start"}`}
               >
-                <div className="whitespace-pre-wrap">{msg.text}</div>
-
-                {/* Grounding Sources */}
-                {msg.sources && msg.sources.length > 0 && (
-                  <div className="mt-3 pt-2.5 border-t border-[#E6E1D8]/60">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#8A857E] block mb-1.5">
-                      Grounding References:
-                    </span>
-                    <div className="flex flex-wrap gap-1.5">
-                      {msg.sources.map((src, idx) => (
-                        <a
-                          key={idx}
-                          href={src.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 text-[11px] bg-[#FAF9F6] border border-[#E6E1D8] text-[#30302F] hover:text-[#E97520] hover:border-[#E97520] px-2 py-1 rounded transition-colors"
-                        >
-                          <Search className="w-3 h-3 text-[#E7A52B]" />
-                          <span className="truncate max-w-[200px]">{src.title}</span>
-                          <ExternalLink className="w-2.5 h-2.5 opacity-60" />
-                        </a>
-                      ))}
-                    </div>
+                {!isUser && (
+                  <div className="w-7 h-7 rounded-full bg-[#FAF9F6] dark:bg-[#252422] border border-[#E6E1D8] dark:border-[#33322E] flex items-center justify-center text-[#E97520] shrink-0 mt-0.5">
+                    <ChefHat className="w-4 h-4" />
                   </div>
                 )}
 
-                <span
-                  className={`text-[10px] block mt-1.5 ${
-                    msg.role === "user" ? "text-white/60 text-right" : "text-[#8A857E]"
+                <div
+                  className={`max-w-[85%] rounded-2xl px-4 py-3 leading-relaxed ${
+                    isUser
+                      ? "bg-[#30302F] dark:bg-[#E97520] text-white rounded-br-xs"
+                      : "bg-[#FAF9F6] dark:bg-[#252422] text-[#3F3C38] dark:text-[#EDE8DF] border border-[#E6E1D8] dark:border-[#33322E] rounded-bl-xs"
                   }`}
                 >
-                  {msg.timestamp}
-                </span>
-              </div>
-            </div>
-          ))}
+                  <p className="whitespace-pre-wrap text-xs sm:text-sm">{msg.content}</p>
 
-          {loading && (
-            <div className="flex items-center gap-2 p-3 bg-white border border-[#E6E1D8] rounded-lg max-w-sm text-xs text-[#77736D] animate-pulse">
-              <Loader2 className="w-4 h-4 animate-spin text-[#E97520]" />
-              <span>Consulting verified culinary &amp; Halal sources...</span>
+                  {/* Grounding Web Sources */}
+                  {msg.sources && msg.sources.length > 0 && (
+                    <div className="mt-3 pt-2.5 border-t border-[#E6E1D8] dark:border-[#33322E] space-y-1.5">
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-[#77736D] dark:text-[#A8A49E] block">
+                        Verified Web Sources:
+                      </span>
+                      <div className="flex flex-wrap gap-1.5">
+                        {msg.sources.map((src, sIdx) => (
+                          <a
+                            key={sIdx}
+                            href={src.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1 text-[11px] font-medium text-[#E97520] hover:underline bg-white dark:bg-[#1E1E1C] px-2 py-0.5 rounded border border-[#E6E1D8] dark:border-[#33322E]"
+                          >
+                            <span className="truncate max-w-[180px]">{src.title}</span>
+                            <ExternalLink className="w-2.5 h-2.5 shrink-0" />
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  <span
+                    className={`block text-[10px] mt-1.5 ${
+                      isUser ? "text-white/70 text-right" : "text-[#8A857E] dark:text-[#77736D]"
+                    }`}
+                  >
+                    {msg.timestamp}
+                  </span>
+                </div>
+              </div>
+            );
+          })}
+
+          {isLoading && (
+            <div className="flex gap-3 items-center text-[#77736D] text-xs">
+              <div className="w-7 h-7 rounded-full bg-[#FAF9F6] dark:bg-[#252422] border border-[#E6E1D8] dark:border-[#33322E] flex items-center justify-center text-[#E97520]">
+                <Loader2 className="w-4 h-4 animate-spin" />
+              </div>
+              <span className="italic">Consulting Halal culinary knowledge base & grounding...</span>
             </div>
           )}
+
+          <div ref={messagesEndRef} />
         </div>
 
-        {/* Suggested Quick Prompts */}
-        {messages.length < 3 && (
-          <div className="px-4 py-2.5 bg-white border-t border-[#F3F2EE] overflow-x-auto">
-            <span className="text-[10px] font-bold uppercase tracking-wider text-[#8A857E] block mb-1.5">
-              Popular Culinary Questions:
+        {/* Quick Prompts (if chat is short) */}
+        {messages.length <= 2 && !isLoading && (
+          <div className="px-4 py-2 bg-[#FAF9F6] dark:bg-[#181816] border-t border-[#E6E1D8] dark:border-[#33322E]">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-[#77736D] dark:text-[#A8A49E] block mb-1.5">
+              Suggested Questions:
             </span>
-            <div className="flex gap-2 pb-1">
-              {quickPrompts.map((prompt, i) => (
+            <div className="flex flex-wrap gap-1.5">
+              {QUICK_PROMPTS.map((prompt, pIdx) => (
                 <button
-                  key={i}
+                  key={pIdx}
                   onClick={() => handleSend(prompt)}
-                  className="whitespace-nowrap text-xs bg-[#FAF9F6] hover:bg-[#FFF9F0] border border-[#E6E1D8] hover:border-[#F8CD78] text-[#3F3C38] px-2.5 py-1 rounded-full transition-colors cursor-pointer"
+                  className="text-xs bg-white dark:bg-[#252422] text-[#30302F] dark:text-[#EDE8DF] border border-[#E6E1D8] dark:border-[#33322E] hover:border-[#E97520] dark:hover:border-[#E97520] px-2.5 py-1 rounded-full text-left transition-colors cursor-pointer"
                 >
                   {prompt}
                 </button>
@@ -226,30 +280,32 @@ export const AIAssistantModal: React.FC<AIAssistantModalProps> = ({
         )}
 
         {/* Input Bar */}
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            handleSend();
-          }}
-          className="p-3 sm:p-4 bg-white border-t border-[#E6E1D8] flex items-center gap-2"
-        >
-          <input
-            type="text"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            placeholder="Ask about Halal recipes, ingredients, cooking techniques, spice blends..."
-            disabled={loading}
-            className="flex-1 px-4 py-2.5 text-xs sm:text-sm bg-[#FAF9F6] border border-[#E6E1D8] rounded focus:outline-none focus:border-[#30302F] text-[#30302F]"
-          />
-          <button
-            type="submit"
-            disabled={loading || !input.trim()}
-            className="px-4 py-2.5 bg-[#E97520] hover:bg-[#D75D17] disabled:opacity-50 text-white rounded text-xs font-bold tracking-wider uppercase transition-colors flex items-center gap-1.5 cursor-pointer"
+        <div className="p-3 sm:p-4 bg-[#FAF9F6] dark:bg-[#181816] border-t border-[#E6E1D8] dark:border-[#33322E]">
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleSend();
+            }}
+            className="flex items-center gap-2"
           >
-            {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Send className="w-4 h-4" />}
-            <span className="hidden sm:inline">Ask</span>
-          </button>
-        </form>
+            <input
+              type="text"
+              value={inputQuery}
+              onChange={(e) => setInputQuery(e.target.value)}
+              placeholder="Ask a question about spices, recipes, techniques, or Halal cooking..."
+              disabled={isLoading}
+              className="flex-1 bg-white dark:bg-[#252422] text-[#30302F] dark:text-[#EDE8DF] placeholder-[#8A857E] border border-[#E6E1D8] dark:border-[#33322E] rounded-xl px-4 py-2.5 text-xs sm:text-sm focus:outline-none focus:border-[#E97520] transition-colors"
+            />
+            <button
+              type="submit"
+              disabled={!inputQuery.trim() || isLoading}
+              className="bg-[#E97520] hover:bg-[#D75D17] disabled:opacity-40 disabled:hover:bg-[#E97520] text-white px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm inline-flex items-center gap-1.5 transition-all cursor-pointer shadow-xs shrink-0"
+            >
+              <span>Send</span>
+              <Send className="w-3.5 h-3.5" />
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );

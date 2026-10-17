@@ -127,7 +127,6 @@ export const CORNERSTONE_METADATA_LIST: CornerstoneCulinaryMetadata[] = [
     seoDescription:
       "High-heat Pakistani roadside dhaba Chicken Karahi: bone-in chicken, fresh tomatoes, ginger matchsticks, and black pepper with zero onions.",
     relatedGuides: [
-      "how-to-make-restaurant-style-chicken-karahi",
       "how-to-balance-whole-spices",
     ],
     relatedRecipes: ["bengali-chicken-roast", "authentic-chicken-shawarma"],
@@ -140,7 +139,6 @@ export const CORNERSTONE_METADATA_LIST: CornerstoneCulinaryMetadata[] = [
     seoDescription:
       "Street-style Middle Eastern Chicken Shawarma: yogurt, lemon, and warm Levant spices marinated chicken thighs, crispy charred edges, and authentic garlic Toum.",
     relatedGuides: [
-      "how-to-build-homemade-shawarma-spice",
       "how-to-balance-whole-spices",
     ],
     relatedRecipes: ["chicken-karahi", "hummus"],
