@@ -53,6 +53,13 @@ import {
 } from "../utils/ratingsStorage";
 import { updatePageSeo, toAbsoluteUrl } from "../utils/seoHead";
 
+const toIsoDate = (dateStr?: string): string | undefined => {
+  if (!dateStr) return undefined;
+  const timestamp = Date.parse(dateStr);
+  if (isNaN(timestamp)) return undefined;
+  return new Date(timestamp).toISOString().split("T")[0];
+};
+
 interface RecipesViewProps {
   initialSlug?: string;
   onNavigate: (route: string) => void;
@@ -471,8 +478,10 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
             "@type": "WebPage",
             "@id": canonicalRecipeUrl,
           },
-          datePublished: currentRecipe.updatedDate,
-          dateModified: currentRecipe.updatedDate,
+          ...(toIsoDate(currentRecipe.updatedDate) && {
+            datePublished: toIsoDate(currentRecipe.updatedDate),
+            dateModified: toIsoDate(currentRecipe.updatedDate),
+          }),
           prepTime: `PT${currentRecipe.prepTimeMinutes}M`,
           cookTime: `PT${currentRecipe.cookTimeMinutes}M`,
           totalTime: `PT${currentRecipe.totalTimeMinutes}M`,

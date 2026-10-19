@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { HALAL_PANTRY_SECTIONS } from "../data/pantry";
 import { HalalPantrySection, Recipe } from "../types";
+import { updatePageSeo } from "../utils/seoHead";
 
 interface HalalPantryViewProps {
   initialSlug?: string;
@@ -29,6 +30,17 @@ export const HalalPantryView: React.FC<HalalPantryViewProps> = ({
     initialSlug || "all"
   );
   const [searchQuery, setSearchQuery] = useState<string>("");
+
+  useEffect(() => {
+    const cleanup = updatePageSeo({
+      title: "Halal Pantry & Nutrition Guide | Noakhali Kitchen",
+      description:
+        "A comprehensive reference framework for sourcing pure kitchen staples, dates, raw honey, single-origin spices, and verifying ingredients with confidence.",
+      canonicalUrl: "https://www.noakhalikitchen.com/pantry",
+      ogType: "website",
+    });
+    return cleanup;
+  }, []);
 
   useEffect(() => {
     if (initialSlug) {

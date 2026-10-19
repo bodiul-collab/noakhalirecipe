@@ -14,6 +14,7 @@ import {
 import { COOKING_GUIDES } from "../data/guides";
 import { RECIPES } from "../data/recipes";
 import { CookingGuide, Recipe } from "../types";
+import { updatePageSeo } from "../utils/seoHead";
 
 interface CookingGuidesViewProps {
   initialSlug?: string;
@@ -32,6 +33,13 @@ const CATEGORIES = [
   "Beginner Cooking",
   "Kitchen Tips",
 ] as const;
+
+const toIsoDate = (dateStr?: string): string | undefined => {
+  if (!dateStr) return undefined;
+  const timestamp = Date.parse(dateStr);
+  if (isNaN(timestamp)) return undefined;
+  return new Date(timestamp).toISOString().split("T")[0];
+};
 
 // Helper to render bold (**text**), italic (*text*), and markdown links ([label](url))
 const renderFormattedText = (text: string, onNavigate?: (route: string) => void) => {
@@ -129,45 +137,29 @@ export const CookingGuidesView: React.FC<CookingGuidesViewProps> = ({
 
   // Set canonical, title, and meta tags dynamically for SEO
   useEffect(() => {
-    let canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement("link");
-      canonical.setAttribute("rel", "canonical");
-      document.head.appendChild(canonical);
-    }
-    const originalHref = canonical.getAttribute("href") || "https://www.noakhalikitchen.com/";
-    const originalTitle = document.title;
-    let metaDesc = document.querySelector<HTMLMetaElement>('meta[name="description"]');
-    const originalDesc = metaDesc ? metaDesc.getAttribute("content") || "" : "";
-    let ogTitle = document.querySelector<HTMLMetaElement>('meta[property="og:title"]');
-    let ogDesc = document.querySelector<HTMLMetaElement>('meta[property="og:description"]');
-    let ogUrl = document.querySelector<HTMLMetaElement>('meta[property="og:url"]');
-
     if (currentGuide) {
       const pageTitle = currentGuide.seoTitle || `${currentGuide.title} | Noakhali Kitchen`;
-      document.title = pageTitle;
       const desc = currentGuide.seoDescription || currentGuide.excerpt;
-      if (metaDesc) metaDesc.setAttribute("content", desc);
-      if (ogTitle) ogTitle.setAttribute("content", pageTitle);
-      if (ogDesc) ogDesc.setAttribute("content", desc);
-      if (ogUrl) ogUrl.setAttribute("content", `https://www.noakhalikitchen.com/guides/${currentGuide.slug}`);
-      canonical.setAttribute(
-        "href",
-        `https://www.noakhalikitchen.com/guides/${currentGuide.slug}`
-      );
+      const canonical = `https://www.noakhalikitchen.com/guides/${currentGuide.slug}`;
+      const cleanup = updatePageSeo({
+        title: pageTitle,
+        description: desc,
+        canonicalUrl: canonical,
+        ogType: "article",
+        imageUrl: currentGuide.heroImage,
+        authorName: currentGuide.author?.name,
+      });
+      return cleanup;
     } else {
-      document.title = "Cooking Guides & Techniques | Noakhali Kitchen";
-      canonical.setAttribute("href", "https://www.noakhalikitchen.com/guides");
+      const cleanup = updatePageSeo({
+        title: "Cooking Guides & Techniques | Noakhali Kitchen",
+        description:
+          "Master authentic Bengali and Halal home cooking with detailed culinary guides, knife techniques, and spice tempering secrets.",
+        canonicalUrl: "https://www.noakhalikitchen.com/guides",
+        ogType: "website",
+      });
+      return cleanup;
     }
-    return () => {
-      if (canonical) {
-        canonical.setAttribute("href", originalHref);
-      }
-      document.title = originalTitle;
-      if (metaDesc && originalDesc) {
-        metaDesc.setAttribute("content", originalDesc);
-      }
-    };
   }, [currentGuide]);
 
   const handleShare = () => {
@@ -226,8 +218,12 @@ export const CookingGuidesView: React.FC<CookingGuidesViewProps> = ({
             url: "https://www.noakhalikitchen.com/",
           },
           image: currentGuide.heroImage,
-          datePublished: currentGuide.publishedDate,
-          dateModified: currentGuide.updatedDate,
+          ...(toIsoDate(currentGuide.publishedDate) && {
+            datePublished: toIsoDate(currentGuide.publishedDate),
+          }),
+          ...(toIsoDate(currentGuide.updatedDate) && {
+            dateModified: toIsoDate(currentGuide.updatedDate),
+          }),
         },
         {
           "@type": "BreadcrumbList",

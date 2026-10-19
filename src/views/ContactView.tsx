@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Mail,
   Send,
@@ -14,12 +14,23 @@ import {
   Sparkles,
   ArrowLeft,
 } from "lucide-react";
+import { updatePageSeo } from "../utils/seoHead";
 
 interface ContactViewProps {
   onNavigate?: (route: string) => void;
 }
 
 export const ContactView: React.FC<ContactViewProps> = ({ onNavigate }) => {
+  useEffect(() => {
+    const cleanup = updatePageSeo({
+      title: "Contact & Culinary Feedback | Noakhali Kitchen",
+      description:
+        "Get in touch with the Noakhali Kitchen culinary team with recipe questions, culinary feedback, editorial inquiries, or community partnership requests.",
+      canonicalUrl: "https://www.noakhalikitchen.com/contact",
+      ogType: "website",
+    });
+    return cleanup;
+  }, []);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("recipe-question");

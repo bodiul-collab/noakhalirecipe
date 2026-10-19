@@ -38,7 +38,7 @@ Always scrutinize pre-mixed spice blends. Commercial mixes occasionally add beef
     publishedDate: "August 18, 2026",
     updatedDate: "September 3, 2026",
     readTimeMinutes: 6,
-    relatedRecipeSlugs: ["halal-chicken-biryani", "bengali-beef-bhuna"],
+    relatedRecipeSlugs: ["chicken-biryani", "bengali-beef-bhuna"],
     faqs: [
       {
         question: "Does ghee need to be refrigerated?",
@@ -85,7 +85,7 @@ When in doubt, prioritize products carrying recognized Halal certification marks
     publishedDate: "August 24, 2026",
     updatedDate: "September 1, 2026",
     readTimeMinutes: 7,
-    relatedRecipeSlugs: ["shahi-chicken-roast"],
+    relatedRecipeSlugs: ["bengali-chicken-roast"],
     faqs: [
       {
         question: "Is carmine (E120) Halal?",

@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { updatePageSeo } from "../utils/seoHead";
 
 interface LegalViewProps {
   initialTab?: "privacy" | "terms" | "affiliate";
@@ -9,13 +10,54 @@ export const LegalView: React.FC<LegalViewProps> = ({ initialTab = "privacy" }) 
     initialTab
   );
 
+  useEffect(() => {
+    setActiveTab(initialTab);
+  }, [initialTab]);
+
+  useEffect(() => {
+    let title = "Privacy Policy | Noakhali Kitchen";
+    let description =
+      "Read our Privacy Policy to understand how Noakhali Kitchen collects, uses, and protects personal data and honors user privacy rights.";
+    let canonicalUrl = "https://www.noakhalikitchen.com/privacy";
+
+    if (activeTab === "terms") {
+      title = "Terms of Service | Noakhali Kitchen";
+      description =
+        "Review the terms and conditions governing the use of Noakhali Kitchen, including intellectual property, community guidelines, and site usage.";
+      canonicalUrl = "https://www.noakhalikitchen.com/terms";
+    } else if (activeTab === "affiliate") {
+      title = "Affiliate Disclosure & Transparency Policy | Noakhali Kitchen";
+      description =
+        "Read our full affiliate disclosure detailing our Amazon Associates participation, transparent product recommendations, and editorial independence.";
+      canonicalUrl = "https://www.noakhalikitchen.com/affiliate-disclosure";
+    }
+
+    const cleanup = updatePageSeo({
+      title,
+      description,
+      canonicalUrl,
+      ogType: "website",
+    });
+
+    return cleanup;
+  }, [activeTab]);
+
+  const handleTabChange = (tab: "privacy" | "terms" | "affiliate") => {
+    setActiveTab(tab);
+    try {
+      const targetPath =
+        tab === "privacy" ? "/privacy" : tab === "terms" ? "/terms" : "/affiliate-disclosure";
+      window.history.pushState({}, "", targetPath);
+    } catch {}
+  };
+
   return (
     <div className="w-full bg-[#FAF9F6] py-10 sm:py-16">
       <div className="max-w-[860px] mx-auto px-4 sm:px-6 space-y-8">
         {/* Navigation Tabs */}
         <div className="flex border-b border-[#E6E1D8] gap-4 text-xs font-bold uppercase tracking-wider">
           <button
-            onClick={() => setActiveTab("privacy")}
+            onClick={() => handleTabChange("privacy")}
             className={`pb-3 border-b-2 transition-colors cursor-pointer ${
               activeTab === "privacy"
                 ? "border-[#E97520] text-[#E97520]"
@@ -25,7 +67,7 @@ export const LegalView: React.FC<LegalViewProps> = ({ initialTab = "privacy" }) 
             Privacy Policy
           </button>
           <button
-            onClick={() => setActiveTab("terms")}
+            onClick={() => handleTabChange("terms")}
             className={`pb-3 border-b-2 transition-colors cursor-pointer ${
               activeTab === "terms"
                 ? "border-[#E97520] text-[#E97520]"
@@ -35,7 +77,7 @@ export const LegalView: React.FC<LegalViewProps> = ({ initialTab = "privacy" }) 
             Terms of Service
           </button>
           <button
-            onClick={() => setActiveTab("affiliate")}
+            onClick={() => handleTabChange("affiliate")}
             className={`pb-3 border-b-2 transition-colors cursor-pointer ${
               activeTab === "affiliate"
                 ? "border-[#E97520] text-[#E97520]"

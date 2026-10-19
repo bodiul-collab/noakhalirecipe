@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { ShieldCheck, Heart, Users, Utensils, Mail, ArrowRight } from "lucide-react";
 import { IMAGES } from "../data/assets";
 import { AboutSection } from "../components/AboutSection";
+import { updatePageSeo } from "../utils/seoHead";
 
 export const AboutView: React.FC<{ onNavigate: (route: string) => void }> = ({
   onNavigate,
 }) => {
+  useEffect(() => {
+    const cleanup = updatePageSeo({
+      title: "About Noakhali Kitchen | Regional Heritage & Halal Mission",
+      description:
+        "Learn about Noakhali Kitchen's culinary heritage, our strict 100% Halal integrity standards, traditional techniques, and the story behind our recipes.",
+      canonicalUrl: "https://www.noakhalikitchen.com/about",
+      ogType: "website",
+    });
+    return cleanup;
+  }, []);
   return (
     <div className="w-full bg-[#FAF9F6] pb-16">
       {/* Featured Primary About Section: Exact uploaded asset on right, text on left */}

@@ -33,6 +33,7 @@ import { KITCHEN_EQUIPMENT } from "../data/kitchenEquipment";
 import { AFFILIATE_PRODUCTS } from "../data/affiliateProducts";
 import { Recipe, AffiliateProductItem } from "../types";
 import { KitchenConversionTool } from "../components/KitchenConversionTool";
+import { updatePageSeo } from "../utils/seoHead";
 
 interface ToolsViewProps {
   onSelectRecipe: (recipe: Recipe) => void;
@@ -54,23 +55,13 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
 
   // Sync SEO meta tags and BreadcrumbList / WebPage JSON-LD
   useEffect(() => {
-    const prevTitle = document.title;
-    document.title = "Kitchen Tools & Pantry | Noakhali Kitchen";
-
-    let metaDesc = document.querySelector('meta[name="description"]');
-    const prevDesc = metaDesc ? metaDesc.getAttribute("content") : "";
-    if (metaDesc) {
-      metaDesc.setAttribute(
-        "content",
-        "Discover practical kitchen tools, cookware, pantry essentials, and cooking equipment selected to complement authentic Halal and Bengali cooking."
-      );
-    }
-
-    let canonical = document.querySelector('link[rel="canonical"]');
-    const prevCanonical = canonical ? canonical.getAttribute("href") : "";
-    if (canonical) {
-      canonical.setAttribute("href", "https://www.noakhalikitchen.com/tools");
-    }
+    const cleanupSeo = updatePageSeo({
+      title: "Kitchen Tools & Pantry Essentials | Noakhali Kitchen",
+      description:
+        "Discover practical kitchen tools, cookware, pantry essentials, and cooking equipment selected to complement authentic Halal and Bengali cooking.",
+      canonicalUrl: "https://www.noakhalikitchen.com/tools",
+      ogType: "website",
+    });
 
     // Add JSON-LD BreadcrumbList and WebPage
     const scriptId = "tools-hub-schema-jsonld";
@@ -120,9 +111,7 @@ export const ToolsView: React.FC<ToolsViewProps> = ({
     script.text = JSON.stringify(schemaData);
 
     return () => {
-      document.title = prevTitle;
-      if (metaDesc && prevDesc) metaDesc.setAttribute("content", prevDesc);
-      if (canonical && prevCanonical) canonical.setAttribute("href", prevCanonical);
+      cleanupSeo();
       const existingScript = document.getElementById(scriptId);
       if (existingScript && existingScript.parentNode) {
         existingScript.parentNode.removeChild(existingScript);

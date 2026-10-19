@@ -5678,7 +5678,7 @@ const BASE_RECIPES: Recipe[] = [
     ],
     relatedCultureSlug: "bangladeshi-eid-food-traditions",
     relatedKitchenToolId: "dekchi-biryani-pot",
-    relatedRecipeSlugs: ["bengali-pulao", "dhaka-shahi-borhani", "kacchi-biryani"],
+    relatedRecipeSlugs: ["bengali-pulao", "borhani", "kacchi-biryani"],
     halalNotes:
       "100% Halal certified. Made exclusively with zabiha hand-slaughtered bone-in chicken leg quarters or whole thighs, pure unadulterated cow ghee, and natural single-origin spices. Completely free of artificial flavoring cubes or non-halal animal fats.",
     potentialCautionNotes:
@@ -20950,7 +20950,7 @@ const BASE_RECIPES: Recipe[] = [
     ],
     relatedRecipeSlugs: [
       "sobia",
-      "traditional-shahi-borhani",
+      "borhani",
       "royal-mango-lassi",
       "mint-limonana-lemonade",
       "cold-pressed-pina-colada-mocktail",
@@ -21145,7 +21145,7 @@ const BASE_RECIPES: Recipe[] = [
       "cold-pressed-pina-colada-mocktail",
       "royal-rooh-afza-sharbat",
       "royal-mango-lassi",
-      "traditional-shahi-borhani",
+      "borhani",
       "mint-limonana-lemonade",
       "karak-chai-spiced-milk-tea",
     ],
@@ -21336,7 +21336,7 @@ const BASE_RECIPES: Recipe[] = [
       "cold-pressed-pina-colada-mocktail",
       "royal-rooh-afza-sharbat",
       "royal-mango-lassi",
-      "traditional-shahi-borhani",
+      "borhani",
       "mint-limonana-lemonade",
     ],
     seoTitle:
@@ -22553,9 +22553,9 @@ const BASE_RECIPES: Recipe[] = [
     freezingInstructions:
       "Uncooked or cooked patties freeze excellently for up to 3 months. Freeze patties on a baking sheet until firm, then transfer to a freezer bag with sheets of parchment paper separating each patty. Cook straight from frozen in a lightly oiled covered skillet over medium-low heat for 6 to 7 minutes per side.",
     servingSuggestions: [
-      "Serve piping hot with crispy sweet potato fries or roasted rosemary garlic potatoes ([Garlic Roasted Potatoes](/recipes/garlic-roasted-potatoes)).",
-      "Pair with a chilled artisanal beverage like fresh iced Limonana ([Levantine Limonana](/recipes/levantine-limonana)) or cold-pressed Piña Colada mocktail ([Piña Colada Mocktail](/recipes/pina-colada-mocktail)).",
-      "Offer side condiments such as smoked chipotle aioli, tangy mango chutney ([Bengali Sweet Mango Chutney](/recipes/bengali-sweet-mango-chutney)), or spicy pickled jalapenos.",
+      "Serve piping hot with crispy sweet potato fries or roasted rosemary garlic potatoes ([Garlic Roasted Potatoes](/recipes/crispy-garlic-herb-roasted-potatoes)).",
+      "Pair with a chilled artisanal beverage like fresh iced Limonana ([Levantine Limonana](/recipes/mint-limonana-lemonade)) or cold-pressed Piña Colada mocktail ([Piña Colada Mocktail](/recipes/pina-colada-mocktail)).",
+      "Offer side condiments such as smoked chipotle aioli, tangy mango chutney ([Bengali Sweet Mango Chutney](/recipes/bengali-mango-chutney)), or spicy pickled jalapenos.",
       "Customize with a slice of melted sharp cheddar or pepper jack cheese directly on the hot patty in the pan.",
     ],
     faqs: [
@@ -22615,9 +22615,9 @@ const BASE_RECIPES: Recipe[] = [
       "Skipping the 20-minute refrigerator chill step, which allows the rolled oats and chickpea flour to hydrate and bind the patty.",
     ],
     relatedRecipeSlugs: [
-      "garlic-roasted-potatoes",
-      "bengali-sweet-mango-chutney",
-      "levantine-limonana",
+      "crispy-garlic-herb-roasted-potatoes",
+      "bengali-mango-chutney",
+      "mint-limonana-lemonade",
       "crispy-falafel",
       "puri-poori",
     ],
@@ -22985,10 +22985,10 @@ const BASE_RECIPES: Recipe[] = [
     freezingInstructions:
       "We recommend freezing only the base Makhani sauce (without the salmon and cream) for up to 3 months. When ready to serve, thaw the sauce, bring to a simmer, whisk in the butter and cream, and gently poach freshly seared salmon.",
     servingSuggestions: [
-      "Serve piping hot in a black bowl on a silver tray with warm charred garlic naan ([Restaurant Naan Bread](/recipes/restaurant-naan-bread)) tucked underneath.",
+      "Serve piping hot in a black bowl on a silver tray with warm charred garlic naan ([Restaurant Naan Bread](/recipes/pillowy-restaurant-style-garlic-butter-naan)) tucked underneath.",
       "Accompany with a generous mound of fragrant steamed Basmati rice or aromatic Bengali Pulao ([Bengali Pulao](/recipes/bengali-pulao)).",
       "Garnish with a drizzle of heavy cream, fresh cilantro, and a sliver of fresh ginger.",
-      "Pair with a chilled artisanal beverage like refreshing Iced Limonana ([Levantine Limonana](/recipes/levantine-limonana)) or chilled Laban Ayran ([Laban Ayran](/recipes/laban-ayran)).",
+      "Pair with a chilled artisanal beverage like refreshing Iced Limonana ([Levantine Limonana](/recipes/mint-limonana-lemonade)) or chilled Laban Ayran ([Laban Ayran](/recipes/laban-ayran)).",
     ],
     faqs: [
       {
@@ -23047,9 +23047,9 @@ const BASE_RECIPES: Recipe[] = [
       "Using sour canned tomato paste instead of ripe fresh Roma tomatoes, which gives an overly acidic, harsh sauce.",
     ],
     relatedRecipeSlugs: [
-      "restaurant-naan-bread",
+      "pillowy-restaurant-style-garlic-butter-naan",
       "bengali-pulao",
-      "butter-chicken-makhani",
+      "authentic-restaurant-style-butter-chicken-murgh-makhani",
       "chingri-malai-curry",
       "fish-biryani",
     ],
@@ -23193,8 +23193,8 @@ const BASE_RECIPES: Recipe[] = [
     freezingInstructions:
       "Freeze uncooked loosely shaped beef spheres on a baking sheet until solid, then transfer into freezer zip-top bags for up to 2 months. Thaw completely in the refrigerator overnight before cooking; patties must be thawed to smash paper-thin on the griddle.",
     servingSuggestions: [
-      "Serve piping hot with a basket of golden hand-cut fries or crispy garlic roasted potatoes ([Garlic Roasted Potatoes](/recipes/garlic-roasted-potatoes)).",
-      "Pair with a tall iced artisan mocktail like zesty Levantine Limonana ([Levantine Limonana](/recipes/levantine-limonana)) or chilled Laban Ayran ([Laban Ayran](/recipes/laban-ayran)).",
+      "Serve piping hot with a basket of golden hand-cut fries or crispy garlic roasted potatoes ([Garlic Roasted Potatoes](/recipes/crispy-garlic-herb-roasted-potatoes)).",
+      "Pair with a tall iced artisan mocktail like zesty Levantine Limonana ([Levantine Limonana](/recipes/mint-limonana-lemonade)) or chilled Laban Ayran ([Laban Ayran](/recipes/laban-ayran)).",
       "Accompany with sides like crunchy Mediterranean chickpea salad ([Mediterranean Chickpea Salad](/recipes/mediterranean-chickpea-salad)) or spicy dill pickle spears.",
       "Customize with sautéed garlic mushrooms, caramelized onions ([Beresta](/guides/how-to-make-perfect-beresta)), or sliced pickled jalapenos.",
     ],
@@ -23257,7 +23257,7 @@ const BASE_RECIPES: Recipe[] = [
     relatedRecipeSlugs: [
       "veggie-burger",
       "australian-beef-pie",
-      "garlic-roasted-potatoes",
+      "crispy-garlic-herb-roasted-potatoes",
       "bengali-style-australian-pie",
       "authentic-beef-shatkora",
     ],
@@ -23447,7 +23447,7 @@ const BASE_RECIPES: Recipe[] = [
     ],
     relatedRecipeSlugs: [
       "fresh-ginger-juice",
-      "levantine-limonana",
+      "mint-limonana-lemonade",
       "laban-ayran",
       "sobia",
       "tamr-hindi",
@@ -23636,7 +23636,7 @@ const BASE_RECIPES: Recipe[] = [
     relatedRecipeSlugs: [
       "coconut-cloud-smoothie",
       "fresh-ginger-juice",
-      "levantine-limonana",
+      "mint-limonana-lemonade",
       "laban-ayran",
       "sobia",
     ],
@@ -24082,7 +24082,7 @@ const BASE_RECIPES: Recipe[] = [
     description:
       "A fragrant, melt-in-the-mouth semolina halwa slow-roasted in pure cow ghee until deeply golden and nutty, simmered in cardamom-scented syrup, and heaped in an engraved copper bowl with roasted cashews, almonds, and vibrant green pistachios.",
     introStory:
-      "Suji Halwa (also lovingly known as Suji Halva, Sooji Halwa, Sheera, and Rava Kesari)—celebrated across millions of households as 'سوجی کا حلوہ' in Urdu, 'সুজির হালুয়া' in Bengali, and 'حلاوة السوجي' in Arabic—is the quintessential golden sweet of South Asian celebration, Friday breakfasts, Shab-e-Barat, and festive Eid tables. Few aromas in the culinary world match the intoxicating perfume of coarse golden semolina slowly toasting in pure bubbling cow ghee alongside green cardamom pods, sweet cloves, and cinnamon bark. The secret to achieving the coveted 'danedar' (granular, non-sticky) texture showcased in our engraved copper bowl lies in the sacred 1:1:3 ratio: one part semolina, one part pure ghee, and three parts hot aromatic cardamom sugar syrup. As the boiling saffron syrup meets the nutty, ghee-roasted grains, the semolina swells instantly into a rich, glistening, spoon-tender confection. Adorned with toasted golden cashews, slivered almonds, and crunchy emerald pistachios, each warm spoonful melts effortlessly on the tongue, pairing exquisitely with hot balloon-puffed pooris ([Puri Poori](/recipes/crispy-puffy-puri)) or steaming cups of Karak Chai.",
+      "Suji Halwa (also lovingly known as Suji Halva, Sooji Halwa, Sheera, and Rava Kesari)—celebrated across millions of households as 'سوجی کا حلوہ' in Urdu, 'সুজির হালুয়া' in Bengali, and 'حلاوة السوجي' in Arabic—is the quintessential golden sweet of South Asian celebration, Friday breakfasts, Shab-e-Barat, and festive Eid tables. Few aromas in the culinary world match the intoxicating perfume of coarse golden semolina slowly toasting in pure bubbling cow ghee alongside green cardamom pods, sweet cloves, and cinnamon bark. The secret to achieving the coveted 'danedar' (granular, non-sticky) texture showcased in our engraved copper bowl lies in the sacred 1:1:3 ratio: one part semolina, one part pure ghee, and three parts hot aromatic cardamom sugar syrup. As the boiling saffron syrup meets the nutty, ghee-roasted grains, the semolina swells instantly into a rich, glistening, spoon-tender confection. Adorned with toasted golden cashews, slivered almonds, and crunchy emerald pistachios, each warm spoonful melts effortlessly on the tongue, pairing exquisitely with hot balloon-puffed pooris ([Puri Poori](/recipes/puri-poori)) or steaming cups of Karak Chai.",
     heroImage: IMAGES.sujiHalwa,
     prepTimeMinutes: 10,
     cookTimeMinutes: 20,
@@ -24175,7 +24175,7 @@ const BASE_RECIPES: Recipe[] = [
       "The Sacred 1:1:3 Ratio: For foolproof halwa, use equal volumes of suji and sugar, balanced with 3 times the volume of liquid (water or water-milk). Adjust the ghee between 1/2 and 3/4 cup depending on personal preference for richness.",
       "The Ghee Sheen Test: Authentic halwai-style halwa is properly cooked when tiny beads of clear ghee begin to separate and shimmer along the edges of the pan (*ghee chhorna*). This indicates full starch gelatinization and ensures the halwa stays moist for hours.",
       "Color Control: The final color of your halwa depends entirely on the semolina roast. Roasting to a deep amber produces the rich caramel depth seen in traditional Pakistani and Punjabi Halwa Puri stalls, while a lighter roast produces delicate Bengali or South Indian sheera.",
-      "Serving with Puri: For the ultimate traditional weekend breakfast, serve warm Suji Halwa scooped alongside piping-hot, crispy balloon-puffed pooris ([Puri Poori](/recipes/crispy-puffy-puri)) and spicy potato curry ([Aloo Tarkari](/recipes/bengali-aloo-dum)).",
+      "Serving with Puri: For the ultimate traditional weekend breakfast, serve warm Suji Halwa scooped alongside piping-hot, crispy balloon-puffed pooris ([Puri Poori](/recipes/puri-poori)) and spicy potato curry ([Aloo Tarkari](/recipes/bengali-aloo-dum)).",
     ],
     nutrition: {
       calories: 340,
@@ -24192,7 +24192,7 @@ const BASE_RECIPES: Recipe[] = [
       "Freeze cooled halwa in airtight freezer containers for up to 2 months. Thaw in the refrigerator overnight and reheat gently in a covered saucepan over low flame with a splash of warm milk.",
     servingSuggestions: [
       "Heap into traditional copper or brass bowls garnished with whole cashews, almonds, and pistachios for celebratory family feasts.",
-      "Serve hot alongside crispy [Puri Poori](/recipes/crispy-puffy-puri) and spiced potato curry for an authentic Halwa Puri Chana breakfast.",
+      "Serve hot alongside crispy [Puri Poori](/recipes/puri-poori) and spiced potato curry for an authentic Halwa Puri Chana breakfast.",
       "Pair with a piping hot clay cup of [Karak Chai](/recipes/karak-chai-spiced-milk-tea) or royal cardamom tea.",
       "Serve as an auspicious sweet offering on Shab-e-Barat, Eid mornings, Milad, or housewarming gatherings.",
     ],
@@ -24252,11 +24252,11 @@ const BASE_RECIPES: Recipe[] = [
       "Boiling the sugar syrup into a thick thread before adding; a fluid hot infusion is required so the dry roasted semolina can drink in the moisture.",
     ],
     relatedRecipeSlugs: [
-      "crispy-puffy-puri",
+      "puri-poori",
       "bengali-aloo-dum",
       "plain-paratha",
       "kheer-shahi-rice-kheer-payesh",
-      "shahi-besan-laddu-gram-flour-mithai",
+      "festive-shahi-besan-laddu",
       "karak-chai-spiced-milk-tea",
     ],
     relatedGuideSlugs: [
@@ -24661,7 +24661,7 @@ const BASE_RECIPES: Recipe[] = [
     freezingInstructions:
       "Not recommended for freezing once cooked, as small delicate river fish lose their tender flakiness upon thawing. Fresh marinated fish can be frozen raw wrapped in banana leaves for up to 1 month.",
     servingSuggestions: [
-      "Serve piping hot as the centerpiece with fluffy [Steamed Boiled Rice](/recipes/boiled-rice) or aromatic Chinigura rice.",
+      "Serve piping hot as the centerpiece with fluffy [Steamed Boiled Rice](/recipes/easy-basmati-rice-cooking) or aromatic Chinigura rice.",
       "Pair with a cooling bowl of [Laban Ayran](/recipes/laban-ayran) or chilled [Cucumber Lime Lemon Juice](/recipes/cucumber-lime-lemon-juice) to balance the fiery chili heat.",
       "Accompany with light yellow lentil soup (Plaing Masoor Dal) and crispy bhortas for a traditional Noakhali lunch spread.",
       "Serve with fresh lime wedges, extra raw green chillies, and thinly sliced red onion rings for authentic tableside customization.",
@@ -24724,8 +24724,8 @@ const BASE_RECIPES: Recipe[] = [
       "Cooking over scorching high heat from the beginning, which burns the chili paste before the onions have time to caramelize and cook through.",
     ],
     relatedRecipeSlugs: [
-      "boiled-rice",
-      "shorshe-ilish",
+      "easy-basmati-rice-cooking",
+      "noakhali-shorshe-ilish",
       "chingri-malai-curry",
       "rohu-fish-curry",
       "bengali-khichuri-bhuna",
@@ -26181,7 +26181,7 @@ const BASE_RECIPES: Recipe[] = [
     relatedRecipeSlugs: [
       "dal-bhorta",
       "masoor-dal-red-lentil-dal",
-      "boiled-rice",
+      "easy-basmati-rice-cooking",
       "kholaja-pitha",
       "bengali-khichuri-bhuna",
       "duck-curry-with-coconut-milk",
@@ -26419,7 +26419,7 @@ const BASE_RECIPES: Recipe[] = [
     relatedRecipeSlugs: [
       "tomato-bhorta",
       "masoor-dal-red-lentil-dal",
-      "boiled-rice",
+      "easy-basmati-rice-cooking",
       "kholaja-pitha",
       "duck-curry-with-coconut-milk",
       "bengali-khichuri-bhuna",
@@ -26911,7 +26911,7 @@ const BASE_RECIPES: Recipe[] = [
       "fish-egg-curry-ilish",
       "bengali-fish-curry-macher-jhol",
       "noakhali-shorshe-ilish",
-      "boiled-rice",
+      "easy-basmati-rice-cooking",
     ],
     relatedGuideSlugs: [
       "mustard-oil-bengali-cooking",
@@ -27172,7 +27172,7 @@ const BASE_RECIPES: Recipe[] = [
       "noakhali-shorshe-ilish",
       "dal-bhorta",
       "tomato-bhorta",
-      "boiled-rice",
+      "easy-basmati-rice-cooking",
     ],
     relatedGuideSlugs: [
       "mustard-oil-bengali-cooking",
@@ -27510,9 +27510,9 @@ const BASE_RECIPES: Recipe[] = [
     relatedRecipeSlugs: [
       "kacchi-biryani",
       "bengali-chicken-roast",
-      "traditional-shahi-borhani",
+      "borhani",
       "bengali-pulao",
-      "dhaka-shahi-chicken-roast",
+      "old-dhaka-haji-biryani",
       "chicken-rezala",
     ],
     relatedGuideSlugs: [

@@ -28,6 +28,13 @@ const CATEGORIES = [
   "South Asian Food Stories",
 ] as const;
 
+const toIsoDate = (dateStr?: string): string | undefined => {
+  if (!dateStr) return undefined;
+  const timestamp = Date.parse(dateStr);
+  if (isNaN(timestamp)) return undefined;
+  return new Date(timestamp).toISOString().split("T")[0];
+};
+
 export const FoodCultureView: React.FC<FoodCultureViewProps> = ({
   initialSlug,
   onNavigate,
@@ -119,8 +126,12 @@ export const FoodCultureView: React.FC<FoodCultureViewProps> = ({
             },
           },
           image: absHeroImage,
-          datePublished: currentArticle.publishedDate,
-          dateModified: currentArticle.updatedDate,
+          ...(toIsoDate(currentArticle.publishedDate) && {
+            datePublished: toIsoDate(currentArticle.publishedDate),
+          }),
+          ...(toIsoDate(currentArticle.updatedDate) && {
+            dateModified: toIsoDate(currentArticle.updatedDate),
+          }),
         },
         {
           "@type": "BreadcrumbList",
