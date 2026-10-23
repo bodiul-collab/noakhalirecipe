@@ -1531,7 +1531,7 @@ const ProductCard: React.FC<{ product: AffiliateProductItem }> = ({ product }) =
           <a
             href={product.affiliateUrl}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="nofollow sponsored noopener noreferrer"
             aria-label={`View ${product.name} on Amazon (opens in new tab)`}
             className="w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-3 bg-[#E97520] hover:bg-[#d36615] text-white text-xs font-bold rounded-lg transition-colors shadow-xs cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-[#E97520] focus:ring-offset-2"
           >
