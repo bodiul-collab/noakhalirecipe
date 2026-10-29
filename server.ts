@@ -83,6 +83,16 @@ app.get(
   }
 );
 
+// Prerendered Recipe Route Handler for AI readers, crawlers, and search engines
+app.get(["/recipe/:slug", "/recipes/:slug"], (req, res, next) => {
+  const { slug } = req.params;
+  const distRecipeHtml = path.join(process.cwd(), "dist", "recipes", slug, "index.html");
+  if (fs.existsSync(distRecipeHtml)) {
+    return res.sendFile(distRecipeHtml);
+  }
+  next();
+});
+
 // Initialize Gemini Client
 function getGeminiClient(): GoogleGenAI | null {
   const apiKey = process.env.GEMINI_API_KEY;
