@@ -28016,6 +28016,237 @@ const BASE_RECIPES: Recipe[] = [
     seoDescription:
       "Authentic Dudh Chitai Pitha (দুধ চিতাই পিঠা / دود تشيتاي بيثا / دودھ چٹائی پیٹھا): tender steamed coconut-stuffed rice pithas soaked overnight in cardamom date palm jaggery milk.",
   },
+  {
+    id: "rec-narkel-naru",
+    slug: "narkel-naru",
+    title:
+      "Narkel Naru (নারকেল নাড়ু / ناركل نارو / نارکل نارو - Traditional Bengali Coconut Sweet Balls)",
+    category: "Halal Desserts",
+    categorySlug: "halal-desserts",
+    cuisine:
+      "Authentic Bengali Heritage / Coastal Sweets (নারকেল মিষ্টি ঐতিহ্য / Traditional Coconut Confectionery)",
+    description:
+      "Traditional Bengali Narkel Naru (নারকেল নাড়ু / ناركل نارو - كرات جوز الهند الحلوة / নারকেল মিষ্টি বল / نارکل نارو - ناریل کی میٹھی گیندیں): iconic handcrafted sweet coconut balls made from freshly grated mature coconut slow-roasted and caramelized with fragrant winter date palm jaggery (khejur gur) or aromatic sugar, infused with crushed green cardamom and pure cow ghee. Chewy, aromatic, and deeply satisfying festive confection revered across Bangladesh, Eid banquets, and winter Pitha festivals.",
+    introStory:
+      "Across the heritage kitchens of Bengal, from the coastal coconut groves of Greater Noakhali, Barisal, and Chittagong to the historic family homes of Dhaka, no celebration is truly complete without the golden, aromatic warmth of Narkel Naru (নারকেল নাড়ু / ناركل نارو / نارکل نارو).\n\nRevered as the crown jewel of Bengali sweet craft, Narkel Naru embodies the timeless joy of festival preparations. In traditional households, the ritual begins with grating freshly cracked, mature coconuts using a heritage curved iron grater (নারকেল কোরানি / kurni), yielding snow-white, fluffy shreds packed with natural sweet oils. The coconut is then transferred to a heavy iron or brass kadai, where it meets deep amber date palm jaggery (khejur patali gur) and crushed green cardamom.\n\nAs the mixture simmers over a gentle flame, the sugar caramelizes, coating each tender shred of coconut in a sticky, glossy lacquer known traditionally as 'Pank' (পাক আসা). The pinnacle of skill lies in the shaping: while the fragrant confection is still warm to the touch, matriarchs and home cooks lightly grease their palms with pure cow ghee and roll the mixture into firm, glossy, bite-sized spheres. Arranged proudly on festive brass platters alongside sesame seed balls (Tiler Naru) and pressed sandesh, Narkel Naru is an enduring symbol of hospitality, love, and Bengali celebration.",
+    heroImage: "/assets/aistudio/Narkel_Naru_aa7bf2f1.jpg",
+    prepTimeMinutes: 15,
+    cookTimeMinutes: 25,
+    totalTimeMinutes: 40,
+    servings: 24,
+    difficulty: "Medium",
+    calories: 85,
+    rating: 4.98,
+    reviewCount: 185,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    whySpecial:
+      "The timeless crown jewel of Bengali festival confectionery: sweet freshly grated coastal coconut slow-caramelized with fragrant winter date palm jaggery and crushed green cardamom, rolled by hand into glossy sweet spheres.",
+    halalNotes:
+      "100% Halal certified, naturally vegetarian, gluten-free, and egg-free. Made purely with fresh mature coconut, artisanal date palm jaggery (khejur gur), whole cardamom, and pure grass-fed cow ghee. Zero chemical preservatives, animal gelatin, or alcohol extracts.",
+    potentialCautionNotes:
+      "Work with the coconut-jaggery mixture while it is still pleasantly warm. If allowed to cool completely in the pan, the jaggery caramel will harden, making it difficult to roll into smooth spherical balls. Keep a small bowl of ghee or cool water on hand to protect your palms while shaping.",
+    ingredients: [
+      {
+        amount: "3",
+        unit: "cups",
+        name: "Freshly Grated Coconut",
+        notes: "Mature coconut meat grated finely; avoid the brown outer shell layer",
+      },
+      {
+        amount: "1.5",
+        unit: "cups",
+        name: "Date Palm Jaggery (Khejur Gur / Patali Gur)",
+        notes: "Grated or chopped finely; can substitute with dark brown cane jaggery or brown sugar",
+      },
+      {
+        amount: "0.5",
+        unit: "tsp",
+        name: "Green Cardamom Powder",
+        notes: "Freshly ground from whole green cardamom pods",
+      },
+      {
+        amount: "1",
+        unit: "tbsp",
+        name: "Pure Cow Ghee",
+        notes: "Plus a little extra for greasing palms while shaping",
+      },
+      {
+        amount: "2",
+        unit: "tbsp",
+        name: "Full-Cream Milk or Whole Milk Powder",
+        notes: "Optional; imparts rich dairy creaminess and aids binding",
+      },
+      {
+        amount: "1",
+        unit: "pinch",
+        name: "Fine Sea Salt",
+        notes: "Essential to balance the natural caramel sweetness",
+      },
+      {
+        amount: "2",
+        unit: "tbsp",
+        name: "Toasted White Sesame Seeds",
+        notes: "Optional; for rolling and crafting traditional companion Tiler Naru",
+      },
+    ],
+    substitutions: [
+      {
+        original: "Date Palm Jaggery (Khejur Gur)",
+        substitute: "Cane Jaggery (Aakher Gur) or Dark Brown Sugar",
+        notes:
+          "Use 1.25 cups of brown sugar mixed with 1 tablespoon of unsulphured molasses for a rich caramel depth, or granulated white sugar for classic snow-white Chini Naru.",
+      },
+      {
+        original: "Fresh Grated Coconut",
+        substitute: "Frozen Grated Coconut or Unsweetened Desiccated Coconut",
+        notes:
+          "Thaw frozen coconut completely and press out excess liquid. If using dry desiccated coconut, rehydrate with 3 to 4 tablespoons of warm coconut milk before cooking.",
+      },
+      {
+        original: "Pure Cow Ghee",
+        substitute: "Virgin Coconut Oil",
+        notes: "For a 100% plant-based and vegan-friendly variation.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Aromatics & Gentle Coconut Toasting",
+        instruction:
+          "Heat 1 tablespoon of pure cow ghee in a heavy-bottomed kadai or wide non-stick pan over medium-low heat. Add the 3 cups of freshly grated coconut. Sauté gently for 2 to 3 minutes until the raw moisture begins to lift and a sweet, toasted coconut aroma fills the kitchen. Keep the heat gentle so the coconut remains glistening without browning.",
+        tip: "Do not let the coconut brown at this stage; gentle warmth activates the natural coconut oils without drying the meat.",
+      },
+      {
+        step: 2,
+        title: "Melting the Date Palm Jaggery (গুড় গলানো)",
+        instruction:
+          "Add the 1.5 cups of finely grated date palm jaggery (khejur gur), the pinch of sea salt, and 2 tablespoons of whole milk or milk powder. Lower the flame. Stir continuously with a flat wooden spatula as the jaggery slowly melts into an aromatic, glossy amber syrup, enveloping every strand of shredded coconut.",
+        tip: "Grate the jaggery finely beforehand so it dissolves evenly without leaving hard un-melted lumps.",
+      },
+      {
+        step: 3,
+        title: "Slow Caramelization & Reaching the 'Pank' Stage (পাক তোলা)",
+        instruction:
+          "Cook the mixture on low flame for 15 to 18 minutes, stirring steadily from the bottom and sides to ensure zero scorching. As the water evaporates, the mixture will thicken, darken into a lustrous golden-caramel shade, and begin to release its natural coconut oils. Watch for the traditional 'Pank' consistency: the mixture turns sticky, holds together in a soft mass, and pulls away cleanly from the bottom of the pan.",
+        tip: "Patience on low heat is crucial. Rushing the process on high heat causes jaggery to burn and turn bitter.",
+      },
+      {
+        step: 4,
+        title: "Cardamom Infusion & Cold Plate Test",
+        instruction:
+          "Sprinkle the freshly ground green cardamom powder across the mixture and fold in thoroughly for 1 minute. To verify doneness, scoop 1/2 teaspoon of the hot mixture onto a cold plate. Allow it to cool for 20 seconds, then roll it between your fingers. If it forms a firm, glossy, non-sticky round ball without collapsing, the 'Pank' is perfected. Immediately turn off the stove.",
+        tip: "If the test sample feels runny or collapses, cook for an additional 2 to 3 minutes and re-test.",
+      },
+      {
+        step: 5,
+        title: "Handcrafting the Warm Naru Spheres (নাড়ু পাকানো)",
+        instruction:
+          "Immediately transfer the hot coconut mass onto a wide brass or stainless steel tray. Lightly grease your palms with a touch of ghee. While the mixture is still hot and pliable (test gingerly with fingertips first to ensure comfortable handling), take 1 to 1.5 tablespoons of the warm coconut and press firmly between your palms, rolling with circular rotating motions into smooth, compact, 1-inch spherical balls. For sesame seed variations, lightly press a few warm balls into toasted white sesame seeds.",
+        tip: "Shape quickly while warm! If the mixture cools down in the tray, it will harden and resist rolling. If needed, reheat the pan on low for 30 seconds to re-soften.",
+      },
+      {
+        step: 6,
+        title: "Cooling, Setting & Serving",
+        instruction:
+          "Arrange the rolled Narkel Naru on a parchment-lined platter in a single layer to cool completely at room temperature (about 30 to 45 minutes). As they cool, the outer shell sets into a firm, glossy candy-like glaze while retaining a luscious, juicy, chewy coconut center. Serve immediately on a festive brass thali, or transfer to an airtight glass container.",
+        tip: "Store in an airtight jar at room temperature; the caramel depth intensifies beautifully over the next 24 to 48 hours.",
+      },
+    ],
+    chefNotes: [
+      "Always select fresh mature coconuts ('ঝানু নারকেল') with dark brown shells and thick, oily white flesh; tender green coconuts lack the necessary fats and body for naru.",
+      "If making traditional white sugar naru ('Chini Naru'), replace the jaggery with 1.25 cups of refined sugar, cook until one-string consistency, and add 2 tablespoons of milk powder for a snowy white, milky finish.",
+      "If the mixture hardens before you finish shaping all the balls, splash 1 teaspoon of hot water into the pan, place on the lowest flame for 30 seconds with a lid on, and resume rolling.",
+    ],
+    cookingTips: [
+      "Grate only the pure white coconut meat; avoid grating into the dark inner woody husk to preserve a pristine texture.",
+      "Always perform the cold-plate pinch test before turning off the heat to confirm the sugar syrup has reached the binding stage.",
+      "Roll with gentle but firm pressure so the balls are dense and hold their shape during long-term storage.",
+    ],
+    commonMistakes: [
+      "Cooking over high heat, which scorches the jaggery and creates an acrid bitter flavor.",
+      "Letting the mixture cool down completely in the pan before rolling, which causes the sugar to crystallize and crumble.",
+      "Adding excessive water or milk, which makes the mixture soggy and prevents proper ball formation.",
+    ],
+    nutrition: {
+      calories: 85,
+      proteinGrams: 1,
+      carbsGrams: 11,
+      fatGrams: 4.5,
+      fiberGrams: 1.2,
+      sodiumMg: 12,
+      servingSizeDescription: "1 medium sweet ball (approx. 25g)",
+    },
+    storageInstructions:
+      "Store in an airtight glass container in a cool, dry pantry for up to 3 to 4 weeks, or refrigerate for up to 2 months. Jaggery naru retains its chewiness and aroma exceptionally well.",
+    freezingInstructions:
+      "Freeze in a single layer on a tray until solid, then pack in freezer-safe bags for up to 6 months. Thaw at room temperature for 30 minutes before serving.",
+    servingSuggestions: [
+      "Essential festive sweet for Eid celebrations, Shab-e-Barat, and winter Pitha festivals.",
+      "Traditional Bengali afternoon hospitality served alongside steaming hot cups of spiced Cha or Adeni Karak Chai.",
+      "Centerpiece on a festive brass dessert platter alongside Tiler Naru, Dudh Chitai Pitha, and Shahi Besan Laddu.",
+    ],
+    faqs: [
+      {
+        question: "Can I make Narkel Naru with sugar instead of jaggery?",
+        answer:
+          "Yes! Traditional sugar coconut naru ('Chini Naru') produces snowy white sweet balls. Substitute the jaggery with 1.25 cups of white sugar, cook gently until sticky, and fold in 2 tablespoons of milk powder for a rich, milky confection.",
+      },
+      {
+        question: "Why is my coconut mixture crumbling instead of rolling into balls?",
+        answer:
+          "Crumbling occurs if the jaggery was not cooked to the sticky 'Pank' stage, or if the mixture cooled completely before shaping. Return the pan to low heat with 1 tablespoon of milk or warm water for 1 to 2 minutes to melt the caramel, then roll immediately while warm.",
+      },
+      {
+        question: "How long does Narkel Naru stay fresh?",
+        answer:
+          "Thanks to the natural preserving qualities of caramelized jaggery and coconut oils, Narkel Naru remains fresh in an airtight jar at cool room temperature for 3 to 4 weeks without any refrigeration.",
+      },
+      {
+        question: "Can I make this with store-bought frozen grated coconut?",
+        answer:
+          "Yes. Thaw frozen grated coconut completely at room temperature, then squeeze gently in a clean tea towel to remove excessive water before toasting in the pan.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Regional Culinary Director & Halal Recipe Developer",
+    },
+    updatedDate: "2026-10-28",
+    tags: [
+      "Narkel Naru",
+      "নারকেল নাড়ু",
+      "নারকেল নারু",
+      "ناركل نارو",
+      "نارکل نارو",
+      "Coconut Laddu",
+      "Bengali Sweets",
+      "Halal Desserts",
+      "Date Palm Jaggery",
+      "Khejur Gur",
+      "Eid Treats",
+      "Noakhali Heritage",
+      "Traditional Pitha",
+    ],
+    relatedRecipeSlugs: [
+      "narkel-puli-pitha",
+      "traditional-teler-pitha-gur-pitha",
+      "traditional-vapa-pitha-steamed-coconut-jaggery",
+      "patishapta-pitha",
+      "mango-coconut-burfi",
+      "festive-shahi-besan-laddu",
+      "dudh-chitai-pitha",
+    ],
+    relatedGuideSlugs: [
+      "how-to-build-a-bangladeshi-spice-base",
+      "how-to-make-perfect-beresta",
+    ],
+    seoTitle:
+      "Narkel Naru Recipe (নারকেল নাড়ু / Traditional Bengali Coconut Sweet Balls) | Noakhali Kitchen",
+    seoDescription:
+      "Authentic Bengali Narkel Naru (নারকেল নাড়ু / ناركل نارو كرات جوز الهند الحلوة / نارکل نارو ناریل کی میٹھی گیندیں): handcrafted sweet coconut balls with fragrant date palm jaggery, cardamom, and ghee.",
+  },
 ];
 
 export const RECIPES: Recipe[] = enhanceRecipesWithCornerstones(BASE_RECIPES);

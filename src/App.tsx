@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, Suspense, lazy } from "react";
 import { Header } from "./components/Header";
 import { SearchUtilityRow } from "./components/SearchUtilityRow";
 import { Footer } from "./components/Footer";
@@ -11,14 +11,47 @@ import { AddToCollectionModal } from "./components/AddToCollectionModal";
 import { HomeView } from "./views/HomeView";
 import { RecipesView } from "./views/RecipesView";
 import { CategoryView } from "./views/CategoryView";
-import { BlogView } from "./views/BlogView";
-import { CookingGuidesView } from "./views/CookingGuidesView";
-import { FoodCultureView } from "./views/FoodCultureView";
-import { HalalPantryView } from "./views/HalalPantryView";
-import { ToolsView } from "./views/ToolsView";
-import { AboutView } from "./views/AboutView";
-import { ContactView } from "./views/ContactView";
-import { LegalView } from "./views/LegalView";
+
+// Dynamically loaded secondary views (Phase 6.2 Code-Splitting)
+const BlogView = lazy(() =>
+  import("./views/BlogView").then((m) => ({ default: m.BlogView }))
+);
+const CookingGuidesView = lazy(() =>
+  import("./views/CookingGuidesView").then((m) => ({ default: m.CookingGuidesView }))
+);
+const FoodCultureView = lazy(() =>
+  import("./views/FoodCultureView").then((m) => ({ default: m.FoodCultureView }))
+);
+const HalalPantryView = lazy(() =>
+  import("./views/HalalPantryView").then((m) => ({ default: m.HalalPantryView }))
+);
+const ToolsView = lazy(() =>
+  import("./views/ToolsView").then((m) => ({ default: m.ToolsView }))
+);
+const AboutView = lazy(() =>
+  import("./views/AboutView").then((m) => ({ default: m.AboutView }))
+);
+const ContactView = lazy(() =>
+  import("./views/ContactView").then((m) => ({ default: m.ContactView }))
+);
+const LegalView = lazy(() =>
+  import("./views/LegalView").then((m) => ({ default: m.LegalView }))
+);
+
+const ViewLoadingFallback: React.FC = () => (
+  <div
+    className="w-full min-h-[50vh] flex items-center justify-center bg-[#FAF9F6] dark:bg-[#141413] transition-colors"
+    role="status"
+    aria-label="Loading page content"
+  >
+    <div className="flex flex-col items-center gap-3">
+      <div className="w-8 h-8 rounded-full border-2 border-[#E97520]/20 border-t-[#E97520] animate-spin" />
+      <span className="text-xs font-medium text-[#77736D] dark:text-[#A8A49E]">
+        Loading culinary notes...
+      </span>
+    </div>
+  </div>
+);
 
 import { RECIPES } from "./data/recipes";
 import { Recipe, RecipeCollection } from "./types";
@@ -898,7 +931,9 @@ export default function App() {
 
       {/* Main View Area */}
       <main className="flex-1">
-        {renderCurrentView()}
+        <Suspense fallback={<ViewLoadingFallback />}>
+          {renderCurrentView()}
+        </Suspense>
       </main>
 
       {/* 13. Comprehensive Footer with Legal & Amazon Affiliate Disclosures */}

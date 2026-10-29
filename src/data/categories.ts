@@ -170,7 +170,7 @@ export const CATEGORIES: CategoryHub[] = [
     fullDescription:
       "Celebrate sweet milestones with luxurious Eid desserts perfumed with green cardamom, saffron threads, pistachios, and thickened whole milk. All made without non-halal gelatin or alcohol-based vanilla extracts.",
     image: IMAGES.gulabJamun,
-    featuredRecipeSlugs: ["dudh-chitai-pitha", "chitoi-pitha", "patishapta-pitha", "kholaja-pitha", "suji-halwa-halva", "vibrant-dragon-fruit-banana-superfood-nice-cream-sorbet", "velvety-blueberry-banana-fruit-sorbet", "narkel-puli-pitha", "traditional-teler-pitha-gur-pitha", "traditional-vapa-pitha-steamed-coconut-jaggery", "milk-powder-burfi-quick-mawa-fudge", "shahi-besan-laddu", "basbousa-semolina-cake", "mango-coconut-burfi", "crispy-saffron-jalebi", "shahi-gulab-jamun", "kheer-shahi-rice-kheer-payesh", "royal-gajar-ka-halwa", "bengali-roshogolla"],
+    featuredRecipeSlugs: ["narkel-naru", "dudh-chitai-pitha", "chitoi-pitha", "patishapta-pitha", "kholaja-pitha", "suji-halwa-halva", "vibrant-dragon-fruit-banana-superfood-nice-cream-sorbet", "velvety-blueberry-banana-fruit-sorbet", "narkel-puli-pitha", "traditional-teler-pitha-gur-pitha", "traditional-vapa-pitha-steamed-coconut-jaggery", "milk-powder-burfi-quick-mawa-fudge", "shahi-besan-laddu", "basbousa-semolina-cake", "mango-coconut-burfi", "crispy-saffron-jalebi", "shahi-gulab-jamun", "kheer-shahi-rice-kheer-payesh", "royal-gajar-ka-halwa", "bengali-roshogolla"],
     faqs: [
       {
         question: "Is vanilla extract Halal?",
@@ -316,6 +316,7 @@ export const CATEGORIES: CategoryHub[] = [
       "borhani",
       "salty-lassi",
       "thandai",
+      "narkel-naru",
       "narkel-puli-pitha",
       "dal-piyaju-pakora",
       "chicken-patty",
