@@ -51,6 +51,10 @@ function prerenderAllRecipes() {
     count++;
   }
 
+  // 3. Create dist/200.html as native SPA fallback
+  fs.copyFileSync(DIST_INDEX, path.join(DIST_DIR, "200.html"));
+  console.log(`[Prerender] Created dist/200.html native SPA fallback`);
+
   console.log(`[Prerender] Successfully generated static accessible HTML for ${count} recipes!`);
   console.log(`[Prerender] Output folders populated: dist/recipes/ (x${count}) and dist/recipe/ (x${count})`);
 }

@@ -13,7 +13,3 @@
 /guides/essential-bengali-spices-guide/  /guides/how-to-build-a-bangladeshi-spice-base  301
 /directory/*  /recipes  301
 /directory  /recipes  301
-
-# SPA Fallback for Cloudflare Pages
-/*  /index.html  200
-
