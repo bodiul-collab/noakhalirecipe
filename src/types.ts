@@ -56,6 +56,24 @@ export interface RecipeIngredientSubstitute {
   notes: string;
 }
 
+export interface VideoChapter {
+  title: string;
+  seconds: number;
+  description?: string;
+}
+
+export interface RecipeVideo {
+  youtubeVideoId: string;
+  youtubeUrl: string;
+  videoTitle: string;
+  videoThumbnail?: string;
+  videoDuration?: string;
+  videoDescription?: string;
+  videoChapters?: VideoChapter[];
+  videoEnabled?: boolean;
+  uploadDate?: string;
+}
+
 export interface Recipe {
   id: string;
   slug: string;
@@ -105,6 +123,7 @@ export interface Recipe {
   author: RecipeAuthor;
   updatedDate: string;
   tags: string[];
+  video?: RecipeVideo;
 }
 
 export interface RecipeCollection {

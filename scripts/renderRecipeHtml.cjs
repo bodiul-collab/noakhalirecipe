@@ -134,6 +134,31 @@ function renderRecipePage(recipe, baseHtmlTemplate, options = {}) {
           ratingValue: (recipe.rating || 4.9).toString(),
           reviewCount: (recipe.reviewCount || 120).toString(),
         },
+        ...(recipe.video &&
+          recipe.video.videoEnabled &&
+          recipe.video.youtubeVideoId && {
+            video: {
+              "@type": "VideoObject",
+              name: recipe.video.videoTitle || `${recipe.title} Recipe Video Tutorial`,
+              thumbnailUrl: [
+                recipe.video.videoThumbnail ||
+                  `https://i.ytimg.com/vi/${recipe.video.youtubeVideoId}/hqdefault.jpg`,
+              ],
+              contentUrl:
+                recipe.video.youtubeUrl ||
+                `https://youtu.be/${recipe.video.youtubeVideoId}`,
+              embedUrl: `https://www.youtube-nocookie.com/embed/${recipe.video.youtubeVideoId}`,
+              ...(recipe.video.videoDescription && {
+                description: recipe.video.videoDescription,
+              }),
+              ...(recipe.video.uploadDate && {
+                uploadDate: recipe.video.uploadDate,
+              }),
+              ...(recipe.video.videoDuration && {
+                duration: recipe.video.videoDuration,
+              }),
+            },
+          }),
       },
       {
         "@type": "BreadcrumbList",
@@ -245,6 +270,42 @@ function renderRecipePage(recipe, baseHtmlTemplate, options = {}) {
           <section class="p-4 rounded-xl bg-[#F0FDF4] border border-[#BBF7D0] text-xs text-[#166534] mb-8">
             <strong class="font-bold block uppercase tracking-wider mb-1 text-[11px] text-[#15803D]">Halal Verification & Standards</strong>
             <p>${escapeHtml(recipe.halalNotes)}</p>
+          </section>
+          ` : ""}
+
+          <!-- Recipe Video Section -->
+          ${recipe.video && recipe.video.videoEnabled && recipe.video.youtubeVideoId ? `
+          <section id="recipe-video-section" class="mb-10 p-5 rounded-xl bg-white border border-[#E6E1D8] shadow-sm">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#FFF4EA] text-[#E97520] border border-[#F8CD78]/60">
+                Official Video Tutorial
+              </span>
+              <span class="text-xs text-[#77736D]">&bull; Step-by-Step Cooking</span>
+            </div>
+            <h2 class="text-lg font-bold text-[#242423] mb-3 font-heading">
+              Watch How to Cook ${escapeHtml(recipe.title)}
+            </h2>
+            <div class="aspect-video w-full rounded-lg overflow-hidden bg-[#1E1B18] relative mb-3">
+              <img
+                src="${escapeHtml(recipe.video.videoThumbnail || `https://i.ytimg.com/vi/${recipe.video.youtubeVideoId}/hqdefault.jpg`)}"
+                alt="${escapeHtml(recipe.video.videoTitle || recipe.title)}"
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                <a
+                  href="${escapeHtml(recipe.video.youtubeUrl || `https://youtu.be/${recipe.video.youtubeVideoId}`)}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#E97520] text-white font-bold text-xs shadow-lg hover:bg-[#D75D17] transition-all"
+                >
+                  &#9658; Watch Video Tutorial on YouTube
+                </a>
+              </div>
+            </div>
+            <p class="text-xs text-[#77736D]">
+              Video: <a href="${escapeHtml(recipe.video.youtubeUrl || `https://youtu.be/${recipe.video.youtubeVideoId}`)}" target="_blank" rel="noopener noreferrer" class="text-[#E97520] underline font-semibold">${escapeHtml(recipe.video.videoTitle || recipe.title)}</a>
+            </p>
           </section>
           ` : ""}
 

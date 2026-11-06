@@ -25,9 +25,11 @@ import {
   Scale,
   CookingPot,
   ShoppingBag,
+  Play,
 } from "lucide-react";
 import { RecipeCard } from "../components/RecipeCard";
 import { HalalCheck } from "../components/HalalCheck";
+import { RecipeVideoCard } from "../components/RecipeVideoCard";
 import { AdSlot } from "../components/AdSlot";
 import { NutritionalBreakdown } from "../components/NutritionalBreakdown";
 import { KeyNutritionalPerServing } from "../components/KeyNutritionalPerServing";
@@ -509,6 +511,30 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
             ratingValue: blendedRating.rating.toString(),
             reviewCount: blendedRating.reviewCount.toString(),
           },
+          ...(currentRecipe.video?.videoEnabled &&
+            currentRecipe.video?.youtubeVideoId && {
+              video: {
+                "@type": "VideoObject",
+                name: currentRecipe.video.videoTitle || `${currentRecipe.title} Recipe Video Tutorial`,
+                thumbnailUrl: [
+                  currentRecipe.video.videoThumbnail ||
+                    `https://i.ytimg.com/vi/${currentRecipe.video.youtubeVideoId}/hqdefault.jpg`,
+                ],
+                contentUrl:
+                  currentRecipe.video.youtubeUrl ||
+                  `https://youtu.be/${currentRecipe.video.youtubeVideoId}`,
+                embedUrl: `https://www.youtube-nocookie.com/embed/${currentRecipe.video.youtubeVideoId}`,
+                ...(currentRecipe.video.videoDescription && {
+                  description: currentRecipe.video.videoDescription,
+                }),
+                ...(currentRecipe.video.uploadDate && {
+                  uploadDate: currentRecipe.video.uploadDate,
+                }),
+                ...(currentRecipe.video.videoDuration && {
+                  duration: currentRecipe.video.videoDuration,
+                }),
+              },
+            }),
         },
         {
           "@type": "BreadcrumbList",
@@ -907,6 +933,20 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
                   Print Recipe Card
                 </button>
 
+                {currentRecipe.video?.videoEnabled && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      document.getElementById("recipe-video-section")?.scrollIntoView({ behavior: "smooth" });
+                    }}
+                    className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#FFF4EA] border border-[#F8CD78] text-[#E97520] hover:bg-[#FFE8D5] text-xs font-bold transition-all cursor-pointer shadow-2xs"
+                    title="Jump to Official Recipe Video"
+                  >
+                    <Play className="w-3.5 h-3.5 fill-[#E97520]" />
+                    Watch Video
+                  </button>
+                )}
+
                 <button
                   onClick={() => onToggleSaveRecipe(currentRecipe)}
                   className={`inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-bold transition-all cursor-pointer border ${
@@ -958,6 +998,14 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
               notes={currentRecipe.halalNotes}
               cautionNotes={currentRecipe.potentialCautionNotes}
             />
+
+            {/* Recipe Video Section (when video is available) */}
+            {currentRecipe.video?.videoEnabled && (
+              <RecipeVideoCard
+                video={currentRecipe.video}
+                recipeTitle={currentRecipe.title}
+              />
+            )}
 
             {/* Ingredients Section with Scaler */}
             <div id="recipe-ingredients" className="space-y-4 pt-4 border-t border-[#E6E1D8]">

@@ -25078,6 +25078,13 @@ const BASE_RECIPES: Recipe[] = [
       "Authentic Chicken Vindaloo Recipe (چکن ونڈالو / চিকেন ভিনডালু) | Noakhali Kitchen",
     seoDescription:
       "Fiery, tangy, and deeply aromatic authentic Chicken Vindaloo (چکن ونڈالو / চিকেন ভিনডালু / دجاج فيندالو): succulent bone-in Halal chicken in a crimson garlic-vinegar paste.",
+    video: {
+      youtubeVideoId: "M6FbRXE-T3E",
+      youtubeUrl: "https://youtu.be/M6FbRXE-T3E",
+      videoTitle: "Chicken Vindaloo Recipe | Rich, Spicy & Flavorful Homemade Curry | Noakhali Kitchen",
+      videoThumbnail: "https://i.ytimg.com/vi/M6FbRXE-T3E/hqdefault.jpg",
+      videoEnabled: true,
+    },
   },
   {
     id: "rec-lamb-vindaloo",
