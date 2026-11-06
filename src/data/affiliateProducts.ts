@@ -49,7 +49,7 @@ export const AFFILIATE_PRODUCTS: AffiliateProductItem[] = [
     whyItMatters:
       "Useful multipurpose cookware for controlled stovetop cooking.",
     bestFor: "Everyday Bengali curries • Chicken dishes • Sauces • Rice preparation",
-    affiliateUrl: null,
+    affiliateUrl: "https://link.amazon/B05df3VlO",
     disclosureRequired: true,
   },
 
@@ -77,7 +77,7 @@ export const AFFILIATE_PRODUCTS: AffiliateProductItem[] = [
     whyItMatters:
       "Useful for reproducing precise spice ratios.",
     bestFor: "Whole spices • Ground spices • Salt • Baking/cooking measurements",
-    affiliateUrl: null,
+    affiliateUrl: "https://link.amazon/B00BYVxWJ",
     disclosureRequired: true,
   },
   {
@@ -89,7 +89,7 @@ export const AFFILIATE_PRODUCTS: AffiliateProductItem[] = [
     whyItMatters:
       "Helps cooks understand temperature rather than relying only on visual cues.",
     bestFor: "Meat doneness • Oil temperature • Frying • Controlled cooking",
-    affiliateUrl: null,
+    affiliateUrl: "https://link.amazon/B0emG54AC",
     disclosureRequired: true,
   },
   {
@@ -101,7 +101,7 @@ export const AFFILIATE_PRODUCTS: AffiliateProductItem[] = [
     whyItMatters:
       "Essential for filtering whole spice infusions, clarifying bone broths, and ensuring smooth gravies in slow-cooked dishes.",
     bestFor: "Filtering spice-infused liquids • Smooth sauces • Nihari preparation • Removing spice particles",
-    affiliateUrl: null,
+    affiliateUrl: "https://link.amazon/B00UZOL34",
     disclosureRequired: true,
   },
 
@@ -129,7 +129,7 @@ export const AFFILIATE_PRODUCTS: AffiliateProductItem[] = [
     whyItMatters:
       "Position this as a convenience tool, not a replacement for every traditional grinding technique.",
     bestFor: "Dry whole spices • Custom spice blends • Cumin • Coriander • Garam masala",
-    affiliateUrl: null,
+    affiliateUrl: "https://link.amazon/B0aKVWHaT",
     disclosureRequired: true,
   },
 
@@ -145,7 +145,7 @@ export const AFFILIATE_PRODUCTS: AffiliateProductItem[] = [
     whyItMatters:
       "Gentle on heavy cookware while providing the leverage and heat tolerance needed to scrape fond and stir thick gravies without scratching.",
     bestFor: "Bhunai • Koshano • Scraping the bottom of heavy cookware • Stirring thick gravies",
-    affiliateUrl: null,
+    affiliateUrl: "https://link.amazon/B0inAuxvC",
     disclosureRequired: true,
   },
   {
@@ -157,7 +157,7 @@ export const AFFILIATE_PRODUCTS: AffiliateProductItem[] = [
     whyItMatters:
       "Provides secure handling when turning large cuts of poultry or meat during searing without tearing the delicate skin.",
     bestFor: "Handling chicken pieces • Turning meat • Browning • Serving",
-    affiliateUrl: null,
+    affiliateUrl: "https://link.amazon/B0iyFsKzG",
     disclosureRequired: true,
   },
   {
@@ -169,7 +169,7 @@ export const AFFILIATE_PRODUCTS: AffiliateProductItem[] = [
     whyItMatters:
       "Non-reactive, durable prep vessels ideal for acidic yogurt marinades, resting fried onions, and mixing spice pastes.",
     bestFor: "Marination • Yogurt mixtures • Spice preparation • Beresta preparation",
-    affiliateUrl: null,
+    affiliateUrl: "https://link.amazon/B0a0hywHY",
     disclosureRequired: true,
   },
 
@@ -185,7 +185,7 @@ export const AFFILIATE_PRODUCTS: AffiliateProductItem[] = [
     whyItMatters:
       "Protects sensitive botanical oils and aroma compounds from kitchen humidity and ambient oxidation.",
     bestFor: "Panch Phoron • Radhuni • Cumin • Nigella • Fennel • Mustard seeds • Cardamom • Cinnamon",
-    affiliateUrl: null,
+    affiliateUrl: "https://link.amazon/B03w3bLiQ",
     disclosureRequired: true,
   },
   {
@@ -197,7 +197,7 @@ export const AFFILIATE_PRODUCTS: AffiliateProductItem[] = [
     whyItMatters:
       "Heavy-duty, pest-resistant storage that preserves the freshness of heirloom Chinigura rice and dry staples.",
     bestFor: "Rice • Flour • Whole spices • Lentils • Pantry organization",
-    affiliateUrl: null,
+    affiliateUrl: "https://link.amazon/B0j6Pklj2",
     disclosureRequired: true,
   },
 ];
