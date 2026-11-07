@@ -22,6 +22,7 @@ import {
   Maximize2,
   Compass,
   ShoppingBag,
+  Video,
 } from "lucide-react";
 
 interface HeaderProps {
@@ -66,6 +67,7 @@ export const Header: React.FC<HeaderProps> = ({
   const navLinks = [
     { label: "Home", route: "/" },
     { label: "Recipes", route: "/recipes" },
+    { label: "Watch & Cook", route: "/watch-and-cook" },
     { label: "Categories", route: "/category", hasDropdown: true },
     { label: "Guides", route: "/guides" },
     { label: "Food Culture", route: "/culture" },
@@ -406,6 +408,21 @@ export const Header: React.FC<HeaderProps> = ({
               >
                 <BookOpen className="w-4 h-4 text-[#8A857E]" />
                 <span>All Recipes Catalog</span>
+              </button>
+
+              <button
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  onNavigate("/watch-and-cook");
+                }}
+                className={`w-full text-left px-3 py-2.5 rounded-lg flex items-center gap-3 text-sm font-medium transition-colors ${
+                  currentRoute.startsWith("/watch-and-cook")
+                    ? "bg-[#FFF9F0] text-[#E97520] font-bold"
+                    : "text-[#30302F] hover:bg-[#FAF9F6]"
+                }`}
+              >
+                <Video className="w-4 h-4 text-[#E97520]" />
+                <span>Watch &amp; Cook Videos</span>
               </button>
 
               <button

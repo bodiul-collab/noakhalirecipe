@@ -54,6 +54,7 @@ function generateSitemap() {
   // 1. Core Hubs & Editorial Landing Pages
   addUrl("/", null, "Core Hubs");
   addUrl("/recipes", null, "Core Hubs");
+  addUrl("/watch-and-cook", null, "Core Hubs");
   addUrl("/guides", null, "Core Hubs");
   addUrl("/culture", null, "Core Hubs");
   addUrl("/pantry", null, "Core Hubs");

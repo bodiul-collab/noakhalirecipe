@@ -93,6 +93,15 @@ app.get(["/recipe/:slug", "/recipes/:slug"], (req, res, next) => {
   next();
 });
 
+// Prerendered Watch & Cook Discovery Hub Handler
+app.get("/watch-and-cook", (_req, res, next) => {
+  const distWatchHtml = path.join(process.cwd(), "dist", "watch-and-cook", "index.html");
+  if (fs.existsSync(distWatchHtml)) {
+    return res.sendFile(distWatchHtml);
+  }
+  next();
+});
+
 // Initialize Gemini Client
 function getGeminiClient(): GoogleGenAI | null {
   const apiKey = process.env.GEMINI_API_KEY;

@@ -37,6 +37,9 @@ const ContactView = lazy(() =>
 const LegalView = lazy(() =>
   import("./views/LegalView").then((m) => ({ default: m.LegalView }))
 );
+const WatchAndCookView = lazy(() =>
+  import("./views/WatchAndCookView").then((m) => ({ default: m.WatchAndCookView }))
+);
 
 const ViewLoadingFallback: React.FC = () => (
   <div
@@ -712,6 +715,16 @@ export default function App() {
           collections={collections}
           onToggleRecipeInCollection={handleToggleRecipeInCollection}
           onCreateCollection={(name) => handleCreateCollection(name)}
+        />
+      );
+    }
+
+    // Watch & Cook Video Discovery Hub
+    if (path === "/watch-and-cook" || path.startsWith("/watch-and-cook/")) {
+      return (
+        <WatchAndCookView
+          onNavigate={navigate}
+          onSelectRecipe={handleSelectRecipe}
         />
       );
     }
