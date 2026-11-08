@@ -74,6 +74,13 @@ export interface RecipeVideo {
   uploadDate?: string;
 }
 
+export interface RecipeReview {
+  author: string;
+  datePublished: string;
+  reviewBody: string;
+  ratingValue: number;
+}
+
 export interface Recipe {
   id: string;
   slug: string;
@@ -92,6 +99,8 @@ export interface Recipe {
   calories: number;
   rating: number;
   reviewCount: number;
+  ratingCount?: number;
+  reviews?: RecipeReview[];
   isTrending?: boolean;
   isFeatured?: boolean;
   isRegionalHeritage?: boolean;

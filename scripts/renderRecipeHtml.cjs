@@ -132,8 +132,28 @@ function renderRecipePage(recipe, baseHtmlTemplate, options = {}) {
         aggregateRating: {
           "@type": "AggregateRating",
           ratingValue: (recipe.rating || 4.9).toString(),
+          ratingCount: (recipe.ratingCount || recipe.reviewCount || 120).toString(),
           reviewCount: (recipe.reviewCount || 120).toString(),
+          bestRating: "5",
+          worstRating: "1",
         },
+        ...(recipe.reviews && recipe.reviews.length > 0 && {
+          review: recipe.reviews.map((rev) => ({
+            "@type": "Review",
+            author: {
+              "@type": "Person",
+              name: rev.author,
+            },
+            datePublished: rev.datePublished,
+            reviewBody: rev.reviewBody,
+            reviewRating: {
+              "@type": "Rating",
+              ratingValue: rev.ratingValue.toString(),
+              bestRating: "5",
+              worstRating: "1",
+            },
+          })),
+        }),
         ...(recipe.video &&
           recipe.video.videoEnabled &&
           recipe.video.youtubeVideoId && {

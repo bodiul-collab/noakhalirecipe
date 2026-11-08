@@ -509,8 +509,28 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
           aggregateRating: {
             "@type": "AggregateRating",
             ratingValue: blendedRating.rating.toString(),
+            ratingCount: (currentRecipe.ratingCount || blendedRating.reviewCount).toString(),
             reviewCount: blendedRating.reviewCount.toString(),
+            bestRating: "5",
+            worstRating: "1",
           },
+          ...(currentRecipe.reviews && currentRecipe.reviews.length > 0 && {
+            review: currentRecipe.reviews.map((rev) => ({
+              "@type": "Review",
+              author: {
+                "@type": "Person",
+                name: rev.author,
+              },
+              datePublished: rev.datePublished,
+              reviewBody: rev.reviewBody,
+              reviewRating: {
+                "@type": "Rating",
+                ratingValue: rev.ratingValue.toString(),
+                bestRating: "5",
+                worstRating: "1",
+              },
+            })),
+          }),
           ...(currentRecipe.video?.videoEnabled &&
             currentRecipe.video?.youtubeVideoId && {
               video: {
