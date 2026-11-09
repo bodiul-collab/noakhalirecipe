@@ -132,28 +132,8 @@ function renderRecipePage(recipe, baseHtmlTemplate, options = {}) {
         aggregateRating: {
           "@type": "AggregateRating",
           ratingValue: (recipe.rating || 4.9).toString(),
-          ratingCount: (recipe.ratingCount || recipe.reviewCount || 120).toString(),
           reviewCount: (recipe.reviewCount || 120).toString(),
-          bestRating: "5",
-          worstRating: "1",
         },
-        ...(recipe.reviews && recipe.reviews.length > 0 && {
-          review: recipe.reviews.map((rev) => ({
-            "@type": "Review",
-            author: {
-              "@type": "Person",
-              name: rev.author,
-            },
-            datePublished: rev.datePublished,
-            reviewBody: rev.reviewBody,
-            reviewRating: {
-              "@type": "Rating",
-              ratingValue: rev.ratingValue.toString(),
-              bestRating: "5",
-              worstRating: "1",
-            },
-          })),
-        }),
         ...(recipe.video &&
           recipe.video.videoEnabled &&
           recipe.video.youtubeVideoId && {
@@ -236,7 +216,7 @@ function renderRecipePage(recipe, baseHtmlTemplate, options = {}) {
       </header>
 
       <main class="max-w-4xl mx-auto px-4 sm:px-6 py-8">
-        <article itemscope itemtype="https://schema.org/Recipe" class="bg-white rounded-2xl border border-[#E6E1D8] p-6 sm:p-10 shadow-xs">
+        <article class="bg-white rounded-2xl border border-[#E6E1D8] p-6 sm:p-10 shadow-xs">
           <!-- Category & Cuisine Header -->
           <div class="flex flex-wrap items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#E97520] mb-3">
             <a href="/category/${recipe.categorySlug}" class="hover:underline">${escapeHtml(recipe.category)}</a>
@@ -245,12 +225,12 @@ function renderRecipePage(recipe, baseHtmlTemplate, options = {}) {
           </div>
 
           <!-- Main Recipe Title H1 -->
-          <h1 itemprop="name" class="text-2xl sm:text-4xl font-extrabold text-[#242423] leading-tight mb-4 font-serif-editorial">
+          <h1 class="text-2xl sm:text-4xl font-extrabold text-[#242423] leading-tight mb-4 font-serif-editorial">
             ${escapeHtml(recipe.title)}
           </h1>
 
           <!-- Recipe Description -->
-          <p itemprop="description" class="text-sm sm:text-base text-[#57534E] leading-relaxed mb-6">
+          <p class="text-sm sm:text-base text-[#57534E] leading-relaxed mb-6">
             ${escapeHtml(recipe.description)}
           </p>
 
@@ -259,7 +239,6 @@ function renderRecipePage(recipe, baseHtmlTemplate, options = {}) {
             <img
               src="${escapeHtml(absHeroImage)}"
               alt="${escapeHtml(recipe.title)}"
-              itemprop="image"
               class="w-full h-full object-cover"
               loading="eager"
             />
@@ -269,19 +248,19 @@ function renderRecipePage(recipe, baseHtmlTemplate, options = {}) {
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 py-4 border-y border-[#E6E1D8] mb-8 text-xs text-[#57534E] bg-[#FAF9F6] rounded-lg px-4">
             <div>
               <span class="block text-[#77736D] font-medium">Prep Time</span>
-              <strong class="text-[#242423] text-sm"><time itemprop="prepTime" datetime="${prepIso || ""}">${recipe.prepTimeMinutes} mins</time></strong>
+              <strong class="text-[#242423] text-sm"><time datetime="${prepIso || ""}">${recipe.prepTimeMinutes} mins</time></strong>
             </div>
             <div>
               <span class="block text-[#77736D] font-medium">Cook Time</span>
-              <strong class="text-[#242423] text-sm"><time itemprop="cookTime" datetime="${cookIso || ""}">${recipe.cookTimeMinutes} mins</time></strong>
+              <strong class="text-[#242423] text-sm"><time datetime="${cookIso || ""}">${recipe.cookTimeMinutes} mins</time></strong>
             </div>
             <div>
               <span class="block text-[#77736D] font-medium">Total Time</span>
-              <strong class="text-[#242423] text-sm"><time itemprop="totalTime" datetime="${totalIso || ""}">${recipe.totalTimeMinutes} mins</time></strong>
+              <strong class="text-[#242423] text-sm"><time datetime="${totalIso || ""}">${recipe.totalTimeMinutes} mins</time></strong>
             </div>
             <div>
               <span class="block text-[#77736D] font-medium">Servings</span>
-              <strong class="text-[#242423] text-sm" itemprop="recipeYield">${recipe.servings} servings</strong>
+              <strong class="text-[#242423] text-sm">${recipe.servings} servings</strong>
             </div>
           </div>
 
@@ -336,7 +315,7 @@ function renderRecipePage(recipe, baseHtmlTemplate, options = {}) {
             </h2>
             <ul class="space-y-2.5 text-sm text-[#3F3C38]">
               ${recipe.ingredients.map((ing) => `
-                <li class="flex items-start gap-2.5 py-1.5 border-b border-[#F5F4F0]" itemprop="recipeIngredient">
+                <li class="flex items-start gap-2.5 py-1.5 border-b border-[#F5F4F0]">
                   <span class="text-[#E97520] font-bold shrink-0">&bull;</span>
                   <div>
                     <strong class="text-[#242423]">${escapeHtml(ing.amount)} ${escapeHtml(ing.unit || "")}</strong>
@@ -367,11 +346,11 @@ function renderRecipePage(recipe, baseHtmlTemplate, options = {}) {
             </h2>
             <ol class="space-y-6 text-sm text-[#3F3C38]">
               ${recipe.instructions.map((inst) => `
-                <li itemprop="recipeInstructions" itemscope itemtype="https://schema.org/HowToStep" class="p-4 rounded-xl bg-[#FAF9F6] border border-[#E6E1D8]">
-                  <h3 itemprop="name" class="text-xs font-bold uppercase tracking-wider text-[#E97520] mb-2">
+                <li class="p-4 rounded-xl bg-[#FAF9F6] border border-[#E6E1D8]">
+                  <h3 class="text-xs font-bold uppercase tracking-wider text-[#E97520] mb-2">
                     Step ${inst.step || ""}: ${escapeHtml(inst.title)}
                   </h3>
-                  <p itemprop="text" class="text-sm leading-relaxed text-[#3F3C38]">
+                  <p class="text-sm leading-relaxed text-[#3F3C38]">
                     ${escapeHtml(inst.instruction)}
                   </p>
                   ${inst.tip ? `
@@ -386,24 +365,24 @@ function renderRecipePage(recipe, baseHtmlTemplate, options = {}) {
 
           <!-- Nutrition Facts -->
           ${recipe.nutrition ? `
-          <section id="recipe-nutrition" itemprop="nutrition" itemscope itemtype="https://schema.org/NutritionInformation" class="p-5 bg-[#FAF9F6] rounded-xl border border-[#E6E1D8] mb-10">
+          <section id="recipe-nutrition" class="p-5 bg-[#FAF9F6] rounded-xl border border-[#E6E1D8] mb-10">
             <h2 class="text-base font-bold text-[#242423] mb-3 font-serif-editorial">Nutrition Facts (Per Serving)</h2>
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
               <div class="p-2 bg-white rounded border border-[#E6E1D8]">
                 <span class="text-[#77736D] block">Calories</span>
-                <strong class="text-base text-[#242423]" itemprop="calories">${recipe.nutrition.calories} kcal</strong>
+                <strong class="text-base text-[#242423]">${recipe.nutrition.calories} kcal</strong>
               </div>
               <div class="p-2 bg-white rounded border border-[#E6E1D8]">
                 <span class="text-[#77736D] block">Protein</span>
-                <strong class="text-base text-[#242423]" itemprop="proteinContent">${recipe.nutrition.proteinGrams} g</strong>
+                <strong class="text-base text-[#242423]">${recipe.nutrition.proteinGrams} g</strong>
               </div>
               <div class="p-2 bg-white rounded border border-[#E6E1D8]">
                 <span class="text-[#77736D] block">Carbohydrates</span>
-                <strong class="text-base text-[#242423]" itemprop="carbohydrateContent">${recipe.nutrition.carbsGrams} g</strong>
+                <strong class="text-base text-[#242423]">${recipe.nutrition.carbsGrams} g</strong>
               </div>
               <div class="p-2 bg-white rounded border border-[#E6E1D8]">
                 <span class="text-[#77736D] block">Fat</span>
-                <strong class="text-base text-[#242423]" itemprop="fatContent">${recipe.nutrition.fatGrams} g</strong>
+                <strong class="text-base text-[#242423]">${recipe.nutrition.fatGrams} g</strong>
               </div>
             </div>
           </section>

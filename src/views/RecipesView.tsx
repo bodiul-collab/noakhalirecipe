@@ -325,6 +325,160 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
     );
   }, [currentRecipe, currentUserRating]);
 
+  // Synchronize document-head Recipe structured data (avoiding duplicate JSON-LD in DOM)
+  useEffect(() => {
+    if (!currentRecipe) {
+      // If we are not on a recipe detail page (e.g. recipe catalog), clean up recipe structured data
+      const existingScript = document.getElementById("recipe-structured-data");
+      if (existingScript) {
+        existingScript.remove();
+      }
+      return;
+    }
+
+    const canonicalRecipeUrl = `https://www.noakhalikitchen.com/recipes/${currentRecipe.slug}`;
+    const categoryUrl = `https://www.noakhalikitchen.com/category/${currentRecipe.categorySlug}`;
+    const absHeroImage = toAbsoluteUrl(currentRecipe.heroImage);
+    const scaledServings = Math.round(currentRecipe.servings * servingMultiplier);
+    const perServingNutrition = calculatePerServingNutrition(currentRecipe, scaledServings);
+
+    const jsonLdData = {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Recipe",
+          "@id": `${canonicalRecipeUrl}#recipe`,
+          name: currentRecipe.title,
+          headline: currentRecipe.seoTitle || currentRecipe.title,
+          description: currentRecipe.seoDescription || currentRecipe.description,
+          image: [absHeroImage],
+          author: {
+            "@type": "Person",
+            name: currentRecipe.author.name,
+            jobTitle: currentRecipe.author.role,
+          },
+          publisher: {
+            "@type": "Organization",
+            name: "Noakhali Kitchen",
+            url: "https://www.noakhalikitchen.com/",
+            logo: {
+              "@type": "ImageObject",
+              url: "https://www.noakhalikitchen.com/icon.svg",
+            },
+          },
+          mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": canonicalRecipeUrl,
+          },
+          ...(toIsoDate(currentRecipe.updatedDate) && {
+            datePublished: toIsoDate(currentRecipe.updatedDate),
+            dateModified: toIsoDate(currentRecipe.updatedDate),
+          }),
+          prepTime: `PT${currentRecipe.prepTimeMinutes}M`,
+          cookTime: `PT${currentRecipe.cookTimeMinutes}M`,
+          totalTime: `PT${currentRecipe.totalTimeMinutes}M`,
+          keywords: currentRecipe.tags.join(", "),
+          recipeYield: `${scaledServings} servings`,
+          recipeCategory: currentRecipe.category,
+          recipeCuisine: currentRecipe.cuisine,
+          nutrition: {
+            "@type": "NutritionInformation",
+            calories: `${perServingNutrition.calories} calories`,
+            proteinContent: `${perServingNutrition.proteinGrams} g`,
+            carbohydrateContent: `${perServingNutrition.carbsGrams} g`,
+            fatContent: `${perServingNutrition.fatGrams} g`,
+          },
+          recipeIngredient: currentRecipe.ingredients.map(
+            (i) => `${i.amount} ${i.unit || ""} ${i.name} ${i.notes ? `(${i.notes})` : ""}`.trim()
+          ),
+          recipeInstructions: currentRecipe.instructions.map((inst) => ({
+            "@type": "HowToStep",
+            name: inst.title,
+            text: inst.instruction,
+          })),
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: (currentRecipe.rating || 4.9).toString(),
+            reviewCount: (currentRecipe.reviewCount || 120).toString(),
+          },
+          ...(currentRecipe.video?.videoEnabled &&
+            currentRecipe.video?.youtubeVideoId && {
+              video: {
+                "@type": "VideoObject",
+                name: currentRecipe.video.videoTitle || `${currentRecipe.title} Recipe Video Tutorial`,
+                thumbnailUrl: [
+                  currentRecipe.video.videoThumbnail ||
+                    `https://i.ytimg.com/vi/${currentRecipe.video.youtubeVideoId}/hqdefault.jpg`,
+                ],
+                contentUrl:
+                  currentRecipe.video.youtubeUrl ||
+                  `https://youtu.be/${currentRecipe.video.youtubeVideoId}`,
+                embedUrl: `https://www.youtube-nocookie.com/embed/${currentRecipe.video.youtubeVideoId}`,
+                ...(currentRecipe.video.videoDescription && {
+                  description: currentRecipe.video.videoDescription,
+                }),
+                ...(currentRecipe.video.uploadDate && {
+                  uploadDate: currentRecipe.video.uploadDate,
+                }),
+                ...(currentRecipe.video.videoDuration && {
+                  duration: currentRecipe.video.videoDuration,
+                }),
+              },
+            }),
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": `${canonicalRecipeUrl}#breadcrumb`,
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: "https://www.noakhalikitchen.com/",
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Recipes",
+              item: "https://www.noakhalikitchen.com/recipes",
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: currentRecipe.category,
+              item: categoryUrl,
+            },
+            {
+              "@type": "ListItem",
+              position: 4,
+              name: currentRecipe.title,
+              item: canonicalRecipeUrl,
+            },
+          ],
+        },
+      ],
+    };
+
+    const serializedJsonLd = JSON.stringify(jsonLdData);
+    let script = document.getElementById("recipe-structured-data") as HTMLScriptElement | null;
+    if (script) {
+      script.textContent = serializedJsonLd;
+    } else {
+      script = document.createElement("script");
+      script.type = "application/ld+json";
+      script.id = "recipe-structured-data";
+      script.textContent = serializedJsonLd;
+      document.head.appendChild(script);
+    }
+
+    return () => {
+      const el = document.getElementById("recipe-structured-data");
+      if (el) {
+        el.remove();
+      }
+    };
+  }, [currentRecipe, servingMultiplier, blendedRating]);
+
   // Filtered recipes
   const filteredRecipes = useMemo(() => {
     return RECIPES.filter((r) => {
@@ -447,148 +601,6 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
     const scaledServings = Math.round(currentRecipe.servings * servingMultiplier);
     const perServingNutrition = calculatePerServingNutrition(currentRecipe, scaledServings);
 
-    const canonicalRecipeUrl = `https://www.noakhalikitchen.com/recipes/${currentRecipe.slug}`;
-    const categoryUrl = `https://www.noakhalikitchen.com/category/${currentRecipe.categorySlug}`;
-    const absHeroImage = toAbsoluteUrl(currentRecipe.heroImage);
-
-    // Schema JSON-LD structured data for Google Rich Snippets (Recipe + Breadcrumbs)
-    const jsonLdData = {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Recipe",
-          "@id": `${canonicalRecipeUrl}#recipe`,
-          name: currentRecipe.title,
-          headline: currentRecipe.seoTitle || currentRecipe.title,
-          description: currentRecipe.seoDescription || currentRecipe.description,
-          image: [absHeroImage],
-          author: {
-            "@type": "Person",
-            name: currentRecipe.author.name,
-            jobTitle: currentRecipe.author.role,
-          },
-          publisher: {
-            "@type": "Organization",
-            name: "Noakhali Kitchen",
-            url: "https://www.noakhalikitchen.com/",
-            logo: {
-              "@type": "ImageObject",
-              url: "https://www.noakhalikitchen.com/icon.svg",
-            },
-          },
-          mainEntityOfPage: {
-            "@type": "WebPage",
-            "@id": canonicalRecipeUrl,
-          },
-          ...(toIsoDate(currentRecipe.updatedDate) && {
-            datePublished: toIsoDate(currentRecipe.updatedDate),
-            dateModified: toIsoDate(currentRecipe.updatedDate),
-          }),
-          prepTime: `PT${currentRecipe.prepTimeMinutes}M`,
-          cookTime: `PT${currentRecipe.cookTimeMinutes}M`,
-          totalTime: `PT${currentRecipe.totalTimeMinutes}M`,
-          keywords: currentRecipe.tags.join(", "),
-          recipeYield: `${scaledServings} servings`,
-          recipeCategory: currentRecipe.category,
-          recipeCuisine: currentRecipe.cuisine,
-          nutrition: {
-            "@type": "NutritionInformation",
-            calories: `${perServingNutrition.calories} calories`,
-            proteinContent: `${perServingNutrition.proteinGrams} g`,
-            carbohydrateContent: `${perServingNutrition.carbsGrams} g`,
-            fatContent: `${perServingNutrition.fatGrams} g`,
-          },
-          recipeIngredient: currentRecipe.ingredients.map(
-            (i) => `${i.amount} ${i.unit || ""} ${i.name} ${i.notes ? `(${i.notes})` : ""}`.trim()
-          ),
-          recipeInstructions: currentRecipe.instructions.map((inst) => ({
-            "@type": "HowToStep",
-            name: inst.title,
-            text: inst.instruction,
-          })),
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: blendedRating.rating.toString(),
-            ratingCount: (currentRecipe.ratingCount || blendedRating.reviewCount).toString(),
-            reviewCount: blendedRating.reviewCount.toString(),
-            bestRating: "5",
-            worstRating: "1",
-          },
-          ...(currentRecipe.reviews && currentRecipe.reviews.length > 0 && {
-            review: currentRecipe.reviews.map((rev) => ({
-              "@type": "Review",
-              author: {
-                "@type": "Person",
-                name: rev.author,
-              },
-              datePublished: rev.datePublished,
-              reviewBody: rev.reviewBody,
-              reviewRating: {
-                "@type": "Rating",
-                ratingValue: rev.ratingValue.toString(),
-                bestRating: "5",
-                worstRating: "1",
-              },
-            })),
-          }),
-          ...(currentRecipe.video?.videoEnabled &&
-            currentRecipe.video?.youtubeVideoId && {
-              video: {
-                "@type": "VideoObject",
-                name: currentRecipe.video.videoTitle || `${currentRecipe.title} Recipe Video Tutorial`,
-                thumbnailUrl: [
-                  currentRecipe.video.videoThumbnail ||
-                    `https://i.ytimg.com/vi/${currentRecipe.video.youtubeVideoId}/hqdefault.jpg`,
-                ],
-                contentUrl:
-                  currentRecipe.video.youtubeUrl ||
-                  `https://youtu.be/${currentRecipe.video.youtubeVideoId}`,
-                embedUrl: `https://www.youtube-nocookie.com/embed/${currentRecipe.video.youtubeVideoId}`,
-                ...(currentRecipe.video.videoDescription && {
-                  description: currentRecipe.video.videoDescription,
-                }),
-                ...(currentRecipe.video.uploadDate && {
-                  uploadDate: currentRecipe.video.uploadDate,
-                }),
-                ...(currentRecipe.video.videoDuration && {
-                  duration: currentRecipe.video.videoDuration,
-                }),
-              },
-            }),
-        },
-        {
-          "@type": "BreadcrumbList",
-          "@id": `${canonicalRecipeUrl}#breadcrumb`,
-          itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: "Home",
-              item: "https://www.noakhalikitchen.com/",
-            },
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: "Recipes",
-              item: "https://www.noakhalikitchen.com/recipes",
-            },
-            {
-              "@type": "ListItem",
-              position: 3,
-              name: currentRecipe.category,
-              item: categoryUrl,
-            },
-            {
-              "@type": "ListItem",
-              position: 4,
-              name: currentRecipe.title,
-              item: canonicalRecipeUrl,
-            },
-          ],
-        },
-      ],
-    };
-
     const relatedGuides = COOKING_GUIDES.filter(
       (g) =>
         g.relatedRecipeSlugs.includes(currentRecipe.slug) ||
@@ -598,12 +610,6 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
 
     return (
       <div className="w-full bg-[#FAF9F6] py-8 sm:py-12">
-        {/* Inject Recipe & Breadcrumb Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }}
-        />
-
         <div className="max-w-[1000px] mx-auto px-4 sm:px-6">
           {/* Breadcrumbs */}
           <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-[#77736D] mb-6 print:hidden">
