@@ -29145,6 +29145,264 @@ const BASE_RECIPES: Recipe[] = [
     seoDescription:
       "Authentic Bengali Shahi Dim Korma (শাহী ডিমের কোরমা): golden-seared eggs braised in a creamy ivory white yogurt, cashew-almond & whole-spice gravy finished with beresta, saffron & kewra.",
   },
+  {
+    id: "rec-golda-chingri-malai-curry",
+    slug: "golda-chingri-malai-curry",
+    title: "Golda Chingri Malai Curry (গলদা চিংড়ি মালাই কারি)",
+    category: "Halal Seafood",
+    categorySlug: "halal-seafood",
+    cuisine: "Bengali / Bangladeshi Heritage",
+    description:
+      "Iconic Bengali Golda Chingri Malai Curry (গলদা চিংড়ি মালাই কারি): whole head-on jumbo freshwater river prawns gently braised in rich coconut milk, pure cow ghee, mustard oil, whole warm spices, and slit green chilies.",
+    introStory:
+      "Golda Chingri Malai Curry (গলদা চিংড়ি মালাই কারি) is the undisputed crown jewel of Bengali coastal and riverine feasts, Eid banquets, and celebratory family dawats. Unlike everyday peeled shrimp dishes, authentic Golda Chingri Malai Curry showcases whole head-on giant freshwater river prawns (Macrobrachium rosenbergii) with their prized claws and shells intact.\n\nBriefly seared in fragrant mustard oil and pure cow ghee so the coral prawn-head fat melts into the pan, the jumbo prawns are slowly poached in velvety first-press coconut milk infused with sweet onion paste, ginger-garlic, Kashmiri red chili, green cardamom, cinnamon, cloves, bay leaves, and fresh green chilies. Crowned with a swirl of thick coconut cream and tender cilantro leaves, it pairs irresistibly with steaming plain white rice or fragrant Kalijeera pulao.",
+    heroImage: "/assets/aistudio/Golda_cb5d87b8.jpg",
+    prepTimeMinutes: 20,
+    cookTimeMinutes: 25,
+    totalTimeMinutes: 45,
+    servings: 4,
+    difficulty: "Medium",
+    calories: 445,
+    rating: 4.97,
+    reviewCount: 162,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    whySpecial:
+      "Cooking whole head-on Golda Chingri releases prized natural prawn-head richness into the spiced coconut milk, creating an unmistakable restaurant-grade golden-cream malai gravy.",
+    halalNotes:
+      "100% Halal seafood prepared with fresh wild-caught or certified river prawns, pure cow ghee, cold-pressed mustard oil, and additive-free coconut milk free from alcohol or synthetic emulsifiers.",
+    potentialCautionNotes:
+      "Keep the heat low once you pour in the thick coconut cream—boiling coconut milk rapidly can cause the creamy emulsion to split, and overcooking prawns makes the meat firm and rubbery.",
+    ingredients: [
+      {
+        amount: "4",
+        unit: "jumbo",
+        name: "Whole head-on Golda Chingri prawns",
+        notes: "approx. 1.5 lbs, cleaned & deveined",
+      },
+      {
+        amount: "1.5",
+        unit: "cups",
+        name: "Thick first-press coconut milk",
+        notes: "reserve 2 tbsp for garnish swirl",
+      },
+      {
+        amount: "3/4",
+        unit: "cup",
+        name: "Thin coconut milk",
+        notes: "or warm water",
+      },
+      {
+        amount: "2",
+        unit: "tbsp",
+        name: "Cold-pressed mustard oil",
+      },
+      {
+        amount: "2",
+        unit: "tbsp",
+        name: "Pure cow ghee",
+      },
+      {
+        amount: "1/2",
+        unit: "cup",
+        name: "Smooth onion paste",
+        notes: "from 2 medium shallots or red onions",
+      },
+      {
+        amount: "1",
+        unit: "tbsp",
+        name: "Fresh ginger paste",
+      },
+      {
+        amount: "1",
+        unit: "tsp",
+        name: "Fresh garlic paste",
+      },
+      {
+        amount: "3/4",
+        unit: "tsp",
+        name: "Turmeric powder",
+        notes: "divided for marinating & gravy",
+      },
+      {
+        amount: "1",
+        unit: "tsp",
+        name: "Kashmiri red chili powder",
+      },
+      {
+        amount: "1/2",
+        unit: "tsp",
+        name: "Roasted cumin powder",
+      },
+      {
+        amount: "4",
+        unit: "pods",
+        name: "Green cardamom pods",
+        notes: "lightly bruised",
+      },
+      {
+        amount: "1",
+        unit: "stick",
+        name: "Cinnamon bark (2-inch)",
+      },
+      {
+        amount: "4",
+        unit: "whole",
+        name: "Whole cloves",
+      },
+      {
+        amount: "2",
+        unit: "leaves",
+        name: "Bay leaves (tej pata)",
+      },
+      {
+        amount: "4",
+        unit: "whole",
+        name: "Fresh green chilies",
+        notes: "slit lengthwise",
+      },
+      {
+        amount: "1",
+        unit: "tsp",
+        name: "Sugar or date palm jaggery",
+        notes: "balances savory spice warmth",
+      },
+      {
+        amount: "1/2",
+        unit: "tsp",
+        name: "Bengali garam masala powder",
+      },
+      {
+        amount: "1",
+        unit: "tsp",
+        name: "Fine sea salt",
+        notes: "divided, or to taste",
+      },
+      {
+        amount: "2",
+        unit: "tbsp",
+        name: "Fresh cilantro leaves",
+        notes: "for garnish",
+      },
+    ],
+    substitutions: [
+      {
+        original: "Whole head-on Golda Chingri",
+        substitute: "Jumbo head-on tiger prawns (Bagda Chingri)",
+        notes: "Similar cooking time and rich shell-infused coconut flavor.",
+      },
+      {
+        original: "Pure cow ghee",
+        substitute: "Extra cold-pressed mustard oil or coconut oil",
+        notes: "Keeps the dish completely dairy-free while staying aromatic.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Clean & Lightly Sear the Golda Chingri",
+        instruction:
+          "Trim the long whisker antennae and sharp rostrum tip, rinse cleanly, and gently devein along the back without detaching the heads or claws. Rub prawns with 1/2 tsp turmeric and 1/2 tsp salt. Heat mustard oil and 1 tbsp ghee in a wide kadai over medium heat until hot; sear prawns 60–90 seconds per side until bright coral-orange, then transfer to a plate.",
+      },
+      {
+        step: 2,
+        title: "Bloom Whole Spices & Sauté Onion Paste",
+        instruction:
+          "Add the remaining 1 tbsp ghee to the prawn-infused pan over medium-low heat. Temper bruised cardamom pods, cinnamon stick, cloves, and bay leaves for 20 seconds until fragrant. Stir in the smooth onion paste and sauté for 5–6 minutes until sweet and golden without scorching.",
+      },
+      {
+        step: 3,
+        title: "Cook Aromatics & Simmer Thin Coconut Milk",
+        instruction:
+          "Add ginger and garlic pastes, remaining 1/4 tsp turmeric, Kashmiri red chili powder, roasted cumin powder, and remaining 1/2 tsp salt. Sauté 2 minutes with a splash of water so spices never stick, then pour in the thin coconut milk and sugar. Bring to a gentle simmer for 3–4 minutes until oil begins to sheen on top.",
+      },
+      {
+        step: 4,
+        title: "Poach Prawns in Coconut Cream & Serve",
+        instruction:
+          "Lower the heat to low, pour in the thick first-press coconut milk (saving 2 tbsp for garnish), and stir smoothly. Nestle the seared Golda Chingri prawns and slit green chilies into the gravy, cover, and poach gently for 5–6 minutes, spooning sauce over the heads halfway. Finish with garam masala, swirl the reserved coconut cream on top, scatter fresh cilantro, and serve hot with steamed rice.",
+      },
+    ],
+    chefNotes: [
+      "Keep the prawn heads intact and clean only the tiny sand sac behind the eyes—the coral head fat enriches the malai gravy naturally.",
+      "Never boil the curry vigorously after adding thick coconut milk; a bare simmer keeps the sauce glossy and smooth.",
+      "Freshly extracted coconut milk yields the sweetest flavor, though full-fat pure canned coconut milk works reliably year-round.",
+    ],
+    cookingTips: [
+      "Using both mustard oil and pure cow ghee gives authentic Bengali wedding depth—mustard oil cuts through sweetness while ghee perfumes the coconut cream.",
+      "Sear the jumbo prawns briefly first and return them only at the final 5-minute poach so the meat stays succulent and tender.",
+      "Swirl a spoonful of chilled thick coconut cream over the clay serving bowl right before bringing it to the table.",
+    ],
+    commonMistakes: [
+      "Boiling thick coconut milk on high heat, causing it to separate into oily curds.",
+      "Overcooking prawns past 7–8 minutes total, turning sweet river prawn meat tough.",
+      "Removing the prawn heads and shells before cooking, which loses half of Golda Chingri's signature umami.",
+    ],
+    nutrition: {
+      calories: 445,
+      proteinGrams: 31,
+      carbsGrams: 9,
+      fatGrams: 32,
+      fiberGrams: 2,
+      sodiumMg: 540,
+      servingSizeDescription: "1 jumbo head-on prawn with rich coconut malai gravy",
+    },
+    storageInstructions:
+      "Enjoy fresh on the day of cooking for the sweetest prawn texture. Refrigerate leftovers in an airtight glass container for up to 24 hours and warm very gently over low heat.",
+    servingSuggestions: [
+      "Serve alongside steaming hot white rice (Miniket, Basmati, or Kalijeera rice).",
+      "Pair with fragrant Bengali Pulao or crispy fried Beguni for Eid and weekend dawats.",
+      "Provide lemon wedges or extra fresh green chilies on the side.",
+    ],
+    faqs: [
+      {
+        question: "What is the difference between Golda Chingri and regular Chingri Malai Curry?",
+        answer:
+          "Golda Chingri refers to giant freshwater river prawns cooked whole with heads, claws, and shells intact. The natural coral fat inside the head melts into the coconut cream, giving a richer, deeper flavor than peeled shrimp.",
+      },
+      {
+        question: "How do I prevent coconut milk from curdling in Malai Curry?",
+        answer:
+          "Reduce the burner to low before adding thick first-press coconut milk, stir continuously for the first minute, and keep the curry at a gentle simmer rather than a rolling boil.",
+      },
+      {
+        question: "Is Golda Chingri Malai Curry Halal?",
+        answer:
+          "Yes! Prawns are widely considered Halal, and this recipe uses pure cow ghee, mustard oil, coconut milk, and whole spices with zero alcohol or animal additives.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Regional Culinary Director & Halal Recipe Developer",
+    },
+    updatedDate: "2026-11-12",
+    tags: [
+      "Golda Chingri Malai Curry",
+      "গলদা চিংড়ি মালাই কারি",
+      "Chingri Malai Curry",
+      "Golda Chingri",
+      "Bengali Prawn Curry",
+      "Coconut Prawn Curry",
+      "Halal Seafood",
+      "Eid Recipes",
+    ],
+    relatedRecipeSlugs: [
+      "chingri-malai-curry",
+      "noakhali-shorshe-ilish",
+      "panta-ilish-with-green-chili-mustard",
+      "bengali-pulao",
+      "boiled-rice",
+    ],
+    relatedGuideSlugs: [
+      "mustard-oil-bengali-cooking",
+      "how-to-build-a-bangladeshi-spice-base",
+    ],
+    seoTitle:
+      "Golda Chingri Malai Curry (গলদা চিংড়ি মালাই কারি) | Noakhali Kitchen",
+    seoDescription:
+      "Authentic Bengali Golda Chingri Malai Curry (গলদা চিংড়ি মালাই কারি): whole head-on jumbo freshwater prawns braised in velvety coconut milk, ghee, mustard oil, whole spices & green chilies.",
+  },
 ];
 
 export const RECIPES: Recipe[] = enhanceRecipesWithCornerstones(BASE_RECIPES);

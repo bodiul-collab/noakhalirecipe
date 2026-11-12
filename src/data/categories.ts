@@ -57,7 +57,7 @@ export const CATEGORIES: CategoryHub[] = [
     fullDescription:
       "Fresh river fish and coastal seafood hold an esteemed place in regional Halal heritage dining. Our collection features revered silver Hilsa (Ilish) in golden mustard gravy, tender tiger prawns in coconut cream, and crisp pan-fried seasonal catch seasoned with five-spice panch phoron.",
     image: IMAGES.shorsheIlish,
-    featuredRecipeSlugs: ["panta-ilish-with-green-chili-mustard", "pabda-fish-curry-bengali-style", "panta-bhat-with-bhorta", "fish-morich-khola", "bangladeshi-spiced-shrimp-and-green-bean-stir-fry", "fish-egg-curry-ilish", "fish-biryani", "soy-sauce-deep-fried-crispy-fish", "rohu-fish-curry", "shrimp-tandoori", "bengali-fish-curry-macher-jhol", "noakhali-shorshe-ilish", "chingri-malai-curry", "loitta-shutki-bhuna-dried-fermented-fish", "crispy-golden-salmon-patties-dish", "tuna-fish-kebab-fritters", "green-goddess-wild-salmon-asparagus-bowl", "tom-yum-soup-goong-gai"],
+    featuredRecipeSlugs: ["golda-chingri-malai-curry", "panta-ilish-with-green-chili-mustard", "pabda-fish-curry-bengali-style", "panta-bhat-with-bhorta", "fish-morich-khola", "bangladeshi-spiced-shrimp-and-green-bean-stir-fry", "fish-egg-curry-ilish", "fish-biryani", "soy-sauce-deep-fried-crispy-fish", "rohu-fish-curry", "shrimp-tandoori", "bengali-fish-curry-macher-jhol", "noakhali-shorshe-ilish", "chingri-malai-curry", "loitta-shutki-bhuna-dried-fermented-fish", "crispy-golden-salmon-patties-dish", "tuna-fish-kebab-fritters", "green-goddess-wild-salmon-asparagus-bowl", "tom-yum-soup-goong-gai"],
     faqs: [
       {
         question: "Are all types of fish and seafood Halal?",
@@ -131,7 +131,7 @@ export const CATEGORIES: CategoryHub[] = [
     fullDescription:
       "The staple combination that anchors Bengali and South Asian hospitality. Learn the fine art of blooming whole spices in pure ghee, parboiling basmati rice, and creating layered gravies that bring families together.",
     image: IMAGES.chickenRoast,
-    featuredRecipeSlugs: ["shahi-dim-korma", "morog-polao", "panta-ilish-with-green-chili-mustard", "pabda-fish-curry-bengali-style", "panta-bhat-with-bhorta", "dal-bhorta", "tomato-bhorta", "duck-curry-with-coconut-milk", "lamb-vindaloo", "chicken-vindaloo", "boiled-rice", "bengali-aloo-dum", "bangladeshi-spiced-shrimp-and-green-bean-stir-fry", "moroccan-lamb-tagine", "beef-nahari", "authentic-bangladeshi-beef-curry", "fish-egg-curry-ilish", "fish-biryani", "easy-basmati-rice-cooking", "rogan-josh", "lamb-curry", "pakistani-aloo-keema", "bengali-chicken-biryani", "chicken-tikka-masala", "chicken-karahi", "haleem", "chicken-biryani", "bengali-pulao", "bengali-khichuri-bhuna", "bengali-chicken-roast", "bengali-beef-tehari", "bengali-fish-curry-macher-jhol", "bengali-chicken-curry-murgir-jhol", "authentic-arabian-chicken-mandi", "chicken-machboos-majboos-kabsa", "pillowy-restaurant-style-garlic-butter-naan", "halal-chicken-biryani", "vegetable-bhuna-khichuri"],
+    featuredRecipeSlugs: ["golda-chingri-malai-curry", "shahi-dim-korma", "morog-polao", "panta-ilish-with-green-chili-mustard", "pabda-fish-curry-bengali-style", "panta-bhat-with-bhorta", "dal-bhorta", "tomato-bhorta", "duck-curry-with-coconut-milk", "lamb-vindaloo", "chicken-vindaloo", "boiled-rice", "bengali-aloo-dum", "bangladeshi-spiced-shrimp-and-green-bean-stir-fry", "moroccan-lamb-tagine", "beef-nahari", "authentic-bangladeshi-beef-curry", "fish-egg-curry-ilish", "fish-biryani", "easy-basmati-rice-cooking", "rogan-josh", "lamb-curry", "pakistani-aloo-keema", "bengali-chicken-biryani", "chicken-tikka-masala", "chicken-karahi", "haleem", "chicken-biryani", "bengali-pulao", "bengali-khichuri-bhuna", "bengali-chicken-roast", "bengali-beef-tehari", "bengali-fish-curry-macher-jhol", "bengali-chicken-curry-murgir-jhol", "authentic-arabian-chicken-mandi", "chicken-machboos-majboos-kabsa", "pillowy-restaurant-style-garlic-butter-naan", "halal-chicken-biryani", "vegetable-bhuna-khichuri"],
     faqs: [
       {
         question: "What rice variety gives the most authentic aroma?",
@@ -305,6 +305,7 @@ export const CATEGORIES: CategoryHub[] = [
       "From the sacred evening tranquility of sunset Iftar tables laden with spiced black chana (ছোলা ভুনা), crispy onion piyaju, and cooling Rooh Afza sharbat, to royal Eid morning banquets featuring Shahi beef roast, fragrant pulao, and creamy kheer, our Ramadan & Eid collection honors authentic culinary heritage, spiritual mindfulness, and joyful family gatherings.",
     image: IMAGES.blackChana,
     featuredRecipeSlugs: [
+      "golda-chingri-malai-curry",
       "shahi-dim-korma",
       "beguni-eggplant-pakora",
       "doodh-bhaat-with-ripe-banana-date-molasses",
