@@ -109,26 +109,41 @@ export const Header: React.FC<HeaderProps> = ({
             </span>
           </div>
           <div className="hidden sm:flex items-center gap-4 text-[11px] text-[#A8A49E] shrink-0">
-            <button
-              onClick={() => onNavigate("/about")}
+            <a
+              href="/about"
+              onClick={(e) => {
+                if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                e.preventDefault();
+                onNavigate("/about");
+              }}
               className="hover:text-white transition-colors cursor-pointer"
             >
               About
-            </button>
+            </a>
             <span>&bull;</span>
-            <button
-              onClick={() => onNavigate("/contact")}
+            <a
+              href="/contact"
+              onClick={(e) => {
+                if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                e.preventDefault();
+                onNavigate("/contact");
+              }}
               className="hover:text-white transition-colors cursor-pointer"
             >
               Contact
-            </button>
+            </a>
             <span>&bull;</span>
-            <button
-              onClick={() => onNavigate("/blog")}
+            <a
+              href="/blog"
+              onClick={(e) => {
+                if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                e.preventDefault();
+                onNavigate("/blog");
+              }}
               className="hover:text-[#E7A52B] transition-colors cursor-pointer"
             >
               Culinary Guides
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -136,13 +151,18 @@ export const Header: React.FC<HeaderProps> = ({
       {/* Main Brand & Navigation Bar */}
       <div className="max-w-[1280px] mx-auto px-3 sm:px-6 h-16 sm:h-18 flex items-center justify-between gap-2 sm:gap-4">
         {/* Brand Logo */}
-        <button
-          onClick={() => onNavigate("/")}
+        <a
+          href="/"
+          onClick={(e) => {
+            if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+            e.preventDefault();
+            onNavigate("/");
+          }}
           className="group flex items-center text-left focus:outline-none shrink min-w-0 transition-transform hover:opacity-95 cursor-pointer py-1"
           aria-label="Noākhāli Kitchen Home"
         >
           <NoakhaliLogo size="md" theme={theme} />
-        </button>
+        </a>
 
         {/* Decongested Desktop Navigation (Clean, Spacious, Uncrowded) */}
         <nav className="hidden lg:flex items-center gap-5 xl:gap-7 text-sm font-medium text-[#3F3C38] dark:text-[#EDE8DF]">
@@ -163,8 +183,11 @@ export const Header: React.FC<HeaderProps> = ({
                   onMouseLeave={() => setCategoryDropdownOpen(false)}
                 >
                   <div className="flex items-center gap-0.5">
-                    <button
-                      onClick={() => {
+                    <a
+                      href="/category"
+                      onClick={(e) => {
+                        if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                        e.preventDefault();
                         setCategoryDropdownOpen(false);
                         onNavigate("/category");
                       }}
@@ -175,7 +198,7 @@ export const Header: React.FC<HeaderProps> = ({
                       }`}
                     >
                       <span>{link.label}</span>
-                    </button>
+                    </a>
                     <button
                       type="button"
                       onClick={(e) => {
@@ -203,22 +226,28 @@ export const Header: React.FC<HeaderProps> = ({
                         <span className="text-[11px] font-bold uppercase tracking-wider text-[#8A857E] dark:text-[#A8A49E]">
                           Explore Recipes by Category
                         </span>
-                        <button
-                          onClick={() => {
+                        <a
+                          href="/category"
+                          onClick={(e) => {
+                            if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                            e.preventDefault();
                             setCategoryDropdownOpen(false);
                             onNavigate("/category");
                           }}
                           className="text-[11px] font-bold text-[#E97520] hover:underline cursor-pointer"
                         >
                           All (10)
-                        </button>
+                        </a>
                       </div>
 
                       <div className="grid grid-cols-1 gap-0.5">
                         {featuredCategories.map((sub) => (
-                          <button
+                          <a
                             key={sub.route}
-                            onClick={() => {
+                            href={sub.route}
+                            onClick={(e) => {
+                              if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                              e.preventDefault();
                               setCategoryDropdownOpen(false);
                               onNavigate(sub.route);
                             }}
@@ -233,13 +262,16 @@ export const Header: React.FC<HeaderProps> = ({
                               </div>
                             </div>
                             <ChevronDown className="w-3 h-3 text-[#B5B0A6] -rotate-90 opacity-0 group-hover/item:opacity-100 transition-opacity" />
-                          </button>
+                          </a>
                         ))}
                       </div>
 
                       <div className="border-t border-[#F3F2EE] dark:border-[#33322E] mt-2 pt-2 px-1">
-                        <button
-                          onClick={() => {
+                        <a
+                          href="/category"
+                          onClick={(e) => {
+                            if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                            e.preventDefault();
                             setCategoryDropdownOpen(false);
                             onNavigate("/category");
                           }}
@@ -247,7 +279,7 @@ export const Header: React.FC<HeaderProps> = ({
                         >
                           <span>Browse All Categories Hub</span>
                           <ArrowRight className="w-3 h-3" />
-                        </button>
+                        </a>
                       </div>
                     </div>
                   )}
@@ -256,9 +288,14 @@ export const Header: React.FC<HeaderProps> = ({
             }
 
             return (
-              <button
+              <a
                 key={link.label}
-                onClick={() => onNavigate(link.route)}
+                href={link.route}
+                onClick={(e) => {
+                  if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                  e.preventDefault();
+                  onNavigate(link.route);
+                }}
                 className={`transition-colors cursor-pointer py-1 relative ${
                   isActive
                     ? "text-[#E97520] font-semibold"
@@ -269,7 +306,7 @@ export const Header: React.FC<HeaderProps> = ({
                 {isActive && (
                   <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-[#E97520] rounded-full" />
                 )}
-              </button>
+              </a>
             );
           })}
         </nav>

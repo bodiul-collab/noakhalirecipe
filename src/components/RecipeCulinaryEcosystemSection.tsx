@@ -104,12 +104,17 @@ export const RecipeCulinaryEcosystem: React.FC<{
               <BookOpen className="w-3.5 h-3.5" />
               CULINARY HERITAGE &amp; FOOD CULTURE
             </span>
-            <button
-              onClick={() => onNavigate(`/food-culture/${relatedCulture.slug}`)}
+            <a
+              href={`/culture/${relatedCulture.slug}`}
+              onClick={(e) => {
+                if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                e.preventDefault();
+                onNavigate(`/culture/${relatedCulture.slug}`);
+              }}
               className="text-xs font-bold text-[#E97520] hover:underline cursor-pointer flex items-center gap-1"
             >
               Read Article <ArrowRight className="w-3.5 h-3.5" />
-            </button>
+            </a>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 items-start">
             {relatedCulture.heroImage && (
@@ -126,12 +131,17 @@ export const RecipeCulinaryEcosystem: React.FC<{
               <p className="text-xs text-[#77736D] line-clamp-2 leading-relaxed">
                 {relatedCulture.excerpt}
               </p>
-              <button
-                onClick={() => onNavigate(`/food-culture/${relatedCulture.slug}`)}
+              <a
+                href={`/culture/${relatedCulture.slug}`}
+                onClick={(e) => {
+                  if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                  e.preventDefault();
+                  onNavigate(`/culture/${relatedCulture.slug}`);
+                }}
                 className="text-[11px] font-semibold text-[#30302F] hover:text-[#E97520] transition-colors cursor-pointer inline-flex items-center gap-1"
               >
                 Explore the historical roots of this recipe &rarr;
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -145,12 +155,17 @@ export const RecipeCulinaryEcosystem: React.FC<{
               <Wrench className="w-3.5 h-3.5 text-[#E97520]" />
               RECOMMENDED KITCHEN EQUIPMENT
             </span>
-            <button
-              onClick={() => onNavigate("/tools")}
+            <a
+              href="/tools"
+              onClick={(e) => {
+                if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                e.preventDefault();
+                onNavigate("/tools");
+              }}
               className="text-xs font-bold text-[#E97520] hover:underline cursor-pointer flex items-center gap-1"
             >
               All Kitchen Tools <ArrowRight className="w-3.5 h-3.5" />
-            </button>
+            </a>
           </div>
           <div className="space-y-1.5">
             <div className="flex items-center gap-2">
@@ -185,19 +200,29 @@ export const RecipeCulinaryEcosystem: React.FC<{
                 More Authentic Recipes You Will Love
               </h3>
             </div>
-            <button
-              onClick={() => onNavigate("/recipes")}
+            <a
+              href="/recipes"
+              onClick={(e) => {
+                if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                e.preventDefault();
+                onNavigate("/recipes");
+              }}
               className="text-xs font-bold text-[#E97520] hover:underline cursor-pointer"
             >
               Browse All Recipes &rarr;
-            </button>
+            </a>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             {relatedRecipes.map((r) => (
-              <button
+              <a
                 key={r.id}
-                onClick={() => onSelectRecipe(r.slug)}
+                href={`/recipes/${r.slug}`}
+                onClick={(e) => {
+                  if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                  e.preventDefault();
+                  onSelectRecipe(r.slug);
+                }}
                 className="text-left p-3 rounded-lg border border-[#E6E1D8] hover:border-[#E97520] bg-[#FAF9F6] transition-all cursor-pointer group flex flex-col justify-between space-y-2.5"
               >
                 <div className="space-y-2">
@@ -221,7 +246,7 @@ export const RecipeCulinaryEcosystem: React.FC<{
                     View Recipe &rarr;
                   </span>
                 </div>
-              </button>
+              </a>
             ))}
           </div>
         </div>

@@ -88,13 +88,18 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 From slow-braised celebratory biryanis to everyday family dinners.
               </p>
             </div>
-            <button
-              onClick={() => onNavigate("/recipes")}
+            <a
+              href="/recipes"
+              onClick={(e) => {
+                if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                e.preventDefault();
+                onNavigate("/recipes");
+              }}
               className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#30302F] dark:text-white hover:text-[#E97520] transition-colors cursor-pointer shrink-0"
             >
               <span>Explore All Recipes</span>
               <ArrowRight className="w-4 h-4" />
-            </button>
+            </a>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -130,20 +135,30 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 Food science principles, blooming aromatics, and authentic ancestral techniques.
               </p>
             </div>
-            <button
-              onClick={() => onNavigate("/guides")}
+            <a
+              href="/guides"
+              onClick={(e) => {
+                if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                e.preventDefault();
+                onNavigate("/guides");
+              }}
               className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#30302F] dark:text-white hover:text-[#E97520] transition-colors cursor-pointer shrink-0"
             >
               <span>All Cooking Guides</span>
               <ArrowRight className="w-4 h-4" />
-            </button>
+            </a>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {recentGuides.map((guide) => (
-              <article
+              <a
                 key={guide.id}
-                onClick={() => onNavigate(`/guides/${guide.slug}`)}
+                href={`/guides/${guide.slug}`}
+                onClick={(e) => {
+                  if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                  e.preventDefault();
+                  onNavigate(`/guides/${guide.slug}`);
+                }}
                 className="group bg-white dark:bg-[#1E1E1C] rounded-xl border border-[#E6E1D8] dark:border-[#33322E] overflow-hidden hover:border-[#E97520] transition-all cursor-pointer flex flex-col justify-between shadow-xs hover:shadow-md"
               >
                 <div className="aspect-[16/10] overflow-hidden bg-[#FAF9F6] relative">
@@ -172,7 +187,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                     <span className="font-bold text-[#E97520]">Read Guide &rarr;</span>
                   </div>
                 </div>
-              </article>
+              </a>
             ))}
           </div>
         </section>
@@ -195,20 +210,30 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 Festive foodways, regional delta traditions, and ethical Halal culinary philosophy.
               </p>
             </div>
-            <button
-              onClick={() => onNavigate("/culture")}
+            <a
+              href="/culture"
+              onClick={(e) => {
+                if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                e.preventDefault();
+                onNavigate("/culture");
+              }}
               className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#30302F] dark:text-white hover:text-[#E97520] transition-colors cursor-pointer shrink-0"
             >
               <span>All Cultural Stories</span>
               <ArrowRight className="w-4 h-4" />
-            </button>
+            </a>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {culturalStories.map((story) => (
-              <article
+              <a
                 key={story.id}
-                onClick={() => onNavigate(`/culture/${story.slug}`)}
+                href={`/culture/${story.slug}`}
+                onClick={(e) => {
+                  if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                  e.preventDefault();
+                  onNavigate(`/culture/${story.slug}`);
+                }}
                 className="group bg-white dark:bg-[#1E1E1C] rounded-xl border border-[#E6E1D8] dark:border-[#33322E] overflow-hidden hover:border-[#E97520] transition-all cursor-pointer flex flex-col justify-between shadow-xs hover:shadow-md"
               >
                 <div className="aspect-[16/10] overflow-hidden bg-[#FAF9F6] relative">
@@ -237,7 +262,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                     <span className="font-bold text-[#E97520]">Read Story &rarr;</span>
                   </div>
                 </div>
-              </article>
+              </a>
             ))}
           </div>
         </section>

@@ -110,14 +110,19 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({
         </div>
 
         {/* Title */}
-        <h3
-          onClick={() => {
-            window.scrollTo({ top: 0, left: 0, behavior: "instant" });
-            onClick(recipe);
-          }}
-          className="text-sm sm:text-base font-bold text-[#242423] font-heading group-hover:text-[#E97520] transition-colors line-clamp-2 cursor-pointer mb-2 leading-snug tracking-wide uppercase"
-        >
-          {recipe.title}
+        <h3 className="text-sm sm:text-base font-bold text-[#242423] font-heading group-hover:text-[#E97520] transition-colors line-clamp-2 mb-2 leading-snug tracking-wide uppercase">
+          <a
+            href={`/recipes/${recipe.slug}`}
+            onClick={(e) => {
+              if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+              e.preventDefault();
+              window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+              onClick(recipe);
+            }}
+            className="block hover:text-[#E97520] transition-colors cursor-pointer"
+          >
+            {recipe.title}
+          </a>
         </h3>
 
         {/* Short Description */}
@@ -164,10 +169,12 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({
             </span>
           </div>
 
-          <button
-            type="button"
+          <a
+            href={`/recipes/${recipe.slug}`}
             onClick={(e) => {
               e.stopPropagation();
+              if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+              e.preventDefault();
               window.scrollTo({ top: 0, left: 0, behavior: "instant" });
               onClick(recipe);
             }}
@@ -176,7 +183,7 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({
           >
             <span>View Recipe</span>
             <span className="text-xs">&rarr;</span>
-          </button>
+          </a>
         </div>
       </div>
     </article>

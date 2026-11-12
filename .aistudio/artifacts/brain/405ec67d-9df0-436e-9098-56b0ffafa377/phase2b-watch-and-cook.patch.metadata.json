@@ -1,5 +1,0 @@
-{
-  "summary":  "Git email patch for commit 89e61ff149884895713458b7408958125ed64ce6 (Phase 2B Watch & Cook video discovery hub). Includes all 7 files: WatchAndCookView.tsx, App.tsx, Header.tsx, generate_sitemap.cjs, prerender_recipes.cjs, server.ts, and public/sitemap.xml.",
-  "updatedAt":  "2026-11-07T22:24:50.446702453Z",
-  "userFacing":  true
-}

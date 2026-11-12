@@ -273,16 +273,21 @@ export const CategoryView: React.FC<CategoryViewProps> = ({
               {CATEGORIES.filter((c) => c.slug !== activeCategory.slug)
                 .slice(0, 4)
                 .map((c) => (
-                  <button
+                  <a
                     key={c.slug}
-                    onClick={() => handleSelectCategory(c.slug)}
-                    className="p-3 bg-white border border-[#E6E1D8] rounded-lg text-left hover:border-[#E97520] transition-colors cursor-pointer"
+                    href={`/category/${c.slug}`}
+                    onClick={(e) => {
+                      if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                      e.preventDefault();
+                      handleSelectCategory(c.slug);
+                    }}
+                    className="p-3 bg-white border border-[#E6E1D8] rounded-lg text-left hover:border-[#E97520] transition-colors cursor-pointer block"
                   >
                     <span className="text-xs font-bold text-[#30302F] block truncate">
                       {c.title}
                     </span>
                     <span className="text-[10px] text-[#77736D]">View Hub &rarr;</span>
-                  </button>
+                  </a>
                 ))}
             </div>
           </div>
@@ -340,9 +345,14 @@ export const CategoryView: React.FC<CategoryViewProps> = ({
                 Boolean(cat.featuredRecipeSlugs?.includes(r.slug))
             ).length;
             return (
-              <div
+              <a
                 key={cat.id}
-                onClick={() => handleSelectCategory(cat.slug)}
+                href={`/category/${cat.slug}`}
+                onClick={(e) => {
+                  if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                  e.preventDefault();
+                  handleSelectCategory(cat.slug);
+                }}
                 className="group bg-white rounded-lg border border-[#E6E1D8] overflow-hidden hover:border-[#F8CD78] hover:shadow-md transition-all cursor-pointer flex flex-col justify-between"
               >
                 {cat.image && (
@@ -384,7 +394,7 @@ export const CategoryView: React.FC<CategoryViewProps> = ({
                     <ArrowRight className="w-3.5 h-3.5" />
                   </div>
                 </div>
-              </div>
+              </a>
             );
           })}
         </div>

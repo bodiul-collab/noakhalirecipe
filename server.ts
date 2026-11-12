@@ -86,18 +86,26 @@ app.get(
 // Prerendered Recipe Route Handler for AI readers, crawlers, and search engines
 app.get(["/recipe/:slug", "/recipes/:slug"], (req, res, next) => {
   const { slug } = req.params;
-  const distRecipeHtml = path.join(process.cwd(), "dist", "recipes", slug, "index.html");
-  if (fs.existsSync(distRecipeHtml)) {
-    return res.sendFile(distRecipeHtml);
+  const flatRecipeHtml = path.join(process.cwd(), "dist", "recipes", `${slug}.html`);
+  const nestedRecipeHtml = path.join(process.cwd(), "dist", "recipes", slug, "index.html");
+  if (fs.existsSync(flatRecipeHtml)) {
+    return res.sendFile(flatRecipeHtml);
+  }
+  if (fs.existsSync(nestedRecipeHtml)) {
+    return res.sendFile(nestedRecipeHtml);
   }
   next();
 });
 
 // Prerendered Watch & Cook Discovery Hub Handler
 app.get("/watch-and-cook", (_req, res, next) => {
-  const distWatchHtml = path.join(process.cwd(), "dist", "watch-and-cook", "index.html");
-  if (fs.existsSync(distWatchHtml)) {
-    return res.sendFile(distWatchHtml);
+  const flatWatchHtml = path.join(process.cwd(), "dist", "watch-and-cook.html");
+  const nestedWatchHtml = path.join(process.cwd(), "dist", "watch-and-cook", "index.html");
+  if (fs.existsSync(flatWatchHtml)) {
+    return res.sendFile(flatWatchHtml);
+  }
+  if (fs.existsSync(nestedWatchHtml)) {
+    return res.sendFile(nestedWatchHtml);
   }
   next();
 });
@@ -268,7 +276,7 @@ async function startServer() {
     app.use(vite.middlewares);
   } else {
     const distPath = path.join(process.cwd(), "dist");
-    app.use(express.static(distPath));
+    app.use(express.static(distPath, { extensions: ["html"] }));
     app.get("*", (_req, res) => {
       res.sendFile(path.join(distPath, "index.html"));
     });

@@ -162,44 +162,69 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </h4>
             <ul className="space-y-2 text-xs text-[#E6E1D8]">
               <li>
-                <button
-                  onClick={() => onNavigate("/recipes")}
+                <a
+                  href="/recipes"
+                  onClick={(e) => {
+                    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                    e.preventDefault();
+                    onNavigate("/recipes");
+                  }}
                   className="hover:text-[#E7A52B] transition-colors"
                 >
                   All Halal Recipes
-                </button>
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => onNavigate("/category")}
+                <a
+                  href="/category"
+                  onClick={(e) => {
+                    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                    e.preventDefault();
+                    onNavigate("/category");
+                  }}
                   className="hover:text-[#E7A52B] transition-colors"
                 >
                   Recipe Categories
-                </button>
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => onNavigate("/guides")}
+                <a
+                  href="/guides"
+                  onClick={(e) => {
+                    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                    e.preventDefault();
+                    onNavigate("/guides");
+                  }}
                   className="hover:text-[#E7A52B] transition-colors"
                 >
                   Cooking Guides Hub
-                </button>
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => onNavigate("/culture")}
+                <a
+                  href="/culture"
+                  onClick={(e) => {
+                    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                    e.preventDefault();
+                    onNavigate("/culture");
+                  }}
                   className="hover:text-[#E7A52B] transition-colors"
                 >
                   Food Culture &amp; Heritage
-                </button>
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => onNavigate("/pantry")}
+                <a
+                  href="/pantry"
+                  onClick={(e) => {
+                    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                    e.preventDefault();
+                    onNavigate("/pantry");
+                  }}
                   className="hover:text-[#E7A52B] transition-colors"
                 >
                   Halal Pantry &amp; Nutrition
-                </button>
+                </a>
               </li>
             </ul>
           </div>
@@ -211,44 +236,69 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </h4>
             <ul className="space-y-2 text-xs text-[#E6E1D8]">
               <li>
-                <button
-                  onClick={() => onNavigate("/guides")}
+                <a
+                  href="/guides"
+                  onClick={(e) => {
+                    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                    e.preventDefault();
+                    onNavigate("/guides");
+                  }}
                   className="hover:text-[#E7A52B] transition-colors"
                 >
                   Mastery Cooking Guides
-                </button>
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => onNavigate("/tools/equipment")}
+                <a
+                  href="/tools/equipment"
+                  onClick={(e) => {
+                    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                    e.preventDefault();
+                    onNavigate("/tools/equipment");
+                  }}
                   className="hover:text-[#E7A52B] transition-colors"
                 >
                   Kitchen Equipment Guide
-                </button>
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => onNavigate("/pantry")}
+                <a
+                  href="/pantry"
+                  onClick={(e) => {
+                    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                    e.preventDefault();
+                    onNavigate("/pantry");
+                  }}
                   className="hover:text-[#E7A52B] transition-colors"
                 >
                   Halal Pantry Standards
-                </button>
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => onNavigate("/tools")}
+                <a
+                  href="/tools"
+                  onClick={(e) => {
+                    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                    e.preventDefault();
+                    onNavigate("/tools");
+                  }}
                   className="hover:text-[#E7A52B] transition-colors"
                 >
                   Kitchen Tools &amp; Pantry Hub
-                </button>
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => onNavigate("/blog")}
+                <a
+                  href="/blog"
+                  onClick={(e) => {
+                    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                    e.preventDefault();
+                    onNavigate("/blog");
+                  }}
                   className="hover:text-[#E7A52B] transition-colors"
                 >
                   Editorial Food Journal
-                </button>
+                </a>
               </li>
             </ul>
           </div>
@@ -260,20 +310,30 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </h4>
             <ul className="space-y-2 text-xs text-[#E6E1D8]">
               <li>
-                <button
-                  onClick={() => onNavigate("/about")}
+                <a
+                  href="/about"
+                  onClick={(e) => {
+                    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                    e.preventDefault();
+                    onNavigate("/about");
+                  }}
                   className="hover:text-[#E7A52B] transition-colors"
                 >
                   About Noakhali Kitchen
-                </button>
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => onNavigate("/contact")}
+                <a
+                  href="/contact"
+                  onClick={(e) => {
+                    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                    e.preventDefault();
+                    onNavigate("/contact");
+                  }}
                   className="hover:text-[#E7A52B] transition-colors cursor-pointer text-left"
                 >
                   Contact &amp; Feedback
-                </button>
+                </a>
               </li>
               <li>
                 <div className="flex items-center gap-1.5">
@@ -340,28 +400,43 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 </a>
               </li>
               <li>
-                <button
-                  onClick={() => onNavigate("/privacy")}
+                <a
+                  href="/privacy"
+                  onClick={(e) => {
+                    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                    e.preventDefault();
+                    onNavigate("/privacy");
+                  }}
                   className="hover:text-[#E7A52B] transition-colors"
                 >
                   Privacy Policy
-                </button>
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => onNavigate("/terms")}
+                <a
+                  href="/terms"
+                  onClick={(e) => {
+                    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                    e.preventDefault();
+                    onNavigate("/terms");
+                  }}
                   className="hover:text-[#E7A52B] transition-colors"
                 >
                   Terms of Service
-                </button>
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => onNavigate("/affiliate-disclosure")}
+                <a
+                  href="/affiliate-disclosure"
+                  onClick={(e) => {
+                    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                    e.preventDefault();
+                    onNavigate("/affiliate-disclosure");
+                  }}
                   className="hover:text-[#E7A52B] transition-colors"
                 >
                   Affiliate Disclosure
-                </button>
+                </a>
               </li>
               <li className="pt-1">
                 <a
@@ -465,19 +540,29 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         <div className="mt-8 pt-6 border-t border-[#242423] flex flex-col sm:flex-row items-center justify-between text-xs text-[#8A857E] gap-3">
           <span>&copy; {new Date().getFullYear()} Noakhali Kitchen. All rights reserved.</span>
           <div className="flex items-center gap-4 text-xs">
-            <button
-              onClick={() => onNavigate("/privacy")}
+            <a
+              href="/privacy"
+              onClick={(e) => {
+                if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                e.preventDefault();
+                onNavigate("/privacy");
+              }}
               className="hover:text-white transition-colors"
             >
               Privacy
-            </button>
+            </a>
             <span>&bull;</span>
-            <button
-              onClick={() => onNavigate("/terms")}
+            <a
+              href="/terms"
+              onClick={(e) => {
+                if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                e.preventDefault();
+                onNavigate("/terms");
+              }}
               className="hover:text-white transition-colors"
             >
               Terms
-            </button>
+            </a>
             <span>&bull;</span>
             <a
               href="https://www.facebook.com/profile.php?id=61594626825993"

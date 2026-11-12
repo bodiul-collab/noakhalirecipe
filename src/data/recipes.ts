@@ -28254,6 +28254,897 @@ const BASE_RECIPES: Recipe[] = [
     seoDescription:
       "Authentic Bengali Narkel Naru (নারকেল নাড়ু / ناركل نارو كرات جوز الهند الحلوة / نارکل نارو ناریل کی میٹھی گیندیں): handcrafted sweet coconut balls with fragrant date palm jaggery, cardamom, and ghee.",
   },
+  {
+    id: "rec-panta-ilish-with-green-chili-mustard",
+    slug: "panta-ilish-with-green-chili-mustard",
+    title: "Panta Ilish with Green Chili & Mustard (পান্তা ইলিশ)",
+    category: "Halal Fish & Seafood",
+    categorySlug: "halal-seafood",
+    cuisine: "Authentic Bengali Heritage / Pohela Boishakh Festival",
+    description:
+      "Panta Ilish is a classic, celebratory Bengali platter traditionally enjoyed during Pohela Boishakh (Bengali New Year), pairing cooling overnight-soaked panta bhat with crispy fried Hilsa fish (Ilish), sharp mustard paste, raw onions, and spicy green chilies.",
+    introStory:
+      "Panta Ilish is a classic, celebratory Bengali platter traditionally enjoyed during Pohela Boishakh (Bengali New Year). It pairs cooling, lightly fermented soaked rice (panta bhat) with rich, crispy fried Hilsa fish (ilish), sharp mustard, raw onions, and spicy green chilies.\n\nAcross Bengali households, preparing panta bhat begins the night before by submerging cooled cooked parboiled or short-grain rice in clean drinking water so gentle overnight fermentation makes the grains refreshing and mildly tangy. Meanwhile, fresh Hilsa steaks are rubbed with turmeric, red chili powder, and salt, then shallow-fried in smoking mustard oil until shatteringly crisp outside and tender inside. Served in deep clay bowls (shora) with pungent shorshe bata or kasundi mixed with raw mustard oil, thinly sliced red onion, crisp dried red chilies, fresh green chilies, and lime wedges, every bite balances cool, savory, fiery, and aromatic notes.",
+    heroImage: "/assets/aistudio/Pantha_c0611d38.jpg",
+    prepTimeMinutes: 20,
+    cookTimeMinutes: 20,
+    totalTimeMinutes: 40,
+    servings: 4,
+    difficulty: "Easy",
+    calories: 420,
+    rating: 4.99,
+    reviewCount: 164,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    whySpecial:
+      "The iconic Pohela Boishakh heritage platter uniting cool overnight-fermented panta bhat with crisp mustard-oil-fried Hilsa steaks, pungent mustard-chili paste, raw red onions, and fresh lime.",
+    halalNotes:
+      "100% Halal certified. Prepared exclusively with scaled fresh Hilsa (Ilish) fish, pure cold-pressed mustard oil, natural non-alcoholic overnight water-soaked rice, and fresh spices.",
+    potentialCautionNotes:
+      "Always cool cooked rice completely to room temperature before submerging in water overnight (8–12 hours, or 6–8 hours in very warm kitchens) so it ferments gently without spoiling. Heat the mustard oil to smoking point before frying the Hilsa steaks to remove raw oil bitterness.",
+    ingredients: [
+      {
+        amount: "2",
+        unit: "cups",
+        name: "Cooked parboiled or short-grain rice",
+        notes: "cooled to room temperature",
+      },
+      {
+        amount: "3 to 4",
+        unit: "cups",
+        name: "Clean drinking water",
+        notes: "enough to submerge the rice",
+      },
+      {
+        amount: "1",
+        unit: "pinch",
+        name: "Salt for soaked rice",
+        notes: "added to taste before serving",
+      },
+      {
+        amount: "4",
+        unit: "steaks",
+        name: "Hilsa fish (Ilish maach)",
+        notes: "cleaned and patted dry",
+      },
+      {
+        amount: "1",
+        unit: "tsp",
+        name: "Turmeric powder",
+      },
+      {
+        amount: "1/2",
+        unit: "tsp",
+        name: "Red chili powder",
+        notes: "optional, for extra heat",
+      },
+      {
+        amount: "1",
+        unit: "tsp",
+        name: "Salt for fish marinade",
+        notes: "or to taste",
+      },
+      {
+        amount: "3 to 4",
+        unit: "tbsp",
+        name: "Mustard oil",
+        notes: "for shallow frying the fish",
+      },
+      {
+        amount: "2",
+        unit: "tbsp",
+        name: "Yellow or black mustard paste (shorshe bata)",
+        notes: "or 1.5 tbsp kasundi",
+      },
+      {
+        amount: "4 to 6",
+        unit: "whole",
+        name: "Fresh green chilies",
+        notes: "slit or whole, plus 1-2 finely chopped",
+      },
+      {
+        amount: "1",
+        unit: "medium",
+        name: "Red onion",
+        notes: "thinly sliced",
+      },
+      {
+        amount: "1 to 2",
+        unit: "tbsp",
+        name: "Raw mustard oil",
+        notes: "for drizzling and mixing",
+      },
+      {
+        amount: "2 to 3",
+        unit: "whole",
+        name: "Dried red chilies",
+        notes: "optional, fried crisp for garnish",
+      },
+      {
+        amount: "1",
+        unit: "whole",
+        name: "Lime or gondhoraj lemon",
+        notes: "cut into wedges",
+      },
+    ],
+    substitutions: [
+      {
+        original: "Hilsa fish (Ilish maach)",
+        substitute: "Salmon or mackerel steaks",
+        notes: "Oily, scaled fish steaks that sear crisp in mustard oil provide a close richness.",
+      },
+      {
+        original: "Shorshe bata (mustard paste)",
+        substitute: "1.5 tbsp Bengali kasundi (fermented mustard sauce)",
+        notes: "Gives an instant sharp, tangy mustard accompaniment.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Prepare the Panta Bhat (Night Before)",
+        instruction:
+          "Place the cooled cooked rice in a clean bowl or earthen pot. Pour clean drinking water over the rice until it is submerged by about an inch. Cover the bowl and leave it at room temperature overnight (around 8–12 hours) to allow mild, refreshing fermentation. (If your kitchen is very warm, 6–8 hours is sufficient).",
+      },
+      {
+        step: 2,
+        title: "Marinate & Fry the Hilsa Fish",
+        instruction:
+          "Rub the Hilsa steaks evenly with turmeric powder, red chili powder, and salt. Let them marinate for 10–15 minutes. Heat 3–4 tablespoons of mustard oil in a flat skillet or frying pan over medium-high heat until the oil reaches its smoking point and changes to a lighter yellow color (this removes the harsh raw bitterness). Lower the heat to medium and gently place the Hilsa steaks in the pan. Fry for 3–4 minutes per side until the outside is golden-brown and crispy while the inside remains moist and tender. Remove the fish and set aside on a plate. (Optional: In the same remaining oil, quickly fry the dried red chilies for 15–20 seconds until crisp and dark red, then set aside).",
+      },
+      {
+        step: 3,
+        title: "Prepare the Mustard-Chili Mixture",
+        instruction:
+          "If making fresh mustard paste (shorshe bata), grind 2 tablespoons of mustard seeds with 1–2 green chilies, a pinch of salt (to prevent bitterness), and a splash of warm water into a smooth paste. Mix the mustard paste (or kasundi) with 1 teaspoon of raw mustard oil and finely chopped green chilies in a small serving bowl.",
+      },
+      {
+        step: 4,
+        title: "Assemble & Serve",
+        instruction:
+          "Spoon the soaked panta bhat along with a generous amount of its soaking water into deep plates or clay bowls (shora). Season the rice and water with a pinch of salt and mash a fresh green chili directly into the rice with a drizzle of raw mustard oil for authentic aroma. Serve the crispy fried Hilsa steak alongside the rice, accompanied by the pungent green chili–mustard paste, sliced red onions, fresh green chilies, crispy fried red chilies, and a wedge of lime.",
+      },
+    ],
+    chefNotes: [
+      "To eat it the traditional way, squeeze a bit of lime over the fish, mix a little of the mustard-chili paste and raw onion into a bite of the cool, tangy rice, and follow it with a piece of the rich, flaky Hilsa!",
+      "Always bring frying mustard oil to its light smoking point before lowering the heat and adding the fish to eliminate raw bitterness.",
+      "Adding a pinch of salt and green chilies when grinding fresh mustard seeds prevents the mustard paste from turning bitter.",
+    ],
+    cookingTips: [
+      "Use parboiled or short-grain rice cooled completely to room temperature before soaking overnight.",
+      "Drain excess surface moisture by patting the Hilsa steaks dry before rubbing with turmeric, chili, and salt.",
+      "Mash a fresh green chili directly into the soaked rice with raw mustard oil right before serving for authentic aroma.",
+    ],
+    commonMistakes: [
+      "Soaking warm or hot rice, which causes mushy texture and over-fermentation.",
+      "Frying Hilsa in unheated mustard oil before it reaches its smoking point.",
+      "Grinding mustard seeds without salt, which can leave a bitter taste in the paste.",
+    ],
+    nutrition: {
+      calories: 420,
+      proteinGrams: 26,
+      carbsGrams: 42,
+      fatGrams: 16,
+      fiberGrams: 2,
+      sodiumMg: 520,
+      servingSizeDescription: "1 platter serving (soaked rice, fried Hilsa steak, mustard & accompaniments)",
+    },
+    storageInstructions:
+      "Serve immediately while the fried Hilsa is crisp and the soaked panta bhat is cool and refreshing. Store any leftover fried fish and mustard paste separately in airtight containers in the refrigerator for up to 24 hours.",
+    servingSuggestions: [
+      "Squeeze fresh lime or gondhoraj lemon over the crispy fried Hilsa before eating.",
+      "Mix a touch of the mustard-chili paste and sliced raw red onion into a bite of cool, tangy rice, then follow with flaky Hilsa.",
+      "Serve in traditional clay bowls (shora) with crispy fried dried red chilies on the side.",
+    ],
+    faqs: [
+      {
+        question: "How long should I soak the rice for Panta Bhat?",
+        answer:
+          "Leave the submerged rice covered at room temperature overnight for 8 to 12 hours, or 6 to 8 hours if your kitchen is very warm.",
+      },
+      {
+        question: "Can I use kasundi instead of homemade shorshe bata?",
+        answer:
+          "Yes, 1.5 tablespoons of Bengali kasundi mixed with 1 teaspoon of raw mustard oil and finely chopped green chilies makes a delicious, authentic substitute.",
+      },
+      {
+        question: "Why heat mustard oil until smoking before frying Hilsa?",
+        answer:
+          "Bringing mustard oil to its smoking point and watching it lighten in color removes harsh raw bitterness while keeping its rich, nutty aroma for frying the fish.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Regional Culinary Director & Halal Recipe Developer",
+    },
+    updatedDate: "2026-11-12",
+    tags: [
+      "Panta Ilish",
+      "পান্তা ইলিশ",
+      "Panta Bhat",
+      "Ilish Maach",
+      "Hilsa Fish",
+      "Pohela Boishakh",
+      "Green Chili",
+      "Mustard Paste",
+      "Shorshe Bata",
+      "Bengali Heritage",
+      "Halal Fish & Seafood",
+    ],
+    relatedRecipeSlugs: [
+      "panta-bhat-with-bhorta",
+      "noakhali-shorshe-ilish",
+      "fish-egg-curry-ilish",
+      "dal-bhorta",
+      "tomato-bhorta",
+    ],
+    relatedGuideSlugs: [
+      "mustard-oil-bengali-cooking",
+      "how-to-build-a-bangladeshi-spice-base",
+    ],
+    seoTitle:
+      "Panta Ilish with Green Chili & Mustard Recipe | Noakhali Kitchen",
+    seoDescription:
+      "Classic Pohela Boishakh Panta Ilish with Green Chili & Mustard: cooling overnight-soaked panta bhat paired with crispy mustard-oil fried Hilsa fish, shorshe bata, raw red onions & lime.",
+  },
+  {
+    id: "rec-doodh-bhaat-with-ripe-banana-date-molasses",
+    slug: "doodh-bhaat-with-ripe-banana-date-molasses",
+    title: "Doodh Bhaat with Ripe Banana & Date Molasses (দুধ কলা ভাত)",
+    category: "Halal Desserts",
+    categorySlug: "halal-desserts",
+    cuisine: "Authentic Bengali Heritage / Comfort Sweet",
+    description:
+      "A soothing, nostalgic Bengali comfort bowl pairing tender cooked rice bathed in creamy cardamom-kissed whole milk with sweet ripe banana slices and aromatic winter date palm molasses (khejurer jhola gur).",
+    introStory:
+      "Doodh Bhaat with Ripe Banana and Date Molasses (দুধ কলা ভাত) is one of Bengal's most beloved ancestral comfort dishes, treasured equally as a nourishing morning meal, a gentle Ramadan Sehri favorite, and a wholesome evening dessert.\n\nIn rural kitchens from Noakhali to Dhaka, freshly cooked short-grain or parboiled rice is cooled slightly and folded into rich, previously boiled and thickened whole milk perfumed with green cardamom. Sweet, honeyed Bengali bananas (such as Champa or Shobri kola) are sliced and gently mashed into the creamy rice before finishing with a generous swirl of glossy amber liquid date palm molasses (khejurer jhola gur / nolen gur). Simple, naturally gluten-free, and deeply restorative, every spoonful balances velvety milk, soft rice, fragrant cardamom, and caramel-like palm nectar.",
+    heroImage: "/assets/aistudio/Doodh_Bhaat_with_Ripe_Banana___Date_Molasses_2ffe7889.jpg",
+    prepTimeMinutes: 10,
+    cookTimeMinutes: 10,
+    totalTimeMinutes: 20,
+    servings: 2,
+    difficulty: "Easy",
+    calories: 395,
+    rating: 4.98,
+    reviewCount: 142,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    whySpecial:
+      "Timeless Bengali village comfort combining creamy reduced whole milk, soft rice, sweet spotted ripe bananas, fragrant crushed green cardamom, and liquid khejurer jhola gur (date palm molasses).",
+    halalNotes:
+      "100% Halal certified, naturally vegetarian, gluten-free, and alcohol-free. Crafted purely with whole cow milk, rice, ripe bananas, natural winter date palm molasses (nolen gur), and whole green cardamom.",
+    potentialCautionNotes:
+      "Always allow boiled milk and cooked rice to cool to lukewarm or room temperature before swirling in raw date palm molasses (khejurer gur). Adding unprocessed palm molasses to boiling hot milk can cause natural curdling.",
+    ingredients: [
+      {
+        amount: "2",
+        unit: "cups",
+        name: "Cooked short-grain or parboiled white rice",
+        notes: "cooled to lukewarm or room temp",
+      },
+      {
+        amount: "2",
+        unit: "cups",
+        name: "Whole cow milk",
+        notes: "boiled, slightly reduced, and cooled",
+      },
+      {
+        amount: "2",
+        unit: "medium",
+        name: "Sweet ripe bananas",
+        notes: "Champa or Cavendish, sliced",
+      },
+      {
+        amount: "3 to 4",
+        unit: "tbsp",
+        name: "Date palm molasses (khejurer jhola gur)",
+        notes: "or nolen gur, to taste",
+      },
+      {
+        amount: "2",
+        unit: "pods",
+        name: "Green cardamom pods",
+        notes: "lightly crushed",
+      },
+      {
+        amount: "1/4",
+        unit: "tsp",
+        name: "Ground green cardamom powder",
+        notes: "for garnish",
+      },
+      {
+        amount: "1",
+        unit: "pinch",
+        name: "Fine sea salt",
+        notes: "balances the sweet molasses",
+      },
+    ],
+    substitutions: [
+      {
+        original: "Liquid date palm molasses (khejurer jhola gur)",
+        substitute: "Warm melted patali gur (date jaggery) or pure maple syrup",
+        notes: "Melt solid patali gur with 1–2 tbsp warm water before drizzling over the lukewarm milk rice.",
+      },
+      {
+        original: "Whole cow milk",
+        substitute: "Full-fat evaporated milk diluted 1:1 or rich coconut milk",
+        notes: "Provides a creamy, malai-rich consistency for dairy or plant-based preferences.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Infuse & Cool the Milk",
+        instruction:
+          "Pour the whole milk into a clean saucepan with the lightly crushed green cardamom pods. Bring it to a gentle boil over medium heat, then simmer on low for 5–6 minutes until slightly thickened and fragrant. Remove from the stove and let it cool until lukewarm or chilled.",
+      },
+      {
+        step: 2,
+        title: "Prepare the Rice Base",
+        instruction:
+          "Place the soft cooked rice into two deep serving bowls or traditional earthen bowls (shora). Add a tiny pinch of fine salt and gently loosen any clumps with a spoon.",
+      },
+      {
+        step: 3,
+        title: "Combine with Milk & Ripe Bananas",
+        instruction:
+          "Pour the cardamom-infused lukewarm or chilled milk over the rice so the grains are generously submerged. Arrange the sliced ripe bananas on top, lightly mashing a few slices into the milk and rice if you prefer extra natural sweetness and creaminess.",
+      },
+      {
+        step: 4,
+        title: "Swirl Date Molasses & Serve",
+        instruction:
+          "Drizzle the liquid date palm molasses (khejurer jhola gur) generously across the bananas and creamy rice, dust lightly with ground green cardamom powder, and garnish with a whole cardamom pod. Serve immediately at room temperature or chilled.",
+      },
+    ],
+    chefNotes: [
+      "Using slightly softer, freshly boiled short-grain rice (like Miniket or Kalijeera) gives the classic velvety texture that absorbs creamy milk effortlessly.",
+      "Do not stir raw palm molasses into piping hot milk; lukewarm or cool milk keeps the dairy silky smooth without separating.",
+      "For Sehri or summer mornings, chill the cardamom milk beforehand so the bowl feels extra refreshing.",
+    ],
+    cookingTips: [
+      "Simmer the milk for 5–6 minutes with crushed cardamom pods to concentrate its natural sweetness and creamy body.",
+      "Pick ripe yellow bananas with small brown sugar spots for maximum fragrance and natural sweetness.",
+      "Add just a pinch of salt to deepen the caramel-like aroma of the date palm molasses.",
+    ],
+    commonMistakes: [
+      "Pouring date palm molasses into boiling milk, which can cause curdling.",
+      "Using overly firm or undercooked rice that fails to absorb the sweet milk.",
+      "Using underripe bananas, which taste starchy instead of creamy and sweet.",
+    ],
+    nutrition: {
+      calories: 395,
+      proteinGrams: 10,
+      carbsGrams: 68,
+      fatGrams: 9,
+      fiberGrams: 3,
+      sodiumMg: 145,
+      servingSizeDescription: "1 generous bowl (rice, whole milk, ripe banana & date molasses)",
+    },
+    storageInstructions:
+      "Enjoy fresh right after assembling so the bananas stay bright and sweet. Cooked rice and cardamom milk can be refrigerated separately for up to 2 days and assembled with sliced banana and date molasses just before serving.",
+    servingSuggestions: [
+      "Serve in earthen clay bowls (shora) with extra liquid date molasses on the side for drizzling.",
+      "Enjoy cool or at room temperature as a comforting Sehri meal, breakfast, or traditional dessert.",
+      "Sprinkle a pinch of freshly ground green cardamom on top right before serving.",
+    ],
+    faqs: [
+      {
+        question: "Why is Doodh Bhaat eaten with banana and date molasses?",
+        answer:
+          "In Bengali culinary tradition, combining cool milk, soft rice, sweet ripe banana, and fragrant date palm molasses creates an easily digestible, energy-rich dish ideal for both morning sustenance and light desserts.",
+      },
+      {
+        question: "Should the milk be hot or cold when serving Doodh Bhaat?",
+        answer:
+          "Lukewarm or chilled milk is best—especially when sweetening with date palm molasses (khejurer gur)—to preserve the smooth dairy texture and refreshing comfort.",
+      },
+      {
+        question: "Which banana variety works best?",
+        answer:
+          "Traditional Bengali Champa or Shobri bananas are wonderfully aromatic, though any sweet, ripe spotted Cavendish banana works deliciously.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Regional Culinary Director & Halal Recipe Developer",
+    },
+    updatedDate: "2026-11-12",
+    tags: [
+      "Doodh Bhaat",
+      "Doodh Kola Bhaat",
+      "দুধ কলা ভাত",
+      "Date Molasses",
+      "Khejurer Gur",
+      "Nolen Gur",
+      "Ripe Banana",
+      "Bengali Comfort Food",
+      "Halal Desserts",
+      "Sehri Recipe",
+    ],
+    relatedRecipeSlugs: [
+      "dudh-chitai-pitha",
+      "narkel-naru",
+      "kheer-shahi-rice-kheer-payesh",
+      "boiled-rice",
+      "suji-halwa-halva",
+    ],
+    relatedGuideSlugs: [
+      "perfect-steamed-basmati-rice",
+      "how-to-build-a-bangladeshi-spice-base",
+    ],
+    seoTitle:
+      "Doodh Bhaat with Ripe Banana & Date Molasses Recipe | Noakhali Kitchen",
+    seoDescription:
+      "Authentic Bengali Doodh Bhaat with Ripe Banana & Date Molasses (দুধ কলা ভাত): soft cooked rice in cardamom-infused whole milk topped with sweet ripe bananas and fragrant khejurer jhola gur.",
+  },
+  {
+    id: "rec-beguni-eggplant-pakora",
+    slug: "beguni-eggplant-pakora",
+    title: "Beguni — Crispy Bengali Eggplant Pakora (বেগুনি)",
+    category: "Halal Street Food",
+    categorySlug: "halal-street-food",
+    cuisine: "Bengali Street Food / Classic Iftar Fritter",
+    description:
+      "Iconic Bengali street food eggplant pakoras made with tender sliced eggplant dipped in a light, spiced chickpea-rice flour batter and fried until puffed, shattering crisp, and golden brown.",
+    introStory:
+      "Beguni (বেগুনি) is one of Bangladesh and Bengal's most beloved street-food snacks and an indispensable centerpiece of Ramadan Iftar platters alongside crispy dal piyaju, muri, and spiced chola bhuna.\n\nCrafted from tender, thinly sliced purple eggplant dipped into an airy, turmeric-golden batter of fine besan (chickpea flour), crisp rice flour, kalonji (nigella seeds), chopped fresh cilantro, and warm spices, each round puffs gently in hot oil into a shatteringly crisp golden shell wrapping a sweet, creamy eggplant center. Finished with a light scatter of flaky sea salt (or bit lobon) straight out of the kadai, Beguni pairs irresistibly with afternoon chai, tamarind chutney, or puffed rice.",
+    heroImage: "/assets/aistudio/Beguni_8d792cf2.jpg",
+    prepTimeMinutes: 15,
+    cookTimeMinutes: 15,
+    totalTimeMinutes: 30,
+    servings: 4,
+    difficulty: "Easy",
+    calories: 235,
+    rating: 4.97,
+    reviewCount: 186,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    whySpecial:
+      "A whisper of rice flour and nigella seeds (kalonji) in a whisked besan batter creates a blistered, lacy, extra-crunchy Beguni crust that stays crisp long after frying.",
+    halalNotes:
+      "100% Halal certified, naturally vegan, vegetarian, and gluten-free. Prepared solely with fresh eggplant, pure chickpea flour (besan), rice flour, natural spices, and pure vegetable or mustard oil.",
+    potentialCautionNotes:
+      "Slice the eggplant evenly (about 1/4-inch / 5mm thick) and pat completely dry before dipping so the batter clings cleanly without slipping or turning soggy. Fry at medium-high heat (350°F / 175°C) so the exterior crisps without absorbing excess oil.",
+    ingredients: [
+      {
+        amount: "1",
+        unit: "medium",
+        name: "Tender purple eggplant (brinjal)",
+        notes: "sliced 1/4-inch thick rounds",
+      },
+      {
+        amount: "1",
+        unit: "cup",
+        name: "Besan (fine chickpea flour)",
+        notes: "sifted for lump-free batter",
+      },
+      {
+        amount: "2",
+        unit: "tbsp",
+        name: "Fine rice flour (chaler gura)",
+        notes: "for lasting crispness",
+      },
+      {
+        amount: "1/2",
+        unit: "tsp",
+        name: "Turmeric powder",
+      },
+      {
+        amount: "1/2",
+        unit: "tsp",
+        name: "Kashmiri red chili powder",
+      },
+      {
+        amount: "1/2",
+        unit: "tsp",
+        name: "Kalonji (nigella seeds)",
+        notes: "or ajwain carom seeds",
+      },
+      {
+        amount: "1/2",
+        unit: "tsp",
+        name: "Roasted cumin powder",
+      },
+      {
+        amount: "1/4",
+        unit: "tsp",
+        name: "Baking powder",
+        notes: "for an airy puffed crust",
+      },
+      {
+        amount: "2",
+        unit: "tbsp",
+        name: "Fresh cilantro leaves",
+        notes: "finely chopped",
+      },
+      {
+        amount: "3/4",
+        unit: "tsp",
+        name: "Fine sea salt",
+        notes: "plus flaky salt for garnish",
+      },
+      {
+        amount: "3/4",
+        unit: "cup",
+        name: "Cold water",
+        notes: "added gradually as needed",
+      },
+      {
+        amount: "2",
+        unit: "cups",
+        name: "Neutral cooking or mustard oil",
+        notes: "for deep frying",
+      },
+    ],
+    substitutions: [
+      {
+        original: "Fine rice flour (chaler gura)",
+        substitute: "2 tbsp cornstarch (cornflour)",
+        notes: "Helps lock in an extra-crisp pakora shell with less oil absorption.",
+      },
+      {
+        original: "Kalonji (nigella seeds)",
+        substitute: "1/2 tsp ajwain (carom seeds)",
+        notes: "Adds classic street-style pakora aroma and aids digestion.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Slice & Season the Eggplant",
+        instruction:
+          "Wash and dry the eggplant thoroughly. Slice it into even 1/4-inch (5mm) rounds or long planks. Lightly rub the slices with a pinch of turmeric and salt, let rest 5 minutes, then pat dry with a clean kitchen towel so the batter adheres tightly.",
+      },
+      {
+        step: 2,
+        title: "Whisk the Crispy Besan Batter",
+        instruction:
+          "In a mixing bowl, sift together the besan, rice flour, and baking powder. Whisk in turmeric, Kashmiri red chili powder, roasted cumin powder, kalonji seeds, chopped fresh cilantro, and salt. Gradually pour in cold water while whisking until smooth, ribbons-thick, and able to evenly coat the back of a spoon without dripping off rapidly.",
+      },
+      {
+        step: 3,
+        title: "Coat & Deep-Fry Until Puffed Golden",
+        instruction:
+          "Heat cooking oil in a deep kadai or heavy skillet over medium-high heat until shimmering (350°F / 175°C). Stir 1 tablespoon of hot oil directly into the batter for extra crunch. Dip each eggplant slice into the batter, let excess drip briefly, and slide gently into the hot oil. Fry in batches for 3 to 4 minutes, turning once, until puffed, crisp, and deep golden brown.",
+      },
+      {
+        step: 4,
+        title: "Drain, Finish with Flaky Salt & Serve",
+        instruction:
+          "Lift the crispy Beguni out with a slotted spider onto a wire rack or paper-towel-lined platter. While piping hot, finish with a light sprinkle of flaky sea salt or Bengali black salt (bit lobon). Serve immediately with tamarind chutney, puffed rice (muri), or hot milk chai.",
+      },
+    ],
+    chefNotes: [
+      "Whisking 1 tablespoon of hot frying oil into the raw besan batter creates tiny air pockets that fry up light and shatteringly crisp.",
+      "Adding a touch of rice flour prevents the eggplant pakoras from turning limp as they cool.",
+      "Do not overcrowd the kadai—crowding drops the oil temperature and makes the coating oily.",
+    ],
+    cookingTips: [
+      "Slice eggplant rounds uniformly at 1/4-inch so the inside steams creamy tender at the exact moment the crust turns golden crisp.",
+      "Use cold water when mixing the batter to promote lighter, crunchier frying.",
+      "Drain fried Beguni on a wire cooling rack rather than stacking directly on paper towels to preserve bottom-side crispness.",
+    ],
+    commonMistakes: [
+      "Making the batter too watery, causing it to slide off the smooth eggplant skin.",
+      "Frying in oil that is not hot enough, leading to heavy, oil-soaked fritters.",
+      "Cutting eggplant slices too thick, leaving the center firm instead of meltingly tender.",
+    ],
+    nutrition: {
+      calories: 235,
+      proteinGrams: 6,
+      carbsGrams: 24,
+      fatGrams: 13,
+      fiberGrams: 4,
+      sodiumMg: 440,
+      servingSizeDescription: "1 serving (3–4 crispy Beguni pakora rounds)",
+    },
+    storageInstructions:
+      "Best enjoyed hot and crisp straight from the fryer. Leftover Beguni can be refrigerated up to 2 days and re-crisped in an air fryer or 375°F oven for 4–5 minutes.",
+    servingSuggestions: [
+      "Serve hot as a classic Bengali street-food snack or Ramadan Iftar platter with Dal Piyaju and Chola Bhuna.",
+      "Pair with sweet-tangy tamarind chutney, mint chutney, or mustard kasundi.",
+      "Toss alongside crispy puffed rice (jhal muri) and fresh sliced green chilies.",
+    ],
+    faqs: [
+      {
+        question: "How do I keep Beguni crispy for longer?",
+        answer:
+          "Blend 2 tablespoons of fine rice flour with the chickpea flour (besan), whisk 1 tablespoon of hot frying oil into the batter, and drain fried pieces on a wire rack.",
+      },
+      {
+        question: "Which eggplant is best for Bengali Beguni?",
+        answer:
+          "Long, slender glossy purple eggplants (or tender medium globe eggplants with few seeds) slice evenly and turn velvety soft inside the crisp batter.",
+      },
+      {
+        question: "Is Beguni naturally gluten-free and Halal?",
+        answer:
+          "Yes! Authentic Beguni uses pure chickpea flour (besan) and rice flour—no wheat flour, eggs, or animal additives.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Regional Culinary Director & Halal Recipe Developer",
+    },
+    updatedDate: "2026-11-12",
+    tags: [
+      "Beguni",
+      "বেগুনি",
+      "Eggplant Pakora",
+      "Brinjal Fritters",
+      "Bengali Street Food",
+      "Ramadan Iftar",
+      "Halal Snacks",
+      "Pakora",
+      "Halal Vegetarian",
+    ],
+    relatedRecipeSlugs: [
+      "dal-piyaju-pakora",
+      "black-chana",
+      "crispy-halal-samosas",
+      "panta-ilish-with-green-chili-mustard",
+      "tomato-bhorta",
+    ],
+    relatedGuideSlugs: [
+      "mustard-oil-bengali-cooking",
+      "how-to-build-a-bangladeshi-spice-base",
+    ],
+    seoTitle:
+      "Beguni Recipe (Crispy Bengali Street Food Eggplant Pakora) | Noakhali Kitchen",
+    seoDescription:
+      "Authentic crispy Bengali Beguni (বেগুনি) eggplant pakora: thin eggplant slices coated in airy spiced chickpea-rice flour batter with kalonji & cilantro, fried golden brown for street food & Iftar.",
+  },
+  {
+    id: "rec-shahi-dim-korma",
+    slug: "shahi-dim-korma",
+    title: "Shahi Dim Korma — Braised Egg White Korma (শাহী ডিমের কোরমা)",
+    category: "Halal Rice & Curry",
+    categorySlug: "halal-rice-curry",
+    cuisine: "Bengali Shahi Heritage / Festive Royal Curry",
+    description:
+      "A regal, velvety Bengali white egg korma featuring golden-seared hard-boiled eggs braised in a creamy yogurt, cashew-almond, and whole-spice gravy finished with crispy beresta, saffron, and kewra aroma.",
+    introStory:
+      "Shahi Dim Korma (শাহী ডিমের কোরমা), also cherished as Braised Egg White Korma, is a jewel of traditional Bengali festive and Eid dining. Unlike fiery red egg curries colored with turmeric and red chili powder, authentic Shahi Dim Korma celebrates an ivory-white, silk-smooth sauce thickened with soaked cashews, blanched almonds, sweet onion paste, and creamy yogurt.\n\nWhole boiled eggs are lightly scored and blistered in pure cow ghee until delicate golden spots form, allowing the rich aromatic gravy to cling to every curve. Tempered with green cardamom, cinnamon bark, cloves, and bay leaf—and gently spiced with white pepper and fresh green chilies—the korma is crowned with crispy fried onions (beresta), toasted nuts, saffron threads, fresh cilantro, and a fragrant drop of kewra water. Paired with steaming Bengali pulao or flaky paratha, it turns everyday eggs into an unforgettable royal feast.",
+    heroImage: "/assets/aistudio/egg_korma_46f760f2.jpg",
+    prepTimeMinutes: 20,
+    cookTimeMinutes: 25,
+    totalTimeMinutes: 45,
+    servings: 4,
+    difficulty: "Easy",
+    calories: 365,
+    rating: 4.98,
+    reviewCount: 174,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    whySpecial:
+      "Skipping turmeric and red chili powder preserves the signature Shahi ivory-white gravy, while a silky cashew-almond and yogurt emulsion creates rich, velvety luxury with zero heaviness.",
+    halalNotes:
+      "100% Halal certified, naturally gluten-free, and alcohol-free. Prepared with fresh farm eggs, pure cow ghee, whole milk yogurt, nuts, single-origin whole spices, and pure saffron/kewra water.",
+    potentialCautionNotes:
+      "Lower the heat completely or remove the pan from the flame for 1 minute before stirring in whisked yogurt so the white korma gravy stays silky smooth and never splits.",
+    ingredients: [
+      {
+        amount: "6",
+        unit: "large",
+        name: "Hard-boiled eggs",
+        notes: "peeled and shallowly scored",
+      },
+      {
+        amount: "3",
+        unit: "tbsp",
+        name: "Pure cow ghee",
+        notes: "plus 1 tbsp neutral oil",
+      },
+      {
+        amount: "4",
+        unit: "pods",
+        name: "Green cardamom pods",
+        notes: "lightly crushed",
+      },
+      {
+        amount: "1",
+        unit: "stick",
+        name: "Cinnamon stick (2-inch)",
+      },
+      {
+        amount: "4",
+        unit: "whole",
+        name: "Whole cloves",
+      },
+      {
+        amount: "2",
+        unit: "leaves",
+        name: "Bay leaves (tej pata)",
+      },
+      {
+        amount: "3/4",
+        unit: "cup",
+        name: "Smooth onion paste",
+        notes: "from 2 medium white onions",
+      },
+      {
+        amount: "1",
+        unit: "tbsp",
+        name: "Fresh ginger-garlic paste",
+      },
+      {
+        amount: "1/2",
+        unit: "cup",
+        name: "Plain whole-milk yogurt",
+        notes: "whisked smooth at room temp",
+      },
+      {
+        amount: "1/4",
+        unit: "cup",
+        name: "Cashews and blanched almonds",
+        notes: "soaked and blended into paste",
+      },
+      {
+        amount: "1/2",
+        unit: "cup",
+        name: "Warm whole milk",
+        notes: "or light cream for gravy",
+      },
+      {
+        amount: "1/2",
+        unit: "tsp",
+        name: "White pepper powder",
+        notes: "keeps the korma ivory white",
+      },
+      {
+        amount: "4",
+        unit: "whole",
+        name: "Fresh green chilies",
+        notes: "slit lengthwise",
+      },
+      {
+        amount: "1",
+        unit: "tsp",
+        name: "Sugar",
+        notes: "balances yogurt tang",
+      },
+      {
+        amount: "1",
+        unit: "tsp",
+        name: "Fine sea salt",
+        notes: "or to taste",
+      },
+      {
+        amount: "1/3",
+        unit: "cup",
+        name: "Crispy fried onions (beresta)",
+        notes: "plus toasted nuts & cilantro",
+      },
+      {
+        amount: "1/2",
+        unit: "tsp",
+        name: "Kewra or rose water",
+        notes: "with a pinch of saffron",
+      },
+    ],
+    substitutions: [
+      {
+        original: "White pepper powder",
+        substitute: "1/2 tsp freshly ground black pepper",
+        notes: "Gives classic warmth, though white pepper keeps the Shahi sauce brightest.",
+      },
+      {
+        original: "Cashew-almond paste",
+        substitute: "1/4 cup soaked raw cashews + 1 tbsp poppy seed paste",
+        notes: "Delivers an authentic royal Mughal-Bengali creamy body.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Score & Golden-Sear the Boiled Eggs",
+        instruction:
+          "Make 4 shallow vertical slits around each peeled hard-boiled egg so the sauce penetrates deeply. Heat 1 tablespoon of ghee in a wide kadai over medium heat, add a pinch of salt, and gently sear the eggs for 2–3 minutes until blistered golden all over. Transfer to a plate.",
+      },
+      {
+        step: 2,
+        title: "Bloom Whole Spices & Sauté Onion Paste",
+        instruction:
+          "Add the remaining 2 tablespoons of ghee and oil to the same pan. Temper green cardamom, cinnamon stick, cloves, and bay leaves for 20 seconds until fragrant. Add the smooth onion paste and sauté over medium-low heat for 6–8 minutes without browning, stirring often until raw moisture evaporates and the paste turns glossy.",
+      },
+      {
+        step: 3,
+        title: "Simmer Yogurt & Nut Paste Emulsion",
+        instruction:
+          "Stir in the ginger-garlic paste and cook 2 minutes. Lower the flame to minimum, slowly fold in the room-temperature whisked yogurt while stirring briskly, then mix in the silky cashew-almond paste, white pepper, salt, and sugar. Sauté gently for 3–4 minutes until creamy oil sheen appears at the edges.",
+      },
+      {
+        step: 4,
+        title: "Braise Eggs & Finish Shahi Style",
+        instruction:
+          "Pour in warm whole milk (plus 1/4 cup warm water if needed) to create a velvety pouring consistency. Add slit green chilies and slide in the seared eggs. Cover and braise gently on low heat for 6–7 minutes. Drizzle with kewra water, then garnish with crispy beresta, toasted cashews and slivered almonds, saffron strands, and fresh cilantro. Serve hot with pulao or paratha.",
+      },
+    ],
+    chefNotes: [
+      "Always sauté the onion paste slowly on medium-low heat so it sweetens cleanly without turning dark brown, keeping the korma sauce ivory white.",
+      "Do not add turmeric or red chili powder—traditional Shahi Dim Korma relies on white pepper and whole green chilies for gentle warmth.",
+      "Halve one braised egg just before serving and scatter saffron strands over the golden yolk for festive presentation.",
+    ],
+    cookingTips: [
+      "Room-temperature whisked yogurt stirred into low-heat spices guarantees a glossy, unsplit gravy.",
+      "Soak cashews and blanched almonds in warm water for 20 minutes before blending so the paste is ultra-velvety.",
+      "Sear boiled eggs briefly in pure ghee with shallow surface slits so they absorb the cardamom-kewra aroma.",
+    ],
+    commonMistakes: [
+      "Adding cold yogurt straight into high heat, which causes the white gravy to curdle.",
+      "Browning the raw onion paste instead of gently cooking off moisture, turning the white korma dark.",
+      "Overcooking the boiled eggs during braising, which makes the whites rubbery.",
+    ],
+    nutrition: {
+      calories: 365,
+      proteinGrams: 14,
+      carbsGrams: 12,
+      fatGrams: 29,
+      fiberGrams: 2,
+      sodiumMg: 540,
+      servingSizeDescription: "1 serving (1.5 braised eggs with creamy Shahi korma gravy)",
+    },
+    storageInstructions:
+      "Store cooled Shahi Dim Korma in an airtight glass container in the refrigerator for up to 3 days. Reheat gently over low heat with 1–2 tablespoons of warm milk so the nut-yogurt gravy remains silky.",
+    servingSuggestions: [
+      "Serve alongside fragrant Bengali Pulao, saffron cashew pulao, or flaky Plain Paratha.",
+      "Pair with cucumber-mint raita and crisp kachumber salad for Eid or weekend family dinners.",
+      "Garnish the serving bowl with extra crispy beresta and toasted slivered almonds.",
+    ],
+    faqs: [
+      {
+        question: "Why is Shahi Dim Korma white instead of yellow or red?",
+        answer:
+          "Authentic Bengali Shahi Dim Korma omits turmeric and red chili powder, getting its delicate ivory color and gentle heat from white pepper, green chilies, onion paste, yogurt, and cashew-almond cream.",
+      },
+      {
+        question: "How do I stop yogurt from curdling in white korma?",
+        answer:
+          "Whisk room-temperature full-fat yogurt until completely smooth, lower the burner to its lowest setting, and stir continuously while incorporating it.",
+      },
+      {
+        question: "What pairs best with Shahi Dim Korma?",
+        answer:
+          "Kalijeera or basmati pulao, saffron cashew polao, luchi, or flaky layered paratha are classic pairings.",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Regional Culinary Director & Halal Recipe Developer",
+    },
+    updatedDate: "2026-11-12",
+    tags: [
+      "Shahi Dim Korma",
+      "Dim Korma",
+      "শাহী ডিমের কোরমা",
+      "Egg White Korma",
+      "Braised Egg Korma",
+      "Bengali Korma",
+      "Eid Recipes",
+      "Halal Rice & Curry",
+      "Shahi Curry",
+    ],
+    relatedRecipeSlugs: [
+      "bengali-pulao",
+      "morog-polao",
+      "plain-paratha",
+      "bengali-chicken-roast",
+      "chicken-rezala",
+    ],
+    relatedGuideSlugs: [
+      "how-to-build-a-bangladeshi-spice-base",
+      "how-to-make-perfect-beresta",
+    ],
+    seoTitle:
+      "Shahi Dim Korma Recipe (Braised Egg White Korma) | Noakhali Kitchen",
+    seoDescription:
+      "Authentic Bengali Shahi Dim Korma (শাহী ডিমের কোরমা): golden-seared eggs braised in a creamy ivory white yogurt, cashew-almond & whole-spice gravy finished with beresta, saffron & kewra.",
+  },
 ];
 
 export const RECIPES: Recipe[] = enhanceRecipesWithCornerstones(BASE_RECIPES);

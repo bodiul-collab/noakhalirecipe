@@ -644,7 +644,7 @@ export default function App() {
   const handleSelectRecipe = useCallback(
     (recipe: Recipe) => {
       setSelectedRecipeSlug(recipe.slug);
-      const targetRoute = `/recipe/${recipe.slug}`;
+      const targetRoute = `/recipes/${recipe.slug}`;
       navigate(targetRoute, true);
     },
     [navigate]

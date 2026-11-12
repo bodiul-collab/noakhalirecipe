@@ -57,7 +57,7 @@ export const CATEGORIES: CategoryHub[] = [
     fullDescription:
       "Fresh river fish and coastal seafood hold an esteemed place in regional Halal heritage dining. Our collection features revered silver Hilsa (Ilish) in golden mustard gravy, tender tiger prawns in coconut cream, and crisp pan-fried seasonal catch seasoned with five-spice panch phoron.",
     image: IMAGES.shorsheIlish,
-    featuredRecipeSlugs: ["pabda-fish-curry-bengali-style", "panta-bhat-with-bhorta", "fish-morich-khola", "bangladeshi-spiced-shrimp-and-green-bean-stir-fry", "fish-egg-curry-ilish", "fish-biryani", "soy-sauce-deep-fried-crispy-fish", "rohu-fish-curry", "shrimp-tandoori", "bengali-fish-curry-macher-jhol", "noakhali-shorshe-ilish", "chingri-malai-curry", "loitta-shutki-bhuna-dried-fermented-fish", "crispy-golden-salmon-patties-dish", "tuna-fish-kebab-fritters", "green-goddess-wild-salmon-asparagus-bowl", "tom-yum-soup-goong-gai"],
+    featuredRecipeSlugs: ["panta-ilish-with-green-chili-mustard", "pabda-fish-curry-bengali-style", "panta-bhat-with-bhorta", "fish-morich-khola", "bangladeshi-spiced-shrimp-and-green-bean-stir-fry", "fish-egg-curry-ilish", "fish-biryani", "soy-sauce-deep-fried-crispy-fish", "rohu-fish-curry", "shrimp-tandoori", "bengali-fish-curry-macher-jhol", "noakhali-shorshe-ilish", "chingri-malai-curry", "loitta-shutki-bhuna-dried-fermented-fish", "crispy-golden-salmon-patties-dish", "tuna-fish-kebab-fritters", "green-goddess-wild-salmon-asparagus-bowl", "tom-yum-soup-goong-gai"],
     faqs: [
       {
         question: "Are all types of fish and seafood Halal?",
@@ -111,7 +111,7 @@ export const CATEGORIES: CategoryHub[] = [
     fullDescription:
       "Pure, nourishing plant-based dishes made with wholesome legumes, cold-pressed mustard oil, whole spices, and garden-fresh vegetables. Completely free from animal byproducts and naturally pork-free.",
     image: IMAGES.vegBhunaKhichuri,
-    featuredRecipeSlugs: ["dal-bhorta", "tomato-bhorta", "bengali-aloo-dum", "plain-paratha", "homemade-chili-oil", "saag-paneer", "bengali-mango-chutney", "spinach-sun-dried-tomato-pasta", "black-chana", "hummus", "crispy-falafel", "bengali-pulao", "bengali-khichuri-bhuna", "mediterranean-chickpea-salad", "authentic-lebanese-baba-ganoush", "masoor-dal-red-lentil-dal", "crispy-garlic-herb-roasted-potatoes", "pillowy-restaurant-style-garlic-butter-naan", "rainbow-roasted-beet-whipped-goat-cheese-salad", "panera-style-halal-broccoli-cheddar-soup", "crispy-zaatar-chickpea-halloumi-glow-salad", "vegetable-bhuna-khichuri"],
+    featuredRecipeSlugs: ["beguni-eggplant-pakora", "doodh-bhaat-with-ripe-banana-date-molasses", "dal-bhorta", "tomato-bhorta", "bengali-aloo-dum", "plain-paratha", "homemade-chili-oil", "saag-paneer", "bengali-mango-chutney", "spinach-sun-dried-tomato-pasta", "black-chana", "hummus", "crispy-falafel", "bengali-pulao", "bengali-khichuri-bhuna", "mediterranean-chickpea-salad", "authentic-lebanese-baba-ganoush", "masoor-dal-red-lentil-dal", "crispy-garlic-herb-roasted-potatoes", "pillowy-restaurant-style-garlic-butter-naan", "rainbow-roasted-beet-whipped-goat-cheese-salad", "panera-style-halal-broccoli-cheddar-soup", "crispy-zaatar-chickpea-halloumi-glow-salad", "vegetable-bhuna-khichuri"],
     faqs: [
       {
         question: "Do vegetarian dishes ever contain non-halal ingredients?",
@@ -131,7 +131,7 @@ export const CATEGORIES: CategoryHub[] = [
     fullDescription:
       "The staple combination that anchors Bengali and South Asian hospitality. Learn the fine art of blooming whole spices in pure ghee, parboiling basmati rice, and creating layered gravies that bring families together.",
     image: IMAGES.chickenRoast,
-    featuredRecipeSlugs: ["morog-polao", "pabda-fish-curry-bengali-style", "panta-bhat-with-bhorta", "dal-bhorta", "tomato-bhorta", "duck-curry-with-coconut-milk", "lamb-vindaloo", "chicken-vindaloo", "boiled-rice", "bengali-aloo-dum", "bangladeshi-spiced-shrimp-and-green-bean-stir-fry", "moroccan-lamb-tagine", "beef-nahari", "authentic-bangladeshi-beef-curry", "fish-egg-curry-ilish", "fish-biryani", "easy-basmati-rice-cooking", "rogan-josh", "lamb-curry", "pakistani-aloo-keema", "bengali-chicken-biryani", "chicken-tikka-masala", "chicken-karahi", "haleem", "chicken-biryani", "bengali-pulao", "bengali-khichuri-bhuna", "bengali-chicken-roast", "bengali-beef-tehari", "bengali-fish-curry-macher-jhol", "bengali-chicken-curry-murgir-jhol", "authentic-arabian-chicken-mandi", "chicken-machboos-majboos-kabsa", "pillowy-restaurant-style-garlic-butter-naan", "halal-chicken-biryani", "vegetable-bhuna-khichuri"],
+    featuredRecipeSlugs: ["shahi-dim-korma", "morog-polao", "panta-ilish-with-green-chili-mustard", "pabda-fish-curry-bengali-style", "panta-bhat-with-bhorta", "dal-bhorta", "tomato-bhorta", "duck-curry-with-coconut-milk", "lamb-vindaloo", "chicken-vindaloo", "boiled-rice", "bengali-aloo-dum", "bangladeshi-spiced-shrimp-and-green-bean-stir-fry", "moroccan-lamb-tagine", "beef-nahari", "authentic-bangladeshi-beef-curry", "fish-egg-curry-ilish", "fish-biryani", "easy-basmati-rice-cooking", "rogan-josh", "lamb-curry", "pakistani-aloo-keema", "bengali-chicken-biryani", "chicken-tikka-masala", "chicken-karahi", "haleem", "chicken-biryani", "bengali-pulao", "bengali-khichuri-bhuna", "bengali-chicken-roast", "bengali-beef-tehari", "bengali-fish-curry-macher-jhol", "bengali-chicken-curry-murgir-jhol", "authentic-arabian-chicken-mandi", "chicken-machboos-majboos-kabsa", "pillowy-restaurant-style-garlic-butter-naan", "halal-chicken-biryani", "vegetable-bhuna-khichuri"],
     faqs: [
       {
         question: "What rice variety gives the most authentic aroma?",
@@ -151,7 +151,7 @@ export const CATEGORIES: CategoryHub[] = [
     fullDescription:
       "Snack time in Muslim households is a lively affair of spiced pastry triangles, hot fried fritters, and sweet chutneys served alongside cardamom milk tea (chai).",
     image: IMAGES.streetFood,
-    featuredRecipeSlugs: ["chitoi-pitha", "patishapta-pitha", "kholaja-pitha", "plain-paratha", "keema-paratha", "corned-beef-reuben-sandwich", "shrimp-tandoori", "bengali-mango-chutney", "dal-piyaju-pakora", "chicken-patty", "egg-roll", "black-chana", "hummus", "crispy-falafel", "authentic-lebanese-baba-ganoush", "tuna-fish-kebab-fritters", "birria-tacos-beef-quesabirria-consome", "kibbeh-lebanese-fried-bulgur-stuffed-shells", "traditional-teler-pitha-gur-pitha", "crispy-halal-samosas"],
+    featuredRecipeSlugs: ["beguni-eggplant-pakora", "chitoi-pitha", "patishapta-pitha", "kholaja-pitha", "plain-paratha", "keema-paratha", "corned-beef-reuben-sandwich", "shrimp-tandoori", "bengali-mango-chutney", "dal-piyaju-pakora", "chicken-patty", "egg-roll", "black-chana", "hummus", "crispy-falafel", "authentic-lebanese-baba-ganoush", "tuna-fish-kebab-fritters", "birria-tacos-beef-quesabirria-consome", "kibbeh-lebanese-fried-bulgur-stuffed-shells", "traditional-teler-pitha-gur-pitha", "crispy-halal-samosas"],
     faqs: [
       {
         question: "Can samosas be prepared in advance?",
@@ -170,7 +170,7 @@ export const CATEGORIES: CategoryHub[] = [
     fullDescription:
       "Celebrate sweet milestones with luxurious Eid desserts perfumed with green cardamom, saffron threads, pistachios, and thickened whole milk. All made without non-halal gelatin or alcohol-based vanilla extracts.",
     image: IMAGES.gulabJamun,
-    featuredRecipeSlugs: ["narkel-naru", "dudh-chitai-pitha", "chitoi-pitha", "patishapta-pitha", "kholaja-pitha", "suji-halwa-halva", "vibrant-dragon-fruit-banana-superfood-nice-cream-sorbet", "velvety-blueberry-banana-fruit-sorbet", "narkel-puli-pitha", "traditional-teler-pitha-gur-pitha", "traditional-vapa-pitha-steamed-coconut-jaggery", "milk-powder-burfi-quick-mawa-fudge", "shahi-besan-laddu", "basbousa-semolina-cake", "mango-coconut-burfi", "crispy-saffron-jalebi", "shahi-gulab-jamun", "kheer-shahi-rice-kheer-payesh", "royal-gajar-ka-halwa", "bengali-roshogolla"],
+    featuredRecipeSlugs: ["doodh-bhaat-with-ripe-banana-date-molasses", "narkel-naru", "dudh-chitai-pitha", "chitoi-pitha", "patishapta-pitha", "kholaja-pitha", "suji-halwa-halva", "vibrant-dragon-fruit-banana-superfood-nice-cream-sorbet", "velvety-blueberry-banana-fruit-sorbet", "narkel-puli-pitha", "traditional-teler-pitha-gur-pitha", "traditional-vapa-pitha-steamed-coconut-jaggery", "milk-powder-burfi-quick-mawa-fudge", "shahi-besan-laddu", "basbousa-semolina-cake", "mango-coconut-burfi", "crispy-saffron-jalebi", "shahi-gulab-jamun", "kheer-shahi-rice-kheer-payesh", "royal-gajar-ka-halwa", "bengali-roshogolla"],
     faqs: [
       {
         question: "Is vanilla extract Halal?",
@@ -190,7 +190,7 @@ export const CATEGORIES: CategoryHub[] = [
     fullDescription:
       "Transport your kitchen to the bustling night markets of Bangkok, Dhaka, Chittagong, and Old Delhi with street foods bursting with tangy tamarind, roasted cumin, and fiery green chilies.",
     image: IMAGES.padThai,
-    featuredRecipeSlugs: ["chicken-lo-mein", "carne-asada-steak-tacos", "peri-peri-chicken", "keema-paratha", "bangladeshi-beef-noodles", "bihari-boti-kebabs", "crispy-falafel", "authentic-chicken-shawarma", "seekh-kebab", "thai-style-papaya-salad-som-tum", "authentic-halal-pad-thai", "chicken-satay-satay-gai", "crispy-halal-samosas"],
+    featuredRecipeSlugs: ["beguni-eggplant-pakora", "chicken-lo-mein", "carne-asada-steak-tacos", "peri-peri-chicken", "keema-paratha", "bangladeshi-beef-noodles", "bihari-boti-kebabs", "crispy-falafel", "authentic-chicken-shawarma", "seekh-kebab", "thai-style-papaya-salad-som-tum", "authentic-halal-pad-thai", "chicken-satay-satay-gai", "crispy-halal-samosas"],
     faqs: [
       {
         question: "What is the key spice in street food?",
@@ -305,6 +305,9 @@ export const CATEGORIES: CategoryHub[] = [
       "From the sacred evening tranquility of sunset Iftar tables laden with spiced black chana (ছোলা ভুনা), crispy onion piyaju, and cooling Rooh Afza sharbat, to royal Eid morning banquets featuring Shahi beef roast, fragrant pulao, and creamy kheer, our Ramadan & Eid collection honors authentic culinary heritage, spiritual mindfulness, and joyful family gatherings.",
     image: IMAGES.blackChana,
     featuredRecipeSlugs: [
+      "shahi-dim-korma",
+      "beguni-eggplant-pakora",
+      "doodh-bhaat-with-ripe-banana-date-molasses",
       "dudh-chitai-pitha",
       "chitoi-pitha",
       "morog-polao",

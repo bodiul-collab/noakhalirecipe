@@ -462,7 +462,6 @@ function renderRecipePage(recipe, baseHtmlTemplate, options = {}) {
   // Injected Open Graph image and robots directives before </head>
   const metaAdditions = `
     <meta property="og:image" content="${escapeHtml(absHeroImage)}" />
-    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="${escapeHtml(pageTitle)}" />
     <meta name="twitter:description" content="${escapeHtml(pageDescription)}" />
     <meta name="twitter:image" content="${escapeHtml(absHeroImage)}" />

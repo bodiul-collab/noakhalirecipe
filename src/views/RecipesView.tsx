@@ -1362,18 +1362,28 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
                       Guides &amp; Techniques for This Recipe
                     </h3>
                   </div>
-                  <button
-                    onClick={() => onNavigate("/guides")}
+                  <a
+                    href="/guides"
+                    onClick={(e) => {
+                      if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                      e.preventDefault();
+                      onNavigate("/guides");
+                    }}
                     className="text-xs font-bold text-[#E97520] hover:underline cursor-pointer"
                   >
                     All Cooking Guides &rarr;
-                  </button>
+                  </a>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                   {relatedGuides.map((guide) => (
-                    <button
+                    <a
                       key={guide.id}
-                      onClick={() => onNavigate(`/guides/${guide.slug}`)}
+                      href={`/guides/${guide.slug}`}
+                      onClick={(e) => {
+                        if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+                        e.preventDefault();
+                        onNavigate(`/guides/${guide.slug}`);
+                      }}
                       className="text-left p-3.5 rounded-lg border border-[#E6E1D8] hover:border-[#E97520] bg-[#FAF9F6] transition-colors cursor-pointer group flex flex-col justify-between space-y-2.5"
                     >
                       <div className="space-y-1.5">
@@ -1387,7 +1397,7 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
                       <span className="text-[11px] text-[#77736D] font-medium">
                         {guide.readTimeMinutes} min read &bull; View Guide &rarr;
                       </span>
-                    </button>
+                    </a>
                   ))}
                 </div>
               </div>
@@ -1718,7 +1728,7 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
                   onToggleSave={onToggleSaveRecipe}
                   onClick={(r) => {
                     setActiveSlug(r.slug);
-                    onNavigate(`/recipe/${r.slug}`, true);
+                    onNavigate(`/recipes/${r.slug}`, true);
                     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
                   }}
                   collections={collections}
