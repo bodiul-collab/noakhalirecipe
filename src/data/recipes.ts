@@ -671,6 +671,15 @@ const BASE_RECIPES: Recipe[] = [
       "Comfort Food",
       "Heritage Recipes",
     ],
+    video: {
+      youtubeVideoId: "Nyilst7UHjE",
+      youtubeUrl: "https://youtu.be/Nyilst7UHjE",
+      videoTitle: "Lamb Curry | Rich, Flavorful & Tender Homemade Curry | Noakhali Kitchen",
+      videoThumbnail: "https://i.ytimg.com/vi/Nyilst7UHjE/hqdefault.jpg",
+      videoDescription:
+        "Step-by-step video tutorial for authentic Bengali Lamb Curry (Khasir Mangsho) with bone-in lamb, caramelized onions, golden potatoes, and cold-pressed mustard oil.",
+      videoEnabled: true,
+    },
   },
   {
     id: "rec-chicken-jalfrezi",
@@ -6100,6 +6109,15 @@ const BASE_RECIPES: Recipe[] = [
     },
     updatedDate: "September 8, 2026",
     tags: ["Halal Vegetarian", "Naan", "Flatbread", "Indian", "Tandoori", "Garlic Butter", "Baking", "Comfort Food"],
+    video: {
+      youtubeVideoId: "snvFYcASrZU",
+      youtubeUrl: "https://youtu.be/snvFYcASrZU",
+      videoTitle: "Easy Garlic Butter Naan Recipe | Soft, Fluffy & Pillowy Indian Naan Bread No Tandoor Needed",
+      videoThumbnail: "https://i.ytimg.com/vi/snvFYcASrZU/hqdefault.jpg",
+      videoDescription:
+        "Step-by-step video tutorial for soft, fluffy, and pillowy homemade Garlic Butter Naan cooked on a cast-iron skillet with zero tandoor needed.",
+      videoEnabled: true,
+    },
   },
   {
     id: "rec-rainbow-roasted-beet-salad",
@@ -14392,6 +14410,15 @@ const BASE_RECIPES: Recipe[] = [
       "High Protein",
       "Crunchy",
     ],
+    video: {
+      youtubeVideoId: "BZgXT2kAXfk",
+      youtubeUrl: "https://youtu.be/BZgXT2kAXfk",
+      videoTitle: "Crispy Dal Piyaju Pakora Recipe | Bangladeshi Street Snack | Noakhali Kitchen",
+      videoThumbnail: "https://i.ytimg.com/vi/BZgXT2kAXfk/hqdefault.jpg",
+      videoDescription:
+        "Step-by-step video tutorial for crispy Bangladeshi Dal Piyaju Pakora (ডালের পেঁয়াজু)—crunchy red lentil and split chickpea onion fritters for street food and Ramadan Iftar.",
+      videoEnabled: true,
+    },
   },
   {
     id: "rec-narkel-puli-pitha",
@@ -22844,6 +22871,15 @@ const BASE_RECIPES: Recipe[] = [
       "Authentic Australian Beef Pie Recipe (অস্ট্রেলিয়ান বিফ পাই / آسٹریلوی بیف پائی) | Noakhali Kitchen",
     seoDescription:
       "Master the classic Australian Beef Meat Pie: deeply seasoned Halal minced beef in rich dark gravy with crisp shortcrust base and flaky golden puff pastry. 100% Halal.",
+    video: {
+      youtubeVideoId: "sDfCli8kFe4",
+      youtubeUrl: "https://youtu.be/sDfCli8kFe4",
+      videoTitle: "Authentic Australian Beef Pie 🇦🇺 | Crispy Golden Pastry & Rich Beef Gravy | Noakhali Kitchen",
+      videoThumbnail: "https://i.ytimg.com/vi/sDfCli8kFe4/hqdefault.jpg",
+      videoDescription:
+        "Step-by-step video tutorial for Halal Authentic Australian Beef Pie with caramelized minced beef gravy, shortcrust base, and flaky golden puff pastry.",
+      videoEnabled: true,
+    },
   },
   {
     id: "rec-butter-salmon-curry",

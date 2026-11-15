@@ -84,10 +84,10 @@ export const WatchAndCookView: React.FC<WatchAndCookViewProps> = ({
         "Watch step-by-step cooking tutorials and video guides from Noakhali Kitchen. Master rich curries, fragrant biryanis, and heritage home recipes.",
       canonicalUrl: "https://www.noakhalikitchen.com/watch-and-cook",
       ogType: "website",
-      imageUrl: "https://www.noakhalikitchen.com/icon.svg",
+      imageUrl: featuredRecipe?.heroImage || "https://www.noakhalikitchen.com/icon.svg",
     });
     return cleanup;
-  }, []);
+  }, [featuredRecipe]);
 
   // 6. JSON-LD CollectionPage & ItemList Structured Data
   const jsonLdData = useMemo(() => {
@@ -122,24 +122,40 @@ export const WatchAndCookView: React.FC<WatchAndCookViewProps> = ({
     };
   }, [videoRecipes]);
 
+  useEffect(() => {
+    const existing = document.getElementById("page-structured-data") as HTMLScriptElement | null;
+    const script = existing || document.createElement("script");
+    script.id = "page-structured-data";
+    script.type = "application/ld+json";
+    script.textContent = JSON.stringify(jsonLdData);
+    if (!existing) {
+      document.head.appendChild(script);
+    }
+    return () => {
+      if (script.parentNode) {
+        script.parentNode.removeChild(script);
+      }
+    };
+  }, [jsonLdData]);
+
   return (
     <div className="w-full bg-[#FAF9F6] text-[#30302F] min-h-screen pb-20">
-      {/* Schema.org CollectionPage / ItemList Script */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }}
-      />
-
       {/* Top Banner / Breadcrumbs */}
       <div className="border-b border-[#E6E1D8] bg-white">
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 py-3.5">
           <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-[#77736D]">
-            <button
-              onClick={() => onNavigate("/")}
+            <a
+              href="/"
+              onClick={(e) => {
+                if (!e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey) {
+                  e.preventDefault();
+                  onNavigate("/");
+                }
+              }}
               className="hover:text-[#30302F] cursor-pointer"
             >
               Home
-            </button>
+            </a>
             <span aria-hidden="true">/</span>
             <span className="text-[#30302F] font-bold" aria-current="page">
               Watch &amp; Cook
@@ -186,17 +202,20 @@ export const WatchAndCookView: React.FC<WatchAndCookViewProps> = ({
                 </span>
                 <span className="text-xs text-[#77736D] hidden sm:inline">&bull; Step-by-Step Masterclass</span>
               </div>
-              <button
-                type="button"
-                onClick={() => {
-                  onSelectRecipe(featuredRecipe);
-                  onNavigate(`/recipes/${featuredRecipe.slug}`);
+              <a
+                href={`/recipes/${featuredRecipe.slug}`}
+                onClick={(e) => {
+                  if (!e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey) {
+                    e.preventDefault();
+                    onSelectRecipe(featuredRecipe);
+                    onNavigate(`/recipes/${featuredRecipe.slug}`);
+                  }
                 }}
                 className="text-xs font-bold text-[#E97520] hover:text-[#D75D17] inline-flex items-center gap-1 self-start sm:self-auto cursor-pointer"
               >
                 <span>Read Full Written Recipe</span>
                 <ArrowRight className="w-3.5 h-3.5" />
-              </button>
+              </a>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
@@ -255,17 +274,20 @@ export const WatchAndCookView: React.FC<WatchAndCookViewProps> = ({
 
                 {/* Actions */}
                 <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
-                  <button
-                    type="button"
-                    onClick={() => {
-                      onSelectRecipe(featuredRecipe);
-                      onNavigate(`/recipes/${featuredRecipe.slug}`);
+                  <a
+                    href={`/recipes/${featuredRecipe.slug}`}
+                    onClick={(e) => {
+                      if (!e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey) {
+                        e.preventDefault();
+                        onSelectRecipe(featuredRecipe);
+                        onNavigate(`/recipes/${featuredRecipe.slug}`);
+                      }
                     }}
                     className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-[#30302F] hover:bg-black text-white text-xs font-bold transition-all cursor-pointer shadow-sm"
                   >
                     <BookOpen className="w-3.5 h-3.5 text-[#E7A52B]" />
                     <span>View Recipe &amp; Ingredients</span>
-                  </button>
+                  </a>
 
                   <a
                     href={featuredRecipe.video.youtubeUrl}
@@ -427,17 +449,20 @@ export const WatchAndCookView: React.FC<WatchAndCookViewProps> = ({
                           <span>Watch Video</span>
                         </button>
 
-                        <button
-                          type="button"
-                          onClick={() => {
-                            onSelectRecipe(recipe);
-                            onNavigate(`/recipes/${recipe.slug}`);
+                        <a
+                          href={`/recipes/${recipe.slug}`}
+                          onClick={(e) => {
+                            if (!e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey) {
+                              e.preventDefault();
+                              onSelectRecipe(recipe);
+                              onNavigate(`/recipes/${recipe.slug}`);
+                            }
                           }}
                           className="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-[#FAF9F6] border border-[#E6E1D8] text-[#30302F] hover:bg-[#F3F2EE] hover:border-[#30302F] text-xs font-bold transition-colors cursor-pointer"
                         >
                           <span>Written Recipe</span>
                           <ChevronRight className="w-3 h-3 text-[#77736D]" />
-                        </button>
+                        </a>
                       </div>
                     </div>
                   </article>
@@ -471,13 +496,18 @@ export const WatchAndCookView: React.FC<WatchAndCookViewProps> = ({
                 >
                   Clear Filters
                 </button>
-                <button
-                  type="button"
-                  onClick={() => onNavigate("/recipes")}
-                  className="px-4 py-2 rounded-lg bg-[#FAF9F6] border border-[#E6E1D8] text-[#30302F] text-xs font-bold hover:bg-[#F3F2EE] transition-colors cursor-pointer"
+                <a
+                  href="/recipes"
+                  onClick={(e) => {
+                    if (!e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey) {
+                      e.preventDefault();
+                      onNavigate("/recipes");
+                    }
+                  }}
+                  className="px-4 py-2 rounded-lg bg-[#FAF9F6] border border-[#E6E1D8] text-[#30302F] text-xs font-bold hover:bg-[#F3F2EE] transition-colors cursor-pointer inline-block"
                 >
                   Browse Written Recipes
-                </button>
+                </a>
               </div>
             </div>
           )}
@@ -505,14 +535,19 @@ export const WatchAndCookView: React.FC<WatchAndCookViewProps> = ({
             </p>
 
             <div className="pt-2">
-              <button
-                type="button"
-                onClick={() => onNavigate("/culture")}
+              <a
+                href="/culture"
+                onClick={(e) => {
+                  if (!e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey) {
+                    e.preventDefault();
+                    onNavigate("/culture");
+                  }
+                }}
                 className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-[#E97520] hover:bg-[#D75D17] text-white text-xs font-bold transition-all cursor-pointer shadow-md"
               >
                 <span>Explore Food Culture &amp; Heritage</span>
                 <ArrowRight className="w-3.5 h-3.5" />
-              </button>
+              </a>
             </div>
           </div>
         </section>
@@ -551,24 +586,28 @@ export const WatchAndCookView: React.FC<WatchAndCookViewProps> = ({
 
             {/* Click-to-load Player inside Modal */}
             <RecipeVideoCard
+              key={activeModalVideo.id}
               video={activeModalVideo.video}
               recipeTitle={activeModalVideo.title}
             />
 
             <div className="flex items-center justify-between pt-2 border-t border-[#F3F2EE]">
-              <button
-                type="button"
-                onClick={() => {
-                  const target = activeModalVideo;
-                  setActiveModalVideo(null);
-                  onSelectRecipe(target);
-                  onNavigate(`/recipes/${target.slug}`);
+              <a
+                href={`/recipes/${activeModalVideo.slug}`}
+                onClick={(e) => {
+                  if (!e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey) {
+                    e.preventDefault();
+                    const target = activeModalVideo;
+                    setActiveModalVideo(null);
+                    onSelectRecipe(target);
+                    onNavigate(`/recipes/${target.slug}`);
+                  }
                 }}
                 className="inline-flex items-center gap-1.5 text-xs font-bold text-[#E97520] hover:underline cursor-pointer"
               >
                 <BookOpen className="w-3.5 h-3.5" />
                 <span>Go to full written recipe with ingredients &rarr;</span>
-              </button>
+              </a>
             </div>
           </div>
         </div>

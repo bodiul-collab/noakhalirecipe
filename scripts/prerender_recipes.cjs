@@ -133,7 +133,7 @@ function assembleStandardPage(baseHtmlTemplate, opts) {
 
   const absImage = imageUrl ? resolveAssetUrl(imageUrl, DIST_ASSETS, ORIGIN) : `${ORIGIN}/icon.svg`;
   const jsonLdScript = jsonLdData
-    ? `\n    <script type="application/ld+json">\n${JSON.stringify(jsonLdData, null, 2).replace(/<\/script/gi, "<\\/script")}\n    </script>`
+    ? `\n    <script type="application/ld+json" id="page-structured-data">\n${JSON.stringify(jsonLdData, null, 2).replace(/<\/script/gi, "<\\/script")}\n    </script>`
     : "";
 
   const headAdditions = `
