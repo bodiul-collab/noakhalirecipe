@@ -156,7 +156,9 @@ function renderWatchAndCookHtml(baseHtmlTemplate, recipes) {
   const canonicalUrl = `${ORIGIN}/watch-and-cook`;
   const pageTitle = "Watch & Cook — Authentic Video Recipes | Noakhali Kitchen";
   const pageDescription =
-    "Watch step-by-step cooking tutorials and video guides from Noakhali Kitchen. Master rich curries, fragrant biryanis, and heritage home recipes.";
+    "From the villages of Bangladesh to kitchens around the world, watch our brand story and step-by-step Halal cooking tutorials from Noakhali Kitchen.";
+  const introPosterUrl = `${ORIGIN}/videos/noakhali-kitchen-intro-poster.jpg`;
+  const introVideoUrl = `${ORIGIN}/videos/noakhali-kitchen-intro.mp4`;
 
   const videoRecipes = recipes.filter(
     (r) => r.video && r.video.videoEnabled && r.video.youtubeVideoId
@@ -169,6 +171,21 @@ function renderWatchAndCookHtml(baseHtmlTemplate, recipes) {
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "VideoObject",
+        "@id": `${canonicalUrl}#brand-video`,
+        name: "Welcome to Noakhali Kitchen — Where Every Recipe Has a Story",
+        description:
+          "From the beautiful villages of Bangladesh to kitchens around the world, discover authentic Halal recipes, traditional Noakhali dishes, family cooking traditions and the stories behind every meal.",
+        thumbnailUrl: [introPosterUrl],
+        contentUrl: introVideoUrl,
+        encodingFormat: "video/mp4",
+        duration: "PT1M5S",
+        uploadDate: "2026-11-16",
+        publisher: {
+          "@id": `${ORIGIN}/#organization`,
+        },
+      },
+      {
         "@type": "CollectionPage",
         "@id": `${canonicalUrl}#webpage`,
         url: canonicalUrl,
@@ -179,6 +196,9 @@ function renderWatchAndCookHtml(baseHtmlTemplate, recipes) {
           "@id": `${ORIGIN}/#website`,
           name: "Noakhali Kitchen",
           url: `${ORIGIN}/`,
+        },
+        video: {
+          "@id": `${canonicalUrl}#brand-video`,
         },
         mainEntity: {
           "@type": "ItemList",
@@ -198,35 +218,48 @@ function renderWatchAndCookHtml(baseHtmlTemplate, recipes) {
     <div class="min-h-screen bg-[#FAF9F6] text-[#30302F]">
       ${renderSiteHeader("/watch-and-cook")}
       <main class="max-w-[1200px] mx-auto px-4 py-10 space-y-12">
-        <section class="text-center max-w-2xl mx-auto space-y-3">
-          <span class="inline-block px-3 py-1 rounded-full bg-[#FFF4EA] border border-[#F8CD78]/60 text-[#E97520] text-xs font-bold uppercase tracking-wider">
-            Official Video Kitchen
-          </span>
-          <h1 class="text-4xl sm:text-5xl font-bold font-serif-editorial text-[#242423]">Watch &amp; Cook</h1>
-          <p class="text-lg font-medium text-[#E97520]">Watch it. Cook it. Love it.</p>
-          <p class="text-sm text-[#615C55] leading-relaxed">
-            Follow our step-by-step video tutorials to master regional spice blending, slow braising, and time-honored heritage recipes.
-          </p>
+        <section class="bg-white rounded-2xl border border-[#E6E1D8] p-6 sm:p-10 space-y-6">
+          <div class="text-center max-w-3xl mx-auto space-y-3">
+            <p class="text-xs font-semibold uppercase tracking-[0.14em] text-[#B45309]">Noakhali Kitchen &middot; Brand Film</p>
+            <h1 class="text-3xl sm:text-5xl font-bold font-serif-editorial text-[#242423]">Welcome to Noakhali Kitchen</h1>
+            <p class="text-lg font-medium font-serif-editorial italic text-[#D75D17]">Where Every Recipe Has a Story</p>
+            <p class="text-sm text-[#55504A] leading-relaxed">
+              From the beautiful villages of Bangladesh to kitchens around the world, discover authentic Halal recipes, traditional Noakhali dishes, family cooking traditions and the stories behind every meal.
+            </p>
+          </div>
+          <div class="max-w-5xl mx-auto">
+            <div class="aspect-video w-full rounded-xl overflow-hidden bg-[#1E1B18] border border-[#E6E1D8]">
+              <video controls preload="none" playsinline poster="/videos/noakhali-kitchen-intro-poster.jpg" src="/videos/noakhali-kitchen-intro.mp4" title="Welcome to Noakhali Kitchen — Where Every Recipe Has a Story" class="w-full h-full object-contain"></video>
+            </div>
+          </div>
+          <div class="flex flex-wrap items-center justify-center gap-4">
+            <a href="/recipes" class="px-6 py-3 rounded-lg bg-[#30302F] text-white text-sm font-bold">Explore Recipes &rarr;</a>
+            <a href="#published-cooking-videos" class="px-6 py-3 rounded-lg bg-[#FFF9F0] border border-[#E6E1D8] text-[#30302F] text-sm font-bold">Explore Cooking Videos</a>
+          </div>
         </section>
 
         ${
           featured
             ? `
-        <section class="bg-white rounded-2xl border border-[#E6E1D8] p-6 md:p-8 shadow-sm space-y-6">
-          <span class="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-[#E97520] text-white">
-            Featured Recipe Video
-          </span>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <section id="featured-video-spotlight" class="max-w-5xl mx-auto bg-white rounded-2xl border border-[#E6E1D8] p-6 md:p-7 shadow-sm space-y-5">
+          <div class="flex flex-wrap items-center justify-between gap-2 border-b border-[#F3F2EE] pb-4">
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-wider text-[#B45309]">Culinary Spotlight &middot; Step-by-Step Video</p>
+              <h2 class="text-2xl font-bold font-serif-editorial text-[#242423]">Our Featured Recipe</h2>
+            </div>
+            <a href="/recipes/${escapeHtml(featured.slug)}" class="text-xs font-bold text-[#E97520]">Read Full Written Recipe &rarr;</a>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
             <div class="aspect-video w-full rounded-lg overflow-hidden bg-[#1E1B18] relative">
               <img src="${escapeHtml(featured.video.videoThumbnail || `https://i.ytimg.com/vi/${featured.video.youtubeVideoId}/hqdefault.jpg`)}" alt="${escapeHtml(featured.title)}" class="w-full h-full object-cover" />
             </div>
             <div class="space-y-3">
-              <span class="text-xs font-bold text-[#E97520] uppercase">${escapeHtml(featured.category)} &bull; ${escapeHtml(featured.cuisine)}</span>
-              <h2 class="text-2xl font-bold font-serif-editorial text-[#242423]">${escapeHtml(featured.title)}</h2>
+              <p class="text-xs font-semibold text-[#D75D17]">100% Halal Certified &middot; ${escapeHtml(featured.category)} &middot; ${escapeHtml(featured.cuisine)}</p>
+              <h3 class="text-xl font-bold font-serif-editorial text-[#242423]">${escapeHtml(featured.title)}</h3>
               <p class="text-sm text-[#615C55]">${escapeHtml(featured.description)}</p>
               <div class="pt-2">
                 <a href="/recipes/${escapeHtml(featured.slug)}" class="inline-block px-4 py-2.5 rounded-lg bg-[#30302F] text-white text-xs font-bold hover:bg-black">
-                  View Full Written Recipe &rarr;
+                  View Recipe &amp; Ingredients &rarr;
                 </a>
               </div>
             </div>
@@ -236,13 +269,17 @@ function renderWatchAndCookHtml(baseHtmlTemplate, recipes) {
             : ""
         }
 
-        <section class="space-y-6">
-          <h2 class="text-xl font-bold font-serif-editorial text-[#242423]">Published Cooking Videos</h2>
+        <section id="published-cooking-videos" class="space-y-6">
+          <div class="space-y-1">
+            <h2 class="text-2xl font-bold font-serif-editorial text-[#242423]">Explore Our Cooking Videos</h2>
+            <p class="text-sm text-[#615C55]">Watch, learn and recreate delicious recipes from our kitchen.</p>
+          </div>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             ${videoRecipes
               .map(
                 (r) => `
               <article class="bg-white rounded-xl border border-[#E6E1D8] p-4 space-y-3 shadow-2xs">
+                <p class="text-[11px] font-semibold text-[#D75D17]">${escapeHtml(r.category)} &middot; ${escapeHtml(r.cuisine)}</p>
                 <h3 class="text-base font-bold font-serif-editorial text-[#242423]">
                   <a href="/recipes/${escapeHtml(r.slug)}">${escapeHtml(r.title)}</a>
                 </h3>
@@ -259,6 +296,18 @@ function renderWatchAndCookHtml(baseHtmlTemplate, recipes) {
               .join("")}
           </div>
         </section>
+
+        <section class="rounded-2xl bg-[#FFF9F0] border border-[#E6E1D8] p-6 sm:p-8 space-y-3">
+          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-[#B45309]">Cultural Heritage Initiative &middot; Traditional Kitchens</p>
+          <h2 class="text-2xl font-bold font-serif-editorial text-[#242423]">Family Recipe Stories</h2>
+          <p class="text-sm text-[#55504A] leading-relaxed">
+            Every cherished recipe carries the warmth of home, handwritten spice proportions, and memories shared around the dining table. Explore our regional food culture stories and share your traditional family recipes and kitchen memories.
+          </p>
+          <div class="flex flex-wrap gap-3 pt-2">
+            <a href="/culture" class="px-5 py-2.5 rounded-lg bg-[#E97520] text-white text-xs font-bold">Explore Food Culture &amp; Heritage &rarr;</a>
+            <a href="/contact" class="px-5 py-2.5 rounded-lg bg-white border border-[#E6E1D8] text-[#30302F] text-xs font-bold">Share a Family Recipe Story</a>
+          </div>
+        </section>
       </main>
       ${renderSiteFooter()}
     </div>
@@ -269,7 +318,7 @@ function renderWatchAndCookHtml(baseHtmlTemplate, recipes) {
     description: pageDescription,
     canonicalUrl,
     ogType: "website",
-    imageUrl: featured ? featured.heroImage : undefined,
+    imageUrl: introPosterUrl,
     jsonLdData,
     bodyHtml: semanticHtml,
   });

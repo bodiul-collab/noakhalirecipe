@@ -79,11 +79,11 @@ export const RecipeVideoCard: React.FC<RecipeVideoCardProps> = ({ video, recipeT
                 src={thumbnailSrc}
                 alt={displayTitle}
                 onError={handleThumbnailError}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 loading="lazy"
               />
             ) : (
-              <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-[#2E2823] to-[#141210] p-6 text-center text-white/80">
+              <div className="absolute inset-0 w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-[#2E2823] to-[#141210] p-6 text-center text-white/80">
                 <VideoIcon className="w-12 h-12 text-[#E97520] mb-2" />
                 <p className="text-sm font-semibold">{displayTitle}</p>
                 <p className="text-xs text-white/60 mt-1">Official Video Tutorial</p>

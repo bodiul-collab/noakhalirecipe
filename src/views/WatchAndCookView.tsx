@@ -1,21 +1,20 @@
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useState, useMemo, useEffect, useCallback } from "react";
 import {
   Play,
   Search,
-  Filter,
   Video,
   Clock,
-  Utensils,
   ArrowRight,
   BookOpen,
   ChevronRight,
-  Sparkles,
   ExternalLink,
   RotateCcw,
+  ShieldCheck,
 } from "lucide-react";
 import { RECIPES } from "../data/recipes";
 import { Recipe } from "../types";
 import { RecipeVideoCard } from "../components/RecipeVideoCard";
+import { BrandIntroVideoHero } from "../components/BrandIntroVideoHero";
 import { updatePageSeo } from "../utils/seoHead";
 
 interface WatchAndCookViewProps {
@@ -39,7 +38,7 @@ export const WatchAndCookView: React.FC<WatchAndCookViewProps> = ({
     );
   }, []);
 
-  // 2. Featured Recipe (Chicken Vindaloo is the pilot showcase)
+  // 2. Featured Recipe (Chicken Vindaloo showcase)
   const featuredRecipe = useMemo(() => {
     const vindaloo = videoRecipes.find((r) => r.slug === "chicken-vindaloo");
     return vindaloo || videoRecipes[0] || null;
@@ -76,36 +75,63 @@ export const WatchAndCookView: React.FC<WatchAndCookViewProps> = ({
     });
   }, [videoRecipes, selectedCategory, searchQuery]);
 
+  const scrollToCookingVideos = useCallback(() => {
+    const section = document.getElementById("published-cooking-videos");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, []);
+
   // 5. Canonical SEO Metadata
   useEffect(() => {
     const cleanup = updatePageSeo({
       title: "Watch & Cook — Authentic Video Recipes | Noakhali Kitchen",
       description:
-        "Watch step-by-step cooking tutorials and video guides from Noakhali Kitchen. Master rich curries, fragrant biryanis, and heritage home recipes.",
+        "From the villages of Bangladesh to kitchens around the world, watch our brand story and step-by-step Halal cooking tutorials from Noakhali Kitchen.",
       canonicalUrl: "https://www.noakhalikitchen.com/watch-and-cook",
       ogType: "website",
-      imageUrl: featuredRecipe?.heroImage || "https://www.noakhalikitchen.com/icon.svg",
+      imageUrl: "https://www.noakhalikitchen.com/videos/noakhali-kitchen-intro-poster.jpg",
     });
     return cleanup;
-  }, [featuredRecipe]);
+  }, []);
 
-  // 6. JSON-LD CollectionPage & ItemList Structured Data
+  // 6. JSON-LD CollectionPage, VideoObject & ItemList Structured Data
   const jsonLdData = useMemo(() => {
     return {
       "@context": "https://schema.org",
       "@graph": [
+        {
+          "@type": "VideoObject",
+          "@id": "https://www.noakhalikitchen.com/watch-and-cook#brand-video",
+          "name": "Welcome to Noakhali Kitchen — Where Every Recipe Has a Story",
+          "description":
+            "From the beautiful villages of Bangladesh to kitchens around the world, discover authentic Halal recipes, traditional Noakhali dishes, family cooking traditions and the stories behind every meal.",
+          "thumbnailUrl": [
+            "https://www.noakhalikitchen.com/videos/noakhali-kitchen-intro-poster.jpg",
+          ],
+          "contentUrl": "https://www.noakhalikitchen.com/videos/noakhali-kitchen-intro.mp4",
+          "encodingFormat": "video/mp4",
+          "duration": "PT1M5S",
+          "uploadDate": "2026-11-16",
+          "publisher": {
+            "@id": "https://www.noakhalikitchen.com/#organization",
+          },
+        },
         {
           "@type": "CollectionPage",
           "@id": "https://www.noakhalikitchen.com/watch-and-cook#webpage",
           "url": "https://www.noakhalikitchen.com/watch-and-cook",
           "name": "Watch & Cook — Authentic Video Recipes | Noakhali Kitchen",
           "description":
-            "Watch step-by-step cooking tutorials and video guides from Noakhali Kitchen.",
+            "From the villages of Bangladesh to kitchens around the world, watch our brand story and step-by-step Halal cooking tutorials from Noakhali Kitchen.",
           "isPartOf": {
             "@type": "WebSite",
             "@id": "https://www.noakhalikitchen.com/#website",
             "name": "Noakhali Kitchen",
             "url": "https://www.noakhalikitchen.com/",
+          },
+          "video": {
+            "@id": "https://www.noakhalikitchen.com/watch-and-cook#brand-video",
           },
           "mainEntity": {
             "@type": "ItemList",
@@ -140,7 +166,7 @@ export const WatchAndCookView: React.FC<WatchAndCookViewProps> = ({
 
   return (
     <div className="w-full bg-[#FAF9F6] text-[#30302F] min-h-screen pb-20">
-      {/* Top Banner / Breadcrumbs */}
+      {/* Top Breadcrumbs */}
       <div className="border-b border-[#E6E1D8] bg-white">
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 py-3.5">
           <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-[#77736D]">
@@ -164,44 +190,33 @@ export const WatchAndCookView: React.FC<WatchAndCookViewProps> = ({
         </div>
       </div>
 
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 pt-6 sm:pt-10 space-y-10 sm:space-y-12">
-        {/* Editorial Hero Header */}
-        <section className="text-center max-w-3xl mx-auto space-y-3 sm:space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FFF4EA] border border-[#F8CD78]/60 text-[#E97520] text-xs font-bold uppercase tracking-wider">
-            <Video className="w-3.5 h-3.5" />
-            <span>Official Video Kitchen</span>
-          </div>
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 pt-6 sm:pt-10 space-y-12 sm:space-y-14">
+        {/* PHASE 1: Cinematic Brand Introduction Hero */}
+        <BrandIntroVideoHero
+          onNavigate={onNavigate}
+          onScrollToVideos={scrollToCookingVideos}
+        />
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-serif-editorial text-[#242423] tracking-tight">
-            Watch &amp; Cook
-          </h1>
-
-          <p className="text-base sm:text-lg font-medium text-[#E97520] tracking-wide font-heading">
-            Watch it. Cook it. Love it.
-          </p>
-
-          <p className="text-sm sm:text-base text-[#615C55] leading-relaxed">
-            Welcome to the visual kitchen of Noakhali Kitchen. Follow our step-by-step video tutorials
-            to master regional spice blending, slow braising, and time-honored heritage recipes with
-            clarity and confidence.
-          </p>
-        </section>
-
-        {/* Featured Video Spotlight */}
+        {/* PHASE 2: Our Featured Recipe (Chicken Vindaloo) */}
         {featuredRecipe && (
           <section
             id="featured-video-spotlight"
             aria-labelledby="featured-heading"
-            className="bg-white rounded-2xl border border-[#E6E1D8] shadow-sm p-4 sm:p-6 md:p-8 space-y-6"
+            className="max-w-5xl mx-auto bg-white rounded-2xl border border-[#E6E1D8] shadow-sm p-5 sm:p-7 space-y-5"
           >
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-[#F3F2EE] pb-4">
-              <div className="flex items-center gap-2">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-[#E97520] text-white shadow-2xs">
-                  <Sparkles className="w-3.5 h-3.5" />
-                  Featured Recipe Video
-                </span>
-                <span className="text-xs text-[#77736D] hidden sm:inline">&bull; Step-by-Step Masterclass</span>
+              <div className="space-y-1">
+                <p className="text-xs font-semibold uppercase tracking-wider text-[#B45309] dark:text-[#F8CD78]">
+                  Culinary Spotlight &middot; Step-by-Step Video
+                </p>
+                <h2
+                  id="featured-heading"
+                  className="text-xl sm:text-2xl font-bold font-serif-editorial text-[#242423] tracking-tight"
+                >
+                  Our Featured Recipe
+                </h2>
               </div>
+
               <a
                 href={`/recipes/${featuredRecipe.slug}`}
                 onClick={(e) => {
@@ -211,41 +226,47 @@ export const WatchAndCookView: React.FC<WatchAndCookViewProps> = ({
                     onNavigate(`/recipes/${featuredRecipe.slug}`);
                   }
                 }}
-                className="text-xs font-bold text-[#E97520] hover:text-[#D75D17] inline-flex items-center gap-1 self-start sm:self-auto cursor-pointer"
+                className="text-xs font-bold text-[#E97520] hover:text-[#D75D17] inline-flex items-center gap-1 self-start sm:self-auto cursor-pointer whitespace-nowrap"
               >
                 <span>Read Full Written Recipe</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </a>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
-              {/* Left Column: Interactive Video Player */}
-              <div className="lg:col-span-7 w-full">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+              {/* Left Column: Existing Chicken Vindaloo YouTube Video Player */}
+              <div className="lg:col-span-6 w-full">
                 <RecipeVideoCard
                   video={featuredRecipe.video}
                   recipeTitle={featuredRecipe.title}
                 />
               </div>
 
-              {/* Right Column: Recipe Story & Quick Facts */}
-              <div className="lg:col-span-5 space-y-4">
+              {/* Right Column: Recipe Details, Multilingual Title & Halal Designation */}
+              <div className="lg:col-span-6 space-y-4">
                 <div className="space-y-2">
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#E97520]">
-                    {featuredRecipe.category} &bull; {featuredRecipe.cuisine}
-                  </span>
-                  <h2
-                    id="featured-heading"
-                    className="text-xl sm:text-2xl font-bold font-serif-editorial text-[#242423] leading-snug"
-                  >
+                  <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-[#615C55]">
+                    <span className="inline-flex items-center gap-1 font-bold text-[#2D7A52]">
+                      <ShieldCheck className="w-3.5 h-3.5" aria-hidden="true" />
+                      <span>100% Halal Certified</span>
+                    </span>
+                    <span aria-hidden="true">&middot;</span>
+                    <span className="font-semibold text-[#D75D17]">{featuredRecipe.category}</span>
+                    <span aria-hidden="true">&middot;</span>
+                    <span>{featuredRecipe.cuisine}</span>
+                  </div>
+
+                  <h3 className="text-lg sm:text-xl font-bold font-serif-editorial text-[#242423] leading-snug">
                     {featuredRecipe.title}
-                  </h2>
+                  </h3>
+
                   <p className="text-xs sm:text-sm text-[#615C55] leading-relaxed">
                     {featuredRecipe.description}
                   </p>
                 </div>
 
                 {/* Quick Info Grid */}
-                <div className="grid grid-cols-3 gap-2.5 p-3 bg-[#FAF9F6] rounded-xl border border-[#E6E1D8] text-center text-xs">
+                <div className="grid grid-cols-3 gap-2.5 p-3 bg-[#FAF9F6] rounded-xl border border-[#E6E1D8] text-center text-xs tabular-nums">
                   <div>
                     <span className="text-[#8A857E] block text-[10px] font-bold uppercase tracking-wider">
                       PREP
@@ -273,7 +294,7 @@ export const WatchAndCookView: React.FC<WatchAndCookViewProps> = ({
                 </div>
 
                 {/* Actions */}
-                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-1">
                   <a
                     href={`/recipes/${featuredRecipe.slug}`}
                     onClick={(e) => {
@@ -283,7 +304,7 @@ export const WatchAndCookView: React.FC<WatchAndCookViewProps> = ({
                         onNavigate(`/recipes/${featuredRecipe.slug}`);
                       }
                     }}
-                    className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-[#30302F] hover:bg-black text-white text-xs font-bold transition-all cursor-pointer shadow-sm"
+                    className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-[#30302F] hover:bg-black text-white text-xs font-bold transition-all cursor-pointer shadow-sm whitespace-nowrap min-h-[40px]"
                   >
                     <BookOpen className="w-3.5 h-3.5 text-[#E7A52B]" />
                     <span>View Recipe &amp; Ingredients</span>
@@ -293,7 +314,7 @@ export const WatchAndCookView: React.FC<WatchAndCookViewProps> = ({
                     href={featuredRecipe.video.youtubeUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-lg bg-[#FAF9F6] border border-[#E6E1D8] hover:border-[#E97520] hover:text-[#E97520] text-xs font-bold text-[#30302F] transition-all cursor-pointer"
+                    className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-lg bg-[#FAF9F6] border border-[#E6E1D8] hover:border-[#E97520] hover:text-[#E97520] text-xs font-bold text-[#30302F] transition-all cursor-pointer whitespace-nowrap min-h-[40px]"
                   >
                     <span>YouTube</span>
                     <ExternalLink className="w-3.5 h-3.5 text-[#77736D]" />
@@ -304,81 +325,91 @@ export const WatchAndCookView: React.FC<WatchAndCookViewProps> = ({
           </section>
         )}
 
-        {/* Discovery Filter & Search Bar */}
+        {/* PHASE 3: Published Cooking Videos (Explore Our Cooking Videos) */}
         <section
-          aria-label="Filter Video Recipes"
-          className="bg-white rounded-xl border border-[#E6E1D8] p-4 sm:p-5 shadow-2xs space-y-4"
+          id="published-cooking-videos"
+          aria-labelledby="explore-videos-heading"
+          className="scroll-mt-24 space-y-6"
         >
-          <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3">
-            <div>
-              <h2 className="text-base font-bold text-[#242423] font-heading uppercase tracking-wide">
-                Explore Video Recipes
-              </h2>
-              <p className="text-xs text-[#77736D]">
-                Showing {filteredRecipes.length} published video {filteredRecipes.length === 1 ? "recipe" : "recipes"}
-              </p>
-            </div>
-
-            {/* Search Input */}
-            <div className="relative w-full md:w-80">
-              <Search className="w-4 h-4 text-[#8A857E] absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search recipe title or dish..."
-                className="w-full pl-9 pr-8 py-2 text-xs bg-[#FAF9F6] border border-[#E6E1D8] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E97520] focus:bg-white text-[#30302F] placeholder-[#8A857E]"
-              />
-              {searchQuery && (
-                <button
-                  type="button"
-                  onClick={() => setSearchQuery("")}
-                  className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[#8A857E] hover:text-[#30302F] cursor-pointer"
-                  aria-label="Clear search"
+          {/* Section Header + Search & Category Filters */}
+          <div className="bg-white rounded-2xl border border-[#E6E1D8] p-5 sm:p-6 shadow-2xs space-y-4">
+            <div className="flex flex-col md:flex-row items-stretch md:items-end justify-between gap-4">
+              <div className="space-y-1">
+                <h2
+                  id="explore-videos-heading"
+                  className="text-xl sm:text-2xl font-bold text-[#242423] font-serif-editorial tracking-tight"
                 >
-                  <RotateCcw className="w-3.5 h-3.5" />
-                </button>
-              )}
+                  Explore Our Cooking Videos
+                </h2>
+                <p className="text-xs sm:text-sm text-[#615C55]">
+                  Watch, learn and recreate delicious recipes from our kitchen.
+                </p>
+                <p className="text-xs text-[#77736D] tabular-nums pt-0.5">
+                  Showing {filteredRecipes.length} published video{" "}
+                  {filteredRecipes.length === 1 ? "recipe" : "recipes"}
+                </p>
+              </div>
+
+              {/* Search Input */}
+              <div className="relative w-full md:w-80">
+                <Search className="w-4 h-4 text-[#8A857E] absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Search recipe title or dish..."
+                  aria-label="Search published cooking videos"
+                  className="w-full pl-9 pr-8 py-2 text-xs bg-[#FAF9F6] border border-[#E6E1D8] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E97520] focus:bg-white text-[#30302F] placeholder-[#8A857E] min-h-[40px]"
+                />
+                {searchQuery && (
+                  <button
+                    type="button"
+                    onClick={() => setSearchQuery("")}
+                    className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[#8A857E] hover:text-[#30302F] cursor-pointer"
+                    aria-label="Clear search"
+                  >
+                    <RotateCcw className="w-3.5 h-3.5" />
+                  </button>
+                )}
+              </div>
             </div>
-          </div>
 
-          {/* Category Filter Pills */}
-          <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-[#F3F2EE]">
-            <span className="text-[11px] font-bold text-[#8A857E] uppercase tracking-wider mr-1">
-              Category:
-            </span>
+            {/* Category Filter Buttons */}
+            <div className="flex flex-wrap items-center gap-2 pt-3 border-t border-[#F3F2EE]">
+              <span className="text-[11px] font-bold text-[#8A857E] uppercase tracking-wider mr-1">
+                Category:
+              </span>
 
-            <button
-              type="button"
-              onClick={() => setSelectedCategory("all")}
-              className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
-                selectedCategory === "all"
-                  ? "bg-[#30302F] text-white shadow-2xs"
-                  : "bg-[#FAF9F6] border border-[#E6E1D8] text-[#3F3C38] hover:border-[#E97520] hover:text-[#E97520]"
-              }`}
-            >
-              All Videos ({videoRecipes.length})
-            </button>
-
-            {videoCategories.map((cat) => (
               <button
-                key={cat.slug}
                 type="button"
-                onClick={() => setSelectedCategory(cat.slug)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
-                  selectedCategory === cat.slug
+                onClick={() => setSelectedCategory("all")}
+                className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer whitespace-nowrap tabular-nums ${
+                  selectedCategory === "all"
                     ? "bg-[#30302F] text-white shadow-2xs"
                     : "bg-[#FAF9F6] border border-[#E6E1D8] text-[#3F3C38] hover:border-[#E97520] hover:text-[#E97520]"
                 }`}
               >
-                {cat.name} ({cat.count})
+                All Videos ({videoRecipes.length})
               </button>
-            ))}
-          </div>
-        </section>
 
-        {/* Video Recipes Grid */}
-        <section aria-label="Video Recipes Catalog">
+              {videoCategories.map((cat) => (
+                <button
+                  key={cat.slug}
+                  type="button"
+                  onClick={() => setSelectedCategory(cat.slug)}
+                  className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer whitespace-nowrap tabular-nums ${
+                    selectedCategory === cat.slug
+                      ? "bg-[#30302F] text-white shadow-2xs"
+                      : "bg-[#FAF9F6] border border-[#E6E1D8] text-[#3F3C38] hover:border-[#E97520] hover:text-[#E97520]"
+                  }`}
+                >
+                  {cat.name} ({cat.count})
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Video Recipes Grid */}
           {filteredRecipes.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredRecipes.map((recipe) => {
@@ -409,18 +440,14 @@ export const WatchAndCookView: React.FC<WatchAndCookViewProps> = ({
                           <Play className="w-5 h-5 fill-white ml-0.5" />
                         </button>
                       </div>
-
-                      {/* Category Badge Overlay */}
-                      <div className="absolute top-2.5 left-2.5">
-                        <span className="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-black/75 backdrop-blur-sm text-white">
-                          {recipe.category}
-                        </span>
-                      </div>
                     </div>
 
                     {/* Card Content */}
                     <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between space-y-3">
                       <div className="space-y-1.5">
+                        <p className="text-[11px] font-semibold text-[#D75D17]">
+                          {recipe.category} &middot; {recipe.cuisine}
+                        </p>
                         <h3 className="text-base font-bold font-serif-editorial text-[#242423] group-hover:text-[#E97520] transition-colors leading-snug">
                           {recipe.title}
                         </h3>
@@ -430,7 +457,7 @@ export const WatchAndCookView: React.FC<WatchAndCookViewProps> = ({
                       </div>
 
                       {/* Timings */}
-                      <div className="flex items-center justify-between text-xs text-[#77736D] pt-2 border-t border-[#F3F2EE]">
+                      <div className="flex items-center justify-between text-xs text-[#77736D] pt-2 border-t border-[#F3F2EE] tabular-nums">
                         <span className="flex items-center gap-1">
                           <Clock className="w-3.5 h-3.5 text-[#E97520]" />
                           <span>{recipe.totalTimeMinutes} mins total</span>
@@ -443,9 +470,9 @@ export const WatchAndCookView: React.FC<WatchAndCookViewProps> = ({
                         <button
                           type="button"
                           onClick={() => setActiveModalVideo(recipe)}
-                          className="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-[#FFF4EA] border border-[#F8CD78] text-[#E97520] hover:bg-[#FFE8D5] text-xs font-bold transition-colors cursor-pointer"
+                          className="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-[#FFF4EA] border border-[#F8CD78] text-[#D75D17] hover:bg-[#FFE8D5] text-xs font-bold transition-colors cursor-pointer whitespace-nowrap min-h-[40px]"
                         >
-                          <Play className="w-3 h-3 fill-[#E97520]" />
+                          <Play className="w-3 h-3 fill-[#D75D17]" />
                           <span>Watch Video</span>
                         </button>
 
@@ -458,7 +485,7 @@ export const WatchAndCookView: React.FC<WatchAndCookViewProps> = ({
                               onNavigate(`/recipes/${recipe.slug}`);
                             }
                           }}
-                          className="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-[#FAF9F6] border border-[#E6E1D8] text-[#30302F] hover:bg-[#F3F2EE] hover:border-[#30302F] text-xs font-bold transition-colors cursor-pointer"
+                          className="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-[#FAF9F6] border border-[#E6E1D8] text-[#30302F] hover:bg-[#F3F2EE] hover:border-[#30302F] text-xs font-bold transition-colors cursor-pointer whitespace-nowrap min-h-[40px]"
                         >
                           <span>Written Recipe</span>
                           <ChevronRight className="w-3 h-3 text-[#77736D]" />
@@ -513,28 +540,32 @@ export const WatchAndCookView: React.FC<WatchAndCookViewProps> = ({
           )}
         </section>
 
-        {/* Family Recipe Stories Promotional Banner (No user forms/accounts) */}
+        {/* PHASE 4: Family Recipe Stories Editorial Heritage Section */}
         <section
-          aria-label="Family Recipe Stories"
-          className="rounded-2xl bg-gradient-to-br from-[#2E2823] to-[#1C1815] text-white p-6 sm:p-8 md:p-10 border border-[#3E3832] shadow-sm relative overflow-hidden"
+          aria-labelledby="family-stories-heading"
+          className="rounded-2xl bg-[#FFF9F0] border border-[#E6E1D8] shadow-sm overflow-hidden"
         >
-          <div className="relative z-10 max-w-2xl space-y-3">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-[#E97520]/20 text-[#F8CD78] border border-[#F8CD78]/30">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Cultural Heritage Initiative</span>
-            </div>
+          <div className="h-1 w-full bg-gradient-to-r from-[#E7A52B]/70 via-[#E97520]/70 to-[#E7A52B]/70" aria-hidden="true" />
+          <div className="p-6 sm:p-8 md:p-10 max-w-3xl space-y-4">
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#B45309] dark:text-[#F8CD78]">
+              Cultural Heritage Initiative &middot; Traditional Kitchens
+            </p>
 
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold font-serif-editorial leading-tight">
+            <h2
+              id="family-stories-heading"
+              className="text-xl sm:text-2xl md:text-3xl font-bold font-serif-editorial text-[#242423] leading-tight"
+            >
               Family Recipe Stories
             </h2>
 
-            <p className="text-xs sm:text-sm text-white/80 leading-relaxed">
+            <p className="text-xs sm:text-sm text-[#55504A] leading-relaxed">
               Every cherished recipe carries the warmth of home, handwritten spice proportions, and
-              memories shared around the dining table. Explore our food culture and culinary heritage
-              articles celebrating authentic regional traditions.
+              memories shared around the dining table. We invite you to explore our regional food
+              culture stories and share your own traditional family recipes, kitchen memories, and
+              heritage dishes with our community.
             </p>
 
-            <div className="pt-2">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
               <a
                 href="/culture"
                 onClick={(e) => {
@@ -543,10 +574,24 @@ export const WatchAndCookView: React.FC<WatchAndCookViewProps> = ({
                     onNavigate("/culture");
                   }
                 }}
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-[#E97520] hover:bg-[#D75D17] text-white text-xs font-bold transition-all cursor-pointer shadow-md"
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-[#E97520] hover:bg-[#D75D17] text-white text-xs font-bold transition-colors cursor-pointer shadow-sm whitespace-nowrap min-h-[42px]"
               >
                 <span>Explore Food Culture &amp; Heritage</span>
                 <ArrowRight className="w-3.5 h-3.5" />
+              </a>
+
+              <a
+                href="/contact"
+                onClick={(e) => {
+                  if (!e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey) {
+                    e.preventDefault();
+                    onNavigate("/contact");
+                  }
+                }}
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-white border border-[#E6E1D8] hover:border-[#E97520] text-[#30302F] hover:text-[#D75D17] text-xs font-bold transition-colors cursor-pointer whitespace-nowrap min-h-[42px]"
+              >
+                <span>Share a Family Recipe Story</span>
+                <ChevronRight className="w-3.5 h-3.5 text-[#77736D]" />
               </a>
             </div>
           </div>
