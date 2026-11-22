@@ -44,6 +44,7 @@ export const NoakhaliLogo: React.FC<NoakhaliLogoProps> = ({
         <img
           src={IMAGES.logoFull}
           alt="Noākhāli Kitchen Authentic Recipes, Timeless Flavors Logo"
+          decoding="async"
           className={`${sizeDimensions[size]} object-contain rounded-xl drop-shadow-xs bg-white`}
           referrerPolicy="no-referrer"
         />
@@ -58,6 +59,7 @@ export const NoakhaliLogo: React.FC<NoakhaliLogoProps> = ({
         <img
           src={IMAGES.logoFull}
           alt="Noākhāli Kitchen Logo Emblem"
+          decoding="async"
           className={`${sizeDimensions[size]} object-contain rounded-full shadow-xs bg-white`}
           referrerPolicy="no-referrer"
         />
@@ -75,6 +77,7 @@ export const NoakhaliLogo: React.FC<NoakhaliLogoProps> = ({
       <img
         src={IMAGES.logoFull}
         alt="Noākhāli Kitchen Logo Emblem"
+        decoding="async"
         className={`${sizeDimensions[size]} object-contain rounded-xl shadow-xs bg-white border border-[#E6E1D8]/80 shrink-0`}
         referrerPolicy="no-referrer"
       />

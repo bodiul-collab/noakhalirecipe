@@ -29,6 +29,8 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
               <img
                 src={IMAGES.logoFull}
                 alt="Noakhali Kitchen Official Seal"
+                loading="lazy"
+                decoding="async"
                 className="w-10 h-10 rounded-full object-contain bg-white border border-[#E6E1D8] shadow-xs"
                 referrerPolicy="no-referrer"
               />

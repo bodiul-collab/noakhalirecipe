@@ -81,6 +81,7 @@ export const RecipeVideoCard: React.FC<RecipeVideoCardProps> = ({ video, recipeT
                 onError={handleThumbnailError}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 loading="lazy"
+                decoding="async"
               />
             ) : (
               <div className="absolute inset-0 w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-[#2E2823] to-[#141210] p-6 text-center text-white/80">

@@ -887,6 +887,7 @@ const SingleCollectionCard: React.FC<SingleCollectionCardProps> = ({ item, onOpe
               isHovered ? "scale-[2]" : "scale-100"
             }`}
             loading="lazy"
+            decoding="async"
           />
         </div>
 

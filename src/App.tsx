@@ -9,10 +9,14 @@ import { CollectionModal } from "./components/CollectionModal";
 import { AddToCollectionModal } from "./components/AddToCollectionModal";
 
 import { HomeView } from "./views/HomeView";
-import { RecipesView } from "./views/RecipesView";
-import { CategoryView } from "./views/CategoryView";
 
 // Dynamically loaded secondary views (Phase 6.2 Code-Splitting)
+const RecipesView = lazy(() =>
+  import("./views/RecipesView").then((m) => ({ default: m.RecipesView }))
+);
+const CategoryView = lazy(() =>
+  import("./views/CategoryView").then((m) => ({ default: m.CategoryView }))
+);
 const BlogView = lazy(() =>
   import("./views/BlogView").then((m) => ({ default: m.BlogView }))
 );

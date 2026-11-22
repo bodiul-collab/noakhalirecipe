@@ -166,6 +166,8 @@ export const HomeView: React.FC<HomeViewProps> = ({
                     src={guide.heroImage}
                     alt={guide.title}
                     referrerPolicy="no-referrer"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute top-2.5 left-2.5 bg-white/95 dark:bg-[#1E1E1C]/90 backdrop-blur-xs px-2.5 py-1 rounded text-[10px] font-bold uppercase tracking-wider text-[#E97520] border border-[#E6E1D8]/60 dark:border-[#33322E]">
@@ -241,6 +243,8 @@ export const HomeView: React.FC<HomeViewProps> = ({
                     src={story.heroImage}
                     alt={story.title}
                     referrerPolicy="no-referrer"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute top-2.5 left-2.5 bg-white/95 dark:bg-[#1E1E1C]/90 backdrop-blur-xs px-2.5 py-1 rounded text-[10px] font-bold uppercase tracking-wider text-[#E97520] border border-[#E6E1D8]/60 dark:border-[#33322E]">

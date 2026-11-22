@@ -29439,6 +29439,205 @@ const BASE_RECIPES: Recipe[] = [
     seoDescription:
       "Authentic Bengali Golda Chingri Malai Curry (গলদা চিংড়ি মালাই কারি): whole head-on jumbo freshwater prawns braised in velvety coconut milk, ghee, mustard oil, whole spices & green chilies.",
   },
+  {
+    id: "rec-canjeero",
+    slug: "canjeero",
+    title: "Canjeero — Somali Fermented Sourdough Flatbread (Anjero)",
+    category: "Halal Vegetarian",
+    categorySlug: "halal-vegetarian",
+    cuisine: "Somali & East African Halal Heritage",
+    description:
+      "Authentic Somali Canjeero (also known as Anjero or Lahoh): tender, naturally fermented spongy sourdough flatbreads speckled with delicate honeycomb eyes, rolled warm with melted pure ghee or sesame oil and enjoyed with spiced Somali tea (Shaah) or savory stews.",
+    introStory:
+      "Canjeero (pronounced 'an-jeh-ro', closely related to Yemeni lahoh and Ethiopian injera) is the heart of Somali morning hospitality and Ramadan tables across East Africa and the global Somali diaspora. Soft, pliable, and gently tangy from an overnight yeast-and-grain fermentation, a properly cooked Canjeero has a lacy, bubble-dotted top surface—known affectionately as 'eyes'—and a smooth, golden-ivory underside cooked strictly on one side without flipping.\n\nHistorically prepared from finely ground white sorghum flour (masago), golden cornmeal, or self-rising wheat flour blended with warm water and active yeast, the batter ferments until light and effervescent. Poured in a slow spiral onto a lightly oiled skillet or traditional clay daawo, each crepe puffs into a pillowy, tearable bread within minutes. Rolled warm as shown alongside steaming glasses of cardamom-cinnamon red tea (Shaah), drizzled with subag (spiced ghee) and a whisper of sugar, or paired with slow-simmered Halal beef suqaar and lentils, Canjeero brings comforting heritage to every table.",
+    heroImage: "/assets/aistudio/Canjeero_c6947b1f.jpg",
+    prepTimeMinutes: 20,
+    cookTimeMinutes: 20,
+    totalTimeMinutes: 40,
+    servings: 6,
+    difficulty: "Medium",
+    calories: 165,
+    rating: 4.95,
+    reviewCount: 118,
+    isTrending: true,
+    isFeatured: true,
+    isRegionalHeritage: true,
+    whySpecial:
+      "Gentle overnight fermentation creates hundreds of airy honeycomb micro-pores and a subtly tangy aroma, yielding supple, tear-friendly crepes that stay soft even after rolling.",
+    halalNotes:
+      "100% Halal and naturally vegetarian/plant-forward. Crafted exclusively from wholesome grain flours, warm water, baker's yeast, pure cane sugar, and plant-based oil or Halal-certified cow ghee with zero alcohol or animal shortening.",
+    potentialCautionNotes:
+      "Ferment the batter at a comfortable warm room temperature (72°F–80°F) rather than excessive heat so the yeast develops delicate acidity without turning overly sour; keep pan heat steady at medium so bottoms stay pale golden rather than burning before the top sets.",
+    ingredients: [
+      {
+        amount: "2",
+        unit: "cups",
+        name: "Unbleached all-purpose wheat flour",
+        notes: "or 1.5 cups all-purpose + 1/2 cup white sorghum flour for traditional grain depth",
+      },
+      {
+        amount: "1/2",
+        unit: "cup",
+        name: "Fine yellow or white cornmeal (masa harina or fine polenta)",
+        notes: "adds tender crumb and subtle earthy sweetness",
+      },
+      {
+        amount: "2.75",
+        unit: "cups",
+        name: "Warm water (divided, ~105°F / 40°C)",
+        notes: "plus 2–3 tbsp extra if needed for smooth pourable consistency",
+      },
+      {
+        amount: "1",
+        unit: "tsp",
+        name: "Instant or active dry yeast",
+      },
+      {
+        amount: "1",
+        unit: "tbsp",
+        name: "Pure cane sugar",
+        notes: "feeds yeast and encourages pale golden caramelization",
+      },
+      {
+        amount: "3/4",
+        unit: "tsp",
+        name: "Fine sea salt",
+      },
+      {
+        amount: "1/4",
+        unit: "tsp",
+        name: "Baking powder",
+        notes: "whisked in just before cooking for extra uniform bubbles",
+      },
+      {
+        amount: "2",
+        unit: "tbsp",
+        name: "Neutral vegetable oil or sesame oil (for skillet wiping)",
+        notes: "use a halved onion or folded paper towel dipped in oil to grease lightly",
+      },
+      {
+        amount: "2",
+        unit: "tbsp",
+        name: "Melted pure cow ghee (Subag) or sesame oil (optional, for serving)",
+        notes: "for brushing warm rolled Canjeero before serving with Shaah tea",
+      },
+    ],
+    substitutions: [
+      {
+        original: "White sorghum flour + cornmeal",
+        substitute: "All-purpose flour combined with 1/2 cup finely ground oat flour or masa harina",
+        notes: "Retains the airy honeycomb bubbles and supple rolled texture if sorghum flour is unavailable.",
+      },
+      {
+        original: "Pure cow ghee (Subag) brushing",
+        substitute: "Toasted sesame oil or olive oil",
+        notes: "Classic vegan Somali serving option—sesame oil (macsaro) is widely loved across Somalia.",
+      },
+    ],
+    instructions: [
+      {
+        step: 1,
+        title: "Whisk the Flour, Cornmeal & Yeast Starter",
+        instruction:
+          "In a large mixing bowl, combine the all-purpose flour (or sorghum-wheat blend), fine cornmeal, yeast, sugar, and salt. Pour in 2.5 cups of warm water and whisk thoroughly—or blend in a blender for 30 seconds—until completely lump-free and resembling thick pancake batter.",
+      },
+      {
+        step: 2,
+        title: "Ferment Until Light, Foamy & Bubbly",
+        instruction:
+          "Cover the bowl loosely with a clean lid or kitchen towel and let ferment at warm room temperature for 6 to 8 hours (or overnight; for a quick 1.5-hour version, use 2 tsp yeast and rest in a warm spot). When ready, the batter will look aerated, fragrant, and covered with tiny surface bubbles.",
+      },
+      {
+        step: 3,
+        title: "Adjust Batter Consistency & Preheat Skillet",
+        instruction:
+          "Stir in the baking powder and the remaining 1/4 cup warm water until the batter flows smoothly like heavy cream / thin crepe batter. Heat a heavy nonstick skillet or cast-iron tawa over medium heat, wiping the surface very lightly with oil.",
+      },
+      {
+        step: 4,
+        title: "Swirl, Cover, Steam-Cook One Side & Roll",
+        instruction:
+          "Ladle about 1/3 to 1/2 cup of batter onto the center of the pan and immediately swirl outward in a tight spiral with the back of the ladle to form an even 8-inch circle. Cook uncovered for 45 seconds until hundreds of tiny 'eyes' pop across the top, then cover with a lid for 45–60 seconds until the top is completely matte, springy, and dry to the touch (never flip). Slide onto a woven mat, brush lightly if desired, roll neatly while warm, and serve with spiced Shaah tea.",
+      },
+    ],
+    chefNotes: [
+      "Cook Canjeero on one side only—covering the pan with a lid during the final minute traps gentle steam to set the bubbly top without drying it out.",
+      "Do not over-oil the skillet; excess oil prevents the lacy honeycomb 'eyes' from forming evenly across the base.",
+      "Stack finished Canjeero on a clean cotton cloth or woven basket mat and roll them warm so they stay tender and flexible.",
+    ],
+    cookingTips: [
+      "Using a blender on the raw batter for 20–30 seconds guarantees silky smoothness and finer, more uniform bubbles across every crepe.",
+      "Briefly wiping the skillet between crepes with a damp cloth cools an overly hot pan back to medium so every Canjeero stays golden-ivory.",
+      "Leftover batter keeps refrigerated up to 2 days—just bring to room temperature and stir in a splash of warm water before ladling.",
+    ],
+    commonMistakes: [
+      "Flipping Canjeero like a pancake, which flattens the delicate spongy texture and seals the signature pores.",
+      "Making the batter too thick, leading to heavy, gummy centers instead of lacy crepe-like lightness.",
+      "Cooking over high heat, which scorches the bottom before the top yeast bubbles finish setting.",
+    ],
+    nutrition: {
+      calories: 165,
+      proteinGrams: 5,
+      carbsGrams: 32,
+      fatGrams: 2,
+      fiberGrams: 3,
+      sodiumMg: 210,
+      servingSizeDescription: "2 warm rolled Canjeero crepes",
+    },
+    storageInstructions:
+      "Wrap cooled Canjeero tightly in parchment and a resealable bag at room temperature for 1 day, or refrigerate up to 4 days. Re-steam gently for 20 seconds or warm in a covered dry skillet to restore softness.",
+    servingSuggestions: [
+      "Roll warm and serve alongside fragrant glasses of spiced Somali red tea (Shaah) or Karak Chai.",
+      "Serve drizzled with pure cow ghee (subag) and a light sprinkle of sugar for classic Halal breakfast or Suhoor.",
+      "Pair with slow-cooked Halal lamb curry, beef suqaar, or spiced red lentil masoor dal for dinner.",
+    ],
+    faqs: [
+      {
+        question: "What does Canjeero taste like?",
+        answer:
+          "Canjeero is mildly tangy, light, and gently sweet-earthy from cornmeal or sorghum, with a soft spongy texture—much milder in acidity than Ethiopian injera and closer to an airy sourdough crepe.",
+      },
+      {
+        question: "Can I make Canjeero without overnight fermentation?",
+        answer:
+          "Yes! Increase instant yeast to 2 teaspoons and let the batter rest in a warm spot for 60 to 90 minutes until foamy, though overnight fermentation gives the deepest aroma and most tender crumb.",
+      },
+      {
+        question: "Is Canjeero Halal and vegetarian?",
+        answer:
+          "Yes! Traditional Canjeero is 100% Halal and vegetarian, made solely from flour, cornmeal or sorghum, water, yeast, salt, and plant-based oil (or optional Halal ghee).",
+      },
+    ],
+    author: {
+      name: "Chef Tariq Rahman",
+      role: "Regional Culinary Director & Halal Recipe Developer",
+    },
+    updatedDate: "2026-11-20",
+    tags: [
+      "Canjeero",
+      "Anjero",
+      "Somali Canjeero",
+      "Lahoh",
+      "Halal Breakfast",
+      "Fermented Flatbread",
+      "Halal Vegetarian",
+      "Ramadan Suhoor",
+    ],
+    relatedRecipeSlugs: [
+      "kholaja-pitha",
+      "chitoi-pitha",
+      "plain-paratha",
+      "karak-chai-spiced-milk-tea",
+      "lamb-curry",
+    ],
+    relatedGuideSlugs: [
+      "how-to-build-a-bangladeshi-spice-base",
+    ],
+    seoTitle:
+      "Canjeero Recipe (Somali Fermented Sourdough Flatbread / Anjero) | Noakhali Kitchen",
+    seoDescription:
+      "Authentic Somali Canjeero (Anjero) recipe: airy, honeycomb-dotted fermented sourdough flatbreads made with sorghum or wheat flour, cornmeal & yeast—perfect rolled warm with spiced tea.",
+  },
 ];
 
 export const RECIPES: Recipe[] = enhanceRecipesWithCornerstones(BASE_RECIPES);

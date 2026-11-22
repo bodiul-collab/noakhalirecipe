@@ -342,6 +342,8 @@ export const SavedRecipesDrawer: React.FC<SavedRecipesDrawerProps> = ({
                     <img
                       src={recipe.heroImage}
                       alt={recipe.title}
+                      loading="lazy"
+                      decoding="async"
                       className="w-16 h-16 rounded-lg object-cover cursor-pointer shrink-0 border border-[#E6E1D8] hover:opacity-90"
                       onClick={() => {
                         onSelectRecipe(recipe);
@@ -501,6 +503,8 @@ export const SavedRecipesDrawer: React.FC<SavedRecipesDrawerProps> = ({
                         <img
                           src={r.heroImage}
                           alt={r.title}
+                          loading="lazy"
+                          decoding="async"
                           className="w-10 h-10 rounded object-cover shrink-0"
                         />
                         <div className="min-w-0">

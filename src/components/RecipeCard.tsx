@@ -40,6 +40,7 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({
           alt={recipe.title}
           className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
           loading="lazy"
+          decoding="async"
         />
 
         {/* Category Pill */}

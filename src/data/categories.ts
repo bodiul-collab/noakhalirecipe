@@ -111,7 +111,7 @@ export const CATEGORIES: CategoryHub[] = [
     fullDescription:
       "Pure, nourishing plant-based dishes made with wholesome legumes, cold-pressed mustard oil, whole spices, and garden-fresh vegetables. Completely free from animal byproducts and naturally pork-free.",
     image: IMAGES.vegBhunaKhichuri,
-    featuredRecipeSlugs: ["beguni-eggplant-pakora", "doodh-bhaat-with-ripe-banana-date-molasses", "dal-bhorta", "tomato-bhorta", "bengali-aloo-dum", "plain-paratha", "homemade-chili-oil", "saag-paneer", "bengali-mango-chutney", "spinach-sun-dried-tomato-pasta", "black-chana", "hummus", "crispy-falafel", "bengali-pulao", "bengali-khichuri-bhuna", "mediterranean-chickpea-salad", "authentic-lebanese-baba-ganoush", "masoor-dal-red-lentil-dal", "crispy-garlic-herb-roasted-potatoes", "pillowy-restaurant-style-garlic-butter-naan", "rainbow-roasted-beet-whipped-goat-cheese-salad", "panera-style-halal-broccoli-cheddar-soup", "crispy-zaatar-chickpea-halloumi-glow-salad", "vegetable-bhuna-khichuri"],
+    featuredRecipeSlugs: ["canjeero", "beguni-eggplant-pakora", "doodh-bhaat-with-ripe-banana-date-molasses", "dal-bhorta", "tomato-bhorta", "bengali-aloo-dum", "plain-paratha", "homemade-chili-oil", "saag-paneer", "bengali-mango-chutney", "spinach-sun-dried-tomato-pasta", "black-chana", "hummus", "crispy-falafel", "bengali-pulao", "bengali-khichuri-bhuna", "mediterranean-chickpea-salad", "authentic-lebanese-baba-ganoush", "masoor-dal-red-lentil-dal", "crispy-garlic-herb-roasted-potatoes", "pillowy-restaurant-style-garlic-butter-naan", "rainbow-roasted-beet-whipped-goat-cheese-salad", "panera-style-halal-broccoli-cheddar-soup", "crispy-zaatar-chickpea-halloumi-glow-salad", "vegetable-bhuna-khichuri"],
     faqs: [
       {
         question: "Do vegetarian dishes ever contain non-halal ingredients?",
@@ -151,7 +151,7 @@ export const CATEGORIES: CategoryHub[] = [
     fullDescription:
       "Snack time in Muslim households is a lively affair of spiced pastry triangles, hot fried fritters, and sweet chutneys served alongside cardamom milk tea (chai).",
     image: IMAGES.streetFood,
-    featuredRecipeSlugs: ["beguni-eggplant-pakora", "chitoi-pitha", "patishapta-pitha", "kholaja-pitha", "plain-paratha", "keema-paratha", "corned-beef-reuben-sandwich", "shrimp-tandoori", "bengali-mango-chutney", "dal-piyaju-pakora", "chicken-patty", "egg-roll", "black-chana", "hummus", "crispy-falafel", "authentic-lebanese-baba-ganoush", "tuna-fish-kebab-fritters", "birria-tacos-beef-quesabirria-consome", "kibbeh-lebanese-fried-bulgur-stuffed-shells", "traditional-teler-pitha-gur-pitha", "crispy-halal-samosas"],
+    featuredRecipeSlugs: ["canjeero", "beguni-eggplant-pakora", "chitoi-pitha", "patishapta-pitha", "kholaja-pitha", "plain-paratha", "keema-paratha", "corned-beef-reuben-sandwich", "shrimp-tandoori", "bengali-mango-chutney", "dal-piyaju-pakora", "chicken-patty", "egg-roll", "black-chana", "hummus", "crispy-falafel", "authentic-lebanese-baba-ganoush", "tuna-fish-kebab-fritters", "birria-tacos-beef-quesabirria-consome", "kibbeh-lebanese-fried-bulgur-stuffed-shells", "traditional-teler-pitha-gur-pitha", "crispy-halal-samosas"],
     faqs: [
       {
         question: "Can samosas be prepared in advance?",
@@ -305,6 +305,7 @@ export const CATEGORIES: CategoryHub[] = [
       "From the sacred evening tranquility of sunset Iftar tables laden with spiced black chana (ছোলা ভুনা), crispy onion piyaju, and cooling Rooh Afza sharbat, to royal Eid morning banquets featuring Shahi beef roast, fragrant pulao, and creamy kheer, our Ramadan & Eid collection honors authentic culinary heritage, spiritual mindfulness, and joyful family gatherings.",
     image: IMAGES.blackChana,
     featuredRecipeSlugs: [
+      "canjeero",
       "golda-chingri-malai-curry",
       "shahi-dim-korma",
       "beguni-eggplant-pakora",

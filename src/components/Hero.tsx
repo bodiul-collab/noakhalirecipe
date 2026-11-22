@@ -56,6 +56,8 @@ export const Hero: React.FC<HeroProps> = ({
                   alt="Noakhali Kitchen Authentic Recipes, Timeless Flavors Logo"
                   className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl object-contain bg-white border border-[#E6E1D8]/80 shadow-xs"
                   referrerPolicy="no-referrer"
+                  decoding="async"
+                  fetchPriority="high"
                 />
                 <div className="text-left pr-1">
                   <span className="block font-black text-sm sm:text-base text-[#242423] font-heading tracking-wide uppercase leading-tight">

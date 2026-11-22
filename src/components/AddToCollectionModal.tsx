@@ -95,6 +95,8 @@ export const AddToCollectionModal: React.FC<AddToCollectionModalProps> = ({
           <img
             src={recipe.heroImage}
             alt={recipe.title}
+            loading="lazy"
+            decoding="async"
             className="w-12 h-12 rounded-lg object-cover shrink-0 border border-[#E6E1D8]"
           />
           <div className="min-w-0 flex-1">

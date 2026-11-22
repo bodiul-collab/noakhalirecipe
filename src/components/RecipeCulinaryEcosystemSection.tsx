@@ -121,6 +121,8 @@ export const RecipeCulinaryEcosystem: React.FC<{
               <img
                 src={relatedCulture.heroImage}
                 alt={relatedCulture.title}
+                loading="lazy"
+                decoding="async"
                 className="w-full sm:w-36 h-24 object-cover rounded-lg border border-[#E6E1D8] shrink-0"
               />
             )}
@@ -230,6 +232,8 @@ export const RecipeCulinaryEcosystem: React.FC<{
                     <img
                       src={r.heroImage}
                       alt={r.title}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>

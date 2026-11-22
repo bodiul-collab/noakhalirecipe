@@ -233,6 +233,8 @@ export const FoodCultureView: React.FC<FoodCultureViewProps> = ({
                 src={currentArticle.heroImage}
                 alt={currentArticle.title}
                 referrerPolicy="no-referrer"
+                decoding="async"
+                fetchPriority="high"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -285,6 +287,8 @@ export const FoodCultureView: React.FC<FoodCultureViewProps> = ({
                         src={r.heroImage}
                         alt={r.title}
                         referrerPolicy="no-referrer"
+                        loading="lazy"
+                        decoding="async"
                         className="w-16 h-16 rounded object-cover shrink-0"
                       />
                       <div className="min-w-0 flex-1">
@@ -398,6 +402,8 @@ export const FoodCultureView: React.FC<FoodCultureViewProps> = ({
                   src={article.heroImage}
                   alt={article.title}
                   referrerPolicy="no-referrer"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <span className="absolute top-2.5 left-2.5 bg-black/75 backdrop-blur-xs text-[#F8CD78] px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider">

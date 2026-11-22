@@ -100,6 +100,8 @@ export const HomepageRecipeCard: React.FC<HomepageRecipeCardProps> = ({
               isHovered ? "scale-[2]" : "scale-100"
             }`}
             loading="eager"
+            decoding="async"
+            fetchPriority="high"
           />
         </div>
 

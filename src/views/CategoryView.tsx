@@ -194,6 +194,8 @@ export const CategoryView: React.FC<CategoryViewProps> = ({
                     src={activeCategory.image}
                     alt={activeCategory.title}
                     referrerPolicy="no-referrer"
+                    decoding="async"
+                    fetchPriority="high"
                     className="w-full h-full object-cover max-h-[360px] lg:max-h-none"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent lg:hidden" />
@@ -361,6 +363,8 @@ export const CategoryView: React.FC<CategoryViewProps> = ({
                       src={cat.image}
                       alt={cat.title}
                       referrerPolicy="no-referrer"
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-xs text-[#242423] px-2.5 py-1 rounded-full text-[11px] font-bold shadow-xs border border-[#E6E1D8]">

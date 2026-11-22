@@ -90,6 +90,8 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
   const [selectedDifficulty, setSelectedDifficulty] = useState<string>("All");
   const [selectedCollection, setSelectedCollection] = useState<string>("All");
   const [sortBy, setSortBy] = useState<"rating" | "time" | "reviews">("rating");
+  const RECIPES_PER_PAGE = 24;
+  const [visibleCount, setVisibleCount] = useState<number>(RECIPES_PER_PAGE);
   const [recipeForCollection, setRecipeForCollection] = useState<Recipe | null>(null);
 
   // State for recipe detail view
@@ -571,6 +573,23 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
     collections,
   ]);
 
+  // Reset pagination when filters or search change
+  useEffect(() => {
+    setVisibleCount(RECIPES_PER_PAGE);
+  }, [
+    searchTerm,
+    selectedProtein,
+    selectedCuisine,
+    selectedDifficulty,
+    selectedCollection,
+    sortBy,
+  ]);
+
+  const displayedRecipes = useMemo(
+    () => filteredRecipes.slice(0, visibleCount),
+    [filteredRecipes, visibleCount]
+  );
+
   // Handle ingredient scale
   const parseAndScaleAmount = (amountStr: string, multiplier: number) => {
     const num = parseFloat(amountStr);
@@ -874,6 +893,8 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
               <img
                 src={currentRecipe.heroImage}
                 alt={currentRecipe.title}
+                decoding="async"
+                fetchPriority="high"
                 className="w-full h-full object-cover"
               />
               <div className="absolute top-3 left-3 bg-[#30302F]/90 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">
@@ -1715,29 +1736,56 @@ export const RecipesView: React.FC<RecipesViewProps> = ({
             </button>
           </div>
         ) : (
-          <div className="recipe-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredRecipes.map((recipe, index) => (
-              <div
-                key={recipe.id}
-                className="recipe-card-fade h-full"
-                style={{ animationDelay: `${Math.min(index * 45, 500)}ms` }}
-              >
-                <RecipeCard
-                  recipe={recipe}
-                  isSaved={savedRecipeIds.has(recipe.id)}
-                  onToggleSave={onToggleSaveRecipe}
-                  onClick={(r) => {
-                    setActiveSlug(r.slug);
-                    onNavigate(`/recipes/${r.slug}`, true);
-                    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
-                  }}
-                  collections={collections}
-                  onOpenCollections={(r) => setRecipeForCollection(r)}
-                  userRating={userRatings[recipe.id]?.rating}
-                />
+          <>
+            <div className="recipe-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {displayedRecipes.map((recipe, index) => (
+                <div
+                  key={recipe.id}
+                  className="recipe-card-fade h-full"
+                  style={{ animationDelay: `${Math.min((index % RECIPES_PER_PAGE) * 35, 350)}ms` }}
+                >
+                  <RecipeCard
+                    recipe={recipe}
+                    isSaved={savedRecipeIds.has(recipe.id)}
+                    onToggleSave={onToggleSaveRecipe}
+                    onClick={(r) => {
+                      setActiveSlug(r.slug);
+                      onNavigate(`/recipes/${r.slug}`, true);
+                      window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+                    }}
+                    collections={collections}
+                    onOpenCollections={(r) => setRecipeForCollection(r)}
+                    userRating={userRatings[recipe.id]?.rating}
+                  />
+                </div>
+              ))}
+            </div>
+
+            {visibleCount < filteredRecipes.length && (
+              <div className="mt-10 flex flex-col items-center gap-3">
+                <p className="text-xs text-[#77736D]">
+                  Showing <span className="font-bold text-[#30302F]">{displayedRecipes.length}</span> of{" "}
+                  <span className="font-bold text-[#30302F]">{filteredRecipes.length}</span> Halal recipes
+                </p>
+                <div className="flex flex-wrap items-center justify-center gap-3">
+                  <button
+                    type="button"
+                    onClick={() => setVisibleCount((prev) => prev + RECIPES_PER_PAGE)}
+                    className="px-6 py-2.5 bg-[#E97520] hover:bg-[#D75D17] text-white text-xs font-bold uppercase tracking-wider rounded shadow-sm transition-colors cursor-pointer"
+                  >
+                    Load More Recipes ({Math.min(RECIPES_PER_PAGE, filteredRecipes.length - visibleCount)} more)
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setVisibleCount(filteredRecipes.length)}
+                    className="px-5 py-2.5 bg-white hover:bg-[#FAF9F6] text-[#30302F] border border-[#E6E1D8] hover:border-[#30302F] text-xs font-bold uppercase tracking-wider rounded transition-colors cursor-pointer"
+                  >
+                    Show All ({filteredRecipes.length})
+                  </button>
+                </div>
               </div>
-            ))}
-          </div>
+            )}
+          </>
         )}
 
         {/* Ad Slot */}
