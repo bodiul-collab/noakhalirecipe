@@ -3543,6 +3543,15 @@ const BASE_RECIPES: Recipe[] = [
       "Garlic Naan Pairing",
       "Creamy Curry",
     ],
+    video: {
+      youtubeVideoId: "sdkOUd3-P1o",
+      youtubeUrl: "https://youtu.be/sdkOUd3-P1o",
+      videoTitle: "Restaurant-Style Butter Chicken at Home! 🤯 Rich, Creamy & So Delicious! Authentic | Noakhali Kitchen",
+      videoThumbnail: "https://i.ytimg.com/vi/sdkOUd3-P1o/hqdefault.jpg",
+      videoDescription:
+        "Step-by-step video tutorial for Authentic Restaurant-Style Butter Chicken (Murgh Makhani) simmered in a silky tomato-cashew butter gravy with kasuri methi and fresh cream.",
+      videoEnabled: true,
+    },
   },
   {
     id: "rec-mediterranean-chickpea-salad",
