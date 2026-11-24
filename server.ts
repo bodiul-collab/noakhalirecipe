@@ -124,23 +124,125 @@ function getGeminiClient(): GoogleGenAI | null {
   });
 }
 
+interface GeminiErrorDetails {
+  httpStatus: number;
+  errorCode: string;
+  userMessage: string;
+  rawMessage: string;
+}
+
+function parseGeminiError(error: any): GeminiErrorDetails {
+  const rawMessage = typeof error?.message === "string" ? error.message : String(error || "Unknown error");
+  let code = typeof error?.status === "number" ? error.status : 500;
+  let errorCode = typeof error?.code === "string" ? error.code : "INTERNAL_ERROR";
+  let upstreamMessage = rawMessage;
+
+  // @google/genai often wraps the JSON error body inside error.message
+  const jsonStart = rawMessage.indexOf("{");
+  if (jsonStart !== -1) {
+    try {
+      const parsed = JSON.parse(rawMessage.slice(jsonStart));
+      if (parsed?.error) {
+        if (typeof parsed.error.code === "number") code = parsed.error.code;
+        if (typeof parsed.error.status === "string") errorCode = parsed.error.status;
+        if (typeof parsed.error.message === "string") upstreamMessage = parsed.error.message;
+      }
+    } catch {
+      // keep rawMessage if JSON parse fails
+    }
+  }
+
+  if (code === 402 || errorCode === "RESOURCE_EXHAUSTED" || code === 429) {
+    const isCreditsDepleted =
+      code === 402 || upstreamMessage.toLowerCase().includes("prepayment credits");
+    return {
+      httpStatus: code === 402 ? 402 : 429,
+      errorCode: "RESOURCE_EXHAUSTED",
+      userMessage: isCreditsDepleted
+        ? "Gemini API prepayment credits are depleted. Please check your project billing in AI Studio or update your API key in Settings > Secrets."
+        : "The AI assistant has reached its current rate limit or quota. Please wait a moment and try again, or verify your billing-enabled API key in Settings > Secrets.",
+      rawMessage: upstreamMessage,
+    };
+  }
+
+  if (
+    code === 403 ||
+    errorCode === "PERMISSION_DENIED" ||
+    (code === 400 && upstreamMessage.toLowerCase().includes("api key")) ||
+    errorCode === "API_KEY_INVALID"
+  ) {
+    return {
+      httpStatus: code === 403 ? 403 : 400,
+      errorCode: code === 403 ? "PERMISSION_DENIED" : "API_KEY_INVALID",
+      userMessage:
+        "The Gemini API key appears invalid or lacks permission. Please verify or select a valid API key in Settings > Secrets.",
+      rawMessage: upstreamMessage,
+    };
+  }
+
+  if (code === 404 || errorCode === "NOT_FOUND") {
+    return {
+      httpStatus: 404,
+      errorCode: "NOT_FOUND",
+      userMessage: "The configured Gemini model could not be found. Please try again shortly.",
+      rawMessage: upstreamMessage,
+    };
+  }
+
+  const httpStatus = code >= 400 && code < 600 ? code : 500;
+  return {
+    httpStatus,
+    errorCode,
+    userMessage: "Unable to process request with the AI culinary assistant right now. Please try again.",
+    rawMessage: upstreamMessage,
+  };
+}
+
+async function callGenerateContentWithRetry(
+  ai: GoogleGenAI,
+  params: Parameters<GoogleGenAI["models"]["generateContent"]>[0],
+  maxAttempts = 2
+) {
+  let lastError: any;
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    try {
+      return await ai.models.generateContent(params);
+    } catch (err: any) {
+      lastError = err;
+      const parsed = parseGeminiError(err);
+      const isRetryable =
+        parsed.httpStatus >= 500 ||
+        parsed.errorCode === "UNAVAILABLE" ||
+        parsed.errorCode === "DEADLINE_EXCEEDED";
+      if (!isRetryable || attempt === maxAttempts) {
+        throw err;
+      }
+      await new Promise((resolve) => setTimeout(resolve, 400 * attempt));
+    }
+  }
+  throw lastError;
+}
+
 // Grounded AI Assistant Endpoint for Noakhali Kitchen
 app.post("/api/assistant", async (req, res) => {
   try {
-    const { query, mode = "general", location, conversationHistory = [] } = req.body;
+    const { query, mode = "general", conversationHistory = [] } = req.body || {};
 
-    if (!query || typeof query !== "string") {
-      res.status(400).json({ error: "A valid search or question query is required." });
+    if (!query || typeof query !== "string" || !query.trim()) {
+      res.status(400).json({
+        error: "A valid search or question query is required.",
+        errorCode: "INVALID_QUERY",
+      });
       return;
     }
 
     const ai = getGeminiClient();
     if (!ai) {
-      // Graceful fallback when API key is not yet set
-      res.json({
-        text: `Welcome to Noakhali Kitchen! You asked: "${query}".\n\nOur kitchen specializes in authentic Halal home cooking, regional culinary heritage, Halal ingredient verification, and culinary knowledge. To enable live web search grounding, please ensure your GEMINI_API_KEY is configured in your project settings. In the meantime, explore our curated recipe index, category hubs, and kitchen tools!`,
-        groundingSources: [],
-        mode: "local_fallback",
+      res.status(503).json({
+        error: "Gemini API key is not configured.",
+        errorCode: "API_KEY_MISSING",
+        message:
+          "Please configure GEMINI_API_KEY in Settings > Secrets to enable the AI Culinary Assistant.",
       });
       return;
     }
@@ -153,23 +255,42 @@ Your mission:
 - Culinary & Cooking Guidance: When the user asks about Halal food preparation, cooking techniques, recipes, spice substitutions, meal planning, or pantry stocking, provide actionable, authentic, and step-by-step guidance.
 - Tone: Welcoming, warm, culturally respectful, practical, objective, and culinary-forward.`;
 
-    let modelName = "gemini-2.5-flash";
-    // Default to Google Search Grounding for current information and ingredient checks
-    const toolsConfig = [{ googleSearch: {} }];
+    const contents: Array<{ role: "user" | "model"; parts: Array<{ text: string }> }> = [];
+    if (Array.isArray(conversationHistory)) {
+      const recentHistory = conversationHistory.slice(-10);
+      for (const turn of recentHistory) {
+        if (
+          turn &&
+          typeof turn.content === "string" &&
+          turn.content.trim() &&
+          (turn.role === "user" || turn.role === "assistant")
+        ) {
+          contents.push({
+            role: turn.role === "assistant" ? "model" : "user",
+            parts: [{ text: turn.content.trim() }],
+          });
+        }
+      }
+    }
+    // Ensure the conversation starts with a user message when history begins with assistant greeting
+    while (contents.length > 0 && contents[0].role !== "user") {
+      contents.shift();
+    }
+    contents.push({
+      role: "user",
+      parts: [{ text: query.trim() }],
+    });
 
-    const configPayload: any = {
-      systemInstruction,
-      tools: toolsConfig,
-    };
-
-    const response = await ai.models.generateContent({
-      model: modelName,
-      contents: query,
-      config: configPayload,
+    const response = await callGenerateContentWithRetry(ai, {
+      model: "gemini-3.5-flash-lite",
+      contents,
+      config: {
+        systemInstruction,
+      },
     });
 
     const text = response.text || "No response generated.";
-    
+
     // Extract web search grounding chunks
     const groundingMetadata = response.candidates?.[0]?.groundingMetadata;
     const sources: Array<{ title: string; url: string; type: "web" }> = [];
@@ -193,10 +314,12 @@ Your mission:
       mode,
     });
   } catch (error: any) {
-    console.error("Error in /api/assistant:", error);
-    res.status(500).json({
-      error: "Unable to process request with AI assistant at this moment.",
-      message: error?.message || "Internal server error",
+    const parsed = parseGeminiError(error);
+    console.error("Error in /api/assistant:", parsed.httpStatus, parsed.errorCode, parsed.rawMessage);
+    res.status(parsed.httpStatus).json({
+      error: parsed.userMessage,
+      errorCode: parsed.errorCode,
+      message: parsed.rawMessage,
     });
   }
 });
