@@ -57,6 +57,13 @@ export async function onRequest(
 ): Promise<Response> {
   const { request, env } = context;
 
+  // TEMPORARY: Check whether the Production secret is available.
+  if (new URL(request.url).searchParams.get("debug") === "env") {
+    return jsonResponse({
+      geminiApiKeyPresent: Boolean(env.GEMINI_API_KEY?.trim()),
+    });
+  }
+
   if (request.method === "OPTIONS") {
     return new Response(null, { status: 204, headers: corsHeaders });
   }
