@@ -58,9 +58,14 @@ export async function onRequest(
   const { request, env } = context;
 
   // TEMPORARY: Check whether the Production secret is available.
-  if (new URL(request.url).searchParams.get("debug") === "env") {
+ if (new URL(request.url).searchParams.get("debug") === "env") {
   return jsonResponse({
     geminiApiKeyPresent: Boolean(env.GEMINI_API_KEY?.trim()),
+    geminiApiKeyType: typeof env.GEMINI_API_KEY,
+    geminiApiKeyLength:
+      typeof env.GEMINI_API_KEY === "string"
+        ? env.GEMINI_API_KEY.length
+        : null,
     availableBindings: Object.keys(env),
   });
 }
