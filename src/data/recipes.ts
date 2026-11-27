@@ -17745,6 +17745,15 @@ const BASE_RECIPES: Recipe[] = [
       "Comfort Food",
       "Tawa Bread",
     ],
+    video: {
+      youtubeVideoId: "Y7sFWqrhRDI",
+      youtubeUrl: "https://youtu.be/Y7sFWqrhRDI",
+      videoTitle: "Crispy, Flaky Paratha at Home! 🤯The Secret to Perfect Layers Plain Paratha Recipe | Noakhali Kitchen",
+      videoThumbnail: "https://i.ytimg.com/vi/Y7sFWqrhRDI/hqdefault.jpg",
+      videoDescription:
+        "Step-by-step video tutorial for crisp, flaky golden-brown Plain Paratha laminated with pure cow ghee and pan-roasted to puffed perfection.",
+      videoEnabled: true,
+    },
   },
   {
     id: "rec-carne-asada-steak-tacos",
